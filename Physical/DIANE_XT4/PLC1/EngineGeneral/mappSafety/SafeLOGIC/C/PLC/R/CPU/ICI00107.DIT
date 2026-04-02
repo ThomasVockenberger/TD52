@@ -1,0 +1,46 @@
+(*
+T: FUNCTION_BLOCK SUB_S_BR
+FW: YES	NO_VARIANT SUB_S_BR SKIP_NOTHING	
+CI#: 107
+QSL: 0
+QVE: 6
+QVPC: 6
+QPar: 5
+QFBI: 1
+*)
+
+S_In1	1	VAR_INPUT	@TYP:59
+		     
+
+;
+
+
+S_In2	2	VAR_INPUT	@TYP:59
+		     
+
+;
+
+
+S_Out	3	VAR_OUTPUT	@TYP:59
+		     
+
+;
+
+
+S_OutOK	4	VAR_OUTPUT	@TYP:43
+		     
+
+;
+
+
+DiagCode	5	VAR_OUTPUT	@TYP:18
+		     
+
+;
+
+
+MathBib_CALC_2	6	VAR	@FB:108
+		     
+
+;
+

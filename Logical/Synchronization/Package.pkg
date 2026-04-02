@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.14.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="DataObject" Language="Simple" Description="MODUL META data file">META_SY</Object>
+    <Object Type="File" Private="true">module_SY.typ</Object>
+    <Object Type="File" Private="true">module_SYPara.typ</Object>
+    <Object Type="File" Private="true">module_SY.var</Object>
+    <Object Type="Program" Language="IEC" Description="values">default_SY</Object>
+    <Object Type="Program" Language="IEC" Description="functions">general_SY</Object>
+    <Object Type="Program" Language="IEC" Description="test bench mode">TBMode</Object>
+    <Object Type="Program" Language="IEC" Description="in signals handling">sy_in</Object>
+    <Object Type="Program" Language="IEC" Description="messages">MsgSY</Object>
+    <Object Type="Program" Language="IEC" Description="mains ">mains</Object>
+    <Object Type="Program" Language="IEC" Description="mains TC2">mainsTC2</Object>
+    <Object Type="Program" Language="IEC" Description="generator circuit breaker control">gcb</Object>
+    <Object Type="Program" Language="IEC" Description="generator circuit breaker TC1">gcbTC1</Object>
+    <Object Type="Program" Language="IEC" Description="mains circuit breaker control">mcb</Object>
+    <Object Type="Program" Language="IEC" Description="sy: summary">summary</Object>
+    <Object Type="Program" Language="IEC" Description="loadshedding">loadshedd</Object>
+    <Object Type="Program" Language="IEC" Description="generator de-excitation">de_excit</Object>
+    <Object Type="Program" Language="IEC" Description="blackstart procedure">blackstart</Object>
+    <Object Type="Program" Language="IEC" Description="out signals handling">sy_out</Object>
+    <Object Type="Program" Language="IEC" Description="visualization">vis_SY</Object>
+    <Object Type="Program" Language="IEC" Description="+ PermanentMemory">PermSY</Object>
+    <Object Type="Program" Language="IEC" Description="+ parameter handling">ParSY</Object>
+    <Object Type="Program" Language="IEC" Description="LV GCB communication">LV_GCB</Object>
+  </Objects>
+</Package>

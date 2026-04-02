@@ -1,0 +1,109 @@
+;*******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2023
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V03.99.00	06.03.2013	Weitzer		generated for modular software	 
+; V03.99.02	29.05.2013	Zengerer	initial dependencies prepared
+; V04.00.00	30.01.2014	Denk		new version	
+; V04.00.01	12.03.2015	Denk		Alarm enabling, xMsg3517.Enable := IN_VI.tPB2MM.bSys_Run;
+; V04.03.00	06.10.2015	Denk		Engine availabilty
+; V04.03.01	02.11.2015	Zengerer 	MANDATORYMODULE statement
+; V04.04.00	06.10.2015	Denk		IPC status, dependencies modules
+; V04.07.00	20.03.2019	Denk		RAM tracking new (Reliablity Availability Tracking)
+; V04.08.00	18.07.2019	Denk		IPC status logic changed, because of new PPC3100
+; V04.09.00	06.12.2019	Denk		Operation Locking for additional Touch Panels
+; V04.10.00	14.01.2021	Perktold	Idle Time Tracking added
+; V04.11.00	02.02.2022	Denk		Group alarm for HMI internal warnings
+; V04.12.00	25.01.2023	Weitzer		Task IF_HMI_CP added
+; V04.22.00	25.05.2023	Weitzer		IF_HMI_CP: add offset from HMI from local time to UTC time
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+; OBEY XML FORMATING RULES!
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>VI</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.24.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"<PARA1 Name='bAvailabilityTrackingOn' MIN='0' MAX='1' />"
+"<PARA2 />"
+"<PARA3 />"
+"<PARA4 />"
+"<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Statement, if engine operation is also allowed without this module (FALSE) or if this module´s parameter check passing is mandatory (TRUE)
+"<MANDATORYMODULE>TRUE</MANDATORYMODULE>"
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_VI</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='PB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='AB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='HA' VERSION='04.04.00.00' />"
+"	<DEPENDENCY MODULE='OP' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='CU' VERSION='04.09.00.00' />"
+" <DEPENDENCY VISVERSION='02.15.00.00' />"			; Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	Please ask the module owner to enter a general module description here. "
+"	</General>	"
+""
+"	<F1 Name='RAM Tracking' LastModified='04.07.00.00'>"
+"	Reliability Availability tracking 	"
+"	</F1>"
+"	<F2 Name='enter name of main function 2 here' LastModified='04.08.00.00'>"
+"	IPC status logic	"
+"	</F2>"
+"	<F3 Name='Operation Locking for additional Touch Panels' LastModified='04.09.00.00'>"
+"	Usage of additional operator panels (Touch Panels).	"
+"	</F3>"
+"	<F4 Name='enter name of main function 3 here' LastModified='04.00.00.00'>"
+"	Enter function 3 description for module here.	"
+"	</F4>"
+""
+"	<Info>"
+"	Please enter additional module info here.	"
+"	</Info>"
+""
+"	<Customized LastModified='4.0.0.0'>	"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.25.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="DataObject" Language="Simple" Description="MODUL META data file">META_CU</Object>
+    <Object Type="File" Description="Declare ORDER SPECIFIC DATATYPES in this file" Private="true">module_Cust_ORDER.typ</Object>
+    <Object Type="File" Description="Declare ORDER SPECIFIC VARIABLES in this file " Private="true">module_Cust_ORDER.var</Object>
+    <Object Type="File" Description="Predefined package data types" Private="true">module_CU.typ</Object>
+    <Object Type="File" Description="!BETA!_HAL  Predefined package data types" Private="true">module_CU_HAL.typ</Object>
+    <Object Type="File" Description="Predefined Package variables" Private="true">module_CU.var</Object>
+    <Object Type="File" Description="Predefined parameer item data types" Private="true">module_CUPara.typ</Object>
+    <Object Type="File" Description="Perm data type. DO NOT CHANGE EXISTING SIZE OR SORTING!" Private="true">module_CUPerm.typ</Object>
+    <Object Type="Program" Language="IEC" Description="Interface to other Modules">c_modIF</Object>
+    <Object Type="Program" Language="IEC" Description="Analog I/O Task to handle prepared customizable analog signals">c_ana</Object>
+    <Object Type="Program" Language="IEC" Description="Scaling Blocks for internal use">c_scal</Object>
+    <Object Type="Program" Language="IEC" Description="Handling of prepared customizable parameter values">c_par</Object>
+    <Object Type="Program" Language="IEC" Description="Interface connection for  customizable controllers">c_ctr</Object>
+    <Object Type="Program" Language="IEC" Description="Counter Task th handle customizable counters">c_cnt</Object>
+    <Object Type="Program" Language="IEC" Description="customisation task for exernal power reductions">c_red</Object>
+    <Object Type="Program" Language="IEC" Description="customisation task for external power setpoints">c_set</Object>
+    <Object Type="Program" Language="IEC" Description="Digital I/O Task to handle prepared customizable digital signals">c_dig</Object>
+    <Object Type="Program" Language="IEC" Description="customisation task for auxiliaries display page on VIS">c_aux</Object>
+    <Object Type="Program" Language="IEC" Description="Bus Coupling IN/OUT data register">c_coupl</Object>
+    <Object Type="Program" Language="IEC" Description="prepared empty task to add own customized logic, 100ms cycle time class">c_spare1</Object>
+    <Object Type="Program" Language="IEC" Description="Another empty task to add own customized logic">c_spare2</Object>
+    <Object Type="Program" Language="IEC" Description="Another empty task to add own customized logic">c_spare3</Object>
+    <Object Type="Program" Language="IEC" Description="customisation task for grid power controller">c_mns</Object>
+    <Object Type="Program" Language="IEC" Description="customisation task for grid power controller">anf_nb</Object>
+    <Object Type="Program" Language="IEC" Description="customisatio task for static GridCode functions">c_statGR</Object>
+    <Object Type="Program" Language="IEC" Description="customization task for protection test">c_statGR_TC2</Object>
+    <Object Type="Program" Language="IEC" Description="customisation task for frequency control">c_fc</Object>
+    <Object Type="Program" Language="IEC" Description="configuration for alarms and warning messages">MsgCU</Object>
+    <Object Type="Program" Language="IEC" Description="interface task for visualization adoptions">VisCU</Object>
+    <Object Type="File" Description="Package data types- prepared for later use" Private="true">par_Universal_IO.typ</Object>
+    <Object Type="File" Description="Package variables- prepared for later use" Private="true">par_Universal_IO.var</Object>
+    <Object Type="Package" Description="tasks with no need for editing">Cust_Internals</Object>
+    <Object Type="DataObject" Language="Simple" Description="modification report">aeprot</Object>
+    <Object Type="Package">PlantCom</Object>
+    <Object Type="Program" Language="IEC" Description="Horton CAN devices - J1939 protocol data read">c_clutch_CAN</Object>
+  </Objects>
+</Package>

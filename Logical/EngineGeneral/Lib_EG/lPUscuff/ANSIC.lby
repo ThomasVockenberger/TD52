@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.4.123 SP?>
+<Library Version="1.00.0" SubType="ANSIC" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>PUscuff.c</File>
+    <File>PUscuff.h</File>
+    <File>PUscuff_data.c</File>
+    <File>PUscuff_private.h</File>
+    <File>PUscuff_types.h</File>
+    <File>fPUscuff.c</File>
+    <File>lPUscuff.fun</File>
+    <File>lPUscuff.typ</File>
+    <File>lPUscuff.var</File>
+    <File>lib_properties.txt</File>
+    <File>rt_defines.h</File>
+    <File>rtwtypes.h</File>
+  </Files>
+</Library>

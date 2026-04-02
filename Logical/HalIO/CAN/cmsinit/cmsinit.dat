@@ -1,0 +1,42 @@
+; *******************************************************************************
+; AGGR: client cmsinit (data module)
+; Copyright 1998 - 2014 GE Jenbacher
+;
+; - init CAN CMS communication
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V1.1	30-04-1999	Fahringer, generated
+; 		30-04-1999	Fahringer, last modification
+; V3.99	07-05-2012	Weitzer,   generated for modular software	
+; V4.00	14-02-2014	Weitzer,   change version number
+;
+; Instructions for use:
+; --------------------
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;   structure of entry
+;   ------------------
+;   str       startstring
+;   client    client CAN identifier
+;   server    server CAN identifier
+;   acc       access_typ (R=ReadOnly, W=WriteOnly, A=Read/Write)
+;   obj       object_typ (B=Basic variable, M=Multiplexed variable,
+;						  U=uncontroled event)
+;   mul       multiplexer for multiplexed variable (0-127)
+;   len       length (not used)
+;   info      info (0=CiA/DS202-3, 1=BigEndian Motorola format)
+;   variable  name of variable (max.strlen=31 Byte) (global)
+;   event_pv  name of event variable (max.32 Byte) (TYP=BYTE) (global)
+;
+; str| client | server  |acc|obj|mul|  len   |  info  |   variable   | event_pv
+;-------------------------------------------------------------------------------
+
+; Device Start-Stop
+"%P",$00000000,$00000000,'W','B',000,00000000,00000000,"HalIO::CANDevGo","HalIO::ECANDevGo"

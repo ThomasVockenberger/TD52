@@ -1,0 +1,4 @@
+VAR
+	bRel_CircOp : BOOL; (*air circulating operation released*)
+	xGR_MINR_CircLou : GR_MINR := (0); (*maximum engine intake air temperature for release circulating operation (STM)*)
+END_VAR

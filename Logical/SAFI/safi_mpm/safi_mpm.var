@@ -1,0 +1,33 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: safi_MPM
+ * File: safi_MPM.var
+ * Author: 105026877
+ * Created: February 27, 2017
+ ********************************************************************
+ * Local variables of program safi_MPM
+ ********************************************************************)
+VAR
+	TON_IgnPwr : TON;
+	bMO_PwrRequest : BOOL;
+	ucNrOfMPM : USINT;
+	ucNrOfMPM_Req : USINT;
+	bMO_PowerOverload : ARRAY[0..4] OF BOOL;
+	bAmmSeqClkP : BOOL;
+	AmmSeqIgnPowerOverload : AmmSequence;
+	TON_SecondTick : TON;
+	ucMpmCnt : USINT;
+	TON_MO_PwrRequest : TON := (0);
+	bOverloadCheck : BOOL := 0;
+	bOverloadCheck2 : BOOL := 0;
+	bOverloadCheck3 : BOOL := 0;
+	bOverloadCheck4 : BOOL := 0;
+	TON_IgnPwrOff : TON := (0);
+	bMPM_Test : BOOL := 0;
+	bMPM_StartOK : BOOL := 0;
+	TON_FS_Overrule : TON := (0);
+	ucNrOfMPM_ReqOld : USINT;
+	bIgn_Dem_FS : BOOL; (*Ignition demand for FastStart*)
+	TON_OverloadDelay : ARRAY[0..4] OF TON;
+END_VAR

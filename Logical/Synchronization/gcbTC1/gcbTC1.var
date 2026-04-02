@@ -1,0 +1,14 @@
+VAR
+	xR_TRIG_GCB_OnI : R_TRIG; (*positive edge detection GCB on pulse*)
+	xR_TRIG_Timeout : R_TRIG; (*positive edge detection timout*)
+	bGCB_OnI : BOOL; (*GCB On impulse detection*)
+	rGCBct : REAL; (*gcb closing time*)
+	rGCBctOld : REAL; (*gcb closing time one before last*)
+	rGCB_On_TimeMax : REAL; (*Maximum time GCB On monitoring*)
+	rCnt : REAL; (*GCB Closing time counter*)
+	xTP_MMD_SynchDO : TP; (*MMU Pulse TP timer*)
+	rI_L1_bSync : REAL := 0.0; (*Phase current L1 before synch pulse*)
+	rI_L2_bSync : REAL := 0.0; (*Phase current L2 before synch pulse*)
+	rI_L3_bSync : REAL := 0.0; (*Phase current L3 before synch pulse*)
+	bGCB_On_bSync : BOOL := 0; (*GCB On status before synch pulse*)
+END_VAR

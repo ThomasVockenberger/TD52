@@ -1,0 +1,61 @@
+VAR
+	bCtrl_ThR_CInc : BOOL; (*OldName: GAS_PLUS*)
+	bCtrl_ThR_CDec : BOOL; (*OldName: GAS_MINUS*)
+	bGnlWarning : BOOL; (*General warning*)
+	bGnlTrip3 : BOOL; (*General trip*)
+	bGnlTrip2 : BOOL; (*General trip*)
+	bGnlTrip1 : BOOL; (*General trip*)
+	bGnlTrip : BOOL; (*General trip*)
+	Limit_Pinc : REAL; (* Limit value for load increase *)
+	TimeSlot_Pinc : TIME; (* Time slot for monitoring any load increase *)
+	xOpMode : OpMode; (*Used to determine the OpState of the engine*)
+	bThR_Rel : BOOL; (* Thermal Reactor Release *)
+	set_PT_KL_Pinc : BOOL := FALSE; (*set flap interval load increase*)
+	FG_HEIZG_moduleTR : BOOL; (* Reaktor el. Heizung Ein *)
+	bNoInitDetected : BOOL; (*always true, except 1cycle on init up*)
+	IN_TR : IN_TR_Struct;
+	MM2VIS : MM2VIS_Struct;
+	VIS2MM : VIS2MM_Struct;
+	OUT_TR : OUT_TR_Struct;
+	ParaFactoryDefault : Para_Struct;
+	Para : Para_Struct; (*Parameters*)
+	pm : Para_Struct;
+	pm1 : PERM_TR_Struct;
+	TK_moduleTR : REAL; (* Temp. Reaktionskammer fuer Regelung *)
+	TK1 : REAL; (* Temp. Reaktionskammer 1 *)
+	TK2 : REAL; (* Temp. Reaktionskammer 2 *)
+	xTRW06 : SR; (* Reaktor: Differenz TK1/TK2 max. *)
+	xTRW05 : SR; (* Reaktor: Schaltschranktemp. max. *)
+	xTRW04 : SR; (* Reaktor: Aufheizzeit ueberschr. *)
+	xTRW08 : SR; (* Reaktor: Temp. Reakt.kammer min. *)
+	xTRW07 : SR; (* Reaktor: Temp. Reakt.kammer max. *)
+	bThR2_T_fault_ReactChamber : BOOL; (* Th.Reactor warning - reactor chamber temperature sensors failure - ThR2 *)
+	xTRW02 : SR; (* Reaktor: Stoerung Druckluft *)
+	xTRA02 : SR; (* Reaktor: Sicherheitsschleife *)
+	xTRA01 : SR; (* Reaktor: Stoerg. Abgaskl. Mitte *)
+	xTRW01 : SR; (* Reaktor: Fuehlerbruch *)
+	xTRW03 : SR; (* Reaktor: Stoerg. Abgaskl. Ende *)
+	xTON_INIT : TON;
+	tCtrTR_Heater_In : _tGeACtrIn;
+	tCtrTR_Heater_Out : _tGeACtrOut;
+	xCtrTR_Heater : GeACtr; (*Controller instance*)
+	RM_KL_END_AUS : BOOL;
+	RM_KL_END_EIN : BOOL;
+	KL_AUS_M_S : BOOL;
+	KL_EIN_M_S : BOOL;
+	xTRA01M : SR;
+	bThR_RelTest : BOOL; (*!! Release thermoreactor for testing purpose only*)
+	bThR_Failure : BOOL := 0; (* Thermoreactor failure *)
+	bThR_elHeating : BOOL; (*Thermal reactor electrical heating ON*)
+	bThr_AuxGasCompressor_Fault : BOOL;  (* Th.Reactor warning - auxiliary gas compressor fault *)
+	bThr_AuxGasPr_PcheckFail : BOOL;  (* Th.Reactor warning - implausible auxiliary gas pressure before/after control valve *)
+	bThR2_DPr_Hi : BOOL; (* Th.Reactor warning - differential pressure maximum - ThR2 *)
+	bThR2_EH_gr1_T_blocked : BOOL; (* Th.Reactor electrical heating system - ThR2 - blocked status of heating element group 1 *)
+	bThR2_EH_gr2_T_blocked : BOOL; (* Th.Reactor electrical heating system - ThR2 - blocked status of heating element group 2 *)
+	bThR2_EH_gr3_T_blocked : BOOL; (* Th.Reactor electrical heating system - ThR2 - blocked status of heating element group 3 *)
+	bThR2_EH_gr4_T_blocked : BOOL; (* Th.Reactor electrical heating system - ThR2 - blocked status of heating element group 4 *)
+	bThR2_EH_gr5_T_blocked : BOOL; (* Th.Reactor electrical heating system - ThR2 - blocked status of heating element group 5 *)
+	bThr2_AuxGasValve_fault : BOOL; (* Th.Reactor warning - auxiliary gas solenoid valve fault - ThR2 *)
+	bThR2out_SCRin_DPr_Hi : BOOL; (* Exhaust aftertreatment warning - Thermal reactor outlet/SCR inlet high differential pressure - ThR2 *)
+	bThr2_AuxGasValve_CtrlBlock : BOOL; (* Th.Reactor aux. gas heating system - ThR2 - aux. gas heating controller block due to valve closed *)
+END_VAR

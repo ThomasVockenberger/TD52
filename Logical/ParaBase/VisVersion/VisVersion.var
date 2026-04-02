@@ -1,0 +1,19 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Programm: VisVersion
+ * Datei: VisVersion.var
+ * Autor: zengeres
+ * Erstellt: 9. April 2014
+ ********************************************************************
+ * Lokale Variablen des Programms VisVersion
+ ********************************************************************)
+VAR
+	cnt : DINT;
+	iCountVisVersionStatements : DINT;
+	iCountWrongVisVersionClaims : DINT;
+	bErrWrongVisVersionClaims : BOOL;
+	bDoNoVisVersionClaimsCheck : BOOL := FALSE; (*Debug flag to surpress version check message*)
+	bDoNoExactMajorVisVersionCheck : BOOL := FALSE; (*Debug flag to surpress exact mayor version check, TRUE is a >= check only*)
+	iModuleIDClaimingWrongVisVersion : UDINT;
+END_VAR

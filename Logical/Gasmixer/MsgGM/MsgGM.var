@@ -1,0 +1,6 @@
+VAR
+	iAdrAmmBase2MM : UDINT;
+	iAdrMM2AmmBase : UDINT;
+	xMsg1083 : Msg; (*error gasmixer control*)
+	xMsg2086 : Msg; (*measuring signal failure gasmixer position*)
+END_VAR

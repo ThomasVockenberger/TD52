@@ -1,0 +1,13 @@
+VAR
+	bPF_CosPCtr_Hold : BOOL; (*Q controller on hold*)
+	bBlock : BOOL;
+	GW_P_pfctr_fix : REAL;
+	HY_P_pfctr_fix : REAL;
+	xGR_MIN_PF_STELL : GR_MINR;
+	yBlock : REAL;
+	rQ_AVR_Set : REAL; (*Q setpoint to AVR [%]*)
+	xSigScal_PF_I : xSigScal_R; (*scaling mA output *)
+	xSigScal_PF_U : xSigScal_R; (*scaling V output *)
+	rPF_POC_Set : REAL;
+	rPF_POC_Set_lin : REAL;
+END_VAR

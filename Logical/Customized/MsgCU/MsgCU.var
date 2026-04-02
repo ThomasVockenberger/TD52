@@ -1,0 +1,120 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: MsgCU
+ * File: MsgCU.var
+ * Author: 320003156
+ * Created: November 24, 2011
+ ********************************************************************
+ * Local variables of program MsgCU
+ ********************************************************************)
+VAR
+	xMsg2302 : Msg;
+	xMsg2303 : Msg;
+	xMsg2415 : Msg;
+	xMsg2416 : Msg;
+	xMsg2417 : Msg;
+	xMsg2418 : Msg;
+	xMsg2419 : Msg;
+	xMsg2420 : Msg;
+	xMsg1001 : Msg;
+	xMsg1002 : Msg;
+	xMsg1003 : Msg;
+	xMsg1004 : Msg;
+	xMsg1005 : Msg;
+	xMsg1006 : Msg;
+	xMsg1007 : Msg;
+	xMsg1008 : Msg;
+	xMsg1009 : Msg;
+	xMsg1010 : Msg;
+	xMsg1011 : Msg;
+	xMsg1012 : Msg;
+	xMsg1013 : Msg;
+	xMsg1014 : Msg;
+	xMsg1015 : Msg;
+	xMsg1016 : Msg;
+	xMsg1177 : Msg;
+	xMsg1178 : Msg;
+	xMsg1179 : Msg;
+	xMsg1180 : Msg;
+	xMsg1181 : Msg;
+	xMsg1182 : Msg;
+	xMsg1183 : Msg;
+	xMsg1184 : Msg;
+	xMsg1193 : Msg;
+	xMsg1194 : Msg;
+	xMsg1195 : Msg;
+	xMsg1196 : Msg;
+	xMsg1197 : Msg;
+	xMsg1198 : Msg;
+	xMsg1199 : Msg;
+	xMsg1200 : Msg;
+	xMsg1201 : Msg;
+	xMsg1202 : Msg;
+	xMsg1203 : Msg;
+	xMsg1204 : Msg;
+	xMsg1205 : Msg;
+	xMsg1206 : Msg;
+	xMsg1207 : Msg;
+	xMsg1208 : Msg;
+	xMsg2087 : Msg;
+	xMsg2088 : Msg;
+	xMsg2089 : Msg;
+	xMsg2090 : Msg;
+	xMsg2091 : Msg;
+	xMsg2092 : Msg;
+	xMsg2093 : Msg;
+	xMsg2094 : Msg;
+	xMsg2095 : Msg;
+	xMsg2096 : Msg;
+	xMsg3232 : Msg;
+	xMsg3233 : Msg;
+	xMsg3234 : Msg;
+	xMsg3235 : Msg;
+	xMsg3236 : Msg;
+	xMsg3237 : Msg;
+	xMsg3250 : Msg;
+	xMsg3251 : Msg;
+	xMsg3565 : Msg;
+	xMsg36 : ARRAY[0..100] OF Msg;
+	xMsg3700 : Msg;
+	xMsg9286 : Msg;
+	xMsg9287 : Msg;
+	iAdrAmmBase2MM : UDINT;
+	iAdrMM2AmmBase : UDINT;
+	xMsg16 : ARRAY[0..100] OF Msg; (*Array of Msg for Reserve WARNINGS (element 0 not in use)*)
+	xMsg17 : ARRAY[0..100] OF Msg; (*Array of Msg for Reserve WARNINGS (element 0 not in use)*)
+	xMsg67 : ARRAY[0..100] OF Msg; (*Array of Msg for Reserve OPERATING Message (element 0 not in use) * import HMI Extension*)
+	xMsg68 : ARRAY[0..100] OF Msg; (*Array of Msg for Reserve OPERATING Message (element 100 not in use) * import HMI Extension*)
+	xMsg87 : ARRAY[0..100] OF Msg; (*Array of Msg for Reserve WARNINGS (element 100 not in use) * import HMI Extension*)
+	TP_EngDSS_Mains_Off : TP;
+	TP_EngDSS_Mains : TP;
+	bCtr_Mns_Options_1 : BOOL; (*Debug only*)
+	bCtr_Mns_Options_2 : BOOL; (*Debug only*)
+	bCtr_Mns_Options_3 : BOOL; (*Debug only*)
+	bCtr_Mns_Options_4 : BOOL; (*Debug only*)
+	bCtr_Mns_Options_5 : BOOL; (*Debug only*)
+	bCtr_Mns_Options_6 : BOOL; (*Debug only*)
+	bCtr_Mns_Options_7 : BOOL; (*Debug only*)
+	bCtr_Mns_Options_8 : BOOL; (*Debug only*)
+	bCtr_Mns_Options_9 : BOOL; (*Debug only*)
+	bCtr_Mns_Options_0 : BOOL; (*Debug only*)
+	R_TRIG_Options : R_TRIG := (0);
+	iDelay_MsgAutoReset_100ms : INT; (*Default Op Message Hold Time until Auto Reset*)
+	iReset_Msg2419 : INT; (*internal timer counter*)
+	iReset_Msg2420 : INT; (*internal timer counter*)
+	iReset_Msg3232 : INT; (*internal timer counter*)
+	iReset_Msg3233 : INT; (*internal timer counter*)
+	iReset_Msg3234 : INT; (*internal timer counter*)
+	iReset_Msg3235 : INT; (*internal timer counter*)
+	iReset_Msg3236 : INT; (*internal timer counter*)
+	iReset_Msg3237 : INT; (*internal timer counter*)
+	iReset_Msg3250 : INT; (*internal timer counter*)
+	iReset_Msg3251 : INT; (*internal timer counter*)
+	iReset_Msg3700 : INT; (*internal timer counter*)
+	iReset_Msg36 : ARRAY[0..99] OF INT; (*internal timer counter*)
+	iReset_Msg67 : ARRAY[0..100] OF INT; (*internal timer counter * import HMI Extension*)
+	iReset_Msg68 : ARRAY[0..100] OF INT; (*internal timer counter * import HMI Extension*)
+	iReset_Msg2302 : INT; (*internal timer counter*)
+	iReset_Msg2303 : INT; (*internal timer counter*)
+END_VAR

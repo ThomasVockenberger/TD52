@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="SoftwareCertificates" PackageType="SoftwareCertificates" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">Master1.cer</Object>
+    <Object Type="File">Engine1.cer</Object>
+    <Object Type="File">Engine2.cer</Object>
+    <Object Type="File">Engine3.cer</Object>
+    <Object Type="File">Engine4.cer</Object>
+    <Object Type="File">Engine5.cer</Object>
+    <Object Type="File">Engine6.cer</Object>
+    <Object Type="File">Engine7.cer</Object>
+    <Object Type="File">Engine8.cer</Object>
+  </Objects>
+</Package>

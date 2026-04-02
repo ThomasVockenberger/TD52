@@ -1,0 +1,58 @@
+(********************************************************************
+* COPYRIGHT -- INNIO Company
+********************************************************************
+* File: PAB.vvm
+* Author: automatically generated 
+* Created: 07.03.2014
+********************************************************************
+* PV mapping file
+********************************************************************)
+VAR_CONFIG
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#5.AmmBase::IN_AB.tPB2MM;
+	Cyclic#5.Ventilation::OUT_VE.tVE2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tVE2AB;
+	Cyclic#5.HeatingCooling::OUT_HC.tHC2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tHC2AB;
+	Cyclic#5.Exhaust::OUT_EX.tEX2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tEX2AB;
+	Cyclic#5.ThermalReactor::OUT_TR.tTR2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tTR2AB;
+	Cyclic#5.Generator::OUT_GC.tGC2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tGC2AB;
+	Cyclic#5.Customized::OUT_CU.tCU2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tCU2AB;
+	Cyclic#5.Monic::OUT_MO.tMO2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tMO2AB;
+	Cyclic#5.ICxx::OUT_IC.tIC2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tIC2AB;
+	Cyclic#5.Ignition::OUT_IG.tIG2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tIG2AB;
+	Cyclic#5.Synchronization::OUT_SY.tSY2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tSY2AB;
+	Cyclic#5.Coupling::OUT_CP.tCP2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tCP2AB;
+	Cyclic#2.EngineController::OUT_EC.tEC2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tEC2AB;
+	Cyclic#5.EngineGeneral::OUT_EG.tEG2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tEG2AB;
+	Cyclic#2.Knocking::OUT_KN.tKN2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tKN2AB;
+	Cyclic#5.Gasmixer::OUT_GM.tGM2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tGM2AB;
+	Cyclic#5.Gastrain::OUT_GT.tGT2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tGT2AB;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.tAG2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tAG2AB;
+	Cyclic#2.Opstate::OUT_OP.tOP2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tOP2AB;
+	Cyclic#5.SAFI::OUT_SA.tSA2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tSA2AB;
+	Cyclic#5.KLS98::OUT_KL.tKL2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tKL2AB;
+	Cyclic#5.GasMeteringUnit::OUT_GD.tGD2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tGD2AB;
+	Cyclic#5.ChargingUnit::OUT_CH.tCH2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tCH2AB;
+	Cyclic#5.HalIO::OUT_HA.tHA2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tHA2AB;
+	Cyclic#5.ParaBase::OUT_PB.tPB2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tPB2AB;
+	Cyclic#5.TestBench::OUT_TB.tTB2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tTB2AB;
+	Cyclic#5.Visu::OUT_VI.tVI2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tVI2AB;
+	Cyclic#5.Grid::OUT_GR.tGR2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tGR2AB;
+	Cyclic#5.Emission::OUT_EM.tEM2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tEM2AB;
+	Cyclic#5.CBM::OUT_CB.tCB2AB AT %Q.Cyclic#2.AmmBase::IN_AB.tCB2AB;
+	Cyclic#5.Synchronization::OUT_SY.tGCB_RUC AT %Q.Cyclic#2.AmmBase::IN_AB.tGCB_RUC;
+	Cyclic#2.Opstate::OUT_OP.tEng_Run AT %Q.Cyclic#2.AmmBase::IN_AB.tEng_Run;
+	Cyclic#5.Visu::OUT_VI.iPassLevel AT %Q.Cyclic#2.AmmBase::IN_AB.iPassLevel;
+	Cyclic#5.Opstate::OUT_OP.iIdx_OMSS AT %Q.Cyclic#2.AmmBase::IN_AB.iIdx_OMSS;
+	Cyclic#2.Opstate::OUT_OP.iSt_OpMode AT %Q.Cyclic#2.AmmBase::IN_AB.iSt_OpMode;
+	Cyclic#2.Ignition::OUT_IG.rN_EngAct AT %Q.Cyclic#2.AmmBase::IN_AB.rN_EngAct;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bEng_Start AT %Q.Cyclic#2.AmmBase::IN_AB.bEng_Start;
+	Cyclic#5.HeatingCooling::OUT_HC.bMsg2101 AT %Q.Cyclic#2.AmmBase::IN_AB.bMsg2101;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bMsg2102 AT %Q.Cyclic#2.AmmBase::IN_AB.bMsg2102;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bMsg2103 AT %Q.Cyclic#2.AmmBase::IN_AB.bMsg2103;
+	Cyclic#5.HeatingCooling::OUT_HC.bMsg2104 AT %Q.Cyclic#2.AmmBase::IN_AB.bMsg2104;
+	Cyclic#5.Ventilation::OUT_VE.bMsg3152 AT %Q.Cyclic#2.AmmBase::IN_AB.bMsg3152;
+	Cyclic#2.HalIO::tResetRemoteExt AT %Q.Cyclic#2.AmmBase::IN_AB.tResetRemoteExt;
+	Cyclic#2.HalIO::tGCB_On AT %Q.Cyclic#2.AmmBase::IN_AB.tGCB_On;
+	Cyclic#2.HalIO::tSafetyLoop_Eng AT %Q.Cyclic#2.AmmBase::IN_AB.tSafetyLoop_Eng;
+	Cyclic#5.Customized::OUT_CU.bResetRemBus AT %Q.Cyclic#2.AmmBase::IN_AB.bResetRemBus;
+	Cyclic#5.Visu::OUT_VI.bGnlWarningHMI AT %Q.Cyclic#2.AmmBase::IN_AB.bGnlWarningHMI;
+END_VAR

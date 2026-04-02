@@ -1,0 +1,256 @@
+(*
+T: FUNCTION_BLOCK GAS_TRAIN
+FW: NO
+CI#: 90
+QSL: 41
+QVE: 41
+QVPC: 41
+QPar: 28
+QFBI: 11
+*)
+@V 1 2 0
+PARA_GT_Exist	1	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 3 0
+sbRel_GV	2	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 4 0
+bPS_DO_Rel_GVa	3	VAR_INPUT	@TYP:1
+		     
+
+;
+
+@V 1 5 0
+bPS_DO_Rel_GVb	4	VAR_INPUT	@TYP:1
+		     
+
+;
+
+@V 1 6 0
+sbGas_LC_Triggered	5	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 7 0
+sDI_GT_SafeDevOK	6	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 8 0
+bPS_DO_GT_SafeDev	7	VAR_INPUT	@TYP:1
+		     
+
+;
+
+@V 1 9 0
+sbN_Standstill	8	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 10 0
+sbSafetyLoop_OK	9	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 11 0
+sbSafeInputOK_SafeDevOK	10	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 12 0
+sbSafeOutputOK_GVa	11	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 13 0
+sbSafeOutputOK_GVb	12	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 14 0
+sbSafeOutputOK_SafeDev	13	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 26 0
+sDO_Rel_GV	14	VAR_OUTPUT	@TYP:43
+		     
+
+;
+
+@V 1 27 0
+bOUT_Rel_GV	15	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 28 0
+bOUT_Rel_GVa_PS	16	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 29 0
+bOUT_Rel_GVb_PS	17	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 30 0
+sDO_GT_SafeDevice	18	VAR_OUTPUT	@TYP:43
+		     
+
+;
+
+@V 1 31 0
+bOUT_GT_SD_Dem	19	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 32 0
+bOUT_GT_SD_Dem_PS	20	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 33 0
+iOUT_GT_LC_130s_ET	21	VAR_OUTPUT	@TYP:4
+		     
+
+;
+
+@V 1 34 0
+bError_GT	22	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 35 0
+bWarning_In_SafeDevOK	23	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 36 0
+bWarning_Out_GVa	24	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 37 0
+bWarning_Out_GVb	25	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 38 0
+bWarning_Out_SafeDev	26	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 39 0
+bOUT_GT_OK	27	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 40 0
+bOUT_DI_GT_SafeDevOK	28	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 15 0
+xTP_GT_SD_5s	29	VAR	@FB:45
+		     
+
+;
+
+@V 1 16 0
+xR_TRIG_GT_SD	30	VAR	@FB:39
+		     
+
+;
+
+@V 1 17 0
+xTOF_GT_PC_100ms	31	VAR	@FB:43
+		     
+
+;
+
+@V 1 18 0
+xTON_GT_MF_1s	32	VAR	@FB:44
+		     
+
+;
+
+@V 1 19 0
+xTON_GT_SD_6s	33	VAR	@FB:44
+		     
+
+;
+
+@V 1 20 0
+xET	34	VAR	@FB:95
+		     
+
+;
+
+@V 1 21 0
+xKeepAMM_2s_E1	35	VAR	@FB:91
+		     
+
+;
+
+@V 1 22 0
+xKeepAMM_2s_W1	36	VAR	@FB:91
+		     
+
+;
+
+@V 1 23 0
+xKeepAMM_2s_W2	37	VAR	@FB:91
+		     
+
+;
+
+@V 1 24 0
+xKeepAMM_2s_W3	38	VAR	@FB:91
+		     
+
+;
+
+@V 1 25 0
+xKeepAMM_2s_W4	39	VAR	@FB:91
+		     
+
+;
+
+@V 2 204 0
+__GAS_TRAIN@0	40	VAR	@TYP:43
+		     
+
+;
+
+@V 2 297 0
+__GAS_TRAIN@1	41	VAR	@TYP:43
+		     
+
+;
+

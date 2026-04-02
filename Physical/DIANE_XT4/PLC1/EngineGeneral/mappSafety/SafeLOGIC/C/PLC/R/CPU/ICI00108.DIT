@@ -1,0 +1,69 @@
+(*
+T: FUNCTION_BLOCK MathBib_CALC
+FW: YES	NO_VARIANT MathBib_CALC SKIP_NOTHING	
+CI#: 108
+QSL: 0
+QVE: 9
+QVPC: 9
+QPar: 8
+QFBI: 0
+CIFNUM: 215
+CIFID: 556
+CIFMAJ: 1
+CIFMIN: 0
+CIFSTACK: 500
+*)
+
+FBType	1	VAR_INPUT	@TYP:17
+		     
+
+;
+
+
+S_InDINT1	2	VAR_INPUT	@TYP:59
+		     
+
+;
+
+
+S_InDINT2	3	VAR_INPUT	@TYP:59
+		     
+
+;
+
+
+S_Scale1	4	VAR_INPUT	@TYP:48
+		     
+
+;
+
+
+S_Exp1	5	VAR_INPUT	@TYP:59
+		     
+
+;
+
+
+S_Result1	6	VAR_OUTPUT	@TYP:59
+		     
+
+;
+
+
+S_Result1OK	7	VAR_OUTPUT	@TYP:43
+		     
+
+;
+
+
+DiagCode1	8	VAR_OUTPUT	@TYP:18
+		     
+
+;
+
+
+FirstCall	9	VAR	@TYP:59
+		     
+
+;
+

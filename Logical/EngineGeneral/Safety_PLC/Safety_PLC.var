@@ -1,0 +1,25 @@
+VAR
+	Data_sPLC : UDINT;
+	i : UINT;
+	szOptionNr : STRING[2];
+	szSafeAppFilePath : STRING[260]; (*Filename of the SafeAPPLICATION file*)
+	szSafeCommFilePath : STRING[260]; (*Filename of the SafeCOMMISSIONING file*)
+	xEplSDORead : EplSDORead := (0);
+	xSfDomainCompletion : SfDomainCompletion; (*Acknowledge the correctness of data on the SafeDOMAIN*)
+	xSfDomainConnect : SfDomainConnect; (*Connects the specified user to the SafeDOMAIN *)
+	xSfDomainControl : SfDomainControl; (*Execute predefined SafeDOMAIN actions*)
+	xSfDomainExchange : SfDomainExchange; (*Confirm acknowledgment requests*)
+	xSfDomainGetSafeNodeAvailability : SfDomainGetSafeNodeAvailability; (*Displays the value and attributes of a Safe node parameter *)
+	xSfDomainGetSafeOptionBool : ARRAY[0..27] OF SfDomainGetSafeOptionBool; (*Displays the value and attributes of a Safe option BOOL parameter *)
+	xSfDomainGetSafeOptionDint : ARRAY[0..27] OF SfDomainGetSafeOptionDint; (*Displays the value and attributes of a Safe option DINT  parameter *)
+	xSfDomainInfo : SfDomainInfo; (*Read information from the SafeDOMAIN*)
+	xSfDomainLoadSafeOptions : SfDomainLoadSafeOptions; (*Load the SafeCOMMISSIONING file for further processing*)
+	xSfDomainSaveSafeOptions : SfDomainSaveSafeOptions; (*Saves the changed internal image of the SafeCOMMISSIONING file*)
+	xSfDomainSetSafeNodeAvailability : SfDomainSetSafeNodeAvailability; (*Sets the value of the specified Safe node parameter *)
+	xSfDomainSetSafeOptionBool : ARRAY[0..27] OF SfDomainSetSafeOptionBool; (*Sets the value of the specified Safe option BOOL parameter *)
+	xSfDomainSetSafeOptionDint : ARRAY[0..27] OF SfDomainSetSafeOptionDint; (*Sets the value of the specified Safe option DINT parameter *)
+	xCONV_HEX_CRC_Appl : CONV_HEX; (*FuB*)
+	xCONV_HEX_CRC_ERV : CONV_HEX; (*FuB*)
+	xCONV_HEX_CRC_HW : CONV_HEX; (*FuB*)
+	xSfDomainTransfer : SfDomainTransfer; (*Transfer the SafeAPPLICATION and SafeCOMMISSIONING*)
+END_VAR

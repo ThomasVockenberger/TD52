@@ -1,0 +1,13 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Library: UniDecoXML
+ * File: UniDecoXML.var
+ * Author: ZengereS
+ * Created: November 02, 2010
+ ********************************************************************
+ * Constants of library UniDecoXML
+ ********************************************************************)
+VAR CONSTANT
+	ERR_STATE : USINT := 252; (*Error State*)
+END_VAR

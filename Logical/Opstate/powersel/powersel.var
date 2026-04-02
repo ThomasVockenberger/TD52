@@ -1,0 +1,39 @@
+VAR
+	rP_Set_Min_Norm : REAL; (*Minimum power setpoin p.u.*)
+	rP_Set_Norm : REAL;
+	bRampEnable : BOOL; (* TRUE=setpoint power ramp active *)
+	xRAMPE_SetPower : LCRRamp;
+	bLastNetpM : BOOL;
+	bLeftInsel : BOOL;
+	i : USINT;
+	rP_Nom_Gastype : REAL;
+	rP_Ramp_IncGrad_Norm : REAL;
+	rP_Ramp_DecGrad_Norm : REAL;
+	TP_GasMixing : TP;
+	iIdx_Gtyp_Dem_old : INT;
+	bGasMixingActive_old : BOOL;
+	bGEN2FastRamp : BOOL;
+	rP_Set_Max_Norm : REAL;
+	do_Nothing : BOOL;
+	bPRed_Loop : BOOL;
+	iIdx_Pset_Type : INT; (* power setpoint: 1 = VIS, 2 = AI, 3 = BUS, 4 = CUST, 5 = PFC, 6 = EU, 7 = Mns, 8 = PU, 9 = WUO *)
+	TON_ParaSetupOk_2s : TON;
+	bAct_CompMGC_Nfilter : BOOL := TRUE;
+	xLCRPT1_Nact : LCRPT1; (*Compatibility to Microgrid Ctrl: Speed Filter*)
+	rN_EngAct_filt : REAL := 1500;
+	rP_offs_CompMGC_1 : REAL := 0.0;
+	rP_offs_CompMGC_2 : REAL := 0.0;
+	rP_offs_CompMGC_2upd : REAL := 0.0;
+	bTest_CompMGC_extNoffset : BOOL;
+	rN_Offs_Cust : REAL := 0.00;
+	rK_CompMGC_extNoffset : REAL := 0.001; (* Compatibility to Microgrid Ctrl: scaling factor *)
+	dN : REAL := 0.0;
+	rNdiff_Lim_CompMGC : REAL := 90.0;
+	bSyDemand : BOOL := 0;
+	tTof_ActCompMGC_Sy : TIME := T#1s;
+	xTOF_SyDemand : TOF;
+	rP_offs_CompMGC_2_max : REAL;
+	rP_DiffMax_CompMGC_2 : REAL := 0.05;
+	rP_offs_CompMGC_2_min : REAL;
+	R_TRIG_Event_Change  : R_TRIG; (* Trigger bit for event change in case of power set point via bus *)
+END_VAR

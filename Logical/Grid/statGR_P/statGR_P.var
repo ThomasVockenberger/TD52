@@ -1,0 +1,127 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: statGR_P
+ * File: statGR_P.var
+ * Author: 502221015
+ * Created: June 27, 2013
+ ********************************************************************
+ * Local variables of program statGR_P
+ ********************************************************************)
+VAR
+	iFCMode : INT; (*1=PFC / 2=FC / 0= nix*)
+	iFCMode_old : INT;
+	xSR_P : SR; (*instance for enable external power factor cos(phi) from DIs*) (* OldName: SR_P; Cycle:0; *)
+	bGCP_P : BOOL; (* request power value from DIs - on/off*) (* OldName: bGCP_P; Cycle:0; *)
+	bBC_GCP_P : BOOL; (* request power value from bus - on/off*) (* OldName: bBUS_GCP_P; Cycle:0; *)
+	xSR_BC_P : SR; (*instance for enable external power factor cos(phi) from bus*) (* OldName: SR_BUS_P; Cycle:0; *)
+	xSR_PLim : SR; (* instance for power limit from DIs*) (* OldName: SR_Plim; Cycle:0; *)
+	bBC_GCP_PLim : BOOL; (* power limit on/off from bus *) (* OldName: bBUS_GCP_Plim; Cycle:0; *)
+	xSR_BC_PLim : SR; (* instance for power limit from bus*) (* OldName: SR_BUS_Plim; Cycle:0; *)
+	bGCP_RMC : BOOL; (* RMC on/off from Digital inputs *) (* OldName: bGCP_RMC; Cycle:0; *)
+	xSR_RMC : SR; (* RMC on/off from DIs*) (* OldName: SR_RMC; Cycle:0; *)
+	bBC_GCP_RMC : BOOL; (*RMC activate / deactivate from bus*) (* OldName: bBUS_GCP_RMC; Cycle:0; *)
+	xSR_BC_RMC : SR; (*instance for RMC activate / deactivate from bus*) (* OldName: SR_BUS_RMC; Cycle:0; *)
+	bGCP_PFC : BOOL; (* primary frequency control - on/off from  digital inputs *) (* OldName: bGCP_PFC; Cycle:0; *)
+	xSR_PFC : SR; (*instance for primary frequency control - on/off from  digital inputs*) (* OldName: SR_PFC; Cycle:0; *)
+	bBC_GCP_PFC : BOOL; (* primary frequency control - on/off from  bus*) (* OldName: bBUS_GCP_PFC; Cycle:0; *)
+	xSR_BC_PFC : SR; (*instance for primary frequency control - on/off from  bus*) (* OldName: SR_BUS_PFC; Cycle:0; *)
+	rGCP_P : REAL; (* [kW] *) (* OldName: rGCP_P; Cycle:0; *)
+	rGCP_PLim : REAL; (* [kW] *) (* OldName: rGCP_Plim; Cycle:0; *)
+	xPLim_lo : ARRAY[0..6] OF GR_MINR;
+	xGR_MIN_Plim : GR_MINR; (* *) (*GR_MIN_Plim*)
+	xTON_RM_EU : ARRAY[0..6] OF TON; (* on-dely timing fedback for P - fixvalue 1 *) (* OldName: ton_RM_EVU; Cycle:5; *)
+	xTON_Plim : TON := (0);
+	xOpMode : OpMode; (*operation mode*)
+	xF_TRIG_Start : F_TRIG;
+	xGR_MAX_RampEU : GR_MAXR := (0); (*Maximum limit control with hysteres for Active power*) (*oldName:GR_MAX_RampeEVU*)
+	xTON_FGDRPS : TON;
+	bSlowRampafterPFC : BOOL;
+	TON_SlowRampafterPFC : TON := (0);
+	tWaitPFC : TIME := T#10m;
+	xTON_lRamp : TON;
+	rP_Red_Max : REAL;
+	xGR_MAX_RampFC : GR_MAXR := (0); (*Maximum limit control with hysteres for Active power*)
+	xSR_ILF : SR := (0);
+	xSR_FC : SR := (0);
+	xSR_BC_ILF : SR := (0);
+	xSR_BC_FC : SR := (0);
+	bGCP_ILF : BOOL := 0;
+	bGCP_FC : BOOL := 0;
+	bBC_GCP_ILF : BOOL := 0; (*	bBus_Dem_Sim : BOOL := 0;  for simulation only *)
+	bBC_GCP_FC : BOOL := 0; (*	bBus_Dem_Sim : BOOL := 0;  for simulation only *)
+	rP_Ramp_DecGrad_GR_Temp_Norm : REAL;
+	rP_Ramp_IncGrad_GR_Temp_Norm : REAL;
+	bGCP_PU : BOOL := 0; (*P(U) activation bit from DIs*)
+	bBC_GCP_PU : BOOL := 0; (*P(U) activation bit from Bus*)
+	xSR_PU : SR;
+	xSR_BC_PU : SR;
+	tFC_dPset : TIME := T#1s;
+	rP_ref_LFSM : REAL; (*Reference Power LFSM*)
+	rBuffer_Pset_EU : ARRAY[0..10] OF REAL; (* Buffer for Pset from EU *)
+	x_Pset : INT;
+	bBuffer_Pset_EU : BOOL := 0;
+	bBuffer_PLim_EU : BOOL := 0;
+	rLCRLimScal_PAct_old : REAL;
+	z_Pset : INT;
+	TON_GoodQual_Pset_EU : TON;
+	rBuffer_PLim_EU : ARRAY[0..10] OF REAL; (* Buffer for Plim from EU *)
+	x_PLim : INT;
+	rLCRLimScal_PLim_old : REAL;
+	z_PLim : INT;
+	TON_GoodQual_PLim_EU : TON;
+	xSR_LFMSO_GRC_DB_pos : SR; (*instance for enable frequency limit LFSM-O from DIs*)
+	xSR_BC_LFMSO_GRC_DB_pos : SR; (*instance for enable frequency limit LFSM-O*)
+	xSR_LFMSU_GRC_DB_neg : SR; (*instance for enable frequency limit LFSM-U from DIs*)
+	xSR_BC_LFMSU_GRC_DB_neg : SR; (*instance for enable frequency limit LFSM-U*)
+	xSR_Droop_GrC_LFSMO_pos : SR; (*instance for enable droop LFSM-O from DIs*)
+	xSR_BC_Droop_GrC_LFSMO_pos : SR; (*instance for enable droop LFSM-O*)
+	xSR_Droop_GrC_LFSMU_neg : SR; (*instance for enable droop LFSM-U from DIs*)
+	xSR_BC_Droop_GrC_LFSMU_neg : SR; (*instance for enable droop LFSM-U*)
+	xSR_Droop_GrC_FSMU : SR; (*instance for enable droop FSM-U from DIs*)
+	xSR_BC_Droop_GrC_FSMU : SR; (*instance for enable droop FSM-U*)
+	xSR_Droop_GrC_FSMO : SR; (*instance for enable droop FSM-O from DIs*)
+	xSR_BC_Droop_GrC_FSMO : SR; (*instance for enable droop FSM-O*)
+	xSR_FSMU_GRC_DB : SR; (* instance for enable deadband FSM-U from DIs*)
+	xSR_BC_FSMU_GRC_DB : SR; (* instance for enable deadband FSM-U*)
+	xSR_FSMO_GRC_DB : SR; (* instance for enable deadband FSM-O from DIs*)
+	xSR_BC_FSMO_GRC_DB : SR; (* instance for enable deadband FSM-O*)
+	xSR_Marg_GrC_FSM_Pos : SR; (* instance for enable positive Margin FSM from DIs*)
+	xSR_BC_Marg_GrC_FSM_Pos : SR; (* instance for enable positive Margin FSM*)
+	xSR_Marg_GrC_FSM_Neg : SR; (* instance for enable negative Margin FSM from DIs*)
+	xSR_BC_Marg_GrC_FSM_Neg : SR; (* instance for enable negative Margin FSM*)
+	xSR_Droop_GrC_U : SR; (* instance for enable droop U from DIs*)
+	xSR_BC_Droop_GrC_U : SR; (* instance for enable droop U FSM*)
+	xSR_Ramp_GrC : SR; (* instance for enable ramp rate from DIs*)
+	xSR_BC_Ramp_GrC : SR; (* instance for enable ramp rate*)
+	xSR_FNom_LFSM_Ref : SR; (* instance for enable Frequency reference for FSM/LFSM from DIs*)
+	xSR_BC_FNom_LFSM_Ref : SR; (* instance for enable Frequency reference for FSM/LFSM*)
+	bLFSM_TestEnable : BOOL := 0;
+	R_LFSM_TRIG_Start : R_TRIG := (0);
+	R_LFSM_TRIG_Stop : R_TRIG;
+	bPowerAdjust_LFSM : BOOL; (* Adjustment of P_set due to FSM/LFSM*)
+	xTOF_FRed : TOF; (* TOF Adjustment of P_set due to FSM/LFSM*)
+	bSlowRampafterPLim : BOOL;
+	TON_SlowRampafterPLim : TON := (0);
+	tiWaitPLim : TIME := T#10m;
+	rP_Red_EU_Norm_old : REAL;
+	bPRampAftGridConn : BOOL;
+	xTON_Mp : TON;
+	rF_Delta_FSMO : REAL;
+	rF_Delta_FSMU : REAL;
+	rP_Delta_FSMO : REAL;
+	rP_Delta_FSMU : REAL;
+	xTON_RelCalc_PRamp_FC : TON;
+	rDB_FSM_LFSM_Max : REAL; (*Max. allowable deadband value (in Hz), typically 0.5Hz for FSM in parallel*)
+	rF_Delta_ILF : REAL; (*Delta Frequency input to ILF [Hz]*)
+	bILF_Active : BOOL := FALSE; (*(De)Activation ILF Integrator bit*)
+	xTON_ILF_DeActive : TON; (*5min timer for ILF re-activation*)
+	rPRamp_ILF_IncGrad_Norm : REAL;
+	rPRamp_ILF_DecGrad_Norm : REAL;
+	rP_Delta_ILF_Norm : REAL;
+	rP_Delta_ILF_Max : REAL; (*Maximum delta P for ILF range [p.u.]*)
+	rP_Delta_ILF_Min : REAL; (*Minimum delta P for ILF range [p.u.]*)
+	bTtrig_Start : BOOL; (*trigger after first start*)
+	F_LFSM_TRIG_Testmode : F_TRIG := (0); (*Trigger to set Testmode on HMI for test initiation via bus coupling*)
+	bSetback_FC_Testmode : BOOL := 0; (*Set testmode number back to default when no test initiation via bus coupling*)
+END_VAR

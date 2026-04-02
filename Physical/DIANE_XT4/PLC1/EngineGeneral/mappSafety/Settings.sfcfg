@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="gSafety" Type="sfcfg">
+    <Group ID="DefaultSettings">
+      <Property ID="InternalVersion" Value="5.24.1.0" />
+      <Property ID="mappSafetyHMIType" Value="SDMP11_None" />
+      <Property ID="DefaultPath" Value="ADDONS\DATA\Safety" />
+      <Property ID="StatusPollingProp" Value="5" />
+      <Property ID="UpdateWidget" Value="5" />
+      <Property ID="LogLevel" Value="0" />
+      <Property ID="SD_ConnectionTimeOut" Value="30" />
+    </Group>
+    <Group ID="Permissions">
+      <Property ID="ApplicationAccessRole" Value="Administrators" />
+      <Property ID="MachineOperatorAccessRole" Value="MachineOperator" />
+    </Group>
+  </Element>
+</Configuration>

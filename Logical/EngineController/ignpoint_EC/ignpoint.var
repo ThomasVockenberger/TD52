@@ -1,0 +1,85 @@
+VAR
+	ucCylinderCount : USINT; (* loop counter number of cylinder *)
+	rCA_IP_Act_Min : REAL; (* minimum cylinder ignition point *)
+	rCA_IP_Act_Min_old : REAL; (* last min. cylinder ignition point *)
+	ssTurboySample : INT; (* buffer turbobypass pos. samples *)
+	ucSampleCount : USINT; (* sample counter turbobypass pos. *)
+	PID_A_IgnTiming : PID_A; (* PID controller timing point *)
+	rCA_IP_Rel_Max : REAL; (* current max. allowed delta ZZP *) (* Oldname: ssMaxZZPCyl *)
+	rCA_IP_Rel_Min : REAL; (* minimal allowed cyl. timing point *) (* Oldname: ZZPZylMinLimit *)
+	slKnockOM : ARRAY[0..24] OF DINT;
+	slKnockOH : ARRAY[0..24] OF DINT;
+	slKPowerOH : DINT;
+	slKPowerOM : DINT;
+	ucResetCnt : USINT;
+	bPELRedAct : BOOL;
+	bKlopfregAkt : BOOL; (*knock control activation bit*)
+	rCA_IP_Set_Raw : REAL; (* Oldname: W_ZZPRoh *)
+	rCA_IP_Power : REAL; (* Oldname: ssZZPPower *)
+	rCA_IP_Knock : REAL; (* Oldname: ssZZPKnock *)
+	rCA_IP_CylRed : ARRAY[0..24] OF REAL; (* ZZP-Reduktion *) (* Oldname: ssZZPCylRed *)
+	rCA_IP_CylRed_PBC : ARRAY[0..24] OF REAL; (* ZZP-Reduktion durch Glühzünden / Pmax *) (* Oldname: ssZZPCylRedPi *)
+	bTimingRedAct : ARRAY[0..24] OF BOOL;
+	rCA_Ign_Act_Rel : ARRAY[0..24] OF REAL;
+	OpHour_Imp : bh_typ;
+	xBH_OpHour : BH;
+	xRamp_IP_Glob : RAMPE_R;
+	xRamp_IP_CBVOpt : RAMPE_R; (* ramp for timing point reduction *)
+	rCA_IP_CBVOpt : REAL;
+	xMFB50Contr : MFB50Contr := (0);
+	iIdx : USINT;
+	bIP_Red_Cyl : ARRAY[0..24] OF BOOL;
+	rCA_MFB50_Offs : ARRAY[0..24] OF REAL;
+	rCA_IP_Retard_LR_Offset : REAL; (*Offset on ignition timing point to react on load rejection by opening of generator circuit breaker*)
+	rCA_IP_Retard_LR : REAL; (*Offset on ignition timing point to react on load rejection by opening of generator circuit breaker*)
+	Idle_EngOpState : INT;
+	xLCRCByP_IP_P : LCRCurveByPoints;
+	rCount_LR : REAL;
+	rDelta_LR : REAL;
+	bDo_Test : BOOL;
+	TON_ParaOK : TON;
+	TON_ParaWrite : TON;
+	tVerzParaWrite : TIME := T#1110ms;
+	rP_CbvOptAct : REAL;
+	bTrigASGEN1 : BOOL := FALSE;
+	bIgnoreWG_IGP : BOOL := FALSE;
+	rCA_IgnP_AvgTmp : REAL;
+	TON_F_MMD : TON;
+	rF_StartIPRed : REAL; (* Startpoint of IP reduction dependent on nominal frequency *)
+	bITP_Offs_F_Act : BOOL := TRUE; (* Bit to activate the frequency dependent ITP reduction function *)
+	rCA_ITP_Red_F : REAL; (* ITP offset dependent on engine frequency *)
+	rCA_Lim_ITP_Red_F : REAL := 0.0; (* Limited ITP offset dependent on engine frequency *)
+	xSCRT_ss : fSCRT_ss; (*Steady State SCR Inlet Temp Ctrl*)
+	rCA_IP_SCR_Marg : REAL; (*margin temperature to the limit [degCA]*)
+	rCA_IP_SCR_Rel_Lim : REAL; (*SCR Inlet Temperature IP Ctrl - IP Offset limitation [degCA]*)
+	rT_EGaTC_Diff : REAL; (*Difference between SCR inlet temperature and its limit [degC]*)
+	rCA_IP_T_EGaTC_Off_Rel : REAL; (*IP offset to control SCR inlet temperature [degCA]*)
+	xRamp_IP_SCRInTemp : RAMPE_R; (*Ramp for ITP change to control SCR inlet temperature*)
+	rCA_Ign_Act_Rel_SCR : REAL; (*SCR Inlet Temperature IP Ctrl - Relative SCR IP for KLS90 [degCA]*)
+	rCA_ITP_Red_F_min : REAL := -9.0; (*minimal itp adaption in underfrequency*)
+	xLCRCByP_IP_P_HC : LCRCurveByPoints; (* load dependent IP profile for HC interim emission solution *)
+	refPoint_IP_P_HC : ARRAY[0..2]OF lcrCurveByPoints_TabEntry_type;
+	refPoint_IP_P : ARRAY[0..1]OF lcrCurveByPoints_TabEntry_type;
+	rCA_TrStRed_UpLim : REAL; (* highest relative ITP of all cylinders*)
+	rCA_TrStRed_Aw : REAL; (* TrStRed function relative ITP feedback *)
+	xTON_TrStRed_startupDelay : TON; (* auxiliary TON for TrStRed activation *)
+	rP_Norm_TrStRed_act : REAL; (*   TrStRed minimum activation power *)
+	bTrStRed_active_Para_Cnd : BOOL; (* auxiliary variable for TrStRed activation *)
+	bTrStRed_activePower : BOOL; (* auxiliary variable for TrStRed activation *)
+	bTrStRed_active_EngOp_Cnd : BOOL; (* auxiliary variable for TrStRed activation *)
+	rCA_upLim_RelITP_TrStRed : REAL; (* actual relative ITP limitation by TrStRed function *)
+	xTON_TrStRed_TimeOut : TON; (* timeout timer for TrStRed function *)
+	xTOF_TrStRed_PFPDR_dis : TOF; (* TOF for PFPDR disable by TrStRed function *)
+	xTOF_TrStRed_hiEGT_dis : TOF; (* TOF for high avg.EGT pw.red. disable / timer extension for high cyl.max.EGT alarm by TrStRed function *)
+	xTP_TrStRed_Start : TP;
+	xTP_TrStRed_Complete : TP;
+	tiTON_TrStRed_startupDelay : TIME;
+	rCA_TrStRed_IP_Lim_old : REAL;
+	rCA_TrStRed_IP_avg_old : REAL;
+	bTrStRed_positiveRamp : BOOL; (* TrStRed positive ramp detection for LXplus steady state loss request *)
+	rTrStRedRamp_detectFactor : REAL; (* tolerance factor for TrStRed ramp detection *)
+	rCA_TrStRed_LX2reset : REAL; (* TrStRed reset threshold for LXplus steady state loss request *)
+	xTON_TrStRed_rampDelay_LX2 : TON; (* TON for TrStRed positive ramp detection for LXplus steady state loss request *)
+	xTP_TrStRed_ramp_LX2 : TP;
+	xF_Trig_Gen2_IDLE_off : F_TRIG; (* detect negative edge of Gen2 active in IDLE *)
+END_VAR

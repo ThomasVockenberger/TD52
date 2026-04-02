@@ -1,0 +1,28 @@
+﻿FUNCTION_BLOCK SET_DINT_S
+{ VariableWorksheet := 'Variables' }
+﻿{GroupDefinition(0,'NewGroup')}
+
+VAR_INPUT {Group(0)}
+    {LINE(1)}
+    sbStoreValue : SAFEBOOL; (*Value is stored if TRUE*)
+    {LINE(2)}
+    siValue : SAFEDINT; (*Value to store*)
+END_VAR
+
+VAR_OUTPUT {Group(0)}
+    {LINE(3)}
+    siValue_Stored : SAFEDINT; (*Stored value*)
+END_VAR
+
+VAR {Group(0)}
+END_VAR
+
+{ CodeWorksheet := 'SET_DINT_S', Type := '.st' }
+﻿(* FuB SET_DINT_S *)
+
+IF sbStoreValue = SAFETRUE
+THEN
+    siValue_Stored := siValue;
+END_IF;
+    
+END_FUNCTION_BLOCK

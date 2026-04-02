@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.2.102?>
+<Library Version="2.00.0" SubType="ANSIC" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>JWASLIB2.fun</File>
+    <File>JWASLIB2.var</File>
+    <File>JWASLIB2.typ</File>
+    <File>amm_seq.c</File>
+    <File>functions1.c</File>
+  </Files>
+</Library>

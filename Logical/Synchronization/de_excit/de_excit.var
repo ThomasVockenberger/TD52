@@ -1,0 +1,11 @@
+VAR
+	bDeEx_Dem_Man : BOOL;
+	bDeEx_Dem_Aut : BOOL;
+	tof_T_ENTR : TOF;
+	ton_ST_ENTR : TON;
+	tof_T_ST_ENTR : TOF;
+	xGR_MIN_GEN_SPG : GR_MINR;
+	xTON_GEN_OSP : TON;
+	bDeEx_EngStop : BOOL;
+	bN_DeExc : BOOL;
+END_VAR

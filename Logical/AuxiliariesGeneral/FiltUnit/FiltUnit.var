@@ -1,0 +1,6 @@
+VAR
+	rDPr_OFU_Filt : REAL := 0; (*oilfilter difference pressure (oil filter unit)*)
+	xTON_Centrifuge : TON := (0); (*FuB*)
+	xTOF_OFUP_Centrifuge_Dem : TOF;
+	xTON_AMM_Centrifuge_Pr_Lo_MonRel : TON;
+END_VAR

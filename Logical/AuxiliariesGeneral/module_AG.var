@@ -1,0 +1,265 @@
+VAR
+	IN_AG : IN_AG_struct;
+	OUT_AG : OUT_AG_struct;
+	MM2VIS : MM2VIS_struct;
+	VIS2MM : VIS2MM_struct;
+	Para : PARA_AG_struct;
+	ParaFactoryDefault : PARA_AG_struct;
+	pm : PARA_AG_struct;
+	tCtr_ECW_In : _tGeACtrIn; (*engine cooling water controller*)
+	tCtr_ECW_Out : _tGeACtrOut; (*engine cooling water controller*)
+	xCtr_ECW : GeACtr; (*engine cooling water controller*)
+	xEngType : EngType;
+	bEOVal_DemOpen : BOOL := FALSE; (*demand for oil refill valve V4.14 (without TOF)*)
+	bStart : BOOL; (*engine start command from vis-button*)
+	bStop : BOOL; (*engine stop command from vis-button*)
+	bOMSS_Scav : BOOL; (*engine operation mode*)
+	bOMSS_MAT : BOOL; (*engine operation mode*)
+	bOMSS_Test : BOOL; (*engine operation mode*)
+	bOMSS_Aut : BOOL; (*engine operation mode*)
+	bOMSS_Man : BOOL; (*engine operation mode*)
+	bOMSS_Off : BOOL; (*engine operation mode*)
+	bNoMon4BlackStart : BOOL; (*no monitoring for engine blackstart*)
+	bSafetyLoopEngOk : BOOL; (*saftey loop engine ok*)
+	AN_VORW : BOOL; (* Vorwärmtemperatur *)
+	bStartErr : BOOL; (*auto start failed *)
+	AT26 : BOOL; (* Störung Hilfsbetriebe *)
+	AT26_PB : BOOL; (* Prüfzeit Hilfsbetriebe *)
+	bECW_CV_Open : BOOL; (* engine cooling water temperature control valve opened *)
+	bGnlTrip : BOOL;
+	bGnlTrip1 : BOOL;
+	bGnlTrip2 : BOOL;
+	bGnlTrip3 : BOOL;
+	bGnlWarning : BOOL;
+	bLampHornTest : BOOL; (*button start lamp test*)
+	bT114 : BOOL;
+	BTRB_30M : BOOL; (* Betrieb + 30min *)
+	M_DREHZ : BOOL; (* Startdrehzahl *)
+	M_DREHZ_5s : BOOL; (* Startdrehzahl + 5s*)
+	M_HDREHZ : BOOL; (* Hochlaufdrehzahl *)
+	M_HUPEAUS : BOOL; (* Hupe abschalten *)
+	NKOP : BOOL; (* Nachkühlpumpe *)
+	RESET : BOOL; (* RESET *)
+	STP_STRT : BOOL; (* Zahn auf Zahn --> Starter raus *)
+	T_H_STRT : BOOL; (* Handstart max. *)
+	T_HUPEAUS : BOOL; (* Timer für Hupe *)
+	T_ST_MKWP : BOOL; (* St. Motorkühlwasserpumpe *)
+	T57 : BOOL; (* Störung Hilfsbetriebe *)
+	bPreLube_EngStaRel : BOOL; (*prelube engine start release*)
+	V_DREHZ : BOOL; (* Verlängerung Drehzahl *)
+	xTOF_MKWP_op : TOF;
+	ZM_STHBT : BOOL; (* ZM Störung Hilfsbetriebe *)
+	ZM_STRT : BOOL; (* Zwischenmerker *)
+	xTON_Pr_PreLub : TON; (*prelube oil pressure monitoring activation*)
+	xRS_Pr_PreLub_Lo : RS; (*prelube oil pressure low monitoring delay*)
+	bPr_PreLub_Lo : BOOL; (*prelube oil pressure low*)
+	bTC_PostLub : BOOL; (*TC post lubrivation running*)
+	AN_ODGW1 : BOOL; (* Öldruck Grenzwert 1 *)
+	AN_ODR_MAX : BOOL; (* Öldruck maximum *)
+	AN_ODRA : BOOL; (* Öldruck minimum *)
+	AN_ODRW : BOOL; (* Öldruck minimum warnend *)
+	bErrMsOilCounter : BOOL; (*ERROR measurement signal Oil counter*)
+	BTRB_60s : BOOL; (*engine operation + 60s*)
+	FG_ODRUW : BOOL; (* Freigabe Öldrucküberwachung *)
+	kwh : REAL; (*Kilowatt hour *)
+	ODR_NKUEHL : BOOL; (*Oilpressure for aftercoolingrun not achieved*)
+	OilCounter : ARRAY[0..19] OF tOilCounter; (*circular buffer*)
+	OilPress_a_ATL_min_A : BOOL; (*Öldruck nach Turboladerölfilter min abstellung*)
+	OilPress_a_ATL_min_A_prel : BOOL; (*Öldruck nach Turboladerölfilter min abstellung vorschmierung*)
+	rOC_Consum : REAL; (*oil consumption during the last measurement*)
+	rOC_DeltaOpHour : REAL; (*operating hours during the last measurement*)
+	rP_OC_Avg : REAL;
+	rP_OC_Energy : REAL;
+	rDPr_EOF : REAL; (*Oil filter differential pressure*)
+	rVol_OC : REAL;
+	slOilCounterImpulse : DINT; (*oil counter impulse*)
+	slOilRefill_Bh : DINT; (*operating hour up to the time of last oil refill*)
+	tCtr_EOVal_In : _tGeACtrIn; (*engine oil cooler valve controller In*)
+	tCtr_EOVal_LT_In : _tGeACtrIn; (*engine oil cooler LT valve controller In*)
+	tCtr_EOVal_Out : _tGeACtrOut; (*engine oil cooler valve controller Out*)
+	tCtr_EOVal_LT_Out : _tGeACtrOut; (*engine oil cooler LT valve controller Out*)
+	ucIndexOil : USINT; (*index for circular buffer Oil counter*)
+	ucModeRegister1 : USINT := 14; (*Mode Register 1 for NC 150 Modul (00001110 binär) Ölzählereingang auf positive Zählrichtung setzen*)
+	ucResetRegister1 : USINT := 128; (*reset oil counter *)
+	UW_ODR_MAX : BOOL; (* UW Öldruck maximum *)
+	xCtr_EOVal : GeACtr; (*engine oil cooler valve controller, function block GeACtr *)
+	xCtr_EOVal_LT : GeACtr; (*engine oil cooler LT valve controller, function block GeACtr *)
+	Z_ODR : BOOL; (* Zuschalt. Öldruck-UW *)
+	rAvgActiveEnergy : REAL; (*active energy average*)
+	rAvgOilVolume : REAL; (*oil volume average*)
+	rAvgVolumeEnergy : REAL; (*oil volume / active energy average*)
+	bPr_OTC_Prelub : BOOL; (* TC prelube oil pressure - release engine start*)
+	b_OilRefillBlocked : BOOL; (* Blocking oil refill for X operating hours *) (*OldName:bBlockOil_Bh, Cycle:5*)
+	bEO_Level_Hi : BOOL; (*engine oil level high from analog signal *) (*OldName:OMAX_fill; Cycle:5;*)
+	bEO_Level_W_Hi : BOOL; (*engine oil level high from analog signal - warning*)
+	bEO_Level_Lo : BOOL; (*engine oil level low from analog signal *) (*OldName:OMIN_fill; Cycle:5;*)
+	bEO_Refill : BOOL; (*Oil refill valve open, builded from analog level sensor*) (*OldName:OELV_fill; Cycle:5;*)
+	bPreHeatDem : BOOL; (*engine preheating demand*)
+	bPreLubeDem : BOOL; (* engine prelubrication demand *) (*OldName:M_VORS, Cycle:5*)
+	bTC_CoolDownRun : BOOL; (* turbo charger cool down run *) (*OldName:M_NKUEHL, Cycle:5*)
+	bNoInitDetected : BOOL; (*allways true, except 1cycle on init up*)
+	bTestEnabled : BOOL; (*Modultest enabled*)
+	VORW_OIL : BOOL; (*engine oil preheating*) (*OldName:VORW_OIL, Cycle:5*)
+	Perm : tPerm_AG_typ;
+	bAMM_Pr_CC_MsMs : BOOL; (*W3323 Crank case pressure measuring signal failure*)
+	bAMM_Pr_CC_Lo : BOOL; (*W2649 Crank case pressure low*)
+	bAMM_Pr_CC_Hi : BOOL; (*W2558 Crank case pressure high*)
+	bAMM_Pr_CC_HiHi : BOOL; (*W3322 Crank case pressure high*)
+	bAMM_Pc_BbBlower_Hi : BOOL; (*W2591 Blow by blower speed maximum*)
+	bAMM_BbBlower_Not_Rdy : BOOL; (*W2650 Blow by blower not ready*)
+	bAMM_Pr_f_BbFilt_Ms : BOOL; (*W2651 Measuring signal failure pressure before blow by filter*)
+	bAMM_Pr_f_BbFilt_A_Ms : BOOL; (*W2754 Measuring signal failure pressure before blow by filter A*)
+	bAMM_Pr_f_BbFilt_B_Ms : BOOL; (*W2755 Measuring signal failure pressure before blow by filter B*)
+	bAMM_Pr_a_BbFilt_Ms : BOOL; (*W2652 Measuring signal failure pressure after blow by filter*)
+	bAMM_Pr_a_BbFilt_A_Ms : BOOL; (*W2756 Measuring signal failure pressure after blow by filter A*)
+	bAMM_Pr_a_BbFilt_B_Ms : BOOL; (*W2757 Measuring signal failure pressure after blow by filter B*)
+	bAMM_DPr_BbFilt_Hi : BOOL; (*W2653 Blow by filter difference pressure high - maintenance*)
+	bAMM_DPr_BbFilt_A_Hi : BOOL; (*W2758 Blow by filter difference pressure high A - maintenance*)
+	bAMM_DPr_BbFilt_B_Hi : BOOL; (*W2759 Blow by filter difference pressure high B - maintenance*)
+	bAMM_DPr_BbFilt_Lo : BOOL; (*W2654 Blow by filter difference pressure low*)
+	bAMM_DPr_BbFilt_A_Lo : BOOL; (*W2760 Blow by filter difference pressure low A*)
+	bAMM_DPr_BbFilt_B_Lo : BOOL; (*W2761 Blow by filter difference pressure low B*)
+	bAMM_MaxDC_Time : BOOL; (*W2427 Maximum allowed prelub time with DC pump exeeded*)
+	rDPr_BbFilt : REAL := 0.0; (*calculated blow-by filter difference pressure*)
+	rDPr_BbFilt_A : REAL := 0.0; (*calculated blow-by filter difference pressure bank A*)
+	rDPr_BbFilt_B : REAL := 0.0; (*calculated blow-by filter difference pressure bank B*)
+	tCtr_CC_In : _tGeACtrIn; (*Actual Speed BlowBy*)
+	tCtr_CC_Out : _tGeACtrOut; (*Actual Speed BlowBy*)
+	xCtr_CC : GeACtr; (*Actual Speed BlowBy*)
+	rPc_BbBlower : REAL := 0.0; (*actual operating point blow by blower [%]*)
+	bAMM_Pr_bEOF_Ms : BOOL; (*Measuring signal failure oil pressure before oil filter*)
+	bAMM_Pr_aEOF_Ms : BOOL; (*Measuring signal failure oil pressure after oil filter*)
+	bAMM_Pr_EngLubOil_Ms : BOOL; (*Measuring signal failure oil pressure engine lube oil*)
+	bAMM_DPr_EOF_Lim1 : BOOL; (*Oil filter differential pressure - Oil filter achieves service life limit*)
+	bAMM_DPr_EOF_Lim2 : BOOL; (*Oil filter differential pressure - Oil filter to be replaced*)
+	bAMM_DPr_EOF_Lim3 : BOOL; (*Oil filter differential pressure - Maximum*)
+	bAMM_Pr_AirStarter_Tank_Ms : BOOL; (* measuring signal failure air starter tank pressure - warning	*)
+	bAMM_Pr_AirStarter_Tank_Lo : BOOL; (* air starter tank pressure minimum - warning		*)
+	bAMM_Pr_AirStarter_Tank_LoLo : BOOL; (* air starter tank pressure minimum - error		*)
+	bAMM_Pr_AirStarter_Supply_MsMs : BOOL; (* measuring signal failure air starter supply pressure - error	*)
+	bAMM_Pr_AirStarter_Supply_LoLo : BOOL; (* air starter supply pressure minimum - error	*)
+	bAMM_Pr_AirStarter_Supply_HiHi : BOOL; (*	air starter supply pressure maximum - error	*)
+	bAMM_Pr_AirST_Engage_Ms : BOOL; (*Measurement signal failure pressure air starter engagement*)
+	bAMM_AirStarter_StartUp : BOOL; (* air starter start up failure - error	*)
+	rN_AirStarter : REAL; (* Air starter speed [rpm]*)
+	bMsg1292_Set : BOOL; (*Manual operating auxiliaries control (Handbedienebene) active *)
+	bECW_PreHV_Active : BOOL;
+	bAMM_DPr_OFU_Filt_Hi : BOOL := FALSE; (*oilfilter difference pressure (oil filter unit) high - warning*)
+	bPr_EO_PcheckFail : BOOL; (*plausibility check measuring signal //SWAT920/5*)
+	iCntH : DINT; (*service mode operating hours*)
+	iCntS : DINT; (*service mode starts*)
+	bServicePrelube : BOOL; (*service mode prelubrication*)
+	bAMM_DPr_OFU_Filt_HiHi : BOOL := FALSE; (*oilfilter difference pressure (oil filter unit) high + 2 bar*)
+	bAMM_Pr_OFUbFilt_Hi : BOOL := FALSE; (*oil pressure before filter (oil filter unit) maximum - warning*)
+	bAMM_Pr_OFUbCentrifuge_Hi : BOOL := FALSE; (*oil pressure before centrifuge (oil filter unit) maximum - warning*)
+	bPreLubeDemFS : BOOL; (*permanent prelubrication demanded for fast start*)
+	bAMM_EngageErr : BOOL; (*air starter engage error - fast start*)
+	bEO_Level_W_Lo : BOOL; (* SWAT#3 *)
+	AN_OD_AF_RA : BOOL; (* SWAT#3 *)
+	AN_VSD1 : BOOL := 0; (*prelube pressure limit 1 pump*)
+	AN_VSD2 : BOOL := 0; (*prelube pressure limit 2 pumps*)
+	xTOF_ShortPreLubeTime_Delay : TOF; (* engine short pre lubrication with off cycle delay *)
+	xTON_StarterBat_Hi : TON; (* starter battery voltage maximum timer *)
+	tRealTime : rtctime_typ;
+	bACP_Start : BOOL; (* Active Cooling Program start *)
+	bACP_Cmp : BOOL; (* Active Cooling Program completed *)
+	bACP_ECW_Cmp : BOOL; (* Active Cooling Program Engine Cooling Water completed *)
+	bACP_EO_Cmp : BOOL; (* Active Cooling Program Engine Oil completed *)
+	bPr_EOaF_PcheckFail : BOOL; (*plausibility check measuring signal//SWAT920/5a*)
+	bEmLubDem : BOOL; (*emergency lubrication demanded*)
+	bOCTC_CoDoRun : BOOL; (*oil cooled TC cool down run*)
+	bWCTC_CoDoRun : BOOL; (*water cooled TC cool down run*)
+	xTOF_OCTC_CoolDown : TOF; (*TOF oil cooled TC cool down run*)
+	xTOF_WCTC_CoolDown : TOF; (*TOF water cooled TC cool down run*)
+	xTOF_WCTC_PostLub : TOF; (*TOF water cooled TC post*)
+	iCnt_TL : INT := 0; (*J920: TC interval cooldown program pulse number *)
+	xTON_TL_OP_Aus : TON := (0); (*J920: TC interval cooldown program off pulse*)
+	xTON_TL_OP_Ein : TON := (0); (*J920: TC interval cooldown program on pulse*)
+	xTP_StartFail : TP; (*delay messages in case of a failed start attempt*)
+	rT_ECW_HydrPreH_LimLo : REAL; (*Temperature limit ECW heat-up/hydraulic pre-heating failure warning*)
+	xSR_PreH_HeatUpDone : SR;
+	bECW_HydrPreH_Dem : BOOL; (*ECW hydraulic pre-heating demand*)
+	bRedHWP_Fail : BOOL; (*Redundant heating water pump failure*)
+	bRedCCWP_Fail : BOOL; (*Redundant water pump failure charge cooler*)
+	bRedCC2WP_Fail : BOOL; (*Redundant water pump failure charge cooler 2*)
+	bRedEmCWP_Fail : BOOL; (*Redundant water pump failure emergency cooling circuit*)
+	iRedHWP_Fail : INT; (*Redundant heating water pump fault indication/pump ID*)
+	iRedCCWP_Fail : INT; (*Redundant charge cooler water pump fault indication/pump ID*)
+	iRedCC2WP_Fail : INT; (*Redundant charge cooler 2 water pump fault indication/pump ID*)
+	iRedEmCWP_Fail : INT; (*Redundant emergency cooler water pump fault indication/pump ID*)
+	bAMM_Pr_AirST_Engage_Lo : BOOL; (*pressure air starter engagement minimum - error		*)
+	iCnt_TC_abs : DINT; (*absolute counter for failed post cooling of the turbocharger*)
+	iCnt_TC_rel_A : DINT; (*relative counter for failed post cooling of the turbocharger on bank A*)
+	iCnt_TC_rel_B : DINT; (*relative counter for failed post cooling of the turbocharger on bank B*)
+	iSt_TC_PwrInterrupt : DINT; (*permanent variable for TC black sut-down interruption by PLC power supply failure*)
+	iCnt_TC_abs_RSP : DINT; (*absolute counter for failed post cooling of the turbocharger caused by DIANE power interruption*)
+	bTC_CoolDownInterrupt : BOOL; (* TC post-cooling interruption *)
+	xTON_RM_VWP : TON; (*TON feedback signal of flow switch in ECW circuit for pre-heating*)
+	T_RM_VWP : BOOL; (*water flow in ECW circuit sufficient for pre-heating*)
+	bECWP_Op_DPr_Mon : BOOL; (*ECWP operation status for pump monitoring via difference pressure*)
+	tPr_TCLubOil_Min : HALioAi_Type; (*selection of TC lubrication oil pressure sensor for minimum monitorings*)
+	tPr_TCLubOil_Max : HALioAi_Type; (*selection of TC lubrication oil pressure sensor for maximum monitorings*)
+	xTON_ECWP_MonFS : TON; (*delayed operation monitoring of ECWP for fast start*)
+	bPr_TCLubOil_PreL_FS_Hi : BOOL; (*W9221/W9224 turbocharger oil pressure high - permanent prelubrication*)
+	bPr_TCLubOil_PreL_FS_HiHi : BOOL; (*W9222/W9225 turbocharger oil pressure high - permanent prelubrication OFF*)
+	bMsg9002_set : BOOL;
+	bMsg9001_set : BOOL;
+	bMsg9332_set : BOOL;
+	bMsg9048_set : BOOL;
+	bMsg9003_set : BOOL;
+	bMsg9333_set : BOOL;
+	bStarterBat_Disconnect : BOOL;
+	bChargeOff_EngStart : BOOL;
+	bAMM_U_StarterBat_Lo : BOOL;
+	bAMM_U_BufferBat1_Lo : BOOL;
+	bAMM_U_BufferBat2_Lo : BOOL;
+	iNr_CtrlBat_Used : USINT;
+	bAMM_U_CtrlBat_Lo_Coll : BOOL;
+	bAMM_Pr_OFUbCentrifuge_Lo : BOOL;
+	bStartScavBgnFroce : BOOL; (*scavenging forced at the beginning of start attempt*)
+	bStartScavFail : BOOL; (*Scavenging by starter motor failure*)
+	bStartScavBgn : BOOL; (*Scavenging procedure anticipated at the beginning of the start attempt*)
+	bStartScavUnsfl : BOOL; (*Scavenging by starting system not succesful*)
+	bStartScavSflMsg : BOOL; (*Scavenging by starting system successful*)
+	iVol_PurgeAir : UDINT; (*volume of purge air [lt]*)
+	bSt_Purge : BOOL; (*purge state (true: engine purged, false: engine not purged)*)
+	bSfl_PurgeCrk : BOOL; (*purge cranking cycle successful*)
+	bFail_PurgeCrk : BOOL; (*purge cranking cycle unsuccessful*)
+	bFail_StartAtt : BOOL; (*start attempt uncussessful*)
+	bPreLubeOff_STT : BOOL; (*stop prelubrication due to start overheat*)
+	bMsg9096_enable : BOOL; (*B9096 starter overheated enable*)
+	bMsg9096_set : BOOL; (*B9096 starter overheated set*)
+	bMsg9096_iTi_ST_UntRelDur : DINT; (*B9096 starter overheated duration until release [s]*)
+	bMsg9097_set : BOOL; (*B9097 purge cranking cycle initiated set*)
+	bMsg2376_T6_set : BOOL; (*A2376 purge cranking cycle T6 unsuccessful*)
+	bMsg2382_set : BOOL; (*A2382 start attempt failed minimum speed*)
+	bMsg9088_T6_set : BOOL; (*B9088 purge cranking cycle T6 successful*)
+	xR_TRIG_bEng_Dem_Aut : R_TRIG; (*demand automatic mode rising egde*)
+	iTi_ST_Res : INT; (*remaining starting time [s]*)
+	bStartErr_ST_UntRelDur_High : BOOL; (*Start up failure due to starter overheat*)
+	xTP_bMsg9096_set_retain : TP; (*message 9096 retain in case of start up failure*)
+	bAMM_OQS_OC_ValueLo : BOOL;
+	bAMM_OQS_OC_ValueLo1 : BOOL;
+	bAMM_OQS_OC_TendencyHi : BOOL;
+	bAMM_OQS_OC_TendencyHi1 : BOOL;
+	bAMM_OQS_OC_MSF : BOOL;
+	bOpMsg_ExtendOilSampleOh : BOOL;
+	bAMM_Vol_OilRefill_Hi : BOOL := FALSE; (*W9378 Oil refill volume maximum *)
+	bAMM_T_EO_PreH_EngStart_Lo : BOOL := FALSE; (*W9390 Oil temperature before engine start too low*)
+	bAMM_9513 : BOOL; (*W9513 Failure engine oil refilling*)
+END_VAR
+VAR CONSTANT
+	iNum_CtrlBatMon : USINT := 4; (*number of control battery monitoring test sets*)
+END_VAR
+VAR
+	bCtrlBat_Used : ARRAY[1..iNum_CtrlBatMon] OF BOOL; (*Control battery set [x] used*)
+END_VAR
+VAR CONSTANT
+	iOQS_OC_OilCfg_ByteSize : UINT := 380; (*number of byte of OilCfg string (2 hex char = 1 byte)*)
+	iOQS_OC_OilCfg_CharSize : UINT := 2*iOQS_OC_OilCfg_ByteSize; (*number of hex char of OilCfg string (2 hex char = 1 byte)*)
+	iOQS_OC_OilSerialNr_ByteSize : UINT := 14; (*number of byte of OilSerialNr string (2 hex char = 1 byte)*)
+	iOQS_OC_OilSerialNr_CharSize : UINT := 2*iOQS_OC_OilSerialNr_ByteSize; (*number of hex char of OilSerialNr string (2 hex char = 1 byte)*)
+END_VAR
+VAR
+	bEleStarterFail_Num : ARRAY[0..3] OF BOOL; (*starters failure array*)
+END_VAR

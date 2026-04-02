@@ -1,0 +1,8 @@
+VAR
+	iCANopen_NOxS_Err_IF1 : UDINT; (* description of the interface 1 define error*) (* OldName: usCANopenUniNOx_error; Cycle:8; *)
+	iCANopen_NOxS_Err_IF2 : UDINT; (* description of the interface 2 define error*) (* OldName: usCANopenUniNOx_error; Cycle:8; *)
+	iCANopen_NOxS_Err_IF3 : UDINT; (* description of the interface 3 define error*) (* OldName: usCANopenUniNOx_error; Cycle:8; *)
+	xCANopen_NOxS_IF1 : CANopen; (* CANopen NOx sensor interface 1*) (* OldName: CANopen_UniNOx; Cycle:8; *)
+	xCANopen_NOxS_IF2 : CANopen; (* CANopen NOx sensor interface 2*) (* OldName: CANopen_UniNOx; Cycle:8; *)
+	xCANopen_NOxS_IF3 : CANopen; (* CANopen NOx sensor interface 3*) (* OldName: CANopen_UniNOx; Cycle:8; *)
+END_VAR

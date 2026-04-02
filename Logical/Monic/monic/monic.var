@@ -1,0 +1,22 @@
+VAR
+	ulMonParChecksum1 : UDINT; (* last checksum of monic parameter *)
+	ulMonParChecksum : UDINT; (* checksumm of monic parameters *)
+	bMonicComm : BOOL; (* TRUE= monic comm. is stared *)
+	bChangeBetrArt : BOOL; (* TRUE= change of operating is run *)
+	bParMonicFailure : BOOL; (* TRUE= error monic parametrization *)
+	bChangeBTRFailure : BOOL; (* TRUE= error in change of operating *)
+	bMonicCalib : BOOL; (* TRUE=monic calibration runs *)
+	bMonicOK : BOOL; (* TRUE= monic status is OK *)
+	ucBetriebsArt : USINT; (* operating mode monic *)
+	ucBetriebsArtOld : USINT; (* last operating mode monic *)
+	ucParCount : USINT; (* counter actual handled parameter *)
+	ucOffsetErrorCount : USINT; (* counter offset error monic *)
+	ucCylinderCount : USINT;
+	usMonicCalibCount : UINT; (* delay for monic calibration *)
+	ucStateOfChange : USINT; (* state flag for operation m. change *)
+	ucStateOfPar : USINT; (* state of parameter transfer *)
+	bSendParMon : BOOL; (* TRUE= send parameter to monic *)
+	TON_MONDRADelay : TON; (* FUB delay wiring error *)
+	TON_SecondTick : TON; (* second tick TRUE for 0,1 sec. *)
+	TON_MinuteTick : TON; (* minute tick TRUE for 0,1 sec. *)
+END_VAR

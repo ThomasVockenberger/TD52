@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.14.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="DataObject" Language="Simple" Description="MODUL META data file">META_TR</Object>
+    <Object Type="File" Description="Module global data types" Private="true">Module_TR.typ</Object>
+    <Object Type="File" Description="Module global Parameter data types" Private="true">Module_TRPara.typ</Object>
+    <Object Type="File" Description="Module global variables" Private="true">Module_TR.var</Object>
+    <Object Type="Program" Language="IEC" Description="General">GeneralTR</Object>
+    <Object Type="Program" Language="IEC" Description="Settings">reac_set</Object>
+    <Object Type="Program" Language="IEC" Description="Main task">reactor</Object>
+    <Object Type="Program" Language="IEC" Description="Electric heater controller">Ctr_TR_4</Object>
+    <Object Type="Program" Language="IEC" Description="Messages">MsgTR</Object>
+    <Object Type="Program" Language="IEC" Description="+ Parameter handling">ParTR</Object>
+    <Object Type="Program" Language="IEC" Description="+ Permanent stored data">PermTR</Object>
+    <Object Type="Program" Language="IEC" Description="Visualization">VisTR</Object>
+  </Objects>
+</Package>

@@ -1,0 +1,17 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: VisOP
+ * File: VisOP.var
+ * Author: 105051472
+ * Created: September 13, 2012
+ ********************************************************************
+ * Local variables of program VisOP
+ ********************************************************************)
+VAR
+	xTP_F_N_DI_Inc : TP;
+	xTP_F_N_DI_Dec : TP;
+	xTON_ParaOK_1s : TON;
+	xTON_ParaOK_2s : TON;
+	xTP_bP_Red_Active : TP;
+END_VAR

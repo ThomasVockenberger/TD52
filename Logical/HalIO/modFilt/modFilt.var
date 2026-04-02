@@ -1,0 +1,31 @@
+VAR CONSTANT
+	usMAX_NUMB_OF_MODULS : UINT := 199; (*Max. number of moduls*)
+END_VAR
+VAR
+	usStep : UINT; (*Var. of statemachine*)
+	DiagCreateInfo_0 : DiagCreateInfo; (*Get number of plugged moduls*)
+	DiagGetStrInfo_0 : DiagGetStrInfo; (*Get name of plugged moduls*)
+	DiagDisposeInfo_0 : DiagDisposeInfo; (*Free ressources of AsIODiag*)
+	szInfoCode : STRING[100]; (*Includes name of plugged modul*)
+	szModNameAll : ARRAY[0..usMAX_NUMB_OF_MODULS] OF STRING[100]; (*Includes all names of plugged moduls*)
+	ulModPos : ARRAY[0..usMAX_NUMB_OF_MODULS] OF UDINT; (*Array includes index of plugged X20AT4222*)
+	usStoreIdx : UINT; (*Var. to store the index of plugged X20AT4222 in the ulModPos array*)
+	ulIndex : UDINT; (*Index of actual read modul*)
+	ulIdent : UDINT; (*Ident from DiagCreateInfo_0*)
+	ulNrEntries : UDINT; (*Number of plugged moduls from DiagCreateInfo_0*)
+	szModSlotAll : ARRAY[0..usMAX_NUMB_OF_MODULS] OF STRING[100]; (*Slot ID of all plugged moduls*)
+	AsIOAccWrite_0 : AsIOAccWrite; (*Write acyclic on the register*)
+	ulValue : UDINT; (*Value to write on the register*)
+	szChannelName : STRING[80]; (*Includes the channel name of the register*)
+	ulRegValAll : ARRAY[0..usMAX_NUMB_OF_MODULS] OF UDINT; (*Includes the values of the X20AT4222 registers*)
+	bUpdateInputFilter4222 : BOOL; (*TRUE --> Change of input filter was succesfull*)
+	bErrorInputFilter4222 : BOOL; (*TRUE --> Error happened at change of input filter (see size of arrays or errornumber of FUB)*)
+END_VAR
+VAR CONSTANT
+	ulFILTER_20ms : UDINT := 3; (*Value for the input filter [50Hz]*)
+	ulFILTER_16_7ms : UDINT := 4; (*Value for the input filter [60Hz]*)
+END_VAR
+VAR
+	TON_10s : TON; (*Timer *)
+	iHA_Pt100InputFilterOld : INT; (*Temp. input filter variable*)
+END_VAR

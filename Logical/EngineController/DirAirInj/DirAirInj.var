@@ -1,0 +1,26 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: DirectAirInjection
+ * File: DirectAirInjection.var
+ * Author: 212754567
+ * Created: May 15, 2019
+ ********************************************************************
+ * Local variables of program DirectAirInjection
+ ********************************************************************)
+
+VAR
+	xDTGetTime : DTGetTime;
+	iDAI_Sec_Act : UDINT; (* direct air injection actual operation time [s] *)
+	DT_DAI_Start : DATE_AND_TIME; (* direct air injection starting date and time *)
+	xTON_DAI_V_Open_Fault : TON; (* direct air injection inlet valve opening fault delay*)
+	xTON_DAI_V_Close_Fault : TON; (* direct air injection inlet valve closing fault delay*)
+	xSR_DAI_V_Close_Fault : SR; (* set/reset close fault for direct air injection inlet valve *)
+	xSR_DAI_V_Open_Fault : SR; (* set/reset open fault for direct air injection inlet valve *)
+	xTOF_DAI_V_Dem : TOF; (* shutdown delay for shut off valve *) 
+	xTOF_Pr_AirStarter_Tank_Lo : TOF; (* delay enable signal from start tank pressure *) 
+END_VAR
+
+VAR CONSTANT
+
+END_VAR

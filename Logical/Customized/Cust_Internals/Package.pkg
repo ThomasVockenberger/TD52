@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.4.123 SP?>
+<Package Version="4.00.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="Package variables" Private="true">PackageGlobal_Uni_IO.var</Object>
+    <Object Type="File" Description="Package variables" Private="true">PackageDisplay.var</Object>
+    <Object Type="File" Description="Package variables" Private="true">PackageControl_Uni_IO.var</Object>
+    <Object Type="Program" Language="IEC" Description="+ storage of spare counter values ...">PermCU</Object>
+    <Object Type="Program" Language="IEC" Description="+ readout info from file aeprot">BaseVers</Object>
+    <Object Type="Program" Language="IEC" Description="+ parameter storage and handling">ParCU</Object>
+    <Object Type="Program" Language="IEC" Description="+ obsolete">par_UniFile</Object>
+    <Object Type="Program" Language="IEC" Description="+ obsolete">par_UniString</Object>
+    <Object Type="Program" Language="IEC" Description="+ obsolete">par_Universal_IO</Object>
+    <Object Type="Program" Language="IEC" Description="+ unchangeable module messages">MsgCUInternal</Object>
+    <Object Type="Program" Language="IEC" Description="+ processing of spare analog inputs,..">ran_Internal</Object>
+  </Objects>
+</Package>

@@ -1,0 +1,21 @@
+VAR
+	GR_MAX_OvrSpd : GR_MAXR;
+	xMsg3561 : Msg;
+	iAdrAmmBase2MM : UDINT;
+	iAdrMM2AmmBase : UDINT;
+	xMsg1061 : Msg;
+	xMsg1022 : Msg;
+	xMsg1064 : Msg;
+	xMsg3225 : Msg;
+	xMsg3226 : Msg;
+	xMsg3228 : Msg;
+	xMsg3346 : Msg;
+	xMsg3347 : Msg;
+	TP_R_GridOK : TP_R;
+	bOverspdPLC : BOOL;
+	T76 : BOOL; (*Ignition failure*)
+	xTONIgnFail : TON; (*Ignition failure *)
+	xTON_OpenGV_Mon : TON;
+	xMsg9044 : Msg;
+	SR_M_STRDRE : SR;
+END_VAR

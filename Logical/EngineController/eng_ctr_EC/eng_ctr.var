@@ -1,0 +1,316 @@
+VAR
+	xSignScal_DK : xSignScal; (* FUB linearization throttle valve *)
+	xSignScal_DKmin : xSignScal; (* FUB interpol. throttle min. pos. *)
+	xSignScal_DKminR : xSignScal; (* FUB interpol. throttle min. range *)
+	xSignScal_DKmax : xSignScal; (* FUB interpol. throttle max. pos. *)
+	iNum_Misf_Cyl_Max : USINT; (* max. number of cyl. off *)
+	rPos_TV_Min_Ramp : RAMPE_R; (* FUB ramp throttle valve misfire *)
+	ssDK4_StzPkt : ARRAY[0..19] OF INT; (* interpol. points throttle valve 4 *)
+	ssIvDK_StzPkt : ARRAY[0..19] OF INT; (* inverted throttle interpol. points *)
+	ssIvDK4_StzPkt : ARRAY[0..19] OF INT; (* inverted throttle interpol. points *)
+	ssDK_StzPkt : ARRAY[0..19] OF INT; (* interpol. points throttle valve *)
+	ssDK6L_StzPkt : ARRAY[0..19] OF INT; (* interpol. points throttle valve 6 (LIVC)*)
+	ssIvDK6L_StzPkt : ARRAY[0..19] OF INT; (*inverted thottle interpol. points (LIVC)*)
+	rPos_TV_Misf_Offs : REAL; (* for calculation of throttle pos. *)
+	rPos_TV_Misf : REAL; (* min. throttle pos. for misfire con *)
+	iNum_Misf_Cyl : INT; (* number of cyl. switched off *)
+	rN_Misf_ActLim : REAL; (* speed limit for start misfire cont *)
+	rN_Misf : REAL; (* speed used for misfire calculation *)
+	rPos_TV_Misf_Hys : REAL; (* bandwith for throttle control *)
+	rN_Misf_Cyl : REAL; (* speed parameter misfire control *)
+	bTV_EndPos : BOOL; (* TV limitation by misfire activ *)
+	SimPID_TV : fSimPIDx;
+	SimPID_CBV : fSimPIDx;
+	rP_Act_Norm : REAL;
+	muell : BOOL;
+	LCRCByP_FF_TV : LCRCurveByPoints;
+	LCRCByP_TV_P : LCRCurveByPoints;
+	LCRCByP_TV_I : LCRCurveByPoints;
+	LCRCByP_TV_D : LCRCurveByPoints;
+	LCRCByP_TV_N : LCRCurveByPoints;
+	LCRCByP_FF_CBV : LCRCurveByPoints;
+	LCRCByP_CBV_P : LCRCurveByPoints;
+	LCRCByP_CBV_I : LCRCurveByPoints;
+	LCRCByP_CBV_D : LCRCurveByPoints;
+	LCRCByP_CBV_N : LCRCurveByPoints;
+	iMainMode_Old : INT;
+	LCRRamp_CBVIdle : LCRRamp;
+	LCRRamp_SFF_TV : LCRRamp;
+	rPr_P2s_CtrHy : REAL;
+	xSignScal_TV_NVRT_Min : xSignScal;
+	xSignScal_TV_NVRT_Max : xSignScal;
+	bTV_Man_Activ : BOOL;
+	bCBV_Man_Activ : BOOL;
+	rPos_TV_Old : REAL;
+	rP_Act_Norm_GrC : REAL; (* actual power related to rP_Nom during a Grid code event*)
+	LCRRamp_TV_Tracking : LCRRamp;
+	xTP_MisfLock : TP;
+	rTV_open_range : REAL;
+	rCBV_open_range : REAL;
+	xSignScal_TV_bandwidth : xSignScal;
+	rTV_bandwidth_limit : REAL;
+	rCBV_bandwidth_limit : REAL;
+	rN_EngFreq : REAL; (*Insel: Generatordrehzahl*)
+	bFreqM : BOOL; (*Insel: Motordrehzahl wird über Generatorfrequenz berechnet*)
+	bIntegratorReset : BOOL; (*Insel: SimPID funktioniert wie PID_A*)
+	b8020 : BOOL; (*Insel: 80/20 Regel eingeschaltet*)
+	rP_Set_Norm_Island : REAL; (*Inselleistung mit Spannungskniekompensation*)
+	bFirstStart : BOOL;
+	rMap_Ref_Island_x : REAL; (*Insel: Kennfeldeingangswert*)
+	bMap_Ref_P2s : BOOL; (*Insel: Ladedruck wird für Kennfeldeingang verwendet*)
+	bMap_Ref_Set_Power : BOOL; (*Insel: Spannungskniekompensation wird für Kennfeldeingang verwendet*)
+	PID_A_CBV : PID_A;
+	PID_A_TV : PID_A;
+	bPID_A_Active : BOOL; (*PID_A ist aktiv*)
+	bPID_A_Enable : BOOL; (*PID_A im Inselbetrieb aktiviert*)
+	bPID_A_Release : BOOL; (*PID_A freigegeben*)
+	rl_SimPID_TV_D0 : LREAL; (*Filter SimPID_TV*)
+	rl_SimPID_CBV_D0 : LREAL; (*Filter SimPID_CBV*)
+	bPID_A_Clock : BOOL; (*Alle 8 Zyklen TRUE --> 80ms*)
+	iCnt_PID_A : INT;
+	xSignScal_CBV_kp : xSignScal;
+	xSignScal_CBV_ki : xSignScal;
+	xSignScal_CBV_kd : xSignScal;
+	xSignScal_TV_kp : xSignScal;
+	xSignScal_TV_ki : xSignScal;
+	xSignScal_TV_kd : xSignScal;
+	ssTBkpStzPkt2 : ARRAY[0..11] OF INT; (* interpol. points turbo kp ser.2 *)
+	ssTBkiStzPkt2 : ARRAY[0..11] OF INT; (* interpol. points turbo ki ser.2 *)
+	ssTBkdStzPkt2 : ARRAY[0..11] OF INT; (* interpol. points turbo kd ser.2 *)
+	ssDKkpStzPkt2 : ARRAY[0..11] OF INT; (* interpol. points throttle kp ser.2 *)
+	ssDKkiStzPkt2 : ARRAY[0..11] OF INT; (* interpol. points throttle ki ser.2 *)
+	ssDKkdStzPkt2 : ARRAY[0..11] OF INT; (* interpol. points throttle kd ser.2 *)
+	ssTBkiStzPkt6 : ARRAY[0..11] OF INT; (* interpol. points turbo ki ser.6*)
+	ssTBkpStzPkt6 : ARRAY[0..11] OF INT; (* interpol. points turbo kp ser.6*)
+	ssTBkdStzPkt6 : ARRAY[0..11] OF INT; (* interpol. points turbo kd ser.6*)
+	ssDKkpStzPkt6 : ARRAY[0..11] OF INT; (* interpol. points throttle kp ser.6*)
+	ssDKkiStzPkt6 : ARRAY[0..11] OF INT; (* interpol. points throttle ki ser.6*)
+	ssDKkdStzPkt6 : ARRAY[0..11] OF INT; (* interpol. points throttle kd ser.6*)
+	ssTBkiStzPkt4 : ARRAY[0..11] OF INT; (* interpol. points turbo ki ser.4*)
+	ssTBkpStzPkt4 : ARRAY[0..11] OF INT; (* interpol. points turbo kp ser.4*)
+	ssTBkdStzPkt4 : ARRAY[0..11] OF INT; (* interpol. points turbo kd ser.4*)
+	ssDKkpStzPkt4 : ARRAY[0..11] OF INT; (* interpol. points throttle kp ser.4*)
+	ssDKkiStzPkt4 : ARRAY[0..11] OF INT; (* interpol. points throttle ki ser.4*)
+	ssDKkdStzPkt4 : ARRAY[0..11] OF INT; (* interpol. points throttle kd ser.4*)
+	ssTBkiStzPkt3 : ARRAY[0..11] OF INT; (* interpol. points turbo ki ser.3 *)
+	ssTBkpStzPkt3 : ARRAY[0..11] OF INT; (* interpol. points turbo kp ser.3 *)
+	ssTBkdStzPkt3 : ARRAY[0..11] OF INT; (* interpol. points turbo kd ser.3 *)
+	ssDKkpStzPkt3 : ARRAY[0..11] OF INT; (* interpol. points throttle kp ser.3 *)
+	ssDKkiStzPkt3 : ARRAY[0..11] OF INT; (* interpol. points throttle ki ser.3 *)
+	ssDKkdStzPkt3 : ARRAY[0..11] OF INT; (* interpol. points throttle kd ser.3 *)
+	ssPowerInterp : INT; (*Insel: Leistung in promile normiert auf 18bar Leistung*)
+	bPID_A_Init : BOOL;
+	ssPower18bar : INT; (*18bar Leistung (Pel)*)
+	PID_A_TV_kp_offs : INT;
+	PID_A_TV_ki_offs : INT;
+	PID_A_TV_kd_offs : INT;
+	PID_A_CBV_kp_offs : INT;
+	PID_A_CBV_ki_offs : INT;
+	PID_A_CBV_kd_offs : INT;
+	bPID_A_NormScal : BOOL;
+	bSimPID_PID_A_Werte : BOOL; (*Insel: verwende für SimPID Werte aus PID_A*)
+	rPos_TV_FF_Idle : REAL;
+	xSignScal_TV_InvGen2_GEN1 : xSignScal;
+	xSignScal_TV_Inv : xSignScal;
+	iCycleTime : INT;
+	umax8020TV : REAL;
+	umin8020CBV : REAL;
+	umax8020CBV : REAL;
+	bLIVC_Active : BOOL;
+	rCorrFactor : REAL; (*Correction factor, EngSpeed or WE*)
+	rT_CycleTime : REAL; (*old cycle time in[s]*)
+	r8020_TV_Power : REAL;
+	r8020_CBV_Power : REAL;
+	r8020_TV_Speed : REAL;
+	r8020_CBV_Speed : REAL;
+	bFF_disable_TV : BOOL;
+	bFF_disable_CBV : BOOL;
+	iSG_Store_TV_goben : INT;
+	iSG_Store_TV_gunten : INT;
+	rSG_Store_TV_umax : REAL;
+	rSG_Store_TV_umin : REAL;
+	iSG_Store_CBV_goben : INT;
+	iSG_Store_CBV_gunten : INT;
+	rSG_Store_CBV_umax : REAL;
+	rSG_Store_CBV_umin : REAL;
+	rN_Max : REAL;
+	rN_Min : REAL;
+	rN_PID_A : REAL;
+	FILTER_R_GrC : FILTER_R;
+	ssTBkpStzPktTSTC : ARRAY[0..11] OF INT;
+	ssTBkiStzPktTSTC : ARRAY[0..11] OF INT;
+	ssTBkdStzPktTSTC : ARRAY[0..11] OF INT;
+	ssTBkpStzPkt3xxD : ARRAY[0..11] OF INT;
+	ssTBkiStzPkt3xxD : ARRAY[0..11] OF INT;
+	ssTBkdStzPkt3xxD : ARRAY[0..11] OF INT;
+	xSignScal_TBPkp : xSignScal;
+	xSignScal_TBPki : xSignScal;
+	xSignScal_TBPkd : xSignScal;
+	ssInitArray : ARRAY[0..21] OF INT;
+	bMapSetupDone : BOOL;
+	iPrevMode : INT;
+	xSim6PID : Sim6CTR;
+	bSim6PID_Init : BOOL;
+	RTInfo_CTR : RTInfo;
+	bGV_On_LR : BOOL; (*Gas valves on - for load rejection function*)
+	rN_Eng_Act_LR_Norm : REAL; (*normed engine speed - for load rejection function*)
+	rP_Act_LR_Norm : REAL; (*normed electrical power - for load rejection function*)
+	bGCB_On_LR : BOOL; (*generator breaker closed - for load rejection function*)
+	rPr_Eng_P2s : REAL; (*P2s [bar] - for load rejection function*)
+	rP_Rot_Corr : REAL; (*corrected rotational power - for load rejection function*)
+	bIsland : BOOL; (*Island mode bit - for load rejection function*)
+	DTGetTime_RPS : DTGetTime;
+	tiN_RunOut_1 : TIME;
+	tiN_RunOut_2 : TIME;
+	bTi_RunOut_Saved : BOOL;
+	rSum_N_Grad_RunOut : REAL; (*temporory variable to sum the statistic gradient values for engine speed gradient at engine shut down*)
+	iCount : INT; (*counter variable*)
+	rN_Grad_RunOut_Avg : REAL; (*average value for the engine speed of the last 10 engine shut downs*)
+	rRunOut_Diff : REAL;
+	iP_ist_window_range : INT := 100; (*use range of 1s for average*)
+	iP_ist_window_delay : INT := 100; (*use delay of 1s, to store before GCB opens*)
+	iP_window_length : INT := 200;
+	iP2s_window_length : INT := 100;
+	rP2s_window_array : ARRAY[0..99] OF REAL;
+	rP_ist_window_array : ARRAY[0..199] OF REAL;
+	iCount_P2s_window : INT;
+	iCount_P_window : INT;
+	rP_window_Sum : REAL;
+	rP_Act_Base_Norm : REAL; (*Base load before load rejection*)
+	rP_Act_LR_Base_Norm : REAL; (*load value before load rejection by GCB normed*)
+	rPr_Eng_P2s_Base : REAL; (*p2s pressure before load drop - for load rejection function*)
+	rP_Rot_Max_GasStop_Tmp : REAL;
+	bLR_GasStop_Trig : BOOL; (*gas stop trig - for load rejection function*)
+	rN_Grad_RunOut_Default : REAL; (*Parameter: Default value for speed gradient at engine shut down (negative value) [rpm/s]*)
+	rTime_GasON_Delay : REAL; (*Parameter: value for the time delay of the gas flow from the gas valve to the cylinder with open throttle valve*)
+	rN_LR_GCB_TargetGasON : REAL; (*Parameter: target value of engine speed, when the gas should be in the cylinder after re-opening the gas-valves*)
+	LCRPT1_n_ist : LCRPT1;
+	rN_ist_filt_old : REAL;
+	rN_ist_filt : REAL;
+	rN_ist_filt_diff : REAL;
+	bN_ist_neg : BOOL;
+	xTON_N_ist_neg : TON;
+	rN_Predict_closeGasV : REAL; (*prediction of the engine speed value at next possible combustion, if the gas valve would re-open now*)
+	iCount_Ign_Max_Off : INT := 0; (*maximum time [x10ms] of the misfire duration*)
+	xLCRCurve_R_Rot_Correction : LCRCurveByPoints; (*correction of rotational power signal- for load rejection function*)
+	xF_TRIG_GCB_ON : F_TRIG;
+	xTP_LR_GasStop_OFF : TP;
+	xTOF_LR_GasStop : TOF;
+	xR_TRIG_ActSat_TV : R_TRIG;
+	xR_TRIG_ActSat_CBV : R_TRIG;
+	xR_TRIG_LR_MISF : R_TRIG;
+	xR_TRIG_LR_IGNR : R_TRIG;
+	xTP_LR_TiMin_GasStop : TP;
+	xTP_ActSat_TV : TP;
+	xTP_ActSat_CBV : TP;
+	xTP_IGN_Retard : TP;
+	xF_TRIG_LR : F_TRIG;
+	b_Ign_Off : BOOL := FALSE; (*switch the ignition off for misfire*)
+	xF_TRIG_IgnCyl_Off : F_TRIG := (0);
+	xIgnCyl_On : TP_10ms := (0);
+	xIgnCyl_Off : TP_10ms := (0);
+	bLR_ActSat_TV : BOOL;
+	bLR_ActSat_CBV : BOOL;
+	bLR_IGN_Retard_Trig : BOOL;
+	LCRCurve_TV_min : LCRCurveByPoints;
+	xSignScal_TVmin_LR : xSignScal; (* FUB interpol. throttle min. pos.  for load rejection in island mode*)
+	LCRCurve_TV_min_CBV : LCRCurveByPoints;
+	xSignScal_TVmin_CBV_LR : xSignScal;
+	xTON_Lock_TV : TON;
+	xRampe_LockTV : RAMPE_R;
+	bCBV_Lock : BOOL;
+	rP_Rot_Norm : REAL;
+	rCBV_Lock_Init : REAL;
+	xTP_Misfprotect_OFF : TP;
+	bLR_GasStop : BOOL; (*close gas valve to react on a load rejection by the GCB and force  actuators (open CBP, close TV)*)
+	LCRCurve_CBV_lim_byTV : LCRCurveByPoints := (0);
+	rMin_cbv_act : REAL := 0;
+	deltaPr_SATcbv_ref_data : ARRAY[0..2] OF lcrCurveByPoints_TabEntry_type;
+	deltaPr_SATtv_ref_data : ARRAY[0..2] OF lcrCurveByPoints_TabEntry_type;
+	LCRCurve_deltaPr_SATtv : LCRCurveByPoints;
+	LCRCurve_deltaPr_SATcbv : LCRCurveByPoints;
+	LCRCurve_deltaPr_TV_ref : LCRCurveByPoints;
+	LCRCurve_deltaPr_TV_TV_gain : LCRCurveByPoints;
+	LCRCurve_deltaPr_TV_CBV_gain : LCRCurveByPoints;
+	bDeltaP_TV_active : BOOL;
+	rDeltaP_TV : REAL;
+	rDeltaP_TV_cbv : REAL;
+	FILTER_R_p2s : FILTER_R;
+	FILTER_R_p2 : FILTER_R;
+	rLimitIntegrator : REAL;
+	rDeltaP_e_TB : REAL;
+	rDeltaP_V_e : REAL;
+	bCBV_Test_I_Act : BOOL := TRUE;
+	rLimitIntegratorTV : REAL;
+	bTV_Test_I_Act : BOOL := TRUE;
+	rDeltaP_CBV_offs : REAL;
+	rDeltaP_TV_offs : REAL;
+	rDeltaP_TV_w_offs : REAL;
+	rDeltaP_CBV_w_offs : REAL;
+	bDeltaP_TV_sat : BOOL := 0;
+	bDeltaP_CBV_sat : BOOL := 0;
+	tTON_DeltaP_N : TIME;
+	TON_DeltaP_N : TON;
+	bSIMPID_EXT_CBV_Act : BOOL;
+	tTIME_TV_SY : TIME := T#2000ms;
+	TP_TV_SY : {REDUND_UNREPLICABLE} TP;
+	rPosTV_Idle : REAL;
+	rPosTV_Idle_F : REAL := 1.25;
+	rPosTV_Idle_Offs : REAL;
+	rDeltaP_TV_tv : REAL;
+	iTFilterTVu : UINT := 100;
+	FILTER_R_TV_u : FILTER_R;
+	FILTER_R_CBV_u : FILTER_R;
+	iTFilterCBVu : UINT := 100;
+	rN_trig_cbv_intSTOP : REAL := 80.0;
+	bLIM_TVbyP2s_OFF_Trig : BOOL;
+	bLIM_TVbyP2s_OFF : BOOL;
+	xTP_Overwrite_CBV : TP;
+	xR_TRIG_Overwrite_CBV : R_TRIG;
+	LCRCurve_Kp_CBV_LR_Overwrite : LCRCurveByPoints;
+	FILTER_R_U_Overwrite_LR : FILTER_R;
+	rLR_CBV_Kp : REAL;
+	bSimPID_CBV_reset_TEMP : BOOL;
+	bSimPID_CBV_reset_TC2 : BOOL;
+	TP_NETP_INSEL : TP;
+	LCRCurve_TV_init : LCRCurveByPoints;
+	TV_init_data : ARRAY[0..9] OF lcrCurveByPoints_TabEntry_type;
+	LCRCurve_CBV_init : LCRCurveByPoints;
+	CBV_init_data : ARRAY[0..9] OF lcrCurveByPoints_TabEntry_type;
+	TP_NP_GEN2_to_Island_GEN1 : TP;
+	tVerz_8020 : TIME := T#10ms;
+	rPos_TV_Save : REAL;
+	rPos_CBV_Save : REAL;
+	bIdle_TO_GEN1Island_CBV_open : BOOL;
+	iSG_Store_TV_goben_FGQC : INT; (* TV maximum before FGQC *)
+	rSG_Store_TV_umax_FGQC : REAL; (* TV maximum before FGQC *)
+	iSG_Store_CBV_gunten_FGQC : INT; (* CBV minimum before FGQC *)
+	rSG_Store_CBV_umin_FGQC : REAL; (* CBV minimum before FGQC *)
+	bFSyPrM_setTVpos : BOOL := FALSE; (*Set TV position when FastSync controller (premixed) is active*)
+	rCA_Ign_FSync_Mem : REAL := 0.0; (*Saved ITP for smooth transition when FastSync controller (premixed) is activated*)
+	rPos_TV_FSy : REAL := 0.0; (*TV position when FastSync controller (premixed) is active*)
+	rN_Gen1_Eng_LRskipF : REAL := 0.0; (*Speed for skipfire LR calculation*)
+	rN_Gen1_InMixSpdFreq_fact : REAL := 0.0; (*Factor for mixing of speed and frequency signals for Load Rejection Calculation*)
+	rN_Gen1_InMixSpdFreq_norm : REAL := 1.0; (*Normalized frequency used for calculated speed trigerring load rejections*)
+	xR_TRIG_LR_TVmin_ADAPT : R_TRIG; (*Rotational power dependent trigger to switch minimum TV curve*)
+	rP_LR_Trig_TVmin_ADAPT : REAL := 0.2; (*Threshold rotational powerto switch minimum TV curve [p.u.]*)
+	bHold_TVmin_shift_largeRej : BOOL; (*Hold bit to avaoid multiple ITP retard commands during LR*)
+	bTVmin_shift_largeRej : BOOL; (*Big load rejection detected*)
+	rP_LR_TVmin_Lim : REAL := 0.35; (*Threshold power for big load rejection detection [p.u.]*)
+	iTVmin_idx : UINT; (*Index variable for TV minimum curve*)
+	rTVmin_table_largeRej : ARRAY[0..7] OF REAL; (*TV minimum curve for big load rejections [%/10]*)
+	rTVmin_table_smallRej : ARRAY[0..7] OF REAL; (*TV minimum curve for small load rejections [%/10]*)
+	rTi_LR_TVmin_ADAPT : REAL := 1.0; (*Minimum duration of TV minimum adaption during big load rejections [s]*)
+	xTP_LR_TVmin_ADAPT : TP; (*FuB minimum duration of TV minimum adaption during big load rejections*)
+	rPos_TVmin_CurveOffset : REAL := 2.0; (*Hysteresis for detection of TV saturation in minimum position [%]*)
+	xTP_LR_ITP_Retard_Rel : TP; (*FuB time-based release of ITP retard block*)
+	bLR_ITPret_Block : BOOL; (*Block of ITP retard to avoid multiple triggers*)
+	rTi_LR_ITP_Retard_Rel : REAL := 10.0; (*Release of ITP retard block latest after this duration [s]*)
+	xTP_LR_TVminSwitchBlock : TP; (*FuB time-based TV minimum switch block*)
+	xTON_LR_TVminSwitchBlock : TON; (*FuB time-based TV minimum switch block*)
+	rTi_LR_TVminSwitchBlock : REAL := 5.0; (*Duration of TV minimum switch block [s]*)
+	rTi_LR_TVminSwitchBlock_Delay : REAL := 0.1; (*Delay of TV minimum switch block [s]*)
+	rPr_CBV_Rel : REAL := 1.2; (*Type2 F- charge pressure for CBV release*)
+	rPr_CBV_Rel_Hys : REAL := 0.2; (*Type2 F- charge pressure for CBV release hysterisis*)
+	rCBV_Speed_umax : REAL; (* CBV maximum opening positon in island mode*)
+END_VAR

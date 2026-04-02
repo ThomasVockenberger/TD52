@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.1.9.44 SP?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Program" Language="IEC" Description="+ Sondergasfunktionen">SGas</Object>
+    <Object Type="Program" Language="IEC" Description="+ formerly known as robits_1 &amp; 2">GlowIGN</Object>
+    <Object Type="Library" Language="ANSIC">lAI50toIT</Object>
+    <Object Type="Library" Language="ANSIC">lCoV</Object>
+    <Object Type="Program" Language="IEC" Description="+ Change rate of signal monitoring">delta_signal</Object>
+  </Objects>
+</Package>

@@ -1,0 +1,125 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2025
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V03.99.00.00	06.03.2013	Weitzer		generated for modular software	 
+; V03.99.02.00	29.05.2013	Zengerer	initial dependencies prepared
+; V04.00.00.00	30.01.2014	Denk		new version
+; V04.01.00.00	22.07.2014	Denk		OUT_IG.rCA_Ign_Avg added, Para task updated, bIgn_SelfTest to MM2VIS added
+; V04.03.00.00	02.11.2015	Zengerer 	MANDATORYMODULE statement
+; V04.03.01.00	24.01.2018	Denk		bMsg1022, IN_IG.tPB2MM.bParaSetupOk added
+; V04.07.00.00	23.01.2019	Zengerer	Distribute Para task with perm messaage handling capability to all modules, no functional change to V4.06
+; V04.07.00.00	01.02.2019	Hohensinner	Ignition Information for custom module (bus applications)
+; V04.09.00.00	10.12.2019	Denk		Ignition System Self-Test Improvements
+; V04.11.00.00	22.12.2021	Andre		Use Para.bSA_Ign_Active to select ignition by SAFI or by MIC
+; V04.12.00.00	08.09.2022	Andre		Select the engine speed from the ICxx module also if SEMIC is active
+; V04.13.00.00	17.10.2023	Andre		Bugfix for M_STRDRE
+;				05-12-2023	Bacci		Added ventilation demand and release before starting the self-test (2023-190)
+;				05.03.2024	Bacci		Changes on trip 1061 added
+; V04.14.00.00	27.11.2024	Andre		Display B3226 and prevent B3225 during purge starts with all cylinders skipped.
+;				02.12.2024	Andre		Set ignition feedback from CAN to TRUE in simulation mode
+;				13.02.2025	Andre		ZM2_ZEST not set while the early gas valve opening function is active.
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>IG</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.14.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"	<PARA1 Name='iEng_Motortype' MIN='208' MAX='920' />"
+"	<PARA2 />"
+"	<PARA3 />"
+"	<PARA4 />"
+"	<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Statement, if engine operation is also allowed without this module (FALSE) or if this module´s parameter check passing is mandatory (TRUE)
+"<MANDATORYMODULE>TRUE</MANDATORYMODULE>"
+;
+; Permanent Datamodule Filenames<!-- enter filenames for counter and INTERNAL parameter only; filename without extention-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_IG</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='SY' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='SA' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='OP' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='MO' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='IC' VERSION='04.13.00.00' />"
+"	<DEPENDENCY MODULE='HA' VERSION='04.13.00.00' />"
+"	<DEPENDENCY MODULE='GT' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='EG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='EC' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='AG' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='AB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='GC' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='VE' VERSION='04.13.00.00' />"
+"   <DEPENDENCY VISVERSION='02.12.03.00' />"			; Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	 Handling of general ignition topics	"
+"	</General>	"
+""
+"	<F1 Name='Engine speed' LastModified='04.00.00.00'>"
+"	Engine speed handling depending on used ignition system. 	"
+"	</F1>"
+"	<F2 Name='Ignition voltage calculations' LastModified='04.00.00.00'>"
+"	 Calculation of min, max and avg values depending on used ignition system.	"
+"	</F2>"
+"	<F3 Name='Timing point calculation' LastModified='04.00.00.00'>"
+"	 Calculation of ignition timing point min, max and avg values depending on used ignition system. "
+"	</F3>"
+"	<F4 Name='Ignition selftest' LastModified='04.00.00.00'>"
+"	Ignition system selftest mode functionallity. "
+"	</F4>"
+"	<F5 Name='Double Ignition' LastModified='04.00.00.00'>"
+"	Double ignition functionallity and building of variable bIgn_Run. "
+"	</F5>"
+""
+"	<Info>"
+"	V4.01.00	01-07-2014	Denk 	MM2VIS.bIgn_SelfTest added	"
+"   V4.01.00	09.07.2014	Denk	OUT_IG.rCA_Ign_Avg := ZZPAvg; added  "
+"   V4.05.00	21.12.2017	Denk	Bugfix, ignition self test with IC/MIC	  "
+"	</Info>"
+""
+"	<Customized LastModified='4.0.0.0'>	"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

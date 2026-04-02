@@ -1,0 +1,346 @@
+(*
+T: FUNCTION_BLOCK PARA_BOOL
+FW: NO
+CI#: 89
+QSL: 56
+QVE: 56
+QVPC: 56
+QPar: 56
+QFBI: 0
+*)
+@V 1 2 0
+sbPARA_01	1	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 3 0
+sbPARA_02	2	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 4 0
+sbPARA_03	3	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 5 0
+sbPARA_04	4	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 6 0
+sbPARA_05	5	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 7 0
+sbPARA_06	6	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 8 0
+sbPARA_07	7	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 9 0
+sbPARA_08	8	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 10 0
+sbPARA_09	9	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 11 0
+sbPARA_10	10	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 12 0
+sbPARA_11	11	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 13 0
+sbPARA_12	12	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 14 0
+sbPARA_13	13	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 15 0
+sbPARA_14	14	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 16 0
+sbPARA_15	15	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 17 0
+sbPARA_16	16	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 18 0
+sbPARA_17	17	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 19 0
+sbPARA_18	18	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 20 0
+sbPARA_19	19	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 21 0
+sbPARA_20	20	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 22 0
+sbPARA_21	21	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 23 0
+sbPARA_22	22	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 24 0
+sbPARA_23	23	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 25 0
+sbPARA_24	24	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 26 0
+sbPARA_25	25	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 27 0
+sbPARA_26	26	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 28 0
+sbPARA_27	27	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 29 0
+sbPARA_28	28	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 30 0
+bOUT_PARA_01	29	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 31 0
+bOUT_PARA_02	30	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 32 0
+bOUT_PARA_03	31	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 33 0
+bOUT_PARA_04	32	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 34 0
+bOUT_PARA_05	33	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 35 0
+bOUT_PARA_06	34	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 36 0
+bOUT_PARA_07	35	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 37 0
+bOUT_PARA_08	36	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 38 0
+bOUT_PARA_09	37	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 39 0
+bOUT_PARA_10	38	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 40 0
+bOUT_PARA_11	39	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 41 0
+bOUT_PARA_12	40	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 42 0
+bOUT_PARA_13	41	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 43 0
+bOUT_PARA_14	42	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 44 0
+bOUT_PARA_15	43	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 45 0
+bOUT_PARA_16	44	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 46 0
+bOUT_PARA_17	45	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 47 0
+bOUT_PARA_18	46	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 48 0
+bOUT_PARA_19	47	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 49 0
+bOUT_PARA_20	48	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 50 0
+bOUT_PARA_21	49	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 51 0
+bOUT_PARA_22	50	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 52 0
+bOUT_PARA_23	51	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 53 0
+bOUT_PARA_24	52	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 54 0
+bOUT_PARA_25	53	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 55 0
+bOUT_PARA_26	54	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 56 0
+bOUT_PARA_27	55	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 57 0
+bOUT_PARA_28	56	VAR_OUTPUT	@TYP:1
+		     
+
+;
+

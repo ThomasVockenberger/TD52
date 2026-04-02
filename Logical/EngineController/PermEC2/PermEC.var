@@ -1,0 +1,40 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: PermEC
+ * File: PermEC.var
+ * Author: WaldharM
+ * Created: October 16, 2012
+ ********************************************************************
+ * Local variables of program PermEC
+ ********************************************************************)
+VAR
+	pm_Error : UINT;
+	write_once : BOOL;
+	pm_len : UDINT;
+	ModulName : STRING[35];
+	DatObjInfo_01 : DatObjInfo;
+	pm_id : UDINT;
+	pm_p : UDINT;
+	bCreateDataObj : BOOL;
+	perm_par_vers : UINT;
+	DatObjRead_01 : DatObjRead;
+	usPMWriteCnt : UINT;
+	DatObjDelete_PermMem : DatObjDelete;
+	DatObjCreate_01 : DatObjCreate;
+	DatObjWrite_01 : DatObjWrite;
+	ulChecksumOld : UDINT;
+	ulPMPointer : UDINT;
+	ulChkValue : UDINT;
+	TON_WritePMEM : TON;
+	ulChecksum : UDINT;
+	bWriteDataObj : BOOL;
+END_VAR
+VAR CONSTANT
+	ERR_NOERROR : UINT := 0;
+END_VAR
+VAR
+	pmm : ParaEC2_typ;
+	TON_BlockMinFileAge : TON;
+	bBlock_MinFileAge : BOOL;
+END_VAR

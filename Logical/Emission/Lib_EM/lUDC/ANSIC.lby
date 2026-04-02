@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Program xmlns="http://br-automation.co.at/AS/Program">
+   <Files>
+      <File>lUDC.fun</File>
+      <File>lUDC.typ</File>
+      <File>lUDC.var</File>
+      <File>UDC.h</File>
+      <File>UDC_private.h</File>
+      <File>UDC_types.h</File>
+      <File>rtGetInf.h</File>
+      <File>rtGetNaN.h</File>
+      <File>rt_nonfinite.h</File>
+      <File>rtwtypes.h</File>
+      <File>UDC.c</File>
+      <File>UDC_data.c</File>
+      <File>fUDC.c</File>
+      <File>rtGetInf.c</File>
+      <File>rtGetNaN.c</File>
+      <File>rt_nonfinite.c</File>
+      <File>lib_properties.txt</File>
+   </Files>
+</Program><?AutomationStudio Version=3.0?>

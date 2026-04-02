@@ -1,0 +1,29 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: gas_zust
+ * File: gas_zust.var
+ * Author: 105051626
+ * Created: April 19, 2012
+ ********************************************************************
+ * Local variables of program gas_zust
+ ********************************************************************)
+VAR
+
+	Tn_ls : REAL; (* Normgastemperatur länderspezifisch *)
+	VT : REAL; (* Temperaturverhältnis *)
+END_VAR
+VAR CONSTANT
+	Tn : REAL := 273.15; (*Normal temperature*)
+END_VAR
+VAR
+	p_luft : REAL := 1.013; (*Air pressure [Bar]*)
+	GAS_PB : REAL; (*Operating gas pressure*)
+
+
+	Vp : REAL; (* Druckverhältnis *)
+	xLCRPT1_PressP2 : LCRPT1;
+END_VAR
+VAR CONSTANT
+	iPakistan : INT := 92; (*country code, TEMP Solution!!!*)
+END_VAR

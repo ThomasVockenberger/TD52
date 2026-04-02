@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="Dump_Radiator_3_CS1" Type="mpj1939receive">
+    <Group ID="GeneralSettings">
+      <Property ID="OwnDeviceAddress" Value="1" />
+      <Property ID="CounterpartAddress" Value="80" />
+      <Property ID="CANInterface" Value="IF1.ST16.IF1.ST3.IF1" />
+    </Group>
+  </Element>
+</Configuration>

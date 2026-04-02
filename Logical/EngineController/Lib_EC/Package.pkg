@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Library" Language="ANSIC">lSimPIDx</Object>
+    <Object Type="Library" Language="ANSIC">lHiContr</Object>
+    <Object Type="Library" Language="ANSIC">lHiGlob</Object>
+    <Object Type="Library" Language="ANSIC">lMFB50Cont</Object>
+    <Object Type="Library" Language="IEC" Description="A new source library">TEC</Object>
+    <Object Type="Library" Language="ANSIC">lSS</Object>
+    <Object Type="Library" Language="ANSIC">lGen2</Object>
+    <Object Type="Library" Language="ANSIC">lPFPDR</Object>
+    <Object Type="Library" Language="ANSIC">lIP_EGTCtr</Object>
+    <Object Type="Library" Language="ANSIC">lFSync</Object>
+    <Object Type="Library" Language="ANSIC">lLamStart</Object>
+    <Object Type="Library" Language="ANSIC">lCPP_Int</Object>
+    <Object Type="Library" Language="ANSIC">lLX2</Object>
+    <Object Type="Library" Language="ANSIC" Description="Direct Air Injection ">lDAI</Object>
+    <Object Type="Library" Language="ANSIC">lTExhMon</Object>
+    <Object Type="Library" Language="ANSIC">lPCGVmon</Object>
+    <Object Type="Library" Language="ANSIC">lFSyPrM</Object>
+    <Object Type="Library" Language="ANSIC">lLamCtrPBC</Object>
+    <Object Type="Library" Language="ANSIC">lTrStRed</Object>
+    <Object Type="Library" Language="ANSIC">lSCRT_ss</Object>
+    <Object Type="Library" Language="ANSIC">lGridStat</Object>
+  </Objects>
+</Package>

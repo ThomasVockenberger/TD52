@@ -1,0 +1,28 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: SPP_EC
+ * File: SPP_EC.var
+ * Author: 502293141
+ * Created: March 20, 2014
+ ********************************************************************
+ * Local variables of program IOScal_EC
+ ********************************************************************)
+VAR
+	LCRMovAvg_rPr_GR_fast : LCRMovAvgFlt;
+	LCRMovAvg_rPr_GR : LCRMovAvgFlt;
+	LCRMovAvg_rPr_P2s_fast : LCRMovAvgFlt;
+	LCRMovAvg_rPr_P2s : LCRMovAvgFlt;
+	LCRMovAvg_rPr_P2s_A : LCRMovAvgFlt;
+	LCRMovAvg_rPr_P2s_B : LCRMovAvgFlt;
+	iIdx_Cyl : USINT;
+	DTGetTime_RPS : DTGetTime;
+	LCRMovAvg_rPr_P2s_Opt : LCRMovAvgFlt;
+	iFilt_fast : UINT := 3;
+	iFilt : UINT;
+	iFilt_Old : UINT;
+	iFilt_Opt : UINT;
+	iFilt_Opt_Old : UINT;
+	iSort_Cache : USINT;
+	xFilter_R_T_SCR_In : FILTER_R; (* Filter for SCR inlet temperature controller input *) 
+END_VAR

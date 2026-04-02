@@ -1,0 +1,38 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: ErrCnt
+ * File: ErrCnt.var
+ * Author: 502423184
+ * Created: December 14, 2015
+ ********************************************************************
+ * Local variables of program ErrCnt
+ ********************************************************************)
+VAR
+	iNum_Cyl : USINT;
+	iCnt : UINT;
+	iCnt_Err : UINT;
+	xTON_ErrCnt_Ena : TON;
+END_VAR
+VAR CONSTANT
+	Knock_Int : USINT := 1;
+	Knock_Lim : USINT := 2;
+	Knock_Lim_Filt : USINT := 3;
+	Misf_I : USINT := 4;
+	Misf_II : USINT := 5;
+	GlowIgn : USINT := 6;
+	SensErr : USINT := 7;
+	SensFailure : USINT := 8;
+	MemBurst : USINT := 9;
+	CPSSat : USINT := 0; (*Cylinder pressure sensor saturation - error counter*)
+	CompLineCheck : USINT := 10;
+	NegPresCheck : USINT := 11;
+	PresSlopeCheck : USINT := 12;
+	SlowDriftCheck : USINT := 13;
+	PmaxLimReached : USINT := 14;
+	NegVoltCheck : USINT := 15;
+	ConfNotOK : USINT := 16;
+	InvalidPar : USINT := 17;
+	LimpHome : USINT := 18;
+	OptiFreeze : USINT := 19;
+END_VAR

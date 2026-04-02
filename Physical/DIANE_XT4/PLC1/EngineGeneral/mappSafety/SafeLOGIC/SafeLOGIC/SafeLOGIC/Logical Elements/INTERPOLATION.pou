@@ -1,0 +1,46 @@
+﻿FUNCTION_BLOCK INTERPOLATION
+{ VariableWorksheet := 'Variables' }
+﻿{GroupDefinition(0,'NewGroup')}
+
+VAR_INPUT {Group(0)}
+    {LINE(1)}
+    sX : SAFEDINT; (*Input for x Scale*)
+    {LINE(2)}
+    sX1 : SAFEDINT; (*x scale - point 1*)
+    {LINE(3)}
+    sX2 : SAFEDINT; (*x scale - point 2*)
+    {LINE(4)}
+    sY1 : SAFEDINT; (*y scale - point 1*)
+    {LINE(5)}
+    sY2 : SAFEDINT; (*y scale - point 2*)
+END_VAR
+
+VAR_OUTPUT {Group(0)}
+    {LINE(9)}
+    sY_Out : SAFEDINT; (*Interpolated output for y*)
+END_VAR
+
+VAR {Group(0)}
+    {LINE(6)}
+    sSUB_X : SAFEDINT; (*Substracted X variables*)
+    {LINE(7)}
+    xMAX_S_BR : MAX_S_BR; (*FuB*)
+    {LINE(8)}
+    xMIN_S_BR : MIN_S_BR; (*FuB*)
+END_VAR
+
+{ CodeWorksheet := 'INTERPOLATION', Type := '.st' }
+﻿(* FuB Interpolation -> (X-X1)/(X2-X1)*(Y2-Y1) + Y1 *)
+
+IF sX1 = sX2 THEN   sSUB_X  := SAFEDINT#1;
+             ELSE   sSUB_X  := sX2 - sX1;       
+END_IF;
+
+xMAX_S_BR(S_In1             := (((sX - sX1) * SAFEDINT#10000) / sSUB_X * (sY2 - sY1)) / SAFEDINT#10000 + sY1,       S_In2:= sY1);
+xMIN_S_BR(S_In1             := xMAX_S_BR.S_Out,                                                                     S_In2:= sY2);
+sY_Out                      := xMIN_S_BR.S_Out;
+
+
+IF sX1 = sX2 THEN   sY_Out  := SAFEDINT#10000;  
+END_IF;
+END_FUNCTION_BLOCK

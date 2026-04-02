@@ -1,0 +1,61 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: pbc_mon
+ * File: pbc_mon.var
+ * Author: WaldharM
+ * Created: September 15, 2009
+ ********************************************************************
+ * Local variables of program pbc_mon
+ ********************************************************************)
+VAR
+	AmmSeq_PiCountPosAbw : AmmSequence; (* Trip: Axxxx, OM: Bxxxx, *) (* Oldname: AmmSeq_PiCountPosAbw *)
+	AmmSeq_PiNegAbw : AmmSequence; (* Trip: A2275, OM: B2849, Misfiring failure PBC*) (* Oldname: AmmSeq_PiNegAbw *)
+	bAmmSeqClkP : BOOL;
+	TON_SecondTick : TON;
+	bAussetzerTest : BOOL;
+	usMinCounter : UINT;
+	ssZeitBasisAussetzer : INT;
+	ucCylIndex : USINT; (*Schleifenindex*)
+	xTOF_PBC : TOF;
+	iMotorCycle : INT;
+	TOF_P2s : TOF;
+	iCnt_IMEP_Misf_sum : USINT;
+	iCnt_IMEP_Misf : ARRAY[0..24] OF USINT;
+	bCnt_IMEP_Misf : ARRAY[0..24] OF BOOL;
+	bCnt_IMEP_NegDev : ARRAY[0..24] OF BOOL; (* Oldname: bPiNegAbw *)
+	bCnt_IMEP_PosDev : ARRAY[0..24] OF BOOL; (* Oldname: bPiPosAbw *)
+	iCnt_IMEP_NegDev : ARRAY[0..24] OF INT; (* Oldname: ucCountPiNegAbw *)
+	iCnt_IMEP_PosDev : ARRAY[0..24] OF INT; (* Oldname: ucCountPiPosAbw *)
+	xTP_IMEP_MisfCnt : TP;
+	bCPP_AbsLim : ARRAY[0..24] OF BOOL; (* CPP Integrator maximal cylinder pressure absolute limit reached *)
+	iCnt_CPP_DevLim : ARRAY[0..24] OF INT; (*Zähler der Überscheitungen des Spitzendrucklimits*) (* Oldname: ucCountPmaxLimit *)
+	iCnt_CPP_DevLimOK : ARRAY[0..24] OF INT; (* Zähler der Unterschreitungen des Spitzendruckslimits*) (* Oldname: ucCountPmaxLimitKehr *)
+	bRel_CPP_DevLim : BOOL; (* Oldname: bFGAmmSeq_PmaxLimit *)
+	xTP_Rel_CPP_DevLim : TP; (* Oldname: TP_FGammSeq_Pmax *)
+	bCPP_Warning : ARRAY[0..24] OF BOOL;
+	bRel_CPP_AbsLim_W : BOOL; (* Oldname: bFGAmmSeq_PmaxLimit_W *)
+	xTP_Rel_CPP_AbsLim_W : TP; (* Oldname: TP_FGammSeq_Pmax_W *)
+	bPBC_MSST : BOOL;
+	iCnt_IPC_MSF : INT;
+	iCnt_PBC_MSF_Delay : ARRAY[0..24] OF INT;
+	bPBC_CPP_MSF : ARRAY[0..24] OF BOOL;
+	iIdx_Cyl_Act : INT;
+	iIdx_MBFvar : INT;
+	xTON_MisfPos : TON;
+	iCnt_Misf_II : ARRAY[0..24] OF DINT;
+	xTON_exec_CQ : TON;
+	tCQ : TIME := T#10s; (*Zeitschritte für CQ Ermittlung (Combustion Quality)*)
+	iCyl : USINT;
+	rNcqCyl : REAL;
+	rCQnCyl : ARRAY[0..24] OF REAL;
+	rCQnMaxCyl : ARRAY[0..24] OF REAL;
+	bCQnMaxReset : BOOL;
+	xCppInt : ARRAY[0..24] OF fCPP_Int; (* Cylinder Pressure Peak Limit Integrator *)
+	bReset_CPP_LimEvent : BOOL; (* Reset CPP limit counter *)
+	xR_TRIG_CppInt_IPRed : ARRAY[0..24] OF R_TRIG; (* Rising Edge - CPP Integrator Ignition Point reduction *)
+	bCppInt_IPRed_Trig : ARRAY[0..24] OF BOOL; (* CPP Integrator Ignition Point reduction Operation Message Logged trigger *)
+	iCnt_CppInt_IntLimHi : USINT; (* Cylinder Count at CPP Integrator Level Limit High *)
+	xTON_CPPInt_IPRed_Off : ARRAY[0..24] OF TON; (* delay for deactivating operating message 2960 *)
+	bCppInt_IPRed : BOOL; (* Bit to enable OM block for IT retard from CPPInt *) 
+END_VAR

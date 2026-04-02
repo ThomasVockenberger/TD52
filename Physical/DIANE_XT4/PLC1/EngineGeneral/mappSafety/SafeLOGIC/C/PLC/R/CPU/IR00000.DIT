@@ -1,0 +1,4522 @@
+(*
+T: RESOURCE CPU
+FW: NO
+CI#: 0
+QSL: 752
+QVE: 752
+QVPC: 752
+QPar: 0
+QFBI: 0
+*)
+@V 1 5 0
+sbSafeModuleOK_SM101	1	VAR_GLOBAL	@TYP:43
+%SIX 4.0		     
+
+;
+
+@V 1 6 0
+sbSafeModuleOK_SM102	2	VAR_GLOBAL	@TYP:43
+%SIX 4.1		     
+
+;
+
+@V 1 7 0
+sbSafeModuleOK_SM103	3	VAR_GLOBAL	@TYP:43
+%SIX 4.2		     
+
+;
+
+@V 1 8 0
+sbSafeModuleOK_SM104	4	VAR_GLOBAL	@TYP:43
+%SIX 4.3		     
+
+;
+
+@V 1 9 0
+sbSafeModuleOK_SM105	5	VAR_GLOBAL	@TYP:43
+%SIX 4.4		     
+
+;
+
+@V 1 10 0
+sbSafeModuleOK_SM201	6	VAR_GLOBAL	@TYP:43
+%SIX 4.5		     
+
+;
+
+@V 1 11 0
+sbSafeModuleOK_SM202	7	VAR_GLOBAL	@TYP:43
+%SIX 4.6		     
+
+;
+
+@V 1 12 0
+sbSafeModuleOK_SM203	8	VAR_GLOBAL	@TYP:43
+%SIX 4.7		     
+
+;
+
+@V 1 13 0
+sbSafeModuleOK_SM204	9	VAR_GLOBAL	@TYP:43
+%SIX 5.0		     
+
+;
+
+@V 1 14 0
+sbSafeModuleOK_SM205	10	VAR_GLOBAL	@TYP:43
+%SIX 5.1		     
+
+;
+
+@V 1 15 0
+sbSafeModuleOK_SM206	11	VAR_GLOBAL	@TYP:43
+%SIX 5.2		     
+
+;
+
+@V 1 16 0
+sbSafeModuleOK_SM207	12	VAR_GLOBAL	@TYP:43
+%SIX 5.3		     
+
+;
+
+@V 1 17 0
+sbSafeModuleOK_SM208	13	VAR_GLOBAL	@TYP:43
+%SIX 5.4		     
+
+;
+
+@V 1 18 0
+sbSafeModuleOK_SM209	14	VAR_GLOBAL	@TYP:43
+%SIX 5.5		     
+
+;
+
+@V 1 19 0
+sbSafeModuleOK_SM210	15	VAR_GLOBAL	@TYP:43
+%SIX 5.6		     
+
+;
+
+@V 1 20 0
+sbSafeModuleOK_SM300	16	VAR_GLOBAL	@TYP:43
+%SIX 5.7		     
+
+;
+
+@V 1 21 0
+sbSafeModuleOK_SM301	17	VAR_GLOBAL	@TYP:43
+%SIX 6.0		     
+
+;
+
+@V 1 23 0
+sDI_EmStop	18	VAR_GLOBAL	@TYP:43
+%SIX 8.0		     
+
+;
+
+@V 1 24 0
+sDI_OlShortCirc	19	VAR_GLOBAL	@TYP:43
+%SIX 8.1		     
+
+;
+
+@V 1 25 0
+sDI_GenPrctTrip	20	VAR_GLOBAL	@TYP:43
+%SIX 8.2		     
+
+;
+
+@V 1 26 0
+sDI_ERV_Cust	21	VAR_GLOBAL	@TYP:43
+%SIX 8.3		     
+
+;
+
+@V 1 27 0
+sDI_SafetyLoop_A1	22	VAR_GLOBAL	@TYP:43
+%SIX 8.4		     
+
+;
+
+@V 1 28 0
+sDI_GCB_On	23	VAR_GLOBAL	@TYP:43
+%SIX 8.5		     
+
+;
+
+@V 1 29 0
+sDI_GCB_Off	24	VAR_GLOBAL	@TYP:43
+%SIX 8.6		     
+
+;
+
+@V 1 30 0
+sDI_ER_Door_CL	25	VAR_GLOBAL	@TYP:43
+%SIX 8.7		     
+
+;
+
+@V 1 31 0
+sDI_SafetyLoop_A2	26	VAR_GLOBAL	@TYP:43
+%SIX 20.7		     
+
+;
+
+@V 1 32 0
+sDI_LS_HWHT_Lo	27	VAR_GLOBAL	@TYP:43
+%SIX 12.0		     
+
+;
+
+@V 1 33 0
+sDI_PS1_HWHT_Hi	28	VAR_GLOBAL	@TYP:43
+%SIX 12.1		     
+
+;
+
+@V 1 34 0
+sDI_PS2_HWHT_Hi	29	VAR_GLOBAL	@TYP:43
+%SIX 12.2		     
+
+;
+
+@V 1 35 0
+sDI_PS1_HWHT_Lo	30	VAR_GLOBAL	@TYP:43
+%SIX 12.3		     
+
+;
+
+@V 1 36 0
+sDI_PS2_HWHT_Lo	31	VAR_GLOBAL	@TYP:43
+%SIX 12.4		     
+
+;
+
+@V 1 37 0
+sDI_TS1_HWHT_Hi	32	VAR_GLOBAL	@TYP:43
+%SIX 12.5		     
+
+;
+
+@V 1 38 0
+sDI_TS2_HWHT_Hi	33	VAR_GLOBAL	@TYP:43
+%SIX 12.6		     
+
+;
+
+@V 1 39 0
+sDI_FS_HWHT_Lo	34	VAR_GLOBAL	@TYP:43
+%SIX 12.7		     
+
+;
+
+@V 1 40 0
+sDI_LS_HWLT_Lo	35	VAR_GLOBAL	@TYP:43
+%SIX 16.0		     
+
+;
+
+@V 1 41 0
+sDI_PS1_HWLT_Hi	36	VAR_GLOBAL	@TYP:43
+%SIX 16.1		     
+
+;
+
+@V 1 42 0
+sDI_PS2_HWLT_Hi	37	VAR_GLOBAL	@TYP:43
+%SIX 16.2		     
+
+;
+
+@V 1 43 0
+sDI_PS1_HWLT_Lo	38	VAR_GLOBAL	@TYP:43
+%SIX 16.3		     
+
+;
+
+@V 1 44 0
+sDI_PS2_HWLT_Lo	39	VAR_GLOBAL	@TYP:43
+%SIX 16.4		     
+
+;
+
+@V 1 45 0
+sDI_TS1_HWLT_Hi	40	VAR_GLOBAL	@TYP:43
+%SIX 16.5		     
+
+;
+
+@V 1 46 0
+sDI_TS2_HWLT_Hi	41	VAR_GLOBAL	@TYP:43
+%SIX 16.6		     
+
+;
+
+@V 1 47 0
+sDI_FS_HWLT_Lo	42	VAR_GLOBAL	@TYP:43
+%SIX 16.7		     
+
+;
+
+@V 1 48 0
+sDI_HWcirc_Cust	43	VAR_GLOBAL	@TYP:43
+%SIX 20.0		     
+
+;
+
+@V 1 49 0
+sCI_N_EngAct	44	VAR_GLOBAL	@TYP:48
+%SIW 26		     
+
+;
+
+@V 1 50 0
+sAI_Pr_EO	45	VAR_GLOBAL	@TYP:48
+%SIW 38		     
+
+;
+
+@V 1 51 0
+sAI_Pr_EOaP	46	VAR_GLOBAL	@TYP:48
+%SIW 40		     
+
+;
+
+@V 1 52 0
+sAI_Pr_ECW	47	VAR_GLOBAL	@TYP:48
+%SIW 46		     
+
+;
+
+@V 1 53 0
+sAI_Pr_ECWaP	48	VAR_GLOBAL	@TYP:48
+%SIW 48		     
+
+;
+
+@V 1 54 0
+sDI_EmStop_M	49	VAR_GLOBAL	@TYP:43
+%SIX 52.0		     
+
+;
+
+@V 1 55 0
+sDI_Ign_Run	50	VAR_GLOBAL	@TYP:43
+%SIX 52.1		     
+
+;
+
+@V 1 56 0
+sDI_ScavFlapClosed	51	VAR_GLOBAL	@TYP:43
+%SIX 52.3		     
+
+;
+
+@V 1 57 0
+sDI_TS_ScavFlap	52	VAR_GLOBAL	@TYP:43
+%SIX 52.4		     
+
+;
+
+@V 1 58 0
+sDI_Pr_EG_Hi	53	VAR_GLOBAL	@TYP:43
+%SIX 52.5		     
+
+;
+
+@V 1 59 0
+sDI_SafetyLoop_M	54	VAR_GLOBAL	@TYP:43
+%SIX 52.7		     
+
+;
+
+@V 1 60 0
+sDI_GT1_SafeDevOK	55	VAR_GLOBAL	@TYP:43
+%SIX 52.2		     
+
+;
+
+@V 1 61 0
+sDI_GT2_SafeDevOK	56	VAR_GLOBAL	@TYP:43
+%SIX 52.6		     
+
+;
+
+@V 1 62 0
+sDI_GT3_SafeDevOK	57	VAR_GLOBAL	@TYP:43
+%SIX 56.0		     
+
+;
+
+@V 1 63 0
+sDI_GT4_SafeDevOK	58	VAR_GLOBAL	@TYP:43
+%SIX 56.1		     
+
+;
+
+@V 1 64 0
+sDI_DCGA_SafeDevOK	59	VAR_GLOBAL	@TYP:43
+%SIX 56.2		     
+
+;
+
+@V 1 65 0
+sDI_ERV_INL1_Fan_Run	60	VAR_GLOBAL	@TYP:43
+%SIX 60.0		     
+
+;
+
+@V 1 66 0
+sDI_ERV_INL1_Lou_OP	61	VAR_GLOBAL	@TYP:43
+%SIX 60.1		     
+
+;
+
+@V 1 67 0
+sDI_ERV_INL1_Lou_CL	62	VAR_GLOBAL	@TYP:43
+%SIX 60.2		     
+
+;
+
+@V 1 68 0
+sDI_ERV_OTL1_Lou_OP	63	VAR_GLOBAL	@TYP:43
+%SIX 60.3		     
+
+;
+
+@V 1 69 0
+sDI_ERV_OTL1_Lou_CL	64	VAR_GLOBAL	@TYP:43
+%SIX 60.4		     
+
+;
+
+@V 1 70 0
+sDI_ERV_INL2_Fan_Run	65	VAR_GLOBAL	@TYP:43
+%SIX 60.5		     
+
+;
+
+@V 1 71 0
+sDI_ERV_INL2_Lou_OP	66	VAR_GLOBAL	@TYP:43
+%SIX 60.6		     
+
+;
+
+@V 1 72 0
+sDI_ERV_INL2_Lou_CL	67	VAR_GLOBAL	@TYP:43
+%SIX 60.7		     
+
+;
+
+@V 1 73 0
+sDI_ERV_OTL2_Lou_OP	68	VAR_GLOBAL	@TYP:43
+%SIX 61.0		     
+
+;
+
+@V 1 74 0
+sDI_ERV_OTL2_Lou_CL	69	VAR_GLOBAL	@TYP:43
+%SIX 61.1		     
+
+;
+
+@V 1 75 0
+sDI_ERV_INL3_Fan_Run	70	VAR_GLOBAL	@TYP:43
+%SIX 61.2		     
+
+;
+
+@V 1 76 0
+sDI_ERV_INL3_Lou_OP	71	VAR_GLOBAL	@TYP:43
+%SIX 61.3		     
+
+;
+
+@V 1 77 0
+sDI_ERV_INL3_Lou_CL	72	VAR_GLOBAL	@TYP:43
+%SIX 61.4		     
+
+;
+
+@V 1 78 0
+sDI_ERV_OTL3_Lou_OP	73	VAR_GLOBAL	@TYP:43
+%SIX 61.5		     
+
+;
+
+@V 1 79 0
+sDI_ERV_OTL3_Lou_CL	74	VAR_GLOBAL	@TYP:43
+%SIX 61.6		     
+
+;
+
+@V 1 80 0
+sDI_ERV_INL4_Fan_Run	75	VAR_GLOBAL	@TYP:43
+%SIX 61.7		     
+
+;
+
+@V 1 81 0
+sDI_ERV_INL4_Lou_OP	76	VAR_GLOBAL	@TYP:43
+%SIX 62.0		     
+
+;
+
+@V 1 82 0
+sDI_ERV_INL4_Lou_CL	77	VAR_GLOBAL	@TYP:43
+%SIX 62.1		     
+
+;
+
+@V 1 83 0
+sDI_ERV_OTL4_Lou_OP	78	VAR_GLOBAL	@TYP:43
+%SIX 62.2		     
+
+;
+
+@V 1 84 0
+sDI_ERV_OTL4_Lou_CL	79	VAR_GLOBAL	@TYP:43
+%SIX 62.3		     
+
+;
+
+@V 1 85 0
+sDI_ERV_INL5_Fan_Run	80	VAR_GLOBAL	@TYP:43
+%SIX 68.0		     
+
+;
+
+@V 1 86 0
+sDI_ERV_INL5_Lou_OP	81	VAR_GLOBAL	@TYP:43
+%SIX 68.1		     
+
+;
+
+@V 1 87 0
+sDI_ERV_INL5_Lou_CL	82	VAR_GLOBAL	@TYP:43
+%SIX 68.2		     
+
+;
+
+@V 1 88 0
+sDI_ERV_OTL5_Lou_OP	83	VAR_GLOBAL	@TYP:43
+%SIX 68.3		     
+
+;
+
+@V 1 89 0
+sDI_ERV_OTL5_Lou_CL	84	VAR_GLOBAL	@TYP:43
+%SIX 68.4		     
+
+;
+
+@V 1 90 0
+sDI_ERV_INL6_Fan_Run	85	VAR_GLOBAL	@TYP:43
+%SIX 68.5		     
+
+;
+
+@V 1 91 0
+sDI_ERV_INL6_Lou_OP	86	VAR_GLOBAL	@TYP:43
+%SIX 68.6		     
+
+;
+
+@V 1 92 0
+sDI_ERV_INL6_Lou_CL	87	VAR_GLOBAL	@TYP:43
+%SIX 68.7		     
+
+;
+
+@V 1 93 0
+sDI_ERV_OTL6_Lou_OP	88	VAR_GLOBAL	@TYP:43
+%SIX 69.0		     
+
+;
+
+@V 1 94 0
+sDI_ERV_OTL6_Lou_CL	89	VAR_GLOBAL	@TYP:43
+%SIX 69.1		     
+
+;
+
+@V 1 96 0
+PARA_N_EngNom	90	VAR_GLOBAL	@TYP:59
+%SID 140		     
+
+;
+
+@V 1 97 0
+PARA_N_EngAct_HiHi_Diff	91	VAR_GLOBAL	@TYP:59
+%SID 144		     
+
+;
+
+@V 1 98 0
+PARA_N_Pr_EO_LoLo_Lim1	92	VAR_GLOBAL	@TYP:59
+%SID 148		     
+
+;
+
+@V 1 99 0
+PARA_N_Pr_EO_LoLo_Lim2	93	VAR_GLOBAL	@TYP:59
+%SID 152		     
+
+;
+
+@V 1 100 0
+PARA_Pr_EO_LoLo_LimN1	94	VAR_GLOBAL	@TYP:59
+%SID 156		     
+
+;
+
+@V 1 101 0
+PARA_Pr_EO_LoLo_LimN2	95	VAR_GLOBAL	@TYP:59
+%SID 160		     
+
+;
+
+@V 1 102 0
+PARA_Pr_EO_Diff_EngStop	96	VAR_GLOBAL	@TYP:59
+%SID 164		     
+
+;
+
+@V 1 103 0
+PARA_Pr_EO_HiHi_EngStop	97	VAR_GLOBAL	@TYP:59
+%SID 168		     
+
+;
+
+@V 1 104 0
+PARA_Pr_EO_HiHi_Diff	98	VAR_GLOBAL	@TYP:59
+%SID 172		     
+
+;
+
+@V 1 105 0
+PARA_Pr_EO_HiHi_Check	99	VAR_GLOBAL	@TYP:59
+%SID 176		     
+
+;
+
+@V 1 106 0
+PARA_Pr_EOaP_HiHi	100	VAR_GLOBAL	@TYP:59
+%SID 180		     
+
+;
+
+@V 1 107 0
+PARA_Pr_EOaP_Diff_EngStop	101	VAR_GLOBAL	@TYP:59
+%SID 184		     
+
+;
+
+@V 1 108 0
+PARA_Pr_EOaP_HiHi_EngStop	102	VAR_GLOBAL	@TYP:59
+%SID 188		     
+
+;
+
+@V 1 109 0
+PARA_Pr_ECW_LoLo	103	VAR_GLOBAL	@TYP:59
+%SID 192		     
+
+;
+
+@V 1 110 0
+PARA_Pr_ECW_HiHi_Diff	104	VAR_GLOBAL	@TYP:59
+%SID 196		     
+
+;
+
+@V 1 111 0
+PARA_Pr_ECW_HiHi_Check	105	VAR_GLOBAL	@TYP:59
+%SID 200		     
+
+;
+
+@V 1 112 0
+PARA_Pr_ECWaP_HiHi	106	VAR_GLOBAL	@TYP:59
+%SID 204		     
+
+;
+
+@V 1 113 0
+PARA_Eng_Motortype	107	VAR_GLOBAL	@TYP:59
+%SID 208		     
+
+;
+
+@V 1 114 0
+PARA_DPr_ECWP_LoLo	108	VAR_GLOBAL	@TYP:59
+%SID 212		     
+
+;
+
+@V 1 115 0
+PARA_Vol_SysPurge_Stroke	109	VAR_GLOBAL	@TYP:59
+%SID 216		     
+
+;
+
+@V 1 116 0
+PARA_Vol_SysPurge_MinAir	110	VAR_GLOBAL	@TYP:59
+%SID 220		     
+
+;
+
+@V 1 117 0
+PARA_Nr_ERV_INL_Fan	111	VAR_GLOBAL	@TYP:59
+%SID 224		     
+
+;
+
+@V 1 118 0
+PARA_Nr_ERV_INL_Lou	112	VAR_GLOBAL	@TYP:59
+%SID 228		     
+
+;
+
+@V 1 119 0
+PARA_Nr_ERV_OTL_Lou	113	VAR_GLOBAL	@TYP:59
+%SID 232		     
+
+;
+
+@V 1 120 0
+PARA_NrMaxErr_ERV_INL_Fan	114	VAR_GLOBAL	@TYP:59
+%SID 236		     
+
+;
+
+@V 1 121 0
+PARA_NrMaxErr_ERV_INL_Lou	115	VAR_GLOBAL	@TYP:59
+%SID 240		     
+
+;
+
+@V 1 122 0
+PARA_NrMaxErr_ERV_OTL_Lou	116	VAR_GLOBAL	@TYP:59
+%SID 244		     
+
+;
+
+@V 1 123 0
+PARA_GT2_Exist	117	VAR_GLOBAL	@TYP:43
+%SIX 76.0		     
+
+;
+
+@V 1 124 0
+PARA_GT3_Exist	118	VAR_GLOBAL	@TYP:43
+%SIX 76.1		     
+
+;
+
+@V 1 125 0
+PARA_GT4_Exist	119	VAR_GLOBAL	@TYP:43
+%SIX 76.2		     
+
+;
+
+@V 1 126 0
+PARA_SysPurge_MonActive	120	VAR_GLOBAL	@TYP:43
+%SIX 76.3		     
+
+;
+
+@V 1 127 0
+PARA_HWcirc_Cust_Exist	121	VAR_GLOBAL	@TYP:43
+%SIX 76.4		     
+
+;
+
+@V 1 128 0
+PARA_PS_HW_Lo_MuteAcive	122	VAR_GLOBAL	@TYP:43
+%SIX 76.5		     
+
+;
+
+@V 1 129 0
+PARA_LS_HWHT_Lo_Exist	123	VAR_GLOBAL	@TYP:43
+%SIX 76.6		     
+
+;
+
+@V 1 130 0
+PARA_PS1_HWHT_Hi_Exist	124	VAR_GLOBAL	@TYP:43
+%SIX 76.7		     
+
+;
+
+@V 1 131 0
+PARA_PS2_HWHT_Hi_Exist	125	VAR_GLOBAL	@TYP:43
+%SIX 77.0		     
+
+;
+
+@V 1 132 0
+PARA_PS1_HWHT_Lo_Exist	126	VAR_GLOBAL	@TYP:43
+%SIX 77.1		     
+
+;
+
+@V 1 133 0
+PARA_PS2_HWHT_Lo_Exist	127	VAR_GLOBAL	@TYP:43
+%SIX 77.2		     
+
+;
+
+@V 1 134 0
+PARA_TS1_HWHT_Hi_Exist	128	VAR_GLOBAL	@TYP:43
+%SIX 77.3		     
+
+;
+
+@V 1 135 0
+PARA_TS2_HWHT_Hi_Exist	129	VAR_GLOBAL	@TYP:43
+%SIX 77.4		     
+
+;
+
+@V 1 136 0
+PARA_FS_HWHT_Lo_Exist	130	VAR_GLOBAL	@TYP:43
+%SIX 77.5		     
+
+;
+
+@V 1 137 0
+PARA_LS_HWLT_Lo_Exist	131	VAR_GLOBAL	@TYP:43
+%SIX 77.6		     
+
+;
+
+@V 1 138 0
+PARA_PS1_HWLT_Hi_Exist	132	VAR_GLOBAL	@TYP:43
+%SIX 77.7		     
+
+;
+
+@V 1 139 0
+PARA_PS2_HWLT_Hi_Exist	133	VAR_GLOBAL	@TYP:43
+%SIX 78.0		     
+
+;
+
+@V 1 140 0
+PARA_PS1_HWLT_Lo_Exist	134	VAR_GLOBAL	@TYP:43
+%SIX 78.1		     
+
+;
+
+@V 1 141 0
+PARA_PS2_HWLT_Lo_Exist	135	VAR_GLOBAL	@TYP:43
+%SIX 78.2		     
+
+;
+
+@V 1 142 0
+PARA_TS1_HWLT_Hi_Exist	136	VAR_GLOBAL	@TYP:43
+%SIX 78.3		     
+
+;
+
+@V 1 143 0
+PARA_TS2_HWLT_Hi_Exist	137	VAR_GLOBAL	@TYP:43
+%SIX 78.4		     
+
+;
+
+@V 1 144 0
+PARA_FS_HWLT_Lo_Exist	138	VAR_GLOBAL	@TYP:43
+%SIX 78.5		     
+
+;
+
+@V 1 145 0
+PARA_Pr_EG_sMonActive	139	VAR_GLOBAL	@TYP:43
+%SIX 78.6		     
+
+;
+
+@V 1 146 0
+PARA_SafetyLoop_A2_Exist	140	VAR_GLOBAL	@TYP:43
+%SIX 78.7		     
+
+;
+
+@V 1 147 0
+PARA_DCGA_Exist	141	VAR_GLOBAL	@TYP:43
+%SIX 79.0		     
+
+;
+
+@V 1 148 0
+PARA_ERV_Cust_Active	142	VAR_GLOBAL	@TYP:43
+%SIX 79.1		     
+
+;
+
+@V 1 149 0
+PARA_ERV_ColdCountry_Active	143	VAR_GLOBAL	@TYP:43
+%SIX 79.2		     
+
+;
+
+@V 1 150 0
+PARA_ER_Door_MonActive	144	VAR_GLOBAL	@TYP:43
+%SIX 79.3		     
+
+;
+
+@V 1 152 0
+sDO_Rel_Sync_Load	145	VAR_GLOBAL	@TYP:43
+%SQX 1.0		     
+
+;
+
+@V 1 153 0
+sDO_GCB_RUC	146	VAR_GLOBAL	@TYP:43
+%SQX 1.1		     
+
+;
+
+@V 1 154 0
+sDO_SF_OK_A	147	VAR_GLOBAL	@TYP:43
+%SQX 1.2		     
+
+;
+
+@V 1 155 0
+sDO_EmStop	148	VAR_GLOBAL	@TYP:43
+%SQX 1.3		     
+
+;
+
+@V 1 156 0
+sDO_SF_OK_M	149	VAR_GLOBAL	@TYP:43
+%SQX 8.3		     
+
+;
+
+@V 1 157 0
+sDO_Rel_GV1a	150	VAR_GLOBAL	@TYP:43
+%SQX 8.0		     
+
+;
+
+@V 1 158 0
+sDO_Rel_GV1b	151	VAR_GLOBAL	@TYP:43
+%SQX 8.1		     
+
+;
+
+@V 1 159 0
+sDO_GT1_SafeDevice	152	VAR_GLOBAL	@TYP:43
+%SQX 8.2		     
+
+;
+
+@V 1 160 0
+sDO_Rel_GV2a	153	VAR_GLOBAL	@TYP:43
+%SQX 9.0		     
+
+;
+
+@V 1 161 0
+sDO_Rel_GV2b	154	VAR_GLOBAL	@TYP:43
+%SQX 9.1		     
+
+;
+
+@V 1 162 0
+sDO_GT2_SafeDevice	155	VAR_GLOBAL	@TYP:43
+%SQX 9.2		     
+
+;
+
+@V 1 163 0
+sDO_Rel_GV3a	156	VAR_GLOBAL	@TYP:43
+%SQX 10.0		     
+
+;
+
+@V 1 164 0
+sDO_Rel_GV3b	157	VAR_GLOBAL	@TYP:43
+%SQX 10.1		     
+
+;
+
+@V 1 165 0
+sDO_GT3_SafeDevice	158	VAR_GLOBAL	@TYP:43
+%SQX 10.2		     
+
+;
+
+@V 1 166 0
+sDO_Rel_GV4a	159	VAR_GLOBAL	@TYP:43
+%SQX 11.0		     
+
+;
+
+@V 1 167 0
+sDO_Rel_GV4b	160	VAR_GLOBAL	@TYP:43
+%SQX 11.1		     
+
+;
+
+@V 1 168 0
+sDO_GT4_SafeDevice	161	VAR_GLOBAL	@TYP:43
+%SQX 11.2		     
+
+;
+
+@V 1 169 0
+sDO_Rel_GVa_DCGA	162	VAR_GLOBAL	@TYP:43
+%SQX 12.0		     
+
+;
+
+@V 1 170 0
+sDO_Rel_GVb_DCGA	163	VAR_GLOBAL	@TYP:43
+%SQX 12.1		     
+
+;
+
+@V 1 171 0
+sDO_DCGA_SafeDevice	164	VAR_GLOBAL	@TYP:43
+%SQX 12.2		     
+
+;
+
+@V 1 173 0
+bRO_SM102	165	VAR_GLOBAL	@TYP:1
+%NSQX 516.0		     
+
+;
+
+@V 1 174 0
+bRO_SM205	166	VAR_GLOBAL	@TYP:1
+%NSQX 517.0		     
+
+;
+
+@V 1 175 0
+bRO_SM206	167	VAR_GLOBAL	@TYP:1
+%NSQX 520.0		     
+
+;
+
+@V 1 176 0
+bRO_SM207	168	VAR_GLOBAL	@TYP:1
+%NSQX 521.0		     
+
+;
+
+@V 1 177 0
+bRO_SM209	169	VAR_GLOBAL	@TYP:1
+%NSQX 522.0		     
+
+;
+
+@V 1 178 0
+bRO_SM210	170	VAR_GLOBAL	@TYP:1
+%NSQX 523.0		     
+
+;
+
+@V 1 180 0
+bOUT_F99_SafetyLoop_Eng	171	VAR_GLOBAL	@TYP:1
+%NSQX 0.0		     
+
+;
+
+@V 1 181 0
+bOUT_F01_OK	172	VAR_GLOBAL	@TYP:1
+%NSQX 0.1		     
+
+;
+
+@V 1 182 0
+bOUT_F01_N_DiffOK	173	VAR_GLOBAL	@TYP:1
+%NSQX 0.2		     
+
+;
+
+@V 1 183 0
+bOUT_F01_N_Nom90	174	VAR_GLOBAL	@TYP:1
+%NSQX 0.3		     
+
+;
+
+@V 1 184 0
+bOUT_F02_OK	175	VAR_GLOBAL	@TYP:1
+%NSQX 0.4		     
+
+;
+
+@V 1 185 0
+bOUT_F02_OK_PC	176	VAR_GLOBAL	@TYP:1
+%NSQX 0.5		     
+
+;
+
+@V 1 186 0
+bOUT_F03_OK	177	VAR_GLOBAL	@TYP:1
+%NSQX 0.6		     
+
+;
+
+@V 1 187 0
+bOUT_F03_Pr_EO_DiffOK	178	VAR_GLOBAL	@TYP:1
+%NSQX 0.7		     
+
+;
+
+@V 1 188 0
+bOUT_F04_OK	179	VAR_GLOBAL	@TYP:1
+%NSQX 1.0		     
+
+;
+
+@V 1 189 0
+bOUT_F05_OK	180	VAR_GLOBAL	@TYP:1
+%NSQX 1.1		     
+
+;
+
+@V 1 190 0
+bOUT_F05_Pr_ECW_DiffOK	181	VAR_GLOBAL	@TYP:1
+%NSQX 1.2		     
+
+;
+
+@V 1 191 0
+bOUT_F06_OK	182	VAR_GLOBAL	@TYP:1
+%NSQX 1.3		     
+
+;
+
+@V 1 192 0
+bOUT_F07_OK	183	VAR_GLOBAL	@TYP:1
+%NSQX 1.4		     
+
+;
+
+@V 1 193 0
+bOUT_F07_Rel_Sync_Load	184	VAR_GLOBAL	@TYP:1
+%NSQX 1.5		     
+
+;
+
+@V 1 194 0
+bOUT_F07_Rel_Sync_Load_PS	185	VAR_GLOBAL	@TYP:1
+%NSQX 1.6		     
+
+;
+
+@V 1 195 0
+bOUT_F07_GCB_RUC	186	VAR_GLOBAL	@TYP:1
+%NSQX 1.7		     
+
+;
+
+@V 1 196 0
+bOUT_F07_GCB_RUC_PS	187	VAR_GLOBAL	@TYP:1
+%NSQX 2.0		     
+
+;
+
+@V 1 197 0
+bOUT_F08_OlShortCirc_OK	188	VAR_GLOBAL	@TYP:1
+%NSQX 2.1		     
+
+;
+
+@V 1 198 0
+bOUT_F08_GenPrctTrip_OK	189	VAR_GLOBAL	@TYP:1
+%NSQX 2.2		     
+
+;
+
+@V 1 199 0
+bOUT_F09_Cust_OK	190	VAR_GLOBAL	@TYP:1
+%NSQX 2.3		     
+
+;
+
+@V 1 200 0
+bOUT_F09_Cust_OK_PC	191	VAR_GLOBAL	@TYP:1
+%NSQX 2.4		     
+
+;
+
+@V 1 201 0
+bOUT_F09_DI_ERV_Cust	192	VAR_GLOBAL	@TYP:1
+%NSQX 7.0		     
+
+;
+
+@V 1 202 0
+bOUT_F09_ERV_PC_Forced	193	VAR_GLOBAL	@TYP:1
+%NSQX 7.1		     
+
+;
+
+@V 1 203 0
+bOUT_F09_Door_OK	194	VAR_GLOBAL	@TYP:1
+%NSQX 30.0		     
+
+;
+
+@V 1 204 0
+bOUT_F09_INL1_Fan_OK	195	VAR_GLOBAL	@TYP:1
+%NSQX 30.1		     
+
+;
+
+@V 1 205 0
+bOUT_F09_INL1_Fan_OK_PC	196	VAR_GLOBAL	@TYP:1
+%NSQX 30.2		     
+
+;
+
+@V 1 206 0
+bOUT_F09_INL2_Fan_OK	197	VAR_GLOBAL	@TYP:1
+%NSQX 30.3		     
+
+;
+
+@V 1 207 0
+bOUT_F09_INL2_Fan_OK_PC	198	VAR_GLOBAL	@TYP:1
+%NSQX 30.4		     
+
+;
+
+@V 1 208 0
+bOUT_F09_INL3_Fan_OK	199	VAR_GLOBAL	@TYP:1
+%NSQX 30.5		     
+
+;
+
+@V 1 209 0
+bOUT_F09_INL3_Fan_OK_PC	200	VAR_GLOBAL	@TYP:1
+%NSQX 30.6		     
+
+;
+
+@V 1 210 0
+bOUT_F09_INL4_Fan_OK	201	VAR_GLOBAL	@TYP:1
+%NSQX 30.7		     
+
+;
+
+@V 1 211 0
+bOUT_F09_INL4_Fan_OK_PC	202	VAR_GLOBAL	@TYP:1
+%NSQX 31.0		     
+
+;
+
+@V 1 212 0
+bOUT_F09_INL5_Fan_OK	203	VAR_GLOBAL	@TYP:1
+%NSQX 31.1		     
+
+;
+
+@V 1 213 0
+bOUT_F09_INL5_Fan_OK_PC	204	VAR_GLOBAL	@TYP:1
+%NSQX 31.2		     
+
+;
+
+@V 1 214 0
+bOUT_F09_INL6_Fan_OK	205	VAR_GLOBAL	@TYP:1
+%NSQX 31.3		     
+
+;
+
+@V 1 215 0
+bOUT_F09_INL6_Fan_OK_PC	206	VAR_GLOBAL	@TYP:1
+%NSQX 31.4		     
+
+;
+
+@V 1 216 0
+bOUT_F09_INL1_Lou_OK	207	VAR_GLOBAL	@TYP:1
+%NSQX 31.5		     
+
+;
+
+@V 1 217 0
+bOUT_F09_INL1_Lou_OK_PC	208	VAR_GLOBAL	@TYP:1
+%NSQX 31.6		     
+
+;
+
+@V 1 218 0
+bOUT_F09_INL2_Lou_OK	209	VAR_GLOBAL	@TYP:1
+%NSQX 31.7		     
+
+;
+
+@V 1 219 0
+bOUT_F09_INL2_Lou_OK_PC	210	VAR_GLOBAL	@TYP:1
+%NSQX 32.0		     
+
+;
+
+@V 1 220 0
+bOUT_F09_INL3_Lou_OK	211	VAR_GLOBAL	@TYP:1
+%NSQX 32.1		     
+
+;
+
+@V 1 221 0
+bOUT_F09_INL3_Lou_OK_PC	212	VAR_GLOBAL	@TYP:1
+%NSQX 32.2		     
+
+;
+
+@V 1 222 0
+bOUT_F09_INL4_Lou_OK	213	VAR_GLOBAL	@TYP:1
+%NSQX 32.3		     
+
+;
+
+@V 1 223 0
+bOUT_F09_INL4_Lou_OK_PC	214	VAR_GLOBAL	@TYP:1
+%NSQX 32.4		     
+
+;
+
+@V 1 224 0
+bOUT_F09_INL5_Lou_OK	215	VAR_GLOBAL	@TYP:1
+%NSQX 32.5		     
+
+;
+
+@V 1 225 0
+bOUT_F09_INL5_Lou_OK_PC	216	VAR_GLOBAL	@TYP:1
+%NSQX 32.6		     
+
+;
+
+@V 1 226 0
+bOUT_F09_INL6_Lou_OK	217	VAR_GLOBAL	@TYP:1
+%NSQX 32.7		     
+
+;
+
+@V 1 227 0
+bOUT_F09_INL6_Lou_OK_PC	218	VAR_GLOBAL	@TYP:1
+%NSQX 33.0		     
+
+;
+
+@V 1 228 0
+bOUT_F09_OTL1_Lou_OK	219	VAR_GLOBAL	@TYP:1
+%NSQX 33.1		     
+
+;
+
+@V 1 229 0
+bOUT_F09_OTL1_Lou_OK_PC	220	VAR_GLOBAL	@TYP:1
+%NSQX 33.2		     
+
+;
+
+@V 1 230 0
+bOUT_F09_OTL2_Lou_OK	221	VAR_GLOBAL	@TYP:1
+%NSQX 33.3		     
+
+;
+
+@V 1 231 0
+bOUT_F09_OTL2_Lou_OK_PC	222	VAR_GLOBAL	@TYP:1
+%NSQX 33.4		     
+
+;
+
+@V 1 232 0
+bOUT_F09_OTL3_Lou_OK	223	VAR_GLOBAL	@TYP:1
+%NSQX 33.5		     
+
+;
+
+@V 1 233 0
+bOUT_F09_OTL3_Lou_OK_PC	224	VAR_GLOBAL	@TYP:1
+%NSQX 33.6		     
+
+;
+
+@V 1 234 0
+bOUT_F09_OTL4_Lou_OK	225	VAR_GLOBAL	@TYP:1
+%NSQX 33.7		     
+
+;
+
+@V 1 235 0
+bOUT_F09_OTL4_Lou_OK_PC	226	VAR_GLOBAL	@TYP:1
+%NSQX 34.0		     
+
+;
+
+@V 1 236 0
+bOUT_F09_OTL5_Lou_OK	227	VAR_GLOBAL	@TYP:1
+%NSQX 34.1		     
+
+;
+
+@V 1 237 0
+bOUT_F09_OTL5_Lou_OK_PC	228	VAR_GLOBAL	@TYP:1
+%NSQX 34.2		     
+
+;
+
+@V 1 238 0
+bOUT_F09_OTL6_Lou_OK	229	VAR_GLOBAL	@TYP:1
+%NSQX 34.3		     
+
+;
+
+@V 1 239 0
+bOUT_F09_OTL6_Lou_OK_PC	230	VAR_GLOBAL	@TYP:1
+%NSQX 34.4		     
+
+;
+
+@V 1 240 0
+bOUT_F10_EmStop_M_OK	231	VAR_GLOBAL	@TYP:1
+%NSQX 2.5		     
+
+;
+
+@V 1 241 0
+bOUT_F10_EmStop_OK	232	VAR_GLOBAL	@TYP:1
+%NSQX 2.6		     
+
+;
+
+@V 1 242 0
+bOUT_F10_SafetyLoop_EmStop	233	VAR_GLOBAL	@TYP:1
+%NSQX 2.7		     
+
+;
+
+@V 1 243 0
+bOUT_F10_DO_EmStop	234	VAR_GLOBAL	@TYP:1
+%NSQX 3.0		     
+
+;
+
+@V 1 244 0
+bOUT_F10_DO_EmStop_PS	235	VAR_GLOBAL	@TYP:1
+%NSQX 3.1		     
+
+;
+
+@V 1 245 0
+bOUT_F11_SafetyLoop_A1_OK	236	VAR_GLOBAL	@TYP:1
+%NSQX 3.2		     
+
+;
+
+@V 1 246 0
+bOUT_F11_SafetyLoop_A2_OK	237	VAR_GLOBAL	@TYP:1
+%NSQX 3.3		     
+
+;
+
+@V 1 247 0
+bOUT_F11_SafetyLoop_M_OK	238	VAR_GLOBAL	@TYP:1
+%NSQX 3.4		     
+
+;
+
+@V 1 248 0
+bOUT_F12_GT1_OK	239	VAR_GLOBAL	@TYP:1
+%NSQX 3.5		     
+
+;
+
+@V 1 249 0
+bOUT_F12_GT2_OK	240	VAR_GLOBAL	@TYP:1
+%NSQX 3.6		     
+
+;
+
+@V 1 250 0
+bOUT_F12_GT3_OK	241	VAR_GLOBAL	@TYP:1
+%NSQX 3.7		     
+
+;
+
+@V 1 251 0
+bOUT_F12_GT4_OK	242	VAR_GLOBAL	@TYP:1
+%NSQX 4.0		     
+
+;
+
+@V 1 252 0
+bOUT_F12_Rel_GV1	243	VAR_GLOBAL	@TYP:1
+%NSQX 4.1		     
+
+;
+
+@V 1 253 0
+bOUT_F12_Rel_GV1a_PS	244	VAR_GLOBAL	@TYP:1
+%NSQX 4.2		     
+
+;
+
+@V 1 254 0
+bOUT_F12_Rel_GV1b_PS	245	VAR_GLOBAL	@TYP:1
+%NSQX 4.3		     
+
+;
+
+@V 1 255 0
+bOUT_F12_GT1_SD_Dem	246	VAR_GLOBAL	@TYP:1
+%NSQX 4.4		     
+
+;
+
+@V 1 256 0
+bOUT_F12_GT1_SD_Dem_PS	247	VAR_GLOBAL	@TYP:1
+%NSQX 4.5		     
+
+;
+
+@V 1 257 0
+bOUT_F12_Rel_GV2	248	VAR_GLOBAL	@TYP:1
+%NSQX 4.6		     
+
+;
+
+@V 1 258 0
+bOUT_F12_Rel_GV2a_PS	249	VAR_GLOBAL	@TYP:1
+%NSQX 4.7		     
+
+;
+
+@V 1 259 0
+bOUT_F12_Rel_GV2b_PS	250	VAR_GLOBAL	@TYP:1
+%NSQX 5.0		     
+
+;
+
+@V 1 260 0
+bOUT_F12_GT2_SD_Dem	251	VAR_GLOBAL	@TYP:1
+%NSQX 5.1		     
+
+;
+
+@V 1 261 0
+bOUT_F12_GT2_SD_Dem_PS	252	VAR_GLOBAL	@TYP:1
+%NSQX 5.2		     
+
+;
+
+@V 1 262 0
+bOUT_F12_Rel_GV3	253	VAR_GLOBAL	@TYP:1
+%NSQX 5.3		     
+
+;
+
+@V 1 263 0
+bOUT_F12_Rel_GV3a_PS	254	VAR_GLOBAL	@TYP:1
+%NSQX 5.4		     
+
+;
+
+@V 1 264 0
+bOUT_F12_Rel_GV3b_PS	255	VAR_GLOBAL	@TYP:1
+%NSQX 5.5		     
+
+;
+
+@V 1 265 0
+bOUT_F12_GT3_SD_Dem	256	VAR_GLOBAL	@TYP:1
+%NSQX 5.6		     
+
+;
+
+@V 1 266 0
+bOUT_F12_GT3_SD_Dem_PS	257	VAR_GLOBAL	@TYP:1
+%NSQX 5.7		     
+
+;
+
+@V 1 267 0
+bOUT_F12_Rel_GV4	258	VAR_GLOBAL	@TYP:1
+%NSQX 6.0		     
+
+;
+
+@V 1 268 0
+bOUT_F12_Rel_GV4a_PS	259	VAR_GLOBAL	@TYP:1
+%NSQX 6.1		     
+
+;
+
+@V 1 269 0
+bOUT_F12_Rel_GV4b_PS	260	VAR_GLOBAL	@TYP:1
+%NSQX 6.2		     
+
+;
+
+@V 1 270 0
+bOUT_F12_GT4_SD_Dem	261	VAR_GLOBAL	@TYP:1
+%NSQX 6.3		     
+
+;
+
+@V 1 271 0
+bOUT_F12_GT4_SD_Dem_PS	262	VAR_GLOBAL	@TYP:1
+%NSQX 6.4		     
+
+;
+
+@V 1 272 0
+bOUT_F12_DI_GT1_SafeDevOK	263	VAR_GLOBAL	@TYP:1
+%NSQX 34.5		     
+
+;
+
+@V 1 273 0
+bOUT_F12_DI_GT2_SafeDevOK	264	VAR_GLOBAL	@TYP:1
+%NSQX 34.6		     
+
+;
+
+@V 1 274 0
+bOUT_F12_DI_GT3_SafeDevOK	265	VAR_GLOBAL	@TYP:1
+%NSQX 34.7		     
+
+;
+
+@V 1 275 0
+bOUT_F12_DI_GT4_SafeDevOK	266	VAR_GLOBAL	@TYP:1
+%NSQX 35.0		     
+
+;
+
+@V 1 276 0
+bOUT_F12_DI_DCGA_SafeDevOK	267	VAR_GLOBAL	@TYP:1
+%NSQX 35.1		     
+
+;
+
+@V 1 277 0
+bOUT_F12_DCGA_OK	268	VAR_GLOBAL	@TYP:1
+%NSQX 35.2		     
+
+;
+
+@V 1 278 0
+bOUT_F12_Rel_GV_DCGA	269	VAR_GLOBAL	@TYP:1
+%NSQX 35.3		     
+
+;
+
+@V 1 279 0
+bOUT_F12_Rel_GVa_DCGA_PS	270	VAR_GLOBAL	@TYP:1
+%NSQX 35.4		     
+
+;
+
+@V 1 280 0
+bOUT_F12_Rel_GVb_DCGA_PS	271	VAR_GLOBAL	@TYP:1
+%NSQX 35.5		     
+
+;
+
+@V 1 281 0
+bOUT_F12_DCGA_SD_Dem	272	VAR_GLOBAL	@TYP:1
+%NSQX 35.6		     
+
+;
+
+@V 1 282 0
+bOUT_F12_DCGA_SD_Dem_PS	273	VAR_GLOBAL	@TYP:1
+%NSQX 35.7		     
+
+;
+
+@V 1 283 0
+bOUT_F16_ScavFlapPos_OK	274	VAR_GLOBAL	@TYP:1
+%NSQX 26.1		     
+
+;
+
+@V 1 284 0
+bOUT_F16_ScavFlapPos_OK_PC	275	VAR_GLOBAL	@TYP:1
+%NSQX 26.2		     
+
+;
+
+@V 1 285 0
+bOUT_F16_DI_ScavFlapClosed	276	VAR_GLOBAL	@TYP:1
+%NSQX 26.3		     
+
+;
+
+@V 1 286 0
+bOUT_F16_TS_ScavFlap_OK	277	VAR_GLOBAL	@TYP:1
+%NSQX 26.4		     
+
+;
+
+@V 1 287 0
+bOUT_F17_Purge_OK	278	VAR_GLOBAL	@TYP:1
+%NSQX 26.5		     
+
+;
+
+@V 1 288 0
+bOUT_F20_HWcirc_Cust_OK	279	VAR_GLOBAL	@TYP:1
+%NSQX 26.6		     
+
+;
+
+@V 1 289 0
+bOUT_F20_LS_HWHT_Lo_OK	280	VAR_GLOBAL	@TYP:1
+%NSQX 26.7		     
+
+;
+
+@V 1 290 0
+bOUT_F20_PS1_HWHT_Hi_OK	281	VAR_GLOBAL	@TYP:1
+%NSQX 27.0		     
+
+;
+
+@V 1 291 0
+bOUT_F20_PS2_HWHT_Hi_OK	282	VAR_GLOBAL	@TYP:1
+%NSQX 27.1		     
+
+;
+
+@V 1 292 0
+bOUT_F20_PS1_HWHT_Lo_OK	283	VAR_GLOBAL	@TYP:1
+%NSQX 27.2		     
+
+;
+
+@V 1 293 0
+bOUT_F20_PS1_HWHT_Lo_DI	284	VAR_GLOBAL	@TYP:1
+%NSQX 27.3		     
+
+;
+
+@V 1 294 0
+bOUT_F20_PS2_HWHT_Lo_OK	285	VAR_GLOBAL	@TYP:1
+%NSQX 27.4		     
+
+;
+
+@V 1 295 0
+bOUT_F20_PS2_HWHT_Lo_DI	286	VAR_GLOBAL	@TYP:1
+%NSQX 27.5		     
+
+;
+
+@V 1 296 0
+bOUT_F20_TS1_HWHT_Hi_OK	287	VAR_GLOBAL	@TYP:1
+%NSQX 27.6		     
+
+;
+
+@V 1 297 0
+bOUT_F20_TS2_HWHT_Hi_OK	288	VAR_GLOBAL	@TYP:1
+%NSQX 27.7		     
+
+;
+
+@V 1 298 0
+bOUT_F20_FS_HWHT_Lo_OK	289	VAR_GLOBAL	@TYP:1
+%NSQX 28.0		     
+
+;
+
+@V 1 299 0
+bOUT_F20_FS_HWHT_Lo_OK_PC	290	VAR_GLOBAL	@TYP:1
+%NSQX 28.1		     
+
+;
+
+@V 1 300 0
+bOUT_F20_FS_HWHT_Lo_DI	291	VAR_GLOBAL	@TYP:1
+%NSQX 28.2		     
+
+;
+
+@V 1 301 0
+bOUT_F20_LS_HWLT_Lo_OK	292	VAR_GLOBAL	@TYP:1
+%NSQX 28.3		     
+
+;
+
+@V 1 302 0
+bOUT_F20_PS1_HWLT_Hi_OK	293	VAR_GLOBAL	@TYP:1
+%NSQX 28.4		     
+
+;
+
+@V 1 303 0
+bOUT_F20_PS2_HWLT_Hi_OK	294	VAR_GLOBAL	@TYP:1
+%NSQX 28.5		     
+
+;
+
+@V 1 304 0
+bOUT_F20_PS1_HWLT_Lo_OK	295	VAR_GLOBAL	@TYP:1
+%NSQX 28.6		     
+
+;
+
+@V 1 305 0
+bOUT_F20_PS1_HWLT_Lo_DI	296	VAR_GLOBAL	@TYP:1
+%NSQX 28.7		     
+
+;
+
+@V 1 306 0
+bOUT_F20_PS2_HWLT_Lo_OK	297	VAR_GLOBAL	@TYP:1
+%NSQX 29.0		     
+
+;
+
+@V 1 307 0
+bOUT_F20_PS2_HWLT_Lo_DI	298	VAR_GLOBAL	@TYP:1
+%NSQX 29.1		     
+
+;
+
+@V 1 308 0
+bOUT_F20_TS1_HWLT_Hi_OK	299	VAR_GLOBAL	@TYP:1
+%NSQX 29.2		     
+
+;
+
+@V 1 309 0
+bOUT_F20_TS2_HWLT_Hi_OK	300	VAR_GLOBAL	@TYP:1
+%NSQX 29.3		     
+
+;
+
+@V 1 310 0
+bOUT_F20_FS_HWLT_Lo_OK	301	VAR_GLOBAL	@TYP:1
+%NSQX 29.4		     
+
+;
+
+@V 1 311 0
+bOUT_F20_FS_HWLT_Lo_OK_PC	302	VAR_GLOBAL	@TYP:1
+%NSQX 29.5		     
+
+;
+
+@V 1 312 0
+bOUT_F20_FS_HWLT_Lo_DI	303	VAR_GLOBAL	@TYP:1
+%NSQX 29.6		     
+
+;
+
+@V 1 313 0
+bOUT_F21_Pr_EG_Hi_OK	304	VAR_GLOBAL	@TYP:1
+%NSQX 29.7		     
+
+;
+
+@V 1 314 0
+bOUT_F99_Rel_SF_OK	305	VAR_GLOBAL	@TYP:1
+%NSQX 6.5		     
+
+;
+
+@V 1 315 0
+bOUT_F99_Rel_SF_OK_A_PS	306	VAR_GLOBAL	@TYP:1
+%NSQX 6.6		     
+
+;
+
+@V 1 316 0
+bOUT_F99_Rel_SF_OK_M_PS	307	VAR_GLOBAL	@TYP:1
+%NSQX 6.7		     
+
+;
+
+@V 1 318 0
+iOUT_F09_Nr_PC_NotDone	308	VAR_GLOBAL	@TYP:3
+%NSQW 48		     
+
+;
+
+@V 1 320 0
+iOUT_F01_N_EngAct	309	VAR_GLOBAL	@TYP:4
+%NSQD 132		     
+
+;
+
+@V 1 321 0
+iOUT_F01_N_EngAct_Diff	310	VAR_GLOBAL	@TYP:4
+%NSQD 136		     
+
+;
+
+@V 1 322 0
+iOUT_F01_SDC_30s_ET	311	VAR_GLOBAL	@TYP:4
+%NSQD 140		     
+
+;
+
+@V 1 323 0
+iOUT_F01_Standstill_1m_ET	312	VAR_GLOBAL	@TYP:4
+%NSQD 144		     
+
+;
+
+@V 1 324 0
+iOUT_F01_N_Nom90_10s_ET	313	VAR_GLOBAL	@TYP:4
+%NSQD 148		     
+
+;
+
+@V 1 325 0
+iOUT_F03_Pr_EO	314	VAR_GLOBAL	@TYP:4
+%NSQD 152		     
+
+;
+
+@V 1 326 0
+iOUT_F03_Pr_EO_Standstill	315	VAR_GLOBAL	@TYP:4
+%NSQD 156		     
+
+;
+
+@V 1 327 0
+iOUT_F03_Pr_EO_Diff	316	VAR_GLOBAL	@TYP:4
+%NSQD 160		     
+
+;
+
+@V 1 328 0
+iOUT_F03_Pr_EO_Fr_1m_ET	317	VAR_GLOBAL	@TYP:4
+%NSQD 164		     
+
+;
+
+@V 1 329 0
+iOUT_F04_Pr_EOaP	318	VAR_GLOBAL	@TYP:4
+%NSQD 168		     
+
+;
+
+@V 1 330 0
+iOUT_F04_Pr_EOaP_Standstill	319	VAR_GLOBAL	@TYP:4
+%NSQD 172		     
+
+;
+
+@V 1 331 0
+iOUT_F04_Pr_EOaP_Fr_1m_ET	320	VAR_GLOBAL	@TYP:4
+%NSQD 176		     
+
+;
+
+@V 1 332 0
+iOUT_F04_EO_PumpsOff_2m_ET	321	VAR_GLOBAL	@TYP:4
+%NSQD 180		     
+
+;
+
+@V 1 333 0
+iOUT_F05_Pr_ECW	322	VAR_GLOBAL	@TYP:4
+%NSQD 184		     
+
+;
+
+@V 1 334 0
+iOUT_F05_Pr_ECW_Diff	323	VAR_GLOBAL	@TYP:4
+%NSQD 188		     
+
+;
+
+@V 1 335 0
+iOUT_F05_Pr_ECW_Fr_1m_ET	324	VAR_GLOBAL	@TYP:4
+%NSQD 192		     
+
+;
+
+@V 1 336 0
+iOUT_F06_Pr_ECWaP	325	VAR_GLOBAL	@TYP:4
+%NSQD 196		     
+
+;
+
+@V 1 337 0
+iOUT_F06_Pr_ECWaP_Fr_1m_ET	326	VAR_GLOBAL	@TYP:4
+%NSQD 200		     
+
+;
+
+@V 1 338 0
+iOUT_F06_ECW_PumpsOff_2m_ET	327	VAR_GLOBAL	@TYP:4
+%NSQD 204		     
+
+;
+
+@V 1 339 0
+iOUT_F07_GCB_On_10s_ET	328	VAR_GLOBAL	@TYP:4
+%NSQD 208		     
+
+;
+
+@V 1 340 0
+iOUT_F07_GCB_On_60s_ET	329	VAR_GLOBAL	@TYP:4
+%NSQD 212		     
+
+;
+
+@V 1 341 0
+iOUT_F09_Cust_OK_15s_ET	330	VAR_GLOBAL	@TYP:4
+%NSQD 216		     
+
+;
+
+@V 1 342 0
+iOUT_F09_Cust_PC_ET	331	VAR_GLOBAL	@TYP:4
+%NSQD 220		     
+
+;
+
+@V 1 343 0
+iOUT_F09_Door_OK_15s_ET	332	VAR_GLOBAL	@TYP:4
+%NSQD 284		     
+
+;
+
+@V 1 344 0
+iOUT_F09_INL1_Fan_OK_1m_ET	333	VAR_GLOBAL	@TYP:4
+%NSQD 288		     
+
+;
+
+@V 1 345 0
+iOUT_F09_INL2_Fan_OK_1m_ET	334	VAR_GLOBAL	@TYP:4
+%NSQD 292		     
+
+;
+
+@V 1 346 0
+iOUT_F09_INL3_Fan_OK_1m_ET	335	VAR_GLOBAL	@TYP:4
+%NSQD 296		     
+
+;
+
+@V 1 347 0
+iOUT_F09_INL4_Fan_OK_1m_ET	336	VAR_GLOBAL	@TYP:4
+%NSQD 300		     
+
+;
+
+@V 1 348 0
+iOUT_F09_INL5_Fan_OK_1m_ET	337	VAR_GLOBAL	@TYP:4
+%NSQD 304		     
+
+;
+
+@V 1 349 0
+iOUT_F09_INL6_Fan_OK_1m_ET	338	VAR_GLOBAL	@TYP:4
+%NSQD 308		     
+
+;
+
+@V 1 350 0
+iOUT_F09_INL1_Lou_OK_1m_ET	339	VAR_GLOBAL	@TYP:4
+%NSQD 312		     
+
+;
+
+@V 1 351 0
+iOUT_F09_INL2_Lou_OK_1m_ET	340	VAR_GLOBAL	@TYP:4
+%NSQD 316		     
+
+;
+
+@V 1 352 0
+iOUT_F09_INL3_Lou_OK_1m_ET	341	VAR_GLOBAL	@TYP:4
+%NSQD 320		     
+
+;
+
+@V 1 353 0
+iOUT_F09_INL4_Lou_OK_1m_ET	342	VAR_GLOBAL	@TYP:4
+%NSQD 324		     
+
+;
+
+@V 1 354 0
+iOUT_F09_INL5_Lou_OK_1m_ET	343	VAR_GLOBAL	@TYP:4
+%NSQD 328		     
+
+;
+
+@V 1 355 0
+iOUT_F09_INL6_Lou_OK_1m_ET	344	VAR_GLOBAL	@TYP:4
+%NSQD 332		     
+
+;
+
+@V 1 356 0
+iOUT_F09_OTL1_Lou_OK_1m_ET	345	VAR_GLOBAL	@TYP:4
+%NSQD 336		     
+
+;
+
+@V 1 357 0
+iOUT_F09_OTL2_Lou_OK_1m_ET	346	VAR_GLOBAL	@TYP:4
+%NSQD 340		     
+
+;
+
+@V 1 358 0
+iOUT_F09_OTL3_Lou_OK_1m_ET	347	VAR_GLOBAL	@TYP:4
+%NSQD 344		     
+
+;
+
+@V 1 359 0
+iOUT_F09_OTL4_Lou_OK_1m_ET	348	VAR_GLOBAL	@TYP:4
+%NSQD 348		     
+
+;
+
+@V 1 360 0
+iOUT_F09_OTL5_Lou_OK_1m_ET	349	VAR_GLOBAL	@TYP:4
+%NSQD 352		     
+
+;
+
+@V 1 361 0
+iOUT_F09_OTL6_Lou_OK_1m_ET	350	VAR_GLOBAL	@TYP:4
+%NSQD 356		     
+
+;
+
+@V 1 362 0
+iOUT_F12_GV_Open_60s_ET	351	VAR_GLOBAL	@TYP:4
+%NSQD 224		     
+
+;
+
+@V 1 363 0
+iOUT_F12_GT1_LC_130s_ET	352	VAR_GLOBAL	@TYP:4
+%NSQD 228		     
+
+;
+
+@V 1 364 0
+iOUT_F12_GT2_LC_130s_ET	353	VAR_GLOBAL	@TYP:4
+%NSQD 232		     
+
+;
+
+@V 1 365 0
+iOUT_F12_GT3_LC_130s_ET	354	VAR_GLOBAL	@TYP:4
+%NSQD 236		     
+
+;
+
+@V 1 366 0
+iOUT_F12_GT4_LC_130s_ET	355	VAR_GLOBAL	@TYP:4
+%NSQD 240		     
+
+;
+
+@V 1 367 0
+iOUT_F12_DCGA_LC_130s_ET	356	VAR_GLOBAL	@TYP:4
+%NSQD 360		     
+
+;
+
+@V 1 368 0
+iOUT_F16_ScavFlapPos_PC_ET	357	VAR_GLOBAL	@TYP:4
+%NSQD 244		     
+
+;
+
+@V 1 369 0
+iOUT_F17_Vol_PurgeAir	358	VAR_GLOBAL	@TYP:4
+%NSQD 248		     
+
+;
+
+@V 1 370 0
+iOUT_F20_PS1_HWHT_Lo_OK_ET	359	VAR_GLOBAL	@TYP:4
+%NSQD 252		     
+
+;
+
+@V 1 371 0
+iOUT_F20_PS2_HWHT_Lo_OK_ET	360	VAR_GLOBAL	@TYP:4
+%NSQD 256		     
+
+;
+
+@V 1 372 0
+iOUT_F20_FS_HWHT_Lo_OK_ET	361	VAR_GLOBAL	@TYP:4
+%NSQD 260		     
+
+;
+
+@V 1 373 0
+iOUT_F20_FS_HWHT_Lo_PC_ET	362	VAR_GLOBAL	@TYP:4
+%NSQD 264		     
+
+;
+
+@V 1 374 0
+iOUT_F20_PS1_HWLT_Lo_OK_ET	363	VAR_GLOBAL	@TYP:4
+%NSQD 268		     
+
+;
+
+@V 1 375 0
+iOUT_F20_PS2_HWLT_Lo_OK_ET	364	VAR_GLOBAL	@TYP:4
+%NSQD 272		     
+
+;
+
+@V 1 376 0
+iOUT_F20_FS_HWLT_Lo_OK_ET	365	VAR_GLOBAL	@TYP:4
+%NSQD 276		     
+
+;
+
+@V 1 377 0
+iOUT_F20_FS_HWLT_Lo_PC_ET	366	VAR_GLOBAL	@TYP:4
+%NSQD 280		     
+
+;
+
+@V 1 379 0
+szOUT_F09_CRC	367	VAR_GLOBAL	@TYP:19
+%NSQD 124		     
+
+;
+
+@V 1 380 0
+szOUT_F20_CRC	368	VAR_GLOBAL	@TYP:19
+%NSQD 128		     
+
+;
+
+@V 1 382 0
+iOUT_PARA_N_EngNom	369	VAR_GLOBAL	@TYP:18
+%NSQW 64		     
+
+;
+
+@V 1 383 0
+iOUT_PARA_N_EngAct_HiHi_Diff	370	VAR_GLOBAL	@TYP:18
+%NSQW 66		     
+
+;
+
+@V 1 384 0
+iOUT_PARA_N_Pr_EO_LoLo_Lim1	371	VAR_GLOBAL	@TYP:18
+%NSQW 68		     
+
+;
+
+@V 1 385 0
+iOUT_PARA_N_Pr_EO_LoLo_Lim2	372	VAR_GLOBAL	@TYP:18
+%NSQW 70		     
+
+;
+
+@V 1 386 0
+iOUT_PARA_Pr_EO_LoLo_LimN1	373	VAR_GLOBAL	@TYP:18
+%NSQW 72		     
+
+;
+
+@V 1 387 0
+iOUT_PARA_Pr_EO_LoLo_LimN2	374	VAR_GLOBAL	@TYP:18
+%NSQW 74		     
+
+;
+
+@V 1 388 0
+iOUT_PARA_Pr_EO_Diff_EngStop	375	VAR_GLOBAL	@TYP:18
+%NSQW 76		     
+
+;
+
+@V 1 389 0
+iOUT_PARA_Pr_EO_HiHi_EngStop	376	VAR_GLOBAL	@TYP:18
+%NSQW 78		     
+
+;
+
+@V 1 390 0
+iOUT_PARA_Pr_EO_HiHi_Diff	377	VAR_GLOBAL	@TYP:18
+%NSQW 80		     
+
+;
+
+@V 1 391 0
+iOUT_PARA_Pr_EO_HiHi_Check	378	VAR_GLOBAL	@TYP:18
+%NSQW 82		     
+
+;
+
+@V 1 392 0
+iOUT_PARA_Pr_EOaP_HiHi	379	VAR_GLOBAL	@TYP:18
+%NSQW 84		     
+
+;
+
+@V 1 393 0
+iOUT_PARA_Pr_EOaP_Diff_EngStop	380	VAR_GLOBAL	@TYP:18
+%NSQW 86		     
+
+;
+
+@V 1 394 0
+iOUT_PARA_Pr_EOaP_HiHi_EngStop	381	VAR_GLOBAL	@TYP:18
+%NSQW 88		     
+
+;
+
+@V 1 395 0
+iOUT_PARA_Pr_ECW_LoLo	382	VAR_GLOBAL	@TYP:18
+%NSQW 90		     
+
+;
+
+@V 1 396 0
+iOUT_PARA_Pr_ECW_HiHi_Diff	383	VAR_GLOBAL	@TYP:18
+%NSQW 92		     
+
+;
+
+@V 1 397 0
+iOUT_PARA_Pr_ECW_HiHi_Check	384	VAR_GLOBAL	@TYP:18
+%NSQW 94		     
+
+;
+
+@V 1 398 0
+iOUT_PARA_Pr_ECWaP_HiHi	385	VAR_GLOBAL	@TYP:18
+%NSQW 96		     
+
+;
+
+@V 1 399 0
+iOUT_PARA_Eng_Motortype	386	VAR_GLOBAL	@TYP:18
+%NSQW 98		     
+
+;
+
+@V 1 400 0
+iOUT_PARA_DPr_ECWP_LoLo	387	VAR_GLOBAL	@TYP:18
+%NSQW 100		     
+
+;
+
+@V 1 401 0
+iOUT_PARA_Vol_SysPurge_Stroke	388	VAR_GLOBAL	@TYP:18
+%NSQW 102		     
+
+;
+
+@V 1 402 0
+iOUT_PARA_Vol_SysPurge_MinAir	389	VAR_GLOBAL	@TYP:18
+%NSQW 104		     
+
+;
+
+@V 1 403 0
+iOUT_PARA_Nr_ERV_INL_Fan	390	VAR_GLOBAL	@TYP:18
+%NSQW 106		     
+
+;
+
+@V 1 404 0
+iOUT_PARA_Nr_ERV_INL_Lou	391	VAR_GLOBAL	@TYP:18
+%NSQW 108		     
+
+;
+
+@V 1 405 0
+iOUT_PARA_Nr_ERV_OTL_Lou	392	VAR_GLOBAL	@TYP:18
+%NSQW 110		     
+
+;
+
+@V 1 406 0
+iOUT_PARA_NrMaxErr_ERV_INL_Fan	393	VAR_GLOBAL	@TYP:18
+%NSQW 112		     
+
+;
+
+@V 1 407 0
+iOUT_PARA_NrMaxErr_ERV_INL_Lou	394	VAR_GLOBAL	@TYP:18
+%NSQW 114		     
+
+;
+
+@V 1 408 0
+iOUT_PARA_NrMaxErr_ERV_OTL_Lou	395	VAR_GLOBAL	@TYP:18
+%NSQW 116		     
+
+;
+
+@V 1 409 0
+bOUT_PARA_SafetyLoop_A2_Exist	396	VAR_GLOBAL	@TYP:1
+%NSQX 22.5		     
+
+;
+
+@V 1 410 0
+bOUT_PARA_ERV_Cust_Active	397	VAR_GLOBAL	@TYP:1
+%NSQX 22.6		     
+
+;
+
+@V 1 411 0
+bOUT_PARA_ERV_ColdCountry_Act	398	VAR_GLOBAL	@TYP:1
+%NSQX 22.7		     
+
+;
+
+@V 1 412 0
+bOUT_PARA_ER_Door_MonActive	399	VAR_GLOBAL	@TYP:1
+%NSQX 23.0		     
+
+;
+
+@V 1 413 0
+bOUT_PARA_GT2_Exist	400	VAR_GLOBAL	@TYP:1
+%NSQX 23.1		     
+
+;
+
+@V 1 414 0
+bOUT_PARA_GT3_Exist	401	VAR_GLOBAL	@TYP:1
+%NSQX 23.2		     
+
+;
+
+@V 1 415 0
+bOUT_PARA_GT4_Exist	402	VAR_GLOBAL	@TYP:1
+%NSQX 23.3		     
+
+;
+
+@V 1 416 0
+bOUT_PARA_DCGA_Exist	403	VAR_GLOBAL	@TYP:1
+%NSQX 23.4		     
+
+;
+
+@V 1 417 0
+bOUT_PARA_SysPurge_MonActive	404	VAR_GLOBAL	@TYP:1
+%NSQX 23.5		     
+
+;
+
+@V 1 418 0
+bOUT_PARA_HWcirc_Cust_Exist	405	VAR_GLOBAL	@TYP:1
+%NSQX 23.6		     
+
+;
+
+@V 1 419 0
+bOUT_PARA_PS_HW_Lo_MuteAcive	406	VAR_GLOBAL	@TYP:1
+%NSQX 23.7		     
+
+;
+
+@V 1 420 0
+bOUT_PARA_LS_HWHT_Lo_Exist	407	VAR_GLOBAL	@TYP:1
+%NSQX 24.0		     
+
+;
+
+@V 1 421 0
+bOUT_PARA_PS1_HWHT_Hi_Exist	408	VAR_GLOBAL	@TYP:1
+%NSQX 24.1		     
+
+;
+
+@V 1 422 0
+bOUT_PARA_PS2_HWHT_Hi_Exist	409	VAR_GLOBAL	@TYP:1
+%NSQX 24.2		     
+
+;
+
+@V 1 423 0
+bOUT_PARA_PS1_HWHT_Lo_Exist	410	VAR_GLOBAL	@TYP:1
+%NSQX 24.3		     
+
+;
+
+@V 1 424 0
+bOUT_PARA_PS2_HWHT_Lo_Exist	411	VAR_GLOBAL	@TYP:1
+%NSQX 24.4		     
+
+;
+
+@V 1 425 0
+bOUT_PARA_TS1_HWHT_Hi_Exist	412	VAR_GLOBAL	@TYP:1
+%NSQX 24.5		     
+
+;
+
+@V 1 426 0
+bOUT_PARA_TS2_HWHT_Hi_Exist	413	VAR_GLOBAL	@TYP:1
+%NSQX 24.6		     
+
+;
+
+@V 1 427 0
+bOUT_PARA_FS_HWHT_Lo_Exist	414	VAR_GLOBAL	@TYP:1
+%NSQX 24.7		     
+
+;
+
+@V 1 428 0
+bOUT_PARA_LS_HWLT_Lo_Exist	415	VAR_GLOBAL	@TYP:1
+%NSQX 25.0		     
+
+;
+
+@V 1 429 0
+bOUT_PARA_PS1_HWLT_Hi_Exist	416	VAR_GLOBAL	@TYP:1
+%NSQX 25.1		     
+
+;
+
+@V 1 430 0
+bOUT_PARA_PS2_HWLT_Hi_Exist	417	VAR_GLOBAL	@TYP:1
+%NSQX 25.2		     
+
+;
+
+@V 1 431 0
+bOUT_PARA_PS1_HWLT_Lo_Exist	418	VAR_GLOBAL	@TYP:1
+%NSQX 25.3		     
+
+;
+
+@V 1 432 0
+bOUT_PARA_PS2_HWLT_Lo_Exist	419	VAR_GLOBAL	@TYP:1
+%NSQX 25.4		     
+
+;
+
+@V 1 433 0
+bOUT_PARA_TS1_HWLT_Hi_Exist	420	VAR_GLOBAL	@TYP:1
+%NSQX 25.5		     
+
+;
+
+@V 1 434 0
+bOUT_PARA_TS2_HWLT_Hi_Exist	421	VAR_GLOBAL	@TYP:1
+%NSQX 25.6		     
+
+;
+
+@V 1 435 0
+bOUT_PARA_FS_HWLT_Lo_Exist	422	VAR_GLOBAL	@TYP:1
+%NSQX 25.7		     
+
+;
+
+@V 1 436 0
+bOUT_PARA_Pr_EG_sMonActive	423	VAR_GLOBAL	@TYP:1
+%NSQX 26.0		     
+
+;
+
+@V 1 438 0
+bAMM_A2383	424	VAR_GLOBAL	@TYP:1
+%NSQX 7.3		     
+
+;
+
+@V 1 439 0
+bAMM_A2384	425	VAR_GLOBAL	@TYP:1
+%NSQX 7.4		     
+
+;
+
+@V 1 440 0
+bAMM_A2385	426	VAR_GLOBAL	@TYP:1
+%NSQX 7.5		     
+
+;
+
+@V 1 441 0
+bAMM_A2386	427	VAR_GLOBAL	@TYP:1
+%NSQX 7.6		     
+
+;
+
+@V 1 442 0
+bAMM_A2387	428	VAR_GLOBAL	@TYP:1
+%NSQX 7.7		     
+
+;
+
+@V 1 443 0
+bAMM_A2388	429	VAR_GLOBAL	@TYP:1
+%NSQX 8.0		     
+
+;
+
+@V 1 444 0
+bAMM_A2389	430	VAR_GLOBAL	@TYP:1
+%NSQX 8.1		     
+
+;
+
+@V 1 445 0
+bAMM_A2390	431	VAR_GLOBAL	@TYP:1
+%NSQX 8.2		     
+
+;
+
+@V 1 446 0
+bAMM_A2391	432	VAR_GLOBAL	@TYP:1
+%NSQX 8.3		     
+
+;
+
+@V 1 447 0
+bAMM_A2392	433	VAR_GLOBAL	@TYP:1
+%NSQX 8.4		     
+
+;
+
+@V 1 448 0
+bAMM_A2393	434	VAR_GLOBAL	@TYP:1
+%NSQX 8.5		     
+
+;
+
+@V 1 449 0
+bAMM_A2394	435	VAR_GLOBAL	@TYP:1
+%NSQX 8.6		     
+
+;
+
+@V 1 450 0
+bAMM_A2395	436	VAR_GLOBAL	@TYP:1
+%NSQX 8.7		     
+
+;
+
+@V 1 451 0
+bAMM_A2396	437	VAR_GLOBAL	@TYP:1
+%NSQX 9.0		     
+
+;
+
+@V 1 452 0
+bAMM_A2397	438	VAR_GLOBAL	@TYP:1
+%NSQX 9.1		     
+
+;
+
+@V 1 453 0
+bAMM_A2398	439	VAR_GLOBAL	@TYP:1
+%NSQX 9.2		     
+
+;
+
+@V 1 454 0
+bAMM_A9408	440	VAR_GLOBAL	@TYP:1
+%NSQX 9.3		     
+
+;
+
+@V 1 455 0
+bAMM_A9409	441	VAR_GLOBAL	@TYP:1
+%NSQX 9.4		     
+
+;
+
+@V 1 456 0
+bAMM_A9410	442	VAR_GLOBAL	@TYP:1
+%NSQX 9.5		     
+
+;
+
+@V 1 457 0
+bAMM_A9411	443	VAR_GLOBAL	@TYP:1
+%NSQX 9.6		     
+
+;
+
+@V 1 458 0
+bAMM_A9412	444	VAR_GLOBAL	@TYP:1
+%NSQX 9.7		     
+
+;
+
+@V 1 459 0
+bAMM_A9413	445	VAR_GLOBAL	@TYP:1
+%NSQX 10.0		     
+
+;
+
+@V 1 460 0
+bAMM_A9414	446	VAR_GLOBAL	@TYP:1
+%NSQX 10.1		     
+
+;
+
+@V 1 461 0
+bAMM_A9415	447	VAR_GLOBAL	@TYP:1
+%NSQX 10.2		     
+
+;
+
+@V 1 462 0
+bAMM_A9416	448	VAR_GLOBAL	@TYP:1
+%NSQX 10.3		     
+
+;
+
+@V 1 463 0
+bAMM_A9417	449	VAR_GLOBAL	@TYP:1
+%NSQX 10.4		     
+
+;
+
+@V 1 464 0
+bAMM_A9418	450	VAR_GLOBAL	@TYP:1
+%NSQX 10.5		     
+
+;
+
+@V 1 465 0
+bAMM_A9419	451	VAR_GLOBAL	@TYP:1
+%NSQX 10.6		     
+
+;
+
+@V 1 466 0
+bAMM_A9420	452	VAR_GLOBAL	@TYP:1
+%NSQX 10.7		     
+
+;
+
+@V 1 467 0
+bAMM_A9421	453	VAR_GLOBAL	@TYP:1
+%NSQX 11.0		     
+
+;
+
+@V 1 468 0
+bAMM_A9422	454	VAR_GLOBAL	@TYP:1
+%NSQX 11.1		     
+
+;
+
+@V 1 469 0
+bAMM_A9423	455	VAR_GLOBAL	@TYP:1
+%NSQX 11.2		     
+
+;
+
+@V 1 470 0
+bAMM_A9424	456	VAR_GLOBAL	@TYP:1
+%NSQX 11.3		     
+
+;
+
+@V 1 471 0
+bAMM_A9425	457	VAR_GLOBAL	@TYP:1
+%NSQX 11.4		     
+
+;
+
+@V 1 472 0
+bAMM_A9426	458	VAR_GLOBAL	@TYP:1
+%NSQX 11.5		     
+
+;
+
+@V 1 473 0
+bAMM_A9427	459	VAR_GLOBAL	@TYP:1
+%NSQX 11.6		     
+
+;
+
+@V 1 474 0
+bAMM_A9428	460	VAR_GLOBAL	@TYP:1
+%NSQX 11.7		     
+
+;
+
+@V 1 475 0
+bAMM_A9429	461	VAR_GLOBAL	@TYP:1
+%NSQX 12.0		     
+
+;
+
+@V 1 476 0
+bAMM_A9433	462	VAR_GLOBAL	@TYP:1
+%NSQX 12.1		     
+
+;
+
+@V 1 477 0
+bAMM_A9434	463	VAR_GLOBAL	@TYP:1
+%NSQX 12.2		     
+
+;
+
+@V 1 478 0
+bAMM_A9437	464	VAR_GLOBAL	@TYP:1
+%NSQX 19.7		     
+
+;
+
+@V 1 479 0
+bAMM_A9438	465	VAR_GLOBAL	@TYP:1
+%NSQX 20.0		     
+
+;
+
+@V 1 480 0
+bAMM_A9441	466	VAR_GLOBAL	@TYP:1
+%NSQX 20.1		     
+
+;
+
+@V 1 481 0
+bAMM_A9442	467	VAR_GLOBAL	@TYP:1
+%NSQX 20.2		     
+
+;
+
+@V 1 482 0
+bAMM_A9443	468	VAR_GLOBAL	@TYP:1
+%NSQX 20.3		     
+
+;
+
+@V 1 483 0
+bAMM_A9444	469	VAR_GLOBAL	@TYP:1
+%NSQX 20.4		     
+
+;
+
+@V 1 484 0
+bAMM_A9445	470	VAR_GLOBAL	@TYP:1
+%NSQX 20.5		     
+
+;
+
+@V 1 485 0
+bAMM_A9446	471	VAR_GLOBAL	@TYP:1
+%NSQX 20.6		     
+
+;
+
+@V 1 486 0
+bAMM_A9447	472	VAR_GLOBAL	@TYP:1
+%NSQX 20.7		     
+
+;
+
+@V 1 487 0
+bAMM_A9448	473	VAR_GLOBAL	@TYP:1
+%NSQX 21.0		     
+
+;
+
+@V 1 488 0
+bAMM_A9449	474	VAR_GLOBAL	@TYP:1
+%NSQX 21.1		     
+
+;
+
+@V 1 489 0
+bAMM_A9450	475	VAR_GLOBAL	@TYP:1
+%NSQX 21.2		     
+
+;
+
+@V 1 490 0
+bAMM_A9451	476	VAR_GLOBAL	@TYP:1
+%NSQX 21.3		     
+
+;
+
+@V 1 491 0
+bAMM_A9452	477	VAR_GLOBAL	@TYP:1
+%NSQX 21.4		     
+
+;
+
+@V 1 492 0
+bAMM_A9453	478	VAR_GLOBAL	@TYP:1
+%NSQX 21.5		     
+
+;
+
+@V 1 493 0
+bAMM_A9454	479	VAR_GLOBAL	@TYP:1
+%NSQX 21.6		     
+
+;
+
+@V 1 494 0
+bAMM_A9455	480	VAR_GLOBAL	@TYP:1
+%NSQX 21.7		     
+
+;
+
+@V 1 495 0
+bAMM_A9456	481	VAR_GLOBAL	@TYP:1
+%NSQX 22.0		     
+
+;
+
+@V 1 496 0
+bAMM_A9457	482	VAR_GLOBAL	@TYP:1
+%NSQX 22.1		     
+
+;
+
+@V 1 497 0
+bAMM_A9458	483	VAR_GLOBAL	@TYP:1
+%NSQX 22.2		     
+
+;
+
+@V 1 498 0
+bAMM_A9459	484	VAR_GLOBAL	@TYP:1
+%NSQX 22.3		     
+
+;
+
+@V 1 499 0
+bAMM_A9480	485	VAR_GLOBAL	@TYP:1
+%NSQX 36.0		     
+
+;
+
+@V 1 500 0
+bAMM_A9481	486	VAR_GLOBAL	@TYP:1
+%NSQX 36.1		     
+
+;
+
+@V 1 501 0
+bAMM_A9482	487	VAR_GLOBAL	@TYP:1
+%NSQX 36.2		     
+
+;
+
+@V 1 502 0
+bAMM_A9483	488	VAR_GLOBAL	@TYP:1
+%NSQX 36.3		     
+
+;
+
+@V 1 503 0
+bAMM_A9484	489	VAR_GLOBAL	@TYP:1
+%NSQX 36.4		     
+
+;
+
+@V 1 505 0
+bAMM_W9514	490	VAR_GLOBAL	@TYP:1
+%NSQX 12.3		     
+
+;
+
+@V 1 506 0
+bAMM_W9515	491	VAR_GLOBAL	@TYP:1
+%NSQX 12.4		     
+
+;
+
+@V 1 507 0
+bAMM_W9516	492	VAR_GLOBAL	@TYP:1
+%NSQX 12.5		     
+
+;
+
+@V 1 508 0
+bAMM_W9517	493	VAR_GLOBAL	@TYP:1
+%NSQX 12.6		     
+
+;
+
+@V 1 509 0
+bAMM_W9518	494	VAR_GLOBAL	@TYP:1
+%NSQX 12.7		     
+
+;
+
+@V 1 510 0
+bAMM_W9519	495	VAR_GLOBAL	@TYP:1
+%NSQX 13.0		     
+
+;
+
+@V 1 511 0
+bAMM_W9520	496	VAR_GLOBAL	@TYP:1
+%NSQX 13.1		     
+
+;
+
+@V 1 512 0
+bAMM_W9521	497	VAR_GLOBAL	@TYP:1
+%NSQX 13.2		     
+
+;
+
+@V 1 513 0
+bAMM_W9522	498	VAR_GLOBAL	@TYP:1
+%NSQX 13.3		     
+
+;
+
+@V 1 514 0
+bAMM_W9523	499	VAR_GLOBAL	@TYP:1
+%NSQX 13.4		     
+
+;
+
+@V 1 515 0
+bAMM_W9524	500	VAR_GLOBAL	@TYP:1
+%NSQX 13.5		     
+
+;
+
+@V 1 516 0
+bAMM_W9525	501	VAR_GLOBAL	@TYP:1
+%NSQX 13.6		     
+
+;
+
+@V 1 517 0
+bAMM_W9526	502	VAR_GLOBAL	@TYP:1
+%NSQX 13.7		     
+
+;
+
+@V 1 518 0
+bAMM_W9527	503	VAR_GLOBAL	@TYP:1
+%NSQX 14.0		     
+
+;
+
+@V 1 519 0
+bAMM_W9528	504	VAR_GLOBAL	@TYP:1
+%NSQX 14.1		     
+
+;
+
+@V 1 520 0
+bAMM_W9529	505	VAR_GLOBAL	@TYP:1
+%NSQX 14.2		     
+
+;
+
+@V 1 521 0
+bAMM_W9530	506	VAR_GLOBAL	@TYP:1
+%NSQX 14.3		     
+
+;
+
+@V 1 522 0
+bAMM_W9531	507	VAR_GLOBAL	@TYP:1
+%NSQX 14.4		     
+
+;
+
+@V 1 523 0
+bAMM_W9532	508	VAR_GLOBAL	@TYP:1
+%NSQX 14.5		     
+
+;
+
+@V 1 524 0
+bAMM_W9533	509	VAR_GLOBAL	@TYP:1
+%NSQX 14.6		     
+
+;
+
+@V 1 525 0
+bAMM_W9534	510	VAR_GLOBAL	@TYP:1
+%NSQX 14.7		     
+
+;
+
+@V 1 526 0
+bAMM_W9535	511	VAR_GLOBAL	@TYP:1
+%NSQX 15.0		     
+
+;
+
+@V 1 527 0
+bAMM_W9536	512	VAR_GLOBAL	@TYP:1
+%NSQX 15.1		     
+
+;
+
+@V 1 528 0
+bAMM_W9537	513	VAR_GLOBAL	@TYP:1
+%NSQX 15.2		     
+
+;
+
+@V 1 529 0
+bAMM_W9538	514	VAR_GLOBAL	@TYP:1
+%NSQX 15.3		     
+
+;
+
+@V 1 530 0
+bAMM_W9539	515	VAR_GLOBAL	@TYP:1
+%NSQX 15.4		     
+
+;
+
+@V 1 531 0
+bAMM_W9540	516	VAR_GLOBAL	@TYP:1
+%NSQX 15.5		     
+
+;
+
+@V 1 532 0
+bAMM_W9541	517	VAR_GLOBAL	@TYP:1
+%NSQX 15.6		     
+
+;
+
+@V 1 533 0
+bAMM_W9542	518	VAR_GLOBAL	@TYP:1
+%NSQX 15.7		     
+
+;
+
+@V 1 534 0
+bAMM_W9543	519	VAR_GLOBAL	@TYP:1
+%NSQX 16.0		     
+
+;
+
+@V 1 535 0
+bAMM_W9562	520	VAR_GLOBAL	@TYP:1
+%NSQX 16.1		     
+
+;
+
+@V 1 536 0
+bAMM_W9563	521	VAR_GLOBAL	@TYP:1
+%NSQX 16.2		     
+
+;
+
+@V 1 537 0
+bAMM_W9564	522	VAR_GLOBAL	@TYP:1
+%NSQX 16.3		     
+
+;
+
+@V 1 538 0
+bAMM_W9565	523	VAR_GLOBAL	@TYP:1
+%NSQX 16.4		     
+
+;
+
+@V 1 539 0
+bAMM_W9566	524	VAR_GLOBAL	@TYP:1
+%NSQX 16.5		     
+
+;
+
+@V 1 540 0
+bAMM_W9567	525	VAR_GLOBAL	@TYP:1
+%NSQX 16.6		     
+
+;
+
+@V 1 541 0
+bAMM_W9568	526	VAR_GLOBAL	@TYP:1
+%NSQX 16.7		     
+
+;
+
+@V 1 542 0
+bAMM_W9569	527	VAR_GLOBAL	@TYP:1
+%NSQX 17.0		     
+
+;
+
+@V 1 543 0
+bAMM_W9570	528	VAR_GLOBAL	@TYP:1
+%NSQX 17.1		     
+
+;
+
+@V 1 544 0
+bAMM_W9571	529	VAR_GLOBAL	@TYP:1
+%NSQX 17.2		     
+
+;
+
+@V 1 545 0
+bAMM_W9572	530	VAR_GLOBAL	@TYP:1
+%NSQX 17.3		     
+
+;
+
+@V 1 546 0
+bAMM_W9573	531	VAR_GLOBAL	@TYP:1
+%NSQX 17.4		     
+
+;
+
+@V 1 547 0
+bAMM_W9574	532	VAR_GLOBAL	@TYP:1
+%NSQX 17.5		     
+
+;
+
+@V 1 548 0
+bAMM_W9575	533	VAR_GLOBAL	@TYP:1
+%NSQX 17.6		     
+
+;
+
+@V 1 549 0
+bAMM_W9576	534	VAR_GLOBAL	@TYP:1
+%NSQX 17.7		     
+
+;
+
+@V 1 550 0
+bAMM_W9577	535	VAR_GLOBAL	@TYP:1
+%NSQX 18.0		     
+
+;
+
+@V 1 551 0
+bAMM_W9578	536	VAR_GLOBAL	@TYP:1
+%NSQX 18.1		     
+
+;
+
+@V 1 552 0
+bAMM_W9579	537	VAR_GLOBAL	@TYP:1
+%NSQX 18.2		     
+
+;
+
+@V 1 553 0
+bAMM_W9580	538	VAR_GLOBAL	@TYP:1
+%NSQX 18.3		     
+
+;
+
+@V 1 554 0
+bAMM_W9581	539	VAR_GLOBAL	@TYP:1
+%NSQX 18.4		     
+
+;
+
+@V 1 555 0
+bAMM_W9582	540	VAR_GLOBAL	@TYP:1
+%NSQX 18.5		     
+
+;
+
+@V 1 556 0
+bAMM_W9583	541	VAR_GLOBAL	@TYP:1
+%NSQX 18.6		     
+
+;
+
+@V 1 557 0
+bAMM_W9584	542	VAR_GLOBAL	@TYP:1
+%NSQX 18.7		     
+
+;
+
+@V 1 558 0
+bAMM_W9585	543	VAR_GLOBAL	@TYP:1
+%NSQX 19.0		     
+
+;
+
+@V 1 559 0
+bAMM_W9586	544	VAR_GLOBAL	@TYP:1
+%NSQX 19.1		     
+
+;
+
+@V 1 560 0
+bAMM_W9587	545	VAR_GLOBAL	@TYP:1
+%NSQX 19.2		     
+
+;
+
+@V 1 561 0
+bAMM_W9593	546	VAR_GLOBAL	@TYP:1
+%NSQX 19.3		     
+
+;
+
+@V 1 562 0
+bAMM_W9627	547	VAR_GLOBAL	@TYP:1
+%NSQX 36.5		     
+
+;
+
+@V 1 563 0
+bAMM_W9628	548	VAR_GLOBAL	@TYP:1
+%NSQX 36.6		     
+
+;
+
+@V 1 564 0
+bAMM_W9629	549	VAR_GLOBAL	@TYP:1
+%NSQX 36.7		     
+
+;
+
+@V 1 565 0
+bAMM_W9630	550	VAR_GLOBAL	@TYP:1
+%NSQX 37.0		     
+
+;
+
+@V 1 566 0
+bAMM_W9631	551	VAR_GLOBAL	@TYP:1
+%NSQX 37.1		     
+
+;
+
+@V 1 567 0
+bAMM_W9632	552	VAR_GLOBAL	@TYP:1
+%NSQX 37.2		     
+
+;
+
+@V 1 568 0
+bAMM_W9633	553	VAR_GLOBAL	@TYP:1
+%NSQX 37.3		     
+
+;
+
+@V 1 569 0
+bAMM_W9634	554	VAR_GLOBAL	@TYP:1
+%NSQX 37.4		     
+
+;
+
+@V 1 570 0
+bAMM_W9635	555	VAR_GLOBAL	@TYP:1
+%NSQX 37.5		     
+
+;
+
+@V 1 571 0
+bAMM_W9636	556	VAR_GLOBAL	@TYP:1
+%NSQX 37.6		     
+
+;
+
+@V 1 572 0
+bAMM_W9637	557	VAR_GLOBAL	@TYP:1
+%NSQX 37.7		     
+
+;
+
+@V 1 573 0
+bAMM_W9638	558	VAR_GLOBAL	@TYP:1
+%NSQX 38.0		     
+
+;
+
+@V 1 574 0
+bAMM_W9639	559	VAR_GLOBAL	@TYP:1
+%NSQX 38.1		     
+
+;
+
+@V 1 575 0
+bAMM_W9640	560	VAR_GLOBAL	@TYP:1
+%NSQX 38.2		     
+
+;
+
+@V 1 576 0
+bAMM_W9641	561	VAR_GLOBAL	@TYP:1
+%NSQX 38.3		     
+
+;
+
+@V 1 577 0
+bAMM_W9642	562	VAR_GLOBAL	@TYP:1
+%NSQX 38.4		     
+
+;
+
+@V 1 578 0
+bAMM_W9643	563	VAR_GLOBAL	@TYP:1
+%NSQX 38.5		     
+
+;
+
+@V 1 579 0
+bAMM_W9644	564	VAR_GLOBAL	@TYP:1
+%NSQX 38.6		     
+
+;
+
+@V 1 580 0
+bAMM_W9645	565	VAR_GLOBAL	@TYP:1
+%NSQX 38.7		     
+
+;
+
+@V 1 581 0
+bAMM_W9646	566	VAR_GLOBAL	@TYP:1
+%NSQX 39.0		     
+
+;
+
+@V 1 582 0
+bAMM_W9647	567	VAR_GLOBAL	@TYP:1
+%NSQX 39.1		     
+
+;
+
+@V 1 583 0
+bAMM_W9648	568	VAR_GLOBAL	@TYP:1
+%NSQX 39.2		     
+
+;
+
+@V 1 584 0
+bAMM_W9649	569	VAR_GLOBAL	@TYP:1
+%NSQX 39.3		     
+
+;
+
+@V 1 585 0
+bAMM_W9650	570	VAR_GLOBAL	@TYP:1
+%NSQX 39.4		     
+
+;
+
+@V 1 586 0
+bAMM_W9651	571	VAR_GLOBAL	@TYP:1
+%NSQX 39.5		     
+
+;
+
+@V 1 587 0
+bAMM_W9652	572	VAR_GLOBAL	@TYP:1
+%NSQX 39.6		     
+
+;
+
+@V 1 588 0
+bAMM_W9653	573	VAR_GLOBAL	@TYP:1
+%NSQX 39.7		     
+
+;
+
+@V 1 589 0
+bAMM_W9654	574	VAR_GLOBAL	@TYP:1
+%NSQX 40.0		     
+
+;
+
+@V 1 590 0
+bAMM_W9655	575	VAR_GLOBAL	@TYP:1
+%NSQX 40.1		     
+
+;
+
+@V 1 591 0
+bAMM_W9656	576	VAR_GLOBAL	@TYP:1
+%NSQX 40.2		     
+
+;
+
+@V 1 592 0
+bAMM_W9657	577	VAR_GLOBAL	@TYP:1
+%NSQX 40.3		     
+
+;
+
+@V 1 593 0
+bAMM_W9658	578	VAR_GLOBAL	@TYP:1
+%NSQX 40.4		     
+
+;
+
+@V 1 594 0
+bAMM_W9659	579	VAR_GLOBAL	@TYP:1
+%NSQX 40.5		     
+
+;
+
+@V 1 595 0
+bAMM_W9660	580	VAR_GLOBAL	@TYP:1
+%NSQX 40.6		     
+
+;
+
+@V 1 596 0
+bAMM_W9661	581	VAR_GLOBAL	@TYP:1
+%NSQX 40.7		     
+
+;
+
+@V 1 597 0
+bAMM_W9662	582	VAR_GLOBAL	@TYP:1
+%NSQX 41.0		     
+
+;
+
+@V 1 598 0
+bAMM_W9663	583	VAR_GLOBAL	@TYP:1
+%NSQX 41.1		     
+
+;
+
+@V 1 599 0
+bAMM_W9664	584	VAR_GLOBAL	@TYP:1
+%NSQX 41.2		     
+
+;
+
+@V 1 600 0
+bAMM_W9665	585	VAR_GLOBAL	@TYP:1
+%NSQX 41.3		     
+
+;
+
+@V 1 601 0
+bAMM_W9666	586	VAR_GLOBAL	@TYP:1
+%NSQX 41.4		     
+
+;
+
+@V 1 602 0
+bAMM_W9667	587	VAR_GLOBAL	@TYP:1
+%NSQX 41.5		     
+
+;
+
+@V 1 603 0
+bAMM_W9668	588	VAR_GLOBAL	@TYP:1
+%NSQX 41.6		     
+
+;
+
+@V 1 604 0
+bAMM_W9669	589	VAR_GLOBAL	@TYP:1
+%NSQX 41.7		     
+
+;
+
+@V 1 605 0
+bAMM_W9670	590	VAR_GLOBAL	@TYP:1
+%NSQX 42.0		     
+
+;
+
+@V 1 606 0
+bAMM_W9671	591	VAR_GLOBAL	@TYP:1
+%NSQX 42.1		     
+
+;
+
+@V 1 607 0
+bAMM_W9672	592	VAR_GLOBAL	@TYP:1
+%NSQX 42.2		     
+
+;
+
+@V 1 608 0
+bAMM_W9673	593	VAR_GLOBAL	@TYP:1
+%NSQX 42.3		     
+
+;
+
+@V 1 609 0
+bAMM_W9674	594	VAR_GLOBAL	@TYP:1
+%NSQX 42.4		     
+
+;
+
+@V 1 610 0
+bAMM_W9675	595	VAR_GLOBAL	@TYP:1
+%NSQX 42.5		     
+
+;
+
+@V 1 611 0
+bAMM_W9676	596	VAR_GLOBAL	@TYP:1
+%NSQX 42.6		     
+
+;
+
+@V 1 612 0
+bAMM_W9677	597	VAR_GLOBAL	@TYP:1
+%NSQX 42.7		     
+
+;
+
+@V 1 613 0
+bAMM_W9678	598	VAR_GLOBAL	@TYP:1
+%NSQX 43.0		     
+
+;
+
+@V 1 614 0
+bAMM_W9679	599	VAR_GLOBAL	@TYP:1
+%NSQX 43.1		     
+
+;
+
+@V 1 615 0
+bAMM_W9680	600	VAR_GLOBAL	@TYP:1
+%NSQX 43.2		     
+
+;
+
+@V 1 616 0
+bAMM_W9681	601	VAR_GLOBAL	@TYP:1
+%NSQX 43.3		     
+
+;
+
+@V 1 617 0
+bAMM_W9682	602	VAR_GLOBAL	@TYP:1
+%NSQX 43.4		     
+
+;
+
+@V 1 618 0
+bAMM_W9683	603	VAR_GLOBAL	@TYP:1
+%NSQX 43.5		     
+
+;
+
+@V 1 619 0
+bAMM_W9684	604	VAR_GLOBAL	@TYP:1
+%NSQX 43.6		     
+
+;
+
+@V 1 620 0
+bAMM_W9685	605	VAR_GLOBAL	@TYP:1
+%NSQX 43.7		     
+
+;
+
+@V 1 621 0
+bAMM_W9686	606	VAR_GLOBAL	@TYP:1
+%NSQX 44.0		     
+
+;
+
+@V 1 622 0
+bAMM_W9687	607	VAR_GLOBAL	@TYP:1
+%NSQX 44.1		     
+
+;
+
+@V 1 623 0
+bAMM_W9688	608	VAR_GLOBAL	@TYP:1
+%NSQX 44.2		     
+
+;
+
+@V 1 624 0
+bAMM_W9689	609	VAR_GLOBAL	@TYP:1
+%NSQX 44.3		     
+
+;
+
+@V 1 625 0
+bAMM_W9690	610	VAR_GLOBAL	@TYP:1
+%NSQX 44.4		     
+
+;
+
+@V 1 626 0
+bAMM_W9691	611	VAR_GLOBAL	@TYP:1
+%NSQX 44.5		     
+
+;
+
+@V 1 627 0
+bAMM_W9692	612	VAR_GLOBAL	@TYP:1
+%NSQX 44.6		     
+
+;
+
+@V 1 628 0
+bAMM_W9693	613	VAR_GLOBAL	@TYP:1
+%NSQX 44.7		     
+
+;
+
+@V 1 629 0
+bAMM_W9694	614	VAR_GLOBAL	@TYP:1
+%NSQX 45.0		     
+
+;
+
+@V 1 630 0
+bAMM_W9695	615	VAR_GLOBAL	@TYP:1
+%NSQX 45.1		     
+
+;
+
+@V 1 631 0
+bAMM_W9696	616	VAR_GLOBAL	@TYP:1
+%NSQX 45.2		     
+
+;
+
+@V 1 632 0
+bAMM_W9697	617	VAR_GLOBAL	@TYP:1
+%NSQX 45.3		     
+
+;
+
+@V 1 633 0
+bAMM_W9698	618	VAR_GLOBAL	@TYP:1
+%NSQX 45.4		     
+
+;
+
+@V 1 634 0
+bAMM_W9699	619	VAR_GLOBAL	@TYP:1
+%NSQX 45.5		     
+
+;
+
+@V 1 635 0
+bAMM_W9700	620	VAR_GLOBAL	@TYP:1
+%NSQX 45.6		     
+
+;
+
+@V 1 636 0
+bAMM_W9701	621	VAR_GLOBAL	@TYP:1
+%NSQX 45.7		     
+
+;
+
+@V 1 637 0
+bAMM_W9702	622	VAR_GLOBAL	@TYP:1
+%NSQX 46.0		     
+
+;
+
+@V 1 638 0
+bAMM_W9703	623	VAR_GLOBAL	@TYP:1
+%NSQX 46.1		     
+
+;
+
+@V 1 639 0
+bAMM_W9704	624	VAR_GLOBAL	@TYP:1
+%NSQX 46.2		     
+
+;
+
+@V 1 641 0
+bIN_Reset_sPLC	625	VAR_GLOBAL	@TYP:1
+%NSIX 0.0		     
+
+;
+
+@V 1 642 0
+bIN_Eng_Start	626	VAR_GLOBAL	@TYP:1
+%NSIX 0.1		     
+
+;
+
+@V 1 643 0
+bIN_EO_PumpsOff	627	VAR_GLOBAL	@TYP:1
+%NSIX 0.2		     
+
+;
+
+@V 1 644 0
+bIN_ECW_PumpsOff	628	VAR_GLOBAL	@TYP:1
+%NSIX 0.3		     
+
+;
+
+@V 1 645 0
+bIN_Eng_Aux_Dem	629	VAR_GLOBAL	@TYP:1
+%NSIX 0.4		     
+
+;
+
+@V 1 646 0
+bIN_ERV_Lou_PC_OP	630	VAR_GLOBAL	@TYP:1
+%NSIX 0.5		     
+
+;
+
+@V 1 647 0
+bIN_ERV_Lou_PC_CL	631	VAR_GLOBAL	@TYP:1
+%NSIX 0.6		     
+
+;
+
+@V 1 648 0
+bIN_ERV_ColdCountry	632	VAR_GLOBAL	@TYP:1
+%NSIX 0.7		     
+
+;
+
+@V 1 650 0
+iIN_N_EngAct	633	VAR_GLOBAL	@TYP:3
+%NSIW 4		     
+
+;
+
+@V 1 651 0
+iIN_N_EngNom	634	VAR_GLOBAL	@TYP:3
+%NSIW 6		     
+
+;
+
+@V 1 652 0
+iIN_Eng_Motortype	635	VAR_GLOBAL	@TYP:3
+%NSIW 8		     
+
+;
+
+@V 1 654 0
+bPhysicalState_Rel_Sync_Load	636	VAR_GLOBAL	@TYP:1
+%NSIX 516.0		     
+
+;
+
+@V 1 655 0
+bPhysicalState_GCB_RUC	637	VAR_GLOBAL	@TYP:1
+%NSIX 516.1		     
+
+;
+
+@V 1 656 0
+bPhysicalState_SF_OK_A	638	VAR_GLOBAL	@TYP:1
+%NSIX 516.2		     
+
+;
+
+@V 1 657 0
+bPhysicalState_EmStop	639	VAR_GLOBAL	@TYP:1
+%NSIX 516.3		     
+
+;
+
+@V 1 658 0
+bPhysicalState_SF_OK_M	640	VAR_GLOBAL	@TYP:1
+%NSIX 517.3		     
+
+;
+
+@V 1 659 0
+bPhysicalState_Rel_GV1a	641	VAR_GLOBAL	@TYP:1
+%NSIX 517.0		     
+
+;
+
+@V 1 660 0
+bPhysicalState_Rel_GV1b	642	VAR_GLOBAL	@TYP:1
+%NSIX 517.1		     
+
+;
+
+@V 1 661 0
+bPhysicalState_Rel_GV2a	643	VAR_GLOBAL	@TYP:1
+%NSIX 518.0		     
+
+;
+
+@V 1 662 0
+bPhysicalState_Rel_GV2b	644	VAR_GLOBAL	@TYP:1
+%NSIX 518.1		     
+
+;
+
+@V 1 663 0
+bPhysicalState_Rel_GV3a	645	VAR_GLOBAL	@TYP:1
+%NSIX 519.0		     
+
+;
+
+@V 1 664 0
+bPhysicalState_Rel_GV3b	646	VAR_GLOBAL	@TYP:1
+%NSIX 519.1		     
+
+;
+
+@V 1 665 0
+bPhysicalState_Rel_GV4a	647	VAR_GLOBAL	@TYP:1
+%NSIX 533.0		     
+
+;
+
+@V 1 666 0
+bPhysicalState_Rel_GV4b	648	VAR_GLOBAL	@TYP:1
+%NSIX 533.1		     
+
+;
+
+@V 1 667 0
+bPhysicalState_Rel_GVa_DCGA	649	VAR_GLOBAL	@TYP:1
+%NSIX 534.0		     
+
+;
+
+@V 1 668 0
+bPhysicalState_Rel_GVb_DCGA	650	VAR_GLOBAL	@TYP:1
+%NSIX 534.1		     
+
+;
+
+@V 1 669 0
+bPhysicalState_GT1_SafeDev	651	VAR_GLOBAL	@TYP:1
+%NSIX 517.2		     
+
+;
+
+@V 1 670 0
+bPhysicalState_GT2_SafeDev	652	VAR_GLOBAL	@TYP:1
+%NSIX 518.2		     
+
+;
+
+@V 1 671 0
+bPhysicalState_GT3_SafeDev	653	VAR_GLOBAL	@TYP:1
+%NSIX 519.2		     
+
+;
+
+@V 1 672 0
+bPhysicalState_GT4_SafeDev	654	VAR_GLOBAL	@TYP:1
+%NSIX 533.2		     
+
+;
+
+@V 1 673 0
+bPhysicalState_DCGA_SafeDev	655	VAR_GLOBAL	@TYP:1
+%NSIX 534.2		     
+
+;
+
+@V 1 675 0
+sbSafeOutputOK_Rel_Sync_Load	656	VAR_GLOBAL	@TYP:43
+%SIX 11.0		     
+
+;
+
+@V 1 676 0
+sbSafeOutputOK_GCB_RUC	657	VAR_GLOBAL	@TYP:43
+%SIX 11.1		     
+
+;
+
+@V 1 677 0
+sbSafeOutputOK_SF_OK_A	658	VAR_GLOBAL	@TYP:43
+%SIX 11.2		     
+
+;
+
+@V 1 678 0
+sbSafeOutputOK_SF_OK_M	659	VAR_GLOBAL	@TYP:43
+%SIX 15.3		     
+
+;
+
+@V 1 679 0
+sbSafeOutputOK_Rel_GV1a	660	VAR_GLOBAL	@TYP:43
+%SIX 15.0		     
+
+;
+
+@V 1 680 0
+sbSafeOutputOK_Rel_GV1b	661	VAR_GLOBAL	@TYP:43
+%SIX 15.1		     
+
+;
+
+@V 1 681 0
+sbSafeOutputOK_Rel_GV2a	662	VAR_GLOBAL	@TYP:43
+%SIX 19.0		     
+
+;
+
+@V 1 682 0
+sbSafeOutputOK_Rel_GV2b	663	VAR_GLOBAL	@TYP:43
+%SIX 19.1		     
+
+;
+
+@V 1 683 0
+sbSafeOutputOK_Rel_GV3a	664	VAR_GLOBAL	@TYP:43
+%SIX 23.0		     
+
+;
+
+@V 1 684 0
+sbSafeOutputOK_Rel_GV3b	665	VAR_GLOBAL	@TYP:43
+%SIX 23.1		     
+
+;
+
+@V 1 685 0
+sbSafeOutputOK_Rel_GV4a	666	VAR_GLOBAL	@TYP:43
+%SIX 35.0		     
+
+;
+
+@V 1 686 0
+sbSafeOutputOK_Rel_GV4b	667	VAR_GLOBAL	@TYP:43
+%SIX 35.1		     
+
+;
+
+@V 1 687 0
+sbSafeOutputOK_Rel_GVa_DCGA	668	VAR_GLOBAL	@TYP:43
+%SIX 43.0		     
+
+;
+
+@V 1 688 0
+sbSafeOutputOK_Rel_GVb_DCGA	669	VAR_GLOBAL	@TYP:43
+%SIX 43.1		     
+
+;
+
+@V 1 689 0
+sbSafeOutputOK_GT1_SafeDev	670	VAR_GLOBAL	@TYP:43
+%SIX 15.2		     
+
+;
+
+@V 1 690 0
+sbSafeOutputOK_GT2_SafeDev	671	VAR_GLOBAL	@TYP:43
+%SIX 19.2		     
+
+;
+
+@V 1 691 0
+sbSafeOutputOK_GT3_SafeDev	672	VAR_GLOBAL	@TYP:43
+%SIX 23.2		     
+
+;
+
+@V 1 692 0
+sbSafeOutputOK_GT4_SafeDev	673	VAR_GLOBAL	@TYP:43
+%SIX 35.2		     
+
+;
+
+@V 1 693 0
+sbSafeOutputOK_DCGA_SafeDev	674	VAR_GLOBAL	@TYP:43
+%SIX 43.2		     
+
+;
+
+@V 1 694 0
+sbSafeOutputOK_EmStop	675	VAR_GLOBAL	@TYP:43
+%SIX 11.3		     
+
+;
+
+@V 1 696 0
+sbSafeFrequencyOK_CI_N_EngAct	676	VAR_GLOBAL	@TYP:43
+%SIX 24.1		     
+
+;
+
+@V 1 697 0
+bReset_CI_N_EngAct	677	VAR_GLOBAL	@TYP:1
+%NSQX 518.0		     
+
+;
+
+@V 1 699 0
+sbSafeCurrentOK_AI_Pr_EO	678	VAR_GLOBAL	@TYP:43
+%SIX 37.4		     
+
+;
+
+@V 1 700 0
+sbSafeCurrentOK_AI_Pr_EOaP	679	VAR_GLOBAL	@TYP:43
+%SIX 37.5		     
+
+;
+
+@V 1 701 0
+sbSafeCurrentOK_AI_Pr_ECW	680	VAR_GLOBAL	@TYP:43
+%SIX 45.4		     
+
+;
+
+@V 1 702 0
+sbSafeCurrentOK_AI_Pr_ECWaP	681	VAR_GLOBAL	@TYP:43
+%SIX 45.5		     
+
+;
+
+@V 1 704 0
+sbSafeRelease_AI_Pr_EO	682	VAR_GLOBAL	@TYP:43
+%SQX 5.0		     
+
+;
+
+@V 1 705 0
+sbSafeRelease_AI_Pr_EOaP	683	VAR_GLOBAL	@TYP:43
+%SQX 5.1		     
+
+;
+
+@V 1 706 0
+sbSafeRelease_AI_Pr_ECW	684	VAR_GLOBAL	@TYP:43
+%SQX 7.0		     
+
+;
+
+@V 1 707 0
+sbSafeRelease_AI_Pr_ECWaP	685	VAR_GLOBAL	@TYP:43
+%SQX 7.1		     
+
+;
+
+@V 1 709 0
+sbSafeInputOK_EmStop	686	VAR_GLOBAL	@TYP:43
+%SIX 9.4		     
+
+;
+
+@V 1 710 0
+sbSafeInputOK_OlShortCirc	687	VAR_GLOBAL	@TYP:43
+%SIX 9.5		     
+
+;
+
+@V 1 711 0
+sbSafeInputOK_GenPrctTrip	688	VAR_GLOBAL	@TYP:43
+%SIX 9.6		     
+
+;
+
+@V 1 712 0
+sbSafeInputOK_ERV_Cust	689	VAR_GLOBAL	@TYP:43
+%SIX 9.7		     
+
+;
+
+@V 1 713 0
+sbSafeInputOK_SafetyLoop_A1	690	VAR_GLOBAL	@TYP:43
+%SIX 10.0		     
+
+;
+
+@V 1 714 0
+sbSafeInputOK_GCB_On	691	VAR_GLOBAL	@TYP:43
+%SIX 10.1		     
+
+;
+
+@V 1 715 0
+sbSafeInputOK_GCB_Off	692	VAR_GLOBAL	@TYP:43
+%SIX 10.2		     
+
+;
+
+@V 1 716 0
+sbSafeInputOK_SafetyLoop_A2	693	VAR_GLOBAL	@TYP:43
+%SIX 22.3		     
+
+;
+
+@V 1 717 0
+sbSafeInputOK_LS_HWHT_Lo	694	VAR_GLOBAL	@TYP:43
+%SIX 13.4		     
+
+;
+
+@V 1 718 0
+sbSafeInputOK_PS1_HWHT_Hi	695	VAR_GLOBAL	@TYP:43
+%SIX 13.5		     
+
+;
+
+@V 1 719 0
+sbSafeInputOK_PS2_HWHT_Hi	696	VAR_GLOBAL	@TYP:43
+%SIX 13.6		     
+
+;
+
+@V 1 720 0
+sbSafeInputOK_PS1_HWHT_Lo	697	VAR_GLOBAL	@TYP:43
+%SIX 13.7		     
+
+;
+
+@V 1 721 0
+sbSafeInputOK_PS2_HWHT_Lo	698	VAR_GLOBAL	@TYP:43
+%SIX 14.0		     
+
+;
+
+@V 1 722 0
+sbSafeInputOK_TS1_HWHT_Hi	699	VAR_GLOBAL	@TYP:43
+%SIX 14.1		     
+
+;
+
+@V 1 723 0
+sbSafeInputOK_TS2_HWHT_Hi	700	VAR_GLOBAL	@TYP:43
+%SIX 14.2		     
+
+;
+
+@V 1 724 0
+sbSafeInputOK_FS_HWHT_Lo	701	VAR_GLOBAL	@TYP:43
+%SIX 14.3		     
+
+;
+
+@V 1 725 0
+sbSafeInputOK_LS_HWLT_Lo	702	VAR_GLOBAL	@TYP:43
+%SIX 17.4		     
+
+;
+
+@V 1 726 0
+sbSafeInputOK_PS1_HWLT_Hi	703	VAR_GLOBAL	@TYP:43
+%SIX 17.5		     
+
+;
+
+@V 1 727 0
+sbSafeInputOK_PS2_HWLT_Hi	704	VAR_GLOBAL	@TYP:43
+%SIX 17.6		     
+
+;
+
+@V 1 728 0
+sbSafeInputOK_PS1_HWLT_Lo	705	VAR_GLOBAL	@TYP:43
+%SIX 17.7		     
+
+;
+
+@V 1 729 0
+sbSafeInputOK_PS2_HWLT_Lo	706	VAR_GLOBAL	@TYP:43
+%SIX 18.0		     
+
+;
+
+@V 1 730 0
+sbSafeInputOK_TS1_HWLT_Hi	707	VAR_GLOBAL	@TYP:43
+%SIX 18.1		     
+
+;
+
+@V 1 731 0
+sbSafeInputOK_TS2_HWLT_Hi	708	VAR_GLOBAL	@TYP:43
+%SIX 18.2		     
+
+;
+
+@V 1 732 0
+sbSafeInputOK_FS_HWLT_Lo	709	VAR_GLOBAL	@TYP:43
+%SIX 18.3		     
+
+;
+
+@V 1 733 0
+sbSafeInputOK_HWcirc_Cust	710	VAR_GLOBAL	@TYP:43
+%SIX 21.4		     
+
+;
+
+@V 1 734 0
+sbSafeInputOK_EmStop_M	711	VAR_GLOBAL	@TYP:43
+%SIX 53.4		     
+
+;
+
+@V 1 735 0
+sbSafeInputOK_Ign_Run	712	VAR_GLOBAL	@TYP:43
+%SIX 53.5		     
+
+;
+
+@V 1 736 0
+sbSafeInputOK_ScavFlapClose	713	VAR_GLOBAL	@TYP:43
+%SIX 53.7		     
+
+;
+
+@V 1 737 0
+sbSafeInputOK_TS_ScavFlap	714	VAR_GLOBAL	@TYP:43
+%SIX 54.0		     
+
+;
+
+@V 1 738 0
+sbSafeInputOK_Pr_EG_Hi	715	VAR_GLOBAL	@TYP:43
+%SIX 54.1		     
+
+;
+
+@V 1 739 0
+sbSafeInputOK_SafetyLoop_M	716	VAR_GLOBAL	@TYP:43
+%SIX 54.3		     
+
+;
+
+@V 1 740 0
+sbSafeInputOK_GT1_SafeDevOK	717	VAR_GLOBAL	@TYP:43
+%SIX 53.6		     
+
+;
+
+@V 1 741 0
+sbSafeInputOK_GT2_SafeDevOK	718	VAR_GLOBAL	@TYP:43
+%SIX 54.2		     
+
+;
+
+@V 1 742 0
+sbSafeInputOK_GT3_SafeDevOK	719	VAR_GLOBAL	@TYP:43
+%SIX 57.4		     
+
+;
+
+@V 1 743 0
+sbSafeInputOK_GT4_SafeDevOK	720	VAR_GLOBAL	@TYP:43
+%SIX 57.5		     
+
+;
+
+@V 1 744 0
+sbSafeInputOK_DCGA_SafeDevOK	721	VAR_GLOBAL	@TYP:43
+%SIX 57.6		     
+
+;
+
+@V 1 745 0
+sbSafeInputOK_ER_Door_CL	722	VAR_GLOBAL	@TYP:43
+%SIX 10.3		     
+
+;
+
+@V 1 746 0
+sbSafeInputOK_ERV_INL1_Fan_Run	723	VAR_GLOBAL	@TYP:43
+%SIX 63.6		     
+
+;
+
+@V 1 747 0
+sbSafeInputOK_ERV_INL1_Lou_OP	724	VAR_GLOBAL	@TYP:43
+%SIX 63.7		     
+
+;
+
+@V 1 748 0
+sbSafeInputOK_ERV_INL1_Lou_CL	725	VAR_GLOBAL	@TYP:43
+%SIX 64.0		     
+
+;
+
+@V 1 749 0
+sbSafeInputOK_ERV_OTL1_Lou_OP	726	VAR_GLOBAL	@TYP:43
+%SIX 64.1		     
+
+;
+
+@V 1 750 0
+sbSafeInputOK_ERV_OTL1_Lou_CL	727	VAR_GLOBAL	@TYP:43
+%SIX 64.2		     
+
+;
+
+@V 1 751 0
+sbSafeInputOK_ERV_INL2_Fan_Run	728	VAR_GLOBAL	@TYP:43
+%SIX 64.3		     
+
+;
+
+@V 1 752 0
+sbSafeInputOK_ERV_INL2_Lou_OP	729	VAR_GLOBAL	@TYP:43
+%SIX 64.4		     
+
+;
+
+@V 1 753 0
+sbSafeInputOK_ERV_INL2_Lou_CL	730	VAR_GLOBAL	@TYP:43
+%SIX 64.5		     
+
+;
+
+@V 1 754 0
+sbSafeInputOK_ERV_OTL2_Lou_OP	731	VAR_GLOBAL	@TYP:43
+%SIX 64.6		     
+
+;
+
+@V 1 755 0
+sbSafeInputOK_ERV_OTL2_Lou_CL	732	VAR_GLOBAL	@TYP:43
+%SIX 64.7		     
+
+;
+
+@V 1 756 0
+sbSafeInputOK_ERV_INL3_Fan_Run	733	VAR_GLOBAL	@TYP:43
+%SIX 65.0		     
+
+;
+
+@V 1 757 0
+sbSafeInputOK_ERV_INL3_Lou_OP	734	VAR_GLOBAL	@TYP:43
+%SIX 65.1		     
+
+;
+
+@V 1 758 0
+sbSafeInputOK_ERV_INL3_Lou_CL	735	VAR_GLOBAL	@TYP:43
+%SIX 65.2		     
+
+;
+
+@V 1 759 0
+sbSafeInputOK_ERV_OTL3_Lou_OP	736	VAR_GLOBAL	@TYP:43
+%SIX 65.3		     
+
+;
+
+@V 1 760 0
+sbSafeInputOK_ERV_OTL3_Lou_CL	737	VAR_GLOBAL	@TYP:43
+%SIX 65.4		     
+
+;
+
+@V 1 761 0
+sbSafeInputOK_ERV_INL4_Fan_Run	738	VAR_GLOBAL	@TYP:43
+%SIX 65.5		     
+
+;
+
+@V 1 762 0
+sbSafeInputOK_ERV_INL4_Lou_OP	739	VAR_GLOBAL	@TYP:43
+%SIX 65.6		     
+
+;
+
+@V 1 763 0
+sbSafeInputOK_ERV_INL4_Lou_CL	740	VAR_GLOBAL	@TYP:43
+%SIX 65.7		     
+
+;
+
+@V 1 764 0
+sbSafeInputOK_ERV_OTL4_Lou_OP	741	VAR_GLOBAL	@TYP:43
+%SIX 66.0		     
+
+;
+
+@V 1 765 0
+sbSafeInputOK_ERV_OTL4_Lou_CL	742	VAR_GLOBAL	@TYP:43
+%SIX 66.1		     
+
+;
+
+@V 1 766 0
+sbSafeInputOK_ERV_INL5_Fan_Run	743	VAR_GLOBAL	@TYP:43
+%SIX 71.6		     
+
+;
+
+@V 1 767 0
+sbSafeInputOK_ERV_INL5_Lou_OP	744	VAR_GLOBAL	@TYP:43
+%SIX 71.7		     
+
+;
+
+@V 1 768 0
+sbSafeInputOK_ERV_INL5_Lou_CL	745	VAR_GLOBAL	@TYP:43
+%SIX 72.0		     
+
+;
+
+@V 1 769 0
+sbSafeInputOK_ERV_OTL5_Lou_OP	746	VAR_GLOBAL	@TYP:43
+%SIX 72.1		     
+
+;
+
+@V 1 770 0
+sbSafeInputOK_ERV_OTL5_Lou_CL	747	VAR_GLOBAL	@TYP:43
+%SIX 72.2		     
+
+;
+
+@V 1 771 0
+sbSafeInputOK_ERV_INL6_Fan_Run	748	VAR_GLOBAL	@TYP:43
+%SIX 72.3		     
+
+;
+
+@V 1 772 0
+sbSafeInputOK_ERV_INL6_Lou_OP	749	VAR_GLOBAL	@TYP:43
+%SIX 72.4		     
+
+;
+
+@V 1 773 0
+sbSafeInputOK_ERV_INL6_Lou_CL	750	VAR_GLOBAL	@TYP:43
+%SIX 72.5		     
+
+;
+
+@V 1 774 0
+sbSafeInputOK_ERV_OTL6_Lou_OP	751	VAR_GLOBAL	@TYP:43
+%SIX 72.6		     
+
+;
+
+@V 1 775 0
+sbSafeInputOK_ERV_OTL6_Lou_CL	752	VAR_GLOBAL	@TYP:43
+%SIX 72.7		     
+
+;
+

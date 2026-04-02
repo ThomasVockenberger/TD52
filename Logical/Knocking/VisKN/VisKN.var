@@ -1,0 +1,25 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: VisKN
+ * File: VisKN.var
+ * Author: WaldharM
+ * Created: August 13, 2012
+ ********************************************************************
+ * Local variables of program VisKN
+ ********************************************************************)
+VAR
+	ucCylinderCount : USINT;
+	bPBCSensErrInternal : ARRAY[0 .. 24] OF BOOL; (* in-cylinder pressure sensor measuring signal failure  *)
+END_VAR
+VAR CONSTANT
+	GREEN : INT := 229; (*2, 223, 187*)
+	RED : INT := 51;
+	ORANGE : INT := 48;
+	VIOLET : INT := 5;
+	BLUE : INT := 11;
+	PINK : INT := 18;
+	BROWN : INT := 123;
+	CYAN : INT := 124;
+	YELLOW : INT := 46;
+END_VAR

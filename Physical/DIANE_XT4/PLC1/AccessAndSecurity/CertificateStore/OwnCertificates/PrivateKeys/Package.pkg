@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="PrivateKeys" PackageType="PrivateKeys" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">Engine1.key</Object>
+    <Object Type="File">Engine2.key</Object>
+    <Object Type="File">Engine3.key</Object>
+    <Object Type="File">Engine4.key</Object>
+    <Object Type="File">Engine5.key</Object>
+    <Object Type="File">Engine6.key</Object>
+    <Object Type="File">Engine7.key</Object>
+    <Object Type="File">Engine8.key</Object>
+  </Objects>
+</Package>

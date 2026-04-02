@@ -1,0 +1,247 @@
+; modification report
+;----------------------------------------------------------------------
+ "<BASEVERSION>04.25.00.00</BASEVERSION>"   ;	(XT4) | 05.02.2026
+; (The version number above is unchangeable, except for basic software releases. Do NOT change for any customizations, which have to get versioned in the META modules!)
+;
+; Bugs&Solutions		       :  V.. / xx.xx.202x / ..
+;
+; update                  :  .... / xx.xx.202x / ..
+;
+; VSoftworker             :  1.1.9.4
+;
+; cross reference for DIA.NE VIS
+;  - reserve failures used     : Y/N  : ..
+;  - reserve controllers       : Y/N  
+;  - reserve operation messages: Y/N  : ..
+;  - change of main loop       : Y/N  : ..
+;
+; customer-specifics      
+;  - standard of               :  ..
+;  - auxiliary controls        :  Y/N
+;
+; copy             
+;  - derived from              :  J.... 
+;  - copied 1:1                :  N
+;
+; new version                   :  04.25.00.01
+; date of design          		:  10.02.2026
+; author                  		:  Nuschele Lukas
+;
+;
+; module                       : HalIO
+; task                         : IOcfg
+; modification                 : Block T_GT_NG | Type | von AI_0_20mA_INT16 auf AI_TEMP_1_10C geändert
+;											   | Qual_Min | von 4914 auf -200 geändert
+;											   | Qual_Max | von 32767 auf 1400 geändert
+;											   | Scal_X1 | von 6552 auf 0 geändert
+;											   | Scal_X2 | von 32760 auf 0 geändert
+;
+; reason for modification      : ist kein mA Signal sondern ein PT100
+; 
+;
+; WinMOD tested				   : Y/N
+;
+; new version                  :  04.25.00.02
+; date of design          	   :  11.02.2026
+; author               	       :  Bacci
+;
+; META version changed         :  Y "<VERSION>04.24.00.03</VERSION>"
+; module 			           :  EngineGeneral
+; task                         :  VibMonEG, VibMon2EG, VibMon3EG
+; modification                 :  vibration sensors 5 - 12 added
+;
+; reason for modification      :  additional vibration sensors needed, customized for DP29
+;
+;
+; new version                  :  04.25.00.03
+; date of design          	   :  25.03.2026
+; author               	       :  Vockenberger
+;
+; changed DP29 to DT52 
+; INFO for jenbacher test bench	: 	DCGA will be put into operation later with the V4.26 release.
+;									P29 (according to the wiring diagram) will be put into operation later by the development team.
+;
+;----------------------------------------------------------------------
+; jenbacher test bench
+;
+; new version                  :  04.25.00.02
+;
+; check date     (TPE)         :  xx.xx.202x
+; checked from   (TPE)         :  ..
+; start-up without 
+; source-code    (TPE)    	   :  Y/N
+;
+;----------------------------------------------------------------------
+;
+; softw.instal.(pre-testbench) :  xx.xx.202x
+; installed by (pre-testbench) :  ..
+; modifications			       :  Y/N
+;
+; date of modification         :  xx.xx.202x
+; modified by                  :   
+;
+;
+; META version changed         :  Y/N
+; module                       : 
+; task                         : 
+; modification                 : 
+;
+; reason for modification      : 
+;
+;----------------------------------------------------------------------
+;
+; softw.instal.(unit-testbench):  xx.xx.2026
+; installed by (unit-testbench):  
+; modifications			       :  Y/N
+;
+; date of modification         :  
+; modified by                  :  
+;
+;
+; META version changed         :  Y/N
+; module                       :  
+; task                         :  
+; modification                 :  
+;
+; reason for modification      :  
+;
+; META version changed         :  Y/N
+; module                       : 
+; task                         :  
+; modification                 :  
+;
+; reason for modification      :  
+;
+;----------------------------------------------------------------------
+; start-up
+;
+; softw.install. (Service)     :  xx.xx.202x
+; installed by   (Service)     :  ..
+; check date     (TPE)         :  xx.xx.202x
+; checked from   (TPE)         :  ..
+;
+"*********************************************************************"
+"                                                                     "
+"! ! ! ! ! ! !   please update version info in META_CU  ! ! ! ! ! ! ! "
+"                                                                     "
+"*********************************************************************"
+; new version                  :  04.25.00.03
+;
+; date of modif. (TPE)         :  12.03.2026
+; modified by    (TPE)         :  Bencze
+; softw.install. (Service)     :  xx.xx.202x
+; installed by   (Service)     :  ..
+;
+; date of modif. (Service)     :  xx.xx.202x
+; modified by    (Service)     :  ..
+; check date     (TPE)         :  xx.xx.202x
+; checked from   (TPE)         :  ..
+;
+; META version changed         :  Y
+; module                       :  CU  
+; task                         :  c_clutch_CAN
+; modification                 :  CAN values integration
+
+; META version changed         :  Y
+; module                       :  CU  
+; task                         :  MsgCU
+; modification                 :  W1756 to W1765
+;
+; reason for modification      : Working Clutch setup
+;
+"*********************************************************************"
+"                                                                     "
+"! ! ! ! ! ! !   please update version info in META_CU  ! ! ! ! ! ! ! "
+"                                                                     "
+"*********************************************************************"
+; new version                  :  04.25.00.xx
+;
+; date of modif. (TPE)         :  xx.xx.202x
+; modified by    (TPE)         :  ..
+; softw.install. (Service)     :  xx.xx.202x
+; installed by   (Service)     :  ..
+;
+; date of modif. (Service)     :  xx.xx.202x
+; modified by    (Service)     :  ..
+; check date     (TPE)         :  xx.xx.202x
+; checked from   (TPE)         :  ..
+;
+; META version changed         :  Y/N
+; module                       :    
+; task                         :  
+; modification                 :  
+;
+; reason for modification      :
+;
+"*********************************************************************"
+"                                                                     "
+"! ! ! ! ! ! !   please update version info in META_CU  ! ! ! ! ! ! ! "
+"                                                                     "
+"*********************************************************************"
+; new version                  :  04.25.00.xx
+;
+; date of modif. (TPE)         :  xx.xx.202x
+; modified by    (TPE)         :  ..
+; softw.install. (Service)     :  xx.xx.202x
+; installed by   (Service)     :  ..
+;
+; date of modif. (Service)     :  xx.xx.202x
+; modified by    (Service)     :  ..
+; check date     (TPE)         :  xx.xx.202x
+; checked from   (TPE)         :  ..
+;
+; META version changed         :  Y/N
+; module                       :    
+; task                         :  
+; modification                 :  
+;
+; reason for modification      :     
+;
+"*********************************************************************"
+"                                                                     "
+"! ! ! ! ! ! !   please update version info in META_CU  ! ! ! ! ! ! ! "
+"                                                                     "
+"*********************************************************************"
+; new version                  :  04.25.00.xx
+;
+; date of modif. (TPE)         :  xx.xx.202x
+; modified by    (TPE)         :  ..
+; softw.install. (Service)     :  xx.xx.202x
+; installed by   (Service)     :  ..
+;
+; date of modif. (Service)     :  xx.xx.202x
+; modified by    (Service)     :  ..
+; check date     (TPE)         :  xx.xx.202x
+; checked from   (TPE)         :  ..
+;
+; META version changed         :  Y/N
+; module                       :    
+; task                         :  
+; modification                 :  
+;
+; reason for modification      :     
+;
+"*********************************************************************"
+"                                                                     "
+"! ! ! ! ! ! !   please update version info in META_CU  ! ! ! ! ! ! ! "
+"                                                                     "
+"*********************************************************************"
+; new version                  :  04.25.00.xx
+;
+; date of modif. (TPE)         :  xx.xx.202x
+; modified by    (TPE)         :  ..
+; softw.install. (Service)     :  xx.xx.202x
+; installed by   (Service)     :  ..
+;
+; date of modif. (Service)     :  xx.xx.202x
+; modified by    (Service)     :  ..
+; check date     (TPE)         :  xx.xx.202x
+; checked from   (TPE)         :  ..
+;
+; META version changed         :  Y/N
+; module                       :    
+; task                         :  
+; modification                 :  
+;
+; reason for modification      :     
+;

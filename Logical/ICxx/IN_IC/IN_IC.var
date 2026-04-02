@@ -1,0 +1,14 @@
+VAR
+	iNum_IC_SpCurChar : USINT; (*Spark characteristic selection*)
+	iNum_IC_SpCurLvl : USINT; (*Spark current level [%]*)
+	iNum_IC_SpCurCharOld : USINT; (*Old spark characteristic selection*)
+	iNum_IC_SpCurData : ARRAY[0..10] OF UINT; (*Data from IC_Curr.dat*)
+	xDatObjRead_ICxxCurr : DatObjRead; (*FuB to read the data from IC_Curr.dat*)
+	tIC_CurrPMM : ARRAY[0..7] OF IC_Curr; (*Ignition pulse current and duration from the parameters*)
+	xDatObjInfo_ICxxCurr : DatObjInfo; (*FuB to read the info from IC_Curr.dat*)
+	xDatObjInfo_ICxxCoil : DatObjInfo; (*FuB to read the info from IC_Coil.dat*)
+	xDatObjRead_ICxxCoil : DatObjRead; (*FuB to read the data from IC_Coil.dat*)
+	iNum_IC_CoilType : USINT; (*Coil type*)
+	iNum_IC_CoilTypeOld : USINT; (*Old coil type*)
+	iNum_IC_SpCoilData : ARRAY[0..39] OF UINT; (*Data from IC_Coil.dat*)
+END_VAR

@@ -1,0 +1,34 @@
+VAR
+	bParaSetupOk : BOOL;
+	TON_ParaSetupOk : TON;
+	sRefTestMissingParaModule : REFERENCE TO STRING[2];
+	sTestMissingParaModule : STRING[2];
+	iTest : UDINT;
+	cnt : INT;
+	iCountParaSetupOk : INT; (*Debug counter for modules stated OK*)
+	iCountParaSetupFailed : INT; (*Debug counter for modules missing AND NOT DISABELED PER PARAMETER*)
+	iCountParaWarnings : INT; (*Debug counter for modules with parameter warnings*)
+	iCountParaMissing : INT;
+	iDebugCount_SysRunOk : INT;
+	TON_SysRun : TON;
+	iDebugCount_DLD : INT;
+	bBlockDownloadDetect_DEBUG : BOOL := FALSE; (*for debugging only!*)
+	bDEBUG_SetSys_Run : BOOL := FALSE;
+	bDebugSysRunOk : ARRAY[0..36] OF BOOL; (*nur ein praktisches Array für einfache Watch Darstellung*)
+	iDebug_Prog_Vers_Simple : ARRAY[0..36] OF UDINT; (*Debug Modulversion mit bMySysRun verknüpft*)
+	bBlinkDebugActive : BOOL; (*intern*)
+END_VAR
+VAR CONSTANT
+	eActivateDebugBlink : DINT := 7; (*lokal command value: toggle DebugBlink*)
+	eDeactivateAutoCommands : DINT := 100; (*lokal command value: bSendAutoCommands off*)
+	eActivateAutoCommands : DINT := 101; (*lokal command value: bSendAutoCommands on*)
+END_VAR
+VAR
+	bSendAutoCommands : BOOL := FALSE; (*Debug Value: starts cyclic command send with engine on/off info*)
+	TON_WritePMEM : TON;
+	bEngineRunDetected : BOOL; (*here DEBUG INFORMATION  only*)
+	TON_ResetExt : TON;
+	iDebugCount_Perm : INT := 0; (*V4.06*)
+	iDebugFirstMissing_Perm : UDINT := 0; (*V4.06*)
+	bOptShowNegPermStatus : BOOL := TRUE; (*V4.06 prepared*)
+END_VAR

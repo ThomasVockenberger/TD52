@@ -1,0 +1,27 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: Ctr_TR_4
+ * File: Ctr_TR_4.var
+ * Author: 105051626
+ * Created: November 08, 2013
+ ********************************************************************
+ * Local variables of program Ctr_TR_4
+ ********************************************************************)
+VAR
+	CntUp_old : REAL;
+	CntDown_old : REAL;
+	REG4_POS : BOOL; (* Postiver Stellbefehl *)
+	REG4_NEG : BOOL; (* Postiver Stellbefehl *)
+	REG4_STELL : BOOL; (* Stellbefehl *)
+	T_REG4_1 : BOOL; (* Periodenzeit *)
+	Y_absolut : REAL;
+	tiImpulseTime : TIME;
+	xTOF_FA_T_REG4_1 : TOF;
+	xTP_FA_T_REG4_2_PLUS : TP;
+	xTP_FA_T_REG4_2_MINUS : TP;
+	T_REG4_2_PLUS : BOOL;
+	T_REG4_2_MINUS : BOOL;
+	Step_up : BOOL;
+	Step_down : BOOL;
+END_VAR

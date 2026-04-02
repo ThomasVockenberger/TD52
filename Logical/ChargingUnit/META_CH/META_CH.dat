@@ -1,0 +1,153 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2023
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V03.99.00.00	06.03.2013	Weitzer 	generated for modular software	 
+; V04.00.00.00	31.01.2014	Weitzer 	versions changed
+; V04.00.03.00	22.07.2014	Tinello 	Para Task update
+; V04.01.00.00	07.08.2014	Tinello 	Changed activation of charge temperature maximum monitoring
+; V04.02.00.00	28.01.2015	Tinello 	provide filtered and unfiltered average of t2' and p2' to other modules
+; V04.04.00.00	01.06.2016	Tinello 	CM&U Sensor package added; airfilter diff. pressure
+;				27.10.2016	Tinello		change of TC speed deviation function -> Spec.(b)
+; V04.05.00.00	19.04.2017	Weitzer		add SWAT920/2 changes
+;				12.07.2017	Tinello		add SWAT920/3 -> pressure spec (d)
+; V04.05.01.00	22.02.2018	Tinello		Dependencies angepasst
+;										Temperature spec (f)
+; V04.05.02.00	16.04.2018	Tinello		enable P2s value forwarding to other SW modules also in op.switch OFF mode
+; V04.05.03.00	28.05.2018	Tinello		Bugfix: Quittierung Ms-Sto TC speed, bu
+; V04.05.04.00	27.09.2018	Tinello		Stable power below 1% Pnenn instead of gradient
+;										Detection of low-pressure TC exist changed, bu
+; V04.06.00.00	26.09.2018	Perktold	delay activation of T2s max monitoring for 20s after SY (Task: CH_Temp)
+; V04.07.00.00	04.12.2018	Tinello		MsErr active with op.switch OFF mode / Calculation of difference pressure adjusted
+;										2 parameters and BR4 for inlet filter difference pressure added
+; V04.07.01.00	04.10.2019	Tinello		reduced perm file write interval, bu1
+; V04.10.00.00	28.01.2021	Tinello		2x out-interface / intake air temperature instead of T1HP / BugFix: Timer & other FuB's
+; V04.12.00.00	27.03.2023 	Tinello		Extrapolation of TC speed limit / Deleted T1 max monitoring / Added calculation, monitoring and power red of T2 max 
+; V04.14.00.00  20.06.2024  Soto		Pressure signals plausibility check during standstill / Added MSG 9399 
+; V04.14.00.00	12.11.2024	Theobald	Alarm 2280, 2318 there is no trip during engine operation. [2024-224]
+; V04.14.00.00	18.03.2025	Theobald	Alarm 2325, 2326 and 2327 only appear when there is too low TC speed and the TC speed sensor is in good quality.
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID:18499
+"<MODUL>CH</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.14.00.00</VERSION>"
+;
+; Basisupdate Module Version (BU) 
+"<BASISUPDATE_VERSION='00' />"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"<PARA1 Name='rT_Ch_T2s_HiHi' MIN='40' MAX='120' />"
+"<PARA2 Name='rT_Ch_T2s_Roc_HiHi' MIN='1' MAX='20' />"
+"<PARA3 Name='iEng_Motortype' MIN='208' MAX='920' />"
+"<PARA4 />"
+"<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_CH</DATAMODULE>"
+"	<DATAMODULE>AirF_perm</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='AB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='HA' VERSION='04.05.00.00' />"
+"	<DEPENDENCY MODULE='IG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='OP' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='GT' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='EC' VERSION='04.04.00.00' />"
+"	<DEPENDENCY MODULE='EG' VERSION='04.02.00.00' />"
+"	<DEPENDENCY MODULE='CU' VERSION='04.06.00.00' />"    	;corrected for SW download via HMI
+"   <DEPENDENCY VISVERSION='02.13.00.00' />"				;Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	Monitoring of the charge signals "
+"	</General>	"
+""
+"	<F1 Name='turbocharger speed' LastModified='04.00.00.00'>"
+"	Turbocharger speed and signal monitoring. In case of failure -> power reduction	"
+"	Monitoring of speed deviation "
+"	</F1>"
+"	<F2 Name='charge temperature' LastModified='04.00.00.00'>"
+"	Charge temperature and signal monitoring. In case of failure -> power reduction	"
+"	Monitoring of charge temperature inclination and rate of change "
+"	</F2>"
+"	<F3 Name='Charge pressure' LastModified='04.00.00.00'>"
+"	Charge pressure and signal monitoring. 	"
+"	Monitoring of charge pressure deviation"
+"	</F3>"
+"	<F4 Name='Charge temperature' LastModified='04.01.00.00'>"
+"	Changed activation of charge temperature maximum monitoring with island or parallel mode "
+"	If engine speed = 0 and no measurement failure -> TC speed is set to 0 "
+"	</F4>"
+"	<F5 Name='Charge temperature' LastModified='04.02.00.00'>"
+"	Provide filtered and unfiltered average charge temperature and average charge pressure to other modules"
+"	</F5>"
+"	<F6 Name='Sensor package' LastModified='04.04.00.00'>"
+"	CM&U sensor package added; airfilter diff. pressure"
+"	TC speed deviation function changed"
+"	</F6>"
+"	<F7 Name='Charging modifications' LastModified='04.07.01.00'>"
+"	Calculation of difference pressure adjusted"
+"	MsErr now also active with operation mode selector switch in OFF mode"
+"	Detection of low-pressure TC exist changed"
+"	Air filter difference pressure - consideration of the dynamic pressure component in case of no pitot tube"
+"	reduced perm file write interval to avoid CF card wear down, bu1"
+"	</F7>"
+"	<F8 Name='TC speed modifications' LastModified='04.10.00.00'>"
+"	2x out-interface for interpolated TC speed max limit"
+"	Use intake air temperature if T1HP is not available"
+"	BugFix: Timer & other FuB's"
+"	</F8>"
+"	<F9 Name='Charging modifications' LastModified='04.12.00.00'>"
+"	Extrapolation of TC speed limit"
+"	Added forwarding of pressure maximum values to other SW modules"
+"	Deleted T1 maximum monitoring / Added calculation and monitoring of T2 max"
+"	Deleted 2223, 2317, 2324, 2412, 2478, 2533 / Added 2368-2370, 9370"
+"	</F9>"
+"	<F10 Name='Boost pressure plausibility check' LastModified='04.14.00.00'>"
+"	Pressure signals plausibility check during standstill"
+"	Added 9399"
+"	</F10>"
+""
+"	<Info>"
+"	Please enter additional module info here.	"
+"	</Info>"
+""
+"	<Customized LastModified='04.00.00.00'>	"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

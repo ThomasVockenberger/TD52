@@ -1,0 +1,36 @@
+VAR
+	b_B_KKAUF_1 : BOOL := FALSE;
+	b_B_KKAUF_2 : BOOL := FALSE;
+	b_B_KKZU_1 : BOOL := FALSE;
+	b_B_KKZU_2 : BOOL := FALSE;
+	B_BKAUF_1 : BOOL := FALSE;
+	bB_BK_ZU_1 : BOOL := FALSE;
+	bB_BK_ZU_2 : BOOL := FALSE;
+	bB_BK_ZU_2A : BOOL := FALSE;
+	bB_BK_ZU_2B : BOOL := FALSE;
+	bB_BK_ZU_2C : BOOL := FALSE;
+	bB_BK_ZU_3 : BOOL := FALSE;
+	bB_BKAUF_1 : BOOL := FALSE;
+	bB_BKAUF_2 : BOOL := FALSE;
+	bB_BKAUF_3 : BOOL := FALSE;
+	bB_BKZU_1 : BOOL := FALSE;
+	bB_BKZU_2 : BOOL := FALSE;
+	bB_KKAUF_1 : BOOL := FALSE;
+	bB_KKAUF_2 : BOOL := FALSE;
+	bB_KKZU_1 : BOOL := FALSE;
+	bB_KKZU_2 : BOOL := FALSE;
+	bB_KKZU_3 : BOOL := FALSE;
+	bZM_1 : BOOL := FALSE;
+	xTOF_BoilerValve_Close : TOF := (0);
+	xTOF_CmdBypassValve_Close : TOF := (0);
+	xTOF_Valve_5s : TOF := (0);
+	xTON_BoilerValve_Close : TON := (0);
+	xTON_BoilerValve_Open : TON := (0);
+	xTON_CmdBypassValve_Close : TON := (0);
+	xTON_CmdBypassValve_Open : TON := (0);
+	xTON_Valves_24h : TON := (0);
+	bB_KKZU_2A : BOOL;
+	bB_KKZU_2B : BOOL;
+	bB_KKZU_2C : BOOL;
+	bB_KKAUF_3 : BOOL;
+END_VAR

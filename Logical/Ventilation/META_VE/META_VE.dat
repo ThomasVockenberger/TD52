@@ -1,0 +1,128 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2022
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V03.99.00.00	06.03.2013	Weitzer 	generated for modular software	 
+;				02.10.2013	lettenb.	descriptions setted
+;				04.12.2013	lettenb.	dependencies added
+; V04.00.00.00	31.01.2014	lettenb.	version + dependencies changed		
+; V04.00.01.00	26.03.2014	lettenb.	version changed		
+; V04.00.03.00	22.07.2014	lettenb.	para_task update		
+; V04.03.00.00	02.03.2015	lettenb.	lockout warnings at plc cold restart	
+; V04.03.00.00	11.06.2015	Zengerer 	version + dependencies changed (IF change with array index 0 for compatibility with c-tasks)
+;				15.06.2015  lettenb.	PARAMETER_CHK expanded		
+; V04.04.00.00	07.07.2015	lettenb.	version + dependencies changed
+; 				20.03.2017	lettenb.	variant management room ventilation control, PID-contr.for engine room outlet fan regulation(temp.+pressure)
+; V04.05.00.00	20.09.2017	Messner		Active Cooling Program added
+;				22.12.2017	lettenb.	comment added: Safety-related application software source code (EN 13849-1 / 4.6.3)
+; V04.05.01.00	01.03.2018	lettenb.	louver open/closed display, analog position added
+; V04.06.00.00	16.07.2018	Perktold	2968 and 2969 Air inlet/outlet louver status signal failure added
+; V04.07.00.00	09.08.2018	Schmid		change in tManAuxCtr struct (2nd low temperature charge cooling circuit)
+;               29.10.2019  lettenb.	Vent_ER, man.aux.oper.mode for 1 lover bugfix, bu01
+; V04.10.00.00	22.12.2020	lettenb.	config VAR.21/22: analog louvers with fix speed fans(set ZJAL1,ZJAL2,AJAL for this config.)(by jenbacher: not recommended config.)
+; V04.11.00.00	23.11.2021	lettenb.	version changed
+;				28.01.2022	Perktold	included plant controller upgrade
+; V04.11.01.00	24.02.2022	Schmid		bAuxCust array size adjusted
+; V04.12.00.00	07.12.2022	lettenb.	version changed
+; V04.13.00.00	25.09.2023	Bacci		added IN_VE.tAuxV_Supply_Ok.Di in release FC
+;				05.12.2023	Bacci		Added ventilation demand before starting the ingition selftest and exhaust scavenging. New DO for inlet louvers demand for customer (2023-190)
+; V04.14.00.00	25.11.2024	Bacci		T6 Start procedure with purge start (2024-219): added ventilation demand before purge cranking cycle during fast start preparation 
+;				12.12.2024	Nagy		Room Ventilation Trip Redefinition (2024-226): added hi temperature warning and Louver alarm
+; V4.25.00.00	26.11.2025	Bacci		Safety Function - Insufficient Ventilation (2024-202): reactivation of cold county function and safety plausibility check added
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>VE</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.25.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"<PARA1 Name='iEng_Motortype' MIN='208' MAX='920' />"
+"<PARA2 Name='rN_EngStart_LimHi' MIN='50.0' MAX='2200.0' />"
+"<PARA3 />"
+"<PARA4 />"
+"<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_VE</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='AB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='AG' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='CH' VERSION='04.07.00.00' />"
+"	<DEPENDENCY MODULE='CU' VERSION='04.07.00.00' />"
+"	<DEPENDENCY MODULE='EC' VERSION='04.07.00.00' />"
+"	<DEPENDENCY MODULE='EG' VERSION='04.25.00.00' />"
+"	<DEPENDENCY MODULE='EX' VERSION='04.13.00.00' />"
+"	<DEPENDENCY MODULE='GT' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='HA' VERSION='04.06.00.00' />"
+"	<DEPENDENCY MODULE='HC' VERSION='04.07.00.00' />"
+"	<DEPENDENCY MODULE='IG' VERSION='04.13.00.00' />"
+"	<DEPENDENCY MODULE='OP' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='SY' VERSION='04.03.00.00' />"
+"   <DEPENDENCY VISVERSION='02.16.00.00' />"			; Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	Control and monitoring engine room ventilation. "
+"	</General>	"
+""
+"	<F1 Name='Engine room inlet temperature' LastModified='4.04.00.00'>"
+"	Engine room inlet temperature monitoring.	"
+"	</F1>"
+"	<F2 Name='Engine room temperature' LastModified='4.04.00.00'>"
+"	Engine room temperature monitoring and control.	"
+"	</F2>"
+"	<F3 Name='Engine room ventilation monitoring' LastModified='4.00.01.00'>"
+"	Monitoring frequency converters, air flow sensor, doors.	"
+"	</F3>"
+"	<F4 Name='enter name of main function 3 here' LastModified='3.99.00.00'>"
+"	Enter function 3 description for module here.	"
+"	</F4>"
+""
+"	<Info>"
+"   UPDATE V4.03.00	version + dependencies changed (IF change with array index 0 for compatibility with c-tasks)	"
+"   UPDATE V4.07.00	change in tManAuxCtr struct	"
+"	</Info>"
+""
+"	<Customized LastModified='3.99.00.00'>"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

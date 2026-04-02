@@ -1,0 +1,375 @@
+(* Opstate *)
+VAR_CONFIG
+	Cyclic#2.Opstate::OUT_OP.iSt_OpMode AT %Q.Cyclic#2.EngineController::IN_EC.iSt_OpMode;
+	Cyclic#2.Opstate::OUT_OP.rN_Set_Norm AT %Q.Cyclic#2.EngineController::IN_EC.rN_Set_Norm;
+	Cyclic#4.Opstate::OUT_OP.rN_Set_Norm AT %Q.Cyclic#5.EngineController::IN_EC.rN_Set_Norm_TC5;
+	Cyclic#2.Opstate::OUT_OP.rP_Act_Norm AT %Q.Cyclic#2.EngineController::IN_EC.rP_Act_Norm;
+	Cyclic#4.Opstate::OUT_OP.rP_Act_Norm AT %Q.Cyclic#5.EngineController::IN_EC.rP_Act_Norm_TC5;
+	Cyclic#2.Opstate::OUT_OP.rP_Ramp_IncGrad_All_Norm AT %Q.Cyclic#2.EngineController::IN_EC.rP_Ramp_IncGrad_All_Norm;
+	Cyclic#2.Opstate::OUT_OP.rP_Set_GEN2_Norm AT %Q.Cyclic#2.EngineController::IN_EC.rP_Set_GEN2_Norm;
+	Cyclic#2.Opstate::OUT_OP.rP_Set_Norm AT %Q.Cyclic#2.EngineController::IN_EC.rP_Set_Norm;
+	Cyclic#4.Opstate::OUT_OP.rP_Set_Norm AT %Q.Cyclic#5.EngineController::IN_EC.rP_Set_Norm_TC5;
+	Cyclic#2.Opstate::OUT_OP.rP_Act_Norm_Filt AT %Q.Cyclic#2.EngineController::IN_EC.rP_Act_Norm_Filt;
+	Cyclic#4.Opstate::OUT_OP.rP_Act_Norm_Filt AT %Q.Cyclic#5.EngineController::IN_EC.rP_Act_Norm_Filt_TC5;
+	Cyclic#2.Opstate::OUT_OP.bIgn_Dem AT %Q.Cyclic#2.EngineController::IN_EC.bIgn_Dem;
+	Cyclic#2.Opstate::OUT_OP.tOMSS_MAT AT %Q.Cyclic#2.EngineController::IN_EC.tOMSS_MAT;
+	Cyclic#2.Opstate::OUT_OP.bEng_Dem_Bloc AT %Q.Cyclic#2.EngineController::IN_EC.bEng_Dem_Bloc;
+	Cyclic#2.Opstate::OUT_OP.bEng_Dem AT %Q.Cyclic#2.EngineController::IN_EC.bEng_Dem;
+	Cyclic#2.Opstate::OUT_OP.rP_Nom AT %Q.Cyclic#2.EngineController::IN_EC.rP_Nom;
+	Cyclic#4.Opstate::OUT_OP.rP_Nom AT %Q.Cyclic#6.EngineController::IN_EC.rP_Nom_TC6;
+	Cyclic#2.Opstate::OUT_OP.iCnt_OpHours AT %Q.Cyclic#2.EngineController::IN_EC.iCnt_OpHours;
+	Cyclic#2.Opstate::OUT_OP.bP_Ramp_Target_Reached AT %Q.Cyclic#2.EngineController::IN_EC.bP_Ramp_Target_Reached;
+	Cyclic#2.Opstate::OUT_OP.tEng_Run AT %Q.Cyclic#2.EngineController::IN_EC.tEng_Run;
+	Cyclic#2.Opstate::OUT_OP.bGasTyp1_Act AT %Q.Cyclic#2.EngineController::IN_EC.bGasTyp1_Act;
+	Cyclic#2.Opstate::OUT_OP.bGasTyp2_Act AT %Q.Cyclic#2.EngineController::IN_EC.bGasTyp2_Act;
+	Cyclic#2.Opstate::OUT_OP.bGasTyp3_Act AT %Q.Cyclic#2.EngineController::IN_EC.bGasTyp3_Act;
+	Cyclic#2.Opstate::OUT_OP.bGasTyp4_Act AT %Q.Cyclic#2.EngineController::IN_EC.bGasTyp4_Act;
+	Cyclic#2.Opstate::OUT_OP.bGasTypMix1_2_Act AT %Q.Cyclic#2.EngineController::IN_EC.bGasTypMix1_2_Act;
+	Cyclic#2.Opstate::OUT_OP.rP_Set_Unred_Norm AT %Q.Cyclic#2.EngineController::IN_EC.rP_Set_Unred_Norm;
+	Cyclic#2.Opstate::OUT_OP.iIdx_RSS AT %Q.Cyclic#2.EngineController::IN_EC.iIdx_RSS;
+	Cyclic#5.Opstate::OUT_OP.iIdx_OMSS AT %Q.Cyclic#2.EngineController::IN_EC.iIdx_OMSS;
+	Cyclic#2.Opstate::OUT_OP.rP_Ramp_DecGrad_All_Norm AT %Q.Cyclic#2.EngineController::IN_EC.rP_Ramp_DecGrad_All_Norm;
+	Cyclic#2.Opstate::OUT_OP.bEng_Bloc AT %Q.Cyclic#2.EngineController::IN_EC.bEng_Bloc;
+	Cyclic#2.Opstate::OUT_OP.bGEN2_UseFastRamp AT %Q.Cyclic#2.EngineController::IN_EC.bGEN2_UseFastRamp;
+	Cyclic#2.Opstate::OUT_OP.bFastPowRed AT %Q.Cyclic#2.EngineController::IN_EC.bFastPowRed;
+END_VAR
+(* Synchronization *)
+VAR_CONFIG
+	Cyclic#5.Synchronization::OUT_SY.bDSyLine AT %Q.Cyclic#2.EngineController::IN_EC.bDSyLine;
+	Cyclic#5.Synchronization::OUT_SY.bSynchDem AT %Q.Cyclic#2.EngineController::IN_EC.bSynchDem;
+	Cyclic#5.Synchronization::OUT_SY.iIdx_SyOMSS AT %Q.Cyclic#2.EngineController::IN_EC.iIdx_SyOMSS;
+	Cyclic#5.Synchronization::OUT_SY.bMainsReturn AT %Q.Cyclic#5.EngineController::IN_EC.bMainsReturn;
+	Cyclic#5.Synchronization::OUT_SY.tGCB_RT AT %Q.Cyclic#2.EngineController::IN_EC.tGCB_RT;
+END_VAR
+(* Knocking *)
+VAR_CONFIG
+	Cyclic#2.Knocking::OUT_KN.bKLS98_MSF AT %Q.Cyclic#2.EngineController::IN_EC.bKLS98_MSF;
+	Cyclic#2.Knocking::OUT_KN.rKno_IP_Red AT %Q.Cyclic#2.EngineController::IN_EC.rKno_IP_Red;
+	Cyclic#2.Knocking::OUT_KN.rCA_Knck_Red AT %Q.Cyclic#2.EngineController::IN_EC.rCA_Knck_Red;
+	Cyclic#2.Knocking::OUT_KN.iIdx_Cyl_Knck_Max AT %Q.Cyclic#2.EngineController::IN_EC.iIdx_Cyl_Knck_Max;
+	Cyclic#2.Knocking::OUT_KN.rKnck_Intgr AT %Q.Cyclic#2.EngineController::IN_EC.rKnck_Intgr;
+	Cyclic#2.Knocking::OUT_KN.rKno_T2s_Red AT %Q.Cyclic#2.EngineController::IN_EC.rKno_T2s_Red;
+	Cyclic#2.Knocking::OUT_KN.rKnck_Intgr_Max AT %Q.Cyclic#2.EngineController::IN_EC.rKnck_Intgr_Max;
+	Cyclic#2.Knocking::OUT_KN.rPr_Knck_Filt AT %Q.Cyclic#2.EngineController::IN_EC.rPr_Knck_Filt;
+	Cyclic#2.Knocking::OUT_KN.iState_RKS AT %Q.Cyclic#2.EngineController::IN_EC.iState_RKS;
+	Cyclic#2.Knocking::OUT_KN.rPr_P2s_Knck_Offs AT %Q.Cyclic#2.EngineController::IN_EC.rPr_P2s_Knck_Offs;
+	Cyclic#2.Knocking::OUT_KN.rPmax_Knck_Red AT %Q.Cyclic#2.EngineController::IN_EC.rPmax_Knck_Red;
+	Cyclic#2.Knocking::OUT_KN.rIntSignal AT %Q.Cyclic#2.EngineController::IN_EC.rIntSignal;
+	Cyclic#4.Knocking::OUT_KN.bTExh_Mon_UseNarrowWindow AT %Q.Cyclic#5.EngineController::IN_EC.bTExh_Mon_UseNarrowWindow;
+END_VAR
+(* AmmBase *)
+VAR_CONFIG
+	Cyclic#2.AmmBase::OUT_AB.tAB2EC AT %Q.Cyclic#2.EngineController::IN_EC.tAB2EC;
+	Cyclic#4.AmmBase::OUT_AB.tAB2EC AT %Q.Cyclic#5.EngineController::IN_EC.tAB2EC_TC5;
+	Cyclic#2.AmmBase::OUT_AB.bMMD_GenAlarmTestOn AT %Q.Cyclic#2.EngineController::IN_EC.bMMD_GenAlarmTestOn;
+	Cyclic#2.AmmBase::OUT_AB.bMMD_BB_AlarmTestOn AT %Q.Cyclic#2.EngineController::IN_EC.bMMD_BB_AlarmTestOn;
+	Cyclic#2.AmmBase::OUT_AB.bServiceMode AT %Q.Cyclic#2.EngineController::IN_EC.bServiceMode;
+END_VAR
+(* Ignition *)
+VAR_CONFIG
+	Cyclic#2.Ignition::OUT_IG.bIgn_Run AT %Q.Cyclic#2.EngineController::IN_EC.bIgn_Run;
+	Cyclic#2.Ignition::OUT_IG.rN_EngAct AT %Q.Cyclic#2.EngineController::IN_EC.rN_EngAct;
+	Cyclic#2.Ignition::OUT_IG.rCA_Ign_Avg AT %Q.Cyclic#2.EngineController::IN_EC.rCA_Ign_Avg;
+	Cyclic#2.Ignition::OUT_IG.rU_Ign_Max AT %Q.Cyclic#2.EngineController::IN_EC.rU_Ign_Max;
+	Cyclic#4.Ignition::OUT_IG.rU_Ign_Cyl AT %Q.Cyclic#5.EngineController::IN_EC.rU_Ign_Cyl;
+END_VAR
+(* ICxx *)
+VAR_CONFIG
+	Cyclic#1.ICxx::OUT_IC.rN_IgnIC_Act AT %Q.Cyclic#2.EngineController::IN_EC.rN_IgnIC_Act;
+END_VAR
+(* ParaBase *)
+VAR_CONFIG
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#2.EngineController::IN_EC.tPB2MM;
+END_VAR
+(* Gastrain *)
+VAR_CONFIG
+	Cyclic#5.Gastrain::OUT_GT.iIdx_Gtyp_Dem AT %Q.Cyclic#2.EngineController::IN_EC.iIdx_Gtyp_Dem;
+	Cyclic#5.Gastrain::OUT_GT.iIdx_Gtyp_Dem AT %Q.Cyclic#5.EngineController::IN_EC.iIdx_Gtyp_Dem_TC5;
+	Cyclic#5.Gastrain::OUT_GT.bGasMixingActive AT %Q.Cyclic#2.EngineController::IN_EC.bGasMixingActive;
+	Cyclic#2.Gastrain::OUT_GT.tGV1_Open AT %Q.Cyclic#2.EngineController::IN_EC.tGV1_Open;
+	Cyclic#2.Gastrain::OUT_GT.tGV2_Open AT %Q.Cyclic#2.EngineController::IN_EC.tGV2_Open;
+	Cyclic#5.Gastrain::OUT_GT.rGT_QualMix_1_2 AT %Q.Cyclic#2.EngineController::IN_EC.rGT_QualMix_1_2_TC2;
+	Cyclic#5.Gastrain::OUT_GT.rGT_QualMix_1_2 AT %Q.Cyclic#5.EngineController::IN_EC.rGT_QualMix_1_2;
+	Cyclic#2.Gastrain::OUT_GT.rGT_RatioMix AT %Q.Cyclic#2.EngineController::IN_EC.rGT_RatioMix_TC2;
+	Cyclic#4.Gastrain::OUT_GT.rGT_RatioMix AT %Q.Cyclic#5.EngineController::IN_EC.rGT_RatioMix;
+	Cyclic#2.Gastrain::OUT_GT.bDualTJ AT %Q.Cyclic#2.EngineController::IN_EC.bDualTJ;
+	Cyclic#5.Gastrain::OUT_GT.rGT_MixSet AT %Q.Cyclic#2.EngineController::IN_EC.rGT_MixSet;
+	Cyclic#2.Gastrain::OUT_GT.tGV_Rel AT %Q.Cyclic#2.EngineController::IN_EC.tGV_Rel;
+	Cyclic#2.Gastrain::OUT_GT.rPr_GR_UF AT %Q.Cyclic#2.EngineController::IN_EC.rPr_GR_UF;
+	Cyclic#5.Gastrain::OUT_GT.bGV_On AT %Q.Cyclic#2.EngineController::IN_EC.bGV_On;
+	Cyclic#2.Gastrain::OUT_GT.rP2s_red_1 AT %Q.Cyclic#2.EngineController::IN_EC.rP2s_red_1;
+	Cyclic#5.Gastrain::OUT_GT.bDeflagrationPrct AT %Q.Cyclic#2.EngineController::IN_EC.bDeflagrationPrct;
+	Cyclic#5.Gastrain::OUT_GT.bGT1_SafeDevOK AT %Q.Cyclic#5.EngineController::IN_EC.bGT1_SafeDevOK;
+	Cyclic#5.Gastrain::OUT_GT.bGT2_SafeDevOK AT %Q.Cyclic#5.EngineController::IN_EC.bGT2_SafeDevOK;
+	Cyclic#5.Gastrain::OUT_GT.bPCGT_SafeDevOK AT %Q.Cyclic#5.EngineController::IN_EC.bPCGT_SafeDevOK;
+	Cyclic#5.Gastrain::OUT_GT.rPr_P2s_demand_PCGT AT %Q.Cyclic#2.EngineController::IN_EC.rPr_P2s_demand_PCGT;
+	Cyclic#5.Gastrain::OUT_GT.rH2 AT %Q.Cyclic#2.EngineController::IN_EC.rH2;
+	Cyclic#5.Gastrain::OUT_GT.rH2_Comp AT %Q.Cyclic#2.EngineController::IN_EC.rH2_Comp;
+END_VAR
+(* Customized *)
+VAR_CONFIG
+	Cyclic#5.Customized::OUT_CU.rCA_IgnP_CylOffset AT %Q.Cyclic#2.EngineController::IN_EC.rCA_IgnP_CylOffset;
+	Cyclic#5.Customized::OUT_CU.bLeanox_Man_Cust AT %Q.Cyclic#5.EngineController::IN_EC.bLeanox_Man_Cust;
+	Cyclic#5.Customized::OUT_CU.rCA_PI_Dur_COffset AT %Q.Cyclic#2.EngineController::IN_EC.rCA_PI_Dur_COffset;
+	Cyclic#5.Customized::OUT_CU.rLam_Eng_LL_ManSet_Cust AT %Q.Cyclic#5.EngineController::IN_EC.rLam_Eng_LL_ManSet_Cust;
+	Cyclic#5.Customized::OUT_CU.rPr_Leanox_ManSet_Cust AT %Q.Cyclic#5.EngineController::IN_EC.rPr_Leanox_ManSet_Cust;
+	Cyclic#5.Customized::OUT_CU.rCtr_Cust2_W_set AT %Q.Cyclic#2.EngineController::IN_EC.rCtr_Cust2_W_set;
+	Cyclic#5.Customized::OUT_CU.bUseCtrCust2_4HumidityCtr AT %Q.Cyclic#2.EngineController::IN_EC.bUseCtrCust2_4HumidityCtr;
+	Cyclic#5.Customized::OUT_CU.bRelSy_Customized AT %Q.Cyclic#2.EngineController::IN_EC.bRelSy_Customized;
+	Cyclic#5.Customized::OUT_CU.b_FilterScav_Active AT %Q.Cyclic#2.EngineController::IN_EC.b_FilterScav_Active;
+	Cyclic#5.Customized::OUT_CU.iSource_F_N_OffsSet AT %Q.Cyclic#2.EngineController::IN_EC.iSource_F_N_OffsSet; (*F/N Setpoint: 0= no setpoint, 1= Droop, 2= External, 3= LSL *)
+	Cyclic#5.Customized::OUT_CU.iAggrekoEngineVersion AT %Q.Cyclic#2.EngineController::IN_EC.iAggrekoEngineVersion;
+	Cyclic#5.Customized::OUT_CU.iAggrekoTCConfig AT %Q.Cyclic#2.EngineController::IN_EC.iAggrekoTCConfig;
+	Cyclic#5.Customized::OUT_CU.rHum_GasIn_Abs AT %Q.Cyclic#2.EngineController::IN_EC.rHum_GasIn_Abs;
+END_VAR
+(* Visu *)
+VAR_CONFIG
+	Cyclic#5.Visu::OUT_VI.iPassLevel AT %Q.Cyclic#2.EngineController::IN_EC.iPassLevel;
+END_VAR
+(* Emission *)
+VAR_CONFIG
+	Cyclic#5.Emission::OUT_EM.rNOx_NOxS_EngOut_Avg AT %Q.Cyclic#5.EngineController::IN_EC.rNOx_NOxS_EngOut_Avg;
+	Cyclic#5.Emission::OUT_EM.bAMM_NOx_NOxS_EngOut_Avg AT %Q.Cyclic#5.EngineController::IN_EC.bAMM_NOx_NOxS_EngOut_Avg;
+	Cyclic#5.Emission::OUT_EM.rNOx_Em_CatOut_Set AT %Q.Cyclic#5.EngineController::IN_EC.rNOx_Em_CatOut_Set;
+	Cyclic#5.Emission::OUT_EM.rNOx_Em_EngOut_Set AT %Q.Cyclic#5.EngineController::IN_EC.rNOx_Em_EngOut_Set;
+	Cyclic#5.Emission::OUT_EM.rNOx_NOxS_CatOut_cor AT %Q.Cyclic#5.EngineController::IN_EC.rNOx_NOxS_CatOut_cor;
+	Cyclic#5.Emission::OUT_EM.bSCR_NH3SlipDetected AT %Q.Cyclic#5.EngineController::IN_EC.bSCR_NH3SlipDetected;
+	Cyclic#5.Emission::OUT_EM.bRel_SCR_UDC AT %Q.Cyclic#5.EngineController::IN_EC.bRel_SCR_UDC;
+END_VAR
+(* ThermalReactor *)
+VAR_CONFIG
+	Cyclic#5.ThermalReactor::OUT_TR.bThR_Active AT %Q.Cyclic#2.EngineController::IN_EC.bThR_Active;
+	Cyclic#5.ThermalReactor::OUT_TR.tThR_Contactor AT %Q.Cyclic#2.EngineController::IN_EC.tThR_Contactor;
+	Cyclic#5.ThermalReactor::OUT_TR.bThR_RelGas_Tmin AT %Q.Cyclic#2.EngineController::IN_EC.bThR_RelGas_Tmin;
+END_VAR
+(* Exhaust *)
+VAR_CONFIG
+	Cyclic#5.Exhaust::OUT_EX.tN2_ScavGV_CoOpen AT %Q.Cyclic#2.EngineController::IN_EC.tN2_ScavGV_CoOpen;
+	Cyclic#5.Exhaust::OUT_EX.bScavFinished AT %Q.Cyclic#2.EngineController::IN_EC.bScavFinished_TC2;
+	Cyclic#5.Exhaust::OUT_EX.bScavFinished AT %Q.Cyclic#5.EngineController::IN_EC.bScavFinished;
+END_VAR
+(* GasMeteringUnit *)
+VAR_CONFIG
+	Cyclic#2.GasMeteringUnit::OUT_GD.rGMU_Pos_Valve_Prom AT %Q.Cyclic#2.EngineController::IN_EC.rGMU_Pos_Valve_Prom;
+	Cyclic#2.GasMeteringUnit::OUT_GD.rGMU_Pr_DiffGas AT %Q.Cyclic#2.EngineController::IN_EC.rGMU_Pr_DiffGas;
+END_VAR
+(* ChargingUnit *)
+VAR_CONFIG
+	Cyclic#2.ChargingUnit::OUT_CH.rT_Ch_T2s_Avg AT %Q.Cyclic#2.EngineController::IN_EC.rT_Ch_T2s_Avg;
+	Cyclic#2.ChargingUnit::OUT_CH.rT_Ch_T2s_Avg_UF AT %Q.Cyclic#2.EngineController::IN_EC.rT_Ch_T2s_Avg_UF;
+	Cyclic#2.ChargingUnit::OUT_CH.rT_Ch_T2s_A AT %Q.Cyclic#2.EngineController::IN_EC.rT_Ch_T2s_A;
+	Cyclic#2.ChargingUnit::OUT_CH.rT_Ch_T2s_B AT %Q.Cyclic#2.EngineController::IN_EC.rT_Ch_T2s_B;
+	Cyclic#2.ChargingUnit::OUT_CH.rPr_Ch_P2s_Avg AT %Q.Cyclic#2.EngineController::IN_EC.rPr_Ch_P2s_Avg;
+	Cyclic#2.ChargingUnit::OUT_CH.rPr_Ch_P2s_Avg_UF AT %Q.Cyclic#2.EngineController::IN_EC.rPr_Ch_P2s_Avg_UF;
+	Cyclic#2.ChargingUnit::OUT_CH.rPr_Ch_P2s_A AT %Q.Cyclic#2.EngineController::IN_EC.rPr_Ch_P2s_A;
+	Cyclic#2.ChargingUnit::OUT_CH.rPr_Ch_P2s_A_UF AT %Q.Cyclic#2.EngineController::IN_EC.rPr_Ch_P2s_A_UF;
+	Cyclic#2.ChargingUnit::OUT_CH.rPr_Ch_P2s_B AT %Q.Cyclic#2.EngineController::IN_EC.rPr_Ch_P2s_B;
+	Cyclic#2.ChargingUnit::OUT_CH.rPr_Ch_P2s_B_UF AT %Q.Cyclic#2.EngineController::IN_EC.rPr_Ch_P2s_B_UF;
+	Cyclic#2.ChargingUnit::OUT_CH.rT_Ch_T1LP_Avg AT %Q.Cyclic#2.EngineController::IN_EC.rT_Ch_T1LP_Avg; (*V04.04.00.00*)
+	Cyclic#2.ChargingUnit::OUT_CH.bAMM_T_Ch_T1LP_Avg AT %Q.Cyclic#2.EngineController::IN_EC.bAMM_T_Ch_T1LP_Avg; (*V04.04.00.00*)
+	Cyclic#5.ChargingUnit::OUT_CH.rN_TCHP_HiHi AT %Q.Cyclic#2.EngineController::IN_EC.rN_TCHP_HiHi; (*V04.10.00.00*)
+	Cyclic#5.ChargingUnit::OUT_CH.rN_TCLP_HiHi AT %Q.Cyclic#2.EngineController::IN_EC.rN_TCLP_HiHi; (*V04.10.00.00*)
+END_VAR
+(* SAFI *)
+VAR_CONFIG
+	Cyclic#1.SAFI::OUT_SA.rN_IgnSAFI_Act AT %Q.Cyclic#2.EngineController::IN_EC.rN_IgnSAFI_Act;
+	Cyclic#4.SAFI::OUT_SA.rT_EG_Cyl AT %Q.Cyclic#5.EngineController::IN_EC.rT_EG_Cyl;
+	Cyclic#1.SAFI::OUT_SA.rN_IgnSAFI_LastValOK AT %Q.Cyclic#2.EngineController::IN_EC.rN_IgnSAFI_LastValOK;
+	Cyclic#2.SAFI::OUT_SA.bPBCSensErr AT %Q.Cyclic#2.EngineController::IN_EC.bPBCSensErr;
+	Cyclic#2.SAFI::OUT_SA.bPBCCompLineCheck AT %Q.Cyclic#2.EngineController::IN_EC.bPBCCompLineCheck;
+	Cyclic#2.SAFI::OUT_SA.bPBCNegVoltCheck AT %Q.Cyclic#2.EngineController::IN_EC.bPBCNegVoltCheck;
+	Cyclic#2.SAFI::OUT_SA.bPBCNegPresCheck AT %Q.Cyclic#2.EngineController::IN_EC.bPBCNegPresCheck;
+	Cyclic#2.SAFI::OUT_SA.bPBCPresSlopeCheck AT %Q.Cyclic#2.EngineController::IN_EC.bPBCPresSlopeCheck;
+	Cyclic#2.SAFI::OUT_SA.bPBCSlowDriftCheck AT %Q.Cyclic#2.EngineController::IN_EC.bPBCSlowDriftCheck;
+	Cyclic#2.SAFI::OUT_SA.bPBCConfNotOK AT %Q.Cyclic#2.EngineController::IN_EC.bPBCConfNotOK;
+	Cyclic#2.SAFI::OUT_SA.bPBCMemBurst AT %Q.Cyclic#2.EngineController::IN_EC.bPBCMemBurst;
+	Cyclic#2.SAFI::OUT_SA.bPBCInvalidPar AT %Q.Cyclic#2.EngineController::IN_EC.bPBCInvalidPar;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC0 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC0;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC1 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC1;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC2 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC2;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC3 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC3;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC4 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC4;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC5 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC5;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC6 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC6;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC7 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC7;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC8 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC8;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC9 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC9;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC10 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC10;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC11 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC11;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC12 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC12;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC13 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC13;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC14 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC14;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC15 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC15;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC16 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC16;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC17 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC17;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC18 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC18;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC19 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC19;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC20 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC20;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC21 AT %Q.Cyclic#2.EngineController::IN_EC.tMS_PBC21;
+	Cyclic#5.SAFI::MM2VIS.bSA_VCD_Active AT %Q.Cyclic#5.EngineController::IN_EC.bSA_VCD_Active;
+	Cyclic#2.SAFI::OUT_SA.bPBCCPSSat AT %Q.Cyclic#2.EngineController::IN_EC.bPBCCPSSat;
+	Cyclic#2.SAFI::OUT_SA.rIHR AT %Q.Cyclic#2.EngineController::IN_EC.rIHR; (* IHR for Lambda_PBC calculation*)
+	Cyclic#5.SAFI::OUT_SA.rU_Ign_Max_LimHi AT %Q.Cyclic#2.EngineController::IN_EC.rU_Ign_Max_LimHi;
+	Cyclic#4.SAFI::OUT_SA.iT_EG_CylFault AT %Q.Cyclic#5.EngineController::IN_EC.iT_EG_CylFault;
+	Cyclic#5.SAFI::OUT_SA.bSA_PBCFrozenAltern AT %Q.Cyclic#2.EngineController::IN_EC.bSA_PBCFrozenAltern;
+	Cyclic#5.SAFI::OUT_SA.bMsg9318_Set AT %Q.Cyclic#2.EngineController::IN_EC.bMsg9318_Set;
+END_VAR
+(* HalIO Cyclic 2*)
+VAR_CONFIG
+	Cyclic#2.HalIO::tP_Act AT %Q.Cyclic#2.EngineController::IN_EC.tP_Act;
+	Cyclic#2.HalIO::tSafetyLoop_Eng AT %Q.Cyclic#2.EngineController::IN_EC.tSafetyLoop_Eng;
+	Cyclic#2.HalIO::tActuator_Ok AT %Q.Cyclic#2.EngineController::IN_EC.tActuator_Ok;
+	Cyclic#2.HalIO::tActuator_Ok_TV1A AT %Q.Cyclic#2.EngineController::IN_EC.tActuator_Ok_TV1A;
+	Cyclic#2.HalIO::tActuator_Ok_TV1B AT %Q.Cyclic#2.EngineController::IN_EC.tActuator_Ok_TV1B;
+	Cyclic#2.HalIO::tActuator_Ok_TV2A AT %Q.Cyclic#2.EngineController::IN_EC.tActuator_Ok_TV2A;
+	Cyclic#2.HalIO::tActuator_Ok_TV2B AT %Q.Cyclic#2.EngineController::IN_EC.tActuator_Ok_TV2B;
+	Cyclic#2.HalIO::tGCB_On AT %Q.Cyclic#2.EngineController::IN_EC.tGCB_On;
+	Cyclic#2.HalIO::tT_EG_Cyl AT %Q.Cyclic#2.EngineController::IN_EC.tT_EG_Cyl;
+	Cyclic#2.HalIO::tActuator_Ok_CBV1 AT %Q.Cyclic#2.EngineController::IN_EC.tActuator_Ok_CBV1;
+	Cyclic#2.HalIO::tActuator_Ok_CBV2 AT %Q.Cyclic#2.EngineController::IN_EC.tActuator_Ok_CBV2;
+	Cyclic#2.HalIO::tT_EO AT %Q.Cyclic#2.EngineController::IN_EC.tT_EO;
+	Cyclic#2.HalIO::tT_AirIn AT %Q.Cyclic#2.EngineController::IN_EC.tT_AirIn;
+	Cyclic#2.HalIO::tHumidity_AirIn AT %Q.Cyclic#2.EngineController::IN_EC.tHumidity_AirIn;
+	Cyclic#2.HalIO::tPos_Act_WG AT %Q.Cyclic#2.EngineController::IN_EC.tPos_Act_WG;
+	Cyclic#2.HalIO::tPos_Act_WG_A AT %Q.Cyclic#2.EngineController::IN_EC.tPos_Act_WG_A;
+	Cyclic#2.HalIO::tPos_Act_WG_B AT %Q.Cyclic#2.EngineController::IN_EC.tPos_Act_WG_B;
+	Cyclic#2.HalIO::tPF_Act AT %Q.Cyclic#2.EngineController::IN_EC.tPF_Act;
+	Cyclic#2.HalIO::tI_L1 AT %Q.Cyclic#2.EngineController::IN_EC.tI_L1;
+	Cyclic#2.HalIO::tI_L2 AT %Q.Cyclic#2.EngineController::IN_EC.tI_L2;
+	Cyclic#2.HalIO::tI_L3 AT %Q.Cyclic#2.EngineController::IN_EC.tI_L3;
+	Cyclic#2.HalIO::tF_MMD AT %Q.Cyclic#2.EngineController::IN_EC.tF_MMD;
+	Cyclic#2.HalIO::tF_MMD_BusBar AT %Q.Cyclic#2.EngineController::IN_EC.tF_MMD_BusBar;
+	Cyclic#2.HalIO::tU_Avg AT %Q.Cyclic#2.EngineController::IN_EC.tU_Avg;
+	Cyclic#2.HalIO::tI_Avg AT %Q.Cyclic#2.EngineController::IN_EC.tI_Avg;
+	Cyclic#2.HalIO::tU_L1L2 AT %Q.Cyclic#2.EngineController::IN_EC.tU_L1L2;
+	Cyclic#2.HalIO::tU_L2L3 AT %Q.Cyclic#2.EngineController::IN_EC.tU_L2L3;
+	Cyclic#2.HalIO::tU_L3L1 AT %Q.Cyclic#2.EngineController::IN_EC.tU_L3L1;
+	Cyclic#2.HalIO::tU_L1N AT %Q.Cyclic#2.EngineController::IN_EC.tU_L1N;
+	Cyclic#2.HalIO::tU_L2N AT %Q.Cyclic#2.EngineController::IN_EC.tU_L2N;
+	Cyclic#2.HalIO::tU_L3N AT %Q.Cyclic#2.EngineController::IN_EC.tU_L3N;
+	Cyclic#2.HalIO::tT_Ch_T1HP AT %Q.Cyclic#2.EngineController::IN_EC.tT_Ch_T1HP;
+	Cyclic#2.HalIO::tN_TCHP AT %Q.Cyclic#2.EngineController::IN_EC.tN_TCHP;
+	Cyclic#2.HalIO::tN_TCLP AT %Q.Cyclic#2.EngineController::IN_EC.tN_TCLP;
+	Cyclic#2.HalIO::tT_EGaTC AT %Q.Cyclic#2.EngineController::IN_EC.tT_EGaTC;
+	Cyclic#2.HalIO::tT_EGbTC AT %Q.Cyclic#2.EngineController::IN_EC.tT_EGbTC;
+	Cyclic#2.HalIO::tLam_Act AT %Q.Cyclic#2.EngineController::IN_EC.tLam_Act;
+	Cyclic#2.HalIO::tPos_Act_TV AT %Q.Cyclic#2.EngineController::IN_EC.tPos_Act_TV;
+	Cyclic#2.HalIO::tPos_Act_TV_A1 AT %Q.Cyclic#2.EngineController::IN_EC.tPos_Act_TV_A1;
+	Cyclic#2.HalIO::tPos_Act_TV_A2 AT %Q.Cyclic#2.EngineController::IN_EC.tPos_Act_TV_A2;
+	Cyclic#2.HalIO::tPos_Act_TV_B1 AT %Q.Cyclic#2.EngineController::IN_EC.tPos_Act_TV_B1;
+	Cyclic#2.HalIO::tPos_Act_TV_B2 AT %Q.Cyclic#2.EngineController::IN_EC.tPos_Act_TV_B2;
+	Cyclic#2.HalIO::tPos_Act_CBV_A1 AT %Q.Cyclic#2.EngineController::IN_EC.tPos_Act_CBV_A1;
+	Cyclic#2.HalIO::tPos_Act_CBV_A2 AT %Q.Cyclic#2.EngineController::IN_EC.tPos_Act_CBV_A2;
+	Cyclic#2.HalIO::tPos_Act_CBV_B1 AT %Q.Cyclic#2.EngineController::IN_EC.tPos_Act_CBV_B1;
+	Cyclic#2.HalIO::tPos_Act_CBV_B2 AT %Q.Cyclic#2.EngineController::IN_EC.tPos_Act_CBV_B2;
+	Cyclic#2.HalIO::tT_EO_Preheating AT %Q.Cyclic#2.EngineController::IN_EC.tT_EO_Preheating;
+	Cyclic#2.HalIO::tT_ECW AT %Q.Cyclic#2.EngineController::IN_EC.tT_ECW;
+	Cyclic#2.HalIO::tT_Ch_T1HP_A AT %Q.Cyclic#2.EngineController::IN_EC.tT_Ch_T1HP_A;
+	Cyclic#2.HalIO::tT_Ch_T1HP_B AT %Q.Cyclic#2.EngineController::IN_EC.tT_Ch_T1HP_B;
+	Cyclic#2.HalIO::tT_EGbHPTC_A AT %Q.Cyclic#2.EngineController::IN_EC.tT_EGbHPTC_A;
+	Cyclic#2.HalIO::tT_EGbHPTC_B AT %Q.Cyclic#2.EngineController::IN_EC.tT_EGbHPTC_B;
+	Cyclic#2.HalIO::tT_EGaHPTC_A AT %Q.Cyclic#2.EngineController::IN_EC.tT_EGaHPTC_A;
+	Cyclic#2.HalIO::tT_EGaHPTC_B AT %Q.Cyclic#2.EngineController::IN_EC.tT_EGaHPTC_B;
+	Cyclic#2.HalIO::tN_TCHP_A AT %Q.Cyclic#2.EngineController::IN_EC.tN_TCHP_A;
+	Cyclic#2.HalIO::tN_TCHP_B AT %Q.Cyclic#2.EngineController::IN_EC.tN_TCHP_B;
+	Cyclic#2.HalIO::tN_TCLP_A AT %Q.Cyclic#2.EngineController::IN_EC.tN_TCLP_A;
+	Cyclic#2.HalIO::tN_TCLP_B AT %Q.Cyclic#2.EngineController::IN_EC.tN_TCLP_B;
+	Cyclic#2.HalIO::tF_MMD_Synch2 AT %Q.Cyclic#2.EngineController::IN_EC.tF_MMD_Synch2;
+	Cyclic#2.HalIO::tFastStartReq AT %Q.Cyclic#2.EngineController::IN_EC.tFastStartReq;
+	Cyclic#2.HalIO::tVeryFastStartReq AT %Q.Cyclic#2.EngineController::IN_EC.tVeryFastStartReq;
+	Cyclic#2.HalIO::tT_EO_Pan AT %Q.Cyclic#2.EngineController::IN_EC.tT_EO_Pan;
+	Cyclic#2.HalIO::tT_GR AT %Q.Cyclic#2.EngineController::IN_EC.tT_GR;
+	Cyclic#5.HalIO::tT_SCR_CatOut AT %Q.Cyclic#5.EngineController::IN_EC.tT_SCR_CatOut; (*V04.05.00.00*)
+	Cyclic#2.HalIO::tTBMode AT %Q.Cyclic#2.EngineController::IN_EC.tTBMode;
+	Cyclic#2.HalIO::tMCB_On AT %Q.Cyclic#2.EngineController::IN_EC.tMCB_On;
+	Cyclic#2.HalIO::tActuator_Ok_CBV_A AT %Q.Cyclic#2.EngineController::IN_EC.tActuator_Ok_CBV_A;
+	Cyclic#2.HalIO::tActuator_Ok_CBV_B AT %Q.Cyclic#2.EngineController::IN_EC.tActuator_Ok_CBV_B;
+	Cyclic#2.HalIO::tActuator_Ok_WG AT %Q.Cyclic#2.EngineController::IN_EC.tActuator_Ok_WG;
+	Cyclic#2.HalIO::tActuator_Ok_WG_A AT %Q.Cyclic#2.EngineController::IN_EC.tActuator_Ok_WG_A;
+	Cyclic#2.HalIO::tActuator_Ok_WG_B AT %Q.Cyclic#2.EngineController::IN_EC.tActuator_Ok_WG_B;
+	Cyclic#2.HalIO::tPr_CC AT %Q.Cyclic#2.EngineController::IN_EC.tPr_CC;
+	Cyclic#4.HalIO::tT_EGaLPTC_A AT %Q.Cyclic#5.EngineController::IN_EC.tT_EGaLPTC_A;
+	Cyclic#2.HalIO::tT_EGaLPTC_A AT %Q.Cyclic#2.EngineController::IN_EC.tT_EGaLPTC_A_TC2;
+	Cyclic#4.HalIO::tT_EGaLPTC_B AT %Q.Cyclic#5.EngineController::IN_EC.tT_EGaLPTC_B;
+	Cyclic#2.HalIO::tT_EGaLPTC_B AT %Q.Cyclic#2.EngineController::IN_EC.tT_EGaLPTC_B_TC2;
+	Cyclic#5.HalIO::OUT_HA.szEng_Motorversion AT %Q.Cyclic#6.EngineController::IN_EC.szEng_Motorversion; (*V04.04.00.00*)
+	Cyclic#5.HalIO::OUT_HA.bSimWinMOD_Active AT %Q.Cyclic#5.EngineController::IN_EC.bSimWinMOD_Active; (*V04.05.00.00*)
+	Cyclic#5.HalIO::OUT_HA.bSimWinMOD_FastStart AT %Q.Cyclic#5.EngineController::IN_EC.bSimWinMOD_FastStart; (*V04.05.00.00*)
+	Cyclic#1.HalIO::OUT_HA.rAng_MMD_Diff AT %Q.Cyclic#2.EngineController::IN_EC.rAng_MMD_Diff;
+	Cyclic#2.HalIO::tMnsOk AT %Q.Cyclic#2.EngineController::IN_EC.tMnsOk;
+	Cyclic#2.HalIO::tDAI_V_Opened AT %Q.Cyclic#2.EngineController::IN_EC.tDAI_V_Opened;
+	Cyclic#2.HalIO::tDAI_V_Closed AT %Q.Cyclic#2.EngineController::IN_EC.tDAI_V_Closed;
+	Cyclic#2.HalIO::tPos_DAI_Act_A AT %Q.Cyclic#2.EngineController::IN_EC.tPos_DAI_Act_A;
+	Cyclic#2.HalIO::tPos_DAI_Act_B AT %Q.Cyclic#2.EngineController::IN_EC.tPos_DAI_Act_B;
+	Cyclic#2.HalIO::tDAI_CB_On AT %Q.Cyclic#2.EngineController::IN_EC.tDAI_CB_On;
+	Cyclic#2.HalIO::tActuator_Ok_DAI_A AT %Q.Cyclic#2.EngineController::IN_EC.tActuator_Ok_DAI_A;
+	Cyclic#2.HalIO::tActuator_Ok_DAI_B AT %Q.Cyclic#2.EngineController::IN_EC.tActuator_Ok_DAI_B;
+	Cyclic#2.HalIO::tGCB_OGP AT %Q.Cyclic#2.EngineController::IN_EC.tGCB_OGP;
+	Cyclic#2.HalIO::tT_SCR_CatIn AT %Q.Cyclic#2.EngineController::IN_EC.tT_SCR_CatIn_TC2;
+	Cyclic#2.HalIO::tT_SCR_CatOut AT %Q.Cyclic#2.EngineController::IN_EC.tT_SCR_CatOut_TC2;
+	Cyclic#2.HalIO::tT_EGbCat AT %Q.Cyclic#2.EngineController::IN_EC.tT_EGbCat;
+	Cyclic#2.HalIO::tT_EGaCat AT %Q.Cyclic#2.EngineController::IN_EC.tT_EGaCat;
+	Cyclic#2.HalIO::tQ_Act AT %Q.Cyclic#2.EngineController::IN_EC.tQ_Act;
+	Cyclic#2.HalIO::tU_Gen_Exc AT %Q.Cyclic#2.EngineController::IN_EC.tU_Gen_Exc;
+	Cyclic#2.HalIO::OUT_HA.iCAN_WG_us_ident AT %Q.Cyclic#2.EngineController::IN_EC.iCAN_WG_us_ident; (*Waste Gate CAN*)
+END_VAR
+(* HalIO Cyclic 1*)
+VAR_CONFIG
+	Cyclic#1.HalIO::tPr_GR_II AT %Q.Cyclic#1.EngineController::IN_EC.tPr_GR_II;
+	Cyclic#1.HalIO::tPr_GR_I AT %Q.Cyclic#1.EngineController::IN_EC.tPr_GR_I;
+	Cyclic#1.HalIO::tPr_Ch_P1HP AT %Q.Cyclic#1.EngineController::IN_EC.tPr_Ch_P1HP;
+	Cyclic#1.HalIO::tPr_Ch_P1HP_A AT %Q.Cyclic#1.EngineController::IN_EC.tPr_Ch_P1HP_A;
+	Cyclic#1.HalIO::tPr_Ch_P1HP_B AT %Q.Cyclic#1.EngineController::IN_EC.tPr_Ch_P1HP_B;
+	Cyclic#1.HalIO::tPr_Ch_P2 AT %Q.Cyclic#1.EngineController::IN_EC.tPr_Ch_P2;
+	Cyclic#1.HalIO::tPr_Ch_P2bFA AT %Q.Cyclic#1.EngineController::IN_EC.tPr_Ch_P2bFA;
+	Cyclic#1.HalIO::tPr_Ch_P2HP AT %Q.Cyclic#1.EngineController::IN_EC.tPr_Ch_P2HP;
+	Cyclic#1.HalIO::tPr_Ch_P2s AT %Q.Cyclic#1.EngineController::IN_EC.tPr_Ch_P2s;
+	Cyclic#1.HalIO::tPr_Ch_P2s_A AT %Q.Cyclic#1.EngineController::IN_EC.tPr_Ch_P2s_A;
+	Cyclic#1.HalIO::tPr_Ch_P2s_B AT %Q.Cyclic#1.EngineController::IN_EC.tPr_Ch_P2s_B;
+	Cyclic#1.HalIO::tPr_EGbHPTC_A AT %Q.Cyclic#1.EngineController::IN_EC.tPr_EGbHPTC_A;
+	Cyclic#1.HalIO::tPr_EGbHPTC_B AT %Q.Cyclic#1.EngineController::IN_EC.tPr_EGbHPTC_B;
+	Cyclic#1.HalIO::tPr_EGaHPTC_A AT %Q.Cyclic#1.EngineController::IN_EC.tPr_EGaHPTC_A;
+	Cyclic#1.HalIO::tPr_EGaHPTC_B AT %Q.Cyclic#1.EngineController::IN_EC.tPr_EGaHPTC_B;
+	Cyclic#1.HalIO::tPr_EGaLPTC_A AT %Q.Cyclic#1.EngineController::IN_EC.tPr_EGaLPTC_A;
+	Cyclic#1.HalIO::tPr_EGaLPTC_B AT %Q.Cyclic#1.EngineController::IN_EC.tPr_EGaLPTC_B;
+	Cyclic#1.HalIO::tPr_DAI_In AT %Q.Cyclic#1.EngineController::IN_EC.tPr_DAI_In;
+	Cyclic#1.HalIO::tPr_DAI_A AT %Q.Cyclic#1.EngineController::IN_EC.tPr_DAI_A;
+	Cyclic#1.HalIO::tPr_DAI_B AT %Q.Cyclic#1.EngineController::IN_EC.tPr_DAI_B;
+	Cyclic#1.HalIO::tT_DAI AT %Q.Cyclic#1.EngineController::IN_EC.tT_DAI;
+	Cyclic#1.HalIO::tDAI_V_Opened AT %Q.Cyclic#1.EngineController::IN_EC.tDAI_V_Opened_TC1;
+END_VAR
+(*EngineGeneral*)
+VAR_CONFIG
+	Cyclic#5.EngineGeneral::OUT_EG.rPr_Baro_Internal AT %Q.Cyclic#2.EngineController::IN_EC.rPr_Baro_Internal;
+	Cyclic#5.EngineGeneral::OUT_EG.bAMM_Pr_Baro_Internal AT %Q.Cyclic#2.EngineController::IN_EC.bAMM_Pr_Baro_Internal;
+	Cyclic#5.EngineGeneral::Para.rN_EngStart_LimHi AT %Q.Cyclic#2.EngineController::Para.rN_EngStart_LimHi;
+END_VAR
+(*HeatingCooling*)
+VAR_CONFIG
+	Cyclic#5.HeatingCooling::OUT_HC.bT_ECW_RelLoad AT %Q.Cyclic#2.EngineController::IN_EC.bT_ECW_RelLoad;
+END_VAR
+(*AuxiliariesGeneral*)
+VAR_CONFIG
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bPreL_FS_Act AT %Q.Cyclic#2.EngineController::IN_EC.bPreL_FS_Act;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bPreL_FS_EngStaRel AT %Q.Cyclic#2.EngineController::IN_EC.bPreL_FS_EngStaRel;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bT_EOP_RelFS AT %Q.Cyclic#2.EngineController::IN_EC.bT_EOP_RelFS;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bAMM_Pr_AirStarter_Tank_Lo AT %Q.Cyclic#2.EngineController::IN_EC.bAMM_Pr_AirStarter_Tank_Lo;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bNoExtendedPrelube AT %Q.Cyclic#2.EngineController::IN_EC.bNoExtendedPrelube;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bFS_Rdy_STT_StPurge AT %Q.Cyclic#2.EngineController::IN_EC.bFS_Rdy_STT_StPurge;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bEleStarter_Dem_PurgeCrkCylFS AT %Q.Cyclic#2.EngineController::IN_EC.bEleStarter_Dem_PurgeCrkCylFS;
+	Cyclic#4.AuxiliariesGeneral::OUT_AG.iMissfCyl_PurgeCrk AT %Q.Cyclic#1.EngineController::IN_EC.iMissfCyl_PurgeCrk;
+END_VAR
+(*Grid*)
+VAR_CONFIG
+	Cyclic#5.Grid::OUT_GR.bPRamp_GrC_SetErr AT %Q.Cyclic#2.EngineController::IN_EC.bPRamp_GrC_SetErr;
+	Cyclic#5.Grid::OUT_GR.bGEN2_UsePowtraj_LFSM AT %Q.Cyclic#2.EngineController::IN_EC.bGEN2_UsePowtraj_LFSM;
+END_VAR
+(* Coupling *)
+VAR_CONFIG
+	Cyclic#5.Coupling::OUT_CP.bFastStartReq_Bus AT %Q.Cyclic#2.EngineController::IN_EC.bFastStartReq_Bus;
+	Cyclic#5.Coupling::OUT_CP.bVeryFastStartReq_Bus AT %Q.Cyclic#2.EngineController::IN_EC.bVeryFastStartReq_Bus;
+END_VAR
+(* Generator *)
+VAR_CONFIG
+	Cyclic#5.Generator::OUT_GC.tU_Set_Norm AT %Q.Cyclic#2.EngineController::IN_EC.tU_Set_Norm;
+END_VAR

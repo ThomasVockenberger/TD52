@@ -1,0 +1,110 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Package: CBM
+ * File: constants.var
+ * Author: 502423184
+ * Created: May 18, 2015
+ ********************************************************************
+ * Variables of package CBM
+ ********************************************************************)
+(* Module Global *)
+VAR CONSTANT
+	UnitSize : USINT := 7; (*Maximum allowed unit name lenght +1*)
+	NameSize : USINT := 22; (*Maximum allowed name lenght +1*)
+	GREEN : INT := 2;
+	RED : INT := 51;
+	YELLOW : INT := 46;
+	GREY : INT := 7;
+	VIOLET : INT := 5;
+	BLUE : INT := 11;
+	PINK : INT := 18;
+END_VAR
+(* Statistic *)
+VAR CONSTANT
+	StatSize : USINT := 100; (*Statistic Buffer size*)
+	StatRealSize : USINT := 150;
+	StatIntSize : USINT := 14;
+	StatBoolSize : USINT := 2;
+	StatStrSize : USINT := 0;
+	ErrCntSize : UINT := 400;
+END_VAR
+(* ECB *)
+VAR CONSTANT
+	iBufferSize : INT := 1000; (* ringbuffer cycle size*)
+	iBufferSize10 : INT := 100; (* ringbuffer cycle size*)
+	iTC_Max : UINT := 113; (* should be adjusted to engine sensors *)
+	iEC_Max : UINT := 558; (* should be adjusted to engine sensors *)
+	iSC_Max : UINT := 60; (* should be adjusted to engine sensors *)
+	iHS_Max : UINT := 7; (* should be adjusted to engine sensors *)
+	iH12_Max : UINT := 5; (* should be adjusted to engine sensors *)
+	iH_Max : UINT := 18; (* should be adjusted to engine sensors *)
+	iPC_Max : UINT := 20; (* should be adjusted to engine sensors *)
+	iBits_Max : UINT := 1; (* should be adjusted to engine sensors *)
+	iECB_MaxTrig : USINT := 10; (* anzahl der ecb trigger *)
+	ui16 : USINT := 1;
+	i16 : USINT := 2;
+END_VAR
+(* ATD *)
+VAR CONSTANT
+	iError_Channels : INT := 19; (* +1 rechnen *)
+	iError_Depth : INT := 9; (* +1 rechnen *)
+END_VAR
+(* TCB *)
+VAR CONSTANT
+	iTCB_BufferSize : UINT := 2000; (* 20 sec *)
+	iTCB_Max : UINT := 200; (* anzahl der werte *)
+	_USI : USINT := 1; (*unsigned integer 16Bit*)
+	_SI : USINT := 2; (*signed integer 16Bit*)
+	_HWP : USINT := 3; (*high word pattern*)
+	_LWP : USINT := 4; (*low word pattern*)
+	_BIN : USINT := 5; (*binary*)
+	iTCB_MaxTrig : USINT := 15; (* anzahl der tcb trigger *)
+	_FALSE : USINT := 0; (*kein trigger*)
+	_CUST : USINT := 1; (*custom trigger*)
+	_MAN : USINT := 2; (*manueller trigger*)
+	_GCB : USINT := 3; (*Sync trigger*)
+	_MCB : USINT := 4; (*re sync trigger*)
+	_GC : USINT := 5; (*grid code event*)
+	_LGM : USINT := 6; (*lambda gradiant monitor*)
+	_TRIP : USINT := 7; (* Alarm trigger *)
+	_1080 : USINT := 8; (* A1080 trigger *)
+	_GLD : USINT := 9; (* grid loss detection *)
+	_SP1 : USINT := 10; (*spare 1*)
+	_SP2 : USINT := 11; (*spare 2*)
+END_VAR
+(* state machine *)
+VAR CONSTANT
+	_IDLE : USINT := 0;
+	_BEGIN : USINT := 1;
+	_DATA : USINT := 2;
+	_FOOT : USINT := 3;
+	_EXIST : USINT := 5;
+	_CREATE : USINT := 6;
+	_WRITE : USINT := 7;
+	_DONE : USINT := 8;
+	_WAIT : USINT := 9;
+	_ERROR : USINT := 10;
+	_HEAD : USINT := 11;
+	_HEAD1 : USINT := 12;
+	_HEAD2 : USINT := 13;
+	_STR : USINT := 14;
+	_STR1 : USINT := 15;
+	_STR2 : USINT := 16;
+	_STR3 : USINT := 17;
+	_STR4 : USINT := 18;
+	_STR5 : USINT := 19;
+	_LOCK : USINT := 20;
+	_HMI : USINT := 21;
+	_STOP : USINT := 22;
+	_CLEAR : USINT := 23;
+	_TRIG : USINT := 24;
+	_RDY : USINT := 25;
+	_REAL : USINT := 1;
+	_INT : USINT := 2;
+	_UINT : USINT := 3;
+	_BOOL : USINT := 4;
+	_OKAY : UINT := 0; (*Okay*)
+	_BUSY : UINT := 16#FFFF; (*Busy*)
+	_DONF : UINT := 20609; (*Data Object Not Found*)
+END_VAR

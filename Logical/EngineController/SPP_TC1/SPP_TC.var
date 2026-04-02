@@ -1,0 +1,37 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: SPP_EC
+ * File: SPP_EC.var
+ * Author: 502293141
+ * Created: March 20, 2014
+ ********************************************************************
+ * Local variables of program IOScal_EC
+ ********************************************************************)
+VAR
+	iIdx_Filt_Cycles : UINT;
+	xFilter_R_P2s : FILTER_R;
+	xFilter_R_P2s_B : FILTER_R;
+	xFilter_R_P2s_A : FILTER_R;
+	xFilter_R_P2s_Avg : FILTER_R;
+	xFilter_R_Pr_DAI_A : FILTER_R;
+	xFilter_R_Pr_DAI_B : FILTER_R;
+	xFilter_R_Pr_DAI_In : FILTER_R;
+	xFilter_R_T_DAI : FILTER_R;
+	xFilter_R_P1 : FILTER_R;
+	xFilter_R_P1_A : FILTER_R;
+	xFilter_R_P1_B : FILTER_R;
+	xFilter_R_P1_Avg : FILTER_R;
+	xFilter_R_Pr_EGbHPTC_A : FILTER_R;
+	xFilter_R_Pr_EGbHPTC_B : FILTER_R;
+	xFilter_R_Pr_EGbHPTC_Avg : FILTER_R;
+	xFilter_R_Pr_EGaHPTC_A : FILTER_R;
+	xFilter_R_Pr_EGaHPTC_B : FILTER_R;
+	xFilter_R_Pr_EGaHPTC_Avg : FILTER_R;
+	xFilter_R_Pr_EGaLPTC_A : FILTER_R;
+	xFilter_R_Pr_EGaLPTC_B : FILTER_R;
+	xFilter_R_Pr_EGaLPTC_Avg : FILTER_R;
+	xFilter_R_GR : FILTER_R;
+	status : UINT := 0;
+	tRTC_FirstTC1InitStart : rtctime_typ := (0);
+END_VAR

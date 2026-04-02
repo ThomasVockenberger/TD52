@@ -1,0 +1,433 @@
+(********************************************************************
+ * COPYRIGHT --  
+ ********************************************************************
+ * File: Global.var
+ * Author: BuR
+ * Created: January 24, 2012
+ ********************************************************************
+ * Global variables of project Update
+ ********************************************************************)
+VAR
+	bBlockCanUpdate : BOOL;
+	AdvTimLi : INT; (* advanced ingnition timing 1/10 deg *)
+	AussSchwel : UINT; (*not used OCA*)
+	bACamSign : BOOL;
+	bAMORISErr : BOOL;
+	bAOverspeedErr : BOOL;
+	bAParameter : BOOL;
+	bAPICloseErr : BOOL;
+	bAPIHardwareErr : BOOL;
+	bAPIOpenErr : BOOL;
+	bASAFIComErr : BOOL;
+	bASAFIHwErr : BOOL;
+	bASAFIWrongVers : BOOL;
+	bATriggerSign : BOOL;
+	bBCamSign : BOOL;
+	bBCanErrRate : BOOL;
+	bBConfigErr : BOOL;
+	bBElectrTemp : BOOL;
+	bBIgnPwrLim : BOOL;
+	bBIGNShutOff : BOOL;
+	bBIgnVoltMax : BOOL;
+	bBIgnVoltMin : BOOL;
+	bBMORISErr : BOOL;
+	bBOffsetErr : BOOL;
+	bBOutputErr : BOOL;
+	bBOverspeedErr : BOOL;
+	bBParameter : BOOL;
+	bBPICloseErr : BOOL;
+	bBPIHardwareErr : BOOL;
+	bBPIOpenErr : BOOL;
+	bBPIShutOff : BOOL;
+	bBSAFIComErr : BOOL;
+	bBSAFIFwErr : BOOL;
+	bBSAFIHwErr : BOOL;
+	bBSAFIWrongVers : BOOL;
+	bBTriggerSign : BOOL;
+	bGnlTrip1 : BOOL;
+	bGnlTrip1_modlSA : BOOL;
+	bGnlTrip2_modlSA : BOOL;
+	bGnlTrip3_modlSA : BOOL;
+	bGnlWarning_modlSA : BOOL;
+	bWIgnPowerOverload : BOOL;
+	bBIgnPowerOverload : BOOL;
+	ucIgnPowerOverload : USINT;
+	bAIgnPowerFail : BOOL;
+	ucIgnPowerFail : USINT;
+	bParaAct : BOOL;
+	bPI_On : BOOL;
+	bPIOpen : BOOL; (*response PI valve open*)
+	bSAFI : ARRAY[0..12] OF _SAFIError;
+	bSAFICfgMode : BOOL;
+	bSAFIComErr : ARRAY[0..24] OF BOOL;
+	bSAFIComm : BOOL;
+	bSAFIConfig : BOOL;
+	bSAFIError : ARRAY[0..12] OF _SAFIError; (* SAFI Error messages - CMS*)
+	bSAFIIgnDisabRun : BOOL;
+	bSAFIIgnDisabRunStat : BOOL;
+	bSAFIIgnEnab : BOOL;
+	bSAFIIgnEnabRun : BOOL;
+	bSAFIPIDisabRun : BOOL;
+	bSAFIPIDisabRunStat : BOOL;
+	bSAFIPIEnab : BOOL;
+	bSAFIPIEnabRun : BOOL;
+	bSAFIReadStatus : BOOL;
+	bSAFIRePara : ARRAY[0..12] OF BOOL;
+	bSAFIReset : BOOL;
+	bSAFISafetyLoop : BOOL;
+	bSAFIStartComm : BOOL;
+	bWCamSign : BOOL;
+	bWCanErrRate : BOOL;
+	bWConfigErr : BOOL;
+	bWElectrTemp : BOOL;
+	bWIgnPwrLim : BOOL;
+	bWIgnVoltAvg : BOOL;
+	bWIgnVoltDev : BOOL;
+	bWIgnVoltMax : BOOL;
+	bWIgnVoltMin : BOOL;
+	bWOffsetErr : BOOL;
+	bWOutputErr : BOOL;
+	bWPIHardwareErr : BOOL;
+	bWSAFIComErr : BOOL;
+	bWSAFIFwErr : BOOL;
+	bWTriggerSign : BOOL;
+	CMSmain_SAFI_DMR : CMSmain;
+	CMSmain_SAFI_Gen : CMSmain;
+	CMSmain_SAFI_Ign : CMSmain;
+	CMSmain_SAFI_KLS : CMSmain;
+	CMSmain_SAFI_PI : CMSmain;
+	CMSmain_SAFI_Gen_2 : CMSmain;
+	CMSmain_SAFI_Ign_2 : CMSmain;
+	CMSmain_SAFI_KLS_2 : CMSmain;
+	CMSmain_SAFI_DMR_2 : CMSmain;
+	CMSmain_SAFI_PI_2 : CMSmain;
+	E_SAFI : ARRAY[0..12] OF _tEventSAFI; (* SAFI CAN Events *)
+	EngType_SA : EngType;
+	FenstF1 : USINT; (*Filter of KLS window 1*)
+	FenstF2 : USINT; (*Filter of KLS window 2*)
+	FenstF3 : USINT; (*Filter of KLS window 3*)
+	FenstF4 : USINT; (*Filter of KLS window 4*)
+	FenstF5 : USINT; (*Filter of KLS window 5*)
+	FenstF6 : USINT; (*Filter of KLS window 6*)
+	FireOrder : ARRAY[0..24] OF USINT;
+	IN_SA : IN_SA_struct;
+	KLS_md00 : ARRAY[0..12] OF _tSAFImdatas; (* KLS mdatas 0 *)
+	KLS_md01 : ARRAY[0..12] OF _tSAFImdatas; (* KLS mdatas 1 *)
+	KLS_md02 : ARRAY[0..12] OF _tSAFImdatas; (* KLS mdatas 2 *)
+	KLS_md03 : ARRAY[0..12] OF _tSAFImdatas; (* KLS mdatas 3 *)
+	KLS_md04 : ARRAY[0..12] OF _tSAFImdatas; (* KLS mdatas 4 *)
+	KLS_md05 : ARRAY[0..12] OF _tSAFImdatas; (* KLS mdatas 5 *)
+	KLS_md06 : ARRAY[0..12] OF _tSAFImdatas; (* KLS mdatas 6*)
+	KLS_md07 : ARRAY[0..12] OF _tSAFImdatas; (* KLS mdatas 7*)
+	KLSGW1 : UINT;
+	KLSGW2 : UINT;
+	KLSGW3 : UINT;
+	KLSGW4 : UINT;
+	LimitActiv : REAL;
+	LimitMon : ARRAY[0..4] OF _tMonicLimit;
+	MissfCyl : UDINT; (*cylinder misfire parameter*)
+	MM2VIS : tMM2VIS;
+	OpMode_SA : OpMode;
+	OUT_SA : OUT_SA_struct;
+	OvrSpeed : UINT; (* ignition overspeed parameter *)
+	ParaFactoryDefault : Para_SA_struct; (*Test Init*)
+	Para : Para_SA_struct;
+	pm : Para_SA_struct;
+	RetTimLi : INT; (* ignition retard timing limit *)
+	SAFI : ARRAY[0..12] OF tSAFI;
+	SAFI_md00 : ARRAY[0..12] OF _tSAFImdatas; (* SAFI mdatas 0 *)
+	SAFI_md01 : ARRAY[0..12] OF _tSAFImdatas; (* SAFI mdatas 1 *)
+	SAFI_md02 : ARRAY[0..12] OF _tSAFImdatas; (* SAFI mdatas 2 *)
+	SAFI_md03 : ARRAY[0..12] OF _tSAFImdatas; (* SAFI mdatas 3 *)
+	SAFI_md04 : ARRAY[0..12] OF _tSAFImdatas; (* SAFI mdatas 4 *)
+	SAFI_md05 : ARRAY[0..12] OF _tSAFImdatas; (* SAFI mdatas 5 *)
+	SAFICurr0 : _tSAFICurr; (* SAFI current/duration setting 7 *)
+	SAFICurr0PMM : _tSAFICurrPmm;
+	SAFICurr0Sel : _tSAFICurrPmm;
+	SAFICurr1 : _tSAFICurr; (* SAFI current/duration setting 1 *)
+	SAFICurr1PMM : _tSAFICurrPmm; (* SAFI current/duration setting 2 *)
+	SAFICurr2 : _tSAFICurr; (* SAFI current/duration setting 2 *)
+	SAFICurr2PMM : _tSAFICurrPmm; (* SAFI current/duration setting 2 *)
+	SAFICurr3 : _tSAFICurr; (* SAFI current/duration setting 3 *)
+	SAFICurr3PMM : _tSAFICurrPmm; (* SAFI current/duration setting 3 *)
+	SAFICurr4 : _tSAFICurr; (* SAFI current/duration setting 4 *)
+	SAFICurr4PMM : _tSAFICurrPmm; (* SAFI current/duration setting 5 *)
+	SAFICurr5 : _tSAFICurr; (* SAFI current/duration setting 5 *)
+	SAFICurr5PMM : _tSAFICurrPmm; (* SAFI current/duration setting 5 *)
+	SAFICurr6 : _tSAFICurr; (* SAFI current/duration setting 6 *)
+	SAFICurr6PMM : _tSAFICurrPmm; (* SAFI current/duration setting 6 *)
+	SAFIError : ARRAY[0..12] OF _SAFIError; (* SAFI Error messages *)
+	slTiming : ARRAY[0..12] OF DINT;
+	ssDMR_empf : INT; (*Empfindlichkeit DMR Sensoren [mV/bar]*)
+	ssNEf : INT; (* DMR Niveaueinpassung fein *)
+	ssNEg : INT; (* DMR Niveaueinpassung grob *)
+	ssPosResSA : INT; (* SAFI reset position *)
+	ssSAFITemp : ARRAY[0..12] OF INT;
+	ssSAFMaxT : ARRAY[0..12] OF INT;
+	ssWEf : INT; (* DMR Winkeleinpassung fein *)
+	ssWEg : INT; (* DMR Winkeleinpassung grob *)
+	ucAdvTiIon : USINT;
+	ucAdvTiIonPMM : USINT;
+	ucAussInt : USINT; (* DMR Intervall Aussetzer *)
+	ucCamSign : USINT;
+	ucCanErrRate : USINT;
+	ucCoilType : USINT; (*Coil type*)
+	ucConfigErr : USINT;
+	ucConfigState : USINT;
+	ucDelFailR : USINT;
+	ucDelFailRPMM : USINT;
+	ucDeMagLvl : USINT;
+	ucDeMagLvlPMM : USINT;
+	ucDurFailR : USINT;
+	ucDurTol : USINT;
+	ucElectrTemp : USINT;
+	ucEmpf : ARRAY[0..13] OF USINT;
+	ucERDurTol : ARRAY[0..24] OF USINT; (* Error Rate for Duration Tolerance *)
+	ucERZuV : ARRAY[0..24] OF USINT; (* Error Rate for spark delay *)
+	ucFuAU : USINT; (* DMR Funk. Aussetzer *)
+	ucFuGZ : USINT; (* DMR Funk. Gluezuenden *)
+	ucFuIM : USINT; (* DMR Funk. Indiz. Mitteldruck *)
+	ucFuNAE : USINT; (* DMR Funk. NOx Aequivalent *)
+	ucFuNE : USINT; (* DMR Funk. Niveaueinpassung *)
+	ucFuVL : USINT; (* DMR Funk. Verbrennungslage *)
+	ucFuWE : USINT; (* DMR Funk. Winkeleinpassung *)
+	ucIGNMode : ARRAY[0..12] OF USINT; (* SAFI-IGN Mode *)
+	ucIgnPwrLim : USINT;
+	ucIGNShutOff : USINT;
+	ucIgnVoltMax : USINT;
+	ucIgnVoltMin : USINT;
+	ucInMagLvl : USINT;
+	ucInMagLvlPMM : USINT;
+	ucIonis : USINT;
+	ucKLSMode : ARRAY[0..12] OF USINT;
+	ucKuA : USINT; (* DMR Kurvenart *)
+	ucMORISErr : USINT;
+	ucMxSpPow : USINT;
+	ucMxSpPowPMM : USINT;
+	ucNrOfFiringCyl : USINT;
+	ucNumberOfCylinder : USINT;
+	ucOffsetErr : USINT;
+	ucOutputErr : USINT;
+	ucOverspeedErr : USINT;
+	ucParameter : USINT;
+	ucPICloseErr : USINT;
+	ucPIHardwareErr : USINT;
+	ucPIOpenErr : USINT;
+	ucPIShutOff : USINT;
+	ucReParaState : ARRAY[0..12] OF USINT;
+	ucRetTiIon : USINT;
+	ucRetTiIonPMM : USINT;
+	ucSAFIComErr : USINT;
+	ucSAFIConf : ARRAY[0..12] OF USINT; (* SAFI I/O rotation *)
+	ucSAFIFwErr : USINT;
+	ucSAFIHwErr : USINT;
+	ucSAFIMode : ARRAY[0..12] OF USINT;
+	ucSAFIWrongVers : USINT;
+	ucSparkCurChar : USINT; (*Sparkc characteristic*)
+	ucSparkCurLev : USINT; (*Spark current level*)
+	ucSpPOffTi : USINT;
+	ucSpPOffTiPMM : USINT;
+	ucTriggerSign : USINT;
+	ucUP_Pos : USINT;
+	ulProdDate : ARRAY[0..12] OF _tSAFIProdDate;
+	ulSAFArbH : ARRAY[0..12] OF UDINT;
+	ulSAFBetrH : ARRAY[0..12] OF UDINT; (* SAFI Betriebsstunden *)
+	ulSAFSerNr : ARRAY[0..12] OF UDINT;
+	ulZuendEin : UDINT; (* actual cylinder firing state *)
+	usAbstAB : UINT;
+	usAbstBA : UINT;
+	usAussGW : UINT; (* DMR GW Aussetzer *)
+	usAussTmax : UINT := 2000;
+	usBohr : UINT;
+	usDMRMode : ARRAY[0..12] OF UINT;
+	usDuration : ARRAY[0..1] OF UINT; (* SAFI spark duration *)
+	usDurationPMM : UINT; (* SAFI spark duration *)
+	usEps : UINT;
+	usErrZahnz : ARRAY[0..12] OF UINT;
+	usErrZykl : UINT;
+	usGluehGW : UINT; (* DMR GW Gluehzuenden *)
+	usHub : UINT;
+	usIgnPwrLi : UINT; (* SAFI Ignition Power limitation *)
+	usIgnPwrOut : UINT; (*power supply output*)
+	usIgnPwrPMM : UINT;
+	usIPEx : UINT; (* DMR Iterativer Polytropenexponent *)
+	usIPFa : UINT; (* DMR It. Polytropenexpo Faktor *)
+	usIPGr : UINT; (* DMR It. Polytropenexpo Grenzwert *)
+	usIPIt : UINT; (* DMR It. Polytropenexpo It. grenze *)
+	usIPKo : UINT; (* DMR It. Polytropenexpo Korrektur *)
+	usKlopfGW : UINT; (* DMR GW Klopfen *)
+	usMode : ARRAY[0..12] OF UINT;
+	usMW_KLS1 : UINT; (*Average #kls__mdatas1 MUX 0/1 [cycles]*)
+	usMW_KLS2 : UINT; (*Average #kls__mdatas1 MUX 2/3 [cycles]*)
+	usMW_KLS3 : UINT; (*Average #kls__mdatas1 MUX 4/5 [cycles]*)
+	usMW_KLS4 : UINT; (*Average #kls__mdatas1 MUX 6/7 [cycles]*)
+	usMWEr : UINT; (* DMR Mittelwert Erweitert *)
+	usMWNGA : UINT; (* DMR MW Niveaueinp, Gluehz, Aussetz *)
+	usMWSt : UINT; (* DMR MW Statistik *)
+	usMxIonMag : UINT;
+	usMxIonMagPMM : UINT;
+	usMxMagLvl : UINT;
+	usMxMagLvlPMM : UINT;
+	usNennDz : UINT; (* DMR Nenndrehzahl *)
+	usNETol : UINT; (* DMR Niveaueinpassung Toleranz *)
+	usPleuel : UINT;
+	usPolEx : UINT; (* DMR Iterativer Polytropenexponent *)
+	usSAFFiltV : ARRAY[0..12] OF UINT; (*SAFI KLS filter version*)
+	usSAFIHW : ARRAY[0..12] OF _tSAFIHardware; (* SAFI Hardwareversion *)
+	usSAFIVers : ARRAY[0..12] OF UINT; (* SAFI Firmwareversion *)
+	usSAFIVersMin : UINT;
+	usStartHP : UINT;
+	usthVW : UINT; (* DMR thermodyn. Verlustwinkel *)
+	usTolZZP : UINT;
+	usVLFa : UINT; (* DMR Verbrennungslage Faktor *)
+	usWMA_B : UINT; (* DMR Winkelfensterbeginn Aussetzer *)
+	usWMA_D : UINT; (* DMR Winkelfensterdauer Aussetzer *)
+	usWMBB_B : UINT; (* DMR WFbeginn Brennbeginn *)
+	usWMBB_D : UINT; (* DMR WFdauer Brennbeginn *)
+	usWMBD_B : UINT; (* DMR WFbeginn Brenndauer *)
+	usWMBD_D : UINT; (* DMR WFdauer Brenndauer *)
+	usWMG_B : UINT; (* DMR Winkelfensterbeginn Gluehzuend *)
+	usWMG_D : UINT; (* DMR Winkelfensterdauer Gluezuenden *)
+	usWMK_B : UINT; (* DMR Winkelfensterbeginn Klopfen *)
+	usWMK_D : UINT; (* DMR Winkelfensterdauer Klopfen *)
+	usWMNEf_B : UINT; (* DMR WFbeginn Niveaueinp. fein *)
+	usWMNEf_D : UINT; (* DMR WFdauer Niveaueinp. fein *)
+	usWMNEg_B : UINT; (* DMR WFbeginn Niveaueinp. grob *)
+	usWMNEg_D : UINT; (* DMR WFdauer Niveaueinp. grob *)
+	usWMS_B : UINT; (* DMR Winkelfensterbeginn Sp. druck *)
+	usWMS_D : UINT; (* DMR Winkelfensterdauer Sp. druck *)
+	usWMVL1_B : UINT; (* DMR WFbeginn Verbrennungslage Art1 *)
+	usWMVL1_D : UINT; (* DMR WFdauer Verbrennungslage Art1 *)
+	usWMWE_B : UINT; (* DMR WFdauer Winkeleinpassung *)
+	usWMWE_D : UINT; (* DMR WFbeginn Winkeleinpassung *)
+	usZahnzahl : UINT;
+	usZuVLim : UINT;
+	usZuVLimPMM : UINT;
+	VIS2MM : tVIS2MM;
+	WMF_AB : UINT; (*not used OCA*)
+	WMF_AD : UINT := 50; (*not used OCA*)
+	WMF1_B : UINT; (* Start of window 1 [degCA]*)
+	WMF1_D : UINT; (* Duration of window 1 [degCA] *)
+	WMF2_B : UINT; (* Start of window 2 [degCA]*)
+	WMF2_D : UINT; (* Duration of window 2 [degCA]*)
+	WMF3_B : UINT; (* Start of window 3 [degCA]*)
+	WMF3_D : UINT; (* Duration of window 3 [degCA]*)
+	WMF4_B : UINT; (* Start of window 4 [degCA]*)
+	WMF4_D : UINT := 50; (* Duration of window 4 [degCA]*)
+	WMF5_B : UINT; (* Start of window 5 [degCA]*)
+	WMF5_D : UINT := 1; (* Duration of window 5 [degCA]*)
+	WMF6_B : UINT; (* Start of window 6 [degCA]*)
+	WMF6_D : UINT := 1; (* Duration of window 6 [degCA]*)
+	ZylZahl : USINT;
+	bAPBCMemBurst : BOOL;
+	bBPBCMemBurst : BOOL;
+	ucPBCMemBurst : USINT;
+	bWPBCCompLineCheck : BOOL;
+	bBPBCCompLineCheck : BOOL;
+	ucPBCCompLineCheck : USINT;
+	bWPBCNegVoltCheck : BOOL;
+	bBPBCNegVoltCheck : BOOL;
+	ucPBCNegVoltCheck : USINT;
+	bWPBCNegPresCheck : BOOL;
+	bBPBCNegPresCheck : BOOL;
+	ucPBCNegPresCheck : USINT;
+	bWPBCPresSlopeCheck : BOOL;
+	bBPBCPresSlopeCheck : BOOL;
+	ucPBCPresSlopeCheck : USINT;
+	bWPBCSlowDriftCheck : BOOL;
+	bBPBCSlowDriftCheck : BOOL;
+	ucPBCSlowDriftCheck : USINT;
+	bWPBCConfNotOK : BOOL;
+	bBPBCConfNotOK : BOOL;
+	ucPBCConfNotOK : USINT;
+	bAPBCSensErr : BOOL;
+	bBPBCSensErr : BOOL;
+	ucPBCSensErr : USINT;
+	bWPBCInvalidPar : BOOL := FALSE;
+	bBPBCInvalidPar : BOOL := FALSE;
+	ucPBCInvalidPar : USINT := 0;
+	bWMORISErr : BOOL;
+	ucCountG : USINT;
+	bNoInitDetected : BOOL := FALSE; (*allways true, except 1cycle on init up*)
+	SIM_rN_IgnSAFI_Act : REAL; (* Engine speed measured by ignition SAFI *)
+	SIM_rT_EG_Cyl : ARRAY[0..24] OF REAL; (* cylinder exhaust gas temperatures *)
+	SIM_iU_SAFI_Win1 : ARRAY[0..24] OF INT; (* cylinder values of KLS window 1 *)
+	SIM_iU_SAFI_Win2 : ARRAY[0..24] OF INT; (* cylinder values of KLS window 2 *)
+	SIM_rU_IgnSAFI_Max : REAL; (* maximum ignition voltage  *)
+	SIM_rU_IgnSAFI_Min : REAL; (* minimum ignition voltage  *)
+	SIM_rU_IgnSAFI_Cyl : ARRAY[0..24] OF REAL; (* ignition voltage for each cylinder  *)
+	SIM_rU_IgnSAFI_Avg : REAL; (* ignition voltage average *) (* OldName:AvgVolt; Cycle:5 *)
+	usIgnPwr : UINT;
+	DMR_Ref : tDMR_ref;
+	ucUpCur : ARRAY[0..12] OF USINT;
+	ssWEf_L : ARRAY[0..25] OF INT;
+	ssWEf_H : ARRAY[0..25] OF INT;
+	DMR_cur : ARRAY[0..12] OF _tSAFImdatas;
+	bAPBCCPSSat : BOOL; (*Cylinder pressure saturation trip*)
+	bBPBCCPSSat : BOOL; (*Cylinder pressure saturation message*)
+	ucPBCCPSSat : USINT; (*Cylinder pressure saturation cyl info*)
+	ucNrCyPiMf : USINT; (*Allowed Nr of cycles of ign off with PI on during misfire*)
+	bAPIDemagFail : BOOL;
+	bBPIDemagFail : BOOL;
+	ucPIDemagFail : USINT;
+	bWPICurrCtrWarn : BOOL;
+	bBPICurrCtrWarn : BOOL;
+	ucPICurrCtrWarn : USINT;
+	bAPICurrCtrRate : BOOL;
+	Diag : ARRAY[0..12] OF tDiag;
+	bParaActCyl : ARRAY[0..24] OF BOOL;
+	CMSinit_SAFI_x_status : UINT; (* CAN SAFI Module Init Status *)
+	CMSmain_SAFI_x_status : UINT; (* CAN SAFI Module Main Status *)
+	ssPIvar_limt_Idle : INT;
+	ssPIvar_limt_Load : INT;
+	ssPIvar_limt_Start : INT;
+	ssPICurGradStart : INT;
+	bMORIS_OnEx : BOOL; (*True = MORIS on Exhaust*)
+	bAExValveErr : BOOL;
+	bBExValveErr : BOOL;
+	iIdx_ExValveErr : USINT;
+	bAInValveErr : BOOL;
+	bBInValveErr : BOOL;
+	iIdx_InValveErr : USINT;
+	iMisfCylPICloDet : UDINT; (*cylinder misfire parameter from PI close detection*)
+	PICurGrad : ARRAY[0..24] OF tPICurGrad;
+	bWExValveUnb : BOOL;
+	bBExValveUnb : BOOL;
+	iIdx_ExValveUnb : USINT;
+	bWInValveUnb : BOOL;
+	bBInValveUnb : BOOL;
+	iIdx_InValveUnb : USINT;
+	bSA_Win1Frozen : ARRAY[0..24] OF BOOL; (*Knock noise signal  frozen*)
+	bSA_Win1Altern : ARRAY[0..24] OF BOOL; (*Knock noise signal alternating*)
+	bWSAFrozenAltern : BOOL;
+	bBSAFrozenAltern : BOOL;
+	iIdx_SAFrozenAltern : USINT;
+	bSA_U_CylFrozen : ARRAY[0..24] OF BOOL; (*Ignition voltage frozen*)
+	bSA_U_CylAltern : ARRAY[0..24] OF BOOL; (*Ignition voltage alternating*)
+	bSA_PmaxFrozen : ARRAY[0..24] OF BOOL; (*DMR knock signal frozen*)
+	bSA_PmaxAltern : ARRAY[0..24] OF BOOL; (*DMR knock signal alternating*)
+	bSA_IMEP_Frozen : ARRAY[0..24] OF BOOL; (*IMEP frozen*)
+	bSA_IMEP_Altern : ARRAY[0..24] OF BOOL; (*IMEP alternating*)
+	bSA_PICurGradFrozen : ARRAY[0..24] OF BOOL; (*PI close current gradient frozen*)
+	bSA_PICurGradAltern : ARRAY[0..24] OF BOOL; (*PI close current gradient alternating*)
+	iNum_UpCurKls : USINT; (*Curve upload memory allocation - Percentage of KLS data [%]*)
+	iCA_ITP_DevLim : USINT; (*ITP deviation limit [degCA * 10]*)
+	iNum_ITP_DevFailR : USINT; (*Failure rate limit for ITP deviation [1 / 10 cycles]*)
+	iNum_LenIgnHist : USINT; (*Length of ignition events history [cycles]*)
+	iNum_IgnMiss_Max : USINT; (*Maximum missing ignition events [cycles]*)
+	iNum_UpCurKlsSet : USINT; (*KLS up curve settings*)
+	bW_KLS21_NoIgnMon : BOOL; (*W9350 - KLS21 ignition monitoring not available*)
+	bB_KLS21_NoIgnMon : BOOL; (*B9050 - KLS21 ignition monitoring not available*)
+	iIdx_KLS21_NoIgnMon : USINT; (*B9050 - KLS21 ignition monitoring not available - cylinder number*)
+	bSAFIErrorReset : BOOL;
+	bUnknownDevice : BOOL; (*At least one unknown device is installed*)
+	bSAFI1 : BOOL; (*At least one SAFI1 is installed*)
+	bSAFI2KLS : BOOL; (*At least one SAFI2KLS is installed*)
+	bSAFI2DMR : BOOL; (*At least one SAFI2DMR is installed*)
+	bSAFI3 : BOOL; (*At least one SAFI3 is installed*)
+	bKLS21 : BOOL; (*At least one KLS21 is installed*)
+	bSAFI3_all : BOOL; (*All devices are SAFI3*)
+	rTi_MaxSkipFire : REAL; (*Maximum time for skipfire operation [s]*)
+	iCA_StartHPWin : UINT; (*Start of high pressure window [degCA]*)
+	ucRelCheckState : USINT;
+END_VAR

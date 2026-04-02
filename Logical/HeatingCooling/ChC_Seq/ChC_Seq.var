@@ -1,0 +1,41 @@
+VAR
+	GK_bit10 : BOOL := 0; (* Anzeige-Bit *)
+	GK_bit11 : BOOL := 0; (* Anzeige-Bit *)
+	GK_bit12 : BOOL := 0; (* Anzeige-Bit *)
+	GK_bit20 : BOOL := 0; (* Anzeige-Bit *)
+	GK_bit21 : BOOL := 0; (* Anzeige-Bit *)
+	GK_bit22 : BOOL := 0; (* Anzeige-Bit *)
+	GK_byte1 : BOOL := 0; (* Anzeige-Byte *)
+	GK_byte2 : BOOL := 0; (* Anzeige-Byte *)
+	IN : ARRAY[0..16] OF BOOL;
+	Q : ARRAY[0..16] OF BOOL;
+	RDY : ARRAY[0..16] OF BOOL;
+	EN : ARRAY[0..16] OF BOOL;
+	iQ : INT;
+	iIN : INT;
+	iPriorityStage : INT;
+	SEQU_C : ARRAY[0..16] OF DINT;
+	NEXT_ON : ARRAY[0..16] OF BOOL;
+	NEXT_OFF : ARRAY[0..16] OF BOOL;
+	i : INT;
+	iNextOn : INT;
+	iNextOff : INT;
+	summe : USINT := 0;
+	GK_Var : USINT; (* charge cooler variation *)
+	iSumChC_Stages_ManAuxCtr : INT; (*summary charge cooler stages from Manual operating auxiliaries control *)
+	iSumChC2_Stages_ManAuxCtr : INT; (*summary charge cooler 2 stages from Manual operating auxiliaries control *)
+	EN2 : ARRAY[0..16] OF BOOL;
+	IN2 : ARRAY[0..16] OF BOOL;
+	Q2 : ARRAY[0..16] OF BOOL;
+	RDY2 : ARRAY[0..16] OF BOOL;
+	iPriorityStage2 : INT;
+	SEQU_C2 : ARRAY[0..16] OF DINT;
+	iNextOn2 : INT;
+	iNextOff2 : INT;
+	NEXT_ON2 : ARRAY[0..16] OF BOOL;
+	NEXT_OFF2 : ARRAY[0..16] OF BOOL;
+	iQ2 : INT;
+	iIN2 : INT;
+	summe2 : USINT := 0;
+	GK2_Var : USINT; (* charge cooler 2 variant *)
+END_VAR

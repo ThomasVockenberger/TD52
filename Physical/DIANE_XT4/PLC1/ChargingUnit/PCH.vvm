@@ -1,0 +1,66 @@
+VAR_CONFIG
+	Cyclic#4.AmmBase::OUT_AB.tAB2CH AT %Q.Cyclic#5.ChargingUnit::IN_CH.tAB2CH;
+	Cyclic#5.Customized::OUT_CU.rCustomizedCH AT %Q.Cyclic#5.ChargingUnit::IN_CH.rCustomizedCH; (*New customizable interface 2017 - BETA PHASE, use only in coordination with TPSS	*)
+	Cyclic#4.EngineController::OUT_EC.rPos_CBV AT %Q.Cyclic#5.ChargingUnit::IN_CH.rPos_CBV; (*V04.04.00.00*)
+	Cyclic#4.EngineController::OUT_EC.rVE_Eng AT %Q.Cyclic#5.ChargingUnit::IN_CH.rVE_Eng; (*V04.05.00.00*)
+	Cyclic#4.EngineController::OUT_EC.rVol_TotalGas_Norm AT %Q.Cyclic#5.ChargingUnit::IN_CH.rVol_TotalGas_Norm; (*V04.04.00.00*)
+	Cyclic#5.EngineGeneral::OUT_EG.rPr_Baro_Internal AT %Q.Cyclic#5.ChargingUnit::IN_CH.rPr_Baro_Internal; (*V04.04.00.00*)
+	Cyclic#5.EngineGeneral::OUT_EG.bAMM_Pr_Baro_Internal AT %Q.Cyclic#5.ChargingUnit::IN_CH.bAMM_Pr_Baro_Internal; (*V04.12.00.00*)
+	Cyclic#5.Gastrain::OUT_GT.iIdx_Gtyp_Dem AT %Q.Cyclic#5.ChargingUnit::IN_CH.iIdx_Gtyp_Dem;
+	Cyclic#5.Gastrain::OUT_GT.rGT_QualMix_1_2 AT %Q.Cyclic#2.ChargingUnit::IN_CH.rGT_QualMix_1_2; (*V04.01.00.00*)
+	Cyclic#2.Gastrain::OUT_GT.rGT_RatioMix AT %Q.Cyclic#2.ChargingUnit::IN_CH.rGT_RatioMix; (*V04.01.00.00*)
+	Cyclic#5.HalIO::OUT_HA.szEng_Motorversion AT %Q.Cyclic#5.ChargingUnit::IN_CH.szEng_Motorversion; (*V04.04.00.00*)
+	Cyclic#4.HalIO::tDPr_AirFilt AT %Q.Cyclic#5.ChargingUnit::IN_CH.tDPr_AirFilt;
+	Cyclic#4.HalIO::tDPr_AirFilt_A AT %Q.Cyclic#5.ChargingUnit::IN_CH.tDPr_AirFilt_A;
+	Cyclic#4.HalIO::tDPr_AirFilt_B AT %Q.Cyclic#5.ChargingUnit::IN_CH.tDPr_AirFilt_B;
+	Cyclic#4.HalIO::tGCB_On AT %Q.Cyclic#5.ChargingUnit::IN_CH.tGCB_On;
+	Cyclic#4.HalIO::tN_TCHP AT %Q.Cyclic#5.ChargingUnit::IN_CH.tN_TCHP;
+	Cyclic#4.HalIO::tN_TCHP_A AT %Q.Cyclic#5.ChargingUnit::IN_CH.tN_TCHP_A;
+	Cyclic#4.HalIO::tN_TCHP_B AT %Q.Cyclic#5.ChargingUnit::IN_CH.tN_TCHP_B;
+	Cyclic#4.HalIO::tN_TCLP AT %Q.Cyclic#5.ChargingUnit::IN_CH.tN_TCLP;
+	Cyclic#4.HalIO::tN_TCLP_A AT %Q.Cyclic#5.ChargingUnit::IN_CH.tN_TCLP_A;
+	Cyclic#4.HalIO::tN_TCLP_B AT %Q.Cyclic#5.ChargingUnit::IN_CH.tN_TCLP_B;
+	Cyclic#4.HalIO::tP_Act AT %Q.Cyclic#5.ChargingUnit::IN_CH.tP_Act; (*V04.04.00.00*)
+	Cyclic#2.HalIO::tPr_Ch_P1HP AT %Q.Cyclic#2.ChargingUnit::IN_CH.tPr_Ch_P1HP;
+	Cyclic#2.HalIO::tPr_Ch_P1HP_A AT %Q.Cyclic#2.ChargingUnit::IN_CH.tPr_Ch_P1HP_A;
+	Cyclic#2.HalIO::tPr_Ch_P1HP_B AT %Q.Cyclic#2.ChargingUnit::IN_CH.tPr_Ch_P1HP_B;
+	Cyclic#2.HalIO::tPr_Ch_P1LP_A AT %Q.Cyclic#2.ChargingUnit::IN_CH.tPr_Ch_P1LP_A; (*V04.04.00.00*)
+	Cyclic#2.HalIO::tPr_Ch_P1LP_B AT %Q.Cyclic#2.ChargingUnit::IN_CH.tPr_Ch_P1LP_B; (*V04.04.00.00*)
+	Cyclic#2.HalIO::tPr_Ch_P2 AT %Q.Cyclic#2.ChargingUnit::IN_CH.tPr_Ch_P2;
+	Cyclic#2.HalIO::tPr_Ch_P2_A AT %Q.Cyclic#2.ChargingUnit::IN_CH.tPr_Ch_P2_A;
+	Cyclic#2.HalIO::tPr_Ch_P2_B AT %Q.Cyclic#2.ChargingUnit::IN_CH.tPr_Ch_P2_B;
+	Cyclic#2.HalIO::tPr_Ch_P2bFA AT %Q.Cyclic#2.ChargingUnit::IN_CH.tPr_Ch_P2bFA; (*V04.04.00.00*)
+	Cyclic#2.HalIO::tPr_Ch_P2HP AT %Q.Cyclic#2.ChargingUnit::IN_CH.tPr_Ch_P2HP; (*V04.04.00.00*)
+	Cyclic#2.HalIO::tPr_Ch_P2HP_A AT %Q.Cyclic#2.ChargingUnit::IN_CH.tPr_Ch_P2HP_A; (*V04.04.00.00*)
+	Cyclic#2.HalIO::tPr_Ch_P2HP_B AT %Q.Cyclic#2.ChargingUnit::IN_CH.tPr_Ch_P2HP_B; (*V04.04.00.00*)
+	Cyclic#2.HalIO::tPr_Ch_P2LP AT %Q.Cyclic#2.ChargingUnit::IN_CH.tPr_Ch_P2LP; (*V04.04.00.00*)
+	Cyclic#2.HalIO::tPr_Ch_P2LP_A AT %Q.Cyclic#2.ChargingUnit::IN_CH.tPr_Ch_P2LP_A; (*V04.04.00.00*)
+	Cyclic#2.HalIO::tPr_Ch_P2LP_B AT %Q.Cyclic#2.ChargingUnit::IN_CH.tPr_Ch_P2LP_B; (*V04.04.00.00*)
+	Cyclic#2.HalIO::tPr_Ch_P2s AT %Q.Cyclic#2.ChargingUnit::IN_CH.tPr_Ch_P2s;
+	Cyclic#2.HalIO::tPr_Ch_P2s_A AT %Q.Cyclic#2.ChargingUnit::IN_CH.tPr_Ch_P2s_A;
+	Cyclic#2.HalIO::tPr_Ch_P2s_B AT %Q.Cyclic#2.ChargingUnit::IN_CH.tPr_Ch_P2s_B;
+	Cyclic#2.HalIO::tT_Ch_T1HP AT %Q.Cyclic#2.ChargingUnit::IN_CH.tT_Ch_T1HP;
+	Cyclic#2.HalIO::tT_Ch_T1HP_A AT %Q.Cyclic#2.ChargingUnit::IN_CH.tT_Ch_T1HP_A;
+	Cyclic#2.HalIO::tT_Ch_T1HP_B AT %Q.Cyclic#2.ChargingUnit::IN_CH.tT_Ch_T1HP_B;
+	Cyclic#2.HalIO::tT_Ch_T1LP AT %Q.Cyclic#2.ChargingUnit::IN_CH.tT_Ch_T1LP; (*V04.04.00.00*)
+	Cyclic#2.HalIO::tT_Ch_T1LP_A AT %Q.Cyclic#2.ChargingUnit::IN_CH.tT_Ch_T1LP_A; (*V04.04.00.00*)
+	Cyclic#2.HalIO::tT_Ch_T1LP_B AT %Q.Cyclic#2.ChargingUnit::IN_CH.tT_Ch_T1LP_B; (*V04.04.00.00*)
+	Cyclic#2.HalIO::tT_Ch_T2HP AT %Q.Cyclic#2.ChargingUnit::IN_CH.tT_Ch_T2HP; (*V04.05.00.00*)
+	Cyclic#2.HalIO::tT_Ch_T2HP_A AT %Q.Cyclic#2.ChargingUnit::IN_CH.tT_Ch_T2HP_A; (*V04.05.00.00*)
+	Cyclic#2.HalIO::tT_Ch_T2HP_B AT %Q.Cyclic#2.ChargingUnit::IN_CH.tT_Ch_T2HP_B; (*V04.05.00.00*)
+	Cyclic#2.HalIO::tT_Ch_T2LP AT %Q.Cyclic#2.ChargingUnit::IN_CH.tT_Ch_T2LP; (*V04.05.00.00*)
+	Cyclic#2.HalIO::tT_Ch_T2LP_A AT %Q.Cyclic#2.ChargingUnit::IN_CH.tT_Ch_T2LP_A; (*V04.05.00.00*)
+	Cyclic#2.HalIO::tT_Ch_T2LP_B AT %Q.Cyclic#2.ChargingUnit::IN_CH.tT_Ch_T2LP_B; (*V04.05.00.00*)
+	Cyclic#2.HalIO::tT_Ch_T2s AT %Q.Cyclic#2.ChargingUnit::IN_CH.tT_Ch_T2s;
+	Cyclic#2.HalIO::tT_Ch_T2s_A AT %Q.Cyclic#2.ChargingUnit::IN_CH.tT_Ch_T2s_A;
+	Cyclic#2.HalIO::tT_Ch_T2s_B AT %Q.Cyclic#2.ChargingUnit::IN_CH.tT_Ch_T2s_B;
+	Cyclic#4.Ignition::OUT_IG.rN_EngAct AT %Q.Cyclic#5.ChargingUnit::IN_CH.rN_EngAct;
+	Cyclic#4.Opstate::OUT_OP.iCnt_OpHours AT %Q.Cyclic#5.ChargingUnit::IN_CH.iCnt_OpHours; (*V04.04.00.00*)
+	Cyclic#5.Opstate::OUT_OP.iIdx_OMSS AT %Q.Cyclic#5.ChargingUnit::IN_CH.iIdx_OMSS;
+	Cyclic#4.Opstate::OUT_OP.iSt_OpMode AT %Q.Cyclic#5.ChargingUnit::IN_CH.iSt_OpMode;
+	Cyclic#4.Opstate::OUT_OP.rP_Act_Norm_Filt AT %Q.Cyclic#5.ChargingUnit::IN_CH.rP_Act_Norm_Filt; (*V04.05.00.00 --> Changed from cyclic 2 to cyclic 5*)
+	Cyclic#2.Opstate::OUT_OP.rP_Act_Norm_Filt AT %Q.Cyclic#2.ChargingUnit::IN_CH.rP_Act_Norm_Filt_TC2; (*V04.05.00.00*)
+	Cyclic#4.Opstate::OUT_OP.rP_Nom AT %Q.Cyclic#5.ChargingUnit::IN_CH.rP_Nom; (*V04.04.00.00*)
+	Cyclic#2.Opstate::OUT_OP.tEng_Run AT %Q.Cyclic#2.ChargingUnit::IN_CH.tEng_Run;
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#5.ChargingUnit::IN_CH.tPB2MM;
+END_VAR

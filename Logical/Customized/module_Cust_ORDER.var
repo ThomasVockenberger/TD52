@@ -1,0 +1,25 @@
+(*************************************************************************
+ * COPYRIGHT -- INNIO Company
+ *************************************************************************
+ * Package: Customized_Pkg
+ * File: module_Cust_ORDER.var
+ * Author: Zengerer
+ * Created: December 06, 2012
+ ***************************************************************************
+ *  ADD ORDER SPECIFIC VARIABLES for package Customized here
+ *************************************************************************** 
+ *
+ * ToDo:
+ * -----
+ *  declare your customized variables here
+ *
+ ***************************************************************************)
+VAR
+	bAirInFan_WarningMsg : ARRAY[0..3] OF BOOL;
+	bDumpRadiator_WarningMsg : ARRAY[0..3] OF BOOL;
+	bAirInFanRUN : ARRAY[0..3] OF BOOL := [4(FALSE)];
+	bDumpRadiatorRUN : ARRAY[0..3] OF BOOL := [4(FALSE)];
+	bAirInFan_CANWarningMsg : BOOL := FALSE;
+	bDumpRadiator_CANWarningMsg : BOOL := FALSE;
+	bConnectYourBitHere : BOOL;
+END_VAR

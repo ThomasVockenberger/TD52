@@ -1,0 +1,9 @@
+VAR
+	iAdrAmmBase2MM : UDINT;
+	iAdrMM2AmmBase : UDINT;
+	xMsg2308 : Msg;
+	xMsg2293 : Msg;
+	xMsg9223 : Msg;
+	xTP_FMEP_Fault_Dtct_Save : TP_10ms := (0);
+	xMsg2926 : Msg;	(** B2926: ATD has further information *)
+END_VAR

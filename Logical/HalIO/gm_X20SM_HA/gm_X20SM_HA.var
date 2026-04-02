@@ -1,0 +1,6 @@
+VAR
+	rF_stepGM1_old : REAL := 0.0; (*OLD stepper 1 motor frequency [Hz] *)
+	rF_stepGM2_old : REAL := 0.0; (*OLD stepper 2 motor frequency [Hz] *)
+	xAsIOAccWrite_GM1 : AsIOAccWrite; (*FUB to transfer a value to gasmixer 1 I/O module*)
+	xAsIOAccWrite_GM2 : AsIOAccWrite; (*FUB to transfer a value to gasmixer 2 I/O module*)
+END_VAR

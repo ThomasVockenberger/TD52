@@ -1,0 +1,42 @@
+VAR
+	strDevice : STRING[80];
+	MpBackupCore_0 : MpBackupCore;
+	xCfgSetNtpClient_0 : CfgSetNtpClient;
+	sIP_Adr : STRING[80] := '0';
+	sEngNr : STRING[7] := '';
+	xHwGetNode_0 : HwGetNode := (0);
+END_VAR
+(*Firewall variables*)
+VAR
+	xAddFirewallRule : ArFirewallAddRule := (0);
+	xDelFirewallRules : ArFirewallDeleteAllRules := (0);
+	eFwStep : fwStepEnum := fwStepClearAll;
+	xFwOpenTimer : TON := (0);
+	bDisablePortCloseTimeout : BOOL := FALSE; (*Force variable to TRUE to keep ports open without timeout*)
+	bPort_PVI_ActInternal : BOOL := FALSE;
+	bPort_FTP_ActInternal : BOOL := FALSE;
+	bPort_SDM_ActInternal : BOOL := FALSE;
+	bPort_PVI_OpenInternal : BOOL := FALSE;
+	bPort_FTP_OpenInternal : BOOL := FALSE;
+	bPort_SDM_OpenInternal : BOOL := FALSE;
+	bPort_PVI_ActOld : BOOL := FALSE;
+	bPort_FTP_ActOld : BOOL := FALSE;
+	bPort_SDM_ActOld : BOOL := FALSE;
+END_VAR
+VAR CONSTANT
+	FW_OPEN_TIMEOUT_MS : UDINT := 43200000; (* 12 hours *)
+	FW_RULE_BLOCK_INA : STRING[80] := 'block in quick proto udp from any to me port = 11159';
+	FW_RULE_BLOCK_ANSL : STRING[80] := 'block in quick proto tcp from any to me port = 11169';
+	FW_RULE_BLOCK_WINMOD : STRING[80] := 'block in quick proto udp from any to me port = 7353';
+	FW_RULE_BLOCK_FTP : STRING[80] := 'block in quick proto tcp from any to me port = 21';
+	FW_RULE_BLOCK_SDM : STRING[80] := 'block in quick proto tcp from any to me port = 8080';
+END_VAR
+VAR
+	iTi_TimeZoneOffset_old : INT := 0;
+	CfgSetTimeOffset_PLC : CfgSetTimeOffset := (0);
+	ulCnt : UDINT := 0;
+	xTON_ConRestore : TON;
+	xR_TRIG_Disconnect : R_TRIG;
+	xTP_TRIG : TP;
+	bConnActAtInterrupt : BOOL := 0;
+END_VAR

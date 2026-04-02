@@ -1,0 +1,61 @@
+VAR
+	bCheckFailure : BOOL; (* flag for parameter transmission *)
+	
+	bCheckPar : BOOL; (* flag for parameter transmission *)
+	bKLS_CAN : ARRAY[0..24] OF BOOL;
+	bKLS98Comm : BOOL; (* TRUE= KLS98 CAN bus comm. is on *)
+	bKLS98CommErrErr : BOOL; (* TRUE= failure KLS98 CAN bus comm. *)
+	bKLSFALSOF : BOOL; (* TRUE= KLS98 with wrong software *)
+	bKLSSOFTV : BOOL; (* TRUE= KLS98 different software *)
+	bSendDelay : BOOL; (* trigger  parameter send delay *)
+	bSendKLS98Par : BOOL; (* flag for send KLS98 parameter *)
+	bSendKLS98ParError : ARRAY[0..24] OF BOOL; (* send KLS98 parameter error flag *)
+	bSendParZyl : ARRAY[0..24] OF BOOL; (* flag for send KLS98 parameter *)
+	
+	
+	lParSumm : UDINT; (* summ of KLS98 parameter *)
+	lParSummOld : UDINT; (* last value of KLS98 par. summ *)
+	slFenst2LiMx : DINT; (* limit for knock detection [mV] *)
+	
+	
+	
+	
+	TON_DecPowerRed : TON; (* FUB timer decrement misfire power *)
+	TON_SecondTick : TON; (* second tick TRUE for 0,1 sec. *)
+	TON_SendDelay : TON; (* FUB parameter send delay *)
+	TON_SOFTV : TON; (* FUB delay wrong software version *)
+	TON_WrongSW : TON; (* FUB wrong software version *)
+	TP_LowKnockLimit : TP; (* FUB timer for low knock limit *)
+	
+	ucCylinderCount : USINT; (* loop counter for cylinder number *)
+	ucFenst2Cnt : USINT; (* sample counter valve noise values *)
+	ucFenst2LimitCount : ARRAY[0..24] OF USINT;
+	
+	ucKLS98SensorCount : USINT; (* number of installed KLS98 devices *)
+	ucKLSMScount : ARRAY[0..24] OF USINT; (* 3 sec. delay for knock sensor fail *)
+	
+	ucNextParZyl : USINT; (* number of KLS98 for next par.send *)
+	ucNodeCount : USINT; (* loop counter for node number *)
+	
+	ucNrOfFaultKLS98 : USINT; (* number of faulty KLS98 cylinder *)
+	ucParCount : USINT; (* number of actual KLS98 parameter *)
+	ucParErrorCount : USINT; (* parameter send error counter *)
+	ucSendErrorCount : USINT; (* prameter send error counter *)
+	ucSendParZyl : USINT; (* number of cylinder wich get param. *)
+	ucSensorCount : USINT; (* current managed sensor *)
+	ucZylZahl : USINT; (* number of engine cylinder *)
+	
+	
+	
+	ulFenst2Avg : UDINT; (* sample average of valve noise *)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+END_VAR

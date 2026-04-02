@@ -1,0 +1,19 @@
+VAR
+	bAuxRel_FireProtFlaps : BOOL;
+	ZM_HBT2 : BOOL;
+	ZM_HBT5 : BOOL;
+	ZM_HBT4 : BOOL;
+	ZM_HBT3 : BOOL;
+	UB_VORS_Temp1 : BOOL;
+	ZM_HBT5_Temp2 : BOOL;
+	ZM_HBT5_Temp1 : BOOL;
+	xF_TRIG_GV_On : F_TRIG;
+	xTOF_T6 : TOF;
+	xTOF_V_DREHZ : TOF;
+	xTON_AT26_PB : TON;
+	xTON_T114 : TON;
+	xTON_AT26 : TON;
+	xTON_SafetyLoopEngOk : TON;
+	bAuxRel_Louvers : BOOL;
+	xTON_MonFS : TON;
+END_VAR

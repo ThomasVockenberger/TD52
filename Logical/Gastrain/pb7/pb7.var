@@ -1,0 +1,21 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: pb7
+ * File: pb7.var
+ * Author: 105051626
+ * Created: April 24, 2012
+ ********************************************************************
+ * Local variables of program pb7
+ ********************************************************************)
+VAR
+	xLCRPT1_FA_SPEC_GAS : LCRPT1;
+	xRAMPE_FA_GMISCH_2 : RAMPE_R;
+	xTP_MGASV1 : TP;
+	xTP_MGASV2 : TP;
+	rGT_MixSet_local : REAL; (*Set point for gas mixture rate [0..1%]*)
+	bZM : BOOL; (*Intermediate variable to store interlocks*)
+	xGR_MAXR_DREHZ1 : GR_MAXR;
+	DREHZ1_hi : BOOL;
+	Temp_gastrain_4_lines : BOOL;
+END_VAR

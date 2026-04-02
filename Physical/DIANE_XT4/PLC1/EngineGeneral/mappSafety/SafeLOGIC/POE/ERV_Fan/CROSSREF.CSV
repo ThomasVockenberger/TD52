@@ -1,0 +1,32 @@
+bAMM_Fan,POE\ERV_Fan\ERV_Fan.GB,2,OUT,6,52,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING - Room ventilation failure - Fan
+bAMM_Fan_NV,POE\ERV_Fan\ERV_Fan.GB,2,OUT,17,49,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING - Room ventilation failure - Fan signal not valid
+bAMM_Fan_PC,POE\ERV_Fan\ERV_Fan.GB,2,OUT,9,49,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING - Room ventilation failure - Fan plausibility check
+bOUT_Fan_OK,POE\ERV_Fan\ERV_Fan.GB,4,OUT,67,50,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,CPU OUT: Engine room ventilation - Fan OK
+bOUT_Fan_OK_PC,POE\ERV_Fan\ERV_Fan.GB,2,OUT,10,47,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,CPU OUT: Engine room ventilation - Fan plausibility check O
+iOUT_Fan_OK_1m_ET,POE\ERV_Fan\ERV_Fan.GB,2,OUT,4,45,Write,,DINT,,,VAR_OUTPUT,LOCAL,,CPU OUT: Engine room ventilation - Fan not operating - Elip
+PARA_Fan_Active,POE\ERV_Fan\ERV_Fan.GB,1,IN,68,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Fan is active
+PARA_Fan_Active,POE\ERV_Fan\ERV_Fan.GB,2,IN,47,0,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Fan is active
+PARA_Fan_Active,POE\ERV_Fan\ERV_Fan.GB,3,IN,95,8,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Fan is active
+sbColdMode_Active,POE\ERV_Fan\ERV_Fan.GB,1,IN,129,6,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Cold mode is active
+sbColdMode_Active,POE\ERV_Fan\ERV_Fan.GB,3,IN,104,6,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Cold mode is active
+sbGCB_On_10s,POE\ERV_Fan\ERV_Fan.GB,1,IN,2,11,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Generator circuit breaker ON for 10s
+sbGCB_On_10s,POE\ERV_Fan\ERV_Fan.GB,3,IN,84,11,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Generator circuit breaker ON for 10s
+sbN_Standstill,POE\ERV_Fan\ERV_Fan.GB,1,IN,83,11,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Actual engine speed <  80rpm
+sbN_Standstill,POE\ERV_Fan\ERV_Fan.GB,1,IN,126,11,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Actual engine speed <  80rpm
+sbN_Standstill,POE\ERV_Fan\ERV_Fan.GB,1,IN,100,12,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Actual engine speed <  80rpm
+sbSafeInputOK_ERV_Fan_Run,POE\ERV_Fan\ERV_Fan.GB,2,IN,19,0,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe input OK - DI Engine room ventilation - Fan in operati
+sbSL_OK,POE\ERV_Fan\ERV_Fan.GB,4,OUT,109,55,Write,,SAFEBOOL,,,VAR_OUTPUT,LOCAL,,Safety loop OK
+sbSL_OK_Fan,POE\ERV_Fan\ERV_Fan.GB,2,OUT,61,50,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Fan
+sbSL_OK_Fan,POE\ERV_Fan\ERV_Fan.GB,3,IN,115,12,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Fan
+sbSL_OK_Fan_PC,POE\ERV_Fan\ERV_Fan.GB,2,OUT,62,47,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Fan plausibility check
+sbSL_OK_Fan_PC,POE\ERV_Fan\ERV_Fan.GB,3,IN,116,9,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Fan plausibility check
+sDI_ERV_Fan_Run,POE\ERV_Fan\ERV_Fan.GB,1,IN,74,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Fan in operation
+sDI_ERV_Fan_Run,POE\ERV_Fan\ERV_Fan.GB,1,IN,122,8,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Fan in operation
+sDI_ERV_Fan_Run,POE\ERV_Fan\ERV_Fan.GB,1,IN,1,8,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Fan in operation
+sDI_ERV_Fan_Run,POE\ERV_Fan\ERV_Fan.GB,3,IN,94,8,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Fan in operation
+xDI_MON_ERV_Fan,POE\ERV_Fan\ERV_Fan.GB,0,,46,7,,,,,,VAR,FB,,FuB
+xET_TOF1,POE\ERV_Fan\ERV_Fan.GB,0,,60,53,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_W1,POE\ERV_Fan\ERV_Fan.GB,0,,152,9,,,,,,VAR,FB,,FuB
+xR_TRIG_1,POE\ERV_Fan\ERV_Fan.GB,0,,81,29,,,,,,VAR,FB,,FuB
+xR_TRIG_2,POE\ERV_Fan\ERV_Fan.GB,0,,145,29,,,,,,VAR,FB,,FuB
+xRS_S_1,POE\ERV_Fan\ERV_Fan.GB,0,,72,90,,,,,,VAR,FB,,FuB

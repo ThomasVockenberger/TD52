@@ -1,0 +1,53 @@
+VAR
+        bRemResWarning : BOOL := FALSE;
+	bRemResIn : BOOL; (* remote reset is active *)
+	xEngType : EngType; (*engine type*)
+	xOpMode : OpMode; (*engine operation mode*)
+	tMM2AB : MM2AmmBase; (*OUT: MM meta module AmmBase*) (*OldName:newPv; Cycle:2;*)
+	tAB2MM : AmmBase2MM; (*IN:  AB AmmBase*) (*OldName:newPv; Cycle:2;*)
+	IN_AB : IN_AB_Struct;
+	OUT_AB : OUT_AB_Struct;
+	MM2VIS : MM2VIS_Struct;
+	VIS2MM : VIS2MM_Struct;
+	Para : Para_AB_struct;
+	ParaFactoryDefault : Para_AB_struct := (0); (*First Init Values*)
+	pm : Para_AB_struct;
+	bOMSS_Stop : BOOL; (*engine operation mode selection*)
+	bOMSS_Man : BOOL; (*engine operation mode selection*)
+	bOMSS_Aut : BOOL; (*engine operation mode selection*)
+	bOMSS_Test : BOOL; (*engine operation mode selection*)
+	bOMSS_Scav : BOOL; (*engine operation mode selection*)
+	bOMSS_MAT : BOOL; (*engine operation mode selection*)
+	bTriptype1 : BOOL; (*triptype*)
+	bTriptype2 : BOOL; (*triptype*)
+	bTriptype3 : BOOL; (*triptype*)
+	bResetWarning : BOOL; (*reset warnings*)
+	bResetTrip : BOOL; (*reset trip*)
+	bGnlTrip : BOOL; (*general trip - common (project global)*)
+	bGnlTrip1 : BOOL; (*general trip priority 1 - common (project global)*)
+	bGnlTrip2 : BOOL; (*general trip priority 2 - common (project global)*)
+	bGnlTrip3 : BOOL; (*general trip priority 3 - common (project global)*)
+	bGnlWarning : BOOL; (*general warning - common (project global)*)
+	bAlarmTestOn : BOOL; (*alarm test ON*)
+	bAlarmTestEnable : BOOL; (*alarm test enable*)
+	iAlarmTestRestTime : INT; (*alarm test rest time [s]*)
+	iNumAlarmTestRun : DINT; (*number alarm test active*)
+	bResetRiskClass0 : BOOL; (*reset risk class*)
+	bResetRiskClass1 : BOOL; (*reset risk class*)
+	bResetRiskClass2 : BOOL; (*reset risk class*)
+	bResetRiskClass3 : BOOL; (*reset risk class*)
+	bResetRiskClass4 : BOOL; (*reset risk class*)
+	bRemResCmd : BOOL; (*remote reset command*)
+	bN_EngStart : BOOL; (*engine start speed exceeded*)
+	xTOF_ColdRestart : TOF := (0); (*cold restart*)
+	xTOF_WarmRestart : TOF := (0); (*warm restart*)
+	bNoInitDetected : BOOL := FALSE; (*allways true, except 1cycle on init up*)
+	bWarmRestart : BOOL := (0); (*warm restart*)
+	bColdRestart : BOOL := (0); (*cold restart*)
+	bMMD_GenAlarmTestOn : BOOL; (*MMD_Gen alarm test ON*)
+	bMMD_GenAlarmTestEnable : BOOL; (*MMD_Gen alarm test enable*)
+	iMMD_GenAlarmTestRestTime : INT; (*MMD_Gen alarm test rest time [s]*)
+	bMMD_BB_AlarmTestOn : BOOL; (*MMD_BB alarm test ON*)
+	bMMD_BB_AlarmTestEnable : BOOL; (*MMD_BB alarm test enable*)
+	iMMD_BB_AlarmTestRestTime : INT; (*MMD_BB alarm test rest time [s]*)
+END_VAR

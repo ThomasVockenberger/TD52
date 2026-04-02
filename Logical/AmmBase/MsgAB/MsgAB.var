@@ -1,0 +1,22 @@
+VAR
+	iAdrAmmBase2MM : UDINT;
+	iAdrMM2AmmBase : UDINT;
+	bSigFail : BOOL;
+	xTON_SigFail : TON;
+	xTON_SigFail_2103 : TON;
+	xTON_SigFail_2104 : TON;
+	xMsg1239 : Msg;
+	xMsg1240 : Msg;
+	xMsg1253 : Msg;
+	xMsg1254 : Msg;
+	xMsg1256 : Msg;
+	xMsg3252 : Msg;
+	xMsg3003 : Msg;
+	xMsg9389 : Msg;	(* W9389 Remote acknowledgement not possible, too many or safety trip *)
+	bGnlTrip_AB : BOOL; (*general trip - common (MM_AB local)*)
+	bGnlTrip1_AB : BOOL; (*general trip priority 1 - common (MM_AB local)*)
+	bGnlTrip2_AB : BOOL; (*general trip priority 2 - common (MM_AB local)*)
+	bGnlTrip3_AB : BOOL; (*general trip priority 3 - common (MM_AB local)*)
+	bGnlWarning_AB : BOOL; (*general warning - common (MM_AB local)*)
+	xTOF_GnlWarning : TOF;
+END_VAR

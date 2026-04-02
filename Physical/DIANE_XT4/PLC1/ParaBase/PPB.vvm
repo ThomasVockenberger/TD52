@@ -1,0 +1,56 @@
+(********************************************************************
+* COPYRIGHT -- INNIO Company
+********************************************************************
+* File: PPB.vvm
+* Author: automatically generated 
+* Created: 07.03.2014
+********************************************************************
+* PV mapping file
+********************************************************************)
+VAR_CONFIG
+	Cyclic#5.AmmBase::OUT_AB.tAB2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tAB2PB;
+	Cyclic#4.AmmBase::OUT_AB.tAlarmB2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tAlarmB2PB;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.tAG2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tAG2PB;
+	Cyclic#5.CBM::OUT_CB.tCB2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tCB2PB;
+	Cyclic#5.ChargingUnit::OUT_CH.tCH2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tCH2PB;
+	Cyclic#5.Coupling::OUT_CP.tCP2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tCP2PB;
+	Cyclic#5.Customized::OUT_CU.tCU2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tCU2PB;
+	Cyclic#5.Emission::OUT_EM.tEM2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tEM2PB;
+	Cyclic#5.EngineController::OUT_EC.tEC2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tEC2PB;
+	Cyclic#5.EngineGeneral::OUT_EG.tEG2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tEG2PB;
+	Cyclic#5.Exhaust::OUT_EX.tEX2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tEX2PB;
+	Cyclic#5.GasMeteringUnit::OUT_GD.tGD2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tGD2PB;
+	Cyclic#5.Gasmixer::OUT_GM.tGM2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tGM2PB;
+	Cyclic#5.Gastrain::OUT_GT.tGT2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tGT2PB;
+	Cyclic#5.Generator::OUT_GC.tGC2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tGC2PB;
+	Cyclic#5.Grid::OUT_GR.tGR2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tGR2PB;
+	Cyclic#5.HalIO::OUT_HA.bSimWinMOD_Active AT %Q.Cyclic#5.ParaBase::IN_PB.bSimWinMOD_Active; (*V4.10 added*)
+	Cyclic#5.HalIO::OUT_HA.tHA2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tHA2PB;
+	Cyclic#4.HalIO::tGCB_On AT %Q.Cyclic#5.ParaBase::IN_PB.tGCB_On;
+	Cyclic#4.HalIO::tResetRemExt AT %Q.Cyclic#5.ParaBase::IN_PB.tResetRemExt;
+	Cyclic#4.HalIO::tSafetyLoop_Eng AT %Q.Cyclic#5.ParaBase::IN_PB.tSafetyLoop_Eng;
+	Cyclic#5.HeatingCooling::OUT_HC.tHC2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tHC2PB;
+	Cyclic#5.ICxx::OUT_IC.tIC2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tIC2PB;
+	Cyclic#4.Ignition::OUT_IG.rN_EngAct AT %Q.Cyclic#5.ParaBase::IN_PB.rN_EngAct;
+	Cyclic#5.Ignition::OUT_IG.tIG2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tIG2PB;
+	Cyclic#5.KLS98::OUT_KL.tKL2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tKL2PB;
+	Cyclic#5.Knocking::OUT_KN.tKN2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tKN2PB;
+	Cyclic#5.Monic::OUT_MO.tMO2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tMO2PB;
+	Cyclic#4.Opstate::OUT_OP.iIdx_OMSS AT %Q.Cyclic#5.ParaBase::IN_PB.iIdx_OMSS;
+	Cyclic#4.Opstate::OUT_OP.iSt_OpMode AT %Q.Cyclic#5.ParaBase::IN_PB.iSt_OpMode;
+	Cyclic#5.Opstate::OUT_OP.tOP2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tOP2PB;
+	Cyclic#5.Opstate::OUT_OP.iCnt_FastStarts AT %Q.Cyclic#5.ParaBase::IN_PB.iCnt_FastStarts; (*V4.13.1 added*)
+	Cyclic#5.Opstate::OUT_OP.iCnt_OpHours AT %Q.Cyclic#5.ParaBase::IN_PB.iCnt_OpHours; (*V4.13 added*)
+	Cyclic#5.Opstate::OUT_OP.iCnt_Starts AT %Q.Cyclic#5.ParaBase::IN_PB.iCnt_Starts; (*V4.13 added*)
+	Cyclic#5.Opstate::OUT_OP.iCnt_UnitOpHours AT %Q.Cyclic#5.ParaBase::IN_PB.iCnt_UnitOpHours; (*V4.13 added*)
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#5.ParaBase::IN_PB.tPB2MM;
+	Cyclic#5.ParaBase::OUT_PB.tPB2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tPB2PB;
+	Cyclic#5.SAFI::OUT_SA.tSA2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tSA2PB;
+	Cyclic#5.Synchronization::OUT_SY.tGCB_RUC AT %Q.Cyclic#5.ParaBase::IN_PB.tGCB_RUC;
+	Cyclic#5.Synchronization::OUT_SY.tSY2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tSY2PB;
+	Cyclic#5.TestBench::OUT_TB.tTB2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tTB2PB;
+	Cyclic#5.ThermalReactor::OUT_TR.tTR2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tTR2PB;
+	Cyclic#5.Ventilation::OUT_VE.tVE2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tVE2PB;
+	Cyclic#5.Visu::OUT_VI.iPassLevel AT %Q.Cyclic#5.ParaBase::IN_PB.iPassLevel;
+	Cyclic#5.Visu::OUT_VI.tVI2PB AT %Q.Cyclic#5.ParaBase::IN_PB.tVI2PB;
+END_VAR

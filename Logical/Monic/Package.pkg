@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.4.123 SP?>
+<Package Version="4.10.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="DataObject" Language="Simple" Description="MODUL META data file">META_MO</Object>
+    <Object Type="File" Description="Module global data types" Private="true">Module_MO.typ</Object>
+    <Object Type="File" Description="Module global variables" Private="true">Module_MO.var</Object>
+    <Object Type="File" Description="Module global parameter" Private="true">Module_MOPara.typ</Object>
+    <Object Type="Program" Language="IEC" Description="+ Ignition voltage measure, monitoring">monic</Object>
+    <Object Type="Program" Language="IEC" Description="+ IN task">IN_MO</Object>
+    <Object Type="Program" Language="IEC" Description="+ OUT task">OUT_MO</Object>
+    <Object Type="Program" Language="IEC" Description="+ Messages">MsgMO</Object>
+    <Object Type="Program" Language="IEC" Description="+ Parameter handling">ParMO</Object>
+    <Object Type="Package" Description="CAN communication MONIC">CAN</Object>
+  </Objects>
+</Package>

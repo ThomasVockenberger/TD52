@@ -1,0 +1,14 @@
+VAR
+	ton_BLO_AES : TON;
+	ton_esl : TON;
+	xTOF_Rel_IslandAfMITime : TOF;
+	xTOF_Rel_Island4Resw2Mns : TOF;
+	ton_dmnd_synchline : TON;
+	bRel_Island4Resw2Mns : BOOL;
+	bRelEng4NP_Op : BOOL; (* release engine for net parallel operation*)
+	bRelEng4I_Op : BOOL; (* release engine for island operation*)
+	bRelEng4OnlyI_Op : BOOL; (* release engine for only island operation*)
+	bRelEng4Op : BOOL;
+	ton_dmnd_sy_device	:TON;
+	xTOF_RelEng4I_Op : TOF;	
+END_VAR

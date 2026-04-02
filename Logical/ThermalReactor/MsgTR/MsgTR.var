@@ -1,0 +1,44 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: MsgTR
+ * File: MsgTR.var
+ * Author: 105051626
+ * Created: November 01, 2013
+ ********************************************************************
+ * Local variables of program MsgTR
+ ********************************************************************)
+VAR
+	iAdrMM2AmmBase : UDINT;
+	iAdrAmmBase2MM : UDINT;
+	xMsg2356 : Msg;
+	xMsg2357 : Msg;
+	xMsg2358 : Msg;
+	xMsg3306 : Msg;
+	xMsg3307 : Msg;
+	xMsg3498 : Msg;
+	xMsg9501 : Msg;
+	xMsg9502 : Msg;
+	xMsg3499 : Msg;
+	xMsg3500 : Msg;
+	xMsg3501 : Msg;
+	xMsg3502 : Msg;
+	xMsg3503 : Msg;
+	xMsg3504 : Msg;
+	xMsg3505 : Msg;
+	xMsg9374 : Msg;
+	xMsg9375 : Msg;
+	xMsg9376 : Msg;
+	xMsg9377 : Msg;
+	xMsg9381 : Msg;
+	xMsg9396 : Msg;
+	xMsg9397 : Msg;
+	xMsg9398 : Msg;
+	xMsg9503 : Msg;
+	xMsg9500 : Msg;
+	xMsg9504 : Msg;
+	xMsg9505 : Msg;
+	xMsg9309 : Msg;
+	xMsg9042 : Msg; 
+	xMsg9043 : Msg;
+END_VAR

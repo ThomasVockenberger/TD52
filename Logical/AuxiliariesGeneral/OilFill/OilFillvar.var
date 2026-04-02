@@ -1,0 +1,10 @@
+(********************************************************************
+ COPYRIGHT -- INNIO Company, 2024
+ ******************************************************************
+OilFill: variable declaration
+ ********************************************************************)
+VAR
+	bFreshOilPump_WithoutValve : BOOL := FALSE; (*configuration option based flag*)
+	bWasteOilPump_WithoutValve : BOOL := FALSE; (*configuration option based flag*)
+	TON_EOVal_Open : TON := (0);
+END_VAR

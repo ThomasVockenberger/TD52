@@ -1,0 +1,95 @@
+(*******************************************************************************
+MsgOL.var
+
+This code is confidential and proprietary to the INNIO Company.
+It may not be used in any form, or reproduced in any manner,
+without the express written permission of the INNIO Company.
+Copyright, INNIO Company, 2019
+ 
+Customized modifications: -
+------------------------
+ 
+History:
+-------
+V3.90.0		20-03-2012 pankajrodey 		Created initial structured text code
+
+*******************************************************************************)
+VAR
+	iAdrAmmBase2MM : UDINT;
+	iAdrMM2AmmBase : UDINT;
+	xMsg3131 : Msg;
+	xMsg3132 : Msg;
+	xMsg3133 : Msg;
+	xMsg3134 : Msg;
+	xMsg3135 : Msg;
+	xMsg3136 : Msg;
+	xMsg3137 : Msg;
+	xMsg3138 : Msg;
+	xMsg3139 : Msg;
+	xMsg3140 : Msg;
+	xMsg3151 : Msg;
+	xMsg3002 : Msg;
+	xMsg3210 : Msg;
+	xMsg3211 : Msg;
+	xMsg3121 : Msg;
+	xMsg3122 : Msg;
+	xMsg3123 : Msg;
+	xMsg3124 : Msg;
+	xMsg3125 : Msg;
+	xMsg3126 : Msg;
+	xMsg3127 : Msg;
+	xMsg3128 : Msg;
+	xMsg3129 : Msg;
+	xMsg3130 : Msg;
+	xMsg3141 : Msg;
+	xMsg3142 : Msg;
+	xMsg3143 : Msg;
+	xMsg3144 : Msg;
+	xMsg3145 : Msg;
+	xMsg3146 : Msg;
+	xMsg3147 : Msg;
+	xMsg3148 : Msg;
+	xMsg3149 : Msg;
+	xMsg3150 : Msg;
+	xMsg3161 : Msg;
+	xMsg3162 : Msg;
+	xMsg3163 : Msg;
+	xMsg3164 : Msg;
+	xMsg3165 : Msg;
+	xMsg3166 : Msg;
+	xMsg3167 : Msg;
+	xMsg3168 : Msg;
+	xMsg3169 : Msg;
+	xMsg3170 : Msg;
+	xMsg3171 : Msg;
+	xMsg3172 : Msg;
+	xMsg3173 : Msg;
+	xMsg3174 : Msg;
+	xMsg3175 : Msg;
+	xMsg3176 : Msg;
+	xMsg3177 : Msg;
+	xMsg3178 : Msg;
+	xMsg3179 : Msg;
+	xMsg3180 : Msg;
+	xMsg3001 : Msg;
+	xMsg3053 : Msg;
+	xMsg3054 : Msg;
+	xMsg3055 : Msg;
+	xMsg3056 : Msg;
+	xMsg3057 : Msg;
+	xMsg3058 : Msg;
+	xMsg3059 : Msg;
+	xMsg3060 : Msg;
+	xMsg3061 : Msg;
+	xMsg3062 : Msg;
+	xMsg3063 : Msg;
+	xMsg3064 : Msg;
+	xMsg3065 : Msg;
+	xMsg3066 : Msg;
+	xMsg3067 : Msg;
+	xMsg3068 : Msg;
+	xMsg3069 : Msg;
+	xMsg3070 : Msg;
+	xMsg3071 : Msg;
+	xMsg3072 : Msg;
+END_VAR

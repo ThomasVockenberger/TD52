@@ -1,0 +1,16 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: c_scal
+ * File: c_scal.var
+ * Author: Heim Markus
+ * Created: 29.09.2021
+ ********************************************************************
+ * Local variables of program c_scal
+ ********************************************************************)
+VAR
+	rReplaceMeWithVarname : REAL; (*void*)
+	bReplaceMeWithVarname : BOOL; (*void*)
+	xScalBlock : ARRAY[0..30] OF ScalBlock := [31((0))]; (*custom scaling Blocks array*)
+	n : USINT := 0; (*Scaling Blocks internal counter*)
+END_VAR

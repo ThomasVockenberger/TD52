@@ -1,0 +1,199 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2025
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V03.99.00.00	06.03.2013	Weitzer 	generated for modular software	 
+;			    02.10.2013	lettenb.	descriptions setted
+;				04.12.2013				dependencies added
+; V04.00.00.00	29.01.2014	lettenb.	1017,1018,1023,1051,3322 UL depended reset 624
+; V04.00.01.00	08.05.2014	lettenb.	version changed
+; V04.01.00.00	22.05.2014	lettenb.	version changed, interface to GM added
+;				01.08.2014	Tinello		OUT_AG.bMsg1120 added
+; V04.03.00.00	02.03.2015	lettenb.	version + dependencies changed (920, engine bearing temp. -> MM_EG)
+; V04.03.00.00	11.06.2015	Zengerer	version + dependencies changed (IF change with array index 0 for compatibility with c-tasks)
+;				15.06.2015  lettenb.	PARAMETER_CHK expanded
+; V04.04.00.00	10.05.2016	lettenb.	version + dependencies changed (920)
+; V04.04.00.00	12.07.2016	Zengerer 	increase version number for changed customized array size
+;               20.03.2017	lettenb.	624: service mode prelubrication added, start delay 6->0s, meas.siganl plaus.check acc. funct.safety
+; V04.05.00.00	27.03.2017	lettenb.	BR9: prelubrication for fast start
+;				18.07.2017	Messner		Oil circuit fast start V2
+;				07.08.2017 	Messner		Starter battery voltage monitoring
+;				20.09.2017	Messner		Active Cooling Program added
+;				28.07.2017	502423184	due TO SWAT #3: warning added to the oil level minimum
+;										due TO SWAT #3: no block OF the pre-heating due TO measuring failure OF oil pan temperatur AND
+;										use enigne oil inlet temperature as a fall-back signal FOR the pre-heating
+;				19.12.2017	Messner		Oil preheating valve operation messages (B2956, B2957) added
+; V04.05.01.00  14.02.2018	Weitzer		EOP_BWS2 added; correction MsgAG, EleStart, AuxGnl after validation
+;				28.02.2018	lettenb.	rDPr_BbFilt_A,rDPr_BbFilt_B prepared for vis
+; V04.05.02.00  09.04.2018	lettenb.	2770-2784 bParaSetupOk added to avoid alarm at plc startup,bugfix
+;               18.09.2018	lettenb.	2233,2432, switch off bat.charger for elestart, bu
+; V04.06.00.00  16.07.2018	Perktold	Louvers closed signal added
+;										permanent prelube added type 4/6
+;				09.10.2018	Schmid		changes in permanent prelube type 4 + type 6 (TC oil valve, W9222+W9225 delayed) 
+; V04.07.00.00  26.04.2018	lettenb.	SWAT920/5 added
+;				09.08.2018	Schmid		2nd low temperature charge cooling circuit added, includes change in tManAuxCtr struct
+;				08.01.2019	Schmid		redundant pump control for HWP, CCWP, CC2WP and EmCWP added
+;				22.03.2018	Schmid		stop turbo charger cool down run if emergency stop button is pressed, gearbox oil quality sensor removed
+; V04.07.01.00	19.06.2019	Schmid		Aux_6: bugfix engine start release from perm. prelube
+;										Aux_9: decided on conditions for permanent prelube (30s fast start)/interval prelube (300s fast start)
+;				24.06.2019	Schmid		measurement signal failures not restricted by operation mode selector switch (affected W2627, W2628, W2786)
+; V04.09.00.00	05.07.2019	Schmidt		added failed TC post-cooling detection/counter
+; V04.09.01.00	22.04.2020	Schmid		bugfix in activation of A1017 oil pressure minimum monitoring
+; V04.10.00.00	20.07.2020	Schmid		allow fast start without ECWP_Op feedback, failure triggers A1090 during start-up,  W3497 failure in safety loop extended
+;				19.11.2020	lettenb.	2348,2349,2350,2351,2352,2353,2355,2359,2360 added
+;				03.12.2020	Perktold,	added oil and coolant management
+; V04.10.01.00	09.03.2021	Schmid,		bugfix type6 A1060 for IN_AG.bEng_Dem_EPS: min pressure limit for 1 pump instead of 2
+;				11.03.2021	lettenb.	9004->9048, Msg# already used, bugfix
+; V04.11.00.00	25.11.2021	Schmid		W9279 only active if emergency cooler pump demanded
+;				28.01.2022	Perktold	included plant controller upgrade
+; V04.11.01.00	04.02.2022	Schmid		oil quality sensor CAN oil configuration for 2nd generation sensor reworked
+;				08.02.2022	Schmid		bugfixes control battery check extension
+; V04.11.02.00	22.02.2022	Schmid		oil quality sensor modifications from validation + J920 start prelube with auxiliaries demand instead of engine demand
+; V04.12.00.00	19.09.2022	Zengerer	new task OilTank for plant oil tank handling
+; 				19.12.2022	Perktold	added comments for sr-code (EN 13849-1 / 4.6.3) for W3507
+; 				19.12.2022	Perktold	Ctr_ECW, Ctr_EOVal: retrigger caused by X >= WMin just once per controller activation
+; 				21.12.2022	Perktold	added W9369 Failure auxiliaries supply voltage engine
+;				22.12.2022  Bacci		version changed, starter moitoring improvement, added a delay for starter-charging units batteries reconnection 
+;				29.03.2023	Tinello		permanent prelubrication with DC pump in case of mains failure / release oil refill set to 10 min / bugfix #1092 oil counter reset
+; V04.13.00.00	21.07.2023	Bacci		Type3 new starting procedure and adaptive first start attempt
+;				28.07.2023	Tinello		Blow-by fan needs to be operated when oil pump is running (2022-134)
+;				03.08.2023	Tinello		BugFix #1236 no engine start in preheating mode
+;				27.09.2023	Bacci		Flucon sensor clean-up
+;				03.10.2023  Tinello		Bugfix #1266 Heat water pump with softstarter
+;				03.10.2023	Tinello		Bugfix #1267 Demand for emergency cooling circuit pump was missing
+;				08.11.2023	Tinello		oil refill monitoring, oil level high warning (W2435), bus signal for stopping external EO refill pump (2022-131)
+;										ECW pump difference pressure monitoring for all engine types available (2023-185)
+;				20.11.2023	Bacci		Starter/s correct engagement monitoring added. A2377, A2378, A2379, B9089, B9090 and B9091 added.
+;				07.12.2023 	Tinello		BugFix #918  Consider different types of in- and outlet louvers
+;				13.12.2023	Tinello		QC3111 oil pre-heating to avoid high oil pressure at engine start (2023-197)
+;				20.12.2023	Tinello		Oil filter diff pressure monitoring (2023-184) - including issue #1122 and Fracas #3216 
+;				05.03.2024	Bacci		Changes on trip 1120 added
+; V4.14.00.00	17.10.2024	Racero		Buffer battery test logic adapted, test runs also during engine operation not only standstill
+;				28.10.2024	Nagy		QC2509 Start preparation keeps running issue fix
+;				11.11.2024	Zengerer	new task OilFill 
+;				25.11.2024	Bacci		T6 Start procedure with purge start (2024-219)
+;				11.12.2024	Nagy		W9513 Oil refilling failure added, A1043 modified (2024-225)
+;				12.12.2024	Nagy		Louvers removed from Auxiliary check and moved to ventillation as a new alarm (2024-226)
+;				19.03.2025	Tinello		Issue #1694 Each TC of an overhauled engine, should be able to be cooled with oil
+;				08.04.2025	Tinello		SafetyPLC: Deactivated W3497 in case of existing SAFETY-PLC
+; V04.25.00.00 	10.07.2025	Tinello	 	SafetyPLC: release for HWP / purge air calculation / Changed behavior of A1053 and A1054 / added gas and fire system failure
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID: 18241
+"<MODUL>AG</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.25.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"<PARA1 Name='iEng_Motortype' MIN='208' MAX='920' />"
+"<PARA2 Name='rN_EngStart_LimHi' MIN='50.0' MAX='2200.0' />"
+"<PARA3 Name='rN_EngNom' MIN='100.0' MAX='2200.0' />"
+"<PARA4 Name='tiPreLube' MIN='2000' MAX='300000' />"
+"<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Statement, if engine operation is also allowed without this module (FALSE) or if this module´s parameter check passing is mandatory (TRUE)
+"<MANDATORYMODULE>TRUE</MANDATORYMODULE>"
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_AG</DATAMODULE>"
+"	<DATAMODULE>oil_perm</DATAMODULE>"
+"	<DATAMODULE>perm_AG</DATAMODULE>"
+"	<DATAMODULE>OQS_perm</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='AB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='04.06.00.00' />"		;new permanent file info
+"	<DEPENDENCY MODULE='IG' VERSION='04.13.00.00' />"
+"	<DEPENDENCY MODULE='EC' VERSION='04.11.00.00' />"
+"	<DEPENDENCY MODULE='EX' VERSION='04.10.00.00' />"
+"	<DEPENDENCY MODULE='OP' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='CU' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='GC' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='GM' VERSION='04.01.00.00' />"
+"	<DEPENDENCY MODULE='GT' VERSION='04.25.00.00' />"
+"	<DEPENDENCY MODULE='EG' VERSION='04.25.00.00' />"
+"	<DEPENDENCY MODULE='SY' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='HC' VERSION='04.11.00.00' />"
+"	<DEPENDENCY MODULE='HA' VERSION='04.25.00.00' />"
+"	<DEPENDENCY MODULE='VE' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='VI' VERSION='04.06.00.00' />"    ; corrected for SW download via HMI
+"   <DEPENDENCY VISVERSION='02.15.00.00' />"				;Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	Engine auxiliaries control "
+"	</General>	"
+""
+"	<F1 Name='Engine starter' LastModified='4.03.00.00'>"
+"	Electrical starter control	"
+"	Air starter control	"
+"	</F1>"
+"	<F2 Name='Engine auxiliaries control' LastModified='4.04.00.00'>"
+"	Engine/turbocharger oil pumps, engine water pumps.	"
+"	</F2>"
+"	<F3 Name='Engine oil counter' LastModified='4.03.00.00'>"
+"	Engine oil consumption metering.	"
+"	</F3>"
+"	<F4 Name='Engine oil condition' LastModified='4.04.00.00'>"
+"	Engine oil condition monitoring.	"
+"	</F4>"
+"	<F5 Name='Engine oil temperature' LastModified='4.02.00.00'>"
+"	Engine oil temperature controller. High temperature circuit	"
+"	Engine oil temperature controller. Low temperature circuit	"
+"	</F5>"
+"	<F6 Name='Engine cooling water temperature' LastModified='4.02.00.00'>"
+"	Engine cooling water temperature controller.	"
+"	</F6>"
+"	<F7 Name='Blowby control' LastModified='4.03.00.00'>"
+"	Engine crank case pressure controller.	"
+"	</F7>"
+""
+"	<Info>"
+" 	UPDATE 4.01.01.00: Perm datamodule moved from SYS- to USERROM	"
+"	UPDATE 4.02.01.00: version + dependencies changed (IF change with array index 0 for compatibility with c-tasks)	"
+"	UPDATE 4.05.00.00: active cooling added "
+"	UPDATE 4.06.00.00: transmit perm status info "
+"	UPDATE 4.07.00.00: hydraulic ECW pre-heating (type3+4), redundant pump control "
+"	UPDATE 4.14.00.00: new task OilFill prepared " 
+"	</Info>"
+""
+"	<Customized LastModified='4.00.00.00'>"
+"	- Nothing"
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

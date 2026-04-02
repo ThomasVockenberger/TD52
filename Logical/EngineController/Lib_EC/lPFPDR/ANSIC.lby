@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Program xmlns="http://br-automation.co.at/AS/Program">
+   <Files>
+      <File>lPFPDR.fun</File>
+      <File>lPFPDR.typ</File>
+      <File>lPFPDR.var</File>
+      <File>AC_PFPDR.h</File>
+      <File>AC_PFPDR_private.h</File>
+      <File>AC_PFPDR_types.h</File>
+      <File>rtwtypes.h</File>
+      <File>AC_PFPDR.c</File>
+      <File>main.c</File>
+      <File>lib_properties.txt</File>
+   </Files>
+</Program><?AutomationStudio Version=3.0?>

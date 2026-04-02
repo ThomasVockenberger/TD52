@@ -1,0 +1,22 @@
+VAR
+	xGRMAX_T_HW_Su_Hi : GR_MAXR;
+	xTON_T_HW_Su_Hi : TON;
+	xGRMAX_T_HW_Su_HiHi : GR_MAXR;
+	xTON_T_HW_Su_HiHi : TON;
+	xGRMAX_T_HW_Re_Hi : GR_MAXR;
+	xTON_T_HW_Re_Hi : TON;
+	xGRMAX_T_HW_Re_HiHi : GR_MAXR;
+	xTON_T_HW_Re_HiHi : TON;
+	xGRMAX_T_HW_ReBeEng_Hi : GR_MAXR;
+	xTON_T_HW_ReBeEng_Hi : TON;
+	xGRMAX_T_HW_ReBeEng_HiHi : GR_MAXR;
+	xTON_T_HW_ReBeEng_HiHi : TON;
+	xGRMAX_T_HW_ReAfEC_Hi : GR_MAXR;
+	xTON_T_HW_ReAfEC_Hi : TON;
+	xGRMAX_T_HW_ReAfEC_HiHi : GR_MAXR;
+	xTON_T_HW_ReAfEC_HiHi : TON;
+	rT_HW_Re : REAL;
+	rP_Act_Norm_frozen : REAL;
+	xGRMAX_T_HW_HC_Re_Hi : GR_MAXR;
+	xTON_T_HW_HC_Re_Hi : TON;
+END_VAR

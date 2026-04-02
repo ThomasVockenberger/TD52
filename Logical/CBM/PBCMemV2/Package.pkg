@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Program" Language="IEC" Description="PBC_Control task">PBC_Control</Object>
+    <Object Type="Program" Language="IEC" Description="+ collectes data every 10ms">PBC_Buffer</Object>
+    <Object Type="Program" Language="IEC" Description="Test Routine for ECB Memory">ECB_Test</Object>
+    <Object Type="Program" Language="IEC" Description="Save Object">PBC_Obj</Object>
+    <Object Type="Program" Language="IEC" Description="+ collects data every 10ms">TCB_Buffer</Object>
+  </Objects>
+</Package>

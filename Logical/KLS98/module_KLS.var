@@ -1,0 +1,127 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Package: Heating_Cooling_Pkg
+ * File: module_Heat_Cool.var
+ * Author: 320003156
+ * Created: July 06, 2011
+ ********************************************************************
+ * Variables of package Heating_Cooling_Pkg
+ ********************************************************************)
+VAR
+	pm : PARA_KLS_Struct;
+	Para : PARA_KLS_Struct;
+	ParaFactoryDefault : PARA_KLS_Struct := (0);
+	OUT_KL : OUT_KLS_Struct := (0);
+	IN_KL : IN_KLS_Struct := (0);
+	xEngType : EngType := (0);
+	
+	
+	
+	
+	
+	kls98_vis : BOOL; (* 1=KLS98 exists *)
+	CANopen_error : UINT; (* CAN CONTROLLER STATUS 0=OK *)
+	
+	ic900_vis : BOOL; (* TRUE=CAN ignition system is used *)
+	
+	ucNumberOfCylinder : USINT; (* number of cylinders *)
+	
+	MissfCyl : UDINT; (* cylinder misfire parameter *)
+	ZylZahl : USINT; (* number of cylinders for CAN-Comm. *)
+	ECANDevGo : USINT; (* event startup parameter CAN device *)
+	CANDevGo : ARRAY[0..1] OF USINT; (* startup parameter for CAN devices *)
+	KLS98_Node : USINT; (* node number of first KLS98 *)
+	KLS98_ID : USINT; (* flag for trigger recipe receive *)
+	KLSVers : UINT; (* KLS98 software version number *)
+	E_KLS : ARRAY[0..24] OF _tEventKLS;
+	ucKLS98CommErrCount : ARRAY[0..24] OF USINT;
+	bKLS98Fault : ARRAY[0..24] OF BOOL; (* TRUE= faulty cyl. knocking signal *)
+	KLS_CAN : ARRAY[0..10] OF BOOL := [11(0)]; (* KLS CAN KOPPLUNG *)
+	usKLSVers : ARRAY[0..24] OF UINT; (*kls98 version*)
+	KLS_Err : ARRAY[0..24] OF UINT; (* error status of KLS98 devices *)
+	KLSSOFTV : BOOL := 0; (* KLS SOFTWARE VERSIONEN *)
+	KLSFALSOF : BOOL := 0; (* KLS FALSCHE SOFTWARE *)
+	ucBaureihe : USINT; (* module series *)
+	FenstF1 : USINT; (* KLS98 function window 1 *)
+	FenstF2 : USINT; (* KLS98 function window 2 *)
+	WMF3_B : INT; (* beginn of window 3 in 1/10 deg. *)
+	WMF3_D : UINT; (* duration of window 3 in 1/10 deg. *)
+	WMF4_B : INT; (* beginn of window 4 in 1/10 deg. *)
+	WMF4_D : UINT; (* duration of window 4 in 1/10 deg. *)
+	usZahnzahl : UINT; (* number of starter ring gear teeth *)
+	PosResImp : INT; (* position reset trigger mark *)
+	usFreig_n : UINT; (* speed limit activate KLS functions *)
+	ucZuendabst : USINT; (* ignition timing diff. row A to B *)
+	FireOrder : ARRAY[0..24] OF USINT; (* engine ignition fire order *)
+	KLSGW1 : INT; (* unused KLS98 limit 1 *)
+	KLSGW2 : INT; (* unused KLS98 limit 2 *)
+	KLSGW3 : INT; (* unused KLS98 limit 3 *)
+	KLSGW4 : INT; (* unused KLS98 limit 4 *)
+	WMF1_B : INT; (* beginn of window 1 in 1/10 deg. *)
+	WMF1_D : INT; (* duration of window 1 in 1/10 deg. *)
+	WMF2_B : INT; (* beginn of window 2 in 1/10 deg. *)
+	WMF2_D : UINT; (* duration of window 2 in 1/10 deg. *)
+	WMF_AB : INT; (* beginn of window misfire in 1/10 *)
+	WMF_AD : UINT; (* duration of window misfire in 1/10 *)
+	FenstF3 : USINT; (* KLS98 function window 3 *)
+	FenstF4 : USINT; (* KLS98 function window 4 *)
+	AussSchwel : UINT; (* KLS98 limit for misfire detection *)
+	AussInterv : UINT; (* misfire interval cycle parameter *)
+	MWFenst1 : INT; (* average parameter for window 1 *)
+	MWFenst2 : INT; (* average parameter for window 2 *)
+	MWFenst3 : INT; (* average parameter for window 3 *)
+	MWFenst4 : INT; (* average parameter for window 4 *)
+	Zuendabst : USINT; (* ignition distance from row A to B *)
+	StopM : BOOL; (* TRUE=engine is stopped *)
+	KLSZAHN : BOOL := 0; (* KLS Falsche Zähnezahl *)
+	KLSPAR : BOOL := 0; (* KLS Parameterchecksumfehler *)
+	KLSCAM : ARRAY[0..10] OF BOOL := [11(0)]; (* KLS AUSFALL CAM PICKUP *)
+	KLSTRI : ARRAY[0..10] OF BOOL := [11(0)]; (* KLS AUSFALL TRIGGER PICKUP *)
+	ErrZahnVal : USINT; (* KLS98 with number of teeht error *)
+	ErrParVal : USINT; (* KLS98 number with parameter error *)
+	Fenst2 : ARRAY[0..24] OF UINT; (* cylinder values of KLS98 window 2 *)
+	KLSMS : ARRAY[0..24] OF BOOL := [25(0)]; (* KLS MESSIGNAL KLOPFSENSOR *)
+	E_KLS_Err : ARRAY[0..24] OF USINT; (* CAN events KLS98 error messages *)
+	KLSSTOER : BOOL := 0; (* KLS Störung *)
+	n_ist : INT; (* actual speed [1/min] *)
+	LichtMax : ARRAY[0..24] OF UINT; (* cylinder light density from OCA *)
+	Fenst1 : ARRAY[0..24] OF UINT; (* cylinder values of KLS98 window 1 *)
+	Fenst3 : ARRAY[0..24] OF UINT; (* cylinder values of KLS98 window 3 *)
+	Fenst4 : ARRAY[0..24] OF UINT; (* cylinder values of KLS98 window 4 *)
+	KLSAktiv : ARRAY[0..24] OF USINT; (* control of active KLS98 functions *)
+	Fenst2Max : UINT; (* maximum of values window 2 *)
+	Fenst2Min : UINT; (* minimum of values window 2 *)
+	KLSVEN : ARRAY[0..24] OF BOOL := [25(0)]; (* KLS Ventilgeräsch maximum *)
+	ucFreigabe : ARRAY[0..24] OF USINT; (* control of active KL98 functions *)
+	usKLSBetrH : ARRAY[0..24] OF UINT; (* operating hours KLS98 device *)
+	E_Fenst1 : ARRAY[0..24] OF USINT; (* CAN event KLS98 window 1 *)
+	E_Fenst2 : ARRAY[0..24] OF USINT; (* CAN events KLS98 window 2 *)
+	E_Fenst3 : ARRAY[0..24] OF USINT; (* CAN events KLS98 window 3 *)
+	E_Fenst4 : ARRAY[0..24] OF USINT; (* CAN events KLS98 window 4 *)
+	E_LichtMax : ARRAY[0..24] OF USINT; (* CAN event light maximum *)
+	E_Aussetz : ARRAY[0..24] OF USINT; (* CAN events misfire values *)
+	bGnlTrip1 : BOOL;
+	bGnlTrip2 : BOOL;
+	bGnlTrip3 : BOOL;
+	bGnlWarning : BOOL;
+	bGnlTrip : BOOL;
+	BWS_HA : BOOL := 0; (* Betriebswahlschalter Hand/Auto *)
+	MM2VIS : MM2VIS_Struct;
+	bNoInitDetected : BOOL := FALSE; (*allways true, except 1cycle on init up*)
+	CMSmain_KLS98_1 : CMSmain;
+	CMSmain_KLS98_2 : CMSmain;
+	CMSmain_KLS98_3 : CMSmain;
+	CMSmain_KLS98_4 : CMSmain;
+	CMSinit_KLS98_x_status : UINT;
+	CMSinit_KLS98_1 : CMSinit;
+	CMSinit_KLS98_2 : CMSinit;
+	CMSinit_KLS98_3 : CMSinit;
+	CMSinit_KLS98_4 : CMSinit;
+	CMSmain_KLS98_x_status : UINT;
+	Aussetz : ARRAY[0..24] OF UINT;
+	SIM_rKLS98_X_Window1 : ARRAY[0..24]OF REAL; (* cylinder values of KLS98 window 1 *)
+	SIM_rKLS98_X_Window2 : ARRAY[0..24]OF REAL; (* cylinder values of KLS98 window 2 *)
+	SIM_rKLS98_X_Window3 : ARRAY[0..24]OF REAL; (* cylinder values of KLS98 window 3 *)
+	SIM_rKLS98_X_Window4 : ARRAY[0..24]OF REAL; (* cylinder values of KLS98 window 4 *)
+END_VAR

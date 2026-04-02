@@ -1,0 +1,151 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: Gen2_xt
+ * File: Gen2_xt.var
+ * Author: 502427335
+ * Created: June 18, 2015
+ ********************************************************************
+ * Local variables of program Gen2_xt
+ ********************************************************************)
+VAR
+	roffset_Ug : REAL; (*offset generator voltage*)
+	bFreqM_Gen2 : BOOL; (*Insel: Motordrehzahl wird über Generatorfrequenz berechnet*)
+	LCRCByP_LamLoLim_ABS : LCRCurveByPoints;
+	TON_LOXErr : TON;
+	bResetGlobal_Man : BOOL;
+	LCRCByP_SkipFkp : LCRCurveByPoints;
+	LCRCByP_SkipFLevel : LCRCurveByPoints; (* overspeed threshold to start skip fire with respect to power  *)
+	LCRCByP_PwrCtrKi : LCRCurveByPoints;
+	LCRCByP_rEtaBrakeExt : LCRCurveByPoints;
+	LCRCByP_rGain_iLQR_rR0 : LCRCurveByPoints;
+	p2_offset : REAL;
+	sstrace : INT := 2;
+	TON_LeanoxDev_Dis : TON;
+	TON_Trigger : TON;
+	tAbtastT : TIME := T#5s;
+	rMAX : REAL;
+	rMIN : REAL;
+	rP_Leanox_bloc : REAL := 0.01;
+	rGen2_rP_Set_old : REAL;
+	rGen2_rP_des_old : REAL;
+	rP_LimitBDC_Norm : REAL;
+	TON_Pelmax : TON;
+	rP0_Nom_normal : REAL;
+	rhoAir : REAL := 1.293;
+	bSaveLamOffsetLim : BOOL := 0;
+	nc : INT := 0;
+	bGEN2_calconly : BOOL := FALSE;
+	bActGasMixGen2 : BOOL := TRUE;
+	TON_SaveLam : TON;
+	bReleaseAutoLamSave : BOOL := TRUE;
+	bInitTvActPos : BOOL := TRUE;
+	bInitLamMin : BOOL := TRUE;
+	tLamSaveTime : TIME := T#5m;
+	bIsland_old : BOOL;
+	p2s_offset : REAL;
+	Pel_offset : REAL;
+	rP_Ramp_Dec_Fast : REAL := 0.1;
+	bSaveKeMap : BOOL := FALSE;
+	rMinKpSkip : REAL := 0.0;
+	rTiFpowtraj : REAL;
+	bGS_TBDC : BOOL := FALSE;
+	LCRCByP_TBDC : LCRCurveByPoints;
+	refPoint_TBDC : ARRAY[0..5] OF lcrCurveByPoints_TabEntry_type;
+	rTiBDC_OvSpd : REAL;
+	rN_TBDC_OvSpd : REAL;
+	rR0_OvSped : REAL;
+	rR0 : REAL;
+	bR0_OvSped : BOOL;
+	bTiBDC_OvSpd : BOOL;
+	rP_Diff_Max_Norm_old : LREAL;
+	minPawLam : REAL;
+	Para_rGEN2_ResetKe_z : REAL := 0.0;
+	rK_LEANOX : REAL := 0.0;
+	rKd_skiplevel : REAL := 0.0;
+	bReset_Ke : BOOL := FALSE;
+	rP0_Nom_normal_type6 : REAL;
+	rPr_p2s_Idle : REAL; (*[bar] latest p2s in idle operation*)
+	bIdle_old : BOOL;
+	rPr_desired_p2s_min : LREAL; (*[bar]*)
+	rPr_lowLoad_p2s_min : REAL; (*[bar]*)
+	TON_NetP : TON;
+	xRAMPE_p2s_0kW : RAMPE_R;
+	rT_EO_Idle : REAL; (*[degC] latest TOil in idle operation*)
+	rStd_Ramp_p2s_0kW : REAL;
+	rT_EO_Nom : REAL := 70; (*[degC] reference engine oil temperature above which the engine will be classified as hot*)
+	bBlock_LamAdaptSY : BOOL;
+	rLam_min_adapt : REAL;
+	rFact_LamAdapt : REAL;
+	rLam_Idle : REAL; (*[-] latest lambda in idle operation*)
+	rLam_min_atIdle : REAL;
+	rLam_initialOffset : REAL := 0.2; (*[pu] amount of delta in lambda which will be released immediatly after SY*)
+	TON_NetPLONG : TON;
+	bBlock_p2s_0kW_AdaptSY : BOOL; (*TRUE = starr/ramp up phase is done and the SY/low load adaption is blocked*)
+	TON_NetP20s : TON;
+	rFacRampDown_lowLoad : REAL := 1.4; (*factor for p2s_set for low load in hot engine condition*)
+	rFacRampDown : REAL := 1.2; (*factor for p2s_set for low load dunring ramp down*)
+	rP2s_0kW_optimal_T6_TSTC : REAL := 0.40; (*[bar] base p2s set value for type 624*)
+	rP2s_0kW_optimal_T6_SSTC : REAL := 0.36; (*[bar] base p2s set value for type 612/616/620*)
+	rP2s_0kW_optimal_T34 : REAL := 0.3; (*[bar] base p2s set value for type 3 and 4*)
+	rIP_Pset : REAL;
+	rIP_Pset_min : REAL := 0.125; (*[pu] min. Power below that the maximum p2s_set increasing will be used for engine ramp down or low load after the start function is blocked*)
+	rIP_Pset_max : REAL := 0.2; (*[pu] max. Power above that no p2s_set increasing will be used for engine ramp down or low load after the start function is blocked*)
+	tDelNetpMLong : TIME := T#15m; (*max. Time after GCB_on the p2s_set adatpion for T6 is activated*)
+	bGEN2_T6_LowLoadImpr_Active : BOOL := TRUE; (*TRUE = GEN2 Low Load imrovement activated*)
+	refPoint_ff2load_lim_fact : ARRAY[0..3] OF lcrCurveByPoints_TabEntry_type;
+	LCRCByP_ff2load_lim_fact : LCRCurveByPoints;
+	rLSLff2load_lim_fact : REAL := 1.0;
+	bNetP_z : BOOL;
+	bSaveKeMap_transition : BOOL;
+	rTiF_KeEstDiffMapUpdate : REAL := 10.0; (* [s] Filter time const. for Ke_est - Ke_map to update Keng Map*)
+	rLam_Start_init : REAL := 0.000; (*init value PowCtrl.rLam_Start *)
+	rFactGQCP2sOffsMax : REAL := 0.2;
+	bEnableFuncQGC : BOOL := TRUE; (*enable functions for gas qual. Changes: p2s offset, lambda external*)
+	rN_Gen2_InMixSpdFreq_fact : REAL := 0.0; (*Factor for mixing of speed and frequency signals for Load Rejection Calculations*)
+	rN_Gen2_InMixSpdFreq_norm : REAL := 1.0; (*Normalized frequency used for calculated speed trigerring load rejections*)
+	rNskip_Gen2FactorMax : REAL := 1.0; (* GEN2 factor maximal number of skipped cylinders *)
+	iNskip_Gen2Max : INT; (* GEN2 maximal number of skipped cylinders *)
+	iNskip_Gen2 : INT; (* GEN2 number of skipped cylinders *)
+	rT_EG_COLD : REAL := 100;
+	xTON_GCB : TON;
+	bEngineHot : BOOL; (*TRUE = Engine in hot condition*)
+	rGain_speed2boost_iLQR : REAL := 0.1;
+	rGain_ss_speed_iLQR_back_cold : REAL := 1.0;
+	rGain_ss_speed_iLQR_back : REAL := 0.15;
+	rGain_ss_boost_iLQR_cold : REAL := 0.001;
+	rT_EG_HOT : REAL := 500;
+	refPoint_SkipFkp : ARRAY[0..1] OF lcrCurveByPoints_TabEntry_type;
+	rTcMaxSpeed_Buffer : REAL;
+	bActive_UnitTestFRTisland : BOOL;
+	bFlag_GEN2FRTisland : BOOL;
+	ti_TOFGEN2FRTisland : TIME := T#10ms;
+	xTOF_GEN2FRTisland : TOF;
+	rGen2_LoadEstNu : REAL := 2.0000;
+	rGen2_LoadEstNu_FRT : REAL := 0.0000;
+	bFRT_GEN2active : BOOL := TRUE; (*Activation GEN2 reaction on FRT island detection*)
+	rP_Th_LR_DBOV : REAL; (* rotational power threshold for DBOV activation at load rejections *) 
+	rN_Th_LR_DBOV_norm : REAL; (* normed speed threshold for high PI CUrrent activation at load rejections *)
+	xTP_LR_DBOV : TP; (* time pulse for DBOV activation at load rejections *)
+	rP_GEN2_T6LoLoadLearning_Lim : REAL := 0.1; (* GEN2 island T6PreM *)
+	xGR_MINR_GEN2T6LoLoadLearn : GR_MINR; (* GEN2 island T6PreM *)
+	rLam_EOT_GEN2offs : REAL := 0.2; (* GEN2 island T6PreM *)
+	rR_iLQR_0_LowLoad : REAL := 20; (* GEN2 island T6PreM *)
+	rR_iLQR_1_LowLoad : REAL := 1000000000; (* GEN2 island T6PreM *)
+	rQ_iLQR_1_LowLoad : REAL := 0.0; (* GEN2 island T6PreM *)
+	rQ_iLQR_2_LowLoad : REAL := 0.0; (* GEN2 island T6PreM *)
+	rQ_iLQR_1_LowLoad_wKF : REAL := 0; (* GEN2 island T6PreM *)
+	rQ_iLQR_0_LowLoad_wKF : REAL := 1.0; (* GEN2 island T6PreM *)
+	ti_GEN2_p2sManActiveTOF : TIME := T#10s;
+	xTOF_GEN2_p2sManActive : TOF;
+	bLP_c_Ena_Gen2 : BOOL; (*enable Leanox point C for Gen2*)
+	refPoint_rITPoffsetP2s : ARRAY[0..4] OF lcrCurveByPoints_TabEntry_type; (* Gen2 IT Offset in NetP *)
+	LCRCByP_ITPoffsetP2s : LCRCurveByPoints;
+	xRAMPE_LamLim_BackfPrev : RAMPE_R;
+	rFactEnrich_BackfPrev : REAL := 0.7; (*Enrichment amplitude scaling for combustion anomaly detection*)
+	rK_FSM_WO_0 : REAL := 0.0;
+	rDp_Gasrail_max : REAL; (* Maximum differential pressure across PI-Valve *)
+	T_TripLnxOff : TIME := T#280s;
+	rGainLamUplim2boost : REAL := 0.0;
+	rGainLamUplim2boostOvSpd : REAL := 0.0;
+END_VAR

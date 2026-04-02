@@ -1,0 +1,41 @@
+VAR
+	rPF_CosPCtr_T_Lim : REAL := 0.0; (*Power factor limit by winding temperature limit*)
+	rT_Gen_Wind_Max : REAL; (*Stores the maximum temperature of the 3 windings*)
+	bPF_Once : BOOL;
+	bU_Gen_Norm : BOOL;
+	xRAMPE_RedGenTemp : RAMPE_R;
+	xRAMPE_RedGenSpg : RAMPE_R;
+	xRAMPE_RedGenFrq : RAMPE_R;
+	ssPowRedFrqMin : REAL;
+	rF_Gen_ppt : REAL;
+	ssPF_Begin : REAL;
+	rDelta_TripRAD : REAL;
+	rFact1 : REAL;
+	rFact2 : REAL;
+	rPF_TimeAct : REAL;
+	rDeltaRAD : REAL;
+	xTON_ErregAusf : TON;
+	RPS_s_oldQPF_XT : UINT;
+	xSigScal_SpgRedHigh : xSigScal_R;
+	xSigScal_FrqRedHigh : xSigScal_R;
+	xSigScal_FrqRedLow : xSigScal_R;
+	xSigScal_SpgRedLow : xSigScal_R;
+	rQ_Lim_T_GenWind : REAL;
+	rQ_Lim_PWA : REAL;
+	xFILTER_PF : FILTER_R;
+	rPF_Act_lin : REAL;
+	rUact : REAL;
+	xSigScal_Qlim_Ulow : xSigScal_R;
+	rQmin_U : REAL;
+	rQ_Lim_U : REAL;
+	rP_Red_Eta_Gen_Norm_int : REAL := 1.0;	(*Power reduction due to Cosphi<1 calculated [p.u.]*)
+	xTON_rPRed : TON; (*delay power reduction due to Cosphi<1 to OP*)
+	tDelayPRed : TIME := T#200ms; (*delay power reduction due to Cosphi<1 [ms]*)
+END_VAR
+VAR CONSTANT
+	rCnst_PI : REAL := 3.141593;
+END_VAR
+VAR
+	DTGetTime_RPS : DTGetTime;
+	tRealTime : DTStructure;
+END_VAR

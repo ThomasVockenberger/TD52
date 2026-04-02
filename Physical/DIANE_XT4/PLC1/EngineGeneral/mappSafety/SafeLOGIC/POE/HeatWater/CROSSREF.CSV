@@ -1,0 +1,72 @@
+bAMM_FS_Lo,POE\HeatWater\HeatWater.GB,6,OUT,110,77,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,TRIP - Flow minimum
+bAMM_FS_Lo_NV,POE\HeatWater\HeatWater.GB,6,OUT,109,74,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING - Flow minimum - signal not valid
+bAMM_FS_Lo_PC,POE\HeatWater\HeatWater.GB,6,OUT,127,74,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING - Flow minimum - plausibility check failure
+bAMM_LS_Lo,POE\HeatWater\HeatWater.GB,2,OUT,37,77,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,TRIP - Level minimum
+bAMM_LS_Lo_NV,POE\HeatWater\HeatWater.GB,2,OUT,39,74,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING - Level minimum - signal not valid
+bAMM_PS1_Hi,POE\HeatWater\HeatWater.GB,2,OUT,46,76,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,TRIP - Pressure 1 maximum
+bAMM_PS1_Hi_NV,POE\HeatWater\HeatWater.GB,2,OUT,48,73,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING - Pressure 1 maximum - signal not valid
+bAMM_PS1_Lo,POE\HeatWater\HeatWater.GB,4,OUT,64,76,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,TRIP - Pressure 1 minimum
+bAMM_PS1_Lo_NV,POE\HeatWater\HeatWater.GB,4,OUT,66,72,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING - Pressure 1 minimum - signal not valid
+bAMM_PS2_Hi,POE\HeatWater\HeatWater.GB,2,OUT,55,76,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,TRIP - Pressure 2 maximum
+bAMM_PS2_Hi_NV,POE\HeatWater\HeatWater.GB,2,OUT,57,73,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING - Pressure 2 maximum - signal not valid
+bAMM_PS2_Lo,POE\HeatWater\HeatWater.GB,4,OUT,101,76,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,TRIP - Pressure 2 minimum
+bAMM_PS2_Lo_NV,POE\HeatWater\HeatWater.GB,4,OUT,102,72,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING - Pressure 2 minimum - signal not valid
+bAMM_TS1_Hi,POE\HeatWater\HeatWater.GB,4,OUT,71,76,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,TRIP - Temperature 1 maximum
+bAMM_TS1_Hi_NV,POE\HeatWater\HeatWater.GB,4,OUT,73,73,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING - Temperature 1 maximum - signal not valid
+bAMM_TS2_Hi,POE\HeatWater\HeatWater.GB,6,OUT,79,76,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,TRIP - Temperature 2 maximum
+bAMM_TS2_Hi_NV,POE\HeatWater\HeatWater.GB,6,OUT,81,73,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING - Temperature 2 maximum - signal not valid
+bOUT_F20_FS_Lo_DI,POE\HeatWater\HeatWater.GB,6,OUT,121,71,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,CPU OUT: Minimum flow switch - Status of digital input
+bOUT_F20_FS_Lo_OK,POE\HeatWater\HeatWater.GB,6,OUT,111,71,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,CPU OUT: Minimum flow switch OK
+bOUT_F20_FS_Lo_OK_PC,POE\HeatWater\HeatWater.GB,6,OUT,128,67,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,CPU OUT: Minimum flow switch plausibility check OK
+bOUT_F20_LS_Lo_OK,POE\HeatWater\HeatWater.GB,2,OUT,86,70,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,CPU OUT: Minimum level switch OK
+bOUT_F20_PS1_Hi_OK,POE\HeatWater\HeatWater.GB,2,OUT,51,70,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,CPU OUT: Maximum pressure switch 1 OK
+bOUT_F20_PS1_Lo_DI,POE\HeatWater\HeatWater.GB,4,OUT,116,70,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,CPU OUT: Minimum pressure switch 1 - Status of digital inpu
+bOUT_F20_PS1_Lo_OK,POE\HeatWater\HeatWater.GB,4,OUT,87,69,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,CPU OUT: Minimum pressure switch 1 OK
+bOUT_F20_PS2_Hi_OK,POE\HeatWater\HeatWater.GB,2,OUT,60,70,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,CPU OUT: Maximum pressure switch 2 OK
+bOUT_F20_PS2_Lo_DI,POE\HeatWater\HeatWater.GB,4,OUT,119,70,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,CPU OUT: Minimum pressure switch 2 - Status of digital inpu
+bOUT_F20_PS2_Lo_OK,POE\HeatWater\HeatWater.GB,4,OUT,103,69,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,CPU OUT: Minimum pressure switch 2 OK
+bOUT_F20_TS1_Hi_OK,POE\HeatWater\HeatWater.GB,4,OUT,88,70,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,CPU OUT: Maximum temperature switch 1 OK
+bOUT_F20_TS2_Hi_OK,POE\HeatWater\HeatWater.GB,6,OUT,89,70,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,CPU OUT: Maximum temperature switch 2 OK
+iOUT_F20_FS_Lo_OK_ET,POE\HeatWater\HeatWater.GB,6,OUT,140,68,Write,,DINT,,,VAR_OUTPUT,LOCAL,,CPU OUT: Minimum flow switch OK - Elipsed time
+iOUT_F20_FS_Lo_PC_ET,POE\HeatWater\HeatWater.GB,6,OUT,124,68,Write,,DINT,,,VAR_OUTPUT,LOCAL,,CPU OUT: Minimum flow switch plausibility check - Elipsed t
+iOUT_F20_PS1_Lo_OK_ET,POE\HeatWater\HeatWater.GB,4,OUT,91,67,Write,,DINT,,,VAR_OUTPUT,LOCAL,,CPU OUT: Minimum pressure switch 1 OK - Elipsed time
+iOUT_F20_PS2_Lo_OK_ET,POE\HeatWater\HeatWater.GB,4,OUT,97,67,Write,,DINT,,,VAR_OUTPUT,LOCAL,,CPU OUT: Minimum pressure switch 2 OK - Elipsed time
+PARA_FS_Lo_Exist,POE\HeatWater\HeatWater.GB,5,IN,104,18,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Minimum flow switch available
+PARA_FS_Lo_Exist,POE\HeatWater\HeatWater.GB,5,IN,126,2,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Minimum flow switch available
+PARA_LS_Lo_Exist,POE\HeatWater\HeatWater.GB,1,IN,43,18,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Minimum level switch available
+PARA_PS1_Hi_Exist,POE\HeatWater\HeatWater.GB,1,IN,31,17,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Maximum pressure switch 1 available
+PARA_PS1_Lo_Exist,POE\HeatWater\HeatWater.GB,3,IN,32,17,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Minimum pressure switch 1 available
+PARA_PS2_Hi_Exist,POE\HeatWater\HeatWater.GB,1,IN,30,17,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Maximum pressure switch 2 available
+PARA_PS2_Lo_Exist,POE\HeatWater\HeatWater.GB,3,IN,93,17,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Minimum pressure switch 2 available
+PARA_TS1_Hi_Exist,POE\HeatWater\HeatWater.GB,3,IN,34,17,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Maximum temperature switch 1 available
+PARA_TS2_Hi_Exist,POE\HeatWater\HeatWater.GB,5,IN,33,17,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Maximum temperature switch 2 available
+sbGCB_On_60s,POE\HeatWater\HeatWater.GB,3,IN,96,22,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Generator circuit breaker ON for 60s
+sbGCB_On_60s,POE\HeatWater\HeatWater.GB,3,IN,90,22,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Generator circuit breaker ON for 60s
+sbGCB_On_60s,POE\HeatWater\HeatWater.GB,5,IN,107,22,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Generator circuit breaker ON for 60s
+sbN_Standstill,POE\HeatWater\HeatWater.GB,5,IN,123,6,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Actual engine speed <  80rpm
+sbSafeInputOK_FS_Lo,POE\HeatWater\HeatWater.GB,5,IN,106,15,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe input OK - DI Minimum flow switch
+sbSafeInputOK_LS_Lo,POE\HeatWater\HeatWater.GB,1,IN,41,15,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe input OK - DI Minimum level switch
+sbSafeInputOK_PS1_Hi,POE\HeatWater\HeatWater.GB,1,IN,50,14,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe input OK - DI Maximum pressure switch 1
+sbSafeInputOK_PS1_Lo,POE\HeatWater\HeatWater.GB,3,IN,68,14,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe input OK - DI Minimum pressure switch 1
+sbSafeInputOK_PS2_Hi,POE\HeatWater\HeatWater.GB,1,IN,59,14,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe input OK - DI Maximum pressure switch 2
+sbSafeInputOK_PS2_Lo,POE\HeatWater\HeatWater.GB,3,IN,95,14,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe input OK - DI Minimum pressure switch 2
+sbSafeInputOK_TS1_Hi,POE\HeatWater\HeatWater.GB,3,IN,75,14,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe input OK - DI Maximum temperature switch 1
+sbSafeInputOK_TS2_Hi,POE\HeatWater\HeatWater.GB,5,IN,83,14,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe input OK - DI Maximum temperature switch 2
+sDI_FS_Lo,POE\HeatWater\HeatWater.GB,5,IN,108,26,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Minimum flow switch
+sDI_FS_Lo,POE\HeatWater\HeatWater.GB,5,IN,125,10,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Minimum flow switch
+sDI_LS_Lo,POE\HeatWater\HeatWater.GB,1,IN,42,26,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Minimum level switch
+sDI_PS1_Hi,POE\HeatWater\HeatWater.GB,1,IN,52,25,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Maximum pressure switch 1
+sDI_PS1_Lo,POE\HeatWater\HeatWater.GB,3,IN,92,25,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Minimum pressure switch 1
+sDI_PS2_Hi,POE\HeatWater\HeatWater.GB,1,IN,61,25,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Maximum pressure switch 2
+sDI_PS2_Lo,POE\HeatWater\HeatWater.GB,3,IN,118,25,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Minimum pressure switch 2
+sDI_TS1_Hi,POE\HeatWater\HeatWater.GB,3,IN,76,25,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Maximum temperature switch 1
+sDI_TS2_Hi,POE\HeatWater\HeatWater.GB,5,IN,84,25,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Maximum temperature switch 2
+xDI_MON_LS_Lo,POE\HeatWater\HeatWater.GB,0,,220,60,,,,,,VAR,FB,,FuB
+xDI_MON_PS1_Hi,POE\HeatWater\HeatWater.GB,0,,221,60,,,,,,VAR,FB,,FuB
+xDI_MON_PS2_Hi,POE\HeatWater\HeatWater.GB,0,,222,60,,,,,,VAR,FB,,FuB
+xDI_MON_TS1_Hi,POE\HeatWater\HeatWater.GB,2,,223,60,,,,,,VAR,FB,,FuB
+xDI_MON_TS2_Hi,POE\HeatWater\HeatWater.GB,4,,224,60,,,,,,VAR,FB,,FuB
+xHW_MIN_MON_FS_Lo,POE\HeatWater\HeatWater.GB,4,,228,60,,,,,,VAR,FB,,FuB
+xHW_MIN_MON_PS1_Lo,POE\HeatWater\HeatWater.GB,2,,226,60,,,,,,VAR,FB,,FuB
+xHW_MIN_MON_PS2_Lo,POE\HeatWater\HeatWater.GB,2,,227,60,,,,,,VAR,FB,,FuB
+xPC_FS_Lo,POE\HeatWater\HeatWater.GB,4,,225,72,,,,,,VAR,FB,,FuB

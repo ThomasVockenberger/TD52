@@ -1,0 +1,21 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: CBM_TEST
+ * File: CBM_TEST.var
+ * Author: 502293141
+ * Created: February 20, 2015
+ ********************************************************************
+ * Local variables of program CBM_TEST
+ ********************************************************************)
+VAR
+	DTGetTime_RPS : DTGetTime;
+	TON_PBC_Man_Trig : TON;
+	rCnt_N : REAL;
+	bTest2 : BOOL := 0;
+	iIdx_Cyl : USINT;
+	iMilliSec : UDINT;
+	iSec : UDINT;
+	iHour : UDINT;
+	iMin : UDINT;
+END_VAR

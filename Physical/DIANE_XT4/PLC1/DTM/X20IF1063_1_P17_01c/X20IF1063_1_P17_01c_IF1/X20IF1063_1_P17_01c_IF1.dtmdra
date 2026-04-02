@@ -1,0 +1,8 @@
+[Header]
+Version=1
+DataSize=260
+Id=3b7b7ff2-1936-438c-9c02-f758873e628a
+Compression=Off
+DataEncoding=None
+[Data]
+<CustomItems><CustomItem name="Channel" value="0" persist="True" /><CustomItem name="IF" value="IF1" persist="True" /><CustomItem name="ModuleId" value="42775" persist="True" /><CustomItem name="Name" value="X20IF1063_1_P17_01c" persist="True" /></CustomItems>

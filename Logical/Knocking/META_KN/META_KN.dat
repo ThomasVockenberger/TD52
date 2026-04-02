@@ -1,0 +1,130 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2025
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V3.99			06-03-2013	Weitzer, 	generated for modular software
+; V4.00 		31.01.2014	Weitzer, 	versions changed
+; V4.01.00.00 	23.07.2014	Waldhart,	new interfaces added
+; V4.02.00.00	16.02.2015	Caks,		added safi dmr
+; V4.03.00.00	02.11.2015	Zengerer	add MANDATORYMODULE statement
+; V4.04.00.00   18.04.2016	Gwiggner,   Bugfix ITP Interpolation GAS1-2
+; V4.04.00.00	12.05.2016	502423184	versions changed,  SAFI_DMR Task for Type9 / G2
+; V4.04.00.00	14.11.2016	Gwiggner	Bugfix: VISU knocking IP reduction
+; V4.04.00.00   xx.03.2017	Farre,		Bugfix: adaptive knock limit safi_kls
+; V4.04.00.00   15.05.2017	Gwiggner,	Bugfix: KLS98 validation - MSF not working
+; V4.05.00.00   05.03.2018	Perktold,	Delaytime for MSF SAFI/KLS corrected 2.5sec instead of 0.3s, Type 6 "BlockAfterKnockTrip"
+; V4.05.01.00   16.04.2018	Perktold,	Integrated comments regarding "Safety-related application software source code (EN 13849-1 / 4.6.3)"
+; V4.06.00.00   28.09.2018	Gwiggner,	change A3342 Knock sensor measuring sensor failure from Prio 3 to Prio 2"
+; V4.07.00.00	13.05.2019	Hohensinner	Added RKS Package
+; V4.07.00.00	23.10.2019	Farre,		BU 01: avoiding division by 0
+; V4.09.00.00	23.01.2020	Schmidt,	Mechanical noise monitoring for valve fracture detection added
+; V4.10.00.00	19.01.2020	Farre,		added individual knocking threshold per Bank
+; V4.10.00.00	28.01.2021	Denk,		Alarm deactivation when DGS/WinMOD Simulation is active (2438, 2439, 2440, 2441).
+; V4.11.00.00	22.12.2021	Andre		Moved W2493 and B2939 to SAFI module. Added notification of frozen or knock noise from SAFI module.
+; V4.11.00.00	14.01.2022	Schmidt		Changed bKnockSig variable to global (used for PU scuffing detection)
+; V4.12.00.00	03.10.2022	Farre,		Issue #438: Current knock integrator value connected to AVG, MAX & MIN MM2VIS for KLS90
+; 				03.10.2022	Farre,		Issue #906: J208 KLS90 uses only one knock sensor, second sensor is looped through
+;				22.11.2022	Farre,		Feature: Introduction knock adaptive limit for Type4 with DMR
+;				19.12.2022	Perktold	added comments for sr-code (EN 13849-1 / 4.6.3) for A3342
+; V04.13.00.00	05.12.2023	Bencze		A1048,3339,3342: risc class 10 (for T6), no remote reset possible
+; V04.14.00.00	19.07.2024	Kafka,		Remove G2 and add KLS as RKS system for T9
+;							Andre,		Fix issue 1585.
+;				21.01.2025	Gwiggner,	J208F KLS90 use of 2nd knock senor (#1791)
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>KN</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.14.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"<PARA1 Name='iEng_Motortype' MIN='208' MAX='920' />"
+"<PARA2 />"
+"<PARA3 />"
+"<PARA4 />"
+"<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Statement, that this module´s parameter check passing is mandatory (KN is allways mandatory, so other statements than TRUE here in this module are ignored)
+"<MANDATORYMODULE>TRUE</MANDATORYMODULE>"
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_KN</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='SA' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='OP' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='AB' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='IG' VERSION='04.01.00.00' />"
+"	<DEPENDENCY MODULE='KL' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='04.00.04.00' />"
+"	<DEPENDENCY MODULE='VI' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='HA' VERSION='04.07.00.00' />"
+"	<DEPENDENCY MODULE='EC' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='GT' VERSION='04.07.00.00' />"
+"   <DEPENDENCY VISVERSION='02.15.00.00' />"			; Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	Knocking Prevention "
+"	</General>	"
+""
+"	<F1 Name='enter name of main function 1 here' LastModified='4.0.0.0'>"
+"	o knocking monitoring with KLS90	"
+"	</F1>"
+"	<F3 Name='enter name of main function 2 here' LastModified='4.0.0.0'>"
+"	o knocking monitoring with KLS98	"
+"	</F2>"
+"	<F3 Name='enter name of main function 3 here' LastModified='4.0.0.0'>"
+"	o knocking monitoring with SAFIKLS	"
+"	</F3>"
+""
+"	<Info>"
+"	 V4.01.00.00	new interfaces added"
+"	 V4.02.00.00	added safi dmr"
+"	 V4.03.00.00	add MANDATORYMODULE statement"
+"	 V4.04.00.00	versions changed"
+" 	 V4.04.00.00	VISU knocking IP reduction"
+"    V4.04.00.00    Bugfix: KLS98 validation - MSF not working "
+"    V4.05.01.00    BU 01: change A3342 Knock sensor measuring sensor failure from Prio 3 to Prio 2"
+" 	 V4.07.00.00	Added RKS package"
+"	 V4.07.00.00	BU 01: avoiding division by 0"
+"	<Customized LastModified='4.0.0.0'>	"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

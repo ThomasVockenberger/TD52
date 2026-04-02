@@ -1,0 +1,32 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: GR_GRB_cust
+ * File: GR_GRB_cust.var
+ * Author: 502221015
+ * Created: June 27, 2013
+ ********************************************************************
+ * Local variables of program GR_GRB_cust
+ ********************************************************************)
+VAR
+	xTON_ULo : ARRAY[0..2] OF TON; (* Low Voltage time delay*) (* OldName: TON_10ms_VoltageLow22; Cycle:5; *)
+	rU_LxLy_Min : REAL; (* Lowest voltage of all three phases*) (* OldName: bGridCodeVoltageLow22; Cycle:5; *)
+	i : INT; (* For-loop counter*) (* OldName: bGridCodeVoltageLow23_200; Cycle:5; *)
+	bGrC_ULo_Trig : BOOL; (* Gridcode low voltage trigger*) (* OldName: bGridCodeVoltageLow21_200; Cycle:5; *)
+	xTP_ULo : TP; (*   *) (* OldName: TP_10ms_VoltageLOW; Cycle:5; *)
+	xTP_ULo_BM : TP; (*   *) (* OldName: TP_10ms_VoltageLOW_BM; Cycle:5; *)
+	xTON_F_OverMp : TON; (* TON - Generator protection high frequency W9313 *)
+	xTON_F_UnderMp : TON; (* TON - Generator protection low frequency W9312 *)
+	rN_Offset_Test : REAL := 0; (* Speed offset for testing purposes *)
+	iNrOfPolePair : INT; (* Amount of pole pairs *)
+	xTP_DO_GENERATOR_DCON_TC1 : TP; (* GCB opening command of three seconds *)
+	rF_GR_Filt_min : REAL := 47; (*minimal filtered grid frequency for leanox/itp adaptation*)
+	rF_GR_Filt_max : REAL := 63; (*maximal filtered grid frequency for leanox/itp adaptation*)
+	iFactTFilt_N_GR : UINT := 2; (*Grid frequency filter multiplication factor for island mode*)
+	bGearBox : BOOL; (* TRUE = GearBox (Engine with 1500rpm @ 60Hz Grid) *)
+	rF_Calc : REAL; (* Calculated frequency depending on nominal engine speed *)
+	rN_GR_Speed : REAL; (* Speed for Grid Code calculations *)
+	xLCRPT1_N_GR : LCRPT1; (*speed filter for static grid code calculations*)
+	bGrC_GCB_DCON_ULo : BOOL; (* Open GCB in case of voltage break-in *)
+	bGrC_GCB_DCON_Freq : BOOL; (* Open GCB in case low/high frequency *)
+END_VAR

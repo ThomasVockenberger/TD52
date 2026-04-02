@@ -1,0 +1,28 @@
+VAR
+	ZM_FG3_GASV : BOOL := 0;
+	FG_GASV_PI : BOOL;
+	FG3_GASV : BOOL := 0;
+	FG1_GASV : BOOL;
+	FG2_GASV : BOOL := 0;
+	xF_TRIG_FA_NSAUS : F_TRIG;
+	xF_TRIG_FA_GSAUS : F_TRIG;
+	xGR_MAXR_FA_AN_FGPUFF : GR_MAXR;
+	xTON_FA_FG_GASV : TON;
+	xTON_VKGK2 : TON;
+	xGR_MAXR_M_DR_ODR : GR_MAXR;
+	xGR_MAXR_D1400 : GR_MAXR;
+	M_D1400 : BOOL;
+	xSR_FG_DIFFUW : SR;
+	xTP_GrC : TP;
+	tGrC_Bypass : TIME := T#250ms;
+	bHOLD_FG3_GASV : BOOL; (*hold FG3_GASV at GCB opening in special cases - new 14/10/2020*)
+	xLCRPT1_P_Act_Filt : LCRPT1; (* FuB first-order low-pass filter for power *)
+	rTau_P_Act_Filt : REAL := 2.0; (* Filter time constant [s] *)
+	xGR_MINR_p2s_pbaro : GR_MINR; (* FuB for comparison of charge and ambient pressure *)
+	rHyst_GR_MINR_p2s_pbaro : REAL := 0.05; (* Hysteresis for comparison of charge and ambient pressure [bar] *)
+	rP_Norm_Act_Filt_Thresh : REAL := 0.08; (* Threshold comparison of unfilt. and filt. power to detect load step [PercentPnom] *)
+	xR_TRIG_P_Compare : R_TRIG; (* FuB power comparison *)
+	xTP_P_Compare : TP; (* Pulse for load step detection *)
+	tP_Compare : TIME := T#500ms; (* Minimum duration of PCG BPV opening after load step detection [ms] *)
+	rFlow_VR_Thresh : REAL := 0.15; (* Threshold for PCG BPV closing based on volume change V-room [m3/s] *)
+END_VAR

@@ -1,0 +1,5 @@
+VAR
+	MissfCyl_Old : UDINT;
+	bIC_MissfCmd_Old : BOOL; (*Command to start skip fire - old*)
+	xTOF_MissfCmd : TOF; (*Delay to turn off the skip fire command*)
+END_VAR

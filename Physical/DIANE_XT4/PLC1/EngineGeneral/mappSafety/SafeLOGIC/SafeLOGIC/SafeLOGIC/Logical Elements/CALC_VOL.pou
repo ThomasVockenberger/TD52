@@ -1,0 +1,47 @@
+﻿FUNCTION_BLOCK CALC_VOL
+{ VariableWorksheet := 'Variables' }
+﻿{GroupDefinition(0,'NewGroup')}
+
+VAR_INPUT {Group(0)}
+    {LINE(1)}
+    sbCycle_Tick : SAFEBOOL; (*Cyclic ticker*)
+    {LINE(2)}
+    sbCalc_Run : SAFEBOOL; (*Run calculation*)
+    {LINE(3)}
+    siN_EngAct : SAFEDINT; (*Actual engine speed [rpm]*)
+    {LINE(4)}
+    siVol_Stroke : SAFEDINT; (*Parameter for Stroke volume per crankshaft turn [Liter / turn]*)
+    {LINE(5)}
+    siVol_Air : SAFEDINT; (*Calculated purge air volume - Last cycle  [Liter]*)
+    {LINE(6)}
+    siVol_Air_Stored : SAFEDINT; (*Stored purge air volume [Liter]*)
+    {LINE(7)}
+    sbVol_Air_Stored_TakeOver : SAFEBOOL; (*Take over stored purge air volume*)
+END_VAR
+
+VAR_OUTPUT {Group(0)}
+    {LINE(8)}
+    siVol_Air_Calc : SAFEDINT; (*Calculated purge air volume [Liter]*)
+END_VAR
+
+VAR {Group(0)}
+END_VAR
+
+{ CodeWorksheet := 'CALC_VOL', Type := '.st' }
+﻿(* FuB CALC_VOL *)
+
+IF sbCycle_Tick 
+THEN    
+    IF sbCalc_Run THEN  siVol_Air_Calc := siVol_Air + ((siN_EngAct * SAFEDINT#100 * siVol_Stroke) / SAFEDINT#60000);
+    ELSE
+        siVol_Air_Calc := siVol_Air;
+    END_IF;
+ELSE
+        siVol_Air_Calc := siVol_Air;
+END_IF;
+
+IF sbVol_Air_Stored_TakeOver        
+THEN
+        siVol_Air_Calc := siVol_Air_Stored;
+END_IF;
+END_FUNCTION_BLOCK

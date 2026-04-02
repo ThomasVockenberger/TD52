@@ -1,0 +1,73 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: WasteGate
+ * File: WasteGate.var
+ * Author: 105051472
+ * Created: November 22, 2010
+ ********************************************************************
+ * Local variables of program WasteGate
+ ********************************************************************)
+VAR
+	xRAMPE_WasteGate : RAMPE_R; (*FUB*)
+	xTON_Dev : TON;
+	xTON_Dev_A : TON;
+	xTON_Dev_B : TON;
+	rPos_WG_DevMax : REAL := 0.05;
+	xTON_WG_Act : TON;
+	xTON_WG_Act_A : TON;
+	xTON_WG_Act_B : TON;
+	xTON_bErrMsWasteGate : TON;
+	xTON_bErrMsWasteGate_A : TON;
+	xTON_bErrMsWasteGate_B : TON;
+	xLCRPT1_CBV : LCRPT1;
+	rTConst_CBV : REAL;
+	bELR : BOOL := 0;
+	bHys_Inc_WG : BOOL := 0;
+	bHys_Dec_WG : BOOL := 0;
+	xTON_ELR : TON;
+	iWG_State : USINT;
+	bWG_Check_Rel : BOOL;
+	xTON_WG_Wait : TON;
+	xTON_WG_Open : TON;
+	xTON_WG_Close : TON;
+	xRS_Transient : RS;
+	bWG_Ctrl_ON : BOOL; (*Wastegate controller active*)
+	xR_TRIG_bFreeze_GEN2 : R_TRIG; (* trigger activation of GEN2 freeze to keeep CBV tracking on  *)
+	xR_TRIG_bSS_GEN2 : R_TRIG; (* trigger activation of steady state to keeep CBV tracking on  *)
+	bForceGen2CBVtracking : BOOL; (* force CBV tracking bit after grid event *)
+	bGEN2_Ctrl_WG_NP : BOOL; (* WG control by GEN2 enabled for net parallel *)
+	bGEN2_Ctrl_WG_Island : BOOL; (* WG control by GEN2 enabled for isolated operation *)
+END_VAR
+VAR CONSTANT
+	OPEN : USINT := 3;
+	WAIT : USINT := 1;
+	CLOSE : USINT := 4;
+	INACT : USINT := 0;
+	ACT : USINT := 2;
+END_VAR
+VAR
+	tDataRec_WG_A : ARRAY[0..7] OF BYTE := [8(0)]; (*WG A CAN read actuator status*)
+	tDataRec_WG_B : ARRAY[0..7] OF BYTE := [8(0)]; (*WG B CAN read actuator status*)
+	tDataRec_Err_WG_A : ARRAY[0..7] OF BYTE := [8(0)]; (*WG A CAN read actuator faults and warnings*)
+	tDataRec_Err_WG_B : ARRAY[0..7] OF BYTE := [8(0)]; (*WG B CAN read actuator faults and warnings*)
+	iT_Tmp : INT := 0; (*WG CAN internal temperature*)
+	iWG_ReadActWarn : USINT := 0; (*WG CAN actuator warning ID in status*)
+	iWG_ReadActFail : USINT := 0; (*WG CAN actuator failure ID in status*)
+	bWG_CAN_A_Fail : BOOL := 0; (*WG A CAN Failure trigger bit*)
+	bWG_CAN_A_Warn : BOOL := 0; (*WG A CAN Warning trigger bit*)
+	bWG_CAN_B_Fail : BOOL := 0; (*WG B CAN Failure trigger bit*)
+	bWG_CAN_B_Warn : BOOL := 0; (*WG B CAN Warning trigger bit*)
+	bCANread_WG_A_St : BOOL := 0; (*WG A CAN read status*)
+	bCANread_WG_B_St : BOOL := 0; (*WG B CAN read status*)
+	bTON_CANcomm_WG_A_Err : BOOL; (*WG A CAN communication error trigger bit*)
+	bTON_CANcomm_WG_B_Err : BOOL := 0; (*WG B CAN communication error trigger bit*)
+	xTON_CANcomm_WG_A_Err : TON := (0);
+	xTON_CANcomm_WG_B_Err : TON := (0);
+	xTON_CAN_WG_A_FailWarn : TON := (0);
+	xTON_CAN_WG_B_FailWarn : TON := (0);
+	xTON_WG_A_CANcomm : TON := (0);
+	xTON_WG_B_CANcomm : TON := (0);
+	iT_WG_Offset : UINT := 0;
+	bErr_WG_CANcomm : BOOL := 0;
+END_VAR

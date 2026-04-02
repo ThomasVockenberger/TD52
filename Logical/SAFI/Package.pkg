@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.14.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Package" Description="SAFI Libraries">Lib_SA</Object>
+    <Object Type="DataObject" Language="Simple" Description="SAFI META data module">META_SA</Object>
+    <Object Type="File" Description="Package data types" Private="true">Module_SA.typ</Object>
+    <Object Type="File" Description="Package data types" Private="true">Module_SAPara.typ</Object>
+    <Object Type="File" Description="Package variables" Private="true">Module_SA.var</Object>
+    <Object Type="Program" Language="IEC" Description="+ SAFI speed measurement">safi_spd</Object>
+    <Object Type="Program" Language="IEC" Description="+ SAFI general">safi_gen</Object>
+    <Object Type="Program" Language="IEC" Description="+ SAFI mode">safi_mod</Object>
+    <Object Type="Program" Language="IEC" Description="+ SAFI config">safi_cfg</Object>
+    <Object Type="Program" Language="IEC" Description="+ SAFI high voltage measurement">safi_hs</Object>
+    <Object Type="Program" Language="IEC" Description="+ SAFI ignition">safi_ign</Object>
+    <Object Type="Program" Language="IEC" Description="+ SAFI port injection">safi_pi</Object>
+    <Object Type="Program" Language="IEC" Description="+ SAFI knock sensor">safi_kls</Object>
+    <Object Type="Program" Language="IEC" Description="+ SAFI in-cylinder pressure sensor">safi_dmr</Object>
+    <Object Type="Program" Language="IEC" Description="+ SAFI MPM control">safi_mpm</Object>
+    <Object Type="Program" Language="IEC" Description="+ SAFI valve closure detection">safi_vcd</Object>
+    <Object Type="Program" Language="IEC" Description="+ SAFI IN task">IN_SA</Object>
+    <Object Type="Program" Language="IEC" Description="+ SAFI curve upload">CurveUpL</Object>
+    <Object Type="Program" Language="IEC" Description="+ SAFI OUT task">OUT_SA</Object>
+    <Object Type="Program" Language="IEC" Description="+ SAFI Parameter">ParSA</Object>
+    <Object Type="Program" Language="IEC" Description="+ SAFI Messages">MsgSA</Object>
+    <Object Type="Package" Description="SAFI coil and spark data">DataSA</Object>
+    <Object Type="Package" Description="SAFI CAN communication">CAN</Object>
+  </Objects>
+</Package>

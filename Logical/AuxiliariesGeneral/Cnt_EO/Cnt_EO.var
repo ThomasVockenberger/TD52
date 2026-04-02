@@ -1,0 +1,53 @@
+VAR
+	write_once : BOOL; (*write permanent memory once *)
+	bCreateDataObj : BOOL; (*TRUE=create new data object *)
+	bWriteDataObj : BOOL; (*TRUE=write data object module *)
+	DatObjCreate_01 : DatObjCreate; (*data object create *)
+	DatObjDelete_PermMem : DatObjDelete; (*data object delete *)
+	DatObjInfo_01 : DatObjInfo; (*data object info *)
+	DatObjRead_01 : DatObjRead; (*data object read *)
+	DatObjWrite_01 : DatObjWrite; (*data object write *)
+	slOilCounterMax : DINT := 0; (*maximum number of oil counter impulses*)
+	slOilCounter : DINT := 0; (*number of impulses from oil counter*)
+	slOilCounterCircle : DINT := 0; (*number of impulses from oil counter --> calculated value*)
+	xF_TRIG_OilRefillValve : F_TRIG := (0); (*FuB *)
+	ssAveragingNumber : INT := 0; (*number of averaging*)
+	i : INT := 0;
+	pmOil : ParaOil_typ; (*permanent memory tags *)
+	xR_TRIG_OilCounterImpulse : R_TRIG := (0); (*FuB*)
+	rSumActiveEnergy : REAL := 0.0; (*sum of active energy*)
+	rSumVolumeEnergy : REAL := 0.0; (*sum of active volume/energy*)
+	rSumOilVolume : REAL := 0.0; (*sum of oil volume *)
+	ModulName : STRING[35]; (*module name of object *)
+	xTON_SecondTick : TON := (0); (*FuB*)
+	xTON_WritePMEM : TON := (0); (*delay write permanent memory *)
+	pm_len : UDINT; (*permanent value lenght *)
+	pm_p : UDINT; (*permanent value pointer *)
+	pm_id : UDINT; (*permanent value identifier *)
+	ulChecksumOld : UDINT; (*last vlaue of parameter checksum *)
+	ulChecksum : UDINT; (*parameter checksum value *)
+	ulPMPointer : UDINT; (*adress of actual checksum value *)
+	ulChkValue : UDINT; (*actual value of parameter pointer *)
+	pm_Error : UINT; (*permanent value error *)
+	perm_oil_vers : UINT; (*version*)
+	usOilCounterStart : UINT := 0; (*oil counter initial value = value before refill*)
+	DTGetTime_RPS : DTGetTime;
+	ERR_NOERROR : UINT; (* status for no error *)
+	bReset_Bh : BOOL;
+	TON_WarnDelay : TON; (*V4.06*)
+	xTON_BlockMinFileAge : TON;
+	bBlock_MinFileAge : BOOL;
+	iPM_WriteCnt : UINT; (*data module write counter *) (*old VarName: pmPrstWriteCnt*)
+	xTP_OilExchange : TP;
+	xTP_OilSample : TP;
+	xTP_CWExchange : TP;
+	xTP_CWSample : TP;
+	xTON_OilExchange : TON;
+	xTON_OilSample : TON;
+	xTON_CWExchange : TON;
+	xTON_CWSample : TON;
+	iCnt_OpHours_old : DINT;
+	xCTU_OilRefillBlocked : CTU;
+	iOpH_OilRefillBlockPulse : DINT;
+	rVol_OilRefill_Max : REAL := 0.0; (*Calculated oil refill volume maximum [ml]*)
+END_VAR

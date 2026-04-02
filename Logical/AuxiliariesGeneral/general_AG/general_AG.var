@@ -1,0 +1,11 @@
+VAR
+	xGRMAXR_KWT : GR_MAXR := (0);
+	xGR_MAXR_DREHZ : GR_MAXR := (0);
+	xGR_MAXR_HDREHZ : GR_MAXR := (0);
+	xImpH : R_TRIG;
+	xImpS : R_TRIG;
+	xService : R_TRIG;
+	xTOF_M_DREHZ : TOF := (0);
+	xTON_M_DREHZ_5s : TON := (0);
+	xTON_T_ECW_PreH_LimOFF : TON := (0);
+END_VAR

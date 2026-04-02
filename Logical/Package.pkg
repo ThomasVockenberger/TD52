@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.25.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Package" Description="Global Libraries">Libraries</Object>
+    <Object Type="Package" Description="AB: Alarm Management Base">AmmBase</Object>
+    <Object Type="Package" Description="AG: Auxiliaries General">AuxiliariesGeneral</Object>
+    <Object Type="Package" Description="CH: Charging Unit">ChargingUnit</Object>
+    <Object Type="Package" Description="CP: Customer Coupling">Coupling</Object>
+    <Object Type="Package" Description="CU: Customize">Customized</Object>
+    <Object Type="Package" Description="EM: Emission Control">Emission</Object>
+    <Object Type="Package" Description="EC: Engine Controller">EngineController</Object>
+    <Object Type="Package" Description="EG: Engine General">EngineGeneral</Object>
+    <Object Type="Package" Description="EX: Exhaust System">Exhaust</Object>
+    <Object Type="Package" Description="GC: Generator Control">Generator</Object>
+    <Object Type="Package" Description="GD: Gas Metering Unit Device">GasMeteringUnit</Object>
+    <Object Type="Package" Description="GM: Gas Mixer">Gasmixer</Object>
+    <Object Type="Package" Description="GR: Gridcode">Grid</Object>
+    <Object Type="Package" Description="GT: Gas Train">Gastrain</Object>
+    <Object Type="Package" Description="HA: Hardware Abstraction Layer for Inputs/Outputs">HalIO</Object>
+    <Object Type="Package" Description="HC: Heating Cooling">HeatingCooling</Object>
+    <Object Type="Package" Description="IC: Ignition Controller">ICxx</Object>
+    <Object Type="Package" Description="IG: Ignition">Ignition</Object>
+    <Object Type="Package" Description="KL: KLS98">KLS98</Object>
+    <Object Type="Package" Description="KN: Knocking Prevention">Knocking</Object>
+    <Object Type="Package" Description="MO: MONIC">Monic</Object>
+    <Object Type="Package" Description="OP: Operation State">Opstate</Object>
+    <Object Type="Package" Description="PB: Parameter Base">ParaBase</Object>
+    <Object Type="Package" Description="SA: SAFI (Sensor Actor Function Interface)">SAFI</Object>
+    <Object Type="Package" Description="SY: Synchronization">Synchronization</Object>
+    <Object Type="Package" Description="TR: Thermo Reactor">ThermalReactor</Object>
+    <Object Type="Package" Description="VE: Ventilation">Ventilation</Object>
+    <Object Type="Package" Description="VI: Visualization">Visu</Object>
+    <Object Type="Package" Description="CB: CBM">CBM</Object>
+  </Objects>
+</Package>

@@ -1,0 +1,26 @@
+VAR
+	K_bit10 : BOOL := 0; (* Kühlerstufe 1-8 bit0 *)
+	K_bit11 : BOOL := 0; (* Kühlerstufe 1-8 bit1 *)
+	K_bit12 : BOOL := 0; (* Kühlerstufe 1-8 bit2 *)
+	K_bit20 : BOOL := 0; (* Kühlerstufe 9-16 bit0 *)
+	K_bit21 : BOOL := 0; (* Kühlerstufe 9-16 bit1 *)
+	K_bit22 : BOOL := 0; (* Kühlerstufe 9-16 bit2 *)
+	K_byte1 : BOOL := 0; (* Kühlerstufen 1-8 *)
+	K_byte2 : BOOL := 0; (* Kühlerstufen 9-16 *)
+	IN : ARRAY[0..16] OF BOOL;
+	Q : ARRAY[0..16] OF BOOL;
+	RDY : ARRAY[0..16] OF BOOL;
+	EN : ARRAY[0..16] OF BOOL;
+	iQ : INT;
+	iIN : INT;
+	iPriorityStage : INT;
+	SEQU_C : ARRAY[0..16] OF DINT;
+	NEXT_ON : ARRAY[0..16] OF BOOL;
+	NEXT_OFF : ARRAY[0..16] OF BOOL;
+	i : INT;
+	iNextOn : INT;
+	iNextOff : INT;
+	summe : USINT := 0;
+	K_Var : INT; (*emergency cooler variant*)
+	iSumEC_Stages_ManAuxCtr : INT; (*summary emergency cooler stages from Manual operating auxiliaries control *)
+END_VAR

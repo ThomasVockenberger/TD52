@@ -1,0 +1,75 @@
+VAR
+	AdvTimLi_Old : INT;
+	AmmSeqOutputErr : AmmSequence;
+	AmmSeqOverspeedErr : AmmSequence;
+	bAmmSeqClkP : BOOL;
+	bOutputErr : ARRAY[0..24] OF BOOL;
+	bOverspeedErr : ARRAY[0..24] OF BOOL;
+	bToggle : BOOL;
+	bToggle2 : BOOL;
+	OvrSpeed_Old : UINT;
+	RetTimLi_Old : INT;
+	SAFICurr1_Old : _tSAFICurrPmm;
+	SAFICurr2_Old : _tSAFICurrPmm;
+	SAFICurr3_Old : _tSAFICurrPmm;
+	SAFICurr4_Old : _tSAFICurrPmm;
+	SAFICurr5_Old : _tSAFICurrPmm;
+	SAFICurr6_Old : _tSAFICurrPmm;
+	SAFICurr0_Old : _tSAFICurrPmm;
+	TON_SecondTick : TON;
+	TON_Selftest : TON;
+	TON_TestDelay : TON;
+	ucAdvTiIon_Old : USINT;
+	ucCylCount : USINT;
+	ucCylIndex : USINT;
+	ucDeMagLvl_Old : USINT;
+	ucDurTol_Old : USINT;
+	ucDelFailR_Old : USINT;
+	ucIGNMode_Old : ARRAY[0..12] OF USINT;
+	ucInMagLvl_Old : USINT;
+	ucIonis_Old : USINT;
+	ucMxSpPow_Old : UINT;
+	ucOutputErrCnt : USINT;
+	ucReDoCount : USINT;
+	ucRetTiIon_Old : USINT;
+	ucSAFICheck : USINT;
+	ucSpPOffTi_Old : USINT;
+	usAussTmax_Old : UINT;
+	usCheckTime : UINT;
+	usDuration_Old : UINT;
+	usEventSum : UINT;
+	usIgnPwrLi_Old : UINT;
+	usMxIonMag_Old : UINT;
+	usMxMagLvl_Old : UINT;
+	usZuVLim_Old : UINT;
+	usCurrData : ARRAY[0..10] OF UINT;
+	DatObjInfo_SAFICurr : DatObjInfo;
+	ucSparkCurCharOld : USINT;
+	DatObjRead_SAFICurr : DatObjRead;
+	SAFICurr1Sel : _tSAFICurrPmm;
+	SAFICurr2Sel : _tSAFICurrPmm;
+	SAFICurr3Sel : _tSAFICurrPmm;
+	SAFICurr4Sel : _tSAFICurrPmm;
+	SAFICurr5Sel : _tSAFICurrPmm;
+	SAFICurr6Sel : _tSAFICurrPmm;
+	DatObjRead_CoilType : DatObjRead;
+	DatObjInfo_CoilType : DatObjInfo;
+	ucCoilTypeOld : USINT;
+	usCoilData : ARRAY[0..12] OF UINT;
+	bParaSendOK : BOOL;
+	bIgnPwrLim : ARRAY[0..24] OF BOOL;
+	AmmSeqIgnPwrLim : AmmSequence;
+	ucDurFailR_Old : USINT;
+	bArnoMan : BOOL;
+	bCheck : BOOL;
+	bSAFISendAllIGNPara : BOOL;
+	ssActTiming : ARRAY[0..24] OF INT; (* actual timing measured *)
+	ucSAFIIgnParaSend : USINT;
+	iCA_ITP_DevLim_Old : USINT; (*ITP deviation limit [degCA * 10] - Old*)
+	iNum_ITP_DevFailR_Old : USINT; (*Failure rate limit for ITP deviation [1 / 10 cycles] - Old*)
+	iNum_LenIgnHist_Old : USINT; (*Length of ignition events history [cycles] - Old*)
+	iNum_IgnMiss_Max_Old : USINT; (*Maximum missing ignition events [cycles] - Old*)
+	xTOF_OutputErr : TOF; (*Timer to disable W3545 during 3 s after and ITP change if KLS21 is active*)
+	rCA_Ign_ActOld : ARRAY[0..24] OF REAL; (*Old ignition timing point*)
+	bSA_ITP_Changed : BOOL; (*Ignition timing point changed*)
+END_VAR

@@ -1,0 +1,325 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Package: HAL_IO
+ * File: HAL_IO.var
+ * Author: 105046866
+ * Created: August 23, 2011
+ ********************************************************************
+ * Variables of package HAL_IO
+ ********************************************************************)
+VAR
+	bPlantComm_interrupted : BOOL := FALSE; (*Plant Communication Interrupted*)
+	szGM1_DeviceName : STRING[30] := ''; (*Device name from I/O Module gasmixer 1*)
+	szGM2_DeviceName : STRING[30] := ''; (*Device name from I/O Module gasmixer 2*)
+	VIS2MM : tVIS2MM;
+	MM2VIS : tMM2VIS;
+END_VAR
+VAR CONSTANT
+	READY_FOR_NEW_ENTRY : UINT := 65535;
+	W_0mA : INT := 00000; (* Value 0mA *)
+	W_2mA : INT := 03276; (* Value 2mA *)
+	W_3mA : INT := 04914; (* Value 3mA *)
+	W_4mA : INT := 06552; (* Value 4mA *)
+	W_20mA : INT := 32760; (* Value 20mA *)
+	W_2mA_UR20 : INT := 02765; (* Value 2mA *)
+	W_3mA_UR20 : INT := 04147; (* Value 3mA *)
+	W_4mA_UR20 : INT := 05530; (* Value 4mA *)
+	W_20mA_UR20 : INT := 27648; (* Value 20mA *)
+	W_20_5mA_UR20 : INT := 28340; (* Value 20.5mA *)
+END_VAR
+VAR
+	Station : ARRAY[0..149] OF StationCfg_typ;
+	StationIO : ARRAY[0..149] OF ModulOK_typ;
+	xEngType : EngType; (*engine type*)
+	pm : Para_HA_struct;
+	Para : Para_HA_struct;
+	ParaFactoryDefault : Para_HA_struct := (0);
+	ModGrpNrError : UINT;
+	ModGrpNrMax : UINT;
+	ModNrError : UINT;
+	ModNrMax : UINT;
+	NodeNrError : UINT;
+	bAllModulesOK : BOOL; (*all IO modules are OK*)
+	bAllCfgDataOK : BOOL; (*all IO config data are OK*)
+	CANDevGo : ARRAY[0..1] OF USINT; (* startup parameter for CAN devices *)
+	ECANDevGo : USINT;
+	CMSmain_Init : CMSmain;
+	CMSmain_Init2 : CMSmain;
+	CMSinit_Init : CMSinit;
+	CANopen_error : UINT;
+	CANopen_CMS : CANopen;
+	bGnlTrip : BOOL;
+	bGnlTrip1 : BOOL;
+	bGnlTrip2 : BOOL;
+	bGnlTrip3 : BOOL;
+	bGnlWarning : BOOL;
+	IN_HA : IN_HA_struct;
+	OUT_HA : OUT_HA_struct;
+	xGT_CH4 : HALioExtern_Type;
+	xGT_H2 : HALioExtern_Type;
+	xGT_O2 : HALioExtern_Type;
+	xVol_GT : HALioExtern_Type;
+	xT_GT : HALioExtern_Type;
+	xPr_GT_Gas : HALioExtern_Type;
+	xGT_CV : HALioExtern_Type;
+	xPr_GT_Suct : HALioExtern_Type;
+	xP_Red_Norm : HALioExtern_Type;
+	xPr_EngLubOil : HALioExtern_Type;
+	xPr_ECW : HALioExtern_Type;
+	xPr_Ch_P2s : HALioExtern_Type;
+	xPr_Ch_P2 : HALioExtern_Type;
+	xPr_CC : HALioExtern_Type;
+	ucDevSequencer : USINT;
+	CMSexit_Init : CMSexit;
+	xPr_EOF_DiffMon : HALioExtern_Type;
+	xT_HW_Re : HALioExtern_Type;
+	xT_HW_ReAfEC : HALioExtern_Type;
+	xT_HW_Su : HALioExtern_Type;
+	xCA_IgnP_Set : HALioExtern_Type;
+	xDPr_AirFilt_A : HALioExtern_Type;
+	xDPr_AirFilt_B : HALioExtern_Type;
+	xN_TCHP : HALioExtern_Type;
+	xN_TCHP_A : HALioExtern_Type;
+	xN_TCHP_B : HALioExtern_Type;
+	xN_TCLP : HALioExtern_Type;
+	xN_TCLP_A : HALioExtern_Type;
+	xN_TCLP_B : HALioExtern_Type;
+	xDPr_AirFilt : HALioExtern_Type; (*engine air inlet filter difference pressure*)
+	xPr_Ch_P1LP_A : HALioExtern_Type; (* charge pressure before  low press TC*)
+	xPr_Ch_P1LP_B : HALioExtern_Type; (* charge pressure before  low press TC*)
+	xPr_Ch_P1HP : HALioExtern_Type; (* charge pressure before high press TC*)
+	xPr_Ch_P1HP_A : HALioExtern_Type; (* charge pressure before high press TC*)
+	xPr_Ch_P1HP_B : HALioExtern_Type; (* charge pressure before high press TC*)
+	xPr_PC : HALioExtern_Type;
+	xPr_PC_Diff : HALioExtern_Type;
+	xPr_Baro : HALioExtern_Type;
+	xPr_GT1 : HALioExtern_Type;
+	xP_Act_AO : HALioExtern_Type;
+	xP_Set_ExtAI_Norm : HALioExtern_Type;
+	xP_Red_AI_Norm : HALioExtern_Type;
+	xCustAnaIn : ARRAY[0..120] OF HALioExtern_Type;
+	xN_Set_ExtAI_Norm : HALioExtern_Type;
+	xCtr_CustOut : ARRAY[0..45] OF HALioExtern_Type;
+	xCustAnaOut : ARRAY[0..60] OF HALioExtern_Type;
+	bNoInitDetected : BOOL := FALSE; (*allways true, except 1cycle on init up*)
+	xPr_Ch_P2bFA : HALioExtern_Type;
+	xPr_Ch_P2HP : HALioExtern_Type;
+	xPr_Ch_P2HP_A : HALioExtern_Type;
+	xPr_Ch_P2HP_B : HALioExtern_Type;
+	xPr_Ch_P2LP : HALioExtern_Type;
+	xPr_Ch_P2LP_A : HALioExtern_Type;
+	xPr_Ch_P2LP_B : HALioExtern_Type;
+	xPr_Ch_P2_A : HALioExtern_Type;
+	xPr_Ch_P2_B : HALioExtern_Type;
+	xPr_Ch_P2s_A : HALioExtern_Type;
+	xPr_Ch_P2s_B : HALioExtern_Type;
+	xPr_PCGT : HALioExtern_Type;
+	CANDevGo_InBuffer : ARRAY[0..32] OF CanDeviceGo;
+	bMMD_SynchDO : ARRAY[0..2] OF BOOL; (* feedback synch DO *)
+	bCANbusoff : BOOL;
+	bQuitCANbusoff : BOOL;
+	bCANbusoff2 : BOOL;
+	bQuitCANbusoff2 : BOOL;
+	xPr_HW_Su_LT : HALioExtern_Type;
+	xPr_HW_Su_HT : HALioExtern_Type;
+	xPr_MGT_a_Filt : HALioExtern_Type;
+	xPr_PCGT_Out : HALioExtern_Type;
+	xPr_GR_I : HALioExtern_Type;
+	xPr_GR_II : HALioExtern_Type;
+	xPr_PCGT_sp : HALioExtern_Type;
+	xPr_MGT_sp : HALioExtern_Type;
+	xF_GenBear_DE1 : HALioExtern_Type;
+	xF_GenBear_DE2 : HALioExtern_Type;
+	xF_GenBear_NDE1 : HALioExtern_Type;
+	xF_GenBear_NDE2 : HALioExtern_Type;
+	xPr_ECWaEng : HALioExtern_Type;
+	xPr_EOF_After : HALioExtern_Type;
+	xPr_TC_EOF_Before : HALioExtern_Type;
+	xFlow_OilSkid_DE : HALioExtern_Type;
+	xFlow_OilSkid_NDE : HALioExtern_Type;
+	xLev_OilSkid_Tank : HALioExtern_Type;
+	xPr_OilSkid_HP_NDE : HALioExtern_Type;
+	xPr_OilSkid_HP_DE : HALioExtern_Type;
+	xT_OilSkid_Supply : HALioExtern_Type;
+	xT_OilSkid_Tank : HALioExtern_Type;
+	xPr_f_BbFilt : HALioExtern_Type;
+	xPr_f_BbFilt_A : HALioExtern_Type;
+	xPr_f_BbFilt_B : HALioExtern_Type;
+	xPr_a_BbFilt : HALioExtern_Type;
+	xPr_a_BbFilt_A : HALioExtern_Type;
+	xPr_a_BbFilt_B : HALioExtern_Type;
+	xPr_AirStarter_Tank : HALioExtern_Type;
+	xPr_AirStarter_Supply : HALioExtern_Type;
+	szHalIOErrInfo1 : STRING[99];
+	szHalIOErrInfo2 : STRING[99];
+	szHalIOErrInfo3 : STRING[99];
+	xPos_InlLou1 : HALioExtern_Type;
+	xPos_InlLou2 : HALioExtern_Type;
+	xPos_OutlLou1 : HALioExtern_Type;
+	xPos_OutlLou2 : HALioExtern_Type;
+	xPos_CircLou1 : HALioExtern_Type;
+	xPos_CircLou2 : HALioExtern_Type;
+	xPrDiff_ER : HALioExtern_Type;
+	xPos_HW_ReValve : HALioExtern_Type;
+	xPos_HW_EC_ReValve : HALioExtern_Type;
+	xPos_ChC_Valve : HALioExtern_Type;
+	xP_Heat : HALioExtern_Type;
+	xPr_EO_Mod_Out : HALioExtern_Type;
+	xPr_HW_Re_LT : HALioExtern_Type;
+	xPr_HW_Re_HT : HALioExtern_Type;
+	xPr_HW_Re_PreH_ECW : HALioExtern_Type;
+	xPr_HW_Re_PreH_EO : HALioExtern_Type;
+	xPr_OFUbFilt : HALioExtern_Type;
+	xPr_OFUaFilt : HALioExtern_Type;
+	xPr_OFUbCentrifuge : HALioExtern_Type;
+	xP_DEIE : HALioExtern_Type;
+	szMMUsynch1_Path : STRING[30];
+	szMMUsynch2_Path : STRING[30];
+	xPr_TCO : HALioExtern_Type;
+	xP_Mns_AnaIn : HALioExtern_Type; (*V4.4 Netzbezugsregler 01*)
+	xCtr_Mns_Anain_Setp_W_ext : HALioExtern_Type; (*V4.4 Netzbezugsregler 01*)
+	xPF_GenC_SetEU : HALioExtern_Type; (* Power factor setpoint (COS PHI) from EU *)
+	xQ_GenC_SetEU : HALioExtern_Type; (* Reactive power setpoint from EU *)
+	xQLim_GenC_SetEU : HALioExtern_Type; (* Reactive power limit setpoint from EU *)
+	xQU_GenC_Set : HALioExtern_Type; (* Voltage setpoint for reactive power control from EU *)
+	xP_GenC_SetEU : HALioExtern_Type; (* Power setpoint from EU *)
+	xPLim_GenC_SetEU : HALioExtern_Type; (* Power limit setpoint from EU *)
+	xU_SetExtAI_Norm : HALioExtern_Type; (* Voltage setpoint *)
+	xQ_Droop_Set : HALioExtern_Type; (* Reactive power droop offset setpoint *)
+	xT_EGbCat : HALioExtern_Type;
+	xT_EGaCat : HALioExtern_Type;
+	xPr_OXIcat_In : HALioExtern_Type;
+	xPr_OXIcat_Out : HALioExtern_Type;
+	xPr_EG_Deflag_Fast : HALioExtern_Type;
+	ucLoopCnt : USINT; (* loop variable *)
+	iCnt_OpHours_old : DINT; (* operating hours counter *) (*OldName:betrieb_h; Cycle:2;*)
+	ucSAFICommErrEventMax : USINT; (* CAN SAFI All Modules Communication Error Event Max *)
+	usSAFICommErrMaxAll : UINT; (* CAN SAFI All Modules Communication Error Max All *)
+	usSAFICommErrMaxCur : UINT; (* CAN SAFI All Modules Communication Error Max Current *)
+	usSAFICommErrAvgMax : UINT; (* CAN SAFI All Modules Communication Error Average Max *)
+	usSAFICommErrAvgMaxCnt : UINT; (* CAN SAFI All Modules Communication Error Average Counter Max *)
+	usSAFIPhaseCntMax : UINT; (* CAN SAFI All Modules Communication Error Average Max *)
+	usSAFICommErrMax : ARRAY[0..12] OF UINT; (* CAN SAFI Module Communication Error Max *)
+	usSAFICommErrAvg : ARRAY[0..12] OF UINT; (* CAN SAFI Module Communication Error Average *)
+	usSAFICommErrAvgCnt : ARRAY[0..12] OF UINT; (* CAN SAFI Module Communication Error Average Counter *)
+	usSAFIPhaseCnt : ARRAY[0..12] OF UINT; (* CAN SAFI Modules Communication Phase Count *)
+	ucTecJetCommErrEventMax : USINT; (* CAN TecJet All Module Communication Error Event Max *)
+	usTecJetCommErrMax : UINT; (* CAN TecJet Module Communication Error Max *)
+	usTecJetCommErrMaxAll : UINT; (* CAN TecJet All Modules Communication Error Event Max All *)
+	usTecJetCommErrMaxCur : UINT; (* CAN TecJet All Modules Communication Error Event Max Current *)
+	usTecJetCommErrAvgMax : UINT; (* CAN TecJet All Modules Communication Error Average Max *)
+	usTecJetCommErrSlowAvg : UINT; (* CAN TecJet All Modules Communication Error Slow Average *)
+	ucTecJetCommErrSlowMax : USINT; (* CAN TecJet All Modules Communication Error Slow Max *)
+	usTecJetSlowPhaseCnt : UINT; (* CAN TecJet All Modules Slow Phase Count *)
+	usTecJetFastPhaseCntMax : UINT; (* CAN TecJet All Modules Fast Phase Count Max *)
+	usTecJetPhaseCntMax : UINT; (* CAN TecJet All Modules Phase Count Max  *)
+	usTecJetCommErrFastAvg : ARRAY[0..4] OF UINT; (* CAN TecJet Module Communication Error Fast Average *)
+	usTecJetCommErrFastMax : ARRAY[0..4] OF UINT; (* CAN TecJet Module Communication  Error Fast Max *)
+	usTecJetFastPhaseCnt : ARRAY[0..4] OF UINT; (* CAN TecJet Module Communication Fast Phase Count *)
+	usKLS98CommErrAvgMax : UINT; (* CAN KLS98 Module Communication Error Average Max *)
+	ucKLS98CommErrEventMax : USINT; (* CAN KLS98 Module Communication Error Event Max *)
+	ucKLS98CommErrMaxAll : USINT; (* CAN KLS98 Module Communication Error Max All *)
+	ucKLS98CommErrMaxCur : USINT; (* CAN KLS98 Module Communication Error Max Current *)
+	usKLS98PhaseCntMax : UINT; (* CAN KLS98 Module Communication Phase Count Max*)
+	usKLS98CommErrAvg : ARRAY[0..24] OF UINT; (* CAN KLS98 All Module Communication Error Average *)
+	ucKLS98CommErrMax : ARRAY[0..24] OF USINT; (* CAN KLS98 All Module Communication Error Max *)
+	usKLS98PhaseCnt : ARRAY[0..24] OF UINT; (* CAN KLS98 All Module Communication Phase Count*)
+	ucIC900CommErrMax : USINT; (* CAN IC900 Module Communication Error Max *)
+	usIC900PhaseCnt : UINT; (* CAN IC900 Module Communication Phase Count *)
+	usIC900CommErrAvg : UINT; (* CAN IC900 Module Communication Error Average *)
+	ucMonicCommErrMax : USINT; (* CAN Monic Module Communication Error Max *)
+	usMonicPhaseCnt : UINT; (* CAN Monic Module Communication Phase Count *)
+	usMonicCommErrAvg : UINT; (* CAN Monic Module Communication Error Average *)
+	xCO_SCR_EMLine1 : HALioExtern_Type; (*FuB*)
+	xFlow_SCR_UreaDosingOut : HALioExtern_Type; (*FuB*)
+	xNO2_SCR_EMLine1 : HALioExtern_Type; (*FuB*)
+	xNO2_SCR_EMLine2 : HALioExtern_Type; (*FuB*)
+	xNO_SCR_EMLine1 : HALioExtern_Type; (*FuB*)
+	xNO_SCR_EMLine2 : HALioExtern_Type; (*FuB*)
+	xO2_SCR_EMLine1 : HALioExtern_Type; (*FuB*)
+	xPr_SCR_CatIn : HALioExtern_Type; (*FuB*)
+	xPr_SCR_CatOut : HALioExtern_Type; (*FuB*)
+	xPr_SCR_ComprAirSupply : HALioExtern_Type; (*FuB*)
+	xPr_SCR_UreaDosingIn : HALioExtern_Type; (*FuB*)
+	xPr_SCR_UreaDosingOut : HALioExtern_Type; (*FuB*)
+	xT_SCR_CatIn : HALioExtern_Type; (*FuB*)
+	xT_SCR_CatOut : HALioExtern_Type; (*FuB*)
+	bWatchdogSIM2AR : BOOL; (*Watchdog for WinMOD simulation*)
+	xPos_ChC2_Valve : HALioExtern_Type;
+	xT_GT_NG : HALioExtern_Type;
+	xPr_GT_NG : HALioExtern_Type;
+	xVol_GT_NG : HALioExtern_Type;
+	xPr_AirST_Engage : HALioExtern_Type;
+	xPr_ECWaP1 : HALioExtern_Type;
+	xPr_ECWaP2 : HALioExtern_Type;
+	iUR20_ModuleStatus_I2009_SXX : USINT := 0;
+	iUR20_ModuleStatus_I2009_S01 : ARRAY[0..149] OF USINT;
+	iUR20_ModuleStatus_I2009_S02 : ARRAY[0..149] OF USINT;
+	iUR20_ModuleStatus_I2009_S03 : ARRAY[0..149] OF USINT;
+	iUR20_ModuleStatus_I2009_S04 : ARRAY[0..149] OF USINT;
+	iUR20_ModuleStatus_I2009_S05 : ARRAY[0..149] OF USINT;
+	iUR20_ModuleStatus_I2009_S06 : ARRAY[0..149] OF USINT;
+	iUR20_ModuleStatus_I2009_S07 : ARRAY[0..149] OF USINT;
+	iUR20_ModuleStatus_I2009_S08 : ARRAY[0..149] OF USINT;
+	iUR20_ModuleStatus_I2009_S09 : ARRAY[0..149] OF USINT;
+	iUR20_ModuleStatus_I2009_S0A : ARRAY[0..149] OF USINT;
+	iUR20_ModuleStatus_I2009_S0B : ARRAY[0..149] OF USINT;
+	iUR20_ModuleStatus_I2009_S0C : ARRAY[0..149] OF USINT;
+	iUR20_ModuleStatus_I2009_S0D : ARRAY[0..149] OF USINT;
+	iUR20_ModuleStatus_I2009_S0E : ARRAY[0..149] OF USINT;
+	iUR20_ModuleStatus_I2009_S0F : ARRAY[0..149] OF USINT;
+	iUR20_ModuleStatus_I2009_S10 : ARRAY[0..149] OF USINT;
+	bUR20_AllModlesOK : BOOL := 0;
+	xLev_SCR_UreaTank : HALioExtern_Type; (*FuB*)
+	xPr_ThR2_Inlet : HALioExtern_Type; (*FuB*)
+	xPr_ThR2_Outlet : HALioExtern_Type; (*FuB*)
+END_VAR
+VAR CONSTANT
+	iNum_CtrlBatMon : USINT := 4; (*number of control battery monitoring test sets*)
+END_VAR
+VAR
+	rMul_MMD_U_Bus : ARRAY[0..2] OF REAL := [3(0.0)]; (* multiplier bus bar voltage *)
+	rMul_MMD_U_Synch : ARRAY[0..2] OF REAL := [3(0.0)]; (* multiplier snchronization voltage *)
+	rMul_MMD_U_Gen : ARRAY[0..2] OF REAL := [3(0.0)]; (* multiplier generator voltage *) 
+	xT_EGaHE1 : HALioExtern_Type := (0); (*V4.14 MultiSignalTemp*)
+	xT_EGaHE2 : HALioExtern_Type := (0); (*V4.14 MultiSignalTemp*)
+	xT_EGaTC : HALioExtern_Type := (0); (*V4.14 MultiSignalTemp*)
+	xT_PlateHE : HALioExtern_Type := (0); (*V4.14 MultiSignalTemp*)
+	xL_FreshOilTank : HALioExtern_Type := (0); (*V4.12 2022-112*)
+	xL_WasteOilTank : HALioExtern_Type := (0); (*V4.12 2022-112*)
+	xL_DayOilTank : HALioExtern_Type := (0); (*V4.12 2022-112*)
+	MaxNumIoChannels : UINT;
+	ActNumIoChannels : UINT;
+	xHALioSignal : ARRAY[0..1299] OF HALioSignal;
+	xHALioSignals : ARRAY[1..8,0..1299] OF HALioSignal;
+	xHALioSignalsCount : ARRAY[1..8] OF UINT;
+	callHALioSignal : BOOL;
+	HwOK : BOOL;
+	ParOK : BOOL;
+	xCtr_ChC_Set : HALioExtern_Type; (* Controller 9 - Charge temperature *)
+	xCtr_HWRe_Set : HALioExtern_Type; (* Controller 10 - Return water temperature *)
+	xCtr_EC_Set : HALioExtern_Type; (* Controller 11 - Return water temperature after cooler *)
+	xER_FC_Set : HALioExtern_Type; (* Controller 12 - Room temperature *)
+	xCtr_HWSu_Set : HALioExtern_Type; (* Controller 14 - Supply water temperature *)
+	xCtr_ChCV_Set : HALioExtern_Type; (* Controller 15 - Charge temperature ventilation - fan *)
+	xCtr_ECW_Set : HALioExtern_Type; (* Controller 16 - Engine cooling water temperature *)
+	xCtr_ChCHP_Set : HALioExtern_Type; (* Controller 17 - Charge cooler temperature - high pressure *)
+	xCtr_GC_Set : HALioExtern_Type; (* Controller 21 - Gas compressor *)
+	xEOVal_LT_Set : HALioExtern_Type; (* Controller 22 - Oil temperature controller low temperature *)
+	xCtr_InlLou_Set : HALioExtern_Type; (* Controller 23 - Inlet louvre - Room temperature *)
+	xCtr_OutlLou_RT_Set : HALioExtern_Type; (* Controller 24 - Outlet louvre - Room temperature *)
+	xCtr_OutlLou_RDP_Set : HALioExtern_Type; (* Controller 25 - Outlet louvre - Room difference pressure *)
+	xCtr_CircLou_Set : HALioExtern_Type; (* Controller 26 - Circulation louvre - Intake air temperature *)
+	xCtr_CDSu_Set : HALioExtern_Type; (* Controller 27 - Supply water temperature condenser *)
+	xCtr_OutlVE_RT_Set : HALioExtern_Type; (* Controller 30 - Outlet air fan - Room temperature *)
+	xCtr_OutlVE_RDP_Set : HALioExtern_Type; (* Controller 31 - Outlet air fan - Room difference pressure *)
+	xCtr_ChC2_Valve_Set : HALioExtern_Type; (* Controller 34 - Charge temperature before HP TC (T1) *)
+	bMMD_Out68Cfg_cust : ARRAY[0..2] OF BOOL; (*1 = Activate the usage of usMMD_Out68Cfg_cust for MMD | 0 = (standard) use serial MMD Output68Cfg *)
+	usMMD_Out68Cfg_cust : ARRAY[0..2] OF UINT; (* custom Output68Cfg for MMD *)
+	Para_iMainsCfg : ARRAY [0..2] OF USINT; (* Mains voltage measurement config *)
+	Para_iGenEarthCfg : ARRAY [0..2] OF USINT; (* Generator voltage measurement - Earthing config *)
+	Para_iBusEarthCfg : ARRAY [0..2] OF USINT; (* Busbar voltage measurement    - Earthing config *)
+	Para_iSynch1EarthCfg : ARRAY [0..2] OF USINT; (* Synch(1) voltage measurement  - Earthing config *)
+	Para_iSynch2EarthCfg : ARRAY [0..2] OF USINT; (* Synch(2) voltage measurement  - Earthing config *)
+END_VAR

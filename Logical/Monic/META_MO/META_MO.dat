@@ -1,0 +1,107 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2019
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V03.99.00.00	06.03.2013	Weitzer		generated for modular software	 
+; V03.99.02.00	29.05.2013	Zengerer	initial dependencies prepared
+; V04.00.00.00	30.01.2014	Denk		new version
+; V04.00.01.00	21.04.2014	Denk		new version
+; V04.00.02.00	22.07.2014	Denk		tIgn_LimitMonitor corrected
+; V04.03.00.00	02.11.2015	Zengerer 	MANDATORYMODULE statement
+; V04.05.00.00	27.07.2017	Messner		CAN Diagnosis Picture added
+; V04.07.00.00	23.01.2019	Zengerer	Distribute Para task with perm messaage handling capability to all modules, no functional change to V4.06
+; V04.10.00.00	09.03.2021	Perktold	change of vvm IN_MO.bMisfCOn on source side to cyclic#1 (from 2)
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>MO</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.10.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"	<PARA1 Name='iEng_Motortype' MIN='208' MAX='920' />"
+"	<PARA2 />"
+"	<PARA3 />"
+"	<PARA4 />"
+"	<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Statement, if engine operation is also allowed without this module (FALSE) or if this module´s parameter check passing is mandatory (TRUE)
+"<MANDATORYMODULE>FALSE</MANDATORYMODULE>"
+;
+; Permanent Datamodule Filenames<!-- enter filenames for counter and INTERNAL parameter only; filename without extention-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_MO</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='AB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='HA' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='EC' VERSION='04.00.00.00' />"
+"   <DEPENDENCY VISVERSION='02.06.00.00' />"			; Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	CAN communication to Monic device "
+"	</General>	"
+""
+"	<F1 Name='CAN Communication' LastModified='04.00.00.00'>"
+"	Manage and monitor CAN communication to Monic device.	"
+"	</F1>"
+"	<F2 Name='Parameter sending' LastModified='04.00.00.00'>"
+"	 Send parameters and operation values to the device.	"
+"	</F2>"
+"	<F3 Name='Error handling' LastModified='04.00.00.00'>"
+"	 Forward errors from Monic to control system. 	"
+"	</F3>"
+"	<F4 Name='Voltage measuring' LastModified='04.00.00.00'>"
+"	 Read ignition voltage measure values. "
+"	</F4>"
+"	<F5 Name='Operating mode' LastModified='04.00.00.00'>"
+"	 Selection of monic operating mode depending on operation mode of the engine "
+"	</F5>"
+""
+"	<Info>"
+"	Update 4.00.01.00: data type _tMonicLimitREAL, task IN_MO, for compatible format with MM SAFI	"
+"	Update 4.00.02.00: V4.00.2 17.07.2014	Denk	fix Datatype tIgn_LimitMonitor corrected. //LimitMon[ucCountG].kind	"
+"   Update 4.00.05.00: CAN diagnosis picture "
+"	</Info>"
+""
+"	<Customized LastModified='4.0.0.0'>	"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.0.0.0?><Library xmlns="http://br-automation.co.at/AS/Library" SubType="ANSIC" Version="1.00.0">
+   <Files>
+      <File>Gen2.c</File>
+      <File>Gen2_ref.c</File>
+      <File>Gen2_ref.h</File>
+      <File>Gen2_ref_data.c</File>
+      <File>Gen2_ref_private.h</File>
+      <File>Gen2_ref_types.h</File>
+      <File>lGen2.fun</File>
+      <File>lGen2.typ</File>
+      <File>lGen2.var</File>
+      <File>lib_properties.txt</File>
+      <File>rtGetInf.c</File>
+      <File>rtGetInf.h</File>
+      <File>rtGetNaN.c</File>
+      <File>rtGetNaN.h</File>
+      <File>rt_defines.h</File>
+      <File>rt_nonfinite.c</File>
+      <File>rt_nonfinite.h</File>
+      <File>rtwtypes.h</File>
+      <File>zero_crossing_types.h</File>
+   </Files>
+</Library>

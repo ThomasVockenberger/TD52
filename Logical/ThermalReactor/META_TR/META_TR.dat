@@ -1,0 +1,112 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2022
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V03.99.00.00	06.03.2013	Weitzer		generated for modular software	 
+; V03.99.02.00	29.05.2013	Zengerer	initial dependencies prepared
+; V04.00.00.00	30.01.2014	Denk		new version
+; V04.03.00.00	25.09.2014	Denk		Start-up changes first Thermoreactor
+;				29.06.2015  Denk		Operation hour for Reactor, Gas Injection and el. Heater 
+; V04.03.01.00	02.11.2015	Zengerer 	MANDATORYMODULE statement
+; V04.07.00.00	27.05.2019	Denk		Adjustments regarding new library versions (JEW_LIB1, JEW_LIB2, JEW_LIB3)	
+; V04.09.00.00	20.02.2020	Denk		Emissions monitoring, messages 9309, 9042, 9043 added
+; V04.10.00.00	24.11.2020	lettenb.	2356,2357,2358 added
+; V04.11.00.00	28.01.2022	Perktold	included plant controller upgrade
+; V04.12.00.00	19.05.2022	Maran		updated electrical heating elements switching logic and trigger signal for hour counter (bugfix)
+; V04.13.00.00	27.03.2023	Maran		updated operating temperature definition and maximum temperature difference monitoring for W3503
+; 				28.11.2023	Maran		added auxiliary gas injection monitoring inputs
+; V04.14.00.00	27.11.2024	Maran		updates for thermal reactor 2nd generation
+; 				27.11.2024	Maran		added auxiliary gas stop due to sufficient temperature
+; 				27.11.2024	Maran		temperature setpoint reference used in reactor task changed from heating controller out structure value to HMI parameter value
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>TR</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.14.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"<PARA1 Name='rT_ThR_EH_Lim75' MIN='1' MAX='800' />"
+"<PARA2 />"
+"<PARA3 />"
+"<PARA4 />"
+"<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Statement, if engine operation is also allowed without this module (FALSE) or if this module´s parameter check passing is mandatory (TRUE)
+"<MANDATORYMODULE>FALSE</MANDATORYMODULE>"
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_TR</DATAMODULE>"
+"	<DATAMODULE>perm_TR</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='AB' VERSION='4.00.00.00' />" 
+"	<DEPENDENCY MODULE='PB' VERSION='4.00.00.00' />"
+"	<DEPENDENCY MODULE='HA' VERSION='4.14.00.00' />" 
+"	<DEPENDENCY MODULE='OP' VERSION='4.00.00.00' />" 
+"   <DEPENDENCY VISVERSION='02.15.00.00' />"			; Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"  Thermal Reactor/CL.AIR module control the operation of the exhaust gas treatment to reduce HCHO and CO emmisions "
+"	</General>	"
+""
+"	<F1 Name='Electric Heater' LastModified='4.14.0.0'>"
+"	Electric heater operating power set point "
+"	</F1>"
+"	<F2 Name='Gas injection' LastModified='4.14.0.0'>"
+"	Controls the gas injection valves if available on the Thermal Reactor.	"
+"	Monitors the auxiliary gas injection equipment if corresponding instrumentation is available.	"
+"	</F2>"
+"	<F3 Name='Recirculating valve control' LastModified='4.00.0.0'>"
+"	Controls the mixing of the cleaned exhaust gas and the exhaust gas from the cylinder. "
+"	</F3>"
+"	<F4 Name='Monitoring' LastModified='4.14.0.0'>"
+"	 Temperature sensor failure, pressurized air failure, valve end position failure, heat up failure, control panel high temperature, "
+"	 high temperature difference within TK1 or TK2, reactor temperature maximum, minimum temperature, operating switch and emission monitoring active "
+"	</F4>"
+""
+"	<Info>"
+"	Please enter additional module info here.	"
+"	</Info>"
+""
+"	<Customized LastModified='4.00.0.0'>	"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

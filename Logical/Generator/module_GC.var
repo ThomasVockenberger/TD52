@@ -1,0 +1,146 @@
+VAR
+	VIS2MM : VIS2MM_Struct;
+	IN_GC : IN_GC_Struct;
+	MM2VIS : MM2VIS_Struct;
+	OUT_GC : OUT_GC_Struct;
+	Para : Para_GC_Struct;
+	ParaFactoryDefault : Para_GC_Struct;
+	pm : Para_GC_Struct;
+	tCtrGenPF_In : _tGeACtrIn;
+	tCtrGenPF_Out : _tGeACtrOut;
+	xCtrGenPF : GeACtr;
+	xEngType : EngType; (*Engine type defintion*)
+	xOpMode : OpMode;
+	PF_Ist_lin : REAL;
+	PFSoll_lin : REAL;
+	bOMSS_Scav : BOOL; (*Operation mode selector switch - Scavenging*)
+	bOMSS_MAT : BOOL; (*Operation mode selector switch - Manual automatic*)
+	bOMSS_Test : BOOL; (*Operation mode selector switch - Test*)
+	bOMSS_Aut : BOOL; (*Operation mode selector switch - Auto*)
+	bOMSS_Man : BOOL; (*Operation mode selector switch - Manual*)
+	bGnlTrip1 : BOOL; (*general trip *)
+	bGnlTrip2 : BOOL; (*general trip *)
+	bGnlTrip3 : BOOL; (*general trip *)
+	bGnlTrip : BOOL; (*general trip *)
+	bGnlWarning : BOOL; (*general warning*)
+	M_DREHZ : BOOL; (*Engine starter speed exceeded*)
+	M_HDREHZ : BOOL; (*Engine speed start limit high*)
+	bEng_Run_10s : BOOL; (*Engine in operation since 10 seconds*)
+	bEng_Run_20s : BOOL; (*Engine in operation since 20 seconds*)
+	bGen_CosPhi_Ena : BOOL; (*Old name AN_COS*)
+	bMI_MMU : BOOL; (*mains import measurement by MMU*)
+	bMIPCont : BOOL; (*mains import power controller active*)
+	bMIPCont_SPext : BOOL; (*ext. set point of mains power control active*)
+	bMIRPCont_SPext : BOOL; (*ext. set point for mains import react. pow. active*)
+	bPF_CosPCtr_Trip : BOOL;
+	bPF_LIM_Temp : BOOL; (*PF limitation by alternator winding temp.*)
+	bT_Gen_Bear_A_Lim : BOOL;
+	bT_Gen_Bear_A_Max : BOOL;
+	bT_Gen_Bear_B_Lim : BOOL;
+	bT_Gen_Bear_B_Max : BOOL;
+	bT_Gen_Wind_L1_Lim : BOOL;
+	bT_Gen_Wind_L1_Max : BOOL;
+	bT_Gen_Wind_L2_Lim : BOOL;
+	bT_Gen_Wind_L2_Max : BOOL;
+	bT_Gen_Wind_L3_Lim : BOOL;
+	bT_Gen_Wind_L3_Max : BOOL;
+	bT_Gen_Wind_Lim : BOOL;
+	bT_Gen_Wind_Max : BOOL;
+	bU_Gen_Exc_Max : BOOL;
+	bU_Gen_Exc_Min : BOOL;
+	PF_1_fix : REAL := 0.0;
+	PF_2_fix : REAL := 0.0;
+	PF_Out1 : INT;
+	PF_Out2 : INT;
+	rAng_CosPCtr_LimCalc : REAL;
+	rAng_CosPCtr_MinCalc : REAL;
+	rP_CosPCtr_F_Red : REAL; (*power reduction due to high or low frequency*)
+	rP_CosPCtr_T_Red : REAL; (*power reduction due to high winding temperature*)
+	rP_CosPCtr_U_Red : REAL; (*power reduction due to high or low voltage*)
+	rP_Gen_ppt : REAL;
+	rPF_CosPCtr_LimCalc1 : REAL;
+	rPF_CosPCtr_LimCalc2 : REAL;
+	rPF_CosPCtr_MinCalc1 : REAL;
+	rPF_CosPCtr_MinCalc2 : REAL;
+	rPF_CosPCtr_Set_Ctr13 : REAL;
+	rQ_CosPCtr_Set : REAL;
+	rU_AI_Gen_Avg_ppt : REAL;
+	ssMIPCont_SP : INT; (*set point of mains power control*)
+	ssMIRPCont_SP : INT; (*set point of mains reactive power control*)
+	ssP_mains_scale1 : INT; (*scaling of mains power at 4mA*)
+	ssP_mains_scale2 : INT; (*scaling of mains power at 20mA*)
+	ssQ_mains_scale1 : INT; (*scaling of mains reactive power at 4mA*)
+	ssQ_mains_scale2 : INT; (*scaling of mains reactive power at 20mA*)
+	ssQ_mainsOffset : INT; (*offset value for mains reactive power controller*)
+	U_fix : REAL := 0.0;
+	rU_Gen_Diff_Match_I : REAL; (*voltage offset for power factor controller, current signal (mA)*)
+	rU_Gen_Diff_Match_U : REAL; (*voltage offset for power factor controller, voltage signal (V)*)
+	bNoInitDetected : BOOL := FALSE; (*allways true, except 1cycle on init up*)
+	rU_Gen_f_match : REAL; (*Frequency related voltage adjustment value*) (*OldName:u_offset_f_r;Cycle:5*)
+	rU_Gen_sy_match : REAL; (*Voltage offset for voltage matching during synchr.*) (*OldName:u_offset_sy_r;Cycle:5*)
+	rU_Gen_P_match : REAL; (*Power related voltage adjustment value*) (*OldName:u_offset_p_r;Cycle:5*)
+	bU_minus_MMU : BOOL;
+	bU_plus_MMU : BOOL;
+	bU_Gen_P_match : BOOL; (*Power related voltage adjustment active*) (*OldName:u_adj_p_a;Cycle:5*)
+	bMsg2156 : BOOL; (*Q-RED by winding temperature limit*) (*OldName:RPSDIA[35];Cycle:5*)
+	bMsg2157 : BOOL; (*Q-limit by polar wheel angle*) (*OldName:RPSDIA[36];Cycle:5*)
+	bAMM_Lev_OilSkid_Sump_Hi : BOOL := FALSE; (*W3418 Oilskid oil in oil sump *)
+	bAMM_Lev_OilSkid_Tank_Ms : BOOL := FALSE; (*W3419 Oilskid tank oil level measuring signal failure *)
+	bAMM_Lev_OilSkid_Tank_Lo : BOOL := FALSE; (*W3420 Oilskid tank oil level low*)
+	bAMM_Lev_OilSkid_Tank_LoLo : BOOL := FALSE; (*A2208 Oilskid tank oil level low *)
+	bAMM_T_OilSkid_Tank_Ms : BOOL := FALSE; (*W3421 Oilskid tank oil temperature measuring signal failure*)
+	bAMM_T_OilSkid_Tank_Lo : BOOL := FALSE; (*W3422 Oilskid tank oil temperature low*)
+	bAMM_T_OilSkid_Supply_Ms : BOOL := FALSE; (*W3423 Oilskid oil supply temperature measuring signal failure*)
+	bAMM_T_OilSkid_Supply_Lo : BOOL := FALSE; (*W3424 Oilskid oil supply temperature low*)
+	bAMM_T_OilSkid_Supply_Hi : BOOL := FALSE; (*W3425 Oilskid oil supply temperature high*)
+	bAMM_OilSkid_PumpLP_CB : BOOL := FALSE; (*W3426 Oilskid low pressure oil pump circuit breaker tripped*)
+	bAMM_Flow_OilSkid_DE_Ms : BOOL := FALSE; (*W3427 Oilskid oil flow TO DE bearing measuring signal failure*)
+	bAMM_Flow_OilSkid_DE_Lo : BOOL := FALSE; (*W3428 Oilskid oil flow TO DE bearing low*)
+	bAMM_Flow_OilSkid_DE_Hi : BOOL := FALSE; (*W3429 Oilskid oil flow TO DE bearing high*)
+	bAMM_Flow_OilSkid_NDE_Ms : BOOL := FALSE; (*W3430 Oilskid oil flow TO NDE bearing measuring signal failure*)
+	bAMM_Flow_OilSkid_NDE_Lo : BOOL := FALSE; (*W3431 Oilskid oil flow TO NDE bearing low*)
+	bAMM_Flow_OilSkid_NDE_Hi : BOOL := FALSE; (*W3432 Oilskid oil flow TO NDE bearing high*)
+	bAMM_DPr_OilSkid_FiltLP_Hi : BOOL := FALSE; (*W2505 Oilskid low pressure oil filter clogged*)
+	bAMM_OilSkid_PumpHP_CB : BOOL := FALSE; (*W3433 Oilskid high pressure oil pump circuit breaker tripped*)
+	bAMM_OilSkid_PumpHP_CB_UPS : BOOL := FALSE; (*W3434 Oilskid high pressure oil pump circuit breaker tripped - UPS*)
+	bAMM_Pr_OilSkid_HP_DE_Ms : BOOL := FALSE; (*W3435 Oilskid oil pressure TO DE bearing measuring signal failure*)
+	bAMM_Pr_OilSkid_HP_DE_Lo : BOOL := FALSE; (*W3436 Oilskid oil pressure TO DE bearing low*)
+	bAMM_Pr_OilSkid_HP_NDE_Ms : BOOL := FALSE; (*W3442 Oilskid oil pressure TO NDE bearing measuring signal failure*)
+	bAMM_Pr_OilSkid_HP_NDE_Lo : BOOL := FALSE; (*W3443 Oilskid oil pressure TO NDE bearing low*)
+	bAMM_DPr_OilSkid_FiltHP_DE_Hi : BOOL := FALSE; (*W2508 Oilskid high pressure oil filter DE clogged*)
+	bAMM_DPr_OilSkid_FiltHP_NDE_Hi : BOOL := FALSE; (*W3446 Oilskid high pressure oil filter NDE clogged*)
+	bAMM_OilSkid_Fan_CB : BOOL := FALSE; (*W3437 Oilskid fan circuit breaker tripped*)
+	bAMM_OilSkid_Heater_CB : BOOL := FALSE; (*W3438 Oilskid heater circuit breaker tripped*)
+	bAMM_OilSkid_MCB : BOOL := FALSE; (*W3439 Oilskid main switch auxiliaries opened*)
+	bAMM_OilSkid_AuxV : BOOL := FALSE; (*W3440 Oilskid auxiliaries voltage NOT available*)
+	bAMM_OilSkid_AuxV_UPS : BOOL := FALSE; (*W3441 Oilskid auxiliaries voltage NOT available - UPS*)
+	bAMM_OilSkid_PumpC_CB : BOOL := FALSE; (*W3447 Oilskid circulation pump circuit breaker tripped *)
+	bN_EngAct_IsZero : BOOL := FALSE; (*Actual speed [1/min] is Zero *)
+	bEng_Run_30m : BOOL := FALSE; (*Engine operation + 30 minutes*)
+	bMsg2208_Test : BOOL; (*Prio3: oilskid tank level minimum - TEST*)
+	rPF_POC_Act : REAL;
+	tCtr_Q_In : _tGeACtrIn;
+	tCtr_Q_Out : _tGeACtrOut;
+	xCtr_Q : GeACtr;
+	rS_POC_Act : REAL; (*aparent power at selected point of control [kVA]*)
+	rP_POC_Act : REAL; (*active power at selected point of control [kW]*)
+	rQ_POC_Act : REAL; (*reactive power at selected point of control [kVAr]*)
+	rU_POC_Act : REAL; (*average vooltage at selected point of control [V]*)
+	rS_POC_Act_Norm : REAL; (*aparent power at selected point of control [%]*)
+	rP_POC_Act_Norm : REAL; (*active power at selected point of control [%]*)
+	rQ_POC_Act_Norm : REAL; (*reactive power at selected point of control [%]*)
+	rQ_POC_Act_CalcV : REAL; (*reactive power at selected point of control calculated from voltage [%]*)
+	rQ_Set_Lim : REAL; (*reactive power setpoint limited*)
+	rQ_Set_Sum : REAL; (*reactive power setpoint limited summary*)
+	rU_Gen_Diff_Match : REAL; (*calc.setpoint offset from v_ctr *)
+	bMsg9351 : BOOL; (*Measuring signal failure external reactive power set point for voltage droop mode*)
+	bMsg9285 : BOOL; (*Measuring signal failure external voltage setpoint*)
+	bMsg2998 : BOOL; (*Q-limit by under voltage*)
+	iOpS_GndFailure : DINT; (*earth failure s*)
+	iOpM_GndFailure : DINT; (*earth failure m*)
+	tiGoodQual : TIME := T#5s; (*Time for signal Quality check*)
+	bRelMon_Flow_DE : BOOL := FALSE; (*Release monitoring OilSkid oil flow to DE*)
+	bRelMon_Flow_NDE : BOOL := FALSE; (*Release monitoring OilSkid oil flow to NDE*)
+	bMsg9372_set : BOOL; (*W9372 Multi measurement device: Earth failure generator*)
+	bMsg2373_set : BOOL; (*A2373 Multi measurement device: Earth failure generator*)
+END_VAR

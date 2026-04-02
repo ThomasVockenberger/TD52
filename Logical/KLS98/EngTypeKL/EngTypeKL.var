@@ -1,0 +1,18 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: SelectEngineType
+ * File: SelectEngineType.var
+ * Author: 320003156
+ * Created: December 21, 2011
+ ********************************************************************
+ * Local variables of program SelectEngineType
+ ********************************************************************)
+
+VAR
+
+END_VAR
+
+VAR CONSTANT
+
+END_VAR

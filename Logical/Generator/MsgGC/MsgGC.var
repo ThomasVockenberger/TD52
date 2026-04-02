@@ -1,0 +1,186 @@
+VAR
+	AN_RLSG : BOOL;
+	bIASY : BOOL;
+	bP_Gen_Reverse : BOOL; (*Reverse power enable -> old name AT24*)
+	bP_Reverse_Mon_Ena : BOOL; (*Disable monitoring of reverse power -> old name RLSG_W*)
+	bU_Gen_Mon_Ena : BOOL; (*Enable monitoring of generator protection*)
+	FG_UASY : BOOL;
+	iAdrAmmBase2MM : UDINT;
+	iAdrMM2AmmBase : UDINT;
+	IASY1_arise : BOOL;
+	IASY2_arise : BOOL;
+	M_D1400 : BOOL;
+	RLSG1_arise : BOOL;
+	RLSG2_arise : BOOL;
+	STO_IASY : BOOL;
+	STO_RLSG : BOOL;
+	SY_1m_iasy : BOOL; (*GCB has been closed (ON) for 1 minute*)
+	SY_1m_rlsg : BOOL;
+	T28 : BOOL; (*Reverse power*)
+	xCTD_IASY1 : CTD;
+	xCTD_IASY2 : CTD;
+	xCTD_RLSG1 : CTD;
+	xCTD_RLSG2 : CTD;
+	xGR_MAXR_DREHZ : GR_MAXR;
+	xGR_MAXR_M_HDREHZ : GR_MAXR;
+	xGR_MAX_M_D_1400 : GR_MAXR;
+	xGR_MIN_AN_RLSG : GR_MINR;
+	xR_TRIG_bIASY : R_TRIG;
+	xR_TRIG_T28 : R_TRIG;
+	xSR_FG_DIFFUW : SR;
+	xTOF_GCB_Off_CNS : TOF;
+	xTOF_GCB_Off_RP : TOF;
+	xTON_AT24 : TON;
+	xTON_Eng_Run_10s : TON;
+	xTON_Eng_Run_20s : TON;
+	xTON_FG_GENUW : TON;
+	xTON_GENREG_F : TON;
+	xTON_GSEIN : TON;
+	xTP_RLSG_W : TP;
+	xTON_T28 : TON;
+	xTON_UASY : TON;
+	xTON_UASY_Ext : TON;
+	xTP_IASY1 : TP;
+	xTP_IASY2 : TP;
+	xTP_RLSG1 : TP;
+	xTP_RLSG2 : TP;
+	ZM_GENREG_F : BOOL;
+	xR_TRIG_GCB_Off_CNS : R_TRIG;
+	xR_TRIG_GCB_Off_RP : R_TRIG;
+	xTON_N_EngNom750 : TON;
+	xTON_Eng_Run_48s : TON;
+	bEng_Run_48s : BOOL;
+	xGR_MAX_F_GenBearDE1_Hi : GR_MAXR;
+	xGR_MAX_F_GenBearDE2_Hi : GR_MAXR;
+	xGR_MAX_F_GenBearNDE1_Hi : GR_MAXR;
+	xGR_MAX_F_GenBearNDE2_Hi : GR_MAXR;
+	xGR_MAX_F_GenBearDE1_HiHi : GR_MAXR;
+	xGR_MAX_F_GenBearDE2_HiHi : GR_MAXR;
+	xGR_MAX_F_GenBearNDE1_HiHi : GR_MAXR;
+	xGR_MAX_F_GenBearNDE2_HiHi : GR_MAXR;
+	xTP_Msg2156 : TP;
+	xTP_Msg2157 : TP;
+	xTP_Msg2998 : TP;
+	xTON2316Set : TON;
+	xTON_SecTick : TON;
+	xTOF_GenDeexitDem : TOF;
+	xTP_gcb_on2dead_bb : TP;
+	xMsg1036 : Msg;
+	xMsg1037 : Msg;
+	xMsg1038 : Msg;
+	xMsg1062 : Msg;
+	xMsg1073 : Msg;
+	xMsg1109 : Msg;
+	xMsg1110 : Msg;
+	xMsg1111 : Msg;
+	xMsg1112 : Msg;
+	xMsg1113 : Msg;
+	xMsg1121 : Msg;
+	xMsg1122 : Msg;
+	xMsg1123 : Msg;
+	xMsg1124 : Msg;
+	xMsg1125 : Msg;
+	xMsg1126 : Msg;
+	xMsg1127 : Msg;
+	xMsg1132 : Msg;
+	xMsg1134 : Msg;
+	xMsg1143 : Msg;
+	xMsg1144 : Msg;
+	xMsg1154 : Msg;
+	xMsg1155 : Msg;
+	xMsg1156 : Msg;
+	xMsg1157 : Msg;
+	xMsg1158 : Msg;
+	xMsg1185 : Msg;
+	xMsg2100 : Msg;
+	xMsg2105 : Msg;
+	xMsg2106 : Msg;
+	xMsg2107 : Msg;
+	xMsg2108 : Msg;
+	xMsg2109 : Msg;
+	xMsg2110 : Msg;
+	xMsg2115 : Msg;
+	xMsg2156 : Msg;
+	xMsg2157 : Msg;
+	xMsg2202 : Msg;
+	xMsg2203 : Msg;
+	xMsg2204 : Msg;
+	xMsg2205 : Msg;
+	xMsg2206 : Msg;
+	xMsg2207 : Msg;
+	xMsg2208 : Msg; (*A2208 Oilskid tank oil level low *)
+	xMsg2277 : Msg;
+	xMsg2316 : Msg;
+	xMsg2336 : Msg;
+	xMsg2371 : Msg; (*A2371 Oil skid Oil flow to DE bearing Low*)
+	xMsg2372 : Msg; (*A2372 Oil skid Oil flow to NDE bearing Low*)
+	xMsg2373 : Msg; (*A2373 Earth failure generator (MMD) *)
+	xMsg2501 : Msg;
+	xMsg2502 : Msg;
+	xMsg2503 : Msg;
+	xMsg2504 : Msg;
+	xMsg2505 : Msg; (*W2505 Oilskid low pressure oil filter clogged*)
+	xMsg2508 : Msg; (*W2508 Oilskid high pressure oil filter DE clogged*)
+	xMsg2555 : Msg;
+	xMsg2556 : Msg;
+	xMsg2573 : Msg;
+	xMsg2631 : Msg;
+	xMsg2632 : Msg;
+	xMsg2633 : Msg;
+	xMsg2634 : Msg;
+	xMsg2637 : Msg;
+	xMsg2665 : Msg; (*Generator heater circuit breaker tripped*)
+	xMsg2690 : Msg;
+	xMsg2691 : Msg;
+	xMsg2827 : Msg;
+	xMsg2828 : Msg;
+	xMsg2829 : Msg;
+	xMsg2830 : Msg;
+	xMsg2998 : Msg;
+	xMsg3219 : Msg;
+	xMsg3298 : Msg;
+	xMsg3299 : Msg;
+	xMsg3319 : Msg;
+	xMsg3393 : Msg;
+	xMsg3418 : Msg; (*W3418 Oilskid oil in oil sump *)
+	xMsg3419 : Msg; (*W3419 Oilskid tank oil level measuring signal failure *)
+	xMsg3420 : Msg; (*W3420 Oilskid tank oil level low*)
+	xMsg3421 : Msg; (*W3421 Oilskid tank oil temperature measuring signal failure*)
+	xMsg3422 : Msg; (*W3422 Oilskid tank oil temperature low*)
+	xMsg3423 : Msg; (*W3423 Oilskid oil supply temperature measuring signal failure*)
+	xMsg3424 : Msg; (*W3424 Oilskid oil supply temperature low*)
+	xMsg3425 : Msg; (*W3425 Oilskid oil supply temperature high*)
+	xMsg3426 : Msg; (*W3426 Oilskid low pressure oil pump circuit breaker tripped*)
+	xMsg3427 : Msg; (*W3427 Oilskid oil flow TO DE bearing measuring signal failure*)
+	xMsg3428 : Msg; (*W3428 Oilskid oil flow TO DE bearing low*)
+	xMsg3429 : Msg; (*W3429 Oilskid oil flow TO DE bearing high*)
+	xMsg3430 : Msg; (*W3430 Oilskid oil flow TO NDE bearing measuring signal failure*)
+	xMsg3431 : Msg; (*W3431 Oilskid oil flow TO NDE bearing low*)
+	xMsg3432 : Msg; (*W3432 Oilskid oil flow TO NDE bearing high*)
+	xMsg3433 : Msg; (*W3433 Oilskid high pressure oil pump circuit breaker tripped*)
+	xMsg3434 : Msg; (*W3434 Oilskid high pressure oil pump circuit breaker tripped - UPS*)
+	xMsg3435 : Msg; (*W3435 Oilskid oil pressure TO DE bearing measuring signal failure*)
+	xMsg3436 : Msg; (*W3436 Oilskid oil pressure TO DE bearing low*)
+	xMsg3442 : Msg; (*W3442 Oilskid oil pressure TO NDE bearing measuring signal failure*)
+	xMsg3443 : Msg; (*W3443 Oilskid oil pressure TO NDE bearing low*)
+	xMsg3446 : Msg; (*W3446 Oilskid high pressure oil filter NDE clogged*)
+	xMsg3437 : Msg; (*W3437 Oilskid fan circuit breaker tripped*)
+	xMsg3438 : Msg; (*W3438 Oilskid heater circuit breaker tripped*)
+	xMsg3439 : Msg; (*W3439 Oilskid main switch auxiliaries opened*)
+	xMsg3440 : Msg; (*W3440 Oilskid auxiliaries voltage NOT available*)
+	xMsg3441 : Msg; (*W3441 Oilskid auxiliaries voltage NOT available - UPS*)
+	xMsg3447 : Msg; (*W3447 Oilskid circulation pump circuit breaker tripped *)
+	xMsg3468 : Msg;
+	xMsg3516 : Msg;
+	xMsg3563 : Msg;
+	xMsg3566 : Msg;
+	xMsg3573 : Msg;
+	xMsg9285 : Msg;
+	xMsg9311 : Msg;
+	xMsg9351 : Msg;
+	xMsg9365 : Msg;
+	xMsg9366 : Msg;
+	xMsg9367 : Msg;
+	xMsg9368 : Msg;
+	xMsg9372 : Msg; (*W9372 Earth failure generator (MMD) *)
+END_VAR

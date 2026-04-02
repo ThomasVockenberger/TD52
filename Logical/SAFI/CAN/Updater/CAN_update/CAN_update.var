@@ -1,0 +1,22 @@
+VAR
+	CMS_dlreq_SAFI : ARRAY[0..12] OF CMSdlreq;
+	DatObjInfo_SAFIProg : DatObjInfo;
+	TON_SAFI_Chk : TON;
+	ucStep : USINT;
+	ulSAFI2DataFPGAAdr : ARRAY[0..9] OF UDINT;
+	ulSAFI2DataPROPAdr : ARRAY[0..9] OF UDINT;
+	ulSAFI2DataFPGALen : ARRAY[0..9] OF UDINT;
+	ulSAFI2DataPROPLen : ARRAY[0..9] OF UDINT;
+	ulSAFIDataAdr : ARRAY[0..9] OF UDINT;
+	ulSAFIDataLen : ARRAY[0..9] OF UDINT;
+	usDataStatus : UINT;
+	usWait : UINT;
+	bSAFIDwldAct : BOOL;
+	ucCylIndex : USINT;
+	bDownloadDone : BOOL;
+	iNum_InitDlFwCnt : ARRAY[0..12] OF USINT; (*Counter to sent the initiate domain download one more time for SAFI3*)
+	iNum_SAFI_idx : USINT;
+	bCanUpDevSel : ARRAY[0..12] OF BOOL; (*Local CAN updater device selection*)
+	iCANIdentBankA : UDINT; (*CAN identifier of the devices mounted on bank A*)
+	iCANIdentBankB : UDINT; (*CAN identifier of the devices mounted on bank B*)
+END_VAR

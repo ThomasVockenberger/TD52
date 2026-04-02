@@ -1,0 +1,21 @@
+VAR
+	iAdrAmmBase2MM : UDINT;
+	iAdrMM2AmmBase : UDINT;
+	xMsg1901 : Msg; (*FuB*)
+	xMsg19 : ARRAY[0..99] OF Msg; (*Array of FuBs*)
+	xMsg2000 : Msg;
+	bBlockMsg19 : ARRAY[0..99] OF BOOL;
+	cnt : UDINT;
+	bDisableSysWarnings : BOOL; (*True disabeles para system warnings (if engine is already running)*)
+	xOpMode : OpMode;
+	iModuleCnt : UDINT;
+	bParaMessageError : BOOL;
+	iMsg19_Size : UDINT; (*internal array range check*)
+	iModuleState_Size : UDINT;
+	bBlockRebootMessages : BOOL;
+	TON_Reboot : TON := (0);
+	bBlock_ForwardingMsg1995 : BOOL := TRUE; (*debug *)
+	bBlock1995 : BOOL := FALSE; (*debug only*)
+	bBlock1996 : BOOL := FALSE; (*debug only*)
+	bOpt_AutoReset_1996 : BOOL := TRUE; (*W1996 Counter value error Allways TRUE according to CDR 07.11.23*)
+END_VAR

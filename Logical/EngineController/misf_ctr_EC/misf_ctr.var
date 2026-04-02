@@ -1,0 +1,7 @@
+VAR
+	bMisfElectrical : BOOL; (* memory for electrical misfire *)
+	slMisfIntern : DINT; (* internal integrator for el. misf. *)
+	TP_MisfBlink : TP; (* blink pulse for visu. misfiring *)
+	ssMisfInt : INT;
+	TON_Misfire_Relase : TON;
+END_VAR

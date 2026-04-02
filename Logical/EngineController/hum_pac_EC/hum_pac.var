@@ -1,0 +1,40 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: hum_pac
+ * File: hum_pac.var
+ * Author: 105051472
+ * Created: December 20, 2012
+ ********************************************************************
+ * Local variables of program hum_pac
+ ********************************************************************)
+VAR
+	TON_SecondTick : TON; (* FUB 1 second timer tick *)
+	ssAvgLength : INT; (*[0.1s]*)
+	rMixTempDevLimit : REAL; (*[K] oder [°C]*)
+	ssMixTempDevCount : INT;
+	psatt : REAL;
+	ps_LFO : REAL; (*[mbar]*)
+	rpl_soll_Max_Sum : REAL;
+	rpl_soll_Max_Array : ARRAY[0..2999] OF REAL;
+	rpl_ist_Array : ARRAY[0..2999] OF REAL;
+	tg_soll_Hum : REAL; (*[°C]*)
+	psatt2 : REAL; (* sättigungspartialdruck P red *)
+	tg_Hum : REAL; (*[°C]*)
+	usCount : UINT;
+	usCount2 : INT;
+	rpl_ist_Sum : REAL;
+	Sim3pCTR_Hum_PRed : Sim3pCTR;
+	RT_INFO : RTInfo;
+	rCycleTime : REAL; (*[s?]*)
+	AbsHumidityCalc : REAL; (* absolute humidity air intake calculated [kg/kg] *)
+	AbsHumidityCalc_Mix : REAL; (* absolute humidity mixture calculated [kg/kg] *)
+	rpl_soll_Max : REAL;
+	xSigScal_Dpl_soll : xSigScal_R;
+	tg_soll_HumOffset_corr : REAL; (*correction of charge temperature offset, to keep a control deviation, if in humidity power reduction*)
+	rpl_ist : REAL;
+	pbaro_p2s : REAL := 1.0; (*p2s Value when engine was stopped the last time (as option in use for humidity control) [bar]*)
+	rT_T2_Set_internal : REAL;
+	tBM2166Bloc : TIME := T#2m; (*Block B2166 after falling edge*)
+	TP_BM2166 : TP;
+END_VAR

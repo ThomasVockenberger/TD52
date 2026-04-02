@@ -1,0 +1,113 @@
+VAR
+	xSR_BC_QCust : SR; (*instance for external release Q customer - Bus*)
+	rQ_Cust_Set_pu : REAL; (*Q Customer setpoint p.u.*)
+	xSR_PF : SR; (* instance for extern release  cos phi EU - Hardware  *) (* OldName: SR_PF; Cycle:5; *)
+	bPF_GenC_ExtRel : BOOL; (* extern release  cos phi EU - Hardware  *) (* OldName: bGCQ_PF; Cycle:5; *)
+	xSR_BC_PF : SR; (* instance for extern release  cos phi EU - Bus *) (* OldName: SR_BUS_PF; Cycle:5; *)
+	bGenC_PFBC_ExtRel : BOOL; (* extern release  cos phi EU - Bus *) (* OldName: bBUS_GCQ_PF; Cycle:5; *)
+	bQ_GenC_ExtRel : BOOL; (* extern release  Q EU - Hardware  *) (* OldName: bGCQ_Q; Cycle:5; *)
+	xSR_Q : SR; (* instance for extern release  Q EU - Hardware  *) (* OldName: SR_Q; Cycle:5; *)
+	xSR_BC_Q : SR; (* instance for extern release  Q EU - Bus *) (* OldName: SR_BUS_Q; Cycle:5; *)
+	bGenC_QBC_ExtRel : BOOL; (* extern release  Q EU - Bus *) (* OldName: bBUS_GCQ_Q; Cycle:5; *)
+	xSR_QLim : SR; (* instance for extern release  Q limit EU - Hardware *) (* OldName: SR_Qlim; Cycle:5; *)
+	bGenC_QLimBC_ExtRel : BOOL; (* externe release Q limit EU - Bus *) (* OldName: bBUS_GCQ_Qlim; Cycle:5; *)
+	xSR_BC_QLim : SR; (* instance for extern release  Q limit EU - Bus *) (* OldName: SR_BUS_Qlim; Cycle:5; *)
+	bGenC_UQBC_ExtRel : BOOL; (* externe release Q = f(U) EU - Bus *) (* OldName: bBUS_GCQ_Uset; Cycle:5; *)
+	xSR_BC_UQ : SR; (* instance for extern release  Q = f(U) EU - Bus *) (* OldName: SR_BUS_Uset; Cycle:5; *)
+	bGCQ_PFP : BOOL; (* Enable external power factor *) (* OldName: bGCQ_PFP; Cycle:5; *)
+	xSR_PFP : SR; (* instance for extern release  cos(phi) = f(P) EU - Hardware *) (* OldName: SR_PFP; Cycle:5; *)
+	bBC_GCQ_PFP : BOOL; (* Enable external power factor bus *) (* OldName: bBUS_GCQ_PFP; Cycle:5; *)
+	xSR_BC_PFP : SR; (* instance for extern release  cos(phi) = f(P) EU - Bus *) (* OldName: SR_BUS_PFP; Cycle:5; *)
+	bGCQ_PFU : BOOL; (* 0 *) (* OldName: bGCQ_PFU; Cycle:5; *)
+	xSR_PFU : SR; (* instance for extern release  cos(phi) = f(U) EU - Hardware *) (* OldName: SR_PFU; Cycle:5; *)
+	bBC_GCQ_PFU : BOOL; (* 0 *) (* OldName: bBUS_GCQ_PFU; Cycle:5; *)
+	xSR_BC_PFU : SR; (* instance for extern release  cos(phi) = f(U) EU - Bus *) (* OldName: SR_BUS_PFU; Cycle:5; *)
+	bGCQ_QU : BOOL; (* 0 *) (* OldName: bGCQ_QU; Cycle:5; *)
+	xSR_QU : SR; (* instance for extern release  Q = f(U) EU - Hardware *) (* OldName: SR_QU; Cycle:5; *)
+	bBC_GCQ_QU : BOOL; (* 0 *) (* OldName: bBUS_GCQ_QU; Cycle:5; *)
+	xSR_BC_QU : SR; (* instance for extern release  Q = f(U) EU - Hardware *) (* OldName: SR_BUS_QU; Cycle:5; *)
+	bGCQ_PFSetExt : BOOL; (* 0 *) (* OldName: bGCQ_PFset_ext; Cycle:5; *)
+	rGCQ_PFSetExt : REAL; (* setpoint cos(phi) extern *) (* OldName: rGCQ_PFset_ext; Cycle:5; *)
+	rGCQ_PF : REAL; (* Skalierter Wert AI:COS PHI Sollwert von EU *) (* OldName: rGCQ_PF; Cycle:5; *)
+	bGCQ_QSetExt : BOOL; (*   *) (* OldName: bGCQ_Qset_ext; Cycle:5; *)
+	rGCQ_QSetExt : REAL; (*   *) (* OldName: rGCQ_Qset_ext; Cycle:5; *)
+	rGCQ_Q : REAL; (* Skalierter Wert AI:Q Sollwert von EU [kVAr] *) (* OldName: rGCQ_Q; Cycle:5; *)
+	rGCQ_QLim : REAL; (* Skalierter Wert AI:QLim Sollwert von EU [kVAr] *) (* OldName: rGCQ_Qlim; Cycle:5; *)
+	rPFact : REAL; (*   *) (* OldName: rPFact; Cycle:5; *)
+	xLCRLimScal_PFAct : LCRLimScal; (*   *) (* OldName: LCRLimScal_PFact; Cycle:5; *)
+	rQAct : REAL; (*   *) (* OldName: rQact; Cycle:5; *)
+	xLCRLimScal_QAct : LCRLimScal; (*   *) (* OldName: LCRLimScal_Qact; Cycle:5; *)
+	rGCQ_USetExt : REAL; (* [V] *) (* OldName: rGCQ_Uset_ext; Cycle:5; *)
+	bGCQ_USetExt : BOOL; (*   *) (* OldName: bGCQ_Uset_ext; Cycle:5; *)
+	rGCQ_USet : REAL; (* [-] *) (* OldName: rGCQ_Uset; Cycle:5; *)
+	bGCQ_QLimExt : BOOL; (*   *) (* OldName: bGCQ_Qlim_ext; Cycle:5; *)
+	xTON_PFEU5 : TON; (* on-dely timing fedback for cos(phi) - fixvalue 5 *) (* OldName: TON_PFEVU5; Cycle:5; *)
+	xTON_PFEU4 : TON; (* on-dely timing fedback for cos(phi) - fixvalue 4 *) (* OldName: TON_PFEVU4; Cycle:5; *)
+	xTON_PFEU3 : TON; (* on-dely timing fedback for cos(phi) - fixvalue 3 *) (* OldName: TON_PFEVU3; Cycle:5; *)
+	xTON_PFEU2 : TON; (* on-dely timing fedback for cos(phi) - fixvalue 2 *) (* OldName: TON_PFEVU2; Cycle:5; *)
+	xTON_PFEU1 : TON; (* on-dely timing fedback for cos(phi) - fixvalue 1 *) (* OldName: TON_PFEVU1; Cycle:5; *)
+	xTON_QEU5 : TON; (* on-dely timing fedback for Q - fixvalue 5 *) (* OldName: TON_QEVU5; Cycle:5; *)
+	xTON_QEU4 : TON; (* on-dely timing fedback for Q - fixvalue 4 *) (* OldName: TON_QEVU4; Cycle:5; *)
+	xTON_QEU3 : TON; (* on-dely timing fedback for Q - fixvalue 3 *) (* OldName: TON_QEVU3; Cycle:5; *)
+	xTON_QEU2 : TON; (* on-dely timing fedback for Q - fixvalue 2 *) (* OldName: TON_QEVU2; Cycle:5; *)
+	xTON_QEU1 : TON; (* on-dely timing fedback for Q - fixvalue 1 *) (* OldName: TON_QEVU1; Cycle:5; *)
+	rGCQ_QLimExt : REAL; (*  *) (* OldName: ; Cycle:; *)
+	rPF_QLim : REAL := 0.0;
+	xOpMode : OpMode := (0);
+	xLCScREAL_PF_AO : LCRScal; (* *) (*new*)
+	rGCQ_PFSetExt_pu : REAL; (*Q setpoint from Cosphi setpoint demand*)
+	rQ_QSet_pu : REAL; (*Q setpoint from Q setpoint demand*)
+	rQ_USet_pu : REAL; (*Q setpoint from U setpoint demand*)
+	xLCRPT1_Qset : LCRPT1;
+	bGenC_UBC_ExtRel : BOOL := 0;
+	bBC_GCQ_QP : BOOL := 0;
+	bU_GenC_ExtRel : BOOL := 0;
+	bGCQ_QP : BOOL := 0;
+	bTestQLim : BOOL := 0;
+	rGCQ_PFSet_TT_pu : REAL;
+	rQ_EU : REAL;
+	rQSetTest : REAL;
+	rQ_QLim_pu : REAL;
+	rQ_EU_SetFilt : REAL;
+	rPF_TT : REAL;
+	rGCQ_USet1 : REAL;
+	rGCQ_USet2 : REAL;
+	rQ_act1 : REAL;
+	rTAU : REAL;
+	tiQ_Ramp : TIME;
+	ti_AVR : TIME;
+	xSR_QP : SR;
+	xSR_BC_QP : SR;
+	xSR_U : SR;
+	xSR_BC_U : SR;
+	rQ_Cust_Set : REAL; (*Customized Q setpoint*)
+	rBuffer_QLim_EU : ARRAY[0..10] OF REAL;
+	x_QLim : INT;
+	bBuffer_QLim_EU : BOOL := 0;
+	rLCRLimScal_QLim_old : REAL;
+	z_QLim : INT;
+	TON_GoodQual_QLim_EU : TON;
+	rBuffer_Qset_EU : ARRAY[0..10] OF REAL;
+	x_Qset : INT;
+	bBuffer_Qset_EU : BOOL := 0;
+	rLCRLimScal_QAct_old : REAL;
+	z_Qset : INT;
+	TON_GoodQual_Qset_EU : TON;
+	rBuffer_PF_EU : ARRAY[0..10] OF REAL;
+	x_PF : INT;
+	bBuffer_PF_EU : BOOL := 0;
+	rLCRLimScal_PF_old : REAL;
+	z_PF : INT;
+	TON_GoodQual_PF_EU : TON;
+	rBuffer_Uset_EU : ARRAY[0..10] OF REAL;
+	x_Uset : INT;
+	bBuffer_Uset_EU : BOOL := 0;
+	rLCRLimScal_UAct_old : REAL;
+	z_Uset : INT;
+	TON_GoodQual_Uset_EU : TON;
+	rGCQ_PF_AI : REAL;
+	rQ_EU_QULim : REAL;
+	rkT : REAL;
+	rD : REAL;
+	xFILTER_PT2_QSet : FILTER_PT2;
+END_VAR

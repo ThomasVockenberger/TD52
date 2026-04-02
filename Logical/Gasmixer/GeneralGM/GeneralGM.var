@@ -1,0 +1,3 @@
+VAR
+	xTON_ParaSetupOk : TON := (0); (*FuB*)
+END_VAR

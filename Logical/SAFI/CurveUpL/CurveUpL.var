@@ -1,0 +1,71 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: UpLoadCurve
+ * File: UpLoadCurve.var
+ * Author: 120011115
+ * Created: April 23, 2013
+ ********************************************************************
+ * Local variables of program UpLoadCurve
+ ********************************************************************)
+VAR
+	tRealTime : rtctime_typ; (* time structure *)
+	DTGetTime_RPS : DTGetTime;
+	bActive : ARRAY[0..12] OF BOOL;
+	bActiveCounter : ARRAY[0..12] OF UINT;
+	bAllHigh : BOOL;
+	bCANMiss : BOOL;
+	bCANWait : BOOL;
+	bCreateDataObj : BOOL;
+	bErrPermSlowDown : BOOL;
+	bReleaseH : ARRAY[0..12] OF BOOL;
+	bReleaseL : ARRAY[0..12] OF BOOL;
+	bWriteDataObj : BOOL;
+	CA_old_H : UINT;
+	CA_old_L : UINT;
+	DatObjCreate_01 : DatObjCreate;
+	DatObjDelete_PermMem : DatObjDelete;
+	DatObjInfo_01 : DatObjInfo;
+	DatObjRead_01 : DatObjRead;
+	DatObjWrite_01 : DatObjWrite;
+	EngineStop : BOOL;
+	Error_H_New : ARRAY[0..12] OF BOOL;
+	Error_H_Old : ARRAY[0..12] OF BOOL;
+	Error_L_New : ARRAY[0..12] OF BOOL;
+	Error_L_Old : ARRAY[0..12] OF BOOL;
+	iCycleCounter : UINT;
+	IdCyl : USINT;
+	iDelayCounter : UINT;
+	IdSAFI : USINT;
+	idx : USINT;
+	ManCount : USINT;
+	ModulName : STRING[35]; (*Bugfix V4.07*)
+	N_Cycles : UINT;
+	perm_vers : UINT;
+	pm_Cup : tCup_Pm;
+	pm_Error : UINT;
+	pm_id : UDINT;
+	pm_len : UDINT;
+	pm_p : UDINT;
+	TON_WarnDelay : TON;
+	TON_WritePMEM : TON;
+	uCountMissH : USINT;
+	uCountMissL : USINT;
+	ulChecksum : UDINT;
+	ulChecksumOld : UDINT;
+	ulChkValue : UDINT;
+	ulPMPointer : UDINT;
+	usPress : ARRAY[0..12] OF Pressure;
+	write_once : BOOL;
+	xTON_01 : TON;
+	ucSAFI_ID : USINT;
+	i : UINT;
+END_VAR
+VAR CONSTANT
+	ERR_NOERROR : UINT := 0;
+END_VAR
+VAR
+	bBlock_MinFileAge : BOOL := FALSE; (*V4.07*)
+	TON_BlockMinFileAge : TON; (*V4.07*)
+	iPM_WriteCnt : UDINT; (*V4.07*)
+END_VAR

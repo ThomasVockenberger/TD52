@@ -1,0 +1,15 @@
+(********************************************************************
+* COPYRIGHT -- INNIO Company
+********************************************************************
+* File: PMO.vvm
+* Author: automatically generated 
+* Created: 07.03.2014
+********************************************************************
+* PV mapping file
+********************************************************************)
+VAR_CONFIG
+	Cyclic#4.AmmBase::OUT_AB.tAB2MO AT %Q.Cyclic#5.Monic::IN_MO.tAB2MO; (*Changed with v4.05 (2-->5)*)
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#5.Monic::IN_MO.tPB2MM;
+	Cyclic#4.EngineController::OUT_EC.bMisfCOn AT %Q.Cyclic#5.Monic::IN_MO.bMisfCOn; (*Changed with v4.05 (2-->5)*)
+	Cyclic#4.HalIO::OUT_HA.iCANIdent AT %Q.Cyclic#5.Monic::IN_MO.iCANIdent; (*Changed with v4.05 (2-->5)*)
+END_VAR

@@ -1,0 +1,6 @@
+VAR
+	xTON_T_EO_Hi1 : TON;
+	xGR_MAXR_T_EO_Hi1 : GR_MAXR;
+	xTON_T_EO_Hi2 : TON;
+	xGR_MAXR_T_EO_Hi2 : GR_MAXR;
+END_VAR

@@ -1,0 +1,57 @@
+(********************************************************************
+* COPYRIGHT -- INNIO Company
+********************************************************************
+* File: PTR.vvm
+* Author: automatically generated 
+* Created: 17.04.2014
+********************************************************************
+* PV mapping file
+********************************************************************)
+VAR_CONFIG
+	Cyclic#4.AmmBase::OUT_AB.tAB2TR AT %Q.Cyclic#5.ThermalReactor::IN_TR.tAB2TR;
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#5.ThermalReactor::IN_TR.tPB2MM;
+	Cyclic#5.Opstate::OUT_OP.tEng_Run AT %Q.Cyclic#5.ThermalReactor::IN_TR.tEng_Run;
+	Cyclic#4.Opstate::OUT_OP.iSt_OpMode AT %Q.Cyclic#5.ThermalReactor::IN_TR.iSt_OpMode;
+	Cyclic#4.Opstate::OUT_OP.rP_Act_Norm_Filt AT %Q.Cyclic#5.ThermalReactor::IN_TR.rP_Act_Norm_Filt;
+	Cyclic#4.Opstate::OUT_OP.rP_Nom AT %Q.Cyclic#5.ThermalReactor::IN_TR.rP_Nom;
+	Cyclic#4.HalIO::tThR_LampTest AT %Q.Cyclic#5.ThermalReactor::IN_TR.tThR_LampTest;
+	Cyclic#4.HalIO::tThR_SL AT %Q.Cyclic#5.ThermalReactor::IN_TR.tThR_SL;
+	Cyclic#4.HalIO::tThR_Swth_On AT %Q.Cyclic#5.ThermalReactor::IN_TR.tThR_Swth_On;
+	Cyclic#2.HalIO::tGCB_On AT %Q.Cyclic#2.ThermalReactor::IN_TR.tGCB_On;
+	Cyclic#4.HalIO::tMCB_On AT %Q.Cyclic#5.ThermalReactor::IN_TR.tMCB_On;
+	Cyclic#4.HalIO::tPos_ThR_Val_In1 AT %Q.Cyclic#5.ThermalReactor::IN_TR.tPos_ThR_Val_In1;
+	Cyclic#4.HalIO::tPos_ThR_Val_In2 AT %Q.Cyclic#5.ThermalReactor::IN_TR.tPos_ThR_Val_In2;
+	Cyclic#4.HalIO::tPos_ThR_Val_Mid AT %Q.Cyclic#5.ThermalReactor::IN_TR.tPos_ThR_Val_Mid;
+	Cyclic#4.HalIO::tPos_ThR_Val_Out1 AT %Q.Cyclic#5.ThermalReactor::IN_TR.tPos_ThR_Val_Out1;
+	Cyclic#4.HalIO::tPos_ThR_Val_Out2 AT %Q.Cyclic#5.ThermalReactor::IN_TR.tPos_ThR_Val_Out2;
+	Cyclic#4.HalIO::tPr_ThR_AirLo AT %Q.Cyclic#5.ThermalReactor::IN_TR.tPr_ThR_AirLo;
+	Cyclic#4.HalIO::tT_ThR_ChamberLo AT %Q.Cyclic#5.ThermalReactor::IN_TR.tT_ThR_ChamberLo;
+	Cyclic#4.HalIO::tT_ThR_Swg_Hi AT %Q.Cyclic#5.ThermalReactor::IN_TR.tT_ThR_Swg_Hi;
+	Cyclic#4.HalIO::tT_ThR_Chamber1_1 AT %Q.Cyclic#5.ThermalReactor::IN_TR.tT_ThR_Chamber1_1;
+	Cyclic#4.HalIO::tT_ThR_Chamber1_2 AT %Q.Cyclic#5.ThermalReactor::IN_TR.tT_ThR_Chamber1_2;
+	Cyclic#4.HalIO::tT_ThR_Chamber2_1 AT %Q.Cyclic#5.ThermalReactor::IN_TR.tT_ThR_Chamber2_1;
+	Cyclic#4.HalIO::tT_ThR_Chamber2_2 AT %Q.Cyclic#5.ThermalReactor::IN_TR.tT_ThR_Chamber2_2;
+	Cyclic#4.HalIO::tT_ThR_Comp AT %Q.Cyclic#5.ThermalReactor::IN_TR.tT_ThR_Comp;
+	Cyclic#4.HalIO::tT_ThR_In AT %Q.Cyclic#5.ThermalReactor::IN_TR.tT_ThR_In;
+	Cyclic#4.HalIO::tT_ThR_Out AT %Q.Cyclic#5.ThermalReactor::IN_TR.tT_ThR_Out;
+	Cyclic#4.HalIO::tTR_AuxPS_GndFault AT %Q.Cyclic#5.ThermalReactor::IN_TR.tTR_AuxPS_GndFault;
+	Cyclic#4.HalIO::tTR_AuxPS_CB_Trip AT %Q.Cyclic#5.ThermalReactor::IN_TR.tTR_AuxPS_CB_Trip;
+	Cyclic#4.HalIO::tTR_AuxPS_CB_On AT %Q.Cyclic#5.ThermalReactor::IN_TR.tTR_AuxPS_CB_On;
+	Cyclic#4.HalIO::tPos_ThR_AuxGasCV_Act AT %Q.Cyclic#5.ThermalReactor::IN_TR.tPos_ThR_AuxGasCV_Act;
+	Cyclic#4.HalIO::tPr_ThR_AuxGasBeforeCV AT %Q.Cyclic#5.ThermalReactor::IN_TR.tPr_ThR_AuxGasBeforeCV;
+	Cyclic#4.HalIO::tPr_ThR_AuxGasAfterCV AT %Q.Cyclic#5.ThermalReactor::IN_TR.tPr_ThR_AuxGasAfterCV;
+	Cyclic#4.HalIO::tPr_ThR2_Inlet AT %Q.Cyclic#5.ThermalReactor::IN_TR.tPr_ThR2_Inlet;
+	Cyclic#4.HalIO::tPr_ThR2_Outlet AT %Q.Cyclic#5.ThermalReactor::IN_TR.tPr_ThR2_Outlet;
+	Cyclic#4.HalIO::tT_ThR2_EH_group1 AT %Q.Cyclic#5.ThermalReactor::IN_TR.tT_ThR2_EH_group1;
+	Cyclic#4.HalIO::tT_ThR2_EH_group2 AT %Q.Cyclic#5.ThermalReactor::IN_TR.tT_ThR2_EH_group2;
+	Cyclic#4.HalIO::tT_ThR2_EH_group3 AT %Q.Cyclic#5.ThermalReactor::IN_TR.tT_ThR2_EH_group3;
+	Cyclic#4.HalIO::tT_ThR2_EH_group4 AT %Q.Cyclic#5.ThermalReactor::IN_TR.tT_ThR2_EH_group4;
+	Cyclic#4.HalIO::tT_ThR2_EH_group5 AT %Q.Cyclic#5.ThermalReactor::IN_TR.tT_ThR2_EH_group5;
+	Cyclic#4.HalIO::tT_ThR2_LeftChamber AT %Q.Cyclic#5.ThermalReactor::IN_TR.tT_ThR2_LeftChamber;
+	Cyclic#4.HalIO::tT_ThR2_RightChamber AT %Q.Cyclic#5.ThermalReactor::IN_TR.tT_ThR2_RightChamber;
+	Cyclic#4.HalIO::tT_ThR2_Downstream AT %Q.Cyclic#5.ThermalReactor::IN_TR.tT_ThR2_Downstream;
+	Cyclic#4.HalIO::tThR2_T_UnitOk_LeftCh AT %Q.Cyclic#5.ThermalReactor::IN_TR.tThR2_T_UnitOk_LeftCh;
+	Cyclic#4.HalIO::tThR2_T_UnitOk_RightCh AT %Q.Cyclic#5.ThermalReactor::IN_TR.tThR2_T_UnitOk_RightCh;
+	Cyclic#4.HalIO::tThR2_T_UnitOk_Downstream AT %Q.Cyclic#5.ThermalReactor::IN_TR.tThR2_T_UnitOk_Downstream;
+	Cyclic#5.HalIO::tPr_SCR_CatIn AT %Q.Cyclic#5.ThermalReactor::IN_TR.tPr_SCR_CatIn;
+END_VAR

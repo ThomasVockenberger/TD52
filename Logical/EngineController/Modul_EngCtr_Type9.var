@@ -1,0 +1,250 @@
+(********************************************************************
+ * COPYRIGHT --  
+ ********************************************************************
+ * Package: EngineController
+ * File: Modul_EngCtr_Type9.var
+ * Author: Michael
+ * Created: February 18, 2014
+ ********************************************************************
+ * Variables of package EngineController
+ ********************************************************************)
+(* PBC *)
+VAR
+	bCPP_DevLim_Underrun : ARRAY[0..24] OF BOOL; (*global an ign point übergen*) (* OldName: bPmaxLimitUntes; Cycle: 2 *)
+	bCPP_DevLim_Overrun : ARRAY[0..24] OF BOOL; (*global an ign point übergen*) (* OldName: bPmaxLimitUebers; Cycle: 2 *)
+	iCnt_Misf_IMEP_Max : USINT; (* IMEP Misfire Counter *) (* OldName: auss_count_PiMx; Cycle: 2 *)
+	tTrip_CPP_AbsLim : AmmSequence; (* Trip: A2262, OM: B2826, Cylinder peak pressure high *) (* OldName: bAPmaxAbsLimit, bBPmaxAbsLimit, ucPmaxAbsLimit; Cycle: 2 *)
+	bTrip_CPP_AvgLim : BOOL; (* Trip: A2282 average cylinder peak pressure maximum *) (* OldName: bPmax_MW_max; Cycle: 2 *)
+	tTrip_CPP_DevLim : AmmSequence; (* Trip: A2274, OM: B2808, Cylinder Information *) (* OldName: bAPmaxLimit, bBPmaxLimit, ucPmaxLimit; Cycle: 2 *)
+	tWarn_CPP_AbsLim : AmmSequence; (* Warning: W2588, OM: B2825, Cylinder Information *) (* OldName: bAPmaxWarnung, bBPmaxWarnung, ucPmaxWarnung; Cycle: 2 *)
+	bPBC_Active : BOOL; (* PBC is active, since activation power is reached *)
+	refPoint_PwrCtrKi : ARRAY[0..2] OF lcrCurveByPoints_TabEntry_type;
+	tOM_CppInt_IgnRed : AmmSequence; (* Operation Msg: B2960, Cylinder Peak Pressure Integrator Iginition timing reduction *) 
+END_VAR
+(* PI CTR and PI BAL - Port Injection Control and Balancing *)
+VAR
+	tOM_PI_Dur_Lim : AmmSequence; (* OM: Bxxxx, Port Injection duration limit reached*) (* OldName: bAPIDuration_HIGH, bBPIDuration_HIGH, ucPIDuration_HIGH; Cycle: 2 *)
+	tWarn_PI_Dur_High : AmmSequence; (* Warn: W9216, OM: B2814, Port Injection duration is too high *) (* OldName: bAPIDuration_HIGH, bBPIDuration_HIGH, ucPIDuration_HIGH; Cycle: 2 *)
+	rCA_PI_Dur_SOffset : ARRAY[0..24] OF REAL; (* sum PI duration offset: pi_bal --> pi_ctr *) (* OldName: ssSummenOffsetDuration; Cycle: 2 *)
+	rCA_PI_Duration : REAL; (* global PI duration *) (* OldName: rPI_Duration; Cycle: 2 *)
+	rV_CylDisp : REAL; (* Engine displaced volume *) (* OldName: rHubVolumen; Cycle: 2 *)
+	rLam_PI_Set : REAL; (* Lambda for PortInjection *)
+	rCA_PI_Dur_Avg : REAL; (* PI duration average*)
+	rCA_PI_Dur_Min : REAL; (* PI duration minimum*)
+	rCA_PI_Dur_Max : REAL; (* PI duration maximum*)
+	rCA_PI_Dur : ARRAY[0..24] OF REAL; (* PI duration *)
+	bOM_PI_ResetMap : BOOL; (* OM: B3235, Port injection balancer map deleted *) (* OldName: bBM_bResetMap; Cycle: 2 *)
+	bOM_PI_SaveMap : BOOL; (* OM: B3236, Port injection balancer map stored *) (* OldName: bBM_bMapSave; Cycle: 2 *)
+	bSteadyState_Bal : BOOL;
+	bOM_PI_CommModeOn : BOOL; (* OM: B2187, Comm Mode activated *) (* OldName: newPV; Cycle: 2 *)
+	bOM_PI_CommModeOff : BOOL; (* OM: B2188, Comm Mode deactivated *) (* OldName: newPV; Cycle: 2 *)
+	bOM_PI_SaveToMap : BOOL; (* OM: B1299, Optimizer Map altered *) (* OldName: newPV; Cycle: 2 *)
+	bFreeze_Ena_Knck : BOOL; (* enables freezing due knock, if cyls are not frozen due knock then pmax offset correction is done *)
+	bLamLim_Thrs : BOOL; (* Low lambda limit threshold reached *)
+	rPr_P2s_lim : REAL := 2.000;
+	tOM_PI_Dur_Opt_total_Lim : AmmSequence; (* total duration offset (+map) from optimizer is in limitation *)
+	tOM_PI_Dur_Opt_com_blocked : AmmSequence; (* mapping is locked by FAR detection of individual cylinders *)
+END_VAR
+(* SPP_EC - Signal Pre-Processing *)
+VAR
+	rPr_GRail_fast : REAL; (* filtered Gas rail pressure*) (* OldName: new; Cycle: 2 *)
+	rPr_GRail : REAL; (* filtered Gas rail pressure*) (* OldName: new; Cycle: 2 *)
+	rPr_P2s_Opt : REAL; (* filtered P2s for optimizer*) (* OldName: new; Cycle: 2 *)
+	rPr_P2s_fast : REAL; (* filtered P2s *) (* OldName: new; Cycle: 2 *)
+	rPr_P2s : REAL; (* filtered P2s *) (* OldName: new; Cycle: 2 *)
+	rPr_P2s_A : REAL; (* filtered P2s Channel A *) (* OldName: ssPressP2s_A and rPressP2_A; Cycle: 2 *)
+	rPr_P2s_B : REAL; (* filtered P2s Channel B *) (* OldName: ssPressP2s_B and rPressP2_B; Cycle: 2 *)
+	rPr_P2s_UF : REAL; (* unfiltered P2s *) (* OldName: ssPressP2s_AVG; Cycle: 2 *)
+	rPr_P2s_A_UF : REAL; (* unfiltered P2s Channel A *) (* OldName: rPr_Ch_P2s_A; Cycle: 2 *)
+	rPr_P2s_B_UF : REAL; (* unfiltered P2s Channel B *) (* OldName: rPr_Ch_P2s_B; Cycle: 2 *)
+	rPr_EGbHPTC : REAL; (* Exhaust gas pressure before high-pressure turbocharger *)
+	rPr_EGbHPTC_UF : REAL; (* Exhaust gas pressure before high-pressure turbocharger unfiltered*)
+	rT_T2s : REAL; (* limited T2s *) (* OldName: new; Cycle: 2 *)
+	rT_T2s_A : REAL; (* limited T2s Channel A *) (* OldName: rT_Ch_T2s_A; Cycle: 2 *)
+	rT_T2s_B : REAL; (* limited T2s Channel B *) (* OldName: rT_Ch_T2s_B; Cycle: 2 *)
+	rT_GRail : REAL; (* limited gas rail temperature *) (* OldName: rGRTP; Cycle: 2 *)
+	rCA_CPP : ARRAY[0..24] OF REAL; (* position of cylinder peak pressure *) (* OldName: ssPmaxPos; Cycle: 2 *)
+	rPr_CPP_Filt : ARRAY[0..24] OF REAL; (* cylinder peak pressure filtred containment V3*) (* OldName: DruckMax; Cycle: 2 *)
+	rPr_CPP : ARRAY[0..24] OF REAL; (* cylinder peak pressure *) (* OldName: DruckMax; Cycle: 2 *)
+	rPr_49bfTDC : ARRAY[0..24] OF REAL; (* cylinder pressure 49° before TDC *) (* OldName: rP_49bfTDC; Cycle: 2 *)
+	rPr_49afTDC : ARRAY[0..24] OF REAL; (* cylinder pressure 49° after TDC *) (* OldName: rP_49afTDC; Cycle: 2 *)
+	rPr_Knck : ARRAY[0..24] OF REAL; (* knock pressure *) (* OldName: Klopfen; Cycle: 2 *)
+	rPr_IMEP : ARRAY[0..24] OF REAL; (* Indicated Mean Effective Pressure *) (* OldName: IndiMitDr; Cycle: 2 *)
+	rPr_ILCP : ARRAY[0..24] OF REAL; (* Indicated Load Change Pressure *) (* OldName: IndiLwDr; Cycle: 2 *)
+	rCA_MFB10 : ARRAY[0..24] OF REAL; (* 10% of fuel mass burned *) (* OldName: usUmstzpkt10P; Cycle: 2 *)
+	rCA_MFBvar : ARRAY[0..24] OF REAL; (* 50% of fuel mass burned *) (* OldName: UmsatzpunktL; Cycle: 2 *)
+	rCA_MFB90 : ARRAY[0..24] OF REAL; (* 90% of fuel mass burned *) (* OldName: usUmstzpkt90P; Cycle: 2 *)
+	rN_DMR : ARRAY[0..24] OF REAL; (* actual engine speed from DMR *) (* OldName: n_ist_DMR; Cycle: 2 *)
+	bGlowIgn : ARRAY[0..24] OF BOOL; (* glow ignition *) (* OldName: Gluehzuend; Cycle: 2 *)
+	bMisf_I : ARRAY[0..24] OF BOOL; (* missfire detection 10° after TDC *) (* OldName: Aussetzer; Cycle: 2 *)
+	bMisf_II : ARRAY[0..24] OF BOOL; (* missfire detection 40° after TDC *) (* OldName: Misf_II; Cycle: 2 *)
+	tRealTime : rtctime_typ; (* time structure *) (* OldName: new PV; Cycle: 2 *)
+	iSort_Cyl : ARRAY[0..24] OF USINT; (* cylinder sorted by exhaust gas temperature *)
+	rT_EG_Med : REAL; (* median of exhaust gas temperature *)
+	rT_EG_MedDlt : ARRAY[0..24] OF REAL; (* exhaust gas temperature delta to median *)
+	rT_EG_AvgDlt : ARRAY[0..24] OF REAL; (* exhaust gas temperature delta to average *)
+END_VAR
+(* PUSL - Power Unit Safety Layer *)
+VAR
+	tOM_MisfFail : AmmSequence; (* OM: B2849, Misfiring failure PBC *)
+	iNum_HiCtr_SkipCyl : INT; (* Number of skipping cylinders from High controller*) (* OldName: ssHiGlobEng_SkipCylNr; Cycle: 2 *)
+	bTrip_MaxMisfShutDown : BOOL; (* A2287 Shutdown by hierarchic controller (Misf Prio2) *) (* OldName: newPV; Cycle: 2 *)
+	bTrip_MisfShutDown : BOOL; (* A2287 Shutdown by hierarchic controller (Misf Prio3) *) (* OldName: bTripPrio3_Misf; Cycle: 2 *)
+	bWarn_MisfShutDown : BOOL; (* W2583 Shutdown by hierarchic controller in X min *)
+	ti_MisfShutDown : TIME; (* Time until shutdown from Misfire controller *)
+	bTrip_HiCtrShutDown : BOOL; (* A2287 Shutdown by hierarchic controller *) (* OldName: bHiGlobEng_EngShutDwn; Cycle: 2 *)
+	bTrip_PBCSigErrFT : BOOL; (* A2290 Cylinder pressure sensor measuring signal failure *) (* OldName: bAPBCSigErrFT; Cycle: 2 *)
+	tTrip_PBCSigErr : AmmSequence; (* Trip: A2290, OM: B2874, Safety layer sensor failure *) (* OldName: bAPBCSigErr, bBPBCSigErr, ucPBCSigErr; Cycle: 2 *)
+	tWarn_PBCSigErr : AmmSequence; (* Warn: W2577, OM: B2802, Cylinder pressure sensor measuring signal failure *) (* OldName: bAPBCSigErr, bBPBCSigErr, ucPBCSigErr; Cycle: 2 *)
+	bHiCtr_Leanox_Ena : BOOL; (* Enable high control leanox correction *) (* OldName: bLeanox_HierarchyCont; Cycle: 2 *)
+	rHiCtr_Leanox_Corr : REAL; (* High control leanox correction *) (* OldName: rHiGlobEng_LEANOXCor; Cycle: 2 *)
+	rHiCtr_PI_Dur_Offs : ARRAY[0..24] OF REAL; (* Duration Offset HiCtr in % *) (* OldName: rHiContrCyl_PIDUROffsetCyl; Cycle: 2 *)
+	rHiCtr_PMax_Offs_Intgr : ARRAY[0..24] OF REAL; (* High Controller Pmax offset integrator *) (* OldName: rPMaxOffset_int; Cycle: 2 *)
+	bLimpHomeCylRKS : ARRAY[0..24] OF BOOL; (* Cylinder in Limp Home RKS Mode *)
+	bLimpHomeCyl : ARRAY[0..24] OF BOOL; (* Cylinder in Limp Home *) (* OldName: bLimpHomeCyl; Cycle: 2 *)
+	bLimpHomeAll : ARRAY[0..24] OF BOOL; (* Cylinder in any limp home mode *)
+	bLimpHomeAny : BOOL; (* Any cylinder in any limp home mode *)
+	bFreezeOptiCyl : ARRAY[0..24] OF BOOL; (* Cylinder Optimizer freezed *) (* OldName: bFreezeOptiCyl; Cycle: 2 *)
+	bLimpHomeCylTrip : ARRAY[0..24] OF BOOL; (* Cylinder Trip because Limp Home *) (* OldName: bLimpHomeCylTrip; Cycle: 2 *)
+	bHiCtr_SkipCyl : ARRAY[0..24] OF BOOL; (* Skip Cylinder HiCtr *) (* OldName: bHiContrCyl_SkipCyl; Cycle: 2 *)
+	bHiCtr_IP_Ena : BOOL; (* Enable HiContr Ignition Point Offset *) (* OldName: bZZP_HierarchyCont; Cycle: 2 *)
+	rCA_HiCtr_IP_Offs : REAL; (* Ignition Point Offset High controller *) (* OldName: ssHiGlobEng_ITGlobOffsetPmax; Cycle: 2 *)
+	bHiCtr_MFCtr_Ena : BOOL; (* High control Misfire control enable *) (* OldName: bHiContrCyl_MFContrEnable; Cycle: 2 *)
+	bTripCyl : ARRAY[0..24] OF BOOL; (* Cylinder Trip Information *) (* OldName: newPV; Cycle: 2 *)
+	rHiCtr_Misf_Int : ARRAY[0..24] OF REAL; (* High Controller Misfire integrator *)
+	rPI_Dur_CppInt_Offset : ARRAY[0..24] OF REAL; (* CPP Integrator Port Injection Duration reduction offset [%] *)
+	rCA_Ign_CppInt_Offset : ARRAY[0..24] OF REAL; (* CPP Integrator Ignition Point reduction offset [°CA] *)
+	xTOF_CppInt_P_Red : TOF; (* Off delay Nominal Power slope for Power reduction by CPP Integrator *)
+	bCppInt_SkipCyl : ARRAY[0..24] OF BOOL; (* Cylinder Peak Pressure Integrator Skip Cylinder Ignition on Engine Shutdown *)
+	bCppInt_OptFreeze : ARRAY[0..24] OF BOOL; (* Cylinder Peak Pressure Integrator Freeze Optimizer *)
+END_VAR
+(* skip_zde *)
+VAR
+	TOF_Skip : ARRAY[0..24] OF TOF; (*Baustein für das verzögerte Akzeptieren von Misfire Erkennungen der SAFI nach dem Skippen*) (* Statistic *)
+	bIdx_Eng_SkipF : BOOL; (* Engine is Skipping *)
+	iNum_SkipCyl_Act : INT; (* actual amount of skipping cylinder *) (* OldName: ssHiGlobEng_visSkipCylNr; Cycle: 2 *)
+	iNum_SkipCyl_Vis : INT; (* actual amount of skipping cylinder for VISU*) 
+	iNum_SkipCyl_Calc : USINT; (* calculated amount of skipping cylinder *) (* Oldname: ucFixMisfPos; Cycle: 2*)
+	bSkipCylAct : ARRAY[0..24] OF BOOL;
+	iMisfCyl_SF : UDINT;
+	bSkip_Idle : BOOL; (* Engine is in Idle and skipping *) (* Oldname: bskippen_IT; Cycle: 2*)
+END_VAR
+(* GEN2 *)
+VAR
+	bGen2_LeanoxDev_Dis : BOOL; (* Deactivate Leanox deviation error (A1080) *) (* Oldname: bLeanoxAbwAUS_GENII; Cycle: *)
+	rPr_Leanox_Set_Gen2 : REAL; (* Gen2 Leanox pressure setpoint *) (* Oldname: p2s_cmd_leanox/100; Cycle: *)
+	rLam_Gen2 : REAL; (* Lambda from Gen2 Controller *)
+	iSkip_Gen2 : INT; (* Gen2 Skip Cylinder amount*) (* Oldname: MCL_N_skip; Cycle: *)
+	bGEN2_EG_Lim_ON : BOOL := TRUE; (* SimSo_Texh_LIMIT_ON *) (* Oldname: SimSo_Texh_LIMIT_ON; Cycle: *)
+	LCRRamp_Lambda_Gen2 : LCRRamp;
+END_VAR
+(* PBC *)
+VAR
+	bIPC_MSF : ARRAY[0..24] OF BOOL; (* in-cylinder pressure sensor measuring signal failure *) (* OldName: bDMRFault,bFadOutCyl_SensF; Cycle:2; *)
+	tWarn_IPC_MSF : AmmSequence; (* Warn: A2577, OM: B2802, Cylinder pressure sensor measuring signal failure *) (* OldName: bWDMRSigErr, bBDMRSigErr, ucDMRSigErr; Cycle: 2 *)
+	rPr_CPP_Min : REAL;
+	rPr_CPP_Max : REAL;
+	rPr_IMEP_Min : REAL;
+	rPr_IMEP_Max : REAL;
+	rCA_MFBvar_Min : REAL;
+	rCA_MFBvar_Max : REAL;
+	rPr_CPP_Avg : REAL;
+	rPr_IMEP_Avg : REAL;
+	rCA_MFBvar_Avg : REAL;
+	rPr_49bfTDC_Min : REAL;
+	rPr_49bfTDC_Max : REAL;
+	rPr_49bfTDC_Avg : REAL;
+	rPr_Knck_Min : REAL;
+	rPr_Knck_Max : REAL;
+	rPr_Knck_Avg : REAL;
+END_VAR
+(* pv_check *)
+VAR
+	tOM_EngineMap : AmmSequence; (*OM: B2826, Engine map automatically loaded*) (* OldName: bAPmaxAbsLimit, bBPmaxAbsLimit, ucPmaxAbsLimit; Cycle: 2 *)
+END_VAR
+(* wastegate *)
+VAR
+	bErr_WG_MSF : BOOL := FALSE;
+	bErr_WG_MSF_A : BOOL := FALSE;
+	bErr_WG_MSF_B : BOOL := FALSE;
+	bErr_WG_Dev : BOOL := FALSE;
+	bErr_WG_Dev_A : BOOL := FALSE;
+	bErr_WG_Dev_B : BOOL := FALSE;
+	bWG_Check : BOOL := FALSE;
+END_VAR
+(* TC1 SPP *)
+VAR
+	rPr_GR_TC1 : REAL; (* GR Filt TC1*)
+	rPr_P1_TC1 : tBank_AB; (* P1 Filt TC1*)
+	rPr_P2s_TC1 : tBank_AB; (* P2s Filt TC1*)
+	rPr_EGaHP_TC1 : tBank_AB; (* P3s Filt TC1*)
+	rPr_EGaLP_TC1 : tBank_AB; (* P4 Filt TC1*)
+END_VAR
+(* FastStart *)
+VAR
+	rCA_IP_StartOffs : REAL; (*ignition point start offset*)
+	rCA_IP_EGTCtr_Offs : REAL; (*ignition point EGTCtr offset*)
+	rCA_IP_StartOffs_speed : REAL; (*ignition point start offset speed ramp*)
+	rP_LR_Trig_ActSat_TV : REAL;
+	rTi_LR_ActSat_TV : REAL;
+	rN_LR_CBV_SAT_ON : REAL;
+	rP_LR_Trig_GasStop : REAL;
+	rP_LR_GCB_Trig_GasStop : REAL; (*Trigger value of load rejection at opening of GCB to close gas valve (Tejcet) and set actuators (open CBP, close TV) [%]*)
+	rP_LR_GCB_Trig_Misf : REAL; (*Trigger value of load rejection at opening of GCB to activate misfire function[%]*)
+	rLR_Gasstop_CBV_Man : REAL;
+	rTi_LR_GasStop_OFF : REAL;
+	rTi_LR_GasStop : REAL;
+	rP_LR_Trig_Misf : REAL;
+	rN_Misf_2_Trig : REAL;
+	iCycles_MisfireActive : INT; (*Parameter: number of engine cycles the misfire function should be active *)
+	rTi_LR_IGN_Retard_MAX : REAL;
+	rP_LR_Trig_IGN_Retard : REAL;
+	rN_LR_IGN_Retard_ON : REAL;
+	rN_TV_Release_Lim_Max : REAL;
+	rN_TV_Release_Lim_Min : REAL;
+	rPosTV_CBV_Release_Max : REAL;
+	rN_trig_cbv_lim : REAL;
+	iTime_Cyc : INT := 0;
+	iTime_Eng_Cyc : INT := 0;
+	iCyc_Ign_Max_Off : INT := 0;
+	iCyc_Ign_Min_On : INT := 0;
+	tLock_TV_PT : TIME;
+	rLockTV_Rise : REAL;
+	rLockTV_Sink : REAL;
+	rP_Trig_TVbyP2S_OFF : REAL;
+	tLIM_TVbyP2s_OFF_PT : TIME;
+	rN_LIM_TVbyPOS_ON : REAL;
+	bLIMIT_TVbyP2s_act : BOOL;
+	bLIMIT_TVbyCBV_act : BOOL;
+	xTOF_LIM_TVbyP2s_OFF : TOF;
+	bLIM_TVbyP2s_OFFatLargeRej : BOOL;
+	bLIM_CBV_by_TVpos : BOOL;
+	bUseKPduringSaturation : BOOL;
+	rTi_LR_Overwrite_CBV : REAL;
+	rN_LR_Overwrite_CBV_START : REAL;
+	rN_LR_Overwrite_CBV_END : REAL;
+	bInitCBV_const : BOOL;
+	bLR_CBV_Overwrite : BOOL;
+	bLR_CBV_Overwrite_Act : BOOL;
+	rLR_CBV_Overwrite_Init : REAL;
+	rLR_CBV_Overw_InitOffset : REAL;
+	iT_filt_INPUT_u_cbv : UINT;
+	rP_LR_Trig_Overwrite_CBV : REAL;
+	rN_LR_CBV_GainMult : REAL;
+	rLR_CBV_GainMult_high : REAL;
+	rLR_CBV_GainMult_low : REAL;
+	rLamAdapt_Ramp_Grad : REAL;
+	rLamAdapt_Ramp_Grad_LowSpeed : REAL;
+	rN_LamAdapt_Ramp_Switch : REAL;
+	rP_LamCorrAct_Max_Norm : REAL;
+	Kp_CBV_LR_Overwrite_data : ARRAY[0..4] OF lcrCurveByPoints_TabEntry_type;
+	tMisfprotect_OFF_PT : TIME;
+	rN_CBV_Release_Lim_Min : REAL;
+	rP_LamSlowLamRamp : REAL;
+	bFiltInputVolFlow_TEST : BOOL;
+	rP_Rot_Norm_Lam_Save_Trig : REAL;
+	xLCRCurve_Dyn_Lambda_LimD_table : ARRAY[0..4] OF lcrCurveByPoints_TabEntry_type;
+	rP0_Nom : REAL;
+	rP_Ramp_FC_max_Gen1 : REAL;
+	rP_Ramp_FC_max_Gen2 : REAL;
+END_VAR

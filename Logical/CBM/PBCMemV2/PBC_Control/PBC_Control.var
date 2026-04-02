@@ -1,0 +1,33 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: perm_map
+ * File: perm_map.var
+ * Author: WaldharM
+ * Created: April 05, 2011
+ ********************************************************************
+ * Local variables of program perm_map
+ ********************************************************************)
+VAR
+	iLast_Cycles : INT;
+	bLast_Cycles : BOOL;
+	TON_PBCMem_Ena : TON;
+	i : INT;
+	szTemp : STRING[7];
+	iCnt_Warn : INT;
+	iCnt_Trip : INT;
+	szPBC_Warn_IDs : STRING[31];
+	szPBC_Trip_IDs : STRING[31];
+	iCnt_Header : INT;
+	xOpMode_old : OpMode;
+	bSFIKW_Event : BOOL;
+	TON_MSTOP_10s : TON := (0);
+	bClear_Wait : BOOL := 0;
+	iLines : INT;
+	iData : INT;
+	iSlowDown : INT;
+	xTON_Clear : TON := (0);
+	iManCyc : INT;
+	bECB_Trigger : BOOL := 0;
+	iECB_Trigger : UINT;
+END_VAR

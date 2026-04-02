@@ -1,0 +1,54 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: PBC_MFile
+ * File: PBC_MFile.var
+ * Author: 502293141
+ * Created: October 23, 2014
+ ********************************************************************
+ * Local variables of program PBC_MFile
+ ********************************************************************)
+VAR
+	aData : UDINT;
+	aH : UDINT;
+	aT : UDINT;
+	strFile : STRING[50];
+	ModulName : STRING[32];
+	szHeader : STRING[30000];
+	szData : STRING[30000];
+	szTemp : STRING[10];
+	strVersion : STRING[30];
+	i : USINT;
+	iZeile : INT;
+	iIdx : INT;
+	iIdx10 : INT;
+	iCyl : USINT;
+	bWrite : BOOL;
+	iIdx1 : INT;
+	iCnt : INT;
+	iCnt_B : UINT;
+	pm_len : UDINT := 0;
+	iStep : USINT := 0;
+	DatObjWrite_01 : DatObjWrite;
+	DatObjInfo_01 : DatObjInfo;
+	DatObjCreate_01 : DatObjCreate;
+	iPointer : UDINT;
+	iSize_String : UDINT;
+	iCnt2 : INT;
+	bTest_Ena : BOOL := 0;
+	bName : BOOL := 0;
+	iECB_HMI : UDINT := 0;
+	rHMI_Delay : REAL;
+	bPBC_GetFile : BOOL := 0;
+	iAccel : INT;
+	iError : UINT;
+	iErrorStep : INT;
+	TON_15min : TON;
+	iLogicSize_1 : INT;
+	iLogicSize_2 : INT;
+	bSCD_Ena : BOOL := 0;
+	strTemp : STRING[10];
+	tiMax : TIME;
+	tiMin : TIME;
+	bFilled : BOOL;
+END_VAR

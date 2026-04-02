@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Library Version="0.23.0" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File Description="Exported data types">HALioBase.typ</File>
+    <File Description="Exported constants">HALioBase.var</File>
+    <File Description="Exported functions and function blocks">HALioBase.fun</File>
+    <File>HALioCfg.st</File>
+    <File>HALioSignal.st</File>
+    <File>HALioFilter.st</File>
+    <File>HALioFilterR.st</File>
+    <File>HALioSigscal.st</File>
+    <File>HALioSigscalR.st</File>
+    <File>HALioSigscalRInv.st</File>
+    <File>evalHALioSignal.st</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="AsXml" Target="SG4" FromVersion="3.08.0" />
+    <Dependency ObjectName="AsIecCon" Target="SG4" FromVersion="3.08.0" />
+    <Dependency ObjectName="Runtime" Target="SG4" FromVersion="3.08.0" />
+    <Dependency ObjectName="sys_lib" Target="SG4" FromVersion="3.08.0" />
+    <Dependency ObjectName="asstring" Target="SG4" FromVersion="3.08.0" />
+    <Dependency ObjectName="DataObj" Target="SG4" FromVersion="3.08.0" />
+  </Dependencies>
+</Library>

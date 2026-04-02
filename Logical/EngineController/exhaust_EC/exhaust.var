@@ -1,0 +1,92 @@
+VAR
+	FilterCylTemp : ARRAY[0..24] OF FILTER;
+	CylTemp_1 : ARRAY[0..24] OF INT;
+	ssDeltaCylTemp : INT;
+	ABMWN_acttime : ARRAY[0..24] OF UINT; (* 1 hour timer neg. avg. dev. *)
+	ABMWN_time : ARRAY[0..24] OF tABMW_time; (* error time memory neg. avg. dev. *)
+	ABMWP_acttime : ARRAY[0..24] OF UINT; (* 1 nhour timer pos. avg. dev. *)
+	ABMWP_time : ARRAY[0..24] OF tABMW_time; (* error time memory pos. avg. dev. *)
+	AmmSeqABMWN : AmmSequence; (* FUB AmmSeq. neg. dev. avg. *)
+	AmmSeqABMWP : AmmSequence; (* FUB AmmSeq. pos. dev. avg *)
+	AmmSeqATMA : AmmSequence;
+	AmmSeqMSAGT : AmmSequence;
+	slTempAverage : DINT; (* sum up for average temp. *)
+	ssTempLimitNeg : INT; (* cyl.temp. limit negative *)
+	ssTempLimitPos : INT; (* cyl.temp. limit positive *)
+	ssTempZylMax : INT; (* cyl.temp. maximum value *)
+	ssTempZylMin : INT; (* cyl.temp. minimum value *)
+	t_zylMax : INT; (* maximal temp. accord. to AN_GW40 *)
+	TON_ABMWN : TON; (*reset timer for neg. avg. dev.*)
+	TON_ABMWP : TON; (*reset timer for pos. avg. dev.*)
+	TON_CheckTemp : TON; (* delay of exh.temp. monitoring *)
+	TON_Cycle : TON; (* cycle time for program duration *)
+	ucABMWNCount : USINT; (* nbr. of cyl. with neg. deviation *)
+	ucABMWPCount : USINT; (* nr. of cyl. with pos. deviation *)
+	ucAnzahlZylABWMN : USINT; (* number of cyl. with divagance neg. *)
+	ucAverageCount : USINT; (* average # of cylinder counter *)
+	ucCylinderCount : USINT; (* cylinder number counter for loops *)
+	ucTimeCount : USINT; (* loop counter time memory *)
+	usABMWNtime : UINT; (* 1 hour timer neg. avg. dev. *)
+	usABMWPtime : UINT; (* 1 hour timer pos. avg. dev. *)
+	usTempMaxCount : ARRAY[0..24] OF USINT; (* counter delay max. cyl. temp. *)
+	usTempNegCount : ARRAY[0..24] OF USINT; (* counter delay of neg. deviation *)
+	usTempPosCount : ARRAY[0..24] OF USINT; (* counter delay of pos. deviation *)
+	xHys_EGT_Avg : GR_MAXR;
+	xRamp_PRed_EGT_Avg : RAMPE_R;
+	t_zyl_mw : INT;
+	TOF_HiContSkip : ARRAY[0..25] OF TOF;
+	xSimPID_EGT : SimPID4 := (0);
+	LCRScal_EG_Max : LCRScal;
+	FILTER_EG_Max : FILTER_R;
+	TP_ExhLim_FS : TP;
+	TON_TempMax_Ext : ARRAY[0..24] OF TON;
+	xTON_TempMax_Ext_TrStRed : ARRAY[0..24] OF TON;
+	bEngine_Stopped : BOOL;
+	TP_bZylAusfall : TP;
+	t_zyl_old : ARRAY[0..24] OF INT;
+	bEG_Grad : ARRAY[0..24] OF BOOL;
+	rT_dTExhMon_ITPComp : REAL; (*TExh compensation at later ITP values (positive values for increasing temp. at retarding) [K/Â°CA]*)
+	bdTExhMonTrip : ARRAY[0..24] OF BOOL; (*TRUE = TExhMon trip detected for cylinder*)
+	rTsample : REAL; (*task sample time*)
+	rdTExh_Misfire : REAL := 20; (*delta temperature from reference to misfire limit [Â°C]*)
+	AmmSeqdTExhMon : AmmSequence;
+	bPCGVmonInit : BOOL;
+	iCnt_PCGV_class1_Mem : ARRAY[0..24] OF UINT;
+	iCnt_PCGV_class2_Mem : ARRAY[0..24] OF UINT;
+	iCnt_PCGV_class3_Mem : ARRAY[0..24] OF UINT;
+	iCnt_PCGV_class4_Mem : ARRAY[0..24] OF UINT;
+	xGR_MINR_t_zyl : ARRAY[0..24] OF GR_MINR;
+	xR_TRIG_EGT_PRed : R_TRIG;
+	bMSAGT_Warn : ARRAY[0..24] OF BOOL; (*Set the exhaust gas temperature sensor warning*)
+	xFILTER_EG_Cyl : ARRAY[0..24] OF FILTER_R;
+	iFilt_EG_Cyl : UINT := 5;
+	rFILTER_EG_Cyl_old : ARRAY[0..24] OF REAL;
+	xGR_MAXR_t_zyl_BackfPrev : ARRAY[0..24] OF GR_MAXR;
+	rT_EG_Grad_Hyst : REAL := 0;
+	xTP_Ena_BackfPrev : TP;
+	rPos_CBV_Release_BackfPrev : REAL := 0.05;
+	xMEDIAN_EG_Filt : RMEDIAN24 := (0);
+	rGrad_EG_Median : REAL;
+	rGrad_EG_Median_old : REAL;
+	xTON_t_zyl_BackfPrev : ARRAY[0..24] OF TON;
+	tiBackPrevOnDelay : TIME := T#3s;
+	rGrad_EG_Filt : ARRAY[0..24] OF REAL;
+	rGrad_EG_Filt_Diff2Median : ARRAY[0..24] OF REAL;
+	rGrad_EG_Median_Vect : ARRAY[0..24] OF REAL;
+	xF_TRIG_bHoldBackfPrev : F_TRIG;
+	bBlockBackfPrev : BOOL;
+	rP_Act_Norm_BackfPrevOFF : REAL := 0.8;
+	bW9388_Array1 : ARRAY[0..24] OF BOOL;
+	bW9388_Array2 : ARRAY[0..24] OF BOOL;
+	bW9388_Array_Compare : ARRAY[0..24] OF BOOL;
+	AmmSeqCombAnomaly : AmmSequence;
+	xR_TRIG_bW9388_Array : R_TRIG;
+	ucEventCounter : USINT; (*Event counter for loops *)
+	xTOF_ZylAusfall : ARRAY[0..20] OF TOF := [21((0))]; (*Timer für Events Zylinderausfall*)
+	bTrigZylAusfall : BOOL := 0;
+	iZylAusfallErrCout : INT := 0;
+	bZylAusfall_test : BOOL := 0;
+	rTi_EGT_NegDev : REAL := 180.0; (*Exhaust temperature negative deviation max. duration*)
+	rTi_EGT_NegDev_TimeDur : REAL := 180.0; (*Exhauxt temperature negaitve deviation monitoring time duration*)
+	iCnt_EGT_NegDev_max : INT := 10; (*Exhaust temperature negative deviation max. count*)
+END_VAR

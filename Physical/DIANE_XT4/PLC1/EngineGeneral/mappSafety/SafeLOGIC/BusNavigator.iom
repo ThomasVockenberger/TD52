@@ -1,0 +1,794 @@
+<!--xml version= "1.0" encoding="utf-8"-->
+<!--IOMapping Version="4.0"-->
+<IOOffsets SIBytes="6144" SOBytes="2048" NSIBytes="1024" NSOBytes="1024" ConnectionsValidOffset="4" EMOsOffset="76" EMOsSize="64" >
+		<Module Name="SL1.SM1" Hardware="X20SL8100" SafeLogicID="1" SafeModuleID="1" SISize="1" SOSize="1" NSISize="516" NSOSize="516" SIOffset="7" SOOffset="0" NSIOffset="0" NSOOffset="0" ExtendedSourceSL="1" HWTypeCode="5" >
+			<Channel Name="SafeCommissioningOptionBIT000" Mapping="SIX76.0" Variable="PARA_GT2_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT001" Mapping="SIX76.1" Variable="PARA_GT3_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT002" Mapping="SIX76.2" Variable="PARA_GT4_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT003" Mapping="SIX76.3" Variable="PARA_SysPurge_MonActive" />
+			<Channel Name="SafeCommissioningOptionBIT004" Mapping="SIX76.4" Variable="PARA_HWcirc_Cust_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT005" Mapping="SIX76.5" Variable="PARA_PS_HW_Lo_MuteAcive" />
+			<Channel Name="SafeCommissioningOptionBIT006" Mapping="SIX76.6" Variable="PARA_LS_HWHT_Lo_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT007" Mapping="SIX76.7" Variable="PARA_PS1_HWHT_Hi_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT008" Mapping="SIX77.0" Variable="PARA_PS2_HWHT_Hi_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT009" Mapping="SIX77.1" Variable="PARA_PS1_HWHT_Lo_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT010" Mapping="SIX77.2" Variable="PARA_PS2_HWHT_Lo_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT011" Mapping="SIX77.3" Variable="PARA_TS1_HWHT_Hi_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT012" Mapping="SIX77.4" Variable="PARA_TS2_HWHT_Hi_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT013" Mapping="SIX77.5" Variable="PARA_FS_HWHT_Lo_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT014" Mapping="SIX77.6" Variable="PARA_LS_HWLT_Lo_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT015" Mapping="SIX77.7" Variable="PARA_PS1_HWLT_Hi_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT016" Mapping="SIX78.0" Variable="PARA_PS2_HWLT_Hi_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT017" Mapping="SIX78.1" Variable="PARA_PS1_HWLT_Lo_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT018" Mapping="SIX78.2" Variable="PARA_PS2_HWLT_Lo_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT019" Mapping="SIX78.3" Variable="PARA_TS1_HWLT_Hi_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT020" Mapping="SIX78.4" Variable="PARA_TS2_HWLT_Hi_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT021" Mapping="SIX78.5" Variable="PARA_FS_HWLT_Lo_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT022" Mapping="SIX78.6" Variable="PARA_Pr_EG_sMonActive" />
+			<Channel Name="SafeCommissioningOptionBIT023" Mapping="SIX78.7" Variable="PARA_SafetyLoop_A2_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT024" Mapping="SIX79.0" Variable="PARA_DCGA_Exist" />
+			<Channel Name="SafeCommissioningOptionBIT025" Mapping="SIX79.1" Variable="PARA_ERV_Cust_Active" />
+			<Channel Name="SafeCommissioningOptionBIT026" Mapping="SIX79.2" Variable="PARA_ERV_ColdCountry_Active" />
+			<Channel Name="SafeCommissioningOptionBIT027" Mapping="SIX79.3" Variable="PARA_ER_Door_MonActive" />
+			<Channel Name="SafeCommissioningOptionDINT00" Mapping="SID140" Variable="PARA_N_EngNom" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT01" Mapping="SID144" Variable="PARA_N_EngAct_HiHi_Diff" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT02" Mapping="SID148" Variable="PARA_N_Pr_EO_LoLo_Lim1" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT03" Mapping="SID152" Variable="PARA_N_Pr_EO_LoLo_Lim2" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT04" Mapping="SID156" Variable="PARA_Pr_EO_LoLo_LimN1" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT05" Mapping="SID160" Variable="PARA_Pr_EO_LoLo_LimN2" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT06" Mapping="SID164" Variable="PARA_Pr_EO_Diff_EngStop" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT07" Mapping="SID168" Variable="PARA_Pr_EO_HiHi_EngStop" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT08" Mapping="SID172" Variable="PARA_Pr_EO_HiHi_Diff" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT09" Mapping="SID176" Variable="PARA_Pr_EO_HiHi_Check" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT10" Mapping="SID180" Variable="PARA_Pr_EOaP_HiHi" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT11" Mapping="SID184" Variable="PARA_Pr_EOaP_Diff_EngStop" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT12" Mapping="SID188" Variable="PARA_Pr_EOaP_HiHi_EngStop" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT13" Mapping="SID192" Variable="PARA_Pr_ECW_LoLo" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT14" Mapping="SID196" Variable="PARA_Pr_ECW_HiHi_Diff" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT15" Mapping="SID200" Variable="PARA_Pr_ECW_HiHi_Check" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT16" Mapping="SID204" Variable="PARA_Pr_ECWaP_HiHi" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT17" Mapping="SID208" Variable="PARA_Eng_Motortype" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT18" Mapping="SID212" Variable="PARA_DPr_ECWP_LoLo" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT19" Mapping="SID216" Variable="PARA_Vol_SysPurge_Stroke" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT20" Mapping="SID220" Variable="PARA_Vol_SysPurge_MinAir" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT21" Mapping="SID224" Variable="PARA_Nr_ERV_INL_Fan" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT22" Mapping="SID228" Variable="PARA_Nr_ERV_INL_Lou" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT23" Mapping="SID232" Variable="PARA_Nr_ERV_OTL_Lou" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT24" Mapping="SID236" Variable="PARA_NrMaxErr_ERV_INL_Fan" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT25" Mapping="SID240" Variable="PARA_NrMaxErr_ERV_INL_Lou" Flags="2" />
+			<Channel Name="SafeCommissioningOptionDINT26" Mapping="SID244" Variable="PARA_NrMaxErr_ERV_OTL_Lou" Flags="2" />
+			<Channel Name="BOOL00001" Mapping="NSQX0.0" Variable="bOUT_F99_SafetyLoop_Eng" Address="Cyclic#6.EngineGeneral::bSafeOUT_F99_SafetyLoop_Eng" SODIndex="0x2580" SODSubIndex="0x1" />
+			<Channel Name="BOOL00002" Mapping="NSQX0.1" Variable="bOUT_F01_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F01_OK" SODIndex="0x2580" SODSubIndex="0x1" />
+			<Channel Name="BOOL00003" Mapping="NSQX0.2" Variable="bOUT_F01_N_DiffOK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F01_N_DiffOK" SODIndex="0x2580" SODSubIndex="0x1" />
+			<Channel Name="BOOL00004" Mapping="NSQX0.3" Variable="bOUT_F01_N_Nom90" Address="Cyclic#6.EngineGeneral::bSafeOUT_F01_N_Nom90" SODIndex="0x2580" SODSubIndex="0x1" />
+			<Channel Name="BOOL00005" Mapping="NSQX0.4" Variable="bOUT_F02_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F02_OK" SODIndex="0x2580" SODSubIndex="0x1" />
+			<Channel Name="BOOL00006" Mapping="NSQX0.5" Variable="bOUT_F02_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F02_OK_PC" SODIndex="0x2580" SODSubIndex="0x1" />
+			<Channel Name="BOOL00007" Mapping="NSQX0.6" Variable="bOUT_F03_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F03_OK" SODIndex="0x2580" SODSubIndex="0x1" />
+			<Channel Name="BOOL00008" Mapping="NSQX0.7" Variable="bOUT_F03_Pr_EO_DiffOK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F03_Pr_EO_DiffOK" SODIndex="0x2580" SODSubIndex="0x1" />
+			<Channel Name="BOOL00009" Mapping="NSQX1.0" Variable="bOUT_F04_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F04_OK" SODIndex="0x2580" SODSubIndex="0x2" />
+			<Channel Name="BOOL00010" Mapping="NSQX1.1" Variable="bOUT_F05_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F05_OK" SODIndex="0x2580" SODSubIndex="0x2" />
+			<Channel Name="BOOL00011" Mapping="NSQX1.2" Variable="bOUT_F05_Pr_ECW_DiffOK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F05_Pr_ECW_DiffOK" SODIndex="0x2580" SODSubIndex="0x2" />
+			<Channel Name="BOOL00012" Mapping="NSQX1.3" Variable="bOUT_F06_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F06_OK" SODIndex="0x2580" SODSubIndex="0x2" />
+			<Channel Name="BOOL00013" Mapping="NSQX1.4" Variable="bOUT_F07_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F07_OK" SODIndex="0x2580" SODSubIndex="0x2" />
+			<Channel Name="BOOL00014" Mapping="NSQX1.5" Variable="bOUT_F07_Rel_Sync_Load" Address="Cyclic#6.EngineGeneral::bSafeOUT_F07_Rel_Sync_Load" SODIndex="0x2580" SODSubIndex="0x2" />
+			<Channel Name="BOOL00015" Mapping="NSQX1.6" Variable="bOUT_F07_Rel_Sync_Load_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F07_Rel_Sync_Load_PS" SODIndex="0x2580" SODSubIndex="0x2" />
+			<Channel Name="BOOL00016" Mapping="NSQX1.7" Variable="bOUT_F07_GCB_RUC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F07_GCB_RUC" SODIndex="0x2580" SODSubIndex="0x2" />
+			<Channel Name="BOOL00017" Mapping="NSQX2.0" Variable="bOUT_F07_GCB_RUC_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F07_GCB_RUC_PS" SODIndex="0x2580" SODSubIndex="0x3" />
+			<Channel Name="BOOL00018" Mapping="NSQX2.1" Variable="bOUT_F08_OlShortCirc_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F08_OlShortCirc_OK" SODIndex="0x2580" SODSubIndex="0x3" />
+			<Channel Name="BOOL00019" Mapping="NSQX2.2" Variable="bOUT_F08_GenPrctTrip_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F08_GenPrctTrip_OK" SODIndex="0x2580" SODSubIndex="0x3" />
+			<Channel Name="BOOL00020" Mapping="NSQX2.3" Variable="bOUT_F09_Cust_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_Cust_OK" SODIndex="0x2580" SODSubIndex="0x3" />
+			<Channel Name="BOOL00021" Mapping="NSQX2.4" Variable="bOUT_F09_Cust_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_Cust_OK_PC" SODIndex="0x2580" SODSubIndex="0x3" />
+			<Channel Name="BOOL00022" Mapping="NSQX2.5" Variable="bOUT_F10_EmStop_M_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F10_EmStop_M_OK" SODIndex="0x2580" SODSubIndex="0x3" />
+			<Channel Name="BOOL00023" Mapping="NSQX2.6" Variable="bOUT_F10_EmStop_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F10_EmStop_OK" SODIndex="0x2580" SODSubIndex="0x3" />
+			<Channel Name="BOOL00024" Mapping="NSQX2.7" Variable="bOUT_F10_SafetyLoop_EmStop" Address="Cyclic#6.EngineGeneral::bSafeOUT_F10_SafetyLoop_EmStop" SODIndex="0x2580" SODSubIndex="0x3" />
+			<Channel Name="BOOL00025" Mapping="NSQX3.0" Variable="bOUT_F10_DO_EmStop" Address="Cyclic#6.EngineGeneral::bSafeOUT_F10_DO_EmStop" SODIndex="0x2580" SODSubIndex="0x4" />
+			<Channel Name="BOOL00026" Mapping="NSQX3.1" Variable="bOUT_F10_DO_EmStop_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F10_DO_EmStop_PS" SODIndex="0x2580" SODSubIndex="0x4" />
+			<Channel Name="BOOL00027" Mapping="NSQX3.2" Variable="bOUT_F11_SafetyLoop_A1_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F11_SafetyLoop_A1_OK" SODIndex="0x2580" SODSubIndex="0x4" />
+			<Channel Name="BOOL00028" Mapping="NSQX3.3" Variable="bOUT_F11_SafetyLoop_A2_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F11_SafetyLoop_A2_OK" SODIndex="0x2580" SODSubIndex="0x4" />
+			<Channel Name="BOOL00029" Mapping="NSQX3.4" Variable="bOUT_F11_SafetyLoop_M_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F11_SafetyLoop_M_OK" SODIndex="0x2580" SODSubIndex="0x4" />
+			<Channel Name="BOOL00030" Mapping="NSQX3.5" Variable="bOUT_F12_GT1_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_GT1_OK" SODIndex="0x2580" SODSubIndex="0x4" />
+			<Channel Name="BOOL00031" Mapping="NSQX3.6" Variable="bOUT_F12_GT2_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_GT2_OK" SODIndex="0x2580" SODSubIndex="0x4" />
+			<Channel Name="BOOL00032" Mapping="NSQX3.7" Variable="bOUT_F12_GT3_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_GT3_OK" SODIndex="0x2580" SODSubIndex="0x4" />
+			<Channel Name="BOOL00033" Mapping="NSQX4.0" Variable="bOUT_F12_GT4_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_GT4_OK" SODIndex="0x2580" SODSubIndex="0x5" />
+			<Channel Name="BOOL00034" Mapping="NSQX4.1" Variable="bOUT_F12_Rel_GV1" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV1" SODIndex="0x2580" SODSubIndex="0x5" />
+			<Channel Name="BOOL00035" Mapping="NSQX4.2" Variable="bOUT_F12_Rel_GV1a_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV1a_PS" SODIndex="0x2580" SODSubIndex="0x5" />
+			<Channel Name="BOOL00036" Mapping="NSQX4.3" Variable="bOUT_F12_Rel_GV1b_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV1b_PS" SODIndex="0x2580" SODSubIndex="0x5" />
+			<Channel Name="BOOL00037" Mapping="NSQX4.4" Variable="bOUT_F12_GT1_SD_Dem" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_GT1_SD_Dem" SODIndex="0x2580" SODSubIndex="0x5" />
+			<Channel Name="BOOL00038" Mapping="NSQX4.5" Variable="bOUT_F12_GT1_SD_Dem_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_GT1_SD_Dem_PS" SODIndex="0x2580" SODSubIndex="0x5" />
+			<Channel Name="BOOL00039" Mapping="NSQX4.6" Variable="bOUT_F12_Rel_GV2" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV2" SODIndex="0x2580" SODSubIndex="0x5" />
+			<Channel Name="BOOL00040" Mapping="NSQX4.7" Variable="bOUT_F12_Rel_GV2a_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV2a_PS" SODIndex="0x2580" SODSubIndex="0x5" />
+			<Channel Name="BOOL00041" Mapping="NSQX5.0" Variable="bOUT_F12_Rel_GV2b_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV2b_PS" SODIndex="0x2580" SODSubIndex="0x6" />
+			<Channel Name="BOOL00042" Mapping="NSQX5.1" Variable="bOUT_F12_GT2_SD_Dem" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_GT2_SD_Dem" SODIndex="0x2580" SODSubIndex="0x6" />
+			<Channel Name="BOOL00043" Mapping="NSQX5.2" Variable="bOUT_F12_GT2_SD_Dem_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_GT2_SD_Dem_PS" SODIndex="0x2580" SODSubIndex="0x6" />
+			<Channel Name="BOOL00044" Mapping="NSQX5.3" Variable="bOUT_F12_Rel_GV3" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV3" SODIndex="0x2580" SODSubIndex="0x6" />
+			<Channel Name="BOOL00045" Mapping="NSQX5.4" Variable="bOUT_F12_Rel_GV3a_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV3a_PS" SODIndex="0x2580" SODSubIndex="0x6" />
+			<Channel Name="BOOL00046" Mapping="NSQX5.5" Variable="bOUT_F12_Rel_GV3b_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV3b_PS" SODIndex="0x2580" SODSubIndex="0x6" />
+			<Channel Name="BOOL00047" Mapping="NSQX5.6" Variable="bOUT_F12_GT3_SD_Dem" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_GT3_SD_Dem" SODIndex="0x2580" SODSubIndex="0x6" />
+			<Channel Name="BOOL00048" Mapping="NSQX5.7" Variable="bOUT_F12_GT3_SD_Dem_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_GT3_SD_Dem_PS" SODIndex="0x2580" SODSubIndex="0x6" />
+			<Channel Name="BOOL00049" Mapping="NSQX6.0" Variable="bOUT_F12_Rel_GV4" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV4" SODIndex="0x2580" SODSubIndex="0x7" />
+			<Channel Name="BOOL00050" Mapping="NSQX6.1" Variable="bOUT_F12_Rel_GV4a_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV4a_PS" SODIndex="0x2580" SODSubIndex="0x7" />
+			<Channel Name="BOOL00051" Mapping="NSQX6.2" Variable="bOUT_F12_Rel_GV4b_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV4b_PS" SODIndex="0x2580" SODSubIndex="0x7" />
+			<Channel Name="BOOL00052" Mapping="NSQX6.3" Variable="bOUT_F12_GT4_SD_Dem" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_GT4_SD_Dem" SODIndex="0x2580" SODSubIndex="0x7" />
+			<Channel Name="BOOL00053" Mapping="NSQX6.4" Variable="bOUT_F12_GT4_SD_Dem_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_GT4_SD_Dem_PS" SODIndex="0x2580" SODSubIndex="0x7" />
+			<Channel Name="BOOL00054" Mapping="NSQX6.5" Variable="bOUT_F99_Rel_SF_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F99_Rel_SF_OK" SODIndex="0x2580" SODSubIndex="0x7" />
+			<Channel Name="BOOL00055" Mapping="NSQX6.6" Variable="bOUT_F99_Rel_SF_OK_A_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F99_Rel_SF_OK_A_PS" SODIndex="0x2580" SODSubIndex="0x7" />
+			<Channel Name="BOOL00056" Mapping="NSQX6.7" Variable="bOUT_F99_Rel_SF_OK_M_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F99_Rel_SF_OK_M_PS" SODIndex="0x2580" SODSubIndex="0x7" />
+			<Channel Name="BOOL00057" Mapping="NSQX7.0" Variable="bOUT_F09_DI_ERV_Cust" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_DI_ERV_Cust" SODIndex="0x2580" SODSubIndex="0x8" />
+			<Channel Name="BOOL00058" Mapping="NSQX7.1" Variable="bOUT_F09_ERV_PC_Forced" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_ERV_PC_Forced" SODIndex="0x2580" SODSubIndex="0x8" />
+			<Channel Name="BOOL00060" Mapping="NSQX7.3" Variable="bAMM_A2383" Address="Cyclic#6.EngineGeneral::bAMM_2383" SODIndex="0x2580" SODSubIndex="0x8" />
+			<Channel Name="BOOL00061" Mapping="NSQX7.4" Variable="bAMM_A2384" Address="Cyclic#6.EngineGeneral::bAMM_2384" SODIndex="0x2580" SODSubIndex="0x8" />
+			<Channel Name="BOOL00062" Mapping="NSQX7.5" Variable="bAMM_A2385" Address="Cyclic#6.EngineGeneral::bAMM_2385" SODIndex="0x2580" SODSubIndex="0x8" />
+			<Channel Name="BOOL00063" Mapping="NSQX7.6" Variable="bAMM_A2386" Address="Cyclic#6.EngineGeneral::bAMM_2386" SODIndex="0x2580" SODSubIndex="0x8" />
+			<Channel Name="BOOL00064" Mapping="NSQX7.7" Variable="bAMM_A2387" Address="Cyclic#6.EngineGeneral::bAMM_2387" SODIndex="0x2580" SODSubIndex="0x8" />
+			<Channel Name="BOOL00065" Mapping="NSQX8.0" Variable="bAMM_A2388" Address="Cyclic#6.EngineGeneral::bAMM_2388" SODIndex="0x2580" SODSubIndex="0x9" />
+			<Channel Name="BOOL00066" Mapping="NSQX8.1" Variable="bAMM_A2389" Address="Cyclic#6.EngineGeneral::bAMM_2389" SODIndex="0x2580" SODSubIndex="0x9" />
+			<Channel Name="BOOL00067" Mapping="NSQX8.2" Variable="bAMM_A2390" Address="Cyclic#6.EngineGeneral::bAMM_2390" SODIndex="0x2580" SODSubIndex="0x9" />
+			<Channel Name="BOOL00068" Mapping="NSQX8.3" Variable="bAMM_A2391" Address="Cyclic#6.EngineGeneral::bAMM_2391" SODIndex="0x2580" SODSubIndex="0x9" />
+			<Channel Name="BOOL00069" Mapping="NSQX8.4" Variable="bAMM_A2392" Address="Cyclic#6.EngineGeneral::bAMM_2392" SODIndex="0x2580" SODSubIndex="0x9" />
+			<Channel Name="BOOL00070" Mapping="NSQX8.5" Variable="bAMM_A2393" Address="Cyclic#6.EngineGeneral::bAMM_2393" SODIndex="0x2580" SODSubIndex="0x9" />
+			<Channel Name="BOOL00071" Mapping="NSQX8.6" Variable="bAMM_A2394" Address="Cyclic#6.EngineGeneral::bAMM_2394" SODIndex="0x2580" SODSubIndex="0x9" />
+			<Channel Name="BOOL00072" Mapping="NSQX8.7" Variable="bAMM_A2395" Address="Cyclic#6.EngineGeneral::bAMM_2395" SODIndex="0x2580" SODSubIndex="0x9" />
+			<Channel Name="BOOL00073" Mapping="NSQX9.0" Variable="bAMM_A2396" Address="Cyclic#6.EngineGeneral::bAMM_2396" SODIndex="0x2580" SODSubIndex="0xA" />
+			<Channel Name="BOOL00074" Mapping="NSQX9.1" Variable="bAMM_A2397" Address="Cyclic#6.EngineGeneral::bAMM_2397" SODIndex="0x2580" SODSubIndex="0xA" />
+			<Channel Name="BOOL00075" Mapping="NSQX9.2" Variable="bAMM_A2398" Address="Cyclic#6.EngineGeneral::bAMM_2398" SODIndex="0x2580" SODSubIndex="0xA" />
+			<Channel Name="BOOL00076" Mapping="NSQX9.3" Variable="bAMM_A9408" Address="Cyclic#6.EngineGeneral::bAMM_9408" SODIndex="0x2580" SODSubIndex="0xA" />
+			<Channel Name="BOOL00077" Mapping="NSQX9.4" Variable="bAMM_A9409" Address="Cyclic#6.EngineGeneral::bAMM_9409" SODIndex="0x2580" SODSubIndex="0xA" />
+			<Channel Name="BOOL00078" Mapping="NSQX9.5" Variable="bAMM_A9410" Address="Cyclic#6.EngineGeneral::bAMM_9410" SODIndex="0x2580" SODSubIndex="0xA" />
+			<Channel Name="BOOL00079" Mapping="NSQX9.6" Variable="bAMM_A9411" Address="Cyclic#6.EngineGeneral::bAMM_9411" SODIndex="0x2580" SODSubIndex="0xA" />
+			<Channel Name="BOOL00080" Mapping="NSQX9.7" Variable="bAMM_A9412" Address="Cyclic#6.EngineGeneral::bAMM_9412" SODIndex="0x2580" SODSubIndex="0xA" />
+			<Channel Name="BOOL00081" Mapping="NSQX10.0" Variable="bAMM_A9413" Address="Cyclic#6.EngineGeneral::bAMM_9413" SODIndex="0x2580" SODSubIndex="0xB" />
+			<Channel Name="BOOL00082" Mapping="NSQX10.1" Variable="bAMM_A9414" Address="Cyclic#6.EngineGeneral::bAMM_9414" SODIndex="0x2580" SODSubIndex="0xB" />
+			<Channel Name="BOOL00083" Mapping="NSQX10.2" Variable="bAMM_A9415" Address="Cyclic#6.EngineGeneral::bAMM_9415" SODIndex="0x2580" SODSubIndex="0xB" />
+			<Channel Name="BOOL00084" Mapping="NSQX10.3" Variable="bAMM_A9416" Address="Cyclic#6.EngineGeneral::bAMM_9416" SODIndex="0x2580" SODSubIndex="0xB" />
+			<Channel Name="BOOL00085" Mapping="NSQX10.4" Variable="bAMM_A9417" Address="Cyclic#6.EngineGeneral::bAMM_9417" SODIndex="0x2580" SODSubIndex="0xB" />
+			<Channel Name="BOOL00086" Mapping="NSQX10.5" Variable="bAMM_A9418" Address="Cyclic#6.EngineGeneral::bAMM_9418" SODIndex="0x2580" SODSubIndex="0xB" />
+			<Channel Name="BOOL00087" Mapping="NSQX10.6" Variable="bAMM_A9419" Address="Cyclic#6.EngineGeneral::bAMM_9419" SODIndex="0x2580" SODSubIndex="0xB" />
+			<Channel Name="BOOL00088" Mapping="NSQX10.7" Variable="bAMM_A9420" Address="Cyclic#6.EngineGeneral::bAMM_9420" SODIndex="0x2580" SODSubIndex="0xB" />
+			<Channel Name="BOOL00089" Mapping="NSQX11.0" Variable="bAMM_A9421" Address="Cyclic#6.EngineGeneral::bAMM_9421" SODIndex="0x2580" SODSubIndex="0xC" />
+			<Channel Name="BOOL00090" Mapping="NSQX11.1" Variable="bAMM_A9422" Address="Cyclic#6.EngineGeneral::bAMM_9422" SODIndex="0x2580" SODSubIndex="0xC" />
+			<Channel Name="BOOL00091" Mapping="NSQX11.2" Variable="bAMM_A9423" Address="Cyclic#6.EngineGeneral::bAMM_9423" SODIndex="0x2580" SODSubIndex="0xC" />
+			<Channel Name="BOOL00092" Mapping="NSQX11.3" Variable="bAMM_A9424" Address="Cyclic#6.EngineGeneral::bAMM_9424" SODIndex="0x2580" SODSubIndex="0xC" />
+			<Channel Name="BOOL00093" Mapping="NSQX11.4" Variable="bAMM_A9425" Address="Cyclic#6.EngineGeneral::bAMM_9425" SODIndex="0x2580" SODSubIndex="0xC" />
+			<Channel Name="BOOL00094" Mapping="NSQX11.5" Variable="bAMM_A9426" Address="Cyclic#6.EngineGeneral::bAMM_9426" SODIndex="0x2580" SODSubIndex="0xC" />
+			<Channel Name="BOOL00095" Mapping="NSQX11.6" Variable="bAMM_A9427" Address="Cyclic#6.EngineGeneral::bAMM_9427" SODIndex="0x2580" SODSubIndex="0xC" />
+			<Channel Name="BOOL00096" Mapping="NSQX11.7" Variable="bAMM_A9428" Address="Cyclic#6.EngineGeneral::bAMM_9428" SODIndex="0x2580" SODSubIndex="0xC" />
+			<Channel Name="BOOL00097" Mapping="NSQX12.0" Variable="bAMM_A9429" Address="Cyclic#6.EngineGeneral::bAMM_9429" SODIndex="0x2580" SODSubIndex="0xD" />
+			<Channel Name="BOOL00098" Mapping="NSQX12.1" Variable="bAMM_A9433" Address="Cyclic#6.EngineGeneral::bAMM_9433" SODIndex="0x2580" SODSubIndex="0xD" />
+			<Channel Name="BOOL00099" Mapping="NSQX12.2" Variable="bAMM_A9434" Address="Cyclic#6.EngineGeneral::bAMM_9434" SODIndex="0x2580" SODSubIndex="0xD" />
+			<Channel Name="BOOL00100" Mapping="NSQX12.3" Variable="bAMM_W9514" Address="Cyclic#6.EngineGeneral::bAMM_9514" SODIndex="0x2580" SODSubIndex="0xD" />
+			<Channel Name="BOOL00101" Mapping="NSQX12.4" Variable="bAMM_W9515" Address="Cyclic#6.EngineGeneral::bAMM_9515" SODIndex="0x2580" SODSubIndex="0xD" />
+			<Channel Name="BOOL00102" Mapping="NSQX12.5" Variable="bAMM_W9516" Address="Cyclic#6.EngineGeneral::bAMM_9516" SODIndex="0x2580" SODSubIndex="0xD" />
+			<Channel Name="BOOL00103" Mapping="NSQX12.6" Variable="bAMM_W9517" Address="Cyclic#6.EngineGeneral::bAMM_9517" SODIndex="0x2580" SODSubIndex="0xD" />
+			<Channel Name="BOOL00104" Mapping="NSQX12.7" Variable="bAMM_W9518" Address="Cyclic#6.EngineGeneral::bAMM_9518" SODIndex="0x2580" SODSubIndex="0xD" />
+			<Channel Name="BOOL00105" Mapping="NSQX13.0" Variable="bAMM_W9519" Address="Cyclic#6.EngineGeneral::bAMM_9519" SODIndex="0x2580" SODSubIndex="0xE" />
+			<Channel Name="BOOL00106" Mapping="NSQX13.1" Variable="bAMM_W9520" Address="Cyclic#6.EngineGeneral::bAMM_9520" SODIndex="0x2580" SODSubIndex="0xE" />
+			<Channel Name="BOOL00107" Mapping="NSQX13.2" Variable="bAMM_W9521" Address="Cyclic#6.EngineGeneral::bAMM_9521" SODIndex="0x2580" SODSubIndex="0xE" />
+			<Channel Name="BOOL00108" Mapping="NSQX13.3" Variable="bAMM_W9522" Address="Cyclic#6.EngineGeneral::bAMM_9522" SODIndex="0x2580" SODSubIndex="0xE" />
+			<Channel Name="BOOL00109" Mapping="NSQX13.4" Variable="bAMM_W9523" Address="Cyclic#6.EngineGeneral::bAMM_9523" SODIndex="0x2580" SODSubIndex="0xE" />
+			<Channel Name="BOOL00110" Mapping="NSQX13.5" Variable="bAMM_W9524" Address="Cyclic#6.EngineGeneral::bAMM_9524" SODIndex="0x2580" SODSubIndex="0xE" />
+			<Channel Name="BOOL00111" Mapping="NSQX13.6" Variable="bAMM_W9525" Address="Cyclic#6.EngineGeneral::bAMM_9525" SODIndex="0x2580" SODSubIndex="0xE" />
+			<Channel Name="BOOL00112" Mapping="NSQX13.7" Variable="bAMM_W9526" Address="Cyclic#6.EngineGeneral::bAMM_9526" SODIndex="0x2580" SODSubIndex="0xE" />
+			<Channel Name="BOOL00113" Mapping="NSQX14.0" Variable="bAMM_W9527" Address="Cyclic#6.EngineGeneral::bAMM_9527" SODIndex="0x2580" SODSubIndex="0xF" />
+			<Channel Name="BOOL00114" Mapping="NSQX14.1" Variable="bAMM_W9528" Address="Cyclic#6.EngineGeneral::bAMM_9528" SODIndex="0x2580" SODSubIndex="0xF" />
+			<Channel Name="BOOL00115" Mapping="NSQX14.2" Variable="bAMM_W9529" Address="Cyclic#6.EngineGeneral::bAMM_9529" SODIndex="0x2580" SODSubIndex="0xF" />
+			<Channel Name="BOOL00116" Mapping="NSQX14.3" Variable="bAMM_W9530" Address="Cyclic#6.EngineGeneral::bAMM_9530" SODIndex="0x2580" SODSubIndex="0xF" />
+			<Channel Name="BOOL00117" Mapping="NSQX14.4" Variable="bAMM_W9531" Address="Cyclic#6.EngineGeneral::bAMM_9531" SODIndex="0x2580" SODSubIndex="0xF" />
+			<Channel Name="BOOL00118" Mapping="NSQX14.5" Variable="bAMM_W9532" Address="Cyclic#6.EngineGeneral::bAMM_9532" SODIndex="0x2580" SODSubIndex="0xF" />
+			<Channel Name="BOOL00119" Mapping="NSQX14.6" Variable="bAMM_W9533" Address="Cyclic#6.EngineGeneral::bAMM_9533" SODIndex="0x2580" SODSubIndex="0xF" />
+			<Channel Name="BOOL00120" Mapping="NSQX14.7" Variable="bAMM_W9534" Address="Cyclic#6.EngineGeneral::bAMM_9534" SODIndex="0x2580" SODSubIndex="0xF" />
+			<Channel Name="BOOL00121" Mapping="NSQX15.0" Variable="bAMM_W9535" Address="Cyclic#6.EngineGeneral::bAMM_9535" SODIndex="0x2580" SODSubIndex="0x10" />
+			<Channel Name="BOOL00122" Mapping="NSQX15.1" Variable="bAMM_W9536" Address="Cyclic#6.EngineGeneral::bAMM_9536" SODIndex="0x2580" SODSubIndex="0x10" />
+			<Channel Name="BOOL00123" Mapping="NSQX15.2" Variable="bAMM_W9537" Address="Cyclic#6.EngineGeneral::bAMM_9537" SODIndex="0x2580" SODSubIndex="0x10" />
+			<Channel Name="BOOL00124" Mapping="NSQX15.3" Variable="bAMM_W9538" Address="Cyclic#6.EngineGeneral::bAMM_9538" SODIndex="0x2580" SODSubIndex="0x10" />
+			<Channel Name="BOOL00125" Mapping="NSQX15.4" Variable="bAMM_W9539" Address="Cyclic#6.EngineGeneral::bAMM_9539" SODIndex="0x2580" SODSubIndex="0x10" />
+			<Channel Name="BOOL00126" Mapping="NSQX15.5" Variable="bAMM_W9540" Address="Cyclic#6.EngineGeneral::bAMM_9540" SODIndex="0x2580" SODSubIndex="0x10" />
+			<Channel Name="BOOL00127" Mapping="NSQX15.6" Variable="bAMM_W9541" Address="Cyclic#6.EngineGeneral::bAMM_9541" SODIndex="0x2580" SODSubIndex="0x10" />
+			<Channel Name="BOOL00128" Mapping="NSQX15.7" Variable="bAMM_W9542" Address="Cyclic#6.EngineGeneral::bAMM_9542" SODIndex="0x2580" SODSubIndex="0x10" />
+			<Channel Name="BOOL00129" Mapping="NSQX16.0" Variable="bAMM_W9543" Address="Cyclic#6.EngineGeneral::bAMM_9543" SODIndex="0x2580" SODSubIndex="0x11" />
+			<Channel Name="BOOL00130" Mapping="NSQX16.1" Variable="bAMM_W9562" Address="Cyclic#6.EngineGeneral::bAMM_9562" SODIndex="0x2580" SODSubIndex="0x11" />
+			<Channel Name="BOOL00131" Mapping="NSQX16.2" Variable="bAMM_W9563" Address="Cyclic#6.EngineGeneral::bAMM_9563" SODIndex="0x2580" SODSubIndex="0x11" />
+			<Channel Name="BOOL00132" Mapping="NSQX16.3" Variable="bAMM_W9564" Address="Cyclic#6.EngineGeneral::bAMM_9564" SODIndex="0x2580" SODSubIndex="0x11" />
+			<Channel Name="BOOL00133" Mapping="NSQX16.4" Variable="bAMM_W9565" Address="Cyclic#6.EngineGeneral::bAMM_9565" SODIndex="0x2580" SODSubIndex="0x11" />
+			<Channel Name="BOOL00134" Mapping="NSQX16.5" Variable="bAMM_W9566" Address="Cyclic#6.EngineGeneral::bAMM_9566" SODIndex="0x2580" SODSubIndex="0x11" />
+			<Channel Name="BOOL00135" Mapping="NSQX16.6" Variable="bAMM_W9567" Address="Cyclic#6.EngineGeneral::bAMM_9567" SODIndex="0x2580" SODSubIndex="0x11" />
+			<Channel Name="BOOL00136" Mapping="NSQX16.7" Variable="bAMM_W9568" Address="Cyclic#6.EngineGeneral::bAMM_9568" SODIndex="0x2580" SODSubIndex="0x11" />
+			<Channel Name="BOOL00137" Mapping="NSQX17.0" Variable="bAMM_W9569" Address="Cyclic#6.EngineGeneral::bAMM_9569" SODIndex="0x2580" SODSubIndex="0x12" />
+			<Channel Name="BOOL00138" Mapping="NSQX17.1" Variable="bAMM_W9570" Address="Cyclic#6.EngineGeneral::bAMM_9570" SODIndex="0x2580" SODSubIndex="0x12" />
+			<Channel Name="BOOL00139" Mapping="NSQX17.2" Variable="bAMM_W9571" Address="Cyclic#6.EngineGeneral::bAMM_9571" SODIndex="0x2580" SODSubIndex="0x12" />
+			<Channel Name="BOOL00140" Mapping="NSQX17.3" Variable="bAMM_W9572" Address="Cyclic#6.EngineGeneral::bAMM_9572" SODIndex="0x2580" SODSubIndex="0x12" />
+			<Channel Name="BOOL00141" Mapping="NSQX17.4" Variable="bAMM_W9573" Address="Cyclic#6.EngineGeneral::bAMM_9573" SODIndex="0x2580" SODSubIndex="0x12" />
+			<Channel Name="BOOL00142" Mapping="NSQX17.5" Variable="bAMM_W9574" Address="Cyclic#6.EngineGeneral::bAMM_9574" SODIndex="0x2580" SODSubIndex="0x12" />
+			<Channel Name="BOOL00143" Mapping="NSQX17.6" Variable="bAMM_W9575" Address="Cyclic#6.EngineGeneral::bAMM_9575" SODIndex="0x2580" SODSubIndex="0x12" />
+			<Channel Name="BOOL00144" Mapping="NSQX17.7" Variable="bAMM_W9576" Address="Cyclic#6.EngineGeneral::bAMM_9576" SODIndex="0x2580" SODSubIndex="0x12" />
+			<Channel Name="BOOL00145" Mapping="NSQX18.0" Variable="bAMM_W9577" Address="Cyclic#6.EngineGeneral::bAMM_9577" SODIndex="0x2580" SODSubIndex="0x13" />
+			<Channel Name="BOOL00146" Mapping="NSQX18.1" Variable="bAMM_W9578" Address="Cyclic#6.EngineGeneral::bAMM_9578" SODIndex="0x2580" SODSubIndex="0x13" />
+			<Channel Name="BOOL00147" Mapping="NSQX18.2" Variable="bAMM_W9579" Address="Cyclic#6.EngineGeneral::bAMM_9579" SODIndex="0x2580" SODSubIndex="0x13" />
+			<Channel Name="BOOL00148" Mapping="NSQX18.3" Variable="bAMM_W9580" Address="Cyclic#6.EngineGeneral::bAMM_9580" SODIndex="0x2580" SODSubIndex="0x13" />
+			<Channel Name="BOOL00149" Mapping="NSQX18.4" Variable="bAMM_W9581" Address="Cyclic#6.EngineGeneral::bAMM_9581" SODIndex="0x2580" SODSubIndex="0x13" />
+			<Channel Name="BOOL00150" Mapping="NSQX18.5" Variable="bAMM_W9582" Address="Cyclic#6.EngineGeneral::bAMM_9582" SODIndex="0x2580" SODSubIndex="0x13" />
+			<Channel Name="BOOL00151" Mapping="NSQX18.6" Variable="bAMM_W9583" Address="Cyclic#6.EngineGeneral::bAMM_9583" SODIndex="0x2580" SODSubIndex="0x13" />
+			<Channel Name="BOOL00152" Mapping="NSQX18.7" Variable="bAMM_W9584" Address="Cyclic#6.EngineGeneral::bAMM_9584" SODIndex="0x2580" SODSubIndex="0x13" />
+			<Channel Name="BOOL00153" Mapping="NSQX19.0" Variable="bAMM_W9585" Address="Cyclic#6.EngineGeneral::bAMM_9585" SODIndex="0x2580" SODSubIndex="0x14" />
+			<Channel Name="BOOL00154" Mapping="NSQX19.1" Variable="bAMM_W9586" Address="Cyclic#6.EngineGeneral::bAMM_9586" SODIndex="0x2580" SODSubIndex="0x14" />
+			<Channel Name="BOOL00155" Mapping="NSQX19.2" Variable="bAMM_W9587" Address="Cyclic#6.EngineGeneral::bAMM_9587" SODIndex="0x2580" SODSubIndex="0x14" />
+			<Channel Name="BOOL00156" Mapping="NSQX19.3" Variable="bAMM_W9593" Address="Cyclic#6.EngineGeneral::bAMM_9593" SODIndex="0x2580" SODSubIndex="0x14" />
+			<Channel Name="BOOL00160" Mapping="NSQX19.7" Variable="bAMM_A9437" Address="Cyclic#6.EngineGeneral::bAMM_9437" SODIndex="0x2580" SODSubIndex="0x14" />
+			<Channel Name="BOOL00161" Mapping="NSQX20.0" Variable="bAMM_A9438" Address="Cyclic#6.EngineGeneral::bAMM_9438" SODIndex="0x2580" SODSubIndex="0x15" />
+			<Channel Name="BOOL00162" Mapping="NSQX20.1" Variable="bAMM_A9441" Address="Cyclic#6.EngineGeneral::bAMM_9441" SODIndex="0x2580" SODSubIndex="0x15" />
+			<Channel Name="BOOL00163" Mapping="NSQX20.2" Variable="bAMM_A9442" Address="Cyclic#6.EngineGeneral::bAMM_9442" SODIndex="0x2580" SODSubIndex="0x15" />
+			<Channel Name="BOOL00164" Mapping="NSQX20.3" Variable="bAMM_A9443" Address="Cyclic#6.EngineGeneral::bAMM_9443" SODIndex="0x2580" SODSubIndex="0x15" />
+			<Channel Name="BOOL00165" Mapping="NSQX20.4" Variable="bAMM_A9444" Address="Cyclic#6.EngineGeneral::bAMM_9444" SODIndex="0x2580" SODSubIndex="0x15" />
+			<Channel Name="BOOL00166" Mapping="NSQX20.5" Variable="bAMM_A9445" Address="Cyclic#6.EngineGeneral::bAMM_9445" SODIndex="0x2580" SODSubIndex="0x15" />
+			<Channel Name="BOOL00167" Mapping="NSQX20.6" Variable="bAMM_A9446" Address="Cyclic#6.EngineGeneral::bAMM_9446" SODIndex="0x2580" SODSubIndex="0x15" />
+			<Channel Name="BOOL00168" Mapping="NSQX20.7" Variable="bAMM_A9447" Address="Cyclic#6.EngineGeneral::bAMM_9447" SODIndex="0x2580" SODSubIndex="0x15" />
+			<Channel Name="BOOL00169" Mapping="NSQX21.0" Variable="bAMM_A9448" Address="Cyclic#6.EngineGeneral::bAMM_9448" SODIndex="0x2580" SODSubIndex="0x16" />
+			<Channel Name="BOOL00170" Mapping="NSQX21.1" Variable="bAMM_A9449" Address="Cyclic#6.EngineGeneral::bAMM_9449" SODIndex="0x2580" SODSubIndex="0x16" />
+			<Channel Name="BOOL00171" Mapping="NSQX21.2" Variable="bAMM_A9450" Address="Cyclic#6.EngineGeneral::bAMM_9450" SODIndex="0x2580" SODSubIndex="0x16" />
+			<Channel Name="BOOL00172" Mapping="NSQX21.3" Variable="bAMM_A9451" Address="Cyclic#6.EngineGeneral::bAMM_9451" SODIndex="0x2580" SODSubIndex="0x16" />
+			<Channel Name="BOOL00173" Mapping="NSQX21.4" Variable="bAMM_A9452" Address="Cyclic#6.EngineGeneral::bAMM_9452" SODIndex="0x2580" SODSubIndex="0x16" />
+			<Channel Name="BOOL00174" Mapping="NSQX21.5" Variable="bAMM_A9453" Address="Cyclic#6.EngineGeneral::bAMM_9453" SODIndex="0x2580" SODSubIndex="0x16" />
+			<Channel Name="BOOL00175" Mapping="NSQX21.6" Variable="bAMM_A9454" Address="Cyclic#6.EngineGeneral::bAMM_9454" SODIndex="0x2580" SODSubIndex="0x16" />
+			<Channel Name="BOOL00176" Mapping="NSQX21.7" Variable="bAMM_A9455" Address="Cyclic#6.EngineGeneral::bAMM_9455" SODIndex="0x2580" SODSubIndex="0x16" />
+			<Channel Name="BOOL00177" Mapping="NSQX22.0" Variable="bAMM_A9456" Address="Cyclic#6.EngineGeneral::bAMM_9456" SODIndex="0x2580" SODSubIndex="0x17" />
+			<Channel Name="BOOL00178" Mapping="NSQX22.1" Variable="bAMM_A9457" Address="Cyclic#6.EngineGeneral::bAMM_9457" SODIndex="0x2580" SODSubIndex="0x17" />
+			<Channel Name="BOOL00179" Mapping="NSQX22.2" Variable="bAMM_A9458" Address="Cyclic#6.EngineGeneral::bAMM_9458" SODIndex="0x2580" SODSubIndex="0x17" />
+			<Channel Name="BOOL00180" Mapping="NSQX22.3" Variable="bAMM_A9459" Address="Cyclic#6.EngineGeneral::bAMM_9459" SODIndex="0x2580" SODSubIndex="0x17" />
+			<Channel Name="BOOL00182" Mapping="NSQX22.5" Variable="bOUT_PARA_SafetyLoop_A2_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_SafetyLoop_A2_Exist" SODIndex="0x2580" SODSubIndex="0x17" />
+			<Channel Name="BOOL00183" Mapping="NSQX22.6" Variable="bOUT_PARA_ERV_Cust_Active" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_ERV_Cust_Active" SODIndex="0x2580" SODSubIndex="0x17" />
+			<Channel Name="BOOL00184" Mapping="NSQX22.7" Variable="bOUT_PARA_ERV_ColdCountry_Act" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_ERV_ColdCountry_Active" SODIndex="0x2580" SODSubIndex="0x17" />
+			<Channel Name="BOOL00185" Mapping="NSQX23.0" Variable="bOUT_PARA_ER_Door_MonActive" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_ER_Door_MonActive" SODIndex="0x2580" SODSubIndex="0x18" />
+			<Channel Name="BOOL00186" Mapping="NSQX23.1" Variable="bOUT_PARA_GT2_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_GT2_Exist" SODIndex="0x2580" SODSubIndex="0x18" />
+			<Channel Name="BOOL00187" Mapping="NSQX23.2" Variable="bOUT_PARA_GT3_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_GT3_Exist" SODIndex="0x2580" SODSubIndex="0x18" />
+			<Channel Name="BOOL00188" Mapping="NSQX23.3" Variable="bOUT_PARA_GT4_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_GT4_Exist" SODIndex="0x2580" SODSubIndex="0x18" />
+			<Channel Name="BOOL00189" Mapping="NSQX23.4" Variable="bOUT_PARA_DCGA_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_DCGA_Exist" SODIndex="0x2580" SODSubIndex="0x18" />
+			<Channel Name="BOOL00190" Mapping="NSQX23.5" Variable="bOUT_PARA_SysPurge_MonActive" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_SysPurge_MonActive" SODIndex="0x2580" SODSubIndex="0x18" />
+			<Channel Name="BOOL00191" Mapping="NSQX23.6" Variable="bOUT_PARA_HWcirc_Cust_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_HWcirc_Cust_Exist" SODIndex="0x2580" SODSubIndex="0x18" />
+			<Channel Name="BOOL00192" Mapping="NSQX23.7" Variable="bOUT_PARA_PS_HW_Lo_MuteAcive" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_PS_HW_Lo_MuteActive" SODIndex="0x2580" SODSubIndex="0x18" />
+			<Channel Name="BOOL00193" Mapping="NSQX24.0" Variable="bOUT_PARA_LS_HWHT_Lo_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_LS_HWHT_Lo_Exist" SODIndex="0x2580" SODSubIndex="0x19" />
+			<Channel Name="BOOL00194" Mapping="NSQX24.1" Variable="bOUT_PARA_PS1_HWHT_Hi_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_PS1_HWHT_Hi_Exist" SODIndex="0x2580" SODSubIndex="0x19" />
+			<Channel Name="BOOL00195" Mapping="NSQX24.2" Variable="bOUT_PARA_PS2_HWHT_Hi_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_PS2_HWHT_Hi_Exist" SODIndex="0x2580" SODSubIndex="0x19" />
+			<Channel Name="BOOL00196" Mapping="NSQX24.3" Variable="bOUT_PARA_PS1_HWHT_Lo_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_PS1_HWHT_Lo_Exist" SODIndex="0x2580" SODSubIndex="0x19" />
+			<Channel Name="BOOL00197" Mapping="NSQX24.4" Variable="bOUT_PARA_PS2_HWHT_Lo_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_PS2_HWHT_Lo_Exist" SODIndex="0x2580" SODSubIndex="0x19" />
+			<Channel Name="BOOL00198" Mapping="NSQX24.5" Variable="bOUT_PARA_TS1_HWHT_Hi_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_TS1_HWHT_Hi_Exist" SODIndex="0x2580" SODSubIndex="0x19" />
+			<Channel Name="BOOL00199" Mapping="NSQX24.6" Variable="bOUT_PARA_TS2_HWHT_Hi_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_TS2_HWHT_Hi_Exist" SODIndex="0x2580" SODSubIndex="0x19" />
+			<Channel Name="BOOL00200" Mapping="NSQX24.7" Variable="bOUT_PARA_FS_HWHT_Lo_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_FS_HWHT_Lo_Exist" SODIndex="0x2580" SODSubIndex="0x19" />
+			<Channel Name="BOOL00201" Mapping="NSQX25.0" Variable="bOUT_PARA_LS_HWLT_Lo_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_LS_HWLT_Lo_Exist" SODIndex="0x2580" SODSubIndex="0x1A" />
+			<Channel Name="BOOL00202" Mapping="NSQX25.1" Variable="bOUT_PARA_PS1_HWLT_Hi_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_PS1_HWLT_Hi_Exist" SODIndex="0x2580" SODSubIndex="0x1A" />
+			<Channel Name="BOOL00203" Mapping="NSQX25.2" Variable="bOUT_PARA_PS2_HWLT_Hi_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_PS2_HWLT_Hi_Exist" SODIndex="0x2580" SODSubIndex="0x1A" />
+			<Channel Name="BOOL00204" Mapping="NSQX25.3" Variable="bOUT_PARA_PS1_HWLT_Lo_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_PS1_HWLT_Lo_Exist" SODIndex="0x2580" SODSubIndex="0x1A" />
+			<Channel Name="BOOL00205" Mapping="NSQX25.4" Variable="bOUT_PARA_PS2_HWLT_Lo_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_PS2_HWLT_Lo_Exist" SODIndex="0x2580" SODSubIndex="0x1A" />
+			<Channel Name="BOOL00206" Mapping="NSQX25.5" Variable="bOUT_PARA_TS1_HWLT_Hi_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_TS1_HWLT_Hi_Exist" SODIndex="0x2580" SODSubIndex="0x1A" />
+			<Channel Name="BOOL00207" Mapping="NSQX25.6" Variable="bOUT_PARA_TS2_HWLT_Hi_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_TS2_HWLT_Hi_Exist" SODIndex="0x2580" SODSubIndex="0x1A" />
+			<Channel Name="BOOL00208" Mapping="NSQX25.7" Variable="bOUT_PARA_FS_HWLT_Lo_Exist" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_FS_HWLT_Lo_Exist" SODIndex="0x2580" SODSubIndex="0x1A" />
+			<Channel Name="BOOL00209" Mapping="NSQX26.0" Variable="bOUT_PARA_Pr_EG_sMonActive" Address="Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_Pr_EG_sMonActive" SODIndex="0x2580" SODSubIndex="0x1B" />
+			<Channel Name="BOOL00210" Mapping="NSQX26.1" Variable="bOUT_F16_ScavFlapPos_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F16_ScavFlapPos_OK" SODIndex="0x2580" SODSubIndex="0x1B" />
+			<Channel Name="BOOL00211" Mapping="NSQX26.2" Variable="bOUT_F16_ScavFlapPos_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F16_ScavFlapPos_OK_PC" SODIndex="0x2580" SODSubIndex="0x1B" />
+			<Channel Name="BOOL00212" Mapping="NSQX26.3" Variable="bOUT_F16_DI_ScavFlapClosed" Address="Cyclic#6.EngineGeneral::bSafeOUT_F16_DI_ScavFlapClosed" SODIndex="0x2580" SODSubIndex="0x1B" />
+			<Channel Name="BOOL00213" Mapping="NSQX26.4" Variable="bOUT_F16_TS_ScavFlap_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F16_TS_ScavFlap_OK" SODIndex="0x2580" SODSubIndex="0x1B" />
+			<Channel Name="BOOL00214" Mapping="NSQX26.5" Variable="bOUT_F17_Purge_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F17_Purge_OK" SODIndex="0x2580" SODSubIndex="0x1B" />
+			<Channel Name="BOOL00215" Mapping="NSQX26.6" Variable="bOUT_F20_HWcirc_Cust_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_HWcirc_Cust_OK" SODIndex="0x2580" SODSubIndex="0x1B" />
+			<Channel Name="BOOL00216" Mapping="NSQX26.7" Variable="bOUT_F20_LS_HWHT_Lo_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_LS_HWHT_Lo_OK" SODIndex="0x2580" SODSubIndex="0x1B" />
+			<Channel Name="BOOL00217" Mapping="NSQX27.0" Variable="bOUT_F20_PS1_HWHT_Hi_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_PS1_HWHT_Hi_OK" SODIndex="0x2580" SODSubIndex="0x1C" />
+			<Channel Name="BOOL00218" Mapping="NSQX27.1" Variable="bOUT_F20_PS2_HWHT_Hi_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_PS2_HWHT_Hi_OK" SODIndex="0x2580" SODSubIndex="0x1C" />
+			<Channel Name="BOOL00219" Mapping="NSQX27.2" Variable="bOUT_F20_PS1_HWHT_Lo_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_PS1_HWHT_Lo_OK" SODIndex="0x2580" SODSubIndex="0x1C" />
+			<Channel Name="BOOL00220" Mapping="NSQX27.3" Variable="bOUT_F20_PS1_HWHT_Lo_DI" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_PS1_HWHT_Lo_DI" SODIndex="0x2580" SODSubIndex="0x1C" />
+			<Channel Name="BOOL00221" Mapping="NSQX27.4" Variable="bOUT_F20_PS2_HWHT_Lo_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_PS2_HWHT_Lo_OK" SODIndex="0x2580" SODSubIndex="0x1C" />
+			<Channel Name="BOOL00222" Mapping="NSQX27.5" Variable="bOUT_F20_PS2_HWHT_Lo_DI" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_PS2_HWHT_Lo_DI" SODIndex="0x2580" SODSubIndex="0x1C" />
+			<Channel Name="BOOL00223" Mapping="NSQX27.6" Variable="bOUT_F20_TS1_HWHT_Hi_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_TS1_HWHT_Hi_OK" SODIndex="0x2580" SODSubIndex="0x1C" />
+			<Channel Name="BOOL00224" Mapping="NSQX27.7" Variable="bOUT_F20_TS2_HWHT_Hi_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_TS2_HWHT_Hi_OK" SODIndex="0x2580" SODSubIndex="0x1C" />
+			<Channel Name="BOOL00225" Mapping="NSQX28.0" Variable="bOUT_F20_FS_HWHT_Lo_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_FS_HWHT_Lo_OK" SODIndex="0x2580" SODSubIndex="0x1D" />
+			<Channel Name="BOOL00226" Mapping="NSQX28.1" Variable="bOUT_F20_FS_HWHT_Lo_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_FS_HWHT_Lo_OK_PC" SODIndex="0x2580" SODSubIndex="0x1D" />
+			<Channel Name="BOOL00227" Mapping="NSQX28.2" Variable="bOUT_F20_FS_HWHT_Lo_DI" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_FS_HWHT_Lo_DI" SODIndex="0x2580" SODSubIndex="0x1D" />
+			<Channel Name="BOOL00228" Mapping="NSQX28.3" Variable="bOUT_F20_LS_HWLT_Lo_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_LS_HWLT_Lo_OK" SODIndex="0x2580" SODSubIndex="0x1D" />
+			<Channel Name="BOOL00229" Mapping="NSQX28.4" Variable="bOUT_F20_PS1_HWLT_Hi_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_PS1_HWLT_Hi_OK" SODIndex="0x2580" SODSubIndex="0x1D" />
+			<Channel Name="BOOL00230" Mapping="NSQX28.5" Variable="bOUT_F20_PS2_HWLT_Hi_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_PS2_HWLT_Hi_OK" SODIndex="0x2580" SODSubIndex="0x1D" />
+			<Channel Name="BOOL00231" Mapping="NSQX28.6" Variable="bOUT_F20_PS1_HWLT_Lo_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_PS1_HWLT_Lo_OK" SODIndex="0x2580" SODSubIndex="0x1D" />
+			<Channel Name="BOOL00232" Mapping="NSQX28.7" Variable="bOUT_F20_PS1_HWLT_Lo_DI" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_PS1_HWLT_Lo_DI" SODIndex="0x2580" SODSubIndex="0x1D" />
+			<Channel Name="BOOL00233" Mapping="NSQX29.0" Variable="bOUT_F20_PS2_HWLT_Lo_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_PS2_HWLT_Lo_OK" SODIndex="0x2580" SODSubIndex="0x1E" />
+			<Channel Name="BOOL00234" Mapping="NSQX29.1" Variable="bOUT_F20_PS2_HWLT_Lo_DI" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_PS2_HWLT_Lo_DI" SODIndex="0x2580" SODSubIndex="0x1E" />
+			<Channel Name="BOOL00235" Mapping="NSQX29.2" Variable="bOUT_F20_TS1_HWLT_Hi_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_TS1_HWLT_Hi_OK" SODIndex="0x2580" SODSubIndex="0x1E" />
+			<Channel Name="BOOL00236" Mapping="NSQX29.3" Variable="bOUT_F20_TS2_HWLT_Hi_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_TS2_HWLT_Hi_OK" SODIndex="0x2580" SODSubIndex="0x1E" />
+			<Channel Name="BOOL00237" Mapping="NSQX29.4" Variable="bOUT_F20_FS_HWLT_Lo_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_FS_HWLT_Lo_OK" SODIndex="0x2580" SODSubIndex="0x1E" />
+			<Channel Name="BOOL00238" Mapping="NSQX29.5" Variable="bOUT_F20_FS_HWLT_Lo_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_FS_HWLT_Lo_OK_PC" SODIndex="0x2580" SODSubIndex="0x1E" />
+			<Channel Name="BOOL00239" Mapping="NSQX29.6" Variable="bOUT_F20_FS_HWLT_Lo_DI" Address="Cyclic#6.EngineGeneral::bSafeOUT_F20_FS_HWLT_Lo_DI" SODIndex="0x2580" SODSubIndex="0x1E" />
+			<Channel Name="BOOL00240" Mapping="NSQX29.7" Variable="bOUT_F21_Pr_EG_Hi_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F21_Pr_EG_Hi_OK" SODIndex="0x2580" SODSubIndex="0x1E" />
+			<Channel Name="BOOL00241" Mapping="NSQX30.0" Variable="bOUT_F09_Door_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_Door_OK" SODIndex="0x2580" SODSubIndex="0x1F" />
+			<Channel Name="BOOL00242" Mapping="NSQX30.1" Variable="bOUT_F09_INL1_Fan_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL1_Fan_OK" SODIndex="0x2580" SODSubIndex="0x1F" />
+			<Channel Name="BOOL00243" Mapping="NSQX30.2" Variable="bOUT_F09_INL1_Fan_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL1_Fan_OK_PC" SODIndex="0x2580" SODSubIndex="0x1F" />
+			<Channel Name="BOOL00244" Mapping="NSQX30.3" Variable="bOUT_F09_INL2_Fan_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL2_Fan_OK" SODIndex="0x2580" SODSubIndex="0x1F" />
+			<Channel Name="BOOL00245" Mapping="NSQX30.4" Variable="bOUT_F09_INL2_Fan_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL2_Fan_OK_PC" SODIndex="0x2580" SODSubIndex="0x1F" />
+			<Channel Name="BOOL00246" Mapping="NSQX30.5" Variable="bOUT_F09_INL3_Fan_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL3_Fan_OK" SODIndex="0x2580" SODSubIndex="0x1F" />
+			<Channel Name="BOOL00247" Mapping="NSQX30.6" Variable="bOUT_F09_INL3_Fan_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL3_Fan_OK_PC" SODIndex="0x2580" SODSubIndex="0x1F" />
+			<Channel Name="BOOL00248" Mapping="NSQX30.7" Variable="bOUT_F09_INL4_Fan_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL4_Fan_OK" SODIndex="0x2580" SODSubIndex="0x1F" />
+			<Channel Name="BOOL00249" Mapping="NSQX31.0" Variable="bOUT_F09_INL4_Fan_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL4_Fan_OK_PC" SODIndex="0x2580" SODSubIndex="0x20" />
+			<Channel Name="BOOL00250" Mapping="NSQX31.1" Variable="bOUT_F09_INL5_Fan_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL5_Fan_OK" SODIndex="0x2580" SODSubIndex="0x20" />
+			<Channel Name="BOOL00251" Mapping="NSQX31.2" Variable="bOUT_F09_INL5_Fan_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL5_Fan_OK_PC" SODIndex="0x2580" SODSubIndex="0x20" />
+			<Channel Name="BOOL00252" Mapping="NSQX31.3" Variable="bOUT_F09_INL6_Fan_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL6_Fan_OK" SODIndex="0x2580" SODSubIndex="0x20" />
+			<Channel Name="BOOL00253" Mapping="NSQX31.4" Variable="bOUT_F09_INL6_Fan_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL6_Fan_OK_PC" SODIndex="0x2580" SODSubIndex="0x20" />
+			<Channel Name="BOOL00254" Mapping="NSQX31.5" Variable="bOUT_F09_INL1_Lou_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL1_Lou_OK" SODIndex="0x2580" SODSubIndex="0x20" />
+			<Channel Name="BOOL00255" Mapping="NSQX31.6" Variable="bOUT_F09_INL1_Lou_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL1_Lou_OK_PC" SODIndex="0x2580" SODSubIndex="0x20" />
+			<Channel Name="BOOL00256" Mapping="NSQX31.7" Variable="bOUT_F09_INL2_Lou_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL2_Lou_OK" SODIndex="0x2580" SODSubIndex="0x20" />
+			<Channel Name="BOOL00257" Mapping="NSQX32.0" Variable="bOUT_F09_INL2_Lou_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL2_Lou_OK_PC" SODIndex="0x2580" SODSubIndex="0x21" />
+			<Channel Name="BOOL00258" Mapping="NSQX32.1" Variable="bOUT_F09_INL3_Lou_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL3_Lou_OK" SODIndex="0x2580" SODSubIndex="0x21" />
+			<Channel Name="BOOL00259" Mapping="NSQX32.2" Variable="bOUT_F09_INL3_Lou_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL3_Lou_OK_PC" SODIndex="0x2580" SODSubIndex="0x21" />
+			<Channel Name="BOOL00260" Mapping="NSQX32.3" Variable="bOUT_F09_INL4_Lou_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL4_Lou_OK" SODIndex="0x2580" SODSubIndex="0x21" />
+			<Channel Name="BOOL00261" Mapping="NSQX32.4" Variable="bOUT_F09_INL4_Lou_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL4_Lou_OK_PC" SODIndex="0x2580" SODSubIndex="0x21" />
+			<Channel Name="BOOL00262" Mapping="NSQX32.5" Variable="bOUT_F09_INL5_Lou_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL5_Lou_OK" SODIndex="0x2580" SODSubIndex="0x21" />
+			<Channel Name="BOOL00263" Mapping="NSQX32.6" Variable="bOUT_F09_INL5_Lou_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL5_Lou_OK_PC" SODIndex="0x2580" SODSubIndex="0x21" />
+			<Channel Name="BOOL00264" Mapping="NSQX32.7" Variable="bOUT_F09_INL6_Lou_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL6_Lou_OK" SODIndex="0x2580" SODSubIndex="0x21" />
+			<Channel Name="BOOL00265" Mapping="NSQX33.0" Variable="bOUT_F09_INL6_Lou_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_INL6_Lou_OK_PC" SODIndex="0x2580" SODSubIndex="0x22" />
+			<Channel Name="BOOL00266" Mapping="NSQX33.1" Variable="bOUT_F09_OTL1_Lou_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL1_Lou_OK" SODIndex="0x2580" SODSubIndex="0x22" />
+			<Channel Name="BOOL00267" Mapping="NSQX33.2" Variable="bOUT_F09_OTL1_Lou_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL1_Lou_OK_PC" SODIndex="0x2580" SODSubIndex="0x22" />
+			<Channel Name="BOOL00268" Mapping="NSQX33.3" Variable="bOUT_F09_OTL2_Lou_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL2_Lou_OK" SODIndex="0x2580" SODSubIndex="0x22" />
+			<Channel Name="BOOL00269" Mapping="NSQX33.4" Variable="bOUT_F09_OTL2_Lou_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL2_Lou_OK_PC" SODIndex="0x2580" SODSubIndex="0x22" />
+			<Channel Name="BOOL00270" Mapping="NSQX33.5" Variable="bOUT_F09_OTL3_Lou_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL3_Lou_OK" SODIndex="0x2580" SODSubIndex="0x22" />
+			<Channel Name="BOOL00271" Mapping="NSQX33.6" Variable="bOUT_F09_OTL3_Lou_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL3_Lou_OK_PC" SODIndex="0x2580" SODSubIndex="0x22" />
+			<Channel Name="BOOL00272" Mapping="NSQX33.7" Variable="bOUT_F09_OTL4_Lou_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL4_Lou_OK" SODIndex="0x2580" SODSubIndex="0x22" />
+			<Channel Name="BOOL00273" Mapping="NSQX34.0" Variable="bOUT_F09_OTL4_Lou_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL4_Lou_OK_PC" SODIndex="0x2580" SODSubIndex="0x23" />
+			<Channel Name="BOOL00274" Mapping="NSQX34.1" Variable="bOUT_F09_OTL5_Lou_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL5_Lou_OK" SODIndex="0x2580" SODSubIndex="0x23" />
+			<Channel Name="BOOL00275" Mapping="NSQX34.2" Variable="bOUT_F09_OTL5_Lou_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL5_Lou_OK_PC" SODIndex="0x2580" SODSubIndex="0x23" />
+			<Channel Name="BOOL00276" Mapping="NSQX34.3" Variable="bOUT_F09_OTL6_Lou_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL6_Lou_OK" SODIndex="0x2580" SODSubIndex="0x23" />
+			<Channel Name="BOOL00277" Mapping="NSQX34.4" Variable="bOUT_F09_OTL6_Lou_OK_PC" Address="Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL6_Lou_OK_PC" SODIndex="0x2580" SODSubIndex="0x23" />
+			<Channel Name="BOOL00278" Mapping="NSQX34.5" Variable="bOUT_F12_DI_GT1_SafeDevOK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_DI_GT1_SafeDevOK" SODIndex="0x2580" SODSubIndex="0x23" />
+			<Channel Name="BOOL00279" Mapping="NSQX34.6" Variable="bOUT_F12_DI_GT2_SafeDevOK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_DI_GT2_SafeDevOK" SODIndex="0x2580" SODSubIndex="0x23" />
+			<Channel Name="BOOL00280" Mapping="NSQX34.7" Variable="bOUT_F12_DI_GT3_SafeDevOK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_DI_GT3_SafeDevOK" SODIndex="0x2580" SODSubIndex="0x23" />
+			<Channel Name="BOOL00281" Mapping="NSQX35.0" Variable="bOUT_F12_DI_GT4_SafeDevOK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_DI_GT4_SafeDevOK" SODIndex="0x2580" SODSubIndex="0x24" />
+			<Channel Name="BOOL00282" Mapping="NSQX35.1" Variable="bOUT_F12_DI_DCGA_SafeDevOK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_DI_DCGA_SafeDevOK" SODIndex="0x2580" SODSubIndex="0x24" />
+			<Channel Name="BOOL00283" Mapping="NSQX35.2" Variable="bOUT_F12_DCGA_OK" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_DCGA_OK" SODIndex="0x2580" SODSubIndex="0x24" />
+			<Channel Name="BOOL00284" Mapping="NSQX35.3" Variable="bOUT_F12_Rel_GV_DCGA" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV_DCGA" SODIndex="0x2580" SODSubIndex="0x24" />
+			<Channel Name="BOOL00285" Mapping="NSQX35.4" Variable="bOUT_F12_Rel_GVa_DCGA_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GVa_DCGA_PS" SODIndex="0x2580" SODSubIndex="0x24" />
+			<Channel Name="BOOL00286" Mapping="NSQX35.5" Variable="bOUT_F12_Rel_GVb_DCGA_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GVb_DCGA_PS" SODIndex="0x2580" SODSubIndex="0x24" />
+			<Channel Name="BOOL00287" Mapping="NSQX35.6" Variable="bOUT_F12_DCGA_SD_Dem" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_DCGA_SD_Dem" SODIndex="0x2580" SODSubIndex="0x24" />
+			<Channel Name="BOOL00288" Mapping="NSQX35.7" Variable="bOUT_F12_DCGA_SD_Dem_PS" Address="Cyclic#6.EngineGeneral::bSafeOUT_F12_DCGA_SD_Dem_PS" SODIndex="0x2580" SODSubIndex="0x24" />
+			<Channel Name="BOOL00289" Mapping="NSQX36.0" Variable="bAMM_A9480" Address="Cyclic#6.EngineGeneral::bAMM_9480" SODIndex="0x2580" SODSubIndex="0x25" />
+			<Channel Name="BOOL00290" Mapping="NSQX36.1" Variable="bAMM_A9481" Address="Cyclic#6.EngineGeneral::bAMM_9481" SODIndex="0x2580" SODSubIndex="0x25" />
+			<Channel Name="BOOL00291" Mapping="NSQX36.2" Variable="bAMM_A9482" Address="Cyclic#6.EngineGeneral::bAMM_9482" SODIndex="0x2580" SODSubIndex="0x25" />
+			<Channel Name="BOOL00292" Mapping="NSQX36.3" Variable="bAMM_A9483" Address="Cyclic#6.EngineGeneral::bAMM_9483" SODIndex="0x2580" SODSubIndex="0x25" />
+			<Channel Name="BOOL00293" Mapping="NSQX36.4" Variable="bAMM_A9484" Address="Cyclic#6.EngineGeneral::bAMM_9484" SODIndex="0x2580" SODSubIndex="0x25" />
+			<Channel Name="BOOL00294" Mapping="NSQX36.5" Variable="bAMM_W9627" Address="Cyclic#6.EngineGeneral::bAMM_9627" SODIndex="0x2580" SODSubIndex="0x25" />
+			<Channel Name="BOOL00295" Mapping="NSQX36.6" Variable="bAMM_W9628" Address="Cyclic#6.EngineGeneral::bAMM_9628" SODIndex="0x2580" SODSubIndex="0x25" />
+			<Channel Name="BOOL00296" Mapping="NSQX36.7" Variable="bAMM_W9629" Address="Cyclic#6.EngineGeneral::bAMM_9629" SODIndex="0x2580" SODSubIndex="0x25" />
+			<Channel Name="BOOL00297" Mapping="NSQX37.0" Variable="bAMM_W9630" Address="Cyclic#6.EngineGeneral::bAMM_9630" SODIndex="0x2580" SODSubIndex="0x26" />
+			<Channel Name="BOOL00298" Mapping="NSQX37.1" Variable="bAMM_W9631" Address="Cyclic#6.EngineGeneral::bAMM_9631" SODIndex="0x2580" SODSubIndex="0x26" />
+			<Channel Name="BOOL00299" Mapping="NSQX37.2" Variable="bAMM_W9632" Address="Cyclic#6.EngineGeneral::bAMM_9632" SODIndex="0x2580" SODSubIndex="0x26" />
+			<Channel Name="BOOL00300" Mapping="NSQX37.3" Variable="bAMM_W9633" Address="Cyclic#6.EngineGeneral::bAMM_9633" SODIndex="0x2580" SODSubIndex="0x26" />
+			<Channel Name="BOOL00301" Mapping="NSQX37.4" Variable="bAMM_W9634" Address="Cyclic#6.EngineGeneral::bAMM_9634" SODIndex="0x2580" SODSubIndex="0x26" />
+			<Channel Name="BOOL00302" Mapping="NSQX37.5" Variable="bAMM_W9635" Address="Cyclic#6.EngineGeneral::bAMM_9635" SODIndex="0x2580" SODSubIndex="0x26" />
+			<Channel Name="BOOL00303" Mapping="NSQX37.6" Variable="bAMM_W9636" Address="Cyclic#6.EngineGeneral::bAMM_9636" SODIndex="0x2580" SODSubIndex="0x26" />
+			<Channel Name="BOOL00304" Mapping="NSQX37.7" Variable="bAMM_W9637" Address="Cyclic#6.EngineGeneral::bAMM_9637" SODIndex="0x2580" SODSubIndex="0x26" />
+			<Channel Name="BOOL00305" Mapping="NSQX38.0" Variable="bAMM_W9638" Address="Cyclic#6.EngineGeneral::bAMM_9638" SODIndex="0x2580" SODSubIndex="0x27" />
+			<Channel Name="BOOL00306" Mapping="NSQX38.1" Variable="bAMM_W9639" Address="Cyclic#6.EngineGeneral::bAMM_9639" SODIndex="0x2580" SODSubIndex="0x27" />
+			<Channel Name="BOOL00307" Mapping="NSQX38.2" Variable="bAMM_W9640" Address="Cyclic#6.EngineGeneral::bAMM_9640" SODIndex="0x2580" SODSubIndex="0x27" />
+			<Channel Name="BOOL00308" Mapping="NSQX38.3" Variable="bAMM_W9641" Address="Cyclic#6.EngineGeneral::bAMM_9641" SODIndex="0x2580" SODSubIndex="0x27" />
+			<Channel Name="BOOL00309" Mapping="NSQX38.4" Variable="bAMM_W9642" Address="Cyclic#6.EngineGeneral::bAMM_9642" SODIndex="0x2580" SODSubIndex="0x27" />
+			<Channel Name="BOOL00310" Mapping="NSQX38.5" Variable="bAMM_W9643" Address="Cyclic#6.EngineGeneral::bAMM_9643" SODIndex="0x2580" SODSubIndex="0x27" />
+			<Channel Name="BOOL00311" Mapping="NSQX38.6" Variable="bAMM_W9644" Address="Cyclic#6.EngineGeneral::bAMM_9644" SODIndex="0x2580" SODSubIndex="0x27" />
+			<Channel Name="BOOL00312" Mapping="NSQX38.7" Variable="bAMM_W9645" Address="Cyclic#6.EngineGeneral::bAMM_9645" SODIndex="0x2580" SODSubIndex="0x27" />
+			<Channel Name="BOOL00313" Mapping="NSQX39.0" Variable="bAMM_W9646" Address="Cyclic#6.EngineGeneral::bAMM_9646" SODIndex="0x2580" SODSubIndex="0x28" />
+			<Channel Name="BOOL00314" Mapping="NSQX39.1" Variable="bAMM_W9647" Address="Cyclic#6.EngineGeneral::bAMM_9647" SODIndex="0x2580" SODSubIndex="0x28" />
+			<Channel Name="BOOL00315" Mapping="NSQX39.2" Variable="bAMM_W9648" Address="Cyclic#6.EngineGeneral::bAMM_9648" SODIndex="0x2580" SODSubIndex="0x28" />
+			<Channel Name="BOOL00316" Mapping="NSQX39.3" Variable="bAMM_W9649" Address="Cyclic#6.EngineGeneral::bAMM_9649" SODIndex="0x2580" SODSubIndex="0x28" />
+			<Channel Name="BOOL00317" Mapping="NSQX39.4" Variable="bAMM_W9650" Address="Cyclic#6.EngineGeneral::bAMM_9650" SODIndex="0x2580" SODSubIndex="0x28" />
+			<Channel Name="BOOL00318" Mapping="NSQX39.5" Variable="bAMM_W9651" Address="Cyclic#6.EngineGeneral::bAMM_9651" SODIndex="0x2580" SODSubIndex="0x28" />
+			<Channel Name="BOOL00319" Mapping="NSQX39.6" Variable="bAMM_W9652" Address="Cyclic#6.EngineGeneral::bAMM_9652" SODIndex="0x2580" SODSubIndex="0x28" />
+			<Channel Name="BOOL00320" Mapping="NSQX39.7" Variable="bAMM_W9653" Address="Cyclic#6.EngineGeneral::bAMM_9653" SODIndex="0x2580" SODSubIndex="0x28" />
+			<Channel Name="BOOL00321" Mapping="NSQX40.0" Variable="bAMM_W9654" Address="Cyclic#6.EngineGeneral::bAMM_9654" SODIndex="0x2580" SODSubIndex="0x29" />
+			<Channel Name="BOOL00322" Mapping="NSQX40.1" Variable="bAMM_W9655" Address="Cyclic#6.EngineGeneral::bAMM_9655" SODIndex="0x2580" SODSubIndex="0x29" />
+			<Channel Name="BOOL00323" Mapping="NSQX40.2" Variable="bAMM_W9656" Address="Cyclic#6.EngineGeneral::bAMM_9656" SODIndex="0x2580" SODSubIndex="0x29" />
+			<Channel Name="BOOL00324" Mapping="NSQX40.3" Variable="bAMM_W9657" Address="Cyclic#6.EngineGeneral::bAMM_9657" SODIndex="0x2580" SODSubIndex="0x29" />
+			<Channel Name="BOOL00325" Mapping="NSQX40.4" Variable="bAMM_W9658" Address="Cyclic#6.EngineGeneral::bAMM_9658" SODIndex="0x2580" SODSubIndex="0x29" />
+			<Channel Name="BOOL00326" Mapping="NSQX40.5" Variable="bAMM_W9659" Address="Cyclic#6.EngineGeneral::bAMM_9659" SODIndex="0x2580" SODSubIndex="0x29" />
+			<Channel Name="BOOL00327" Mapping="NSQX40.6" Variable="bAMM_W9660" Address="Cyclic#6.EngineGeneral::bAMM_9660" SODIndex="0x2580" SODSubIndex="0x29" />
+			<Channel Name="BOOL00328" Mapping="NSQX40.7" Variable="bAMM_W9661" Address="Cyclic#6.EngineGeneral::bAMM_9661" SODIndex="0x2580" SODSubIndex="0x29" />
+			<Channel Name="BOOL00329" Mapping="NSQX41.0" Variable="bAMM_W9662" Address="Cyclic#6.EngineGeneral::bAMM_9662" SODIndex="0x2580" SODSubIndex="0x2A" />
+			<Channel Name="BOOL00330" Mapping="NSQX41.1" Variable="bAMM_W9663" Address="Cyclic#6.EngineGeneral::bAMM_9663" SODIndex="0x2580" SODSubIndex="0x2A" />
+			<Channel Name="BOOL00331" Mapping="NSQX41.2" Variable="bAMM_W9664" Address="Cyclic#6.EngineGeneral::bAMM_9664" SODIndex="0x2580" SODSubIndex="0x2A" />
+			<Channel Name="BOOL00332" Mapping="NSQX41.3" Variable="bAMM_W9665" Address="Cyclic#6.EngineGeneral::bAMM_9665" SODIndex="0x2580" SODSubIndex="0x2A" />
+			<Channel Name="BOOL00333" Mapping="NSQX41.4" Variable="bAMM_W9666" Address="Cyclic#6.EngineGeneral::bAMM_9666" SODIndex="0x2580" SODSubIndex="0x2A" />
+			<Channel Name="BOOL00334" Mapping="NSQX41.5" Variable="bAMM_W9667" Address="Cyclic#6.EngineGeneral::bAMM_9667" SODIndex="0x2580" SODSubIndex="0x2A" />
+			<Channel Name="BOOL00335" Mapping="NSQX41.6" Variable="bAMM_W9668" Address="Cyclic#6.EngineGeneral::bAMM_9668" SODIndex="0x2580" SODSubIndex="0x2A" />
+			<Channel Name="BOOL00336" Mapping="NSQX41.7" Variable="bAMM_W9669" Address="Cyclic#6.EngineGeneral::bAMM_9669" SODIndex="0x2580" SODSubIndex="0x2A" />
+			<Channel Name="BOOL00337" Mapping="NSQX42.0" Variable="bAMM_W9670" Address="Cyclic#6.EngineGeneral::bAMM_9670" SODIndex="0x2580" SODSubIndex="0x2B" />
+			<Channel Name="BOOL00338" Mapping="NSQX42.1" Variable="bAMM_W9671" Address="Cyclic#6.EngineGeneral::bAMM_9671" SODIndex="0x2580" SODSubIndex="0x2B" />
+			<Channel Name="BOOL00339" Mapping="NSQX42.2" Variable="bAMM_W9672" Address="Cyclic#6.EngineGeneral::bAMM_9672" SODIndex="0x2580" SODSubIndex="0x2B" />
+			<Channel Name="BOOL00340" Mapping="NSQX42.3" Variable="bAMM_W9673" Address="Cyclic#6.EngineGeneral::bAMM_9673" SODIndex="0x2580" SODSubIndex="0x2B" />
+			<Channel Name="BOOL00341" Mapping="NSQX42.4" Variable="bAMM_W9674" Address="Cyclic#6.EngineGeneral::bAMM_9674" SODIndex="0x2580" SODSubIndex="0x2B" />
+			<Channel Name="BOOL00342" Mapping="NSQX42.5" Variable="bAMM_W9675" Address="Cyclic#6.EngineGeneral::bAMM_9675" SODIndex="0x2580" SODSubIndex="0x2B" />
+			<Channel Name="BOOL00343" Mapping="NSQX42.6" Variable="bAMM_W9676" Address="Cyclic#6.EngineGeneral::bAMM_9676" SODIndex="0x2580" SODSubIndex="0x2B" />
+			<Channel Name="BOOL00344" Mapping="NSQX42.7" Variable="bAMM_W9677" Address="Cyclic#6.EngineGeneral::bAMM_9677" SODIndex="0x2580" SODSubIndex="0x2B" />
+			<Channel Name="BOOL00345" Mapping="NSQX43.0" Variable="bAMM_W9678" Address="Cyclic#6.EngineGeneral::bAMM_9678" SODIndex="0x2580" SODSubIndex="0x2C" />
+			<Channel Name="BOOL00346" Mapping="NSQX43.1" Variable="bAMM_W9679" Address="Cyclic#6.EngineGeneral::bAMM_9679" SODIndex="0x2580" SODSubIndex="0x2C" />
+			<Channel Name="BOOL00347" Mapping="NSQX43.2" Variable="bAMM_W9680" Address="Cyclic#6.EngineGeneral::bAMM_9680" SODIndex="0x2580" SODSubIndex="0x2C" />
+			<Channel Name="BOOL00348" Mapping="NSQX43.3" Variable="bAMM_W9681" Address="Cyclic#6.EngineGeneral::bAMM_9681" SODIndex="0x2580" SODSubIndex="0x2C" />
+			<Channel Name="BOOL00349" Mapping="NSQX43.4" Variable="bAMM_W9682" Address="Cyclic#6.EngineGeneral::bAMM_9682" SODIndex="0x2580" SODSubIndex="0x2C" />
+			<Channel Name="BOOL00350" Mapping="NSQX43.5" Variable="bAMM_W9683" Address="Cyclic#6.EngineGeneral::bAMM_9683" SODIndex="0x2580" SODSubIndex="0x2C" />
+			<Channel Name="BOOL00351" Mapping="NSQX43.6" Variable="bAMM_W9684" Address="Cyclic#6.EngineGeneral::bAMM_9684" SODIndex="0x2580" SODSubIndex="0x2C" />
+			<Channel Name="BOOL00352" Mapping="NSQX43.7" Variable="bAMM_W9685" Address="Cyclic#6.EngineGeneral::bAMM_9685" SODIndex="0x2580" SODSubIndex="0x2C" />
+			<Channel Name="BOOL00353" Mapping="NSQX44.0" Variable="bAMM_W9686" Address="Cyclic#6.EngineGeneral::bAMM_9686" SODIndex="0x2580" SODSubIndex="0x2D" />
+			<Channel Name="BOOL00354" Mapping="NSQX44.1" Variable="bAMM_W9687" Address="Cyclic#6.EngineGeneral::bAMM_9687" SODIndex="0x2580" SODSubIndex="0x2D" />
+			<Channel Name="BOOL00355" Mapping="NSQX44.2" Variable="bAMM_W9688" Address="Cyclic#6.EngineGeneral::bAMM_9688" SODIndex="0x2580" SODSubIndex="0x2D" />
+			<Channel Name="BOOL00356" Mapping="NSQX44.3" Variable="bAMM_W9689" Address="Cyclic#6.EngineGeneral::bAMM_9689" SODIndex="0x2580" SODSubIndex="0x2D" />
+			<Channel Name="BOOL00357" Mapping="NSQX44.4" Variable="bAMM_W9690" Address="Cyclic#6.EngineGeneral::bAMM_9690" SODIndex="0x2580" SODSubIndex="0x2D" />
+			<Channel Name="BOOL00358" Mapping="NSQX44.5" Variable="bAMM_W9691" Address="Cyclic#6.EngineGeneral::bAMM_9691" SODIndex="0x2580" SODSubIndex="0x2D" />
+			<Channel Name="BOOL00359" Mapping="NSQX44.6" Variable="bAMM_W9692" Address="Cyclic#6.EngineGeneral::bAMM_9692" SODIndex="0x2580" SODSubIndex="0x2D" />
+			<Channel Name="BOOL00360" Mapping="NSQX44.7" Variable="bAMM_W9693" Address="Cyclic#6.EngineGeneral::bAMM_9693" SODIndex="0x2580" SODSubIndex="0x2D" />
+			<Channel Name="BOOL00361" Mapping="NSQX45.0" Variable="bAMM_W9694" Address="Cyclic#6.EngineGeneral::bAMM_9694" SODIndex="0x2580" SODSubIndex="0x2E" />
+			<Channel Name="BOOL00362" Mapping="NSQX45.1" Variable="bAMM_W9695" Address="Cyclic#6.EngineGeneral::bAMM_9695" SODIndex="0x2580" SODSubIndex="0x2E" />
+			<Channel Name="BOOL00363" Mapping="NSQX45.2" Variable="bAMM_W9696" Address="Cyclic#6.EngineGeneral::bAMM_9696" SODIndex="0x2580" SODSubIndex="0x2E" />
+			<Channel Name="BOOL00364" Mapping="NSQX45.3" Variable="bAMM_W9697" Address="Cyclic#6.EngineGeneral::bAMM_9697" SODIndex="0x2580" SODSubIndex="0x2E" />
+			<Channel Name="BOOL00365" Mapping="NSQX45.4" Variable="bAMM_W9698" Address="Cyclic#6.EngineGeneral::bAMM_9698" SODIndex="0x2580" SODSubIndex="0x2E" />
+			<Channel Name="BOOL00366" Mapping="NSQX45.5" Variable="bAMM_W9699" Address="Cyclic#6.EngineGeneral::bAMM_9699" SODIndex="0x2580" SODSubIndex="0x2E" />
+			<Channel Name="BOOL00367" Mapping="NSQX45.6" Variable="bAMM_W9700" Address="Cyclic#6.EngineGeneral::bAMM_9700" SODIndex="0x2580" SODSubIndex="0x2E" />
+			<Channel Name="BOOL00368" Mapping="NSQX45.7" Variable="bAMM_W9701" Address="Cyclic#6.EngineGeneral::bAMM_9701" SODIndex="0x2580" SODSubIndex="0x2E" />
+			<Channel Name="BOOL00369" Mapping="NSQX46.0" Variable="bAMM_W9702" Address="Cyclic#6.EngineGeneral::bAMM_9702" SODIndex="0x2580" SODSubIndex="0x2F" />
+			<Channel Name="BOOL00370" Mapping="NSQX46.1" Variable="bAMM_W9703" Address="Cyclic#6.EngineGeneral::bAMM_9703" SODIndex="0x2580" SODSubIndex="0x2F" />
+			<Channel Name="BOOL00371" Mapping="NSQX46.2" Variable="bAMM_W9704" Address="Cyclic#6.EngineGeneral::bAMM_9704" SODIndex="0x2580" SODSubIndex="0x2F" />
+			<Channel Name="INT0001" Mapping="NSQW48" Variable="iOUT_F09_Nr_PC_NotDone" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_Nr_PC_NotDone" SODIndex="0x2580" SODSubIndex="0x31" />
+			<Channel Name="UINT0001" Mapping="NSQW64" Variable="iOUT_PARA_N_EngNom" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[0]" SODIndex="0x2580" SODSubIndex="0x39" />
+			<Channel Name="UINT0002" Mapping="NSQW66" Variable="iOUT_PARA_N_EngAct_HiHi_Diff" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[1]" SODIndex="0x2580" SODSubIndex="0x3A" />
+			<Channel Name="UINT0003" Mapping="NSQW68" Variable="iOUT_PARA_N_Pr_EO_LoLo_Lim1" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[2]" SODIndex="0x2580" SODSubIndex="0x3B" />
+			<Channel Name="UINT0004" Mapping="NSQW70" Variable="iOUT_PARA_N_Pr_EO_LoLo_Lim2" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[3]" SODIndex="0x2580" SODSubIndex="0x3C" />
+			<Channel Name="UINT0005" Mapping="NSQW72" Variable="iOUT_PARA_Pr_EO_LoLo_LimN1" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[4]" SODIndex="0x2580" SODSubIndex="0x3D" />
+			<Channel Name="UINT0006" Mapping="NSQW74" Variable="iOUT_PARA_Pr_EO_LoLo_LimN2" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[5]" SODIndex="0x2580" SODSubIndex="0x3E" />
+			<Channel Name="UINT0007" Mapping="NSQW76" Variable="iOUT_PARA_Pr_EO_Diff_EngStop" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[6]" SODIndex="0x2580" SODSubIndex="0x3F" />
+			<Channel Name="UINT0008" Mapping="NSQW78" Variable="iOUT_PARA_Pr_EO_HiHi_EngStop" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[7]" SODIndex="0x2580" SODSubIndex="0x40" />
+			<Channel Name="UINT0009" Mapping="NSQW80" Variable="iOUT_PARA_Pr_EO_HiHi_Diff" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[8]" SODIndex="0x2580" SODSubIndex="0x41" />
+			<Channel Name="UINT0010" Mapping="NSQW82" Variable="iOUT_PARA_Pr_EO_HiHi_Check" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[9]" SODIndex="0x2580" SODSubIndex="0x42" />
+			<Channel Name="UINT0011" Mapping="NSQW84" Variable="iOUT_PARA_Pr_EOaP_HiHi" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[10]" SODIndex="0x2580" SODSubIndex="0x43" />
+			<Channel Name="UINT0012" Mapping="NSQW86" Variable="iOUT_PARA_Pr_EOaP_Diff_EngStop" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[11]" SODIndex="0x2580" SODSubIndex="0x44" />
+			<Channel Name="UINT0013" Mapping="NSQW88" Variable="iOUT_PARA_Pr_EOaP_HiHi_EngStop" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[12]" SODIndex="0x2580" SODSubIndex="0x45" />
+			<Channel Name="UINT0014" Mapping="NSQW90" Variable="iOUT_PARA_Pr_ECW_LoLo" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[13]" SODIndex="0x2580" SODSubIndex="0x46" />
+			<Channel Name="UINT0015" Mapping="NSQW92" Variable="iOUT_PARA_Pr_ECW_HiHi_Diff" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[14]" SODIndex="0x2580" SODSubIndex="0x47" />
+			<Channel Name="UINT0016" Mapping="NSQW94" Variable="iOUT_PARA_Pr_ECW_HiHi_Check" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[15]" SODIndex="0x2580" SODSubIndex="0x48" />
+			<Channel Name="UINT0017" Mapping="NSQW96" Variable="iOUT_PARA_Pr_ECWaP_HiHi" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[16]" SODIndex="0x2580" SODSubIndex="0x49" />
+			<Channel Name="UINT0018" Mapping="NSQW98" Variable="iOUT_PARA_Eng_Motortype" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[17]" SODIndex="0x2580" SODSubIndex="0x4A" />
+			<Channel Name="UINT0019" Mapping="NSQW100" Variable="iOUT_PARA_DPr_ECWP_LoLo" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[18]" SODIndex="0x2580" SODSubIndex="0x4B" />
+			<Channel Name="UINT0020" Mapping="NSQW102" Variable="iOUT_PARA_Vol_SysPurge_Stroke" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[19]" SODIndex="0x2580" SODSubIndex="0x4C" />
+			<Channel Name="UINT0021" Mapping="NSQW104" Variable="iOUT_PARA_Vol_SysPurge_MinAir" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[20]" SODIndex="0x2580" SODSubIndex="0x4D" />
+			<Channel Name="UINT0022" Mapping="NSQW106" Variable="iOUT_PARA_Nr_ERV_INL_Fan" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[21]" SODIndex="0x2580" SODSubIndex="0x4E" />
+			<Channel Name="UINT0023" Mapping="NSQW108" Variable="iOUT_PARA_Nr_ERV_INL_Lou" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[22]" SODIndex="0x2580" SODSubIndex="0x4F" />
+			<Channel Name="UINT0024" Mapping="NSQW110" Variable="iOUT_PARA_Nr_ERV_OTL_Lou" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[23]" SODIndex="0x2580" SODSubIndex="0x50" />
+			<Channel Name="UINT0025" Mapping="NSQW112" Variable="iOUT_PARA_NrMaxErr_ERV_INL_Fan" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[24]" SODIndex="0x2580" SODSubIndex="0x51" />
+			<Channel Name="UINT0026" Mapping="NSQW114" Variable="iOUT_PARA_NrMaxErr_ERV_INL_Lou" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[25]" SODIndex="0x2580" SODSubIndex="0x52" />
+			<Channel Name="UINT0027" Mapping="NSQW116" Variable="iOUT_PARA_NrMaxErr_ERV_OTL_Lou" Address="Cyclic#6.EngineGeneral::iParaRead_sPLC[26]" SODIndex="0x2580" SODSubIndex="0x53" />
+			<Channel Name="UDINT0001" Mapping="NSQD124" Variable="szOUT_F09_CRC" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_CRC" SODIndex="0x2580" SODSubIndex="0x57" />
+			<Channel Name="UDINT0002" Mapping="NSQD128" Variable="szOUT_F20_CRC" Address="Cyclic#6.EngineGeneral::iSafeOUT_F20_CRC" SODIndex="0x2580" SODSubIndex="0x58" />
+			<Channel Name="DINT0001" Mapping="NSQD132" Variable="iOUT_F01_N_EngAct" Address="Cyclic#6.EngineGeneral::iSafeOUT_F01_N_EngAct" SODIndex="0x2580" SODSubIndex="0x59" />
+			<Channel Name="DINT0002" Mapping="NSQD136" Variable="iOUT_F01_N_EngAct_Diff" Address="Cyclic#6.EngineGeneral::iSafeOUT_F01_N_EngAct_Diff" SODIndex="0x2580" SODSubIndex="0x5A" />
+			<Channel Name="DINT0003" Mapping="NSQD140" Variable="iOUT_F01_SDC_30s_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F01_SDC_30s_ET" SODIndex="0x2580" SODSubIndex="0x5B" />
+			<Channel Name="DINT0004" Mapping="NSQD144" Variable="iOUT_F01_Standstill_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F01_Standstill_1m_ET" SODIndex="0x2580" SODSubIndex="0x5C" />
+			<Channel Name="DINT0005" Mapping="NSQD148" Variable="iOUT_F01_N_Nom90_10s_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F01_N_Nom90_10s_ET" SODIndex="0x2580" SODSubIndex="0x5D" />
+			<Channel Name="DINT0006" Mapping="NSQD152" Variable="iOUT_F03_Pr_EO" Address="Cyclic#6.EngineGeneral::iSafeOUT_F03_Pr_EO" SODIndex="0x2580" SODSubIndex="0x5E" />
+			<Channel Name="DINT0007" Mapping="NSQD156" Variable="iOUT_F03_Pr_EO_Standstill" Address="Cyclic#6.EngineGeneral::iSafeOUT_F03_Pr_EO_Standstill" SODIndex="0x2580" SODSubIndex="0x5F" />
+			<Channel Name="DINT0008" Mapping="NSQD160" Variable="iOUT_F03_Pr_EO_Diff" Address="Cyclic#6.EngineGeneral::iSafeOUT_F03_Pr_EO_Diff" SODIndex="0x2580" SODSubIndex="0x60" />
+			<Channel Name="DINT0009" Mapping="NSQD164" Variable="iOUT_F03_Pr_EO_Fr_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F03_Pr_EO_Fr_1m_ET" SODIndex="0x2580" SODSubIndex="0x61" />
+			<Channel Name="DINT0010" Mapping="NSQD168" Variable="iOUT_F04_Pr_EOaP" Address="Cyclic#6.EngineGeneral::iSafeOUT_F04_Pr_EOaP" SODIndex="0x2580" SODSubIndex="0x62" />
+			<Channel Name="DINT0011" Mapping="NSQD172" Variable="iOUT_F04_Pr_EOaP_Standstill" Address="Cyclic#6.EngineGeneral::iSafeOUT_F04_Pr_EOaP_Standstill" SODIndex="0x2580" SODSubIndex="0x63" />
+			<Channel Name="DINT0012" Mapping="NSQD176" Variable="iOUT_F04_Pr_EOaP_Fr_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F04_Pr_EOaP_Fr_1m_ET" SODIndex="0x2580" SODSubIndex="0x64" />
+			<Channel Name="DINT0013" Mapping="NSQD180" Variable="iOUT_F04_EO_PumpsOff_2m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F04_EO_PumpsOff_2m_ET" SODIndex="0x2580" SODSubIndex="0x65" />
+			<Channel Name="DINT0014" Mapping="NSQD184" Variable="iOUT_F05_Pr_ECW" Address="Cyclic#6.EngineGeneral::iSafeOUT_F05_Pr_ECW" SODIndex="0x2580" SODSubIndex="0x66" />
+			<Channel Name="DINT0015" Mapping="NSQD188" Variable="iOUT_F05_Pr_ECW_Diff" Address="Cyclic#6.EngineGeneral::iSafeOUT_F05_Pr_ECW_Diff" SODIndex="0x2580" SODSubIndex="0x67" />
+			<Channel Name="DINT0016" Mapping="NSQD192" Variable="iOUT_F05_Pr_ECW_Fr_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F05_Pr_ECW_Fr_1m_ET" SODIndex="0x2580" SODSubIndex="0x68" />
+			<Channel Name="DINT0017" Mapping="NSQD196" Variable="iOUT_F06_Pr_ECWaP" Address="Cyclic#6.EngineGeneral::iSafeOUT_F06_Pr_ECWaP" SODIndex="0x2580" SODSubIndex="0x69" />
+			<Channel Name="DINT0018" Mapping="NSQD200" Variable="iOUT_F06_Pr_ECWaP_Fr_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F06_Pr_ECWaP_Fr_1m_ET" SODIndex="0x2580" SODSubIndex="0x6A" />
+			<Channel Name="DINT0019" Mapping="NSQD204" Variable="iOUT_F06_ECW_PumpsOff_2m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F06_ECW_PumpsOff_2m_ET" SODIndex="0x2580" SODSubIndex="0x6B" />
+			<Channel Name="DINT0020" Mapping="NSQD208" Variable="iOUT_F07_GCB_On_10s_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F07_GCB_On_10s_ET" SODIndex="0x2580" SODSubIndex="0x6C" />
+			<Channel Name="DINT0021" Mapping="NSQD212" Variable="iOUT_F07_GCB_On_60s_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F07_GCB_On_60s_ET" SODIndex="0x2580" SODSubIndex="0x6D" />
+			<Channel Name="DINT0022" Mapping="NSQD216" Variable="iOUT_F09_Cust_OK_15s_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_Cust_OK_15s_ET" SODIndex="0x2580" SODSubIndex="0x6E" />
+			<Channel Name="DINT0023" Mapping="NSQD220" Variable="iOUT_F09_Cust_PC_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_Cust_PC_ET" SODIndex="0x2580" SODSubIndex="0x6F" />
+			<Channel Name="DINT0024" Mapping="NSQD224" Variable="iOUT_F12_GV_Open_60s_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F12_GV_Open_60s_ET" SODIndex="0x2580" SODSubIndex="0x70" />
+			<Channel Name="DINT0025" Mapping="NSQD228" Variable="iOUT_F12_GT1_LC_130s_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F12_GT1_LC_130s_ET" SODIndex="0x2580" SODSubIndex="0x71" />
+			<Channel Name="DINT0026" Mapping="NSQD232" Variable="iOUT_F12_GT2_LC_130s_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F12_GT2_LC_130s_ET" SODIndex="0x2580" SODSubIndex="0x72" />
+			<Channel Name="DINT0027" Mapping="NSQD236" Variable="iOUT_F12_GT3_LC_130s_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F12_GT3_LC_130s_ET" SODIndex="0x2580" SODSubIndex="0x73" />
+			<Channel Name="DINT0028" Mapping="NSQD240" Variable="iOUT_F12_GT4_LC_130s_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F12_GT4_LC_130s_ET" SODIndex="0x2580" SODSubIndex="0x74" />
+			<Channel Name="DINT0029" Mapping="NSQD244" Variable="iOUT_F16_ScavFlapPos_PC_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F16_ScavFlapPos_PC_ET" SODIndex="0x2580" SODSubIndex="0x75" />
+			<Channel Name="DINT0030" Mapping="NSQD248" Variable="iOUT_F17_Vol_PurgeAir" Address="Cyclic#6.EngineGeneral::iSafeOUT_F17_Vol_PurgeAir" SODIndex="0x2580" SODSubIndex="0x76" />
+			<Channel Name="DINT0031" Mapping="NSQD252" Variable="iOUT_F20_PS1_HWHT_Lo_OK_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F20_PS1_HWHT_Lo_OK_ET" SODIndex="0x2580" SODSubIndex="0x77" />
+			<Channel Name="DINT0032" Mapping="NSQD256" Variable="iOUT_F20_PS2_HWHT_Lo_OK_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F20_PS2_HWHT_Lo_OK_ET" SODIndex="0x2580" SODSubIndex="0x78" />
+			<Channel Name="DINT0033" Mapping="NSQD260" Variable="iOUT_F20_FS_HWHT_Lo_OK_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F20_FS_HWHT_Lo_OK_ET" SODIndex="0x2580" SODSubIndex="0x79" />
+			<Channel Name="DINT0034" Mapping="NSQD264" Variable="iOUT_F20_FS_HWHT_Lo_PC_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F20_FS_HWHT_Lo_PC_ET" SODIndex="0x2580" SODSubIndex="0x7A" />
+			<Channel Name="DINT0035" Mapping="NSQD268" Variable="iOUT_F20_PS1_HWLT_Lo_OK_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F20_PS1_HWLT_Lo_OK_ET" SODIndex="0x2580" SODSubIndex="0x7B" />
+			<Channel Name="DINT0036" Mapping="NSQD272" Variable="iOUT_F20_PS2_HWLT_Lo_OK_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F20_PS2_HWLT_Lo_OK_ET" SODIndex="0x2580" SODSubIndex="0x7C" />
+			<Channel Name="DINT0037" Mapping="NSQD276" Variable="iOUT_F20_FS_HWLT_Lo_OK_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F20_FS_HWLT_Lo_OK_ET" SODIndex="0x2580" SODSubIndex="0x7D" />
+			<Channel Name="DINT0038" Mapping="NSQD280" Variable="iOUT_F20_FS_HWLT_Lo_PC_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F20_FS_HWLT_Lo_PC_ET" SODIndex="0x2580" SODSubIndex="0x7E" />
+			<Channel Name="DINT0039" Mapping="NSQD284" Variable="iOUT_F09_Door_OK_15s_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_Door_OK_15s_ET" SODIndex="0x2580" SODSubIndex="0x7F" />
+			<Channel Name="DINT0040" Mapping="NSQD288" Variable="iOUT_F09_INL1_Fan_OK_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_INL1_Fan_OK_1m_ET" SODIndex="0x2580" SODSubIndex="0x80" />
+			<Channel Name="DINT0041" Mapping="NSQD292" Variable="iOUT_F09_INL2_Fan_OK_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_INL2_Fan_OK_1m_ET" SODIndex="0x2581" SODSubIndex="0x1" />
+			<Channel Name="DINT0042" Mapping="NSQD296" Variable="iOUT_F09_INL3_Fan_OK_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_INL3_Fan_OK_1m_ET" SODIndex="0x2581" SODSubIndex="0x2" />
+			<Channel Name="DINT0043" Mapping="NSQD300" Variable="iOUT_F09_INL4_Fan_OK_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_INL4_Fan_OK_1m_ET" SODIndex="0x2581" SODSubIndex="0x3" />
+			<Channel Name="DINT0044" Mapping="NSQD304" Variable="iOUT_F09_INL5_Fan_OK_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_INL5_Fan_OK_1m_ET" SODIndex="0x2581" SODSubIndex="0x4" />
+			<Channel Name="DINT0045" Mapping="NSQD308" Variable="iOUT_F09_INL6_Fan_OK_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_INL6_Fan_OK_1m_ET" SODIndex="0x2581" SODSubIndex="0x5" />
+			<Channel Name="DINT0046" Mapping="NSQD312" Variable="iOUT_F09_INL1_Lou_OK_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_INL1_Lou_OK_1m_ET" SODIndex="0x2581" SODSubIndex="0x6" />
+			<Channel Name="DINT0047" Mapping="NSQD316" Variable="iOUT_F09_INL2_Lou_OK_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_INL2_Lou_OK_1m_ET" SODIndex="0x2581" SODSubIndex="0x7" />
+			<Channel Name="DINT0048" Mapping="NSQD320" Variable="iOUT_F09_INL3_Lou_OK_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_INL3_Lou_OK_1m_ET" SODIndex="0x2581" SODSubIndex="0x8" />
+			<Channel Name="DINT0049" Mapping="NSQD324" Variable="iOUT_F09_INL4_Lou_OK_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_INL4_Lou_OK_1m_ET" SODIndex="0x2581" SODSubIndex="0x9" />
+			<Channel Name="DINT0050" Mapping="NSQD328" Variable="iOUT_F09_INL5_Lou_OK_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_INL5_Lou_OK_1m_ET" SODIndex="0x2581" SODSubIndex="0xA" />
+			<Channel Name="DINT0051" Mapping="NSQD332" Variable="iOUT_F09_INL6_Lou_OK_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_INL6_Lou_OK_1m_ET" SODIndex="0x2581" SODSubIndex="0xB" />
+			<Channel Name="DINT0052" Mapping="NSQD336" Variable="iOUT_F09_OTL1_Lou_OK_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL1_Lou_OK_1m_ET" SODIndex="0x2581" SODSubIndex="0xC" />
+			<Channel Name="DINT0053" Mapping="NSQD340" Variable="iOUT_F09_OTL2_Lou_OK_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL2_Lou_OK_1m_ET" SODIndex="0x2581" SODSubIndex="0xD" />
+			<Channel Name="DINT0054" Mapping="NSQD344" Variable="iOUT_F09_OTL3_Lou_OK_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL3_Lou_OK_1m_ET" SODIndex="0x2581" SODSubIndex="0xE" />
+			<Channel Name="DINT0055" Mapping="NSQD348" Variable="iOUT_F09_OTL4_Lou_OK_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL4_Lou_OK_1m_ET" SODIndex="0x2581" SODSubIndex="0xF" />
+			<Channel Name="DINT0056" Mapping="NSQD352" Variable="iOUT_F09_OTL5_Lou_OK_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL5_Lou_OK_1m_ET" SODIndex="0x2581" SODSubIndex="0x10" />
+			<Channel Name="DINT0057" Mapping="NSQD356" Variable="iOUT_F09_OTL6_Lou_OK_1m_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL6_Lou_OK_1m_ET" SODIndex="0x2581" SODSubIndex="0x11" />
+			<Channel Name="DINT0058" Mapping="NSQD360" Variable="iOUT_F12_DCGA_LC_130s_ET" Address="Cyclic#6.EngineGeneral::iSafeOUT_F12_DCGA_LC_130s_ET" SODIndex="0x2581" SODSubIndex="0x12" />
+			<Channel Name="BOOL10001" Mapping="NSIX0.0" Variable="bIN_Reset_sPLC" Address="Cyclic#6.EngineGeneral::bSafeIN_Reset_sPLC" SODIndex="0x2500" SODSubIndex="0x1" />
+			<Channel Name="BOOL10002" Mapping="NSIX0.1" Variable="bIN_Eng_Start" Address="Cyclic#5.AuxiliariesGeneral::OUT_AG.bEng_Start" SODIndex="0x2500" SODSubIndex="0x1" />
+			<Channel Name="BOOL10003" Mapping="NSIX0.2" Variable="bIN_EO_PumpsOff" Address="Cyclic#6.EngineGeneral::bSafeIN_EO_PumpsOFF" SODIndex="0x2500" SODSubIndex="0x1" />
+			<Channel Name="BOOL10004" Mapping="NSIX0.3" Variable="bIN_ECW_PumpsOff" Address="Cyclic#6.EngineGeneral::bSafeIN_ECW_PumpsOFF" SODIndex="0x2500" SODSubIndex="0x1" />
+			<Channel Name="BOOL10005" Mapping="NSIX0.4" Variable="bIN_Eng_Aux_Dem" Address="Cyclic#5.Opstate::OUT_OP.bEng_Aux_Dem_CDR" SODIndex="0x2500" SODSubIndex="0x1" />
+			<Channel Name="BOOL10006" Mapping="NSIX0.5" Variable="bIN_ERV_Lou_PC_OP" Address="Cyclic#6.EngineGeneral::bSafeIN_ERV_Lou_PC_OP" SODIndex="0x2500" SODSubIndex="0x1" />
+			<Channel Name="BOOL10007" Mapping="NSIX0.6" Variable="bIN_ERV_Lou_PC_CL" Address="Cyclic#6.EngineGeneral::bSafeIN_ERV_Lou_PC_CL" SODIndex="0x2500" SODSubIndex="0x1" />
+			<Channel Name="BOOL10008" Mapping="NSIX0.7" Variable="bIN_ERV_ColdCountry" Address="Cyclic#6.EngineGeneral::bSafeIN_ERV_ColdCountry" SODIndex="0x2500" SODSubIndex="0x1" />
+			<Channel Name="INT1001" Mapping="NSIW4" Variable="iIN_N_EngAct" Address="Cyclic#6.EngineGeneral::iSafeIN_N_EngAct" SODIndex="0x2500" SODSubIndex="0x4" />
+			<Channel Name="INT1002" Mapping="NSIW6" Variable="iIN_N_EngNom" Address="Cyclic#6.EngineGeneral::iSafeIN_N_EngNom" SODIndex="0x2500" SODSubIndex="0x5" />
+			<Channel Name="INT1003" Mapping="NSIW8" Variable="iIN_Eng_Motortype" Address="Cyclic#6.EngineGeneral::iSafeIN_Eng_Motortype" SODIndex="0x2500" SODSubIndex="0x6" />
+			<RemanentData Name="RemanentDataDINT01" Mapping="1" Variable="iRD_Vol_Purge_Air" />
+			<RemanentData Name="RemanentDataDINT02" Mapping="2" Variable="iRD_Nr_PC_NotDone" />
+		</Module>
+		<Module Name="SL1.SM101" Hardware="X20SI8110" SafeLogicID="1" SafeModuleID="101" SISize="3" SOSize="0" NSISize="0" NSOSize="0" SIOffset="8" ConnectionValidBitNumber="0" HWTypeCode="27" >
+			<Channel Name="SafeModuleOK" Mapping="SIX4.0" Variable="sbSafeModuleOK_SM101" Address="Cyclic#1.EngineGeneral::bSafeModuleOK_101" />
+			<Channel Name="SafeDigitalInput01" Mapping="SIX8.0" Variable="sDI_EmStop" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput02" Mapping="SIX8.1" Variable="sDI_OlShortCirc" Address="Cyclic#1.HalIO::OlShortCirc" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput03" Mapping="SIX8.2" Variable="sDI_GenPrctTrip" Address="Cyclic#1.HalIO::GenPrctTrip" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput04" Mapping="SIX8.3" Variable="sDI_ERV_Cust" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeInputOK01" Mapping="SIX9.4" Variable="sbSafeInputOK_EmStop" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeInputOK02" Mapping="SIX9.5" Variable="sbSafeInputOK_OlShortCirc" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeInputOK03" Mapping="SIX9.6" Variable="sbSafeInputOK_GenPrctTrip" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeInputOK04" Mapping="SIX9.7" Variable="sbSafeInputOK_ERV_Cust" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeDigitalInput05" Mapping="SIX8.4" Variable="sDI_SafetyLoop_A1" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput06" Mapping="SIX8.5" Variable="sDI_GCB_On" Address="Cyclic#1.HalIO::GCB_On" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput07" Mapping="SIX8.6" Variable="sDI_GCB_Off" Address="Cyclic#1.HalIO::GCB_Off" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput08" Mapping="SIX8.7" Variable="sDI_ER_Door_CL" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeInputOK05" Mapping="SIX10.0" Variable="sbSafeInputOK_SafetyLoop_A1" SODIndex="0x6000" SODSubIndex="0x4" />
+			<Channel Name="SafeInputOK06" Mapping="SIX10.1" Variable="sbSafeInputOK_GCB_On" SODIndex="0x6000" SODSubIndex="0x4" />
+			<Channel Name="SafeInputOK07" Mapping="SIX10.2" Variable="sbSafeInputOK_GCB_Off" SODIndex="0x6000" SODSubIndex="0x4" />
+			<Channel Name="SafeInputOK08" Mapping="SIX10.3" Variable="sbSafeInputOK_ER_Door_CL" SODIndex="0x6000" SODSubIndex="0x4" />
+		</Module>
+		<Module Name="SL1.SM102" Hardware="X20SO4110" SafeLogicID="1" SafeModuleID="102" SISize="1" SOSize="1" NSISize="1" NSOSize="1" SIOffset="11" SOOffset="1" NSIOffset="516" NSOOffset="516" ConnectionValidBitNumber="1" HWTypeCode="43" >
+			<Channel Name="SafeModuleOK" Mapping="SIX4.1" Variable="sbSafeModuleOK_SM102" Address="Cyclic#1.EngineGeneral::bSafeModuleOK_102" />
+			<Channel Name="SafeDigitalOutput01" Mapping="SQX1.0" Variable="sDO_Rel_Sync_Load" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalOutput02" Mapping="SQX1.1" Variable="sDO_GCB_RUC" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalOutput03" Mapping="SQX1.2" Variable="sDO_SF_OK_A" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalOutput04" Mapping="SQX1.3" Variable="sDO_EmStop" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK01" Mapping="SIX11.0" Variable="sbSafeOutputOK_Rel_Sync_Load" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK02" Mapping="SIX11.1" Variable="sbSafeOutputOK_GCB_RUC" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK03" Mapping="SIX11.2" Variable="sbSafeOutputOK_SF_OK_A" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK04" Mapping="SIX11.3" Variable="sbSafeOutputOK_EmStop" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="ReleaseOutput" Mapping="NSQX516.0" Variable="bRO_SM102" SODIndex="0x6200" SODSubIndex="0x3" />
+			<Channel Name="PhysicalStateOutput01" Mapping="NSIX516.0" Variable="bPhysicalState_Rel_Sync_Load" SODIndex="0x2500" SODSubIndex="0x8" />
+			<Channel Name="PhysicalStateOutput02" Mapping="NSIX516.1" Variable="bPhysicalState_GCB_RUC" SODIndex="0x2500" SODSubIndex="0x8" />
+			<Channel Name="PhysicalStateOutput03" Mapping="NSIX516.2" Variable="bPhysicalState_SF_OK_A" SODIndex="0x2500" SODSubIndex="0x8" />
+			<Channel Name="PhysicalStateOutput04" Mapping="NSIX516.3" Variable="bPhysicalState_EmStop" SODIndex="0x2500" SODSubIndex="0x8" />
+		</Module>
+		<Module Name="SL1.SM103" Hardware="X20SI8110" SafeLogicID="1" SafeModuleID="103" SISize="3" SOSize="0" NSISize="0" NSOSize="0" SIOffset="12" ConnectionValidBitNumber="2" HWTypeCode="27" >
+			<Channel Name="SafeModuleOK" Mapping="SIX4.2" Variable="sbSafeModuleOK_SM103" Address="Cyclic#1.EngineGeneral::bSafeModuleOK_103" />
+			<Channel Name="SafeDigitalInput01" Mapping="SIX12.0" Variable="sDI_LS_HWHT_Lo" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput02" Mapping="SIX12.1" Variable="sDI_PS1_HWHT_Hi" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput03" Mapping="SIX12.2" Variable="sDI_PS2_HWHT_Hi" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput04" Mapping="SIX12.3" Variable="sDI_PS1_HWHT_Lo" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeInputOK01" Mapping="SIX13.4" Variable="sbSafeInputOK_LS_HWHT_Lo" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeInputOK02" Mapping="SIX13.5" Variable="sbSafeInputOK_PS1_HWHT_Hi" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeInputOK03" Mapping="SIX13.6" Variable="sbSafeInputOK_PS2_HWHT_Hi" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeInputOK04" Mapping="SIX13.7" Variable="sbSafeInputOK_PS1_HWHT_Lo" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeDigitalInput05" Mapping="SIX12.4" Variable="sDI_PS2_HWHT_Lo" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput06" Mapping="SIX12.5" Variable="sDI_TS1_HWHT_Hi" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput07" Mapping="SIX12.6" Variable="sDI_TS2_HWHT_Hi" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput08" Mapping="SIX12.7" Variable="sDI_FS_HWHT_Lo" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeInputOK05" Mapping="SIX14.0" Variable="sbSafeInputOK_PS2_HWHT_Lo" SODIndex="0x6000" SODSubIndex="0x4" />
+			<Channel Name="SafeInputOK06" Mapping="SIX14.1" Variable="sbSafeInputOK_TS1_HWHT_Hi" SODIndex="0x6000" SODSubIndex="0x4" />
+			<Channel Name="SafeInputOK07" Mapping="SIX14.2" Variable="sbSafeInputOK_TS2_HWHT_Hi" SODIndex="0x6000" SODSubIndex="0x4" />
+			<Channel Name="SafeInputOK08" Mapping="SIX14.3" Variable="sbSafeInputOK_FS_HWHT_Lo" SODIndex="0x6000" SODSubIndex="0x4" />
+		</Module>
+		<Module Name="SL1.SM104" Hardware="X20SI8110" SafeLogicID="1" SafeModuleID="104" SISize="3" SOSize="0" NSISize="0" NSOSize="0" SIOffset="16" ConnectionValidBitNumber="3" HWTypeCode="27" >
+			<Channel Name="SafeModuleOK" Mapping="SIX4.3" Variable="sbSafeModuleOK_SM104" Address="Cyclic#1.EngineGeneral::bSafeModuleOK_104" />
+			<Channel Name="SafeDigitalInput01" Mapping="SIX16.0" Variable="sDI_LS_HWLT_Lo" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput02" Mapping="SIX16.1" Variable="sDI_PS1_HWLT_Hi" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput03" Mapping="SIX16.2" Variable="sDI_PS2_HWLT_Hi" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput04" Mapping="SIX16.3" Variable="sDI_PS1_HWLT_Lo" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeInputOK01" Mapping="SIX17.4" Variable="sbSafeInputOK_LS_HWLT_Lo" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeInputOK02" Mapping="SIX17.5" Variable="sbSafeInputOK_PS1_HWLT_Hi" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeInputOK03" Mapping="SIX17.6" Variable="sbSafeInputOK_PS2_HWLT_Hi" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeInputOK04" Mapping="SIX17.7" Variable="sbSafeInputOK_PS1_HWLT_Lo" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeDigitalInput05" Mapping="SIX16.4" Variable="sDI_PS2_HWLT_Lo" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput06" Mapping="SIX16.5" Variable="sDI_TS1_HWLT_Hi" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput07" Mapping="SIX16.6" Variable="sDI_TS2_HWLT_Hi" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput08" Mapping="SIX16.7" Variable="sDI_FS_HWLT_Lo" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeInputOK05" Mapping="SIX18.0" Variable="sbSafeInputOK_PS2_HWLT_Lo" SODIndex="0x6000" SODSubIndex="0x4" />
+			<Channel Name="SafeInputOK06" Mapping="SIX18.1" Variable="sbSafeInputOK_TS1_HWLT_Hi" SODIndex="0x6000" SODSubIndex="0x4" />
+			<Channel Name="SafeInputOK07" Mapping="SIX18.2" Variable="sbSafeInputOK_TS2_HWLT_Hi" SODIndex="0x6000" SODSubIndex="0x4" />
+			<Channel Name="SafeInputOK08" Mapping="SIX18.3" Variable="sbSafeInputOK_FS_HWLT_Lo" SODIndex="0x6000" SODSubIndex="0x4" />
+		</Module>
+		<Module Name="SL1.SM105" Hardware="X20SI8110" SafeLogicID="1" SafeModuleID="105" SISize="3" SOSize="0" NSISize="0" NSOSize="0" SIOffset="20" ConnectionValidBitNumber="4" HWTypeCode="27" >
+			<Channel Name="SafeModuleOK" Mapping="SIX4.4" Variable="sbSafeModuleOK_SM105" Address="Cyclic#1.EngineGeneral::bSafeModuleOK_105" />
+			<Channel Name="SafeDigitalInput01" Mapping="SIX20.0" Variable="sDI_HWcirc_Cust" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeInputOK01" Mapping="SIX21.4" Variable="sbSafeInputOK_HWcirc_Cust" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeDigitalInput08" Mapping="SIX20.7" Variable="sDI_SafetyLoop_A2" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeInputOK08" Mapping="SIX22.3" Variable="sbSafeInputOK_SafetyLoop_A2" SODIndex="0x6000" SODSubIndex="0x4" />
+		</Module>
+		<Module Name="SL1.SM201" Hardware="X20SD1207" SafeLogicID="1" SafeModuleID="201" SISize="11" SOSize="2" NSISize="8" NSOSize="2" SIOffset="24" SOOffset="2" NSIOffset="520" NSOOffset="518" ConnectionValidBitNumber="5" HWTypeCode="2075" >
+			<Channel Name="SafeModuleOK" Mapping="SIX4.5" Variable="sbSafeModuleOK_SM201" Address="Cyclic#1.EngineGeneral::bSafeModuleOK_201" />
+			<Channel Name="SafeFrequency" Mapping="SIW26" Variable="sCI_N_EngAct" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeFrequencyOK" Mapping="SIX24.1" Variable="sbSafeFrequencyOK_CI_N_EngAct" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="Reset" Mapping="NSQX518.0" Variable="bReset_CI_N_EngAct" SODIndex="0x6200" SODSubIndex="0x1" />
+		</Module>
+		<Module Name="SL1.SM202" Hardware="X20SA4430" SafeLogicID="1" SafeModuleID="202" SISize="7" SOSize="2" NSISize="5" NSOSize="0" SIOffset="36" SOOffset="4" NSIOffset="528" ConnectionValidBitNumber="6" HWTypeCode="275" >
+			<Channel Name="SafeModuleOK" Mapping="SIX4.6" Variable="sbSafeModuleOK_SM202" Address="Cyclic#1.EngineGeneral::bSafeModuleOK_202" />
+			<Channel Name="SafeCurrentOK0102" Mapping="SIX37.4" Variable="sbSafeCurrentOK_AI_Pr_EO" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeCurrentOK0304" Mapping="SIX37.5" Variable="sbSafeCurrentOK_AI_Pr_EOaP" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeCurrent0102" Mapping="SIW38" Variable="sAI_Pr_EO" Address="Cyclic#1.HalIO::Pr_EngLubOil" SODIndex="0x6000" SODSubIndex="0x6" />
+			<Channel Name="SafeCurrent0304" Mapping="SIW40" Variable="sAI_Pr_EOaP" Address="Cyclic#1.HalIO::Pr_EOaP" SODIndex="0x6000" SODSubIndex="0x7" />
+			<Channel Name="SafeRelease0102" Mapping="SQX5.0" Variable="sbSafeRelease_AI_Pr_EO" SODIndex="0x6200" SODSubIndex="0x2" />
+			<Channel Name="SafeRelease0304" Mapping="SQX5.1" Variable="sbSafeRelease_AI_Pr_EOaP" SODIndex="0x6200" SODSubIndex="0x2" />
+		</Module>
+		<Module Name="SL1.SM203" Hardware="X20SA4430" SafeLogicID="1" SafeModuleID="203" SISize="7" SOSize="2" NSISize="5" NSOSize="0" SIOffset="44" SOOffset="6" NSIOffset="536" ConnectionValidBitNumber="7" HWTypeCode="275" >
+			<Channel Name="SafeModuleOK" Mapping="SIX4.7" Variable="sbSafeModuleOK_SM203" Address="Cyclic#1.EngineGeneral::bSafeModuleOK_203" />
+			<Channel Name="SafeCurrentOK0102" Mapping="SIX45.4" Variable="sbSafeCurrentOK_AI_Pr_ECW" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeCurrentOK0304" Mapping="SIX45.5" Variable="sbSafeCurrentOK_AI_Pr_ECWaP" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeCurrent0102" Mapping="SIW46" Variable="sAI_Pr_ECW" Address="Cyclic#1.HalIO::Pr_ECW" SODIndex="0x6000" SODSubIndex="0x6" />
+			<Channel Name="SafeCurrent0304" Mapping="SIW48" Variable="sAI_Pr_ECWaP" Address="Cyclic#1.HalIO::Pr_ECWaP1" SODIndex="0x6000" SODSubIndex="0x7" />
+			<Channel Name="SafeRelease0102" Mapping="SQX7.0" Variable="sbSafeRelease_AI_Pr_ECW" SODIndex="0x6200" SODSubIndex="0x2" />
+			<Channel Name="SafeRelease0304" Mapping="SQX7.1" Variable="sbSafeRelease_AI_Pr_ECWaP" SODIndex="0x6200" SODSubIndex="0x2" />
+		</Module>
+		<Module Name="SL1.SM204" Hardware="X20SI8110" SafeLogicID="1" SafeModuleID="204" SISize="3" SOSize="0" NSISize="0" NSOSize="0" SIOffset="52" ConnectionValidBitNumber="8" HWTypeCode="27" >
+			<Channel Name="SafeModuleOK" Mapping="SIX5.0" Variable="sbSafeModuleOK_SM204" Address="Cyclic#1.EngineGeneral::bSafeModuleOK_204" />
+			<Channel Name="SafeDigitalInput01" Mapping="SIX52.0" Variable="sDI_EmStop_M" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput02" Mapping="SIX52.1" Variable="sDI_Ign_Run" Address="Cyclic#1.HalIO::Ign_Run_Hal" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput03" Mapping="SIX52.2" Variable="sDI_GT1_SafeDevOK" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput04" Mapping="SIX52.3" Variable="sDI_ScavFlapClosed" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeInputOK01" Mapping="SIX53.4" Variable="sbSafeInputOK_EmStop_M" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeInputOK02" Mapping="SIX53.5" Variable="sbSafeInputOK_Ign_Run" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeInputOK03" Mapping="SIX53.6" Variable="sbSafeInputOK_GT1_SafeDevOK" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeInputOK04" Mapping="SIX53.7" Variable="sbSafeInputOK_ScavFlapClose" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeDigitalInput05" Mapping="SIX52.4" Variable="sDI_TS_ScavFlap" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput06" Mapping="SIX52.5" Variable="sDI_Pr_EG_Hi" Address="Cyclic#1.HalIO::Pr_EG_Hi" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput07" Mapping="SIX52.6" Variable="sDI_GT2_SafeDevOK" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput08" Mapping="SIX52.7" Variable="sDI_SafetyLoop_M" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeInputOK05" Mapping="SIX54.0" Variable="sbSafeInputOK_TS_ScavFlap" SODIndex="0x6000" SODSubIndex="0x4" />
+			<Channel Name="SafeInputOK06" Mapping="SIX54.1" Variable="sbSafeInputOK_Pr_EG_Hi" SODIndex="0x6000" SODSubIndex="0x4" />
+			<Channel Name="SafeInputOK07" Mapping="SIX54.2" Variable="sbSafeInputOK_GT2_SafeDevOK" SODIndex="0x6000" SODSubIndex="0x4" />
+			<Channel Name="SafeInputOK08" Mapping="SIX54.3" Variable="sbSafeInputOK_SafetyLoop_M" SODIndex="0x6000" SODSubIndex="0x4" />
+		</Module>
+		<Module Name="SL1.SM205" Hardware="X20SO4110" SafeLogicID="1" SafeModuleID="205" SISize="1" SOSize="1" NSISize="1" NSOSize="1" SIOffset="15" SOOffset="8" NSIOffset="517" NSOOffset="517" ConnectionValidBitNumber="9" HWTypeCode="43" >
+			<Channel Name="SafeModuleOK" Mapping="SIX5.1" Variable="sbSafeModuleOK_SM205" Address="Cyclic#1.EngineGeneral::bSafeModuleOK_205" />
+			<Channel Name="SafeDigitalOutput01" Mapping="SQX8.0" Variable="sDO_Rel_GV1a" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalOutput02" Mapping="SQX8.1" Variable="sDO_Rel_GV1b" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalOutput03" Mapping="SQX8.2" Variable="sDO_GT1_SafeDevice" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalOutput04" Mapping="SQX8.3" Variable="sDO_SF_OK_M" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK01" Mapping="SIX15.0" Variable="sbSafeOutputOK_Rel_GV1a" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK02" Mapping="SIX15.1" Variable="sbSafeOutputOK_Rel_GV1b" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK03" Mapping="SIX15.2" Variable="sbSafeOutputOK_GT1_SafeDev" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK04" Mapping="SIX15.3" Variable="sbSafeOutputOK_SF_OK_M" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="ReleaseOutput" Mapping="NSQX517.0" Variable="bRO_SM205" SODIndex="0x6200" SODSubIndex="0x3" />
+			<Channel Name="PhysicalStateOutput01" Mapping="NSIX517.0" Variable="bPhysicalState_Rel_GV1a" SODIndex="0x2500" SODSubIndex="0xD" />
+			<Channel Name="PhysicalStateOutput02" Mapping="NSIX517.1" Variable="bPhysicalState_Rel_GV1b" SODIndex="0x2500" SODSubIndex="0xD" />
+			<Channel Name="PhysicalStateOutput03" Mapping="NSIX517.2" Variable="bPhysicalState_GT1_SafeDev" SODIndex="0x2500" SODSubIndex="0xD" />
+			<Channel Name="PhysicalStateOutput04" Mapping="NSIX517.3" Variable="bPhysicalState_SF_OK_M" SODIndex="0x2500" SODSubIndex="0xD" />
+		</Module>
+		<Module Name="SL1.SM206" Hardware="X20SO4110" SafeLogicID="1" SafeModuleID="206" SISize="1" SOSize="1" NSISize="1" NSOSize="1" SIOffset="19" SOOffset="9" NSIOffset="518" NSOOffset="520" ConnectionValidBitNumber="10" HWTypeCode="43" >
+			<Channel Name="SafeModuleOK" Mapping="SIX5.2" Variable="sbSafeModuleOK_SM206" Address="Cyclic#1.EngineGeneral::bSafeModuleOK_206" />
+			<Channel Name="SafeDigitalOutput01" Mapping="SQX9.0" Variable="sDO_Rel_GV2a" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalOutput02" Mapping="SQX9.1" Variable="sDO_Rel_GV2b" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalOutput03" Mapping="SQX9.2" Variable="sDO_GT2_SafeDevice" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK01" Mapping="SIX19.0" Variable="sbSafeOutputOK_Rel_GV2a" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK02" Mapping="SIX19.1" Variable="sbSafeOutputOK_Rel_GV2b" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK03" Mapping="SIX19.2" Variable="sbSafeOutputOK_GT2_SafeDev" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="ReleaseOutput" Mapping="NSQX520.0" Variable="bRO_SM206" SODIndex="0x6200" SODSubIndex="0x3" />
+			<Channel Name="PhysicalStateOutput01" Mapping="NSIX518.0" Variable="bPhysicalState_Rel_GV2a" SODIndex="0x2500" SODSubIndex="0xE" />
+			<Channel Name="PhysicalStateOutput02" Mapping="NSIX518.1" Variable="bPhysicalState_Rel_GV2b" SODIndex="0x2500" SODSubIndex="0xE" />
+			<Channel Name="PhysicalStateOutput03" Mapping="NSIX518.2" Variable="bPhysicalState_GT2_SafeDev" SODIndex="0x2500" SODSubIndex="0xE" />
+		</Module>
+		<Module Name="SL1.SM207" Hardware="X20SO4110" SafeLogicID="1" SafeModuleID="207" SISize="1" SOSize="1" NSISize="1" NSOSize="1" SIOffset="23" SOOffset="10" NSIOffset="519" NSOOffset="521" ConnectionValidBitNumber="11" HWTypeCode="43" >
+			<Channel Name="SafeModuleOK" Mapping="SIX5.3" Variable="sbSafeModuleOK_SM207" Address="Cyclic#1.EngineGeneral::bSafeModuleOK_207" />
+			<Channel Name="SafeDigitalOutput01" Mapping="SQX10.0" Variable="sDO_Rel_GV3a" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalOutput02" Mapping="SQX10.1" Variable="sDO_Rel_GV3b" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalOutput03" Mapping="SQX10.2" Variable="sDO_GT3_SafeDevice" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK01" Mapping="SIX23.0" Variable="sbSafeOutputOK_Rel_GV3a" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK02" Mapping="SIX23.1" Variable="sbSafeOutputOK_Rel_GV3b" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK03" Mapping="SIX23.2" Variable="sbSafeOutputOK_GT3_SafeDev" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="ReleaseOutput" Mapping="NSQX521.0" Variable="bRO_SM207" SODIndex="0x6200" SODSubIndex="0x3" />
+			<Channel Name="PhysicalStateOutput01" Mapping="NSIX519.0" Variable="bPhysicalState_Rel_GV3a" SODIndex="0x2500" SODSubIndex="0xF" />
+			<Channel Name="PhysicalStateOutput02" Mapping="NSIX519.1" Variable="bPhysicalState_Rel_GV3b" SODIndex="0x2500" SODSubIndex="0xF" />
+			<Channel Name="PhysicalStateOutput03" Mapping="NSIX519.2" Variable="bPhysicalState_GT3_SafeDev" SODIndex="0x2500" SODSubIndex="0xF" />
+		</Module>
+		<Module Name="SL1.SM208" Hardware="X20SI8110" SafeLogicID="1" SafeModuleID="208" SISize="3" SOSize="0" NSISize="0" NSOSize="0" SIOffset="56" ConnectionValidBitNumber="12" HWTypeCode="27" >
+			<Channel Name="SafeModuleOK" Mapping="SIX5.4" Variable="sbSafeModuleOK_SM208" Address="Cyclic#1.EngineGeneral::bSafeModuleOK_208" />
+			<Channel Name="SafeDigitalInput01" Mapping="SIX56.0" Variable="sDI_GT3_SafeDevOK" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput02" Mapping="SIX56.1" Variable="sDI_GT4_SafeDevOK" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput03" Mapping="SIX56.2" Variable="sDI_DCGA_SafeDevOK" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeInputOK01" Mapping="SIX57.4" Variable="sbSafeInputOK_GT3_SafeDevOK" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeInputOK02" Mapping="SIX57.5" Variable="sbSafeInputOK_GT4_SafeDevOK" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeInputOK03" Mapping="SIX57.6" Variable="sbSafeInputOK_DCGA_SafeDevOK" SODIndex="0x6000" SODSubIndex="0x3" />
+		</Module>
+		<Module Name="SL1.SM209" Hardware="X20SO4110" SafeLogicID="1" SafeModuleID="209" SISize="1" SOSize="1" NSISize="1" NSOSize="1" SIOffset="35" SOOffset="11" NSIOffset="533" NSOOffset="522" ConnectionValidBitNumber="13" HWTypeCode="43" >
+			<Channel Name="SafeModuleOK" Mapping="SIX5.5" Variable="sbSafeModuleOK_SM209" Address="Cyclic#1.EngineGeneral::bSafeModuleOK_209" />
+			<Channel Name="SafeDigitalOutput01" Mapping="SQX11.0" Variable="sDO_Rel_GV4a" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalOutput02" Mapping="SQX11.1" Variable="sDO_Rel_GV4b" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalOutput03" Mapping="SQX11.2" Variable="sDO_GT4_SafeDevice" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK01" Mapping="SIX35.0" Variable="sbSafeOutputOK_Rel_GV4a" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK02" Mapping="SIX35.1" Variable="sbSafeOutputOK_Rel_GV4b" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK03" Mapping="SIX35.2" Variable="sbSafeOutputOK_GT4_SafeDev" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="ReleaseOutput" Mapping="NSQX522.0" Variable="bRO_SM209" SODIndex="0x6200" SODSubIndex="0x3" />
+			<Channel Name="PhysicalStateOutput01" Mapping="NSIX533.0" Variable="bPhysicalState_Rel_GV4a" SODIndex="0x2500" SODSubIndex="0x10" />
+			<Channel Name="PhysicalStateOutput02" Mapping="NSIX533.1" Variable="bPhysicalState_Rel_GV4b" SODIndex="0x2500" SODSubIndex="0x10" />
+			<Channel Name="PhysicalStateOutput03" Mapping="NSIX533.2" Variable="bPhysicalState_GT4_SafeDev" SODIndex="0x2500" SODSubIndex="0x10" />
+		</Module>
+		<Module Name="SL1.SM210" Hardware="X20SO4110" SafeLogicID="1" SafeModuleID="210" SISize="1" SOSize="1" NSISize="1" NSOSize="1" SIOffset="43" SOOffset="12" NSIOffset="534" NSOOffset="523" ConnectionValidBitNumber="14" HWTypeCode="43" >
+			<Channel Name="SafeModuleOK" Mapping="SIX5.6" Variable="sbSafeModuleOK_SM210" Address="Cyclic#1.EngineGeneral::bSafeModuleOK_210" />
+			<Channel Name="SafeDigitalOutput01" Mapping="SQX12.0" Variable="sDO_Rel_GVa_DCGA" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalOutput02" Mapping="SQX12.1" Variable="sDO_Rel_GVb_DCGA" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalOutput03" Mapping="SQX12.2" Variable="sDO_DCGA_SafeDevice" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK01" Mapping="SIX43.0" Variable="sbSafeOutputOK_Rel_GVa_DCGA" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK02" Mapping="SIX43.1" Variable="sbSafeOutputOK_Rel_GVb_DCGA" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeOutputOK03" Mapping="SIX43.2" Variable="sbSafeOutputOK_DCGA_SafeDev" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="ReleaseOutput" Mapping="NSQX523.0" Variable="bRO_SM210" SODIndex="0x6200" SODSubIndex="0x3" />
+			<Channel Name="PhysicalStateOutput01" Mapping="NSIX534.0" Variable="bPhysicalState_Rel_GVa_DCGA" SODIndex="0x2500" SODSubIndex="0x11" />
+			<Channel Name="PhysicalStateOutput02" Mapping="NSIX534.1" Variable="bPhysicalState_Rel_GVb_DCGA" SODIndex="0x2500" SODSubIndex="0x11" />
+			<Channel Name="PhysicalStateOutput03" Mapping="NSIX534.2" Variable="bPhysicalState_DCGA_SafeDev" SODIndex="0x2500" SODSubIndex="0x11" />
+		</Module>
+		<Module Name="SL1.SM300" Hardware="X20SI9100" SafeLogicID="1" SafeModuleID="300" SISize="8" SOSize="0" NSISize="0" NSOSize="0" SIOffset="60" ConnectionValidBitNumber="15" HWTypeCode="27" >
+			<Channel Name="SafeModuleOK" Mapping="SIX5.7" Variable="sbSafeModuleOK_SM300" Address="Cyclic#1.EngineGeneral::bSafeModuleOK_300" />
+			<Channel Name="SafeDigitalInput01" Mapping="SIX60.0" Variable="sDI_ERV_INL1_Fan_Run" Address="Cyclic#1.HalIO::ERV_INL1_Fan_Run" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalInput02" Mapping="SIX60.1" Variable="sDI_ERV_INL1_Lou_OP" Address="Cyclic#1.HalIO::ERV_INL1_Lou_OP" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalInput03" Mapping="SIX60.2" Variable="sDI_ERV_INL1_Lou_CL" Address="Cyclic#1.HalIO::ERV_INL1_Lou_CL" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalInput04" Mapping="SIX60.3" Variable="sDI_ERV_OTL1_Lou_OP" Address="Cyclic#1.HalIO::ERV_OTL1_Lou_OP" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeInputOK01" Mapping="SIX63.6" Variable="sbSafeInputOK_ERV_INL1_Fan_Run" SODIndex="0x6000" SODSubIndex="0x4" />
+			<Channel Name="SafeInputOK02" Mapping="SIX63.7" Variable="sbSafeInputOK_ERV_INL1_Lou_OP" SODIndex="0x6000" SODSubIndex="0x4" />
+			<Channel Name="SafeInputOK03" Mapping="SIX64.0" Variable="sbSafeInputOK_ERV_INL1_Lou_CL" SODIndex="0x6000" SODSubIndex="0x5" />
+			<Channel Name="SafeInputOK04" Mapping="SIX64.1" Variable="sbSafeInputOK_ERV_OTL1_Lou_OP" SODIndex="0x6000" SODSubIndex="0x5" />
+			<Channel Name="SafeDigitalInput05" Mapping="SIX60.4" Variable="sDI_ERV_OTL1_Lou_CL" Address="Cyclic#1.HalIO::ERV_OTL1_Lou_CL" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalInput06" Mapping="SIX60.5" Variable="sDI_ERV_INL2_Fan_Run" Address="Cyclic#1.HalIO::ERV_INL2_Fan_Run" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalInput07" Mapping="SIX60.6" Variable="sDI_ERV_INL2_Lou_OP" Address="Cyclic#1.HalIO::ERV_INL2_Lou_OP" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalInput08" Mapping="SIX60.7" Variable="sDI_ERV_INL2_Lou_CL" Address="Cyclic#1.HalIO::ERV_INL2_Lou_CL" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeInputOK05" Mapping="SIX64.2" Variable="sbSafeInputOK_ERV_OTL1_Lou_CL" SODIndex="0x6000" SODSubIndex="0x5" />
+			<Channel Name="SafeInputOK06" Mapping="SIX64.3" Variable="sbSafeInputOK_ERV_INL2_Fan_Run" SODIndex="0x6000" SODSubIndex="0x5" />
+			<Channel Name="SafeInputOK07" Mapping="SIX64.4" Variable="sbSafeInputOK_ERV_INL2_Lou_OP" SODIndex="0x6000" SODSubIndex="0x5" />
+			<Channel Name="SafeInputOK08" Mapping="SIX64.5" Variable="sbSafeInputOK_ERV_INL2_Lou_CL" SODIndex="0x6000" SODSubIndex="0x5" />
+			<Channel Name="SafeDigitalInput09" Mapping="SIX61.0" Variable="sDI_ERV_OTL2_Lou_OP" Address="Cyclic#1.HalIO::ERV_OTL2_Lou_OP" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput10" Mapping="SIX61.1" Variable="sDI_ERV_OTL2_Lou_CL" Address="Cyclic#1.HalIO::ERV_OTL2_Lou_CL" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput11" Mapping="SIX61.2" Variable="sDI_ERV_INL3_Fan_Run" Address="Cyclic#1.HalIO::ERV_INL3_Fan_Run" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput12" Mapping="SIX61.3" Variable="sDI_ERV_INL3_Lou_OP" Address="Cyclic#1.HalIO::ERV_INL3_Lou_OP" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeInputOK09" Mapping="SIX64.6" Variable="sbSafeInputOK_ERV_OTL2_Lou_OP" SODIndex="0x6000" SODSubIndex="0x5" />
+			<Channel Name="SafeInputOK10" Mapping="SIX64.7" Variable="sbSafeInputOK_ERV_OTL2_Lou_CL" SODIndex="0x6000" SODSubIndex="0x5" />
+			<Channel Name="SafeInputOK11" Mapping="SIX65.0" Variable="sbSafeInputOK_ERV_INL3_Fan_Run" SODIndex="0x6000" SODSubIndex="0x6" />
+			<Channel Name="SafeInputOK12" Mapping="SIX65.1" Variable="sbSafeInputOK_ERV_INL3_Lou_OP" SODIndex="0x6000" SODSubIndex="0x6" />
+			<Channel Name="SafeDigitalInput13" Mapping="SIX61.4" Variable="sDI_ERV_INL3_Lou_CL" Address="Cyclic#1.HalIO::ERV_INL3_Lou_CL" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput14" Mapping="SIX61.5" Variable="sDI_ERV_OTL3_Lou_OP" Address="Cyclic#1.HalIO::ERV_OTL3_Lou_OP" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput15" Mapping="SIX61.6" Variable="sDI_ERV_OTL3_Lou_CL" Address="Cyclic#1.HalIO::ERV_OTL3_Lou_CL" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput16" Mapping="SIX61.7" Variable="sDI_ERV_INL4_Fan_Run" Address="Cyclic#1.HalIO::ERV_INL4_Fan_Run" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeInputOK13" Mapping="SIX65.2" Variable="sbSafeInputOK_ERV_INL3_Lou_CL" SODIndex="0x6000" SODSubIndex="0x6" />
+			<Channel Name="SafeInputOK14" Mapping="SIX65.3" Variable="sbSafeInputOK_ERV_OTL3_Lou_OP" SODIndex="0x6000" SODSubIndex="0x6" />
+			<Channel Name="SafeInputOK15" Mapping="SIX65.4" Variable="sbSafeInputOK_ERV_OTL3_Lou_CL" SODIndex="0x6000" SODSubIndex="0x6" />
+			<Channel Name="SafeInputOK16" Mapping="SIX65.5" Variable="sbSafeInputOK_ERV_INL4_Fan_Run" SODIndex="0x6000" SODSubIndex="0x6" />
+			<Channel Name="SafeDigitalInput17" Mapping="SIX62.0" Variable="sDI_ERV_INL4_Lou_OP" Address="Cyclic#1.HalIO::ERV_INL4_Lou_OP" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeDigitalInput18" Mapping="SIX62.1" Variable="sDI_ERV_INL4_Lou_CL" Address="Cyclic#1.HalIO::ERV_INL4_Lou_CL" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeDigitalInput19" Mapping="SIX62.2" Variable="sDI_ERV_OTL4_Lou_OP" Address="Cyclic#1.HalIO::ERV_OTL4_Lou_OP" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeDigitalInput20" Mapping="SIX62.3" Variable="sDI_ERV_OTL4_Lou_CL" Address="Cyclic#1.HalIO::ERV_OTL4_Lou_CL" SODIndex="0x6000" SODSubIndex="0x3" />
+			<Channel Name="SafeInputOK17" Mapping="SIX65.6" Variable="sbSafeInputOK_ERV_INL4_Lou_OP" SODIndex="0x6000" SODSubIndex="0x6" />
+			<Channel Name="SafeInputOK18" Mapping="SIX65.7" Variable="sbSafeInputOK_ERV_INL4_Lou_CL" SODIndex="0x6000" SODSubIndex="0x6" />
+			<Channel Name="SafeInputOK19" Mapping="SIX66.0" Variable="sbSafeInputOK_ERV_OTL4_Lou_OP" SODIndex="0x6000" SODSubIndex="0x7" />
+			<Channel Name="SafeInputOK20" Mapping="SIX66.1" Variable="sbSafeInputOK_ERV_OTL4_Lou_CL" SODIndex="0x6000" SODSubIndex="0x7" />
+		</Module>
+		<Module Name="SL1.SM301" Hardware="X20SI9100" SafeLogicID="1" SafeModuleID="301" SISize="8" SOSize="0" NSISize="0" NSOSize="0" SIOffset="68" ConnectionValidBitNumber="16" HWTypeCode="27" >
+			<Channel Name="SafeModuleOK" Mapping="SIX6.0" Variable="sbSafeModuleOK_SM301" Address="Cyclic#1.EngineGeneral::bSafeModuleOK_301" />
+			<Channel Name="SafeDigitalInput01" Mapping="SIX68.0" Variable="sDI_ERV_INL5_Fan_Run" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalInput02" Mapping="SIX68.1" Variable="sDI_ERV_INL5_Lou_OP" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalInput03" Mapping="SIX68.2" Variable="sDI_ERV_INL5_Lou_CL" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalInput04" Mapping="SIX68.3" Variable="sDI_ERV_OTL5_Lou_OP" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeInputOK01" Mapping="SIX71.6" Variable="sbSafeInputOK_ERV_INL5_Fan_Run" SODIndex="0x6000" SODSubIndex="0x4" />
+			<Channel Name="SafeInputOK02" Mapping="SIX71.7" Variable="sbSafeInputOK_ERV_INL5_Lou_OP" SODIndex="0x6000" SODSubIndex="0x4" />
+			<Channel Name="SafeInputOK03" Mapping="SIX72.0" Variable="sbSafeInputOK_ERV_INL5_Lou_CL" SODIndex="0x6000" SODSubIndex="0x5" />
+			<Channel Name="SafeInputOK04" Mapping="SIX72.1" Variable="sbSafeInputOK_ERV_OTL5_Lou_OP" SODIndex="0x6000" SODSubIndex="0x5" />
+			<Channel Name="SafeDigitalInput05" Mapping="SIX68.4" Variable="sDI_ERV_OTL5_Lou_CL" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalInput06" Mapping="SIX68.5" Variable="sDI_ERV_INL6_Fan_Run" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalInput07" Mapping="SIX68.6" Variable="sDI_ERV_INL6_Lou_OP" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalInput08" Mapping="SIX68.7" Variable="sDI_ERV_INL6_Lou_CL" SODIndex="0x6000" SODSubIndex="0x1" />
+			<Channel Name="SafeInputOK05" Mapping="SIX72.2" Variable="sbSafeInputOK_ERV_OTL5_Lou_CL" SODIndex="0x6000" SODSubIndex="0x5" />
+			<Channel Name="SafeInputOK06" Mapping="SIX72.3" Variable="sbSafeInputOK_ERV_INL6_Fan_Run" SODIndex="0x6000" SODSubIndex="0x5" />
+			<Channel Name="SafeInputOK07" Mapping="SIX72.4" Variable="sbSafeInputOK_ERV_INL6_Lou_OP" SODIndex="0x6000" SODSubIndex="0x5" />
+			<Channel Name="SafeInputOK08" Mapping="SIX72.5" Variable="sbSafeInputOK_ERV_INL6_Lou_CL" SODIndex="0x6000" SODSubIndex="0x5" />
+			<Channel Name="SafeDigitalInput09" Mapping="SIX69.0" Variable="sDI_ERV_OTL6_Lou_OP" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeDigitalInput10" Mapping="SIX69.1" Variable="sDI_ERV_OTL6_Lou_CL" SODIndex="0x6000" SODSubIndex="0x2" />
+			<Channel Name="SafeInputOK09" Mapping="SIX72.6" Variable="sbSafeInputOK_ERV_OTL6_Lou_OP" SODIndex="0x6000" SODSubIndex="0x5" />
+			<Channel Name="SafeInputOK10" Mapping="SIX72.7" Variable="sbSafeInputOK_ERV_OTL6_Lou_CL" SODIndex="0x6000" SODSubIndex="0x5" />
+		</Module>
+</IOOffsets>

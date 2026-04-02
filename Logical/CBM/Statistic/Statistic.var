@@ -1,0 +1,24 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Package: Statistic
+ * File: Statistic.var
+ * Author: 502423184
+ * Created: May 18, 2015
+ ********************************************************************
+ * Variables of package Statistic
+ ********************************************************************)
+VAR
+	bStat_Trigger : BOOL := FALSE;
+	Stat : _StatBuffer; (*circular buffer*)
+	bStat_Sync_Max : BOOL;
+	rP_Sync_Max : REAL;
+	rI_Sync_L1_Max : REAL;
+	rI_Sync_L2_Max : REAL;
+	rI_Sync_L3_Max : REAL;
+	bStat_OS_Max : BOOL;
+	rP_OS_Max : REAL;
+	rP_Set_OS_Max : REAL;
+	Err : _ErrStat;
+	ErrName : ARRAY[0..20] OF _NameErr := [21(0)];
+END_VAR

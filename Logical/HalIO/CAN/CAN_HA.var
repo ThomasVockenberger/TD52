@@ -1,0 +1,45 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Package: HAL_IO
+ * File: CAN_HA.var
+ * Author: Schmid
+ * Created: December 7, 2021
+ ********************************************************************
+ * Variables of package HAL_IO/CAN
+ ********************************************************************)
+VAR CONSTANT
+	iMAX_NUMB_OF_CANMODS : UINT := 20; (*Max. number of CAN modules*)
+	iIdxCAN_IGN : UINT := 1; (* Ignition, Tecjet *)
+	iIdxCAN_NOxS_IF1 : UINT := 2; (* NOx sensor interface 1 *)
+	iIdxCAN_NOxS_IF2 : UINT := 3; (* NOx sensor interface 2 *)
+	iIdxCAN_NOxS_IF3 : UINT := 7; (* NOx sensor interface 3 *)
+	iIdxCAN_CB : UINT := 4; (* Conrod bearing *)
+	iIdxCAN_OQS : UINT := 5; (* Oil quality sensor *)
+	iIdxCAN_IGN2 : UINT := 6; (*2nd Ignition CAN line*)
+	sCAN_IGN2_ident : STRING[10] := 'IGN2'; (*CAN ID string Ignition 2*)
+	sCAN_IGN_ident : STRING[10] := 'IGN1'; (*CAN ID string Ignition 1*)
+	sCAN_NOxS_IF1_ident : STRING[10] := 'NOX1'; (*CAN ID string NOx sensor IF1*)
+	sCAN_NOxS_IF2_ident : STRING[10] := 'NOX2'; (*CAN ID string NOx sensor IF2*)
+	sCAN_NOxS_IF3_ident : STRING[10] := 'NOX3'; (*CAN ID string NOx sensor IF3*)
+	sCAN_CB_ident : STRING[10] := 'CRB'; (*CAN ID string Conrod bearing*)
+	sCAN_OQS_ident : STRING[10] := 'OQS'; (*CAN ID string oil quality sensor*)
+END_VAR
+VAR
+	xDiagCreateInfo_CAN : DiagCreateInfo; (*Get number of configured modules*)
+	xDiagGetStrInfo_CAN : DiagGetStrInfo; (*Get name of configured modules*)
+	xDiagDisposeInfo_CAN : DiagDisposeInfo; (*Free ressources of AsIODiag*)
+	sLabelInfo : STRING[50]; (*Includes label of configured module*)
+	sAddrInfo : STRING[50]; (*Includes address of configured modul*)
+	iModPos : ARRAY[0..iMAX_NUMB_OF_CANMODS] OF UDINT; (*Array includes index of used CAN IF cards*)
+	iIndex : UDINT; (*Index of actual read module*)
+	iIdent : UDINT; (*Ident from xDiagCreateInfo_CAN*)
+	iNrEntries : UDINT; (*Number of configured modules from xDiagCreateInfo_CAN*)
+	sModSlotSel : ARRAY[0..iMAX_NUMB_OF_CANMODS] OF STRING[50]; (*Slot ID of selected configured CAN modules*)
+	sCANAddr : STRING[50]; (*CAN IF PLC address string*)
+	iIdxCAN_IF : ARRAY[1..2] OF UINT; (*Index array to assign CAN IF card to according role*)
+	iPosCAN : ARRAY[1..2] OF UINT; (*Index array to determine CAN ID string order (for X20CS2770)*)
+	iIdxPosCAN : UINT; (*Running index of found CAN IF cards*)
+	xTON_CANbusoff : TON; (*CAN bus off timer*)
+	xTON_SysRun : TON; (*Timer starting at PLC start*)
+END_VAR

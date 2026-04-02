@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.25.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="DataObject" Language="Simple" Description="MODUL META data file">META_GT</Object>
+    <Object Type="File" Description="Package data types" Private="true">module_GT.typ</Object>
+    <Object Type="File" Description="Package variables" Private="true">module_GT.var</Object>
+    <Object Type="Program" Language="IEC" Description="Default settings">DefaultGT</Object>
+    <Object Type="Program" Language="IEC" Description="Gasumschaltung">gasum</Object>
+    <Object Type="Program" Language="IEC" Description="gas rail control">gas_rail</Object>
+    <Object Type="Program" Language="IEC" Description="gas train control">gas_train</Object>
+    <Object Type="Program" Language="IEC" Description="Biogas">biogas</Object>
+    <Object Type="Program" Language="IEC" Description="bm3_mn3">bm3_nm3</Object>
+    <Object Type="Program" Language="IEC" Description="spec_gas">spec_gas</Object>
+    <Object Type="Program" Language="IEC" Description="Gas_zust">gas_zust</Object>
+    <Object Type="Program" Language="IEC" Description="gasum_st">gasum_st</Object>
+    <Object Type="Program" Language="IEC" Description="pb5">pb5</Object>
+    <Object Type="Program" Language="IEC" Description="gas train 1 with 4 lines">gasline1_4</Object>
+    <Object Type="Program" Language="IEC" Description="gmv_ber">gmv_ber</Object>
+    <Object Type="Program" Language="IEC" Description="puffmini">puffmini</Object>
+    <Object Type="Program" Language="IEC" Description="vkgverd">vkgverd</Object>
+    <Object Type="Program" Language="IEC" Description="Common alarms and signal generation for GT module">CommonGT</Object>
+    <Object Type="Program" Language="IEC" Description="pb7">pb7</Object>
+    <Object Type="Program" Language="IEC" Description="Verpuffungschutz vom pb4_6">pb4_6</Object>
+    <Object Type="Program" Language="IEC" Description="Inserted parts from gasflow_EC; and a gascounter prescaler for fast pulses">gas_flow</Object>
+    <Object Type="Program" Language="IEC" Description="controller gas compressor">Ctr_GC</Object>
+    <Object Type="Program" Language="IEC" Description="Messages">MsgGT</Object>
+    <Object Type="Program" Language="IEC" Description="+ Parameter handling">ParGT</Object>
+    <Object Type="Program" Language="IEC" Description="+ Permanent stored data">PermGT</Object>
+    <Object Type="Program" Language="IEC" Description="+ Permanent stored data 2">PermGT2</Object>
+    <Object Type="Program" Language="IEC" Description="Visualization task for Gas train module">VisGT</Object>
+  </Objects>
+</Package>

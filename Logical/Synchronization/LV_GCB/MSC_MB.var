@@ -1,0 +1,12 @@
+VAR CONSTANT
+	_MB_DATA_ARRAY_MAX : UINT := 500; (*Maximum size of Data Array*)
+	_MB_DEVICES_MAX : USINT := 0; (*Maximum number(+1) of Masters, increase if needed*)
+	_MB_SLAVES_MAX : USINT := 1; (*Maximum number(+1) of Slaves, increase if needed*)
+	_MB_ENTRIES_MAX : USINT := 159; (*Maximum number(+1) of Commands per Master, increase if needed*)
+	_MB_CMD_MAX : USINT := 14; (*Maximum number(+1) of Commands per Slave, increase if needed*)
+	_MB_REG_MAX : USINT := 14; (*Maximum number(+1) of Register Data per Command, increase if needed*)
+	_MB_BIN_MAX : USINT := 0; (*Maximum number(+1) of Binary Data per Command, increase if needed*)
+	_MB_DATALINE_MAX : UDINT := 200; (*Maximum Bytes per data line*)
+	_MB_DATASET_MAX : UDINT := 2000; (*Maximum Bytes per slave*)
+	_MB_DATAOBJ_MAX : UDINT := 10000; (*Maximum Bytes per master*)
+END_VAR

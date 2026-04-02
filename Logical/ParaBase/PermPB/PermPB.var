@@ -1,0 +1,33 @@
+VAR
+	tParaIntern : ParaHandler_typ; (*Connector type to perm_par*)
+	bWriteDataObj : BOOL; (* TRUE=write data object module *)
+	bDataObjLenErr : BOOL; (*Error occured in permem: data module size missmatch*)
+	bCreateDataObj : BOOL; (* TRUE=create new data object *)
+	write_once : BOOL; (* write permanent memory once *)
+	DatObjCreate_01 : DatObjCreate; (* data object create *)
+	DatObjInfo_01 : DatObjInfo; (* data object info *)
+	DatObjRead_01 : DatObjRead; (* data object read *)
+	DatObjWrite_01 : DatObjWrite; (* data object write *)
+	ModuleName : STRING[35]; (* module name of object *)
+	TON_WritePMEM : TON; (* delay write permanent memory *)
+	ulPMPointer : UDINT; (* adress of actual checksum value *)
+	ulChecksum : UDINT; (* parameter checksum value *)
+	pm_len : UDINT; (* permanent value lenght *)
+	ulChecksumOld : UDINT; (* last vlaue of parameter checksum *)
+	ulChkValue : UDINT; (* actual value of parameter pointer *)
+	pm_id : UDINT; (* permanent value identifier *)
+	pm_p : UDINT; (* permanent value pointer *)
+END_VAR
+VAR CONSTANT
+	ERR_NOERROR : UINT := 0;
+END_VAR
+VAR
+	pm_Error : UINT; (* permanent value error *) (* Deleted: pm : ParaMem_typ; permanent memory tags mathias, 22.8.11*)
+	xLocalParaCheck : ParaCheckFUB; (*local function instance to check parameter values*)
+	TON_BlockMinFileAge : TON; (*waiting time without file write after successful performed write*)
+	bBlock_MinFileAge : BOOL := FALSE; (*pause the perm file write after each sucessful write*)
+	iPM_WriteCnt : UDINT; (* *) (*old VarName: usPMWriteCnt*)
+	TON_WarnDelay : TON := (0);
+	bBlock_AutoFileDelete : BOOL := FALSE; (*TRUE will avaod the instant file deletion on detected file errores*)
+	DatObjDelete_PermMem : DatObjDelete; (*new V4.13*)
+END_VAR

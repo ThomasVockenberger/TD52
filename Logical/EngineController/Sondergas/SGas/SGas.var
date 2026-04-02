@@ -1,0 +1,51 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: SGas
+ * File: SGas.var
+ * Author: 502650054
+ * Created: August 19, 2016
+ ********************************************************************
+ * Local variables of program SGas
+ ********************************************************************)
+VAR
+	iCyl : INT;
+	iTaskCycleCOUNT : INT;
+	rMFB50Ctr_umax : REAL;
+	rMFB50Ctr_umin : REAL;
+	rMFB50top2s_kp : REAL;
+	rMFB50top2s_ki : REAL;
+	rMFB50Ctr_MFB50_max : REAL;
+	rMFB50Ctr_MFB50_min : REAL;
+	rMFB50Ctr_kp : REAL;
+	rMFB50Ctr_ki : REAL;
+	rMFB50Ctr_Kt : REAL;
+	rMFB50Ctr_T_filt_MFB50 : REAL;
+	rMFB50Ctr_MFB50ref : REAL;
+	bMFB50Ctr_ON : BOOL;
+	iMFB50top2s_mode : INT;
+	rMFB50top2s_uman : REAL;
+	rMFB50errmax : REAL;
+	rMFB50errmin : REAL;
+	rMFB50erravg : REAL;
+	rITsatmax : REAL;
+	rITsatmin : REAL;
+	xMEDIAN24_MFB50err : RMEDIAN24;
+	xMEDIAN24_Umsatz : RMEDIAN24;
+	rUmsatzMEDIAN : REAL;
+	CoV_fun : CoV;
+	xMEDIAN24_CoV : RMEDIAN24;
+	LCRLimScal_umin : LCRLimScal;
+	LCRLimScal_umax : LCRLimScal;
+	SimPID4_CoV : SimPID4;
+	rCoV_Set : REAL;
+	rPr_p2s_Range : REAL; (*[bar]*)
+	bCoVCtr_act : BOOL;
+	rTB34_Set : REAL;
+	rTB34_min : REAL;
+	rTB34Ctr_kp : REAL;
+	rTB34Ctr_ki : REAL;
+	SimPID4_TB34 : SimPID4;
+	LCRLimScal_MFB50ref : LCRLimScal;
+	LCRLimScal_CoVref : LCRLimScal := (0);
+END_VAR

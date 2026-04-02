@@ -1,0 +1,20 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: VisTR
+ * File: VisTR.var
+ * Author: 105051626
+ * Created: November 11, 2013
+ ********************************************************************
+ * Local variables of program VisTR
+ ********************************************************************)
+
+VAR
+
+END_VAR
+
+VAR CONSTANT
+	_iThR2_EH_Group_ON : UINT := 2; (*Thermal reactor 2 - electrical heating group - status On*)
+	_iThR2_EH_Group_OFF : UINT := 15; (*Thermal reactor 2 - electrical heating group - status Off*)
+	_iThR2_EH_Group_BLOCKED : UINT := 42; (*Thermal reactor 2 - electrical heating group - status blocked*)
+END_VAR

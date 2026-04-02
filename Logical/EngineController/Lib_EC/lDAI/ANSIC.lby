@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.0.0.0?><Library xmlns="http://br-automation.co.at/AS/Library" SubType="ANSIC" Version="1.00.0">
+   <Files>
+      <File>DAI.c</File>
+      <File>DAI.h</File>
+      <File>DAI_data.c</File>
+      <File>DAI_private.h</File>
+      <File>DAI_types.h</File>
+      <File>fDAI.c</File>
+      <File>lDAI.fun</File>
+      <File>lDAI.typ</File>
+      <File>lDAI.var</File>
+      <File>lib_properties.txt</File>
+      <File>rt_defines.h</File>
+      <File>rtwtypes.h</File>
+   </Files>
+</Library>

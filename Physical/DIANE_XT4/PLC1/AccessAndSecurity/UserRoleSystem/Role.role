@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="Administrators" Type="Role">
+    <Property ID="RoleID" Value="1" />
+    <Property ID="Description" Value="Role for administrators" />
+  </Element>
+  <Element ID="Everyone" Type="Role">
+    <Property ID="RoleID" Value="2" />
+    <Property ID="Description" Value="Role for everyone" />
+  </Element>
+  <Element ID="Customers" Type="Role">
+    <Property ID="RoleID" Value="3" />
+    <Property ID="Description" Value="Role for OPC UA customer communication" />
+  </Element>
+  <Element ID="MachineOperator" Type="Role">
+    <Property ID="RoleID" Value="4" />
+    <Property ID="Description" Value="Role for machine operator" />
+  </Element>
+</Configuration>

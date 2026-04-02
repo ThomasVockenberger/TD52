@@ -1,0 +1,60 @@
+bError_GT,POE\GAS_TRAIN\GAS_TRAIN.GB,5,OUT,69,33,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,ERROR: Gas train failure
+bError_GT,POE\GAS_TRAIN\GAS_TRAIN.GB,7,IN,166,16,Read,,BOOL,,,VAR_OUTPUT,LOCAL,,ERROR: Gas train failure
+bOUT_DI_GT_SafeDevOK,POE\GAS_TRAIN\GAS_TRAIN.GB,8,OUT,237,20,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,Gas safety device OK - Status of digital input
+bOUT_GT_OK,POE\GAS_TRAIN\GAS_TRAIN.GB,8,OUT,163,31,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,Function gas supply interruption OK
+bOUT_GT_SD_Dem,POE\GAS_TRAIN\GAS_TRAIN.GB,2,OUT,9,26,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,Demand gas safety device
+bOUT_GT_SD_Dem_PS,POE\GAS_TRAIN\GAS_TRAIN.GB,5,OUT,55,22,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,Demand gas safety device - Physical state
+bOUT_Rel_GV,POE\GAS_TRAIN\GAS_TRAIN.GB,2,OUT,2,30,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,Release gas valve
+bOUT_Rel_GVa_PS,POE\GAS_TRAIN\GAS_TRAIN.GB,5,OUT,51,26,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,Release gas valve a - Pysical state
+bOUT_Rel_GVb_PS,POE\GAS_TRAIN\GAS_TRAIN.GB,5,OUT,52,26,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,Release gas valve b - Pysical state
+bPS_DO_GT_SafeDev,POE\GAS_TRAIN\GAS_TRAIN.GB,4,IN,54,6,Read,,BOOL,,,VAR_INPUT,LOCAL,,Physical state of output - Gas safety device - gastrain
+bPS_DO_Rel_GVa,POE\GAS_TRAIN\GAS_TRAIN.GB,4,IN,49,10,Read,,BOOL,,,VAR_INPUT,LOCAL,,Physical state of output - Release gasvalve a
+bPS_DO_Rel_GVa,POE\GAS_TRAIN\GAS_TRAIN.GB,7,IN,185,10,Read,,BOOL,,,VAR_INPUT,LOCAL,,Physical state of output - Release gasvalve a
+bPS_DO_Rel_GVa,POE\GAS_TRAIN\GAS_TRAIN.GB,7,IN,80,10,Read,,BOOL,,,VAR_INPUT,LOCAL,,Physical state of output - Release gasvalve a
+bPS_DO_Rel_GVb,POE\GAS_TRAIN\GAS_TRAIN.GB,4,IN,50,10,Read,,BOOL,,,VAR_INPUT,LOCAL,,Physical state of output - Release gasvalve b
+bPS_DO_Rel_GVb,POE\GAS_TRAIN\GAS_TRAIN.GB,7,IN,186,10,Read,,BOOL,,,VAR_INPUT,LOCAL,,Physical state of output - Release gasvalve b
+bPS_DO_Rel_GVb,POE\GAS_TRAIN\GAS_TRAIN.GB,7,IN,161,10,Read,,BOOL,,,VAR_INPUT,LOCAL,,Physical state of output - Release gasvalve b
+bWarning_In_SafeDevOK,POE\GAS_TRAIN\GAS_TRAIN.GB,5,OUT,60,19,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING: Gas safety device OK - input not valid
+bWarning_In_SafeDevOK,POE\GAS_TRAIN\GAS_TRAIN.GB,7,IN,165,2,Read,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING: Gas safety device OK - input not valid
+bWarning_Out_GVa,POE\GAS_TRAIN\GAS_TRAIN.GB,2,OUT,15,24,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING: Release gas valve a - output not valid
+bWarning_Out_GVb,POE\GAS_TRAIN\GAS_TRAIN.GB,2,OUT,19,24,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING: Release gas valve b - output not valid
+bWarning_Out_SafeDev,POE\GAS_TRAIN\GAS_TRAIN.GB,2,OUT,22,20,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING: Gas safety device - output not valid
+bWarning_Out_SafeDev,POE\GAS_TRAIN\GAS_TRAIN.GB,7,IN,167,3,Read,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING: Gas safety device - output not valid
+iOUT_GT_LC_130s_ET,POE\GAS_TRAIN\GAS_TRAIN.GB,4,OUT,75,1,Write,,DINT,,,VAR_OUTPUT,LOCAL,,Gas leakage check 130s - Elipsed time
+PARA_GT_Exist,POE\GAS_TRAIN\GAS_TRAIN.GB,2,IN,25,0,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Gas train existing
+PARA_GT_Exist,POE\GAS_TRAIN\GAS_TRAIN.GB,2,IN,41,0,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Gas train existing
+PARA_GT_Exist,POE\GAS_TRAIN\GAS_TRAIN.GB,2,IN,294,0,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Gas train existing
+PARA_GT_Exist,POE\GAS_TRAIN\GAS_TRAIN.GB,2,IN,201,0,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Gas train existing
+PARA_GT_Exist,POE\GAS_TRAIN\GAS_TRAIN.GB,2,IN,33,0,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Gas train existing
+PARA_GT_Exist,POE\GAS_TRAIN\GAS_TRAIN.GB,5,IN,68,0,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Gas train existing
+PARA_GT_Exist,POE\GAS_TRAIN\GAS_TRAIN.GB,5,IN,157,0,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Gas train existing
+PARA_GT_Exist,POE\GAS_TRAIN\GAS_TRAIN.GB,7,IN,239,51,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Gas train existing
+sbGas_LC_Triggered,POE\GAS_TRAIN\GAS_TRAIN.GB,1,IN,189,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Gas leakage ckeck - Triggered
+sbN_Standstill,POE\GAS_TRAIN\GAS_TRAIN.GB,1,IN,188,14,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Actual engine speed < 80rpm
+sbN_Standstill,POE\GAS_TRAIN\GAS_TRAIN.GB,4,IN,73,12,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Actual engine speed < 80rpm
+sbRel_GV,POE\GAS_TRAIN\GAS_TRAIN.GB,1,IN,7,18,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Release gas valve
+sbSafeInputOK_SafeDevOK,POE\GAS_TRAIN\GAS_TRAIN.GB,4,IN,58,0,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe Input is OK
+sbSafeOutputOK_GVa,POE\GAS_TRAIN\GAS_TRAIN.GB,1,IN,16,7,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe output OK - DO Release gasvalve a
+sbSafeOutputOK_GVb,POE\GAS_TRAIN\GAS_TRAIN.GB,1,IN,20,7,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe output OK - DO Release gasvalve b
+sbSafeOutputOK_SafeDev,POE\GAS_TRAIN\GAS_TRAIN.GB,1,IN,23,2,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe output OK - DO Gas safety device - gastrain
+sbSafetyLoop_OK,POE\GAS_TRAIN\GAS_TRAIN.GB,1,IN,288,11,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safety function OK - Safety loop OK
+sDI_GT_SafeDevOK,POE\GAS_TRAIN\GAS_TRAIN.GB,4,IN,72,8,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Gas safety device - Gastrain OK
+sDI_GT_SafeDevOK,POE\GAS_TRAIN\GAS_TRAIN.GB,4,IN,159,8,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Gas safety device - Gastrain OK
+sDI_GT_SafeDevOK,POE\GAS_TRAIN\GAS_TRAIN.GB,7,IN,233,8,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Gas safety device - Gastrain OK
+sDI_GT_SafeDevOK,POE\GAS_TRAIN\GAS_TRAIN.GB,7,IN,160,8,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Gas safety device - Gastrain OK
+sDI_GT_SafeDevOK,POE\GAS_TRAIN\GAS_TRAIN.GB,7,IN,187,8,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Gas safety device - Gastrain OK
+sDO_GT_SafeDevice,POE\GAS_TRAIN\GAS_TRAIN.GB,2,OUT,8,24,Write,,SAFEBOOL,,,VAR_OUTPUT,LOCAL,,DO Gas safety device
+sDO_GT_SafeDevice,POE\GAS_TRAIN\GAS_TRAIN.GB,4,IN,88,7,Read,,SAFEBOOL,,,VAR_OUTPUT,LOCAL,,DO Gas safety device
+sDO_GT_SafeDevice,POE\GAS_TRAIN\GAS_TRAIN.GB,4,IN,158,7,Read,,SAFEBOOL,,,VAR_OUTPUT,LOCAL,,DO Gas safety device
+sDO_Rel_GV,POE\GAS_TRAIN\GAS_TRAIN.GB,2,OUT,0,31,Write,,SAFEBOOL,,,VAR_OUTPUT,LOCAL,,DO Release gas valve
+xET,POE\GAS_TRAIN\GAS_TRAIN.GB,3,,198,60,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_E1,POE\GAS_TRAIN\GAS_TRAIN.GB,3,,261,29,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_W1,POE\GAS_TRAIN\GAS_TRAIN.GB,0,,276,29,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_W2,POE\GAS_TRAIN\GAS_TRAIN.GB,0,,271,29,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_W3,POE\GAS_TRAIN\GAS_TRAIN.GB,0,,266,29,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_W4,POE\GAS_TRAIN\GAS_TRAIN.GB,3,,256,29,,,,,,VAR,FB,,FuB
+xR_TRIG_GT_SD,POE\GAS_TRAIN\GAS_TRAIN.GB,3,,154,30,,,,,,VAR,FB,,FuB
+xTOF_GT_PC_100ms,POE\GAS_TRAIN\GAS_TRAIN.GB,3,,153,79,,,,,,VAR,FB,,FuB
+xTON_GT_MF_1s,POE\GAS_TRAIN\GAS_TRAIN.GB,6,,152,79,,,,,,VAR,FB,,FuB
+xTON_GT_SD_6s,POE\GAS_TRAIN\GAS_TRAIN.GB,0,,285,83,,,,,,VAR,FB,,FuB
+xTP_GT_SD_5s,POE\GAS_TRAIN\GAS_TRAIN.GB,3,,155,54,,,,,,VAR,FB,,FuB

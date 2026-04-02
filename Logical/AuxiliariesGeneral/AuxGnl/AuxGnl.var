@@ -1,0 +1,123 @@
+VAR
+	bManAuxCtr_GnlRel : BOOL; (*General release. Safety conditions (gas alarm, fire alarm, safety loop, ..) are OK.*)
+	i : INT;
+	iCnt_Active : INT;
+	xManAuxCtr : ARRAY[0..80] OF ManAuxCtr;
+	xTON_ACP_ECW_Cmp : TON; (* Timer - Active Cooling Program Engine Cooling Water completed *)
+	xTON_ACP_EO_Cmp : TON; (* Timer - Active Cooling Program Engine Oil completed *)
+	bACP_Rel : BOOL; (* Active Cooling Program release *)
+	bACP_AoDT_Active : BOOL; (* Active Cooling Program automatic activation on speficic DateTime active *)
+	xF_TRIG_ACP_Active : F_TRIG;
+	xTON_ACP_Start : TON;
+	xR_TRIG_Sys_Run : R_TRIG;
+	xGR_MAX_StarterBat_Hi : GR_MAXR;
+	xGR_MIN_StarterBat_Lo : GR_MINR;
+	xTON_U_StarterBat_Lo : TON;
+	xRedPump_HWP : RedPump; (* Redundant heating water pumps *)
+	xRedPump_CCWP : RedPump; (* Redundant charge cooler water pumps *)
+	xRedPump_CC2WP : RedPump; (* Redundant charge cooler 2 water pumps *)
+	xRedPump_EmCWP : RedPump; (* Redundant emergency cooler water pumps *)
+	xTP_TC_CoolDownCheck : TP; (* monitoring duration of TC post-cooling *)
+	xTON_TC_CoolDownInterrupt : TON; (* allowed interruption duration of post-cooling *)
+	xF_TRIG_TC_CoolDownCheck : F_TRIG; (* detect end of post-cooling phase *)
+	iCnt_TC_Avg : UINT; (* counter for pressure average calculation *)
+	rPr_TCLubOil_Cum : REAL; (* cumulated pressure sensor signal values *)
+	xR_TRIG_TC_CoolDownInterrupt : R_TRIG; (* detect cool down interrupt during post-cooling phase *)
+	xGR_MINR_TC_CoolDownInterrupt : GR_MINR; (* hysteresis for multiple pressure losses condition *)
+	xCTU_TC_CoolDownInterrupt : CTU; (* counter for multiple cool down interrupts *)
+	rPr_TCLubOil_Avg : REAL; (* average pressure value *)
+	xR_TRIG_TC_CoolDownInterrupt_Cnt : R_TRIG; (*detect cycle of multiple post-cooling interrupts*)
+	xF_TRIG_TC_CoolDown_EmStop_Fire : F_TRIG; (* detect falling edge of safety loop or fire alarm during engine operation *)
+	rU_BufferBat1 : REAL;
+	rU_BufferBat2 : REAL;
+	rU_StarterBat : REAL;
+	iUpdate_UBat_Meas : INT;
+	iNr_Batteries : INT;
+	bBatMon_Required : BOOL;
+	bBatMon_TrigMeas : BOOL;
+	rUBat_Min_CBTrip : REAL;
+	bDisconnect_BufferBat1 : BOOL;
+	bDisconnect_BufferBat2 : BOOL;
+	bBatMon_RelMon : BOOL;
+	bBufferBat_RelMon : BOOL;
+	bStarterBat_RelMon : BOOL;
+	bBufferBat1_Disconnect4Test : BOOL;
+	bBufferBat1_ConnectLoad : BOOL;
+	bBufferBat2_Disconnect4Test : BOOL;
+	bBufferBat2_ConnectLoad : BOOL;
+	bStarterBat_Disconnect4Test : BOOL;
+	bStarterBat_ConnectLoad : BOOL;
+	iIdx_Bat : INT;
+	bBatMon_TestAllowed : BOOL;
+	rUBat_Avg : REAL;
+	iStepCnt : INT;
+	rUBat_Cum : REAL;
+	iCount_Avg : INT;
+	rUBat_Idle : REAL;
+	rUBat_Min_IdleLoadDiff : REAL;
+	rUBat_Diff_Disconnect : REAL;
+	xTON_2hOperation : TON;
+	xR_TRIG_2hOperation : R_TRIG;
+	xTON_2hStandstill : TON;
+	xR_TRIG_2hStandstill : R_TRIG;
+	xTON_24hCycle : TON;
+	xTOF_ChargeFault : TOF;
+	xTON_U_BufferBat1_CBTrip : TON;
+	xTON_U_BufferBat2_CBTrip : TON;
+	xTOF_BuffBat_Reconnected : TOF;
+	xTP_ChargeOff : TP;
+	xTON_ChargeOff_MeasIdle : TON;
+	xTP_UAvg_Short : TP;
+	xTON_ChargeOff : TON;
+	xTP_ConnectLoad : TP;
+	xTON_LoadStable : TON;
+	xTP_UAvg : TP;
+	xTP_Wait : TP;
+	xTON_EngStart : TON;
+	xF_TRIG_EngStart : F_TRIG;
+	xTP_UAvg_EngStart : TP;
+	xTON_StartValid : TON;
+	xTON_BufferBat1_Connected : TON;
+	xTON_BufferBat2_Connected : TON;
+	rU_Battery : REAL;
+	bBatMon_TestRunning : BOOL;
+	bBatMon_ManTestRunning : BOOL;
+	xTOF_AMM_U_BufferBat1_Lo : TOF;
+	xTOF_AMM_U_BufferBat2_Lo : TOF;
+	xTOF_AMM_U_StarterBat_Lo : TOF;
+	xTOF_BufferBat1_LoadDisconnect : TOF;
+	xTOF_BufferBat2_LoadDisconnect : TOF;
+	xTOF_StarterBat_LoadDisconnect : TOF;
+	iUpdate_UCtrlBat_Meas : USINT;
+	iIdx_CtrlBat : USINT;
+	xTOF_AMM_U_CtrlBat_Lo : ARRAY[1..iNum_CtrlBatMon] OF TOF;
+	bCtrlBatMon_Required : BOOL;
+	bCtrlBatMon_ManTestRunning : BOOL;
+	bCtrlBatMon_TestRunning : BOOL;
+	bCtrlBatMon_TrigMeas : BOOL;
+	xTOF_ChargeFault_CtrlBat : ARRAY[1..iNum_CtrlBatMon] OF TOF;
+	xTON_U_CtrlBat_CBTrip : ARRAY[1..iNum_CtrlBatMon] OF TON;
+	xTOF_CtrlBat_Reconnected : ARRAY[1..iNum_CtrlBatMon] OF TOF;
+	bCtrlBat_Disconnect4Test : ARRAY[1..iNum_CtrlBatMon] OF BOOL;
+	bCtrlBat_ConnectLoad : ARRAY[1..iNum_CtrlBatMon] OF BOOL;
+	iIdx_CtrlBat_UnderTest : USINT;
+	rU_CtrlBat : REAL;
+	bCtrlBatMon_TestAllowed : BOOL;
+	iStepCnt_CtrlBatMon : UINT;
+	rUCtrlBat_Avg : REAL;
+	rUCtrlBat_Cum : REAL;
+	iCount_CtrlBatMon_Avg : INT;
+	rUCtrlBat_Idle : REAL;
+	xTOF_CtrlBat_LoadDisconnect : ARRAY[1..iNum_CtrlBatMon] OF TOF;
+	xTON_24hCycle_CtrlBatMon : TON;
+	xTP_CtrlBatMon_ChargeOff : TP;
+	xTON_CtrlBatMon_ChrgOffMeasIdle : TON;
+	xTP_CtrlBatMon_UAvg_Short : TP;
+	xTON_CtrlBatMon_ChargeOff : TON;
+	xTP_CtrlBatMon_ConnectLoad : TP;
+	xTON_CtrlBatMon_LoadStable : TON;
+	xTP_CtrlBatMon_UAvg : TP;
+	xTP_CtrlBatMon_Wait : TP;
+	bAMM_U_CtrlBat_Lo : ARRAY[1..iNum_CtrlBatMon] OF BOOL;
+	xF_TRIG_AMM_U_CtrlBat_Lo : ARRAY[1..iNum_CtrlBatMon] OF F_TRIG;
+END_VAR

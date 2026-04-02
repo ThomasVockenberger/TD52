@@ -1,0 +1,48 @@
+(********************************************************************
+* COPYRIGHT -- INNIO Company
+********************************************************************
+* File: PIG.vvm
+* Author: automatically generated 
+* Created: 07.03.2014
+********************************************************************
+* PV mapping file
+********************************************************************)
+VAR_CONFIG
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#5.Ignition::IN_IG.tPB2MM;
+	Cyclic#4.AmmBase::OUT_AB.tAB2IG AT %Q.Cyclic#5.Ignition::IN_IG.tAB2IG; (*Changed with v4.05 (2-->5)*)
+	Cyclic#5.Synchronization::OUT_SY.tGCB_RUC AT %Q.Cyclic#2.Ignition::IN_IG.tGCB_RUC;
+	Cyclic#2.SAFI::OUT_SA.bIgnOperating AT %Q.Cyclic#2.Ignition::IN_IG.bIgnOperating;
+	Cyclic#5.EngineGeneral::OUT_EG.bMsg1026 AT %Q.Cyclic#2.Ignition::IN_IG.bMsg1026;
+	Cyclic#2.Opstate::OUT_OP.bIgn_Dem AT %Q.Cyclic#2.Ignition::IN_IG.bIgn_Dem;
+	Cyclic#4.Opstate::OUT_OP.bIgn_Dem AT %Q.Cyclic#5.Ignition::IN_IG.bIgn_Dem_TC5;
+	Cyclic#5.Gastrain::OUT_GT.bGV_On AT %Q.Cyclic#5.Ignition::IN_IG.bGV_On;
+	Cyclic#5.Gastrain::OUT_GT.bGV_On AT %Q.Cyclic#2.Ignition::IN_IG.bGV_On_TC2;
+	Cyclic#2.EngineController::OUT_EC.rCA_IgnP_Set AT %Q.Cyclic#2.Ignition::IN_IG.rCA_IgnP_Set;
+	Cyclic#2.EngineController::OUT_EC.rCA_Ign_Act AT %Q.Cyclic#2.Ignition::IN_IG.rCA_Ign_Act;
+	Cyclic#1.ICxx::OUT_IC.rN_IgnIC_Act AT %Q.Cyclic#2.Ignition::IN_IG.rN_IgnIC_Act;
+	Cyclic#1.SAFI::OUT_SA.rN_IgnSAFI_Act AT %Q.Cyclic#2.Ignition::IN_IG.rN_IgnSAFI_Act;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bPr_EOP_Prelub1 AT %Q.Cyclic#5.Ignition::IN_IG.bPr_EOP_Prelub1;
+	Cyclic#5.ICxx::OUT_IC.b_IgnIC_SelfTestBack AT %Q.Cyclic#5.Ignition::IN_IG.b_IgnIC_SelfTestBack;
+	Cyclic#5.SAFI::OUT_SA.b_IgnSAFI_SelfTestBack AT %Q.Cyclic#5.Ignition::IN_IG.b_IgnSAFI_SelfTestBack;
+	Cyclic#5.SAFI::OUT_SA.rU_IgnSAFI_Cyl AT %Q.Cyclic#2.Ignition::IN_IG.rU_IgnSAFI_Cyl;
+	Cyclic#5.Monic::OUT_MO.rU_IgnMon_Cyl AT %Q.Cyclic#2.Ignition::IN_IG.rU_IgnMon_Cyl;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem AT %Q.Cyclic#5.Ignition::IN_IG.bEng_Dem;
+	Cyclic#5.Gastrain::OUT_GT.bDeflagrationPrct AT %Q.Cyclic#5.Ignition::IN_IG.bDeflagrationPrct;
+	Cyclic#5.Synchronization::OUT_SY.bMnsOk AT %Q.Cyclic#5.Ignition::IN_IG.bMnsOk;
+	Cyclic#1.HalIO::tIgn_Run_Hal AT %Q.Cyclic#2.Ignition::IN_IG.tIgn_Run_Hal;
+	Cyclic#1.HalIO::tIgn2_Run_Hal AT %Q.Cyclic#2.Ignition::IN_IG.tIgn2_Run_Hal;
+	Cyclic#4.HalIO::tIgn_OverspeedRelay AT %Q.Cyclic#5.Ignition::IN_IG.tIgn_OverspeedRelay;
+	Cyclic#4.HalIO::tGCB_On AT %Q.Cyclic#5.Ignition::IN_IG.tGCB_On;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bPr_EOP_Prelub2 AT %Q.Cyclic#5.Ignition::IN_IG.bPr_EOP_Prelub2; (* V04.03.00.00 *)
+	Cyclic#5.Generator::OUT_GC.bRelEngTurn_OilSkid AT %Q.Cyclic#5.Ignition::IN_IG.bRelEngTurn_OilSkid; (* V04.03.00.00 *)
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bEngOilLevel_Lo AT %Q.Cyclic#5.Ignition::IN_IG.bEngOilLevel_Lo; (* V04.03.00.00 *)
+	Cyclic#5.HalIO::tSafetyLoop_EmStop AT %Q.Cyclic#5.Ignition::IN_IG.tSafetyLoop_EmStop; (* V04.03.00.00 *)
+	Cyclic#5.HalIO::tSafetyLoop_Eng AT %Q.Cyclic#5.Ignition::IN_IG.tSafetyLoop_Eng; (* V04.03.00.00 *)
+	Cyclic#5.HalIO::OUT_HA.bSimWinMOD_Active AT %Q.Cyclic#5.Ignition::IN_IG.bSimWinMOD_Active; (*V04.04.00.00*)
+	Cyclic#5.Opstate::OUT_OP.iIdx_OMSS AT %Q.Cyclic#2.Ignition::IN_IG.iIdx_OMSS;
+	Cyclic#5.Ventilation::OUT_VE.bInLouRelVE AT %Q.Cyclic#5.Ignition::IN_IG.bInLouRelVE;
+	Cyclic#5.ICxx::OUT_IC.bIC_Ign_Run_CAN AT %Q.Cyclic#2.Ignition::IN_IG.bIC_Ign_Run_CAN;
+	Cyclic#4.HalIO::OUT_HA.bTOF_HwBypassDigitalTwin AT %Q.Cyclic#5.Ignition::IN_IG.bTOF_HwBypassDigitalTwin;
+	Cyclic#5.Ventilation::OUT_VE.bMsg2295 AT %Q.Cyclic#5.Ignition::IN_IG.bMsg2295;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bMissfCyl_PurgeCrk AT %Q.Cyclic#5.Ignition::IN_IG.bMissfCyl_PurgeCrk;
+END_VAR

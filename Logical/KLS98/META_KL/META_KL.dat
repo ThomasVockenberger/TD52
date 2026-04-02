@@ -1,0 +1,100 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2019
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V3.99		06-03-2013	Weitzer, generated for modular software	
+; V4.00 	11-09-2013      pankajrodey, updated file with relevant information
+; V4.00 	31.01.2014	Weitzer, versions changed
+; V4.01 	15-07-2014	Weitzer, add CAN communication tasks
+; V4.02		02-06-2015	Caks, added two OUT interfaces
+; V4.04 	20-03-2017	Perktold, version changed
+; V4.04		15.05.2017	Gwiggner, KLS98 validation - MSF not working
+; V4.05		27.07.2017	Messner, CAN Diagnosis Picture added
+; V4.05.01 	16.04.2018	Perktold,	Integrated comments regarding "Safety-related application software source code (EN 13849-1 / 4.6.3)"
+;	
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>KL</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.06.00.00</VERSION>"
+;
+; Basisupdate Module Version (BU) 
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"	<PARA1 Name='iEng_Motortype' MIN='208' MAX='920' />"
+"	<PARA2 Name='rKLS98_PosResImp' MIN='-720' MAX='720' />"
+"	<PARA3 />"
+"	<PARA4 />"
+"	<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_KL</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='AB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='OP' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='IG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='HA' VERSION='04.00.00.00' />"
+"   <DEPENDENCY VISVERSION='02.01.00.00' />"			; Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	KLS98 device is equipped with knock sensors for 2 cylinders. The KLS98 module performs the real-time pre-processing of cylinder pressure signals "
+"	</General>	"
+""
+"	<F1 Name='CAN communication' LastModified='4.0.0.0'>"
+"	Manage CAN communication between the KLS98 device and the controller.	"
+"	</F1>"
+"	<F2 Name='Handling of errors and alarms' LastModified='4.0.0.0'>"
+"	The module receives various errors from the KLS98 module over CAN and sends the alarms over OPC to the controller.	"
+"	</F2>"
+"	<F3 Name='Configuration and parameterization of KLS98' LastModified='4.0.0.0'>"
+"	This module sends parameters to the KLS98 device over CAN bus.	"
+"	</F3>"
+""
+"	<Info>"
+"	Please enter additional module info here.	"
+" 	Update 2014-07-17: rKLS98_PosResImp changed MIN=-720 "
+"   V4.04  KLS98 validation - MSF not working "
+"   V4.06  Bugfix negative Limit + spacer in META_KL"
+"	</Info>"
+""
+"	<Customized LastModified='4.0.0.0'>	"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

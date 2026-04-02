@@ -1,0 +1,359 @@
+GAS_TRAIN_1,POE\Main\Func12_Gas.GB,0,,459,86,,,,,,VAR,FB,,FuB
+GAS_TRAIN_2,POE\Main\Func12_Gas.GB,0,,489,86,,,,,,VAR,FB,,FuB
+GAS_TRAIN_3,POE\Main\Func12_Gas.GB,3,,519,86,,,,,,VAR,FB,,FuB
+GAS_TRAIN_4,POE\Main\Func12_Gas.GB,6,,549,86,,,,,,VAR,FB,,FuB
+GAS_TRAIN_DCGA,POE\Main\Func12_Gas.GB,6,,579,86,,,,,,VAR,FB,,FuB
+sbECW_PumpsOff_120s,POE\Main\Func05_06_ECW_Pr.GB,2,OUT,204,50,Write,,SAFEBOOL,,,VAR,LOCAL,,All engine cooling water pumps off for 120s
+sbECW_PumpsOff_120s,POE\Main\Func05_06_ECW_Pr.GB,4,IN,27,8,Read,,SAFEBOOL,,,VAR,LOCAL,,All engine cooling water pumps off for 120s
+sbEngineType6,POE\Main\Func00_IO_Para.GB,12,OUT,228,41,Write,,SAFEBOOL,,,VAR,LOCAL,,Engine type 6 is active
+sbEngineType6,POE\Main\PhaseII.GB,1,IN,90,25,Read,,SAFEBOOL,,,VAR,LOCAL,,Engine type 6 is active
+sbEngineType6,POE\Main\PhaseII.GB,4,IN,118,25,Read,,SAFEBOOL,,,VAR,LOCAL,,Engine type 6 is active
+sbEngineType6,POE\Main\PhaseII.GB,4,IN,194,25,Read,,SAFEBOOL,,,VAR,LOCAL,,Engine type 6 is active
+sbEngineType6,POE\Main\PhaseII.GB,4,IN,114,25,Read,,SAFEBOOL,,,VAR,LOCAL,,Engine type 6 is active
+sbEngineType6,POE\Main\PhaseII.GB,4,IN,69,25,Read,,SAFEBOOL,,,VAR,LOCAL,,Engine type 6 is active
+sbEO_PumpsOff_120s,POE\Main\Func03_04_Oil_Pr.GB,2,OUT,378,46,Write,,SAFEBOOL,,,VAR,LOCAL,,All engine oil pumps off for 120s
+sbEO_PumpsOff_120s,POE\Main\Func03_04_Oil_Pr.GB,3,IN,111,10,Read,,SAFEBOOL,,,VAR,LOCAL,,All engine oil pumps off for 120s
+sbEO_PumpsOff_120s,POE\Main\Func03_04_Oil_Pr.GB,5,IN,221,10,Read,,SAFEBOOL,,,VAR,LOCAL,,All engine oil pumps off for 120s
+sbEO_PumpsOff_120s,POE\Main\Func03_04_Oil_Pr.GB,5,IN,83,10,Read,,SAFEBOOL,,,VAR,LOCAL,,All engine oil pumps off for 120s
+sbEO_PumpsOff_120s,POE\Main\Func03_04_Oil_Pr.GB,9,IN,261,10,Read,,SAFEBOOL,,,VAR,LOCAL,,All engine oil pumps off for 120s
+sbEO_PumpsOff_120s,POE\Main\Func03_04_Oil_Pr.GB,11,IN,296,10,Read,,SAFEBOOL,,,VAR,LOCAL,,All engine oil pumps off for 120s
+sbF00_OK_SafeModuleOK_ALL,POE\Main\Func00_IO_Para.GB,2,OUT,643,32,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety function 00 OK - All safe modules OK
+sbF00_OK_SafeModuleOK_ALL,POE\Main\SafetyLoop.GB,7,IN,150,3,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 00 OK - All safe modules OK
+sbF01_OK_Speed,POE\Main\Func01_Speed.GB,5,OUT,87,25,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety function 01 OK - Speed measurement
+sbF01_OK_Speed,POE\Main\Func01_Speed.GB,7,IN,186,22,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 01 OK - Speed measurement
+sbF01_OK_Speed,POE\Main\SafetyLoop.GB,7,IN,153,15,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 01 OK - Speed measurement
+sbF02_OK_Misfire,POE\Main\Func02_Misfire.GB,1,IN,66,11,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 02 OK - Misfire
+sbF02_OK_Misfire,POE\Main\Func02_Misfire.GB,1,OUT,2,0,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety function 02 OK - Misfire
+sbF02_OK_Misfire,POE\Main\SafetyLoop.GB,7,IN,154,14,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 02 OK - Misfire
+sbF03_OK_Oil_Pr_Min,POE\Main\Func03_04_Oil_Pr.GB,8,OUT,144,45,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety function 03 OK - Oil pressure minimum
+sbF03_OK_Oil_Pr_Min,POE\Main\Func03_04_Oil_Pr.GB,9,IN,210,10,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 03 OK - Oil pressure minimum
+sbF03_OK_Oil_Pr_Min,POE\Main\SafetyLoop.GB,7,IN,152,11,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 03 OK - Oil pressure minimum
+sbF04_OK_Oil_Pr_Max,POE\Main\Func03_04_Oil_Pr.GB,12,OUT,269,44,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety function 04 OK - Oil pressure maximum
+sbF04_OK_Oil_Pr_Max,POE\Main\Func03_04_Oil_Pr.GB,13,IN,295,9,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 04 OK - Oil pressure maximum
+sbF04_OK_Oil_Pr_Max,POE\Main\SafetyLoop.GB,7,IN,155,10,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 04 OK - Oil pressure maximum
+sbF05_OK_ECW_Pr_Min,POE\Main\Func05_06_ECW_Pr.GB,10,IN,121,8,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 05 OK - Engine cooling water pressure minim
+sbF05_OK_ECW_Pr_Min,POE\Main\Func05_06_ECW_Pr.GB,11,OUT,33,50,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety function 05 OK - Engine cooling water pressure minim
+sbF05_OK_ECW_Pr_Min,POE\Main\SafetyLoop.GB,7,IN,151,9,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 05 OK - Engine cooling water pressure minim
+sbF06_OK_ECW_Pr_Max,POE\Main\Func05_06_ECW_Pr.GB,14,OUT,149,49,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety function 06 OK - Engine cooling water pressure maxim
+sbF06_OK_ECW_Pr_Max,POE\Main\Func05_06_ECW_Pr.GB,16,IN,174,7,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 06 OK - Engine cooling water pressure maxim
+sbF06_OK_ECW_Pr_Max,POE\Main\SafetyLoop.GB,7,IN,161,8,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 06 OK - Engine cooling water pressure maxim
+sbF07_OK_Grid,POE\Main\Func07_Grid.GB,8,OUT,39,34,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety function 07 OK - Grid disconnection
+sbF07_OK_Grid,POE\Main\SafetyLoop.GB,7,IN,160,17,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 07 OK - Grid disconnection
+sbF08_OK_Overload,POE\Main\Func08_Overload.GB,1,OUT,23,0,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety function 08 OK - Overload
+sbF08_OK_Overload,POE\Main\SafetyLoop.GB,7,IN,159,12,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 08 OK - Overload
+sbF09_OK_Ventilation,POE\Main\PhaseII.GB,2,OUT,408,10,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety function 09 OK - Insufficient ventilation
+sbF09_OK_Ventilation,POE\Main\SafetyLoop.GB,7,IN,158,10,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 09 OK - Insufficient ventilation
+sbF10_OK_EmStop,POE\Main\Func10_EmStop.GB,2,OUT,24,55,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety function 10 OK - Emergency stop
+sbF10_OK_EmStop,POE\Main\SafetyLoop.GB,7,IN,156,14,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 10 OK - Emergency stop
+sbF11_OK_SafetyLoop,POE\Main\Func11_SafetyLoop.GB,1,OUT,1,0,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety function 11 OK - Safety loop
+sbF11_OK_SafetyLoop,POE\Main\SafetyLoop.GB,7,IN,157,10,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 11 OK - Safety loop
+sbF12_OK_Gas,POE\Main\Func12_Gas.GB,14,OUT,36,10,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety function 12 OK - Gas supply interruption
+sbF12_OK_Gas,POE\Main\SafetyLoop.GB,7,IN,162,17,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 12 OK - Gas supply interruption
+sbF16_OK_Purge,POE\Main\PhaseII.GB,5,OUT,151,14,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety function 16 OK - Purge flap leakage
+sbF16_OK_Purge,POE\Main\SafetyLoop.GB,7,IN,169,15,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 16 OK - Purge flap leakage
+sbF20_OK_HeatWater,POE\Main\PhaseII.GB,14,OUT,242,7,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety function 20 OK - Heating water system protection
+sbF20_OK_HeatWater,POE\Main\SafetyLoop.GB,7,IN,171,10,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 20 OK - Heating water system protection
+sbF21_OK_Pr_EG_Hi,POE\Main\PhaseII.GB,14,OUT,223,9,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety function 21 OK - Exhaust gas backpressure high
+sbF21_OK_Pr_EG_Hi,POE\Main\SafetyLoop.GB,7,IN,164,12,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 21 OK - Exhaust gas backpressure high
+sbF99_OK_OverAll,POE\Main\SafetyLoop.GB,5,OUT,55,40,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety function 99 OK - Over all functions
+sbF99_OK_OverAll,POE\Main\SafetyLoop.GB,7,IN,163,26,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function 99 OK - Over all functions
+sbGas_LC_Triggered,POE\Main\Func12_Gas.GB,1,IN,41,63,Read,,SAFEBOOL,,,VAR,LOCAL,,Gas leakage ckeck - Triggered
+sbGas_LC_Triggered,POE\Main\Func12_Gas.GB,1,IN,259,63,Read,,SAFEBOOL,,,VAR,LOCAL,,Gas leakage ckeck - Triggered
+sbGas_LC_Triggered,POE\Main\Func12_Gas.GB,4,IN,293,63,Read,,SAFEBOOL,,,VAR,LOCAL,,Gas leakage ckeck - Triggered
+sbGas_LC_Triggered,POE\Main\Func12_Gas.GB,7,IN,326,63,Read,,SAFEBOOL,,,VAR,LOCAL,,Gas leakage ckeck - Triggered
+sbGas_LC_Triggered,POE\Main\Func12_Gas.GB,10,IN,369,63,Read,,SAFEBOOL,,,VAR,LOCAL,,Gas leakage ckeck - Triggered
+sbGas_LC_Triggered,POE\Main\Func12_Gas.GB,11,OUT,63,9,Write,,SAFEBOOL,,,VAR,LOCAL,,Gas leakage ckeck - Triggered
+sbGasValves_Closed,POE\Main\Func00_IO_Para.GB,5,IN,38,66,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - All closed
+sbGasValves_Closed,POE\Main\Func01_Speed.GB,4,IN,162,3,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - All closed
+sbGasValves_Closed,POE\Main\Func02_Misfire.GB,1,IN,11,4,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - All closed
+sbGasValves_Closed,POE\Main\Func03_04_Oil_Pr.GB,7,IN,394,11,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - All closed
+sbGasValves_Closed,POE\Main\Func03_04_Oil_Pr.GB,11,IN,403,11,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - All closed
+sbGasValves_Closed,POE\Main\Func05_06_ECW_Pr.GB,4,IN,118,11,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - All closed
+sbGasValves_Closed,POE\Main\Func05_06_ECW_Pr.GB,7,IN,37,11,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - All closed
+sbGasValves_Closed,POE\Main\Func05_06_ECW_Pr.GB,13,IN,251,11,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - All closed
+sbGasValves_Closed,POE\Main\Func12_Gas.GB,11,OUT,16,9,Write,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - All closed
+sbGasValves_Closed,POE\Main\PhaseII.GB,1,IN,89,20,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - All closed
+sbGasValves_Closed,POE\Main\PhaseII.GB,1,IN,409,9,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - All closed
+sbGasValves_Closed,POE\Main\PhaseII.GB,7,IN,261,8,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - All closed
+sbGasValves_Closed,POE\Main\PhaseII.GB,13,IN,346,8,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - All closed
+sbGasValves_Open,POE\Main\Func03_04_Oil_Pr.GB,9,IN,205,12,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - At least one GV open
+sbGasValves_Open,POE\Main\Func03_04_Oil_Pr.GB,13,IN,294,12,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - At least one GV open
+sbGasValves_Open,POE\Main\Func05_06_ECW_Pr.GB,10,IN,61,12,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - At least one GV open
+sbGasValves_Open,POE\Main\Func05_06_ECW_Pr.GB,16,IN,173,12,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - At least one GV open
+sbGasValves_Open,POE\Main\Func12_Gas.GB,11,OUT,15,10,Write,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - At least one GV open
+sbGasValves_Open,POE\Main\Func12_Gas.GB,13,IN,29,19,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - At least one GV open
+sbGasValves_Open_10s,POE\Main\Func01_Speed.GB,7,IN,115,13,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - At least one GV open for 10s
+sbGasValves_Open_10s,POE\Main\Func12_Gas.GB,14,OUT,213,6,Write,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - At least one GV open for 10s
+sbGasValves_Open_1s,POE\Main\Func12_Gas.GB,14,OUT,22,7,Write,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - At least one GV open for 1s
+sbGasValves_Open_1s,POE\Main\PhaseII.GB,10,IN,370,6,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - At least one GV open for 1s
+sbGasValves_Open_1s,POE\Main\PhaseII.GB,10,IN,387,6,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - At least one GV open for 1s
+sbGasValves_Open_1s,POE\Main\PhaseII.GB,10,IN,395,6,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - At least one GV open for 1s
+sbGasValves_Open_60s,POE\Main\Func01_Speed.GB,4,IN,261,68,Read,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - At least one GV open for 60s
+sbGasValves_Open_60s,POE\Main\Func12_Gas.GB,14,OUT,28,5,Write,,SAFEBOOL,,,VAR,LOCAL,,Gasvalves - At least one GV open for 60s
+sbGCB_On_10s,POE\Main\Func05_06_ECW_Pr.GB,7,IN,321,16,Read,,SAFEBOOL,,,VAR,LOCAL,,Generator circuit breaker ON for 10s
+sbGCB_On_10s,POE\Main\Func07_Grid.GB,8,OUT,9,33,Write,,SAFEBOOL,,,VAR,LOCAL,,Generator circuit breaker ON for 10s
+sbGCB_On_10s,POE\Main\PhaseII.GB,1,IN,406,14,Read,,SAFEBOOL,,,VAR,LOCAL,,Generator circuit breaker ON for 10s
+sbGCB_On_60s,POE\Main\Func07_Grid.GB,8,OUT,233,33,Write,,SAFEBOOL,,,VAR,LOCAL,,Generator circuit breaker ON for 60s
+sbGCB_On_60s,POE\Main\PhaseII.GB,13,IN,241,13,Read,,SAFEBOOL,,,VAR,LOCAL,,Generator circuit breaker ON for 60s
+sbN_EngAct_500,POE\Main\Func01_Speed.GB,2,OUT,242,26,Write,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 500rpm
+sbN_EngAct_500,POE\Main\PhaseII.GB,13,IN,339,11,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 500rpm
+sbN_EngAct_60,POE\Main\Func01_Speed.GB,2,OUT,79,27,Write,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 60rpm
+sbN_EngAct_60,POE\Main\PhaseII.GB,7,IN,262,12,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 60rpm
+sbN_EngAct_60,POE\Main\PhaseII.GB,10,IN,291,12,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 60rpm
+sbN_EngAct_80,POE\Main\Func01_Speed.GB,2,OUT,252,27,Write,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 80rpm
+sbN_EngAct_80,POE\Main\Func01_Speed.GB,7,IN,13,23,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 80rpm
+sbN_EngAct_80,POE\Main\Func01_Speed.GB,7,IN,86,21,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 80rpm
+sbN_EngAct_80,POE\Main\Func02_Misfire.GB,1,IN,35,13,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 80rpm
+sbN_EngAct_80,POE\Main\Func02_Misfire.GB,1,IN,1,8,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 80rpm
+sbN_EngAct_80,POE\Main\Func12_Gas.GB,1,IN,11,7,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 80rpm
+sbN_EngAct_DiffOK,POE\Main\Func01_Speed.GB,4,IN,200,7,Read,,SAFEBOOL,,,VAR,LOCAL,,Speed difference calculation OK
+sbN_EngAct_DiffOK,POE\Main\Func01_Speed.GB,5,OUT,35,24,Write,,SAFEBOOL,,,VAR,LOCAL,,Speed difference calculation OK
+sbN_EngAct_Nom90,POE\Main\Func01_Speed.GB,2,OUT,101,23,Write,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 90% of nominal speed
+sbN_EngAct_Nom90,POE\Main\Func05_06_ECW_Pr.GB,7,IN,313,11,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 90% of nominal speed
+sbN_EngAct_Nom90_10s,POE\Main\Func01_Speed.GB,2,OUT,170,19,Write,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 90% of nominal speed for 10s
+sbN_EngAct_Nom90_10s,POE\Main\Func03_04_Oil_Pr.GB,3,IN,123,7,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 90% of nominal speed for 10s
+sbN_EngAct_Nom90_10s,POE\Main\Func03_04_Oil_Pr.GB,7,IN,160,7,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 90% of nominal speed for 10s
+sbN_EngAct_Nom90_10s,POE\Main\Func03_04_Oil_Pr.GB,9,IN,265,7,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 90% of nominal speed for 10s
+sbN_EngAct_Nom90_10s,POE\Main\Func03_04_Oil_Pr.GB,9,IN,187,7,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 90% of nominal speed for 10s
+sbN_EngAct_Nom90_10s,POE\Main\Func03_04_Oil_Pr.GB,11,IN,280,7,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 90% of nominal speed for 10s
+sbN_EngAct_Nom90_10s,POE\Main\Func03_04_Oil_Pr.GB,13,IN,286,7,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 90% of nominal speed for 10s
+sbN_EngAct_Nom90_10s,POE\Main\Func05_06_ECW_Pr.GB,10,IN,53,7,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 90% of nominal speed for 10s
+sbN_EngAct_Nom90_10s,POE\Main\Func05_06_ECW_Pr.GB,10,IN,46,7,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 90% of nominal speed for 10s
+sbN_EngAct_Nom90_10s,POE\Main\Func05_06_ECW_Pr.GB,13,IN,160,7,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 90% of nominal speed for 10s
+sbN_EngAct_Nom90_10s,POE\Main\Func05_06_ECW_Pr.GB,16,IN,165,7,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 90% of nominal speed for 10s
+sbN_EngAct_Nom90_10s,POE\Main\PhaseII.GB,1,IN,77,16,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 90% of nominal speed for 10s
+sbN_EngOperation,POE\Main\Func01_Speed.GB,2,OUT,207,25,Write,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 800rpm
+sbN_EngOperation,POE\Main\Func12_Gas.GB,10,IN,39,20,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed >= 800rpm
+sbN_Standstill,POE\Main\Func01_Speed.GB,2,OUT,166,29,Write,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed <  80rpm
+sbN_Standstill,POE\Main\Func03_04_Oil_Pr.GB,3,IN,112,16,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed <  80rpm
+sbN_Standstill,POE\Main\Func03_04_Oil_Pr.GB,5,IN,81,16,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed <  80rpm
+sbN_Standstill,POE\Main\Func03_04_Oil_Pr.GB,9,IN,262,16,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed <  80rpm
+sbN_Standstill,POE\Main\Func05_06_ECW_Pr.GB,4,IN,26,16,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed <  80rpm
+sbN_Standstill,POE\Main\Func12_Gas.GB,1,IN,226,68,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed <  80rpm
+sbN_Standstill,POE\Main\Func12_Gas.GB,4,IN,294,68,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed <  80rpm
+sbN_Standstill,POE\Main\Func12_Gas.GB,4,IN,260,68,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed <  80rpm
+sbN_Standstill,POE\Main\Func12_Gas.GB,7,IN,327,68,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed <  80rpm
+sbN_Standstill,POE\Main\Func12_Gas.GB,10,IN,370,68,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed <  80rpm
+sbN_Standstill,POE\Main\PhaseII.GB,1,IN,407,14,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed <  80rpm
+sbN_Standstill,POE\Main\PhaseII.GB,7,IN,160,25,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed <  80rpm
+sbN_Standstill,POE\Main\PhaseII.GB,13,IN,243,13,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed <  80rpm
+sbN_Standstill_60s,POE\Main\Func01_Speed.GB,2,OUT,129,25,Write,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed <  80rpm for 60s
+sbN_Standstill_60s,POE\Main\Func02_Misfire.GB,1,IN,55,2,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed <  80rpm for 60s
+sbN_Standstill_60s,POE\Main\Func03_04_Oil_Pr.GB,5,IN,222,12,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed <  80rpm for 60s
+sbN_Standstill_60s,POE\Main\Func03_04_Oil_Pr.GB,11,IN,297,12,Read,,SAFEBOOL,,,VAR,LOCAL,,Actual engine speed <  80rpm for 60s
+sbPr_ECW_DiffOK,POE\Main\Func05_06_ECW_Pr.GB,4,IN,124,13,Read,,SAFEBOOL,,,VAR,LOCAL,,Pressure difference calculation OK
+sbPr_ECW_DiffOK,POE\Main\Func05_06_ECW_Pr.GB,5,OUT,18,55,Write,,SAFEBOOL,,,VAR,LOCAL,,Pressure difference calculation OK
+sbPr_ECW_DiffOK,POE\Main\Func05_06_ECW_Pr.GB,7,IN,216,13,Read,,SAFEBOOL,,,VAR,LOCAL,,Pressure difference calculation OK
+sbPr_ECW_MsOK,POE\Main\Func05_06_ECW_Pr.GB,2,OUT,274,56,Write,,SAFEBOOL,,,VAR,LOCAL,,Engine cooling water pressure - Measurement signal OK
+sbPr_ECW_MsOK,POE\Main\Func05_06_ECW_Pr.GB,4,IN,309,14,Read,,SAFEBOOL,,,VAR,LOCAL,,Engine cooling water pressure - Measurement signal OK
+sbPr_ECW_MsOK,POE\Main\Func05_06_ECW_Pr.GB,4,IN,276,13,Read,,SAFEBOOL,,,VAR,LOCAL,,Engine cooling water pressure - Measurement signal OK
+sbPr_ECW_MsOK,POE\Main\Func05_06_ECW_Pr.GB,7,IN,311,14,Read,,SAFEBOOL,,,VAR,LOCAL,,Engine cooling water pressure - Measurement signal OK
+sbPr_ECW_MsOK,POE\Main\Func05_06_ECW_Pr.GB,7,IN,282,15,Read,,SAFEBOOL,,,VAR,LOCAL,,Engine cooling water pressure - Measurement signal OK
+sbPr_ECWaP_MsOK,POE\Main\Func05_06_ECW_Pr.GB,2,OUT,275,55,Write,,SAFEBOOL,,,VAR,LOCAL,,Engine cooling water pressure after pump - Measurement sign
+sbPr_ECWaP_MsOK,POE\Main\Func05_06_ECW_Pr.GB,4,IN,310,12,Read,,SAFEBOOL,,,VAR,LOCAL,,Engine cooling water pressure after pump - Measurement sign
+sbPr_ECWaP_MsOK,POE\Main\Func05_06_ECW_Pr.GB,7,IN,312,12,Read,,SAFEBOOL,,,VAR,LOCAL,,Engine cooling water pressure after pump - Measurement sign
+sbPr_ECWaP_MsOK,POE\Main\Func05_06_ECW_Pr.GB,13,IN,301,11,Read,,SAFEBOOL,,,VAR,LOCAL,,Engine cooling water pressure after pump - Measurement sign
+sbPr_EO_DiffOK,POE\Main\Func03_04_Oil_Pr.GB,5,IN,217,15,Read,,SAFEBOOL,,,VAR,LOCAL,,Pressure difference calculation OK
+sbPr_EO_DiffOK,POE\Main\Func03_04_Oil_Pr.GB,6,OUT,62,50,Write,,SAFEBOOL,,,VAR,LOCAL,,Pressure difference calculation OK
+sbPr_EO_MsOK,POE\Main\Func03_04_Oil_Pr.GB,2,OUT,442,52,Write,,SAFEBOOL,,,VAR,LOCAL,,Oil pressure at last lubrication point - Measurement signal
+sbPr_EO_MsOK,POE\Main\Func03_04_Oil_Pr.GB,3,IN,449,16,Read,,SAFEBOOL,,,VAR,LOCAL,,Oil pressure at last lubrication point - Measurement signal
+sbPr_EO_MsOK,POE\Main\Func03_04_Oil_Pr.GB,3,IN,448,65,Read,,SAFEBOOL,,,VAR,LOCAL,,Oil pressure at last lubrication point - Measurement signal
+sbPr_EO_MsOK,POE\Main\Func03_04_Oil_Pr.GB,3,IN,456,16,Read,,SAFEBOOL,,,VAR,LOCAL,,Oil pressure at last lubrication point - Measurement signal
+sbPr_EO_MsOK,POE\Main\Func03_04_Oil_Pr.GB,5,IN,461,16,Read,,SAFEBOOL,,,VAR,LOCAL,,Oil pressure at last lubrication point - Measurement signal
+sbPr_EO_MsOK,POE\Main\Func03_04_Oil_Pr.GB,7,IN,466,16,Read,,SAFEBOOL,,,VAR,LOCAL,,Oil pressure at last lubrication point - Measurement signal
+sbPr_EOaP_MsOK,POE\Main\Func03_04_Oil_Pr.GB,2,OUT,443,49,Write,,SAFEBOOL,,,VAR,LOCAL,,Oil pressure after pump - Measurement signal OK
+sbPr_EOaP_MsOK,POE\Main\Func03_04_Oil_Pr.GB,5,IN,462,13,Read,,SAFEBOOL,,,VAR,LOCAL,,Oil pressure after pump - Measurement signal OK
+sbPr_EOaP_MsOK,POE\Main\Func03_04_Oil_Pr.GB,9,IN,495,13,Read,,SAFEBOOL,,,VAR,LOCAL,,Oil pressure after pump - Measurement signal OK
+sbPr_EOaP_MsOK,POE\Main\Func03_04_Oil_Pr.GB,9,IN,485,12,Read,,SAFEBOOL,,,VAR,LOCAL,,Oil pressure after pump - Measurement signal OK
+sbPr_EOaP_MsOK,POE\Main\Func03_04_Oil_Pr.GB,9,IN,497,13,Read,,SAFEBOOL,,,VAR,LOCAL,,Oil pressure after pump - Measurement signal OK
+sbRel_GV_ERV_PC_OK,POE\Main\Func12_Gas.GB,1,IN,586,1,Read,,SAFEBOOL,,,VAR,LOCAL,,Release gas valves from engine room ventilation - Plausibil
+sbRel_GV_ERV_PC_OK,POE\Main\PhaseII.GB,2,OUT,420,10,Write,,SAFEBOOL,,,VAR,LOCAL,,Release gas valves from engine room ventilation - Plausibil
+sbRel_GV_Purge_OK,POE\Main\Func12_Gas.GB,1,IN,361,3,Read,,SAFEBOOL,,,VAR,LOCAL,,Release gas valves from purge by cranking
+sbRel_GV_Purge_OK,POE\Main\PhaseII.GB,14,OUT,17,10,Write,,SAFEBOOL,,,VAR,LOCAL,,Release gas valves from purge by cranking
+sbReset_SafetyLoop,POE\Main\Func00_IO_Para.GB,6,OUT,46,35,Write,,SAFEBOOL,,,VAR,LOCAL,,Reset safety loop
+sbReset_SafetyLoop,POE\Main\SafetyLoop.GB,7,IN,35,28,Read,,SAFEBOOL,,,VAR,LOCAL,,Reset safety loop
+sbSafetyLoop_OK,POE\Main\Func07_Grid.GB,1,IN,21,20,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function OK - Safety loop OK
+sbSafetyLoop_OK,POE\Main\Func10_EmStop.GB,1,IN,37,69,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function OK - Safety loop OK
+sbSafetyLoop_OK,POE\Main\Func12_Gas.GB,1,IN,227,65,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function OK - Safety loop OK
+sbSafetyLoop_OK,POE\Main\Func12_Gas.GB,1,IN,12,5,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function OK - Safety loop OK
+sbSafetyLoop_OK,POE\Main\Func12_Gas.GB,4,IN,295,65,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function OK - Safety loop OK
+sbSafetyLoop_OK,POE\Main\Func12_Gas.GB,4,IN,261,65,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function OK - Safety loop OK
+sbSafetyLoop_OK,POE\Main\Func12_Gas.GB,7,IN,328,65,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function OK - Safety loop OK
+sbSafetyLoop_OK,POE\Main\Func12_Gas.GB,10,IN,371,65,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety function OK - Safety loop OK
+sbSafetyLoop_OK,POE\Main\SafetyLoop.GB,8,OUT,36,41,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety function OK - Safety loop OK
+sbSL_OK_ECW_Ms,POE\Main\Func05_06_ECW_Pr.GB,2,OUT,424,55,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Engine cooling water pressure - Measuremen
+sbSL_OK_ECW_Ms,POE\Main\Func05_06_ECW_Pr.GB,10,IN,434,15,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Engine cooling water pressure - Measuremen
+sbSL_OK_ECWaP_Ms,POE\Main\Func05_06_ECW_Pr.GB,2,OUT,429,53,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Engine cooling water pressure after pump -
+sbSL_OK_ECWaP_Ms,POE\Main\Func05_06_ECW_Pr.GB,13,IN,436,10,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Engine cooling water pressure after pump -
+sbSL_OK_EO_Ms,POE\Main\Func03_04_Oil_Pr.GB,2,OUT,536,50,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Oil pressure at last lubrication point - M
+sbSL_OK_EO_Ms,POE\Main\Func03_04_Oil_Pr.GB,7,IN,578,16,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Oil pressure at last lubrication point - M
+sbSL_OK_EOaP_Ms,POE\Main\Func03_04_Oil_Pr.GB,2,OUT,574,47,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Oil pressure after pump - Measurement sign
+sbSL_OK_EOaP_Ms,POE\Main\Func03_04_Oil_Pr.GB,11,IN,580,13,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Oil pressure after pump - Measurement sign
+sbTimer_100ms,POE\Main\PhaseII.GB,7,IN,270,12,Read,,SAFEBOOL,,,VAR,LOCAL,,100ms tick
+sbTimer_100ms,POE\Main\PhaseII.GB,8,IN,269,4,Read,,SAFEBOOL,,,VAR,LOCAL,,100ms tick
+sbTimer_100ms,POE\Main\PhaseII.GB,8,OUT,268,15,Write,,SAFEBOOL,,,VAR,LOCAL,,100ms tick
+sbTimer_100ms_Saved,POE\Main\PhaseII.GB,7,IN,272,5,Read,,SAFEBOOL,,,VAR,LOCAL,,100ms tick saved
+sbTimer_100ms_Saved,POE\Main\PhaseII.GB,8,OUT,271,8,Write,,SAFEBOOL,,,VAR,LOCAL,,100ms tick saved
+siN_EngAct,POE\Main\Func01_Speed.GB,2,OUT,54,31,Write,,SAFEDINT,,,VAR,LOCAL,,Actual engine speed [rpm]
+siN_EngAct,POE\Main\Func01_Speed.GB,4,IN,66,2,Read,,SAFEDINT,,,VAR,LOCAL,,Actual engine speed [rpm]
+siN_EngAct,POE\Main\Func03_04_Oil_Pr.GB,3,IN,34,68,Read,,SAFEDINT,,,VAR,LOCAL,,Actual engine speed [rpm]
+siN_EngAct,POE\Main\Func03_04_Oil_Pr.GB,3,IN,33,19,Read,,SAFEDINT,,,VAR,LOCAL,,Actual engine speed [rpm]
+siN_EngAct,POE\Main\PhaseII.GB,8,IN,9,8,Read,,SAFEDINT,,,VAR,LOCAL,,Actual engine speed [rpm]
+siN_EngAct_Diff,POE\Main\Func01_Speed.GB,4,IN,195,10,Read,,SAFEDINT,,,VAR,LOCAL,,Actual engine speed difference [rpm]
+siN_EngAct_Diff,POE\Main\Func01_Speed.GB,5,OUT,56,27,Write,,SAFEDINT,,,VAR,LOCAL,,Actual engine speed difference [rpm]
+siPr_ECW,POE\Main\Func05_06_ECW_Pr.GB,2,OUT,1,63,Write,,SAFEDINT,,,VAR,LOCAL,,Engine cooling water pressure [mbar]
+siPr_ECW,POE\Main\Func05_06_ECW_Pr.GB,4,IN,15,21,Read,,SAFEDINT,,,VAR,LOCAL,,Engine cooling water pressure [mbar]
+siPr_ECW,POE\Main\Func05_06_ECW_Pr.GB,4,IN,25,21,Read,,SAFEDINT,,,VAR,LOCAL,,Engine cooling water pressure [mbar]
+siPr_ECW,POE\Main\Func05_06_ECW_Pr.GB,7,IN,42,21,Read,,SAFEDINT,,,VAR,LOCAL,,Engine cooling water pressure [mbar]
+siPr_ECW,POE\Main\Func05_06_ECW_Pr.GB,7,IN,29,21,Read,,SAFEDINT,,,VAR,LOCAL,,Engine cooling water pressure [mbar]
+siPr_ECW,POE\Main\Func05_06_ECW_Pr.GB,10,IN,40,21,Read,,SAFEDINT,,,VAR,LOCAL,,Engine cooling water pressure [mbar]
+siPr_ECW_Diff,POE\Main\Func05_06_ECW_Pr.GB,4,IN,123,17,Read,,SAFEDINT,,,VAR,LOCAL,,Actual engine cooling water pressure difference [mbar]
+siPr_ECW_Diff,POE\Main\Func05_06_ECW_Pr.GB,5,OUT,22,59,Write,,SAFEDINT,,,VAR,LOCAL,,Actual engine cooling water pressure difference [mbar]
+siPr_ECW_Diff,POE\Main\Func05_06_ECW_Pr.GB,7,IN,215,17,Read,,SAFEDINT,,,VAR,LOCAL,,Actual engine cooling water pressure difference [mbar]
+siPr_ECW_Saved,POE\Main\Func05_06_ECW_Pr.GB,7,IN,43,14,Read,,SAFEDINT,,,VAR,LOCAL,,Engine cooling water pressure - Last cycle [mbar]
+siPr_ECW_Saved,POE\Main\Func05_06_ECW_Pr.GB,11,OUT,41,57,Write,,SAFEDINT,,,VAR,LOCAL,,Engine cooling water pressure - Last cycle [mbar]
+siPr_ECWaP,POE\Main\Func05_06_ECW_Pr.GB,2,OUT,133,61,Write,,SAFEDINT,,,VAR,LOCAL,,Engine cooling water pressure after pump [mbar]
+siPr_ECWaP,POE\Main\Func05_06_ECW_Pr.GB,4,IN,24,19,Read,,SAFEDINT,,,VAR,LOCAL,,Engine cooling water pressure after pump [mbar]
+siPr_ECWaP,POE\Main\Func05_06_ECW_Pr.GB,13,IN,156,19,Read,,SAFEDINT,,,VAR,LOCAL,,Engine cooling water pressure after pump [mbar]
+siPr_ECWaP,POE\Main\Func05_06_ECW_Pr.GB,13,IN,154,20,Read,,SAFEDINT,,,VAR,LOCAL,,Engine cooling water pressure after pump [mbar]
+siPr_ECWaP,POE\Main\Func05_06_ECW_Pr.GB,13,IN,145,19,Read,,SAFEDINT,,,VAR,LOCAL,,Engine cooling water pressure after pump [mbar]
+siPr_ECWaP_Saved,POE\Main\Func05_06_ECW_Pr.GB,13,IN,157,12,Read,,SAFEDINT,,,VAR,LOCAL,,Engine cooling water pressure after pump - Last cycle [mbar
+siPr_ECWaP_Saved,POE\Main\Func05_06_ECW_Pr.GB,13,OUT,155,44,Write,,SAFEDINT,,,VAR,LOCAL,,Engine cooling water pressure after pump - Last cycle [mbar
+siPr_EO,POE\Main\Func03_04_Oil_Pr.GB,2,OUT,1,59,Write,,SAFEDINT,,,VAR,LOCAL,,Oil pressure at last lubrication point [mbar]
+siPr_EO,POE\Main\Func03_04_Oil_Pr.GB,3,IN,50,72,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure at last lubrication point [mbar]
+siPr_EO,POE\Main\Func03_04_Oil_Pr.GB,3,IN,53,62,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure at last lubrication point [mbar]
+siPr_EO,POE\Main\Func03_04_Oil_Pr.GB,3,IN,96,23,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure at last lubrication point [mbar]
+siPr_EO,POE\Main\Func03_04_Oil_Pr.GB,3,IN,129,23,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure at last lubrication point [mbar]
+siPr_EO,POE\Main\Func03_04_Oil_Pr.GB,5,IN,75,23,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure at last lubrication point [mbar]
+siPr_EO,POE\Main\Func03_04_Oil_Pr.GB,5,IN,87,23,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure at last lubrication point [mbar]
+siPr_EO,POE\Main\Func03_04_Oil_Pr.GB,7,IN,156,23,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure at last lubrication point [mbar]
+siPr_EO,POE\Main\Func03_04_Oil_Pr.GB,7,IN,154,23,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure at last lubrication point [mbar]
+siPr_EO_Diff,POE\Main\Func03_04_Oil_Pr.GB,5,IN,212,18,Read,,SAFEDINT,,,VAR,LOCAL,,Actual oil pressure difference between the sensors [mbar]
+siPr_EO_Diff,POE\Main\Func03_04_Oil_Pr.GB,6,OUT,66,53,Write,,SAFEDINT,,,VAR,LOCAL,,Actual oil pressure difference between the sensors [mbar]
+siPr_EO_Saved,POE\Main\Func03_04_Oil_Pr.GB,7,IN,157,16,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure at last lubrication point - Last cycle [mbar]
+siPr_EO_Saved,POE\Main\Func03_04_Oil_Pr.GB,8,OUT,155,52,Write,,SAFEDINT,,,VAR,LOCAL,,Oil pressure at last lubrication point - Last cycle [mbar]
+siPr_EO_Standstill,POE\Main\Func03_04_Oil_Pr.GB,3,IN,128,13,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure at last lubrication point - At standstill [mba
+siPr_EO_Standstill,POE\Main\Func03_04_Oil_Pr.GB,4,OUT,54,48,Write,,SAFEDINT,,,VAR,LOCAL,,Oil pressure at last lubrication point - At standstill [mba
+siPr_EOaP,POE\Main\Func03_04_Oil_Pr.GB,2,OUT,229,56,Write,,SAFEDINT,,,VAR,LOCAL,,Oil pressure after pump [mbar]
+siPr_EOaP,POE\Main\Func03_04_Oil_Pr.GB,5,IN,76,20,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure after pump [mbar]
+siPr_EOaP,POE\Main\Func03_04_Oil_Pr.GB,9,IN,249,20,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure after pump [mbar]
+siPr_EOaP,POE\Main\Func03_04_Oil_Pr.GB,9,IN,255,59,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure after pump [mbar]
+siPr_EOaP,POE\Main\Func03_04_Oil_Pr.GB,11,IN,274,21,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure after pump [mbar]
+siPr_EOaP,POE\Main\Func03_04_Oil_Pr.GB,11,IN,257,20,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure after pump [mbar]
+siPr_EOaP,POE\Main\Func03_04_Oil_Pr.GB,11,IN,276,20,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure after pump [mbar]
+siPr_EOaP,POE\Main\Func03_04_Oil_Pr.GB,11,IN,268,20,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure after pump [mbar]
+siPr_EOaP_Saved,POE\Main\Func03_04_Oil_Pr.GB,11,IN,277,13,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure after pump - Last cycle [mbar]
+siPr_EOaP_Saved,POE\Main\Func03_04_Oil_Pr.GB,12,OUT,275,49,Write,,SAFEDINT,,,VAR,LOCAL,,Oil pressure after pump - Last cycle [mbar]
+siPr_EOaP_Standstill,POE\Main\Func03_04_Oil_Pr.GB,10,OUT,256,46,Write,,SAFEDINT,,,VAR,LOCAL,,Oil pressure after pump - At standstill [mbar]
+siPr_EOaP_Standstill,POE\Main\Func03_04_Oil_Pr.GB,11,IN,267,11,Read,,SAFEDINT,,,VAR,LOCAL,,Oil pressure after pump - At standstill [mbar]
+siVol_Purge_Air,POE\Main\PhaseII.GB,8,OUT,10,15,Write,,SAFEDINT,,,VAR,LOCAL,,Calculated purge air volume
+siVol_Purge_Air,POE\Main\PhaseII.GB,10,IN,45,12,Read,,SAFEDINT,,,VAR,LOCAL,,Calculated purge air volume
+siVol_Purge_Air,POE\Main\PhaseII.GB,11,IN,41,10,Read,,SAFEDINT,,,VAR,LOCAL,,Calculated purge air volume
+siVol_Purge_Air_Saved,POE\Main\PhaseII.GB,8,IN,11,0,Read,,SAFEDINT,,,VAR,LOCAL,,Calculated purge air volume - Last cycle
+siVol_Purge_Air_Saved,POE\Main\PhaseII.GB,10,IN,311,5,Read,,SAFEDINT,,,VAR,LOCAL,,Calculated purge air volume - Last cycle
+siVol_Purge_Air_Saved,POE\Main\PhaseII.GB,11,OUT,42,8,Write,,SAFEDINT,,,VAR,LOCAL,,Calculated purge air volume - Last cycle
+xCALC_VOL_F17,POE\Main\PhaseII.GB,6,,285,23,,,,,,VAR,FB,,FuB
+xCONV_F01_N_EngAct,POE\Main\Func01_Speed.GB,0,,32,44,,,,,,VAR,FB,,FuB
+xCONV_F01_N_EngAct_Ign,POE\Main\Func01_Speed.GB,3,,30,39,,,,,,VAR,FB,,FuB
+xCONV_F99_EngNom,POE\Main\SafetyLoop.GB,3,,95,60,,,,,,VAR,FB,,FuB
+xCONV_F99_Motortype,POE\Main\SafetyLoop.GB,0,,75,60,,,,,,VAR,FB,,FuB
+xDEV_ECW,POE\Main\Func05_06_ECW_Pr.GB,3,,273,34,,,,,,VAR,FB,,FuB
+xDEV_EngAct,POE\Main\Func01_Speed.GB,3,,297,65,,,,,,VAR,FB,,FuB
+xDEV_EO,POE\Main\Func03_04_Oil_Pr.GB,4,,417,34,,,,,,VAR,FB,,FuB
+xDI_MON_EmStop,POE\Main\Func10_EmStop.GB,0,,71,37,,,,,,VAR,FB,,FuB
+xDI_MON_EmStop_M,POE\Main\Func10_EmStop.GB,0,,61,37,,,,,,VAR,FB,,FuB
+xDI_MON_GenPrctTrip,POE\Main\Func08_Overload.GB,0,,40,37,,,,,,VAR,FB,,FuB
+xDI_MON_Ign_Run,POE\Main\Func02_Misfire.GB,0,,77,51,,,,,,VAR,FB,,FuB
+xDI_MON_OlShortCirc,POE\Main\Func08_Overload.GB,0,,31,37,,,,,,VAR,FB,,FuB
+xDI_MON_Pr_EG_Hi,POE\Main\PhaseII.GB,12,,239,41,,,,,,VAR,FB,,FuB
+xDI_MON_ScavFlap,POE\Main\PhaseII.GB,0,,170,19,,,,,,VAR,FB,,FuB
+xDI_MON_SL_A1,POE\Main\Func11_SafetyLoop.GB,0,,41,39,,,,,,VAR,FB,,FuB
+xDI_MON_SL_A2,POE\Main\Func11_SafetyLoop.GB,0,,72,39,,,,,,VAR,FB,,FuB
+xDI_MON_SL_M,POE\Main\Func11_SafetyLoop.GB,0,,50,39,,,,,,VAR,FB,,FuB
+xDI_MON_TS_ScavFlap,POE\Main\PhaseII.GB,3,,180,19,,,,,,VAR,FB,,FuB
+xELAPSED_TIME_ECW,POE\Main\Func05_06_ECW_Pr.GB,0,,265,58,,,,,,VAR,FB,,FuB
+xELAPSED_TIME_EO,POE\Main\Func03_04_Oil_Pr.GB,0,,409,58,,,,,,VAR,FB,,FuB
+xET_GCB_On_10s,POE\Main\Func07_Grid.GB,6,,244,91,,,,,,VAR,FB,,FuB
+xET_GCB_On_60s,POE\Main\Func07_Grid.GB,6,,250,91,,,,,,VAR,FB,,FuB
+xET_GV_Open_60s,POE\Main\Func12_Gas.GB,12,,357,41,,,,,,VAR,FB,,FuB
+xET_N_Nom90_10s,POE\Main\Func01_Speed.GB,0,,267,14,,,,,,VAR,FB,,FuB
+xET_N_Standstill_60s,POE\Main\Func01_Speed.GB,0,,273,14,,,,,,VAR,FB,,FuB
+xET_SDC_30s,POE\Main\Func01_Speed.GB,3,,285,53,,,,,,VAR,FB,,FuB
+xF_TRIG_F12_LC,POE\Main\Func12_Gas.GB,9,,210,41,,,,,,VAR,FB,,FuB
+xF_TRIG_F17_Store,POE\Main\PhaseII.GB,9,,310,31,,,,,,VAR,FB,,FuB
+xF_TRIG_Reset_SL,POE\Main\Func00_IO_Para.GB,4,,120,75,,,,,,VAR,FB,,FuB
+xFROZEN_ECW,POE\Main\Func05_06_ECW_Pr.GB,6,,258,34,,,,,,VAR,FB,,FuB
+xFROZEN_ECWaP,POE\Main\Func05_06_ECW_Pr.GB,12,,249,34,,,,,,VAR,FB,,FuB
+xFROZEN_EO,POE\Main\Func03_04_Oil_Pr.GB,6,,392,34,,,,,,VAR,FB,,FuB
+xFROZEN_EOaP,POE\Main\Func03_04_Oil_Pr.GB,10,,401,34,,,,,,VAR,FB,,FuB
+xHeatWaterSys,POE\Main\PhaseII.GB,12,,247,31,,,,,,VAR,FB,,FuB
+xINTERPOLATION_F03_Pr_EO_Min,POE\Main\Func03_04_Oil_Pr.GB,2,,31,34,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A2384,POE\Main\Func01_Speed.GB,3,,314,32,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A2386,POE\Main\Func03_04_Oil_Pr.GB,2,,510,7,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A2388,POE\Main\Func03_04_Oil_Pr.GB,2,,515,7,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A2389,POE\Main\Func03_04_Oil_Pr.GB,4,,520,7,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A2390,POE\Main\Func03_04_Oil_Pr.GB,4,,525,6,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A2392,POE\Main\Func03_04_Oil_Pr.GB,8,,530,7,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A2394,POE\Main\Func03_04_Oil_Pr.GB,8,,535,7,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A2396,POE\Main\Func05_06_ECW_Pr.GB,3,,391,0,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A2398,POE\Main\Func05_06_ECW_Pr.GB,3,,371,0,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A9408,POE\Main\Func05_06_ECW_Pr.GB,6,,381,0,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A9410,POE\Main\Func05_06_ECW_Pr.GB,12,,386,0,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A9413,POE\Main\Func07_Grid.GB,3,,281,25,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A9414,POE\Main\Func07_Grid.GB,6,,286,25,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A9425,POE\Main\SafetyLoop.GB,0,,176,15,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A9426,POE\Main\SafetyLoop.GB,0,,181,15,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A9427,POE\Main\SafetyLoop.GB,0,,186,15,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A9429,POE\Main\SafetyLoop.GB,3,,196,15,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A9433,POE\Main\Func00_IO_Para.GB,0,,642,12,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_A9434,POE\Main\Func05_06_ECW_Pr.GB,6,,376,0,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_W9514,POE\Main\Func01_Speed.GB,6,,319,32,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_W9515,POE\Main\Func02_Misfire.GB,0,,84,63,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_W9517,POE\Main\Func07_Grid.GB,0,,261,25,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_W9518,POE\Main\Func07_Grid.GB,0,,266,25,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_W9519,POE\Main\Func07_Grid.GB,3,,271,25,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_W9520,POE\Main\Func07_Grid.GB,3,,276,25,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_W9587,POE\Main\Func10_EmStop.GB,0,,101,0,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_W9593,POE\Main\SafetyLoop.GB,3,,191,15,,,,,,VAR,FB,,FuB
+xPARA_BOOL,POE\Main\Func00_IO_Para.GB,10,,561,35,,,,,,VAR,FB,,FuB
+xPARA_INT,POE\Main\Func00_IO_Para.GB,12,,617,36,,,,,,VAR,FB,,FuB
+xPC_ScavFlapPos,POE\Main\PhaseII.GB,3,,193,19,,,,,,VAR,FB,,FuB
+xR_TRIG_F03_Nom90,POE\Main\Func03_04_Oil_Pr.GB,2,,127,34,,,,,,VAR,FB,,FuB
+xR_TRIG_F04_Nom90,POE\Main\Func03_04_Oil_Pr.GB,8,,364,34,,,,,,VAR,FB,,FuB
+xR_TRIG_F12_LC,POE\Main\Func12_Gas.GB,9,,186,41,,,,,,VAR,FB,,FuB
+xR_TRIG_F17_Store,POE\Main\PhaseII.GB,6,,367,5,,,,,,VAR,FB,,FuB
+xR_TRIG_GV_Closed,POE\Main\PhaseII.GB,12,,350,31,,,,,,VAR,FB,,FuB
+xR_TRIG_GV_Opened,POE\Main\PhaseII.GB,9,,399,31,,,,,,VAR,FB,,FuB
+xRO_SM102,POE\Main\Func00_IO_Para.GB,6,,263,4,,,,,,VAR,FB,,FuB
+xRO_SM205,POE\Main\Func00_IO_Para.GB,6,,272,4,,,,,,VAR,FB,,FuB
+xRO_SM206,POE\Main\Func00_IO_Para.GB,6,,281,4,,,,,,VAR,FB,,FuB
+xRO_SM207,POE\Main\Func00_IO_Para.GB,8,,290,4,,,,,,VAR,FB,,FuB
+xRO_SM209,POE\Main\Func00_IO_Para.GB,8,,299,4,,,,,,VAR,FB,,FuB
+xRO_SM210,POE\Main\Func00_IO_Para.GB,8,,501,4,,,,,,VAR,FB,,FuB
+xRS_F12_LC,POE\Main\Func12_Gas.GB,9,,209,54,,,,,,VAR,FB,,FuB
+xRS_F17_Purge_OK,POE\Main\PhaseII.GB,9,,38,43,,,,,,VAR,FB,,FuB
+xRS_F17_Rel_GV,POE\Main\PhaseII.GB,12,,40,55,,,,,,VAR,FB,,FuB
+xSCALE_F03_AI_Pr_EO,POE\Main\Func03_04_Oil_Pr.GB,0,,548,34,,,,,,VAR,FB,,FuB
+xSCALE_F04_AI_Pr_EOaP,POE\Main\Func03_04_Oil_Pr.GB,0,,567,34,,,,,,VAR,FB,,FuB
+xSCALE_F05_AI_Pr_ECW,POE\Main\Func05_06_ECW_Pr.GB,0,,403,34,,,,,,VAR,FB,,FuB
+xSCALE_F06_AI_Pr_ECWaP,POE\Main\Func05_06_ECW_Pr.GB,0,,416,34,,,,,,VAR,FB,,FuB
+xSET_F03_Pr_EO_Standstill,POE\Main\Func03_04_Oil_Pr.GB,2,,58,73,,,,,,VAR,FB,,FuB
+xSET_F04_Pr_EOaP_Standstill,POE\Main\Func03_04_Oil_Pr.GB,8,,358,73,,,,,,VAR,FB,,FuB
+xSF_F99_SafetyLoop,POE\Main\SafetyLoop.GB,6,,50,76,,,,,,VAR,FB,,FuB
+xSF_RD_F17_Vol,POE\Main\PhaseII.GB,6,,308,71,,,,,,VAR,FB,,FuB
+xTOF_F03_Pr_EO_HiHi,POE\Main\Func03_04_Oil_Pr.GB,4,,480,46,,,,,,VAR,FB,,FuB
+xTOF_F05_Pr_ECW_HiHi,POE\Main\Func05_06_ECW_Pr.GB,6,,294,47,,,,,,VAR,FB,,FuB
+xTOF_F06_DPr,POE\Main\Func05_06_ECW_Pr.GB,6,,330,87,,,,,,VAR,FB,,FuB
+xTOF_F07_SL_OK,POE\Main\Func07_Grid.GB,0,,28,41,,,,,,VAR,FB,,FuB
+xTOF_F16_FlapClosed,POE\Main\PhaseII.GB,0,,83,43,,,,,,VAR,FB,,FuB
+xTOF_F16_FlapTS,POE\Main\PhaseII.GB,3,,138,43,,,,,,VAR,FB,,FuB
+xTOF_F21_Pr_EG_Hi,POE\Main\PhaseII.GB,12,,238,32,,,,,,VAR,FB,,FuB
+xTON_F01_Eng_Start_10s,POE\Main\Func01_Speed.GB,6,,219,76,,,,,,VAR,FB,,FuB
+xTON_F06_Nom90,POE\Main\Func05_06_ECW_Pr.GB,6,,318,34,,,,,,VAR,FB,,FuB
+xTON_F07_A9413_1s,POE\Main\Func07_Grid.GB,3,,115,0,,,,,,VAR,FB,,FuB
+xTON_F07_A9414_3s,POE\Main\Func07_Grid.GB,6,,136,0,,,,,,VAR,FB,,FuB
+xTON_F12_GasV_Open_10s,POE\Main\Func12_Gas.GB,12,,219,59,,,,,,VAR,FB,,FuB
+xTON_F12_GasV_Open_1s,POE\Main\Func12_Gas.GB,12,,175,59,,,,,,VAR,FB,,FuB
+xTON_F17_100ms,POE\Main\PhaseII.GB,6,,5,57,,,,,,VAR,FB,,FuB
+xTP_Reset_Safety_2s,POE\Main\Func00_IO_Para.GB,4,,121,32,,,,,,VAR,FB,,FuB
+xVENTILATION,POE\Main\PhaseII.GB,0,,419,32,,,,,,VAR,FB,,FuB

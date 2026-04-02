@@ -1,0 +1,1126 @@
+(*
+T: PROGRAM Main
+FW: NO
+CI#: 80
+QSL: 186
+QVE: 186
+QVPC: 186
+QPar: 0
+QFBI: 110
+*)
+@V 1 2 0
+xKeepAMM_2s_W9514	1	VAR	@FB:91
+		     
+
+;
+
+@V 1 3 0
+xKeepAMM_2s_W9515	2	VAR	@FB:91
+		     
+
+;
+
+@V 1 4 0
+xKeepAMM_2s_W9517	3	VAR	@FB:91
+		     
+
+;
+
+@V 1 5 0
+xKeepAMM_2s_W9518	4	VAR	@FB:91
+		     
+
+;
+
+@V 1 6 0
+xKeepAMM_2s_W9519	5	VAR	@FB:91
+		     
+
+;
+
+@V 1 7 0
+xKeepAMM_2s_W9520	6	VAR	@FB:91
+		     
+
+;
+
+@V 1 8 0
+xKeepAMM_2s_W9587	7	VAR	@FB:91
+		     
+
+;
+
+@V 1 9 0
+xKeepAMM_2s_W9593	8	VAR	@FB:91
+		     
+
+;
+
+@V 1 10 0
+xKeepAMM_2s_A2384	9	VAR	@FB:91
+		     
+
+;
+
+@V 1 11 0
+xKeepAMM_2s_A2386	10	VAR	@FB:91
+		     
+
+;
+
+@V 1 12 0
+xKeepAMM_2s_A2388	11	VAR	@FB:91
+		     
+
+;
+
+@V 1 13 0
+xKeepAMM_2s_A2389	12	VAR	@FB:91
+		     
+
+;
+
+@V 1 14 0
+xKeepAMM_2s_A2390	13	VAR	@FB:91
+		     
+
+;
+
+@V 1 15 0
+xKeepAMM_2s_A2392	14	VAR	@FB:91
+		     
+
+;
+
+@V 1 16 0
+xKeepAMM_2s_A2394	15	VAR	@FB:91
+		     
+
+;
+
+@V 1 17 0
+xKeepAMM_2s_A2396	16	VAR	@FB:91
+		     
+
+;
+
+@V 1 18 0
+xKeepAMM_2s_A2398	17	VAR	@FB:91
+		     
+
+;
+
+@V 1 19 0
+xKeepAMM_2s_A9408	18	VAR	@FB:91
+		     
+
+;
+
+@V 1 20 0
+xKeepAMM_2s_A9410	19	VAR	@FB:91
+		     
+
+;
+
+@V 1 21 0
+xKeepAMM_2s_A9413	20	VAR	@FB:91
+		     
+
+;
+
+@V 1 22 0
+xKeepAMM_2s_A9414	21	VAR	@FB:91
+		     
+
+;
+
+@V 1 23 0
+xKeepAMM_2s_A9425	22	VAR	@FB:91
+		     
+
+;
+
+@V 1 24 0
+xKeepAMM_2s_A9426	23	VAR	@FB:91
+		     
+
+;
+
+@V 1 25 0
+xKeepAMM_2s_A9427	24	VAR	@FB:91
+		     
+
+;
+
+@V 1 26 0
+xKeepAMM_2s_A9429	25	VAR	@FB:91
+		     
+
+;
+
+@V 1 27 0
+xKeepAMM_2s_A9433	26	VAR	@FB:91
+		     
+
+;
+
+@V 1 28 0
+xKeepAMM_2s_A9434	27	VAR	@FB:91
+		     
+
+;
+
+@V 1 30 0
+sbF00_OK_SafeModuleOK_ALL	28	VAR	@TYP:43
+		     
+
+;
+
+@V 1 31 0
+sbF01_OK_Speed	29	VAR	@TYP:43
+		     
+
+;
+
+@V 1 32 0
+sbF02_OK_Misfire	30	VAR	@TYP:43
+		     
+
+;
+
+@V 1 33 0
+sbF03_OK_Oil_Pr_Min	31	VAR	@TYP:43
+		     
+
+;
+
+@V 1 34 0
+sbF04_OK_Oil_Pr_Max	32	VAR	@TYP:43
+		     
+
+;
+
+@V 1 35 0
+sbF05_OK_ECW_Pr_Min	33	VAR	@TYP:43
+		     
+
+;
+
+@V 1 36 0
+sbF06_OK_ECW_Pr_Max	34	VAR	@TYP:43
+		     
+
+;
+
+@V 1 37 0
+sbF07_OK_Grid	35	VAR	@TYP:43
+		     
+
+;
+
+@V 1 38 0
+sbF08_OK_Overload	36	VAR	@TYP:43
+		     
+
+;
+
+@V 1 39 0
+sbF09_OK_Ventilation	37	VAR	@TYP:43
+		     
+
+;
+
+@V 1 40 0
+sbF10_OK_EmStop	38	VAR	@TYP:43
+		     
+
+;
+
+@V 1 41 0
+sbF11_OK_SafetyLoop	39	VAR	@TYP:43
+		     
+
+;
+
+@V 1 42 0
+sbF12_OK_Gas	40	VAR	@TYP:43
+		     
+
+;
+
+@V 1 43 0
+sbF16_OK_Purge	41	VAR	@TYP:43
+		     
+
+;
+
+@V 1 44 0
+sbF20_OK_HeatWater	42	VAR	@TYP:43
+		     
+
+;
+
+@V 1 45 0
+sbF21_OK_Pr_EG_Hi	43	VAR	@TYP:43
+		     
+
+;
+
+@V 1 46 0
+sbF99_OK_OverAll	44	VAR	@TYP:43
+		     
+
+;
+
+@V 1 48 0
+sbReset_SafetyLoop	45	VAR	@TYP:43
+		     
+
+;
+
+@V 1 49 0
+sbEngineType6	46	VAR	@TYP:43
+		     
+
+;
+
+@V 1 50 0
+xF_TRIG_Reset_SL	47	VAR	@FB:31
+		     
+
+;
+
+@V 1 51 0
+xTP_Reset_Safety_2s	48	VAR	@FB:45
+		     
+
+;
+
+@V 1 52 0
+xRO_SM102	49	VAR	@FB:88
+		     
+
+;
+
+@V 1 53 0
+xRO_SM205	50	VAR	@FB:88
+		     
+
+;
+
+@V 1 54 0
+xRO_SM206	51	VAR	@FB:88
+		     
+
+;
+
+@V 1 55 0
+xRO_SM207	52	VAR	@FB:88
+		     
+
+;
+
+@V 1 56 0
+xRO_SM209	53	VAR	@FB:88
+		     
+
+;
+
+@V 1 57 0
+xRO_SM210	54	VAR	@FB:88
+		     
+
+;
+
+@V 1 58 0
+xPARA_BOOL	55	VAR	@FB:89
+		     
+
+;
+
+@V 1 59 0
+xPARA_INT	56	VAR	@FB:86
+		     
+
+;
+
+@V 1 61 0
+siN_EngAct	57	VAR	@TYP:59
+		     
+
+;
+
+@V 1 62 0
+siN_EngAct_Diff	58	VAR	@TYP:59
+		     
+
+;
+
+@V 1 63 0
+sbN_Standstill	59	VAR	@TYP:43
+		     
+
+;
+
+@V 1 64 0
+sbN_Standstill_60s	60	VAR	@TYP:43
+		     
+
+;
+
+@V 1 65 0
+sbN_EngAct_60	61	VAR	@TYP:43
+		     
+
+;
+
+@V 1 66 0
+sbN_EngAct_80	62	VAR	@TYP:43
+		     
+
+;
+
+@V 1 67 0
+sbN_EngAct_Nom90	63	VAR	@TYP:43
+		     
+
+;
+
+@V 1 68 0
+sbN_EngAct_Nom90_10s	64	VAR	@TYP:43
+		     
+
+;
+
+@V 1 69 0
+sbN_EngAct_500	65	VAR	@TYP:43
+		     
+
+;
+
+@V 1 70 0
+sbN_EngOperation	66	VAR	@TYP:43
+		     
+
+;
+
+@V 1 71 0
+sbN_EngAct_DiffOK	67	VAR	@TYP:43
+		     
+
+;
+
+@V 1 72 0
+xCONV_F01_N_EngAct	68	VAR	@FB:100
+		     
+
+;
+
+@V 1 73 0
+xCONV_F01_N_EngAct_Ign	69	VAR	@FB:100
+		     
+
+;
+
+@V 1 74 0
+xTON_F01_Eng_Start_10s	70	VAR	@FB:44
+		     
+
+;
+
+@V 1 75 0
+xET_N_Nom90_10s	71	VAR	@FB:95
+		     
+
+;
+
+@V 1 76 0
+xET_N_Standstill_60s	72	VAR	@FB:95
+		     
+
+;
+
+@V 1 77 0
+xET_SDC_30s	73	VAR	@FB:95
+		     
+
+;
+
+@V 1 78 0
+xDEV_EngAct	74	VAR	@FB:87
+		     
+
+;
+
+@V 1 80 0
+xDI_MON_Ign_Run	75	VAR	@FB:83
+		     
+
+;
+
+@V 1 82 0
+siPr_EO	76	VAR	@TYP:59
+		     
+
+;
+
+@V 1 83 0
+siPr_EO_Saved	77	VAR	@TYP:59
+		     
+
+;
+
+@V 1 84 0
+siPr_EO_Standstill	78	VAR	@TYP:59
+		     
+
+;
+
+@V 1 85 0
+siPr_EO_Diff	79	VAR	@TYP:59
+		     
+
+;
+
+@V 1 86 0
+sbPr_EO_DiffOK	80	VAR	@TYP:43
+		     
+
+;
+
+@V 1 87 0
+sbPr_EO_MsOK	81	VAR	@TYP:43
+		     
+
+;
+
+@V 1 88 0
+sbSL_OK_EO_Ms	82	VAR	@TYP:43
+		     
+
+;
+
+@V 1 89 0
+xINTERPOLATION_F03_Pr_EO_Min	83	VAR	@FB:98
+		     
+
+;
+
+@V 1 90 0
+xR_TRIG_F03_Nom90	84	VAR	@FB:39
+		     
+
+;
+
+@V 1 91 0
+xSCALE_F03_AI_Pr_EO	85	VAR	@FB:84
+		     
+
+;
+
+@V 1 92 0
+xSET_F03_Pr_EO_Standstill	86	VAR	@FB:92
+		     
+
+;
+
+@V 1 93 0
+xFROZEN_EO	87	VAR	@FB:82
+		     
+
+;
+
+@V 1 94 0
+xDEV_EO	88	VAR	@FB:87
+		     
+
+;
+
+@V 1 95 0
+xTOF_F03_Pr_EO_HiHi	89	VAR	@FB:43
+		     
+
+;
+
+@V 1 97 0
+siPr_EOaP	90	VAR	@TYP:59
+		     
+
+;
+
+@V 1 98 0
+siPr_EOaP_Saved	91	VAR	@TYP:59
+		     
+
+;
+
+@V 1 99 0
+siPr_EOaP_Standstill	92	VAR	@TYP:59
+		     
+
+;
+
+@V 1 100 0
+sbPr_EOaP_MsOK	93	VAR	@TYP:43
+		     
+
+;
+
+@V 1 101 0
+sbSL_OK_EOaP_Ms	94	VAR	@TYP:43
+		     
+
+;
+
+@V 1 102 0
+sbEO_PumpsOff_120s	95	VAR	@TYP:43
+		     
+
+;
+
+@V 1 103 0
+xR_TRIG_F04_Nom90	96	VAR	@FB:39
+		     
+
+;
+
+@V 1 104 0
+xSCALE_F04_AI_Pr_EOaP	97	VAR	@FB:84
+		     
+
+;
+
+@V 1 105 0
+xSET_F04_Pr_EOaP_Standstill	98	VAR	@FB:92
+		     
+
+;
+
+@V 1 106 0
+xFROZEN_EOaP	99	VAR	@FB:82
+		     
+
+;
+
+@V 1 107 0
+xELAPSED_TIME_EO	100	VAR	@FB:95
+		     
+
+;
+
+@V 1 109 0
+siPr_ECW	101	VAR	@TYP:59
+		     
+
+;
+
+@V 1 110 0
+siPr_ECW_Saved	102	VAR	@TYP:59
+		     
+
+;
+
+@V 1 111 0
+siPr_ECW_Diff	103	VAR	@TYP:59
+		     
+
+;
+
+@V 1 112 0
+sbPr_ECW_DiffOK	104	VAR	@TYP:43
+		     
+
+;
+
+@V 1 113 0
+sbPr_ECW_MsOK	105	VAR	@TYP:43
+		     
+
+;
+
+@V 1 114 0
+sbSL_OK_ECW_Ms	106	VAR	@TYP:43
+		     
+
+;
+
+@V 1 115 0
+xSCALE_F05_AI_Pr_ECW	107	VAR	@FB:84
+		     
+
+;
+
+@V 1 116 0
+xFROZEN_ECW	108	VAR	@FB:82
+		     
+
+;
+
+@V 1 117 0
+xDEV_ECW	109	VAR	@FB:87
+		     
+
+;
+
+@V 1 118 0
+xTOF_F05_Pr_ECW_HiHi	110	VAR	@FB:43
+		     
+
+;
+
+@V 1 120 0
+siPr_ECWaP	111	VAR	@TYP:59
+		     
+
+;
+
+@V 1 121 0
+siPr_ECWaP_Saved	112	VAR	@TYP:59
+		     
+
+;
+
+@V 1 122 0
+sbPr_ECWaP_MsOK	113	VAR	@TYP:43
+		     
+
+;
+
+@V 1 123 0
+sbECW_PumpsOff_120s	114	VAR	@TYP:43
+		     
+
+;
+
+@V 1 124 0
+sbSL_OK_ECWaP_Ms	115	VAR	@TYP:43
+		     
+
+;
+
+@V 1 125 0
+xSCALE_F06_AI_Pr_ECWaP	116	VAR	@FB:84
+		     
+
+;
+
+@V 1 126 0
+xFROZEN_ECWaP	117	VAR	@FB:82
+		     
+
+;
+
+@V 1 127 0
+xELAPSED_TIME_ECW	118	VAR	@FB:95
+		     
+
+;
+
+@V 1 128 0
+xTON_F06_Nom90	119	VAR	@FB:44
+		     
+
+;
+
+@V 1 129 0
+xTOF_F06_DPr	120	VAR	@FB:43
+		     
+
+;
+
+@V 1 131 0
+sbGCB_On_10s	121	VAR	@TYP:43
+		     
+
+;
+
+@V 1 132 0
+sbGCB_On_60s	122	VAR	@TYP:43
+		     
+
+;
+
+@V 1 133 0
+xTOF_F07_SL_OK	123	VAR	@FB:43
+		     
+
+;
+
+@V 1 134 0
+xTON_F07_A9413_1s	124	VAR	@FB:44
+		     
+
+;
+
+@V 1 135 0
+xTON_F07_A9414_3s	125	VAR	@FB:44
+		     
+
+;
+
+@V 1 136 0
+xET_GCB_On_10s	126	VAR	@FB:95
+		     
+
+;
+
+@V 1 137 0
+xET_GCB_On_60s	127	VAR	@FB:95
+		     
+
+;
+
+@V 1 139 0
+xDI_MON_OlShortCirc	128	VAR	@FB:83
+		     
+
+;
+
+@V 1 140 0
+xDI_MON_GenPrctTrip	129	VAR	@FB:83
+		     
+
+;
+
+@V 1 142 0
+xVENTILATION	130	VAR	@FB:93
+		     
+
+;
+
+@V 1 143 0
+sbRel_GV_ERV_PC_OK	131	VAR	@TYP:43
+		     
+
+;
+
+@V 1 145 0
+xDI_MON_EmStop_M	132	VAR	@FB:83
+		     
+
+;
+
+@V 1 146 0
+xDI_MON_EmStop	133	VAR	@FB:83
+		     
+
+;
+
+@V 1 148 0
+xDI_MON_SL_A1	134	VAR	@FB:83
+		     
+
+;
+
+@V 1 149 0
+xDI_MON_SL_A2	135	VAR	@FB:94
+		     
+
+;
+
+@V 1 150 0
+xDI_MON_SL_M	136	VAR	@FB:83
+		     
+
+;
+
+@V 1 152 0
+sbGasValves_Closed	137	VAR	@TYP:43
+		     
+
+;
+
+@V 1 153 0
+sbGasValves_Open	138	VAR	@TYP:43
+		     
+
+;
+
+@V 1 154 0
+sbGasValves_Open_1s	139	VAR	@TYP:43
+		     
+
+;
+
+@V 1 155 0
+sbGasValves_Open_10s	140	VAR	@TYP:43
+		     
+
+;
+
+@V 1 156 0
+sbGasValves_Open_60s	141	VAR	@TYP:43
+		     
+
+;
+
+@V 1 157 0
+sbGas_LC_Triggered	142	VAR	@TYP:43
+		     
+
+;
+
+@V 1 158 0
+xTON_F12_GasV_Open_1s	143	VAR	@FB:44
+		     
+
+;
+
+@V 1 159 0
+xTON_F12_GasV_Open_10s	144	VAR	@FB:44
+		     
+
+;
+
+@V 1 160 0
+xRS_F12_LC	145	VAR	@FB:41
+		     
+
+;
+
+@V 1 161 0
+xR_TRIG_F12_LC	146	VAR	@FB:39
+		     
+
+;
+
+@V 1 162 0
+xF_TRIG_F12_LC	147	VAR	@FB:31
+		     
+
+;
+
+@V 1 163 0
+GAS_TRAIN_1	148	VAR	@FB:90
+		     
+
+;
+
+@V 1 164 0
+GAS_TRAIN_2	149	VAR	@FB:90
+		     
+
+;
+
+@V 1 165 0
+GAS_TRAIN_3	150	VAR	@FB:90
+		     
+
+;
+
+@V 1 166 0
+GAS_TRAIN_4	151	VAR	@FB:90
+		     
+
+;
+
+@V 1 167 0
+GAS_TRAIN_DCGA	152	VAR	@FB:90
+		     
+
+;
+
+@V 1 168 0
+xET_GV_Open_60s	153	VAR	@FB:95
+		     
+
+;
+
+@V 1 170 0
+xDI_MON_ScavFlap	154	VAR	@FB:83
+		     
+
+;
+
+@V 1 171 0
+xDI_MON_TS_ScavFlap	155	VAR	@FB:83
+		     
+
+;
+
+@V 1 172 0
+xTOF_F16_FlapClosed	156	VAR	@FB:43
+		     
+
+;
+
+@V 1 173 0
+xTOF_F16_FlapTS	157	VAR	@FB:43
+		     
+
+;
+
+@V 1 174 0
+xPC_ScavFlapPos	158	VAR	@FB:96
+		     
+
+;
+
+@V 1 176 0
+sbRel_GV_Purge_OK	159	VAR	@TYP:43
+		     
+
+;
+
+@V 1 177 0
+xRS_F17_Purge_OK	160	VAR	@FB:41
+		     
+
+;
+
+@V 1 178 0
+xRS_F17_Rel_GV	161	VAR	@FB:41
+		     
+
+;
+
+@V 1 179 0
+xCALC_VOL_F17	162	VAR	@FB:85
+		     
+
+;
+
+@V 1 180 0
+xTON_F17_100ms	163	VAR	@FB:44
+		     
+
+;
+
+@V 1 181 0
+xSF_RD_F17_Vol	164	VAR	@FB:102
+		     
+
+;
+
+@V 1 182 0
+sbTimer_100ms	165	VAR	@TYP:43
+		     
+
+;
+
+@V 1 183 0
+sbTimer_100ms_Saved	166	VAR	@TYP:43
+		     
+
+;
+
+@V 1 184 0
+siVol_Purge_Air	167	VAR	@TYP:59
+		     
+
+;
+
+@V 1 185 0
+siVol_Purge_Air_Saved	168	VAR	@TYP:59
+		     
+
+;
+
+@V 1 186 0
+xF_TRIG_F17_Store	169	VAR	@FB:31
+		     
+
+;
+
+@V 1 187 0
+xR_TRIG_F17_Store	170	VAR	@FB:39
+		     
+
+;
+
+@V 1 188 0
+xR_TRIG_GV_Opened	171	VAR	@FB:39
+		     
+
+;
+
+@V 1 189 0
+xR_TRIG_GV_Closed	172	VAR	@FB:39
+		     
+
+;
+
+@V 1 191 0
+xHeatWaterSys	173	VAR	@FB:97
+		     
+
+;
+
+@V 1 193 0
+xDI_MON_Pr_EG_Hi	174	VAR	@FB:94
+		     
+
+;
+
+@V 1 194 0
+xTOF_F21_Pr_EG_Hi	175	VAR	@FB:43
+		     
+
+;
+
+@V 1 196 0
+sbSafetyLoop_OK	176	VAR	@TYP:43
+		     
+
+;
+
+@V 1 197 0
+xSF_F99_SafetyLoop	177	VAR	@FB:101
+		     
+
+;
+
+@V 1 198 0
+xCONV_F99_Motortype	178	VAR	@FB:100
+		     
+
+;
+
+@V 1 199 0
+xCONV_F99_EngNom	179	VAR	@FB:100
+		     
+
+;
+
+@V 3 110 0
+__Func01_Speed@0	180	VAR	@TYP:43
+		     
+
+;
+
+@V 3 126 0
+__Func01_Speed@1	181	VAR	@TYP:43
+		     
+
+;
+
+@V 7 34 0
+__Func07_Grid@0	182	VAR	@TYP:43
+		     
+
+;
+
+@V 9 28 0
+__Func10_EmStop@0	183	VAR	@TYP:43
+		     
+
+;
+
+@V 9 40 0
+__Func10_EmStop@1	184	VAR	@TYP:43
+		     
+
+;
+
+@V 11 90 0
+__Func12_Gas@0	185	VAR	@TYP:43
+		     
+
+;
+
+@V 12 27 0
+__PhaseII@0	186	VAR	@TYP:59
+		     
+
+;
+

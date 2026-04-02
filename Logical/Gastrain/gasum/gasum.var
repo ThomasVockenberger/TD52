@@ -1,0 +1,147 @@
+VAR
+	anz_gasart : USINT; (* number of gas types *)
+	AUTGAS : BOOL := 0; (* AUTOMATIK Gasumschaltung *)
+	bLeanoxActive : BOOL; (* TRUE=leanox controller is active *)
+	bMisch1_2_Man : BOOL; (* 1=gas quality manual *)
+	bPowerSetpointLimit : BOOL;
+	bTecJetOn : BOOL; (* TRUE=gas inject valves are active *)
+	count : INT := 0;
+	count_st : INT := 0;
+	count1 : INT := 0; (* Klappensimulation *)
+	count2 : INT := 0; (* Klappensimulation *)
+	FA_CONV_1 : WDtoBIT;
+	FA_CONV_2 : WDtoBIT;
+	FA_GAS1_2 : GR_MAXR;
+	FA_M_GASV1 : GR_MAX;
+	FA_M_GASV2 : GR_MIN;
+	FG_GST : BOOL := 0; (* Freigabe Gasstrecke *)
+	FG_MISCH : BOOL := 0; (* Freigabe Gasmischregler *)
+	FUGITIV : BOOL := 0; (* Anforderung Leistungsreduktion *)
+	GAS1 : BOOL := 0; (* Gasart 1 *)
+	GAS1_2 : BOOL; (*param.interpolation gas1 & 2 active from CH4(or CV)*)
+	GAS1_2_MAN : BOOL := 0; (* Gasart 0 manuell *)
+	GAS1_3_MAN : BOOL := 0; (* Mischgas manuell *)
+	GAS2 : BOOL := 0; (* Gasart 2 *)
+	GAS2_MIN : BOOL := 0; (* weniger Treibgas 2 *)
+	GAS2_PLU : BOOL := 0; (* mehr Treibgas 2 *)
+	GAS3 : BOOL := 0; (* Gasart 3 *)
+	GAS4 : BOOL := 0; (* Gasart 4 *)
+	GASSTR_1 : BOOL := 0; (* Anwahl Gasstrecke 1 *)
+	GASSTR_2 : BOOL := 0; (* Anwahl Gasstrecke 2 *)
+	GASV1 : BOOL := 0; (* Gasventil 1 *)
+	GASV2 : BOOL := 0; (* Gasventil 2 *)
+	GCB_ON : BOOL := FALSE; (*Generatorschalter EIN (TK#3 synchron)*)
+	GU1_0 : BOOL := 0; (* Schrittkettenmerker *)
+	GU1_1 : BOOL := 0; (* Schrittkettenmerker *)
+	GU1_2 : BOOL := 0; (* Schrittkettenmerker *)
+	GU1_3 : BOOL := 0; (* Schrittkettenmerker *)
+	GU1_4 : BOOL := 0; (* Schrittkettenmerker *)
+	GU1_7 : BOOL := 0; (* Schrittkettenmerker *)
+	GU2_0 : BOOL := 0; (* Schrittkettenmerker *)
+	GU2_1 : BOOL := 0; (* Schrittkettenmerker *)
+	GU2_2 : BOOL := 0; (* Schrittkettenmerker *)
+	GU2_3 : BOOL := 0; (* Schrittkettenmerker *)
+	GU2_4 : BOOL := 0; (* Schrittkettenmerker *)
+	GU2_7 : BOOL := 0; (* Schrittkettenmerker *)
+	GU3_7 : BOOL := 0; (* Schrittkettenmerker *)
+	GU13_0 : BOOL := 0; (* Schrittkettenmerker *)
+	GU23_0 : BOOL := 0; (* Schrittkettenmerker *)
+	GU31_0 : BOOL := 0; (* Schrittkettenmerker *)
+	GU31_1 : BOOL := 0; (* Schrittkettenmerker *)
+	GU31_2 : BOOL := 0; (* Schrittkettenmerker *)
+	GU32_0 : BOOL := 0; (* Schrittkettenmerker *)
+	GU32_1 : BOOL := 0; (* Schrittkettenmerker *)
+	GU32_2 : BOOL := 0; (* Schrittkettenmerker *)
+	GUI_0 : BOOL := 0; (* Schrittkettenmerker *)
+	GUI_1 : BOOL := 0; (* Schrittkettenmerker *)
+	GUI_2 : BOOL := 0; (* Schrittkettenmerker *)
+	GUI_3 : BOOL := 0; (* Schrittkettenmerker *)
+	GUI_4 : BOOL := 0; (* Schrittkettenmerker *)
+	GUI_5 : BOOL := 0; (* Schrittkettenmerker *)
+	GUI_6 : BOOL := 0; (* Schrittkettenmerker *)
+	GUI_7 : BOOL := 0; (* Gasumschaltung INIT abgeschlossen *)
+	GUMSCH : BOOL := 0; (* Gasumschaltung auf 2.tes Treibgas *)
+	GUMSCH_OLD : BOOL;
+	i : INT;
+	IMPULS : INT; (* Stellimpuls *)
+	KL1_AUF : BOOL := 0; (* RM Gasklappe 1 offen *)
+	KL1_ZU : BOOL := 0; (* RM Gasklappe 1 geschlossen *)
+	KL1AUF : BOOL := 0; (* GASKLAPPE 1 AUFFAHREN *)
+	KL1AUF_1 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL1AUF_2 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL1AUF_3 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL1AUF_4 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL1AUF_5 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL1ZU : BOOL := 0; (* GASKLAPPE 1 ZUFAHREN *)
+	KL1ZU_1 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL1ZU_2 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL1ZU_3 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL1ZU_4 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL1ZU_5 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL2_AUF : BOOL := 0; (* RM Gasklappe 2 offen *)
+	KL2_ZU : BOOL := 0; (* RM Gasklappe 2 geschlossen *)
+	KL2AUF : BOOL := 0; (* GASKLAPPE 2 AUFFAHREN *)
+	KL2AUF_1 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL2AUF_2 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL2AUF_3 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL2AUF_4 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL2AUF_5 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL2ZU : BOOL := 0; (* GASKLAPPE 2 ZUFAHREN *)
+	KL2ZU_1 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL2ZU_2 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL2ZU_3 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL2ZU_4 : BOOL := 0; (* Klappensteuerbefehl *)
+	KL2ZU_5 : BOOL := 0; (* Klappensteuerbefehl *)
+	l_einst_a : BOOL; (* TRUE=leanox controller in manual *)
+	M_BTRB : BOOL := 0; (* Aggregat in BETRIEB *)
+	M_GASV : BOOL := 0; (* Gasventile EIN *)
+	M_GDMI1W : BOOL := 0; (*3221 Gasdruck 1 minimum *)
+	M_GDMI1_1W : BOOL := 0; (*2694 Gasdruck 1 Linie 1 minimum *)
+	M_GDMI1_2W : BOOL := 0; (*2695 Gasdruck 1 Linie 2 minimum *)
+	M_GDMI1_3W : BOOL := 0; (*2696 Gasdruck 1 Linie 3 minimum *)
+	M_GDMI2W : BOOL := 0; (*3222 Gasdruck 2 minimum *)
+	M_NANF : BOOL := 0; (* Notstromanforderung *)
+	MISCH : BOOL := 0; (* Mischgas *)
+	MISCHGAS : BOOL := 0; (* Anwahl Mischgas *)
+	mit_RM : BOOL := 0; (* mit RM Klappe/Ventil *)
+	muell : BOOL := 0; (* GARBAGE BIT *)
+END_VAR
+VAR CONSTANT
+	NULL : BOOL := 0; (* immer NULL *)
+END_VAR
+VAR
+	P_FUG : BOOL := 0; (* Reduktionsleistung erreicht *)
+	p_ist : INT; (* actual filtered power [kW] T= 1sec *)
+	PAUSE : INT; (* Pausenzeit *)
+	RAMPE_X_SOLLW : RAMPE;
+	RM_KL1 : INT; (* RM Klappe/Ventil 1 *)
+	RM_KL2 : INT; (* RM Klappe/Ventil 2 *)
+	sel_PowerSetpointLimit : INT;
+	ssPowerSetpointLimit : INT;
+	ssRatioMix : INT; (* gas mixture rate after ramp fub *)
+	ssSetMix_Man : INT;
+	STELL : BOOL := 0; (* Stellimpuls *)
+	step : INT := 0; (* Schrittvariable *)
+	SW_KL1 : INT := 0; (* Sollwert Ventil 1 *)
+	SW_KL2 : INT := 0; (* Sollwert Ventil 2 *)
+	T_GAS1 : INT; (* Zeitwert *)
+	T_GAS1_4 : INT; (* Zeitwert *)
+	T_GAS1_4_OK : BOOL := FALSE;
+	T_GAS1_OK : BOOL := FALSE;
+	T_GAS2 : INT; (* Zeitwert *)
+	T_GAS2_OK : BOOL := FALSE;
+	T_GAS3 : INT; (* Zeitwert *)
+	T_GAS3_OK : BOOL := FALSE;
+	T_GAS4 : INT; (* Zeitwert *)
+	T_GAS4_1 : INT; (* Zeitwert *)
+	T_GAS4_1_OK : BOOL := FALSE;
+	T_GAS4_OK : BOOL := FALSE;
+	T_IMPULS : INT; (* Zeitwert *)
+	T_PAUSE : INT; (* Zeitwert *)
+	T_TJ : INT := 10; (* Rampenzeit Tecjet *)
+	TOF_FUGITIV : TOF_10ms;
+	TON_P_FUG : TON_10ms;
+	X_SOLLW : INT; (* SOLLWERT Mischgasverhältnis *)
+	X_SOLLW_OLD : INT;
+	zw : UDINT;
+END_VAR

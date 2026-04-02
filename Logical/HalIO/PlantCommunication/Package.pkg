@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.14.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Private="true">PlantComVariables.var</Object>
+    <Object Type="File" Private="true">PlantComTypes.typ</Object>
+    <Object Type="Program" Language="IEC">XComCfg</Object>
+    <Object Type="Program" Language="IEC">XComHmi</Object>
+    <Object Type="Program" Language="IEC">xComMapIn10ms</Object>
+    <Object Type="Program" Language="IEC">xComMapIn100ms</Object>
+    <Object Type="Program" Language="IEC">xComMapOut10ms</Object>
+    <Object Type="Program" Language="IEC">xComMapOut100ms</Object>
+    <Object Type="Program" Language="IEC">xComIO10ms</Object>
+    <Object Type="Program" Language="IEC">xComIO100ms</Object>
+  </Objects>
+</Package>

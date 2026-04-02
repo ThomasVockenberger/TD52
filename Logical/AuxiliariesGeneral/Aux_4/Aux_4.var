@@ -1,0 +1,40 @@
+VAR
+	OMIN_NK : BOOL := FALSE; (*engine oil level low for cool down*)
+	VSP_24 : BOOL := 0; (* Vorschmierpumpe 24V *)
+	xGR_MAXR_VSD1 : GR_MAXR;
+	xTON_VSD1 : TON;
+	A_MKWP_TEMP1 : BOOL;
+	A_MKWP_TEMP2 : BOOL;
+	A_MKWP_TEMP3 : BOOL;
+	A_VORW_TEMP1 : BOOL;
+	xTON_EOP1DC : TON;
+	xTON_OMIN : TON;
+	xTON_MaxPreLubeTime : TON;
+	xTON_BTRB : TON;
+	xTON_SPG_N : TON;
+	xTON_SPG_W : TON;
+	xTOF_CoDoAfMnsFail : TOF;
+	bCoDoAfMnsFail : BOOL;
+	xTOF_EmLubDem : TOF;
+	xTOF_Eng_MonOff : TOF; (*monitoring off*)
+	xLCRScal_PermLube : LCRScal;
+	tiPermLube : TIME;
+	xTON_PreLube : TON;
+	VSP_400 : BOOL; (* Vorschmierpumpe 400V *)
+	bFS_Req : BOOL;
+	xTON_Pr_EO_FSPreL : TON;
+	tiFS_PermPreLube24 : TIME;
+	xTP_FS_PermPreLube24 : TP;
+	bDem_FS_PermPreLube24 : BOOL; (*Demand 24V Pump to assist 400V permanent prelube pump*)
+	xTOF_DemPermPreLube24 : TOF;
+	xTON_ECW_HydrPreH_Dem : TON;
+	xTOF_ECW_HydrPreH_Dem : TOF;
+	rPr_TCLubOil : REAL; (*Oil pressure before TC*)
+	rPr_TCLubOil_LimHi_Low_T_EO : REAL; (*Oil pressure limit for TC with cool oil*)
+	xTON_Pr_TCLubOil_PreL_FS_Hi : TON; (*FuB*)
+	xTON_Pr_TCLubOil_PreL_FS_HiHi : TON; (*FuB*)
+	xGR_MAXR_T_ECW_PreH_Rel : GR_MAXR; (*FuB*)
+	xGR_MINR_T_EO_PreH_Lo : GR_MINR; (*FuB*)
+	xGR_MINR_T_EO_PreH_Rel : GR_MINR; (*FuB*)
+	xTOF_EOVal_DemOpen : TOF; (*TOF for engine oil refill valve  V4.14*)
+END_VAR

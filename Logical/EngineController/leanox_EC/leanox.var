@@ -1,0 +1,192 @@
+VAR
+	bGasChange : BOOL; (* flag for changed gas sort *)
+	bStorePoint1 : BOOL; (* flag for store first leanox point *)
+	bStorePoint2 : BOOL; (* flag for store second leanox point *)
+	bStorePoint3 : BOOL; (* flag for store third leanox point (low load) *)
+	bStorePoint1OK : BOOL; (* TRUE=first leanox point stored *)
+	bStorePoint2OK : BOOL; (* TRUE=second leanox point stored *)
+	bStorePoint3OK : BOOL; (* TRUE=third leanox point (low load) stored *)
+	ucGassortOld : USINT; (* last state of gas type *)
+	ucGassortPoint1 : USINT; (* gas type at stored point 1 *)
+	ucGassortPoint2 : USINT; (* gas type at stored point 2 *)
+	ucGassortPoint3 : USINT; (* gas type at stored point 3 (low load) *)
+	ucCountPoint : USINT; (* counter for sample averages *)
+	rPressLeanoxError : REAL; (* leanox controller deviation [mbar] *)
+	slPowerSumm : DINT; (* average sample actual power *)
+	slPressw1Summ : DINT; (* average sample boost pressure *)
+	rPr_Comp_ChT_mbar : REAL; (* boost press. comp. via mixt. temp. [mbar]*)
+	rPr_Comp_IgnP_mbar : REAL; (* boost press. comp. via ITP [mbar]*)
+	rN_mp_a : REAL; (* speed point 1 for charge pressure comp. *)
+	rN_mp_b : REAL; (* speed point 2 for charge pressure comp. *)
+	rN_mp_c : REAL; (* speed point 3 for charge pressure comp. *)
+	slSpeedSumm : DINT; (* average sample actual speed *)
+	rKK1 : REAL; (* scale point for prop. factor boost [bar rpm / K kW]*)
+	rKK2 : REAL; (* scale point for prop. factor boost [bar rpm / K kW]*)
+	rKK3 : REAL; (* scale point for prop. factor boost [bar rpm / K kW]*)
+	LCRScal_DPressZZP : LCRScal; (* FUB scale ign. tim. point comp. *)
+	LCRScal_DPT : LCRScal; (* FUB scale mixture temp. comp. *)
+	rScDPressZZP_x : REAL; (* power for charge pressure comp. via ITP [kW] *)
+	rScDPT_x : REAL; (* power for charge pressure comp. via charge pressure [kW] *)
+	rKK : REAL; (* prop. factor for calc. boost press [bar rpm / K kW]*)
+	TON_StartLoxMon : TON; (* FUB delay lenox deviation monitor *)
+	bCrossOverOld : BOOL; (* check bit if gas mix. starts/stops *)
+	bStorePProz : BOOL; (*FALSE = storage ssp_proz value  *)
+	rP_Act_l_mis : REAL; (*rectified power set point in case of misfire*)
+	rSpeedCorrFactor : REAL;
+	bLambdaOffsetIni : BOOL;
+	SimPID_Leanox : SimPID4;
+	LCRScal_SyncLambda : LCRScal;
+	LCRScal_StartLambda : LCRScal;
+	rLam_Start_Offset : REAL;
+	LCRCByP_FF_LAMBDA : LCRCurveByPoints;
+	rPos_GM_AIT_EOT : REAL; (*Gasmixer position according to Air Intake Temp and Engine Oil Temp*)
+	rLam_AIT_EOT : REAL; (*Lambda according to Air Intake Temp and Engine Oil Temp*)
+	LCRScal_GMPos_EOT : LCRScal;
+	LCRScal_GMPos_AIT : LCRScal;
+	LCRScal_Lam_EOT : LCRScal;
+	LCRScal_Lam_AIT : LCRScal;
+	rTempt2Summ : REAL;
+	SimPID4_TV_Opt : SimPID4;
+	rN_Act : REAL; (* engine speed for p2´ comp. [1/min] *)
+	rLambda_offset : REAL;
+	rLambda_sync : REAL;
+	rLambda_idle : REAL;
+	rT_DevLimit1 : REAL; (*time counter for p2´deviation max. *)
+	rT_Leanox : REAL; (*time delay for power reduction *)
+	bLeanox_FF_off : BOOL;
+	rT_Delay_Idle : REAL;
+	rT_Delay_Power : REAL;
+	rT_DevLimit2 : REAL;
+	rP_Red_Ramp_Norm : REAL;
+	rP_PProz_Norm : REAL;
+	rP_Red_Ramp_Norm_Up : REAL;
+	PID_A_Leanox : PID_A;
+	PID_A_Enable : BOOL;
+	iCnt_Leanox : INT;
+	rCA_Ign_Avg : REAL;
+	ucCylIndex : USINT;
+	rCA_Ign_Avg_Cnt : REAL;
+	rPr_p2s_LLCtr : ARRAY[0..4] OF REAL;
+	TON_BPBLIC : TON;
+	bBPBLIC_act : BOOL;
+	tdelay_Trip : TIME;
+	rPr_p2sWindow_SY_LFG : REAL;
+	rPr_p2sWindow_hys : REAL;
+	rLLCtr_kp : REAL;
+	rLLCtr_ki : REAL;
+	TON_p2s_SY_LFG : TON;
+	rDKOptOffset : REAL;
+	bPr_p2sWindow_SY_LFG : BOOL; (*TRUE = SY Freigabe*)
+	bUebernahme : BOOL; (*TRUE = LL-Regler läuft*)
+	rDKOptOffset_u : REAL;
+	bEngine_Start : BOOL := 0; (*Für Idle Mode unterscheidung (Idle bei Motorstart (1) oder Idle nach GCB_ON (0)*)
+	TON_rN : TON;
+	RAMPE_R_Start_Offset : RAMPE_R;
+	boldmode_island : BOOL;
+	LCRScal_LD_A : ARRAY[0..4] OF LCRScal; (* FUB scale leanox drift compensation for point 1*)
+	LCRScal_LD_B : ARRAY[0..4] OF LCRScal; (* FUB scale leanox drift compensation for point 2*)
+	rPr_LD_Delta_A : ARRAY[0..4] OF REAL; (* boost press. comp. leanox drift for point 1 [mbar] *)
+	rPr_LD_Delta_B : ARRAY[0..4] OF REAL; (* boost press. comp. leanox drift for point 2 [mbar] *)
+	iPr_LD_Delta_SP : INT := 1; (* switching point for adding 1 mbar to leanox parameter [mbar] *)
+	i : USINT; (*gas sort*)
+	iOpH_LD_old : DINT; (*old value for operating hours*)
+	xR_TRIG_ParaOK : R_TRIG; (*initialization of actual operating hours*)
+	xTP_LAd : TP; (*time pulse for performed leanox adjustment*)
+	xTP_CCC : TP; (*time pulse for performed combustion chamber cleaning*)
+	xLamStart : fLamStart := (0);
+	RAMPE_R_mis : RAMPE_R;
+	TON_LNOxImp : TON;
+	tLNOx_verz : TIME := T#40ms;
+	bBlockTrigger : BOOL := 0;
+	rPr_P2_Dev_Lim_Int : REAL;
+	rT_DevLimit1I : REAL;
+	rT_LeanoxI : REAL;
+	rFactErrorOffs : REAL := 1;
+	RPSA7I : BOOL;
+	TOF_LOXerrGEN2 : TOF := (0); (*Switch OFF delay at LEANOX power reduction w. GEN2*)
+	TON_LOXerrGEN2 : TON; (*Switch ON delay at LEANOX power reduction w. GEN2*)
+	rGEN2LeanoxRamp : REAL := 0.005; (*Ramp (decreasing) for Leanox deviation power reduction when using GEN2*)
+	rP_GEN2_Red_Ramp_Norm_Up : REAL := 0.0003; (*Ramp (increasing) for Leanox deviation power reduction when using GEN2*)
+	FILTER_R_PrP2s_SetGEN2 : FILTER_R;
+	iLX2 : INT; (*LX cycle index for running the LX2 task*)
+	iLX2sampeTime : INT := 100; (*Threshold for LX cycle index for running the LX2 task*)
+	TOF_LX_Adj : TOF; (*Auxiliary TOF for Leanox adjustment confirmation button*)
+	bBlockSave : BOOL := 0;
+	TP_Block : TP;
+	TP_LX2_MapReset : TP;
+	TP_LX2_NotActive : TP;
+	bLeanox_Active_LX2 : BOOL; (* "Leanox Active" definition for LX2 activation *)
+	bLX_Para_adjusted : BOOL; (* Leanox adjustment confirmed *)
+	rPr_LX2_Offset_Ctrl : REAL; (* Leanox 2.0 controller offset *)
+	rPr_LX2_Offset_BPOC : REAL; (* Leanox 2.0 interpolated BPOC offset gas 1-4 *)
+	rPr_LX2_FullOffset : REAL; (* Leanox 2.0 full offset *)
+	TOF_LX2ramp_LGM : TOF; (* TOF LX2 ramp for Lambda gradient monitoring interface*)
+	TOF_LXadj_LGM : TOF; (* TOF LX adj.confirmation for Lambda gradient monitoring interface*)
+	rPr_LX2_offset_old : REAL; (* old value of LX2 offset *)
+	rLX2Ramp_detectFactor : REAL := 0.999; (* tolerance factor for LX2 ramp detection *)
+	bLX2_negativeRamp : BOOL; (* LX2 negative ramp detection for Lambda gradient monitoring interface *)
+	TON_LX2rampDelay_LGM : TON; (* TON for LX2 negative ramp detection for Lambda gradient monitoring interface*)
+	rCorr_LX_GR_MIN : REAL := 0.94; (* Minimum value of LEANOX speed compensation factor *)
+	rCorr_LX_GR_MAX : REAL := 1.05; (* Maximum value of LEANOX speed compensation factor *)
+	rN_Factor_OF_MaxP : REAL; (* Frequency dependend LEANOX speed compensation factor at full load *)
+	rN_Factor_OF_MinP : REAL; (* Frequency dependend LEANOX speed compensation factor at half load *)
+	xSigScalR_rCorr_LX_GR : xSigScal_R; (* Interpolated LEANOX speed compensation factor *)
+	TON_N_GR : TON;
+	TON_LX2_startupDelay : TON; (* Auxiliary TON for LX2 activation delay at start-up *)
+	bLX2_startupDelay : BOOL; (* start-up delay release condition for LX2 activation *)
+	tTOF_LXadj_LGM : TIME; (*Auxiliary timer variable*)
+	tTON_LX2rampDelay_LGM : TIME; (*Auxiliary timer variable*)
+	tTOF_LX2ramp_LGM : TIME; (*Auxiliary timer variable*)
+	xTP_BlockSG_SYLFG : TP; (*block sync after loss of release*)
+	xTON_sy_lfg_SG_5s : TON; (*time delay to release sync for BPBLIC*)
+	xTON_LX2_Skipfire : TON; (*TON delay for LX2 response in skipfire*)
+	tiTON_LX2_Skipfire : TIME; (*Auxiliary timer variable*)
+	rPr_P2s_Compensations : REAL; (* LEANOX compensations [bar]*)
+	rPr_Demand_PCGT : REAL; (* Prechamber gas pressure for calculation of power reduction [bar(abs)]*)
+	rA_Fraction_PCGT : REAL; (* Quadratic coefficient for power reduction calculation PCGT *) 
+	rB_Fraction_PCGT : REAL; (* Linear coefficient for power reduction calculation PCGT *)
+	rC_Fraction_PCGT : REAL; (* Free term for power reduction calculation PCGT *)
+	xP_el_PCGT_red_Scal : LCRScal := (0); (* FUB scale prechamber gas pressure *)
+	rPr_Demand_GR : REAL; (* Gas rail pressure for calculation of power reduction [bar(abs)]*)
+	rA_Fraction_GR : REAL; (* Quadratic coefficient for power reduction calculation GR *) 
+	rB_Fraction_GR : REAL; (* Linear coefficient for power reduction calculation GR *)
+	rC_Fraction_GR : REAL; (* Free term for power reduction calculation GR *)
+	xP_el_GR_red_Scal : LCRScal := (0); (* FUB scale gas rail pressure *)
+	iLxPoint_P_minDiff : INT; (* Leanox points power reference - minimum distance for warning [kW] *)
+	xTON_bSav_LDat_P100_Ena : TON; (*TON delay for enabling HMI saving of Leanox reference point 1*)
+	xTON_bSav_LDat_P50_Ena : TON; (*TON delay for enabling HMI saving of Leanox reference point 2*)
+	xTON_bSav_LDat_P25_Ena : TON; (*TON delay for enabling HMI saving of Leanox reference point 3*)
+	xTOF_LX2_learnStop : TOF; (* TOF delay for removing ext BPOC learn stop signal*)
+	tiTOF_LX2_learnStop : TIME; (*Auxiliary timer variable*)
+	rLX2_fastRampMult_deact : REAL; (*LX2 ramp multiplier for fast deactivation*)
+	xLCRPT1_P_LX2_fast : LCRPT1; (*power filter for LX2 load change detection*)
+	xLCRPT1_P_LX2_slow : LCRPT1; (*power filter for LX2 load change detection*)
+	rPnorm_filtDiff_LX2: REAL; (*normalized power filters difference for LX2 load change detection [%Pnom/s]*)
+	xTON_LX2_MinP : TON; (*TON delay for minimum load detection for LX2*)
+	xTOF_LX2_MinP_negStep : TOF; (*TOF delay for load change detection at minimum load for LX2*)
+	tiTON_LX2_MinP : TIME; (*Auxiliary timer variable*)
+	bLX2_MinP : BOOL; (*minimum load detection for LX2*)
+	bLX2_P_negStep : BOOL;  (*load step change detection at minimum load for LX2*)
+	xTOF_LX2_deact_LoadReject : TOF; (*TOF delay for LX2 fast deactivation*)
+	xTOF_LX2_fastRamp_LoadReject : TOF; (*TOF delay for LX2 fast deactivation*)
+	iLX2_P_negRamp : INT; (* counter of negative power gradient detections for LX2 fast deactivation*)
+	iLX2_P_negRamp_lim : INT; (* limit counter of consequent negative power gradient detections for LX2 fast deactivation*)
+	rP_fastFilt_LX2_old : REAL; (*previous cycle value of filtered power for LX2 load change detection*)
+	rPnormFilt_Grad_LX2 : REAL; (*normalized power gradient for LX2 fast deactivation [%Pnom/s]*)
+	rPnormFilt_GradSum_LX2 : REAL; 
+	rPnormFilt_GradAvg_LX2 : REAL;  (*1 second average normalized power gradient for LX2 fast deactivation [%Pnom/s]*)
+	iLX2_PnormFilt_GradAvg_loop : INT; (*auxiliary index variable*)
+	bLX2_P_negRamp : BOOL;  (*load ramp detection at minimum load for LX2*)
+	rPr_P2s_Comp_perH2_HL : REAL; (* Boost pressure offset at half load [mbar] *)
+	rPr_P2s_Comp_perH2_FL : REAL; (* Boost pressure offset at full load [mbar] *)
+	xSigScalR_P2s_Comp_perH2 : xSigScal_R; (* Interpolated boost pressure compensation factor H2 [bar/%H2] *)
+	rPr_P2S_Offset_25PrctH2_HL : REAL; (* Boost pressure offset at 25% H2 content at half load [mbar] *)
+	rPr_P2S_Offset_25PrctH2_FL : REAL; (* Boost pressure offset at 25% H2 content at full load [mbar] *)
+	xSigScalR_P2s_Comp_25PrctH2 : xSigScal_R; (* Interpolated boost pressure compensation factor H2 [mbar] *)
+	rPr_P2s_Comp_perH2 : REAL; (* Boost pressure offset depending on H2 content [mbar] *)
+	xRamp_Offs_H2 : RAMPE_R; (* Boost pressure offset ramp *)
+	bSteadyState_Loss_H2 : BOOL; (* Deactivate steady state of leanox plus for active lean out *)
+	rNOx_set_Delta_H2 : REAL := 5; (* NOx limit to reactivate steady state of leanox plus [ppm] *)
+	xTON_LX2_learningEna_startup : TON; (* TON for delayed enabling of LX2 learning component at engine start-up *)
+	tiTON_LX2_learningEna_startup : TIME; (* Auxiliary timer variable *)
+END_VAR

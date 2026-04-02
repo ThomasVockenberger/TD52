@@ -1,0 +1,156 @@
+VAR
+	d : DINT;
+	FG_KLUM : BOOL;
+	KL_AUS_S : BOOL;
+	KL_EIN_S : BOOL;
+	MS_TK : BOOL;
+	PTON_KL_AUS : TIME;
+	PTON_KL_EIN : TIME;
+	PTON_SPLU_AKT_AUS : TIME;
+	PTON_SPLU_AKT_EIN : TIME;
+	PT_KL : coordinate_5;
+	P_ramp : ARRAY[0..1] OF IntegralElement;
+	RM_KL_END : BOOL;
+	RM_KL_MIT : BOOL;
+	SEK_TAKT : BOOL;
+	SPLU_AKT : BOOL;
+	ST_RM_ST : BOOL;
+	ST_R_ST : BOOL;
+	ti_TKx_y_HI_PTHI : TIME;
+	TK1_TK2_MAX : REAL;
+	TK1_TK2_MIN : REAL;
+	TK1_TK2_MIT : REAL;
+	TKx_y_HI_Gw : REAL; (*Reactor temperature TK1/TK2 maximum [degC]*)
+	TKx_y_HI_Hy : REAL; (*Reactor temperature TK1/TK2 maximum - hysteresis [degC]*)
+	rT_ThR_EH_Lim75Hy : REAL; (*Th.Reactor electrical heating system - hysteresis for 75% heating power [degC]*)
+	rT_ThR_EH_Lim50Hy : REAL; (*Th.Reactor electrical heating system - hysteresis for 50% heating power [degC]*)
+	rT_ThR_EH_Lim25Hy : REAL; (*Th.Reactor electrical heating system - hysteresis for 25% heating power [degC]*)
+	rT_ThR_EH_Lim00Hy : REAL; (*Th.Reactor electrical heating system - hysteresis for 0% heating power [degC]*)
+	TK_w : REAL; (*Th.Reactor - temperature setpoint [degC]*)
+	x : INT; (*	XT_Version_32x : BOOL; *)
+	xCTD_HE_1 : CTD;
+	xCTD_HE_2 : CTD;
+	xCTD_HE_3 : CTD;
+	xGRMax_TK00 : GR_MAXR;
+	xGRMax_TK11 : GR_MAXR;
+	xGRMax_TK12 : GR_MAXR;
+	xGRMax_TK21 : GR_MAXR;
+	xGRMax_TK22 : GR_MAXR;
+	xGRMax_TK25 : GR_MAXR;
+	xGRMax_TK50 : GR_MAXR;
+	xGRMax_TK75 : GR_MAXR;
+	xGRMax_TKG : GR_MAXR;
+	xR_TRIG_KL_AUS : R_TRIG;
+	xR_TRIG_KL_EIN : R_TRIG;
+	xTK1_1_HI : ls_t;
+	xTK1_2_HI : ls_t;
+	xTK1_DIF_HI : ls_t;
+	xTK2_1_HI : ls_t;
+	xTK2_2_HI : ls_t;
+	xTK2_DIF_HI : ls_t;
+	xTK_E00 : ls_t;
+	xTK_E25 : ls;
+	xTK_E50 : ls;
+	xTK_E75 : ls;
+	xTK_GAS : ls_t;
+	xTK_OPER : ls_t;
+	xTOF_PS_LUFT : TOF;
+	xTOF_W_INT : TOF; (*weekly SPLU interval *)
+	xTON_AUFHEIZG_GAS : TON;
+	xTON_AUFHEIZG_GES : TON;
+	xTON_FG_TH : TON;
+	xTON_KL_AUS : TON;
+	xTON_KL_EIN : TON;
+	xTON_reactor_01 : TON;
+	xTON_reactor_02 : TON;
+	xTON_SPLU_AKT_AUS : TON;
+	xTON_SPLU_AKT_EIN : TON;
+	xTON_SPLU_DEAKT : TON;
+	xTON_ST_KLE : TON;
+	xTON_ST_KLM : TON;
+	xTON_W_ACT : TON; (*weekly SPLU active*)
+	xTP_BTRB : TP;
+	xTP_NFRG_GASREG : TP;
+	xTRW01_TK : SR;
+	y_HE : REAL;
+	y_HE_ramp : UINT;
+	TK1_DIF : REAL := 0.0; (*Thermal reactor chamber TK1 temperature difference*)
+	TK2_DIF : REAL := 0.0; (*Thermal reactor chamber TK2 temperature difference*)
+	ti_ThR_ChamberDiff : TIME; (*Thermal reactor chamber temperatuer difference time interval before warning*)
+	rT_ThR_ChamberDiffHy : REAL; (*Thermal reactor temperature difference hysteresis [degC]*)
+	rT_ThR_ChamberDiff : REAL; (*Thermal reactor temperature difference [degC]*)
+	xTON_TK1_DIF : TON;	(*auxiliary variable for warning W3503 - Th.Reactor chamber max temperature difference*)
+	xTON_TK2_DIF : TON;	(*auxiliary variable for warning W3503 - Th.Reactor chamber max temperature difference*)
+	xGRMax_TK1DIF : GR_MAXR; (*auxiliary variable for warning W3503 - Th.Reactor chamber max temperature difference*)
+	xGRMax_TK2DIF : GR_MAXR; (*auxiliary variable for warning W3503 - Th.Reactor chamber max temperature difference*)
+	rT_ThR_ChDiff_switch : REAL; (*Thermal reactor max. temperature difference during one valve switch period [degC]*)
+	rT_ThR_ChDiff_switchHy : REAL; (*Thermal reactor chamber max temperature difference hysteresis [degC]*)
+	xTON_TK1_Diff_switch : TON;	(*auxiliary variable for warning W3503 - Th.Reactor chamber max temperature difference*)
+	xTON_TK2_Diff_switch : TON;	(*auxiliary variable for warning W3503 - Th.Reactor chamber max temperature difference*)
+	xGRMax_TK1Diff_switch : GR_MAXR; (*auxiliary variable for warning W3503 - Th.Reactor chamber max temperature difference*)
+	xGRMax_TK2Diff_switch : GR_MAXR; (*auxiliary variable for warning W3503 - Th.Reactor chamber max temperature difference*)
+	R_TRIG_KL_AUS_M : R_TRIG;
+	R_TRIG_KL_EIN_M : R_TRIG;
+	xTOF_S_EIN : TOF;
+	xTON_FG_KL_M : TON;
+	xTON_KL_AUS_M : TON;
+	xTON_KL_EIN_M : TON;
+	R_TRIG_KL_AUS : R_TRIG;
+	R_TRIG_KL_EIN : R_TRIG;
+	KL_AUS_M : BOOL;
+	KL_EIN_M : BOOL;
+	FG_KL_M : BOOL;
+	xTP_EH11 : TP;	(*aux. time pulse for thermal reactor electrical heating group 1*)
+	xTP_EH21 : TP;	(*aux. time pulse for thermal reactor electrical heating group 2*)
+	xTP_EH31 : TP;	(*aux. time pulse for thermal reactor electrical heating group 3*)
+	rThR_EH_pulse : REAL;	(*aux. var. for thermal reactor electrical heating*)
+	tThR_EH_pulse : TIME;	(*aux. var. for thermal reactor electrical heating*)
+	xGRMax_ThR_OperTemp : GR_MAXR;
+	rT_ThR_OperTemp_rel : REAL; (*Th.Reactor operating temperature - temperature margin from setpoint [degC]*)
+	rT_ThR_OperTempHy : REAL; (*Thermal reactor operating temperature hysteresis [degC]*)
+	bThr_AuxGasStopT_Ena : BOOL;	(* Th.Reactor auxiliary gas stop due to sufficient temperature - enabling conditions *)
+	xTON_Thr_AuxGasStopT_set : TON;	(* TON timer for Th.Reactor auxiliary gas stop due to sufficient temperature *)
+	tiTON_Thr_AuxGasStopT_set : TIME; (* auxiliary timer variable *)
+	rT_Thr_AuxGasStopT_rel : REAL; (* Th.Reactor auxiliary gas stop due to sufficient temperature - temperature margin above setpoint [degC]*)
+	xTON_Thr_AuxGasStopT_reset : TON;	(* TON timer for Th.Reactor auxiliary gas stop due to sufficient temperature *)
+	tiTON_Thr_AuxGasStopT_reset : TIME; (* auxiliary timer variable *)
+	rPos_ThR_GasCV_AuxGasStop_max: REAL; (* Thermal reactor  auxiliary gas stop due to sufficient temperature - maximum CV position for temperature verification validity [%] *)
+	xRS_Thr_AuxGasStopT: RS;	(* Th.Reactor auxiliary gas stop due to sufficient temperature *)
+	tiTP_NFRG_GASREG : TIME;	(* Th.Reactor aux. gas - control valve close command timer for stop of aux. gas system *)
+	xGRMax_ThR2_EH_pw00 : GR_MAXR; (*Th.Reactor electrical heating system - ThR2 - threshold check 0% power [degC]*)
+	xGRMax_ThR2_EH_pw20 : GR_MAXR; (*Th.Reactor electrical heating system - ThR2 - threshold check 20% power [degC]*)
+	xGRMax_ThR2_EH_pw40 : GR_MAXR; (*Th.Reactor electrical heating system - ThR2 - threshold check 40% power [degC]*)
+	xGRMax_ThR2_EH_pw60 : GR_MAXR; (*Th.Reactor electrical heating system - ThR2 - threshold check 60% power [degC]*)
+	xGRMax_ThR2_EH_pw80 : GR_MAXR; (*Th.Reactor electrical heating system - ThR2 - threshold check 80% power [degC]*)
+	rT_ThR2_EH_PwLevHy : REAL; (*Th.Reactor electrical heating system - ThR2 - hysteresis for heating power [degC]*)
+	iThR2_EH_PwLev : INT; (*Th.Reactor electrical heating system - ThR2 - heating power level *)
+	xRamp_ThR2_EH_PwLev : RAMPE_R; (*Th.Reactor electrical heating system - ThR2 - auxiliary variable *)
+	iThR2_EH_PwLev_ramp : INT; (*Th.Reactor electrical heating system - ThR2 - heating power level *)
+	xTON_ThR2_EH_gr1_T_GoodQual : TON;	(* TON timer for Th.Reactor electrical heating system - ThR2 - heating element group 1 temperature good quality signal *)
+	xTON_ThR2_EH_gr2_T_GoodQual : TON;	(* TON timer for Th.Reactor electrical heating system - ThR2 - heating element group 1 temperature good quality signal *)
+	xTON_ThR2_EH_gr3_T_GoodQual : TON;	(* TON timer for Th.Reactor electrical heating system - ThR2 - heating element group 1 temperature good quality signal *)
+	xTON_ThR2_EH_gr4_T_GoodQual : TON;	(* TON timer for Th.Reactor electrical heating system - ThR2 - heating element group 1 temperature good quality signal *)
+	xTON_ThR2_EH_gr5_T_GoodQual : TON;	(* TON timer for Th.Reactor electrical heating system - ThR2 - heating element group 1 temperature good quality signal *)
+	tiTON_ThR2_EH_gr_T_GoodQual : TIME;	(* auxiliary timer variable *)
+	xGRMax_ThR2_EH_group1_T : GR_MAXR; (*Th.Reactor electrical heating system - ThR2 - threshold check heating element group 1 high temperature [degC]*)
+	xGRMax_ThR2_EH_group2_T : GR_MAXR; (*Th.Reactor electrical heating system - ThR2 - threshold check heating element group 2 high temperature [degC]*)
+	xGRMax_ThR2_EH_group3_T : GR_MAXR; (*Th.Reactor electrical heating system - ThR2 - threshold check heating element group 3 high temperature [degC]*)
+	xGRMax_ThR2_EH_group4_T : GR_MAXR; (*Th.Reactor electrical heating system - ThR2 - threshold check heating element group 4 high temperature [degC]*)
+	xGRMax_ThR2_EH_group5_T : GR_MAXR; (*Th.Reactor electrical heating system - ThR2 - threshold check heating element group 5 high temperature [degC]*)
+	rT_ThR2_EH_thres_GroupHi : REAL; (*Th.Reactor electrical heating system - ThR2 - heating elements high temperature threshold [degC]*)
+	rT_ThR2_EH_thres_GroupHi_Hy : REAL; (*Th.Reactor electrical heating system - ThR2 - hysteresis for heating elements high temperature [degC]*)
+	bThR2_EH_groupT_Ok : ARRAY[0..5] OF BOOL; (*Th.Reactor electrical heating system - ThR2 - availability status of heating element groups*)
+	iThR2_EH_groupFirst  : INT; (*Th.Reactor electrical heating system - ThR2 - index of first group based on flap position*)
+	iThR2_EH_groupLast  : INT; (*Th.Reactor electrical heating system - ThR2 - index of last group based on flap position*)
+	iThR2_EH_groupIndex  : INT; (*Th.Reactor electrical heating system - ThR2 - heating element group index*)
+	iThR2_EH_groupIndexIncr  : INT; (*Th.Reactor electrical heating system - ThR2 - increment of heating element group index*)
+	iThR2_EH_PwLevCounter  : INT; (*Th.Reactor electrical heating system - ThR2 - auxiliary counter*)
+	bThR2_EH_group_On : ARRAY[0..5] OF BOOL; (*Th.Reactor electrical heating system - ThR2 - energization request for heating element groups*)
+	iThr2_lastFlapEndPosIndex  : INT; (*Th.Reactor - ThR2 - last end-position reached by 4-way flap *)
+	xSR_Thr2_AuxGasValve_Block: SR;	(* Th.Reactor auxiliary gas solenoid valve - ThR2 *)
+	tiThR2_AuxGasValve_Block : TIME; (* Th.Reactor auxiliary gas solenoid valve - ThR2 - time for closing valve before flap switching *)
+	xGRMax_ThR2_T_LeftChamber_Hi : GR_MAXR; (*Th.Reactor - ThR2 - threshold check left chamber high temperature [degC]*)
+	xGRMax_ThR2_T_RightChamber_Hi : GR_MAXR; (*Th.Reactor - ThR2 - threshold check right chamber high temperature [degC]*)
+	xTON_ThR2_T_LeftChamber_Hi : TON; (* Th.Reactor - ThR2 - TON delay for warning - left chamber high temperature *)
+	xTON_ThR2_T_RightChamber_Hi : TON; (* Th.Reactor - ThR2 - TON delay for warning - right chamber high temperature *)
+END_VAR

@@ -1,0 +1,47 @@
+VAR
+	bRelMon_Pr_AirStarter_Supply : BOOL := FALSE; (*Release monitoring air starter tank pressure *)
+	bRelMon_Pr_AirStarter_Tank : BOOL := FALSE; (*Release monitoring air starter supply pressure *)
+	bTP_StarterON : BOOL;
+	iN_AirSt : UINT; (*Actual value from air starter speed counter*)
+	iN_AirStDiff : UINT; (*Difference (Actual - Last) value from air starter speed counter*)
+	iN_AirSt_old : UINT; (*Last value from air starter speed counter*)
+	M_STRT_TEMP6 : BOOL;
+	M_STRT_TEMP7 : BOOL;
+	T7_TEMP1 : BOOL;
+	xCTD_Start : CTD;
+	xF_TRIG_Start : F_TRIG;
+	xR_TRIG_Reset1 : R_TRIG;
+	xR_TRIG_Reset2 : R_TRIG;
+	xR_TRIG_Reset3 : R_TRIG;
+	xTOF_Pr_AirStarter_Supply : TOF := (0);
+	xTOF_Pr_AirStarter_Tank : TOF := (0);
+	xTON_DelayManStart : TON;
+	xTON_DelayStart : TON;
+	xTON_Pr_AirST_Engage_Lo : TON := (0);
+	xTON_StartErr : TON;
+	xTON_TURN : TON;
+	xTP_StarterOFF : TP;
+	xTP_StarterON : TP;
+	xTOF_STP_STRT : TOF;
+	ZM_HSTART : BOOL;
+	xTON_FailedAirST : TON;
+	iCntSt : UINT;
+	bAirST_Engaged_MovingFlyW : BOOL;
+	iCnt_AirST_MovingFlyW : INT := (0);
+	iCnt_AirST_MovingFlyW_old : INT := (0);
+	xTON_MovingFlyW_Cnt_Reset : TON;
+	bComEngage : BOOL;
+	bAirST_Engage_OMSS : BOOL;
+	iStepCnt : INT := (0);
+	iCntEng : INT := (0);
+	xTON_AirST_ValEngage : TON;
+	xTON_AirST_ValEngageOff : TON;
+	xTON_EngStop : TON := (0);
+	ZM_bStartMan : BOOL; (* ZM - Start Manual *)
+	bPr_AirST_Engage_Lo : BOOL;
+	xTP_AirST_ValStart_Interrupt : TP;
+	xF_TRIG_Eng_Start : F_TRIG;
+	xTON_Pr_AirST_Engage_Ms : TON;
+	bAirST_ValEngage : BOOL; (*Command air starter engagement valve (E.31-YCS-001)*)
+	bAirST_ValStart : BOOL; (*Command air starter start valve (E.31-YCS-002)*)
+END_VAR

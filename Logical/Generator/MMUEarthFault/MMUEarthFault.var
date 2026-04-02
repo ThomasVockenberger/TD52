@@ -1,0 +1,23 @@
+VAR
+	rTimeStamp_PosZeroCrossing_UGen1 : REAL := 0.0; (*[ms]*)
+	rTimeStamp_PosZeroCrossing_UGen2 : REAL := 0.0; (*[ms]*)
+	rTimeStamp_PosZeroCrossing_UGen3 : REAL := 0.0; (*[ms]*)
+	rTPeriodTime : REAL; (*[ms]*)
+	rTimeStamp_Calc_UGen1 : REAL := 0.0;
+	rTimeStamp_Calc_UGen2 : REAL := 0.0;
+	rTimeStamp_Calc_UGen3 : REAL := 0.0;
+	rTimeStamp_max : REAL := 0.0;
+	rTimeStamp_min : REAL := 0.0;
+	rTimeStamp_mid : REAL := 0.0;
+	iNumNeg : INT := 0;
+	rDelta_1 : REAL := 0.0;
+	rDelta_2 : REAL := 0.0;
+	rDAng_1 : REAL := 0.0;
+	rDAng_2 : REAL := 0.0;
+	rDAng_Dev : REAL := 10.0;
+	bDANg_1_ok : BOOL := 0;
+	bDANg_2_ok : BOOL := 0;
+	xTON_warning : TON;
+	xTON_trip : TON;
+	xTON_MonAct : TON;
+END_VAR

@@ -1,0 +1,11 @@
+VAR
+	bIC_StartFwUpd : BOOL; (*Start the IC firmware download*)
+	CMSdlreq_IcFw : CMSdlreq; (*Function block to download IC firmware*)
+	DatObjInfo_IcFw : DatObjInfo; (*Function block to get the info of the ICfirmware*)
+	iNum_IcFwAdr : UDINT; (*IC firmware address*)
+	iNum_IcFwLen : UDINT; (*IC firmware length*)
+	iNum_IcFwStatus : UINT; (*IC firmware status*)
+	iNum_IcUpdState : USINT;
+	iNum_InitDlFwCnt : USINT; (*Counter to re-send the initiate domain download*)
+	xTON_IC_Upd : TON; (*Limit the IC firmware download to 30 min*)
+END_VAR

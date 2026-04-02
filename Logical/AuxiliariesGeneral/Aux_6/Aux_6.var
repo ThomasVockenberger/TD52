@@ -1,0 +1,55 @@
+VAR
+	OMIN_NK : BOOL; (*engine oil level low for cool down*)
+	VSP_24 : BOOL; (* Vorschmierpumpe 24V *)
+	VSP_400 : BOOL; (* Vorschmierpumpe 400V *)
+	A_MKWP_TEMP1 : BOOL;
+	A_MKWP_TEMP2 : BOOL;
+	A_MKWP_TEMP3 : BOOL;
+	A_VORW_TEMP1 : BOOL;
+	xTON_SPG_N : TON;
+	xTON_SPG_W : TON;
+	xTON_BTRB : TON;
+	xTON_OMIN : TON;
+	xTON_MaxPreLubeTime : TON;
+	xTON_EOP1DC : TON;
+	xTON_EOP1AC : TON;
+	xGR_MAXR_VSD1 : GR_MAXR;
+	xTON_VSD1 : TON;
+	xGR_MAXR_VSD2 : GR_MAXR;
+	xTON_VSD2 : TON;
+	xGR_MINR_Pr_OTC : GR_MINR;
+	xTON_Pr_OTC : TON;
+	xTOF_CoDoAfMnsFail : TOF;
+	bCoDoAfMnsFail : BOOL;
+	xTON_ECWP2Dem : TON;
+	xTOF_EmLubDem : TOF;
+	xGR_MIN_Pr_TCOaF_Prelub_Lo : GR_MINR;
+	GR_MIN_AtlOilPress : GR_MINR;
+	xTON_Pr_TCOaF_Prelub_Lo : TON;
+	xSigScal_TC_Oilpress : xSigScal_R;
+	EGW_ODRA_TC : REAL; (*Errechneter Grenzwert für Öldrucküberwachung*)
+	xTON_N_TCO_PrMon : TON;
+	xR_TRIG_RUN : R_TRIG;
+	xCTD_Prelube : CTD;
+	xTON_Prelube : TON;
+	bPr_PreLubeOk : BOOL;
+	xTOF_Eng_MonOff : TOF; (*monitoring off*)
+	bFS_Req : BOOL;
+	xTON_Pr_EO_FSPreL : TON;
+	xTON_Pr_EO_FSPreL4m : TON;
+	xTP_Pulse : TP;
+	xGR_MAXR_PreL_FS_T_ECW : GR_MAXR;
+	rPr_TCLubOil : REAL;
+	rPr_TCLubOil_LimHi_Low_T_EO : REAL;
+	xTON_Pr_TCLubOil_PreL_FS_Hi : TON;
+	xTON_Pr_TCLubOil_PreL_FS_HiHi : TON;
+	xTON_ECW_HydrPreH_Dem : TON;
+	xTOF_ECW_HydrPreH_Dem : TOF;
+	tiAuxSupOFF_Pr_EO : TIME := T#2s; (*Time to block monitoring oil pressure in case of switching from AC to DC pump*)
+	xTON_AuxSupOFF : TON; (*FuB*)
+	xTON_MaxDC_Time : TON; (*FuB*)
+	xGR_MAXR_T_ECW_PreH_Rel : GR_MAXR; (*FuB*)
+	xGR_MINR_T_EO_PreH_Lo : GR_MINR; (*FuB*)
+	xGR_MINR_T_EO_PreH_Rel : GR_MINR; (*FuB*)
+	xTOF_EOVal_DemOpen : TOF; (*TOF for engine oil refill valve  V4.14*)
+END_VAR

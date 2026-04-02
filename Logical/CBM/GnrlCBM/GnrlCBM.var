@@ -1,0 +1,33 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: GnrlCBM
+ * File: GnrlCBM.var
+ * Author: 105026853
+ * Created: June 13, 2016
+ ********************************************************************
+ * Local variables of program GnrlCBM
+ ********************************************************************)
+VAR
+	xGEN2diag : fGEN2diag := (0);
+	bGrCChange : BOOL := 0;
+	pm_len : UINT := 0;
+	rDmyContainer : ARRAY[0..20] OF REAL;
+	ulChecksum : UDINT := 0;
+	iLoop : USINT := 0;
+	ulOffset : UINT := 0;
+	ulPMPointer : UDINT := 0;
+	ulChkValue : UDINT := 0;
+	bParaChange : BOOL := 0;
+	ulChecksumOld : UDINT := 0;
+	bLeanoxChange : BOOL := 0;
+	bLeanoxM_Tgl : BOOL := 0;
+	bPIOptiChange : BOOL := 0;
+	i : USINT;
+	FricIMEP_P20 : fFricIMEP := (0);
+	bPCGCChange : BOOL := 0;
+	bGEN2diag_afterGCBon : BOOL := 0;
+	xTOF_Misf_LGM : TOF;
+	tiMisf_LGM : TIME := T#60s;
+	bMisf_LGM : BOOL;
+END_VAR

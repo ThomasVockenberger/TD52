@@ -1,0 +1,10 @@
+VAR
+	srcAdr : UDINT;
+	dstAdr : UDINT;
+	idx : INT;
+	idxMin : INT;
+	idxMax : INT;
+	bData : ARRAY[0..15] OF BOOL;
+	pScrData : REFERENCE TO ARRAY[0..15] OF BOOL;
+	pDstData : REFERENCE TO UINT;
+END_VAR

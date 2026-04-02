@@ -1,0 +1,242 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2025
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V3.99			06-03-2013	Weitzer, 	generated for modular software	 
+; V4.01.01.00 	12.11.2014	Caks,		controllers changed from SimPID to PID_A, LIVC added
+; V4.02.00.00	16.02.2015	Caks,		added PBC and Type9
+; V4.04.00.00	04.07.2016	Gwiggner,	many Bugfixes
+; V4.05.00.00	08.11.2017	Perktold,	Bugfix: LEANOX correction type 6 and GEN2
+;				11.01.2018	Arnold,		J920 fast start (eng_ctr, leanox, ignpoint, pi_ctr, lLamStart)
+; V4.05.01.00	15.03.2018	Perktold,	Initialisierung SimPID wenn PID_A arbeitet
+; V4.05.02.00	12.04.2018	Perktold,	BF:lambda for type 6 Island->Grid mode (leanox_EC/gas_flow)
+; V4.05.02.02	12.07.2018	502423184,	G2 added
+; V4.06.00.00	20.09.2018	Perktold,	GEN2/FastStart integration
+; V4.07.00.00	23.07.2018	Messner,	CPP Integrator (V0.10) based control updated
+;				23.01.2019	Andre,		rPr_49bfTDC now taken from new DMR_mdatas1, sent every cycle
+;				13.03.2020	Perktold,	BU1&2 from 4.07/08 included
+; V4.09.00.00   18.11.2019  Arnold, 	Direct Air Injection for type 9 engine
+;				23.01.2020	Schmidt,	Exhaust gas temperature monitoring for valve fracture detection added, bugfix ITP reduction due to knock with KLS90 and gas type 0
+; V4.10.00.00	02.06.2020	Kafka,		Compressor intake air temperature compensation for cbv setpoint for waste gate controller  
+;				15.06.2020	Kafka,		Load rejection for type 9
+;				28.09.2020	Gwiggner,	BU 02: Bugfixes: Gen2 island for idle mode, correct initialization in island, Gen2 island limit change of power set for Gen2
+;				19.10.2020  Schmidt, 	PCGV monitoring added
+;				22.12.2020  Schmidt, 	FastSync for pre-mixed engines, gas-push for Type6 activated, 5min start possibility for J624
+;				12.01.2021	Schmidt,	Valve fracture detection (exh. temp. monitoring) v1.05
+;				21.01.2021	Zuschnig,	Write ParaEC to MM2VIS in case of gas type 0
+;				28.01.2021	Kafka,		J9 old isolated controller clean up, port injection for not type 9	
+; V4.11.00.00	23.04.2021	Zuschnig,	Include ITP and gas flow adaption for type 4 engines
+;				23.04.2021	Zuschnig,	Detection of gearbox and adjustment of frequency calculation
+;				15.06.2021	Schmidt,	Type6 LR activation of ignition off after trip
+;				18.06.2021	Kafka,		SCR inlet temperature controller type 9
+;				21.06.2021	Kafka,		skip fire pattern for PI engines to EngType function
+;				22.06.2021	Schmidt,	PID_A_CBV init bugfix: avoid closing of CBV from idle to island mode (80/20 rule)
+;				22.06.2021	Arnold,		type 6 data centre application
+;				16.08.2021	Schmidt,	type 6 propane version
+;				30.08.2021  Keller, 	Speed Control: LX Spd Correction island, ITP retard underfreq. island
+;				20.10.2021  Maran, 		added Leanox point at low load for type 9
+;				21.10.2021	Zuschnig,	Update calculation of possible engine power depending on prechamber gas pressure
+;				04.10.2021 	Keller,		GEN2 biogas improvements	
+;				16.11.2021	Farre,		SCR Inlet Temperature Reduction - ITP Control
+;				24.11.2021	Zuschnig,	Bugfix - phase angle calculation with gearbox
+;				01.12.2021	Kafka,		Lambda Controller PBC
+;				10.12.2021  Zuschnig,   Include FRT detection in island operation	
+;				15.12.2021	Maran,		added thermal reactor start time reduction function
+;				22.12.2021	Andre,		added notification of frozen or alternating DMR knock, IMEP, exhaust temperature, or SAFI reboot from SAFI module
+;				13.01.2022	Kafka,		extended gas rail scavenging 1 and 2
+;				13.01.2022	Schmidt,	update GEN1 (T6) and GEN2 island controller with FRT in island mode capability
+;				20.01.2022  Zuschnig,	Update calculation of possible engine power depending on gas rail pressure
+;				26.01.2022  Zuschnig,	Include grid code test function with HMI test buttons
+;				02.02.2022	Zuschnig,	Rework of FRT functionality for type 3 and type 6
+;				25.02.2022	Schmidt,	bugfix T6 gasmixer closing after speed to power mode transition
+;				21-03-2021	Racero,		T3 60Hz Skipfiring improvement to avoid oscillations
+; V4.12.00.00	14-06-2022	Kafka,		include gauss distribution map learning for PI optimizer
+;				26-07-2022	Kafka,		bugfix TV and ITP transition with Gen2 active in IDLE
+;				06-09-2022	Keller,		bugfix transition leanox MAN to AUT w. Gen2 (issue #605)
+;				08-09-2022	Andre,		Select the engine speed from the ICxx module also if SEMIC is active
+;				17-11-2022	Perktold,	add message A2365 Generator pole slip
+;				18-11-2022	Zuschnig,	Include Para.tiFRT_PowerFix for variable power holding time at FRT event
+;				23-11-2022	Maran,		added Leanox plus fast deactivation in island mode
+;				13-12-2022	Schmidt,	switch to separate sync window settings if fast-sync active
+;				14-12-2022	Kafka,		Aggreko EC Calibration	
+;				12-12-2022	Racero,		Mixed speed and frequency skipping methodology applied and active for Gen1 J316/20 60Hz 
+;				22-01-2023	Zuschnig,	Include H2 compensation	
+; V4.13.00.00	09-05-2023	Farre,		SCR Inlet temp available also for customized SCR devices
+;				15-05-2023	Maran,		bugfix to detect and reset Lx line failure warning in stop mode
+;				19-10-2023	Schmidt,	GEN2: T6 PI calibration for mains parallel (issue #1076)
+;				20-10-2023	Schmidt,	bugfix wrong PI-controller init during switchover from fast-sync
+;				20-10-2023	Perktold,	SGas: execute MFB50 if PBC active for HMI values
+;				24-10-2023	Zuschnig, 	FRT confirmation button added
+;				30-10-2023	Keller,		bugfix Gen2 (#1133, #1247) for BU Q4 2023
+;				09-11-2023	Keller,		GEN2 updates (bugfix dP TV ramp, disturbance observer, U_set for load estimation, Msg9095)
+; 				11-10-2023	Kafka,		automatic optimization, balancing in transients, FAR Monitoring
+;				15-11-2023	Gwiggner,	adding humidity compensation plus
+;       		21-11-2023  Bachler,  	update grid status detection
+; 				28-11-2023	Gwiggner,	gas push for type 3, general activation without FS
+;				04-12-2023	Maran,		added delay to Leanox plus learning activation at engine startup
+; 				07-12-2023	Schmidt,	added combustion anomaly detection via EGT gradient
+;				11-12-2023  Zuschnig, 	update FRT functionality for engine type 9
+;				26-01-2024	Zuschnig,	Split Power reduction FPR
+;				09-02-2024	Zuschnig,	Store correct LEANOX controller status during FRT, FPR and FGQC
+; V4.14.00.00	09-07-2024	Schmidt,	Added T6 GEN1 island controller improvements for L-version SSTC 23bar BMEP
+;				17-09-2024	Schmidt,	T6 standby version (J78x) serialization (issue 1479)
+;				26-09-2024	Keller, 	Bugfix IT retard GEN2 load acc. (#1511)
+;				01-10-2024	Schmidt,	Split optimizer c-, d-, e-factor calibration for T9 and T6 PI (issue 1424)
+;				07-10-2024	Kafka,		RKS with SAFI3 for T9, remove G2
+;				09-10-2024	Zuschnig,	Remove unused parameters for advanced gas proportioning valve start
+;				16-10-2024	Maran,		bugfix: static skipfire OUT_EC interface limited to T9 and T6 with PI (issue #1579)
+;				21-10-2024	Gwiggner,	redefinition trips combustion (A1044, A2339 and A2362)
+;				22-11-2024	Schmidt,	Change for pre chamber gas bypass valve (load acceptance improvement)
+; 				25-11-2024	Bacci,	 	T6 Start procedure with purge start (2024-219): include purge state and starter temperature capability in fast start readiness
+; 				26-11-2024	Soto/Farre,	CAN waste gate software adaptions (2023-174)
+;				26-11-2024	Kafka,		Grid Status Detection update
+;				26-11-2024	Zuschnig,	Include start lambda offset depending on H2 content
+;				26-11-2024	Andre,		T6 scavenging fan removal: skip all cylinders while purging.
+;				05-11-2024	Kafka,		Enable std. Gen2 for type 9
+;				04-12-2024	Schmidt,	T6 standby version J78x: added activation bit and calibration also for J715 version (issue 1730)
+;				07-01-2025	Keller,		bugfix GEN2 load estimation during back sync. (#1702)
+;				08-01-2025	Keller,		bugfix IT retard GEN2 load rej. (#1713)
+;				16-01-2025	Gwiggner,	fast sync for type 3
+;				24-02-2025	Gwiggner,	activation of A1044 exhaust gas temperature deviation from average for type2 and type3 F versions
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>EC</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.14.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"<PARA1 Name='iEng_Motortype' MIN='208' MAX='920' />"
+"<PARA2 />"
+"<PARA3 />"
+"<PARA4 />"
+"<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Statement, that this module´s parameter check passing is mandatory (EC is allways mandatory, so other statements than TRUE here in this module are ignored)
+"<MANDATORYMODULE>TRUE</MANDATORYMODULE>"
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_EC</DATAMODULE>"
+"	<DATAMODULE>perm_EC2</DATAMODULE>"
+"	<DATAMODULE>perm_Map</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='OP' VERSION='04.07.02.00' />"
+"	<DEPENDENCY MODULE='SY' VERSION='04.11.00.00' />"
+"	<DEPENDENCY MODULE='KN' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='AB' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='IG' VERSION='04.10.00.00' />"
+"	<DEPENDENCY MODULE='GC' VERSION='04.13.00.00' />"
+"	<DEPENDENCY MODULE='IC' VERSION='04.00.04.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='04.06.00.00' />"
+"	<DEPENDENCY MODULE='GT' VERSION='04.12.00.00' />"
+"	<DEPENDENCY MODULE='CU' VERSION='04.13.00.00' />"
+"	<DEPENDENCY MODULE='VI' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='EX' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='GM' VERSION='04.04.00.00' />"
+"	<DEPENDENCY MODULE='CH' VERSION='04.10.00.00' />"
+"	<DEPENDENCY MODULE='SA' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='HA' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='EG' VERSION='04.05.00.00' />"
+"	<DEPENDENCY MODULE='HC' VERSION='04.04.00.00' />"
+"	<DEPENDENCY MODULE='AG' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='CP' VERSION='04.06.00.00' />"
+"	<DEPENDENCY MODULE='GR' VERSION='04.06.00.00' />"
+"	<DEPENDENCY MODULE='GD' VERSION='04.05.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='EM' VERSION='04.11.00.00' />"
+"	<DEPENDENCY MODULE='TR' VERSION='04.14.00.00' />"
+"   <DEPENDENCY VISVERSION='02.15.02.00' />"			; Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	Engine Controller "
+"	</General>	"
+""
+"	<F1 Name='actuator controller' LastModified='4.00.0.0'>"
+"	o controller for throttle and compressor bypass valve	"
+"	</F1>"
+"	<F2 Name='calculation of gas flow' LastModified='4.00.0.0'>"
+"	o calculation of gas flow for the gas metering unit	"
+"	</F2>"
+"	<F3 Name='ignition timing point' LastModified='4.00.0.0'>"
+"	o calcaulate global and cylinder individual ignition timing point	"
+"	</F3>"
+"	<F4 Name='emission controller' LastModified='4.00.0.0'>"
+"	o calculation of boost pressure setpoint in dependence of actual power	"
+"	</F4>"
+""
+"	<Info>"
+"	 V04.01.00.00	new interfaces to the HMI and to the MM Knocking added"
+"	 V04.01.01.00	controllers changed from SimPID to PID_A, LIVC added"
+"	 V04.04.00.00	Total gas flow added as output for CM&U sensor package"
+"	 V04.04.00.00	Bugfix: Humidity Control, GEN 2 only for series 9 engines, correction of Pr_P2s for series 6 engines"
+"	 V04.04.00.00	Bugfix: correction interpolation of gas density"
+"	 V04.04.00.00	limitation of lambda minimum"
+"	 V04.04.00.00	Bugfix: correction of IP reduction by knocking"
+"	 V04.04.00.00   Bugfix: KLS98 validation - cylinder individual change of timing point"
+"    V04.04.00.00	Bugfix: Leanox-Offset Humidity Control, Misfire Control"
+"	 V04.04.00.00	Bugfix: Bugfix interpolation of power in island operation"
+"    V04.04.00.00	Bugfix: Bugfix Leanox AUT after MCB_On, switching to powermode"
+"    V04.05.00.00	Bugfix: LEANOX correction type 6 and GEN2"
+"		            J920 fast start (eng_ctr, leanox, ignpoint, pi_ctr, lLamStart)"
+"    V04.05.01.00	Reduction with difference pressure minimum (leanox_EC)"
+"					Initialisierung SimPID wenn PID_A arbeitet"
+" 	 V04.05.02.00	correction initialisation of lambda for type 6 Island->Grid mode (leanox_EC/gas_flow)"
+"					CPP Integrator added"
+"	 V04.05.02.01	MM2VIS.bFS_Ena eingebaut damit die Schnellstartvorbereitungen in der neuen HMI angezeigt werden."
+" 	 V04.05.02.02	added G2 package"
+"	 V04.06.00.00	integration of GEN2/FastStart 4 all pre-mixed engines"
+" 	 V04.07.00.00	CPP Integrator (V0.10) based control updated"
+" 	 V04.07.00.00	rPr_49bfTDC now taken from new DMR_mdatas1, sent every cycle"
+" 	 V04.07.00.00	BU 01: Leanox para auto update blocked during Leanox setting confirmation if Leanox plus is disabled"	
+" 	 V04.07.00.00	BU 01: Gen2 island mode gain scheduling Q0"
+"	 V04.07.00.00	BU 01: PVcheckNEW included PUSL perms for not type 9 PBC engines"
+"	 V04.07.00.00	BU 01: Bugfix for changeover from island mode to parallel to the grid"
+"	 V04.07.00.00   BU 01: avoiding division of 0 for leanox_EC, dyn_Grid and SGas task"
+"	 V04.07.00.00 	BU 01: ensured no div by 0 / limited write events for PermMap"
+"	 V04.07.00.00 	BU 01: bugfix for 60Hz engines, leanox drift for gas type 0"
+"	 V04.07.00.00 	BU 02:Bugfixes: Gen2 island for idle mode, correct initialization in island, Gen2 island limit change of power set for Gen2"
+"	 V04.11.00.00	SCR Inlet Temperature Reduction - ITP Control"
+"	 V04.13.00.00	SCR Inlet temp available also for customized SCR devices"
+"	 V04.13.00.00	adding humidity compensation plus"
+"	<Info>"
+"	<Customized LastModified='4.00.0.0'>	"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

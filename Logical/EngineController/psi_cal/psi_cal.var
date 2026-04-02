@@ -1,0 +1,16 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: psi_cal
+ * File: psi_cal.var
+ * Author: WaldharM
+ * Created: December 03, 2012
+ ********************************************************************
+ * Local variables of program psi_cal
+ ********************************************************************)
+VAR
+	LCRCByP_Eta_Eng : LCRCurveByPoints;
+	rEta_Eng : REAL;
+	LCRCByP_Eta_Gen : LCRCurveByPoints;
+	rEta_Gen : REAL;
+END_VAR

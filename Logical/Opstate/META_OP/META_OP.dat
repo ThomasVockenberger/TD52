@@ -1,0 +1,182 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2023
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V3.99	06-03-2013	Weitzer, generated for modular software	 
+; V4.00 31.01.2014	Weitzer, versions changed
+; V4.00 10.02.2014	Graus, 	 change module function description and dependencies
+; V4.01 22.07.2104	Weitzer, increase version number --> new reserve P limitation added
+; V4.02 25.02.2015	Graus, 	 increase version number, add dependency from SAFI module
+; V4.02.1  	11.06.2015	Zengerer	 version + dependencies changed (IF change with array index 0 for compatibility with c-tasks)
+; V4.04.00 	12.07.2016	502423184	versions changed
+; V4.05.01	25.09.2017 	Gomez Ortiz Removal of UW_PDIFF_A (engine type dependency) from the Alarm 1108 and 2097 Alarm
+; V4.05.01	01.03.2018	Perktold	Korrektur bOpM_Pr_CC_Hi fuer globale Pred Anzeige
+; V4.05.02	05.04.2018	Perktold	OPState: added IN_OP.bFS_Act for OilSkid Start Release Type 9
+; V4.05.02	05.09.2018	Zuschnig,	BU 01: Correction ramp for demand off - gridcode
+; V4.05.02	05.09.2018	Gwiggner	BU 01: bugfix function block xTP_OpenGV; 
+; V4.06.00	20.09.2018	Perktold	changes for GEN2/FastStart
+; V4.07.00	26.04.2018	lettenb.	SWAT920/5 added
+; V4.07.01	04.05.2018	502423184,	added fast power reduction to out interface
+; V4.07.02	23.07.2018	Messner		CPP Integrator power reduction added
+;			14.01.2019	Schmid		W9249 (deflagration detection) blocks engine restart
+; V4.07.03	31.01.2019	502423184	new Opstate, Powersel and Speedsel
+; V4.07.04	29.03.2019	Hohensinner	Bugfixing: TPSA Library, added missing interface to VIS for PRed CppInt, added W9284, added ramp for power set point in droop mode
+; V4.07.05	15.05.2019	Hohensinner	added EngBlock_PlantCtr DI --> Blocks module smooth & W1188, converted new Parameter from rTi (REAL) to ti (TIME) (coding guideline)
+; 			04.11.2019	Schmidt		BU 01: Type 6 cooldown run duration modified from 0s to 10s, div by 0
+; V4.09.00	03.02.2020	Zuschnig	TOF in TPSA Library always active, included TOF (60s) for operation message B1283 to B1287
+;			12.02.2020	Zuschnig	Included ParaSetupOk plus 2 sec to release power reductions and B2140, included B2972 and B2973 - Power Mode on/off	 
+; V4.10.00	22.05.2020	lettenb.	bEng_Bloc[29-33] added	
+;			20.10.2020	Zuschnig	removed activation of module blocked by oil skid only if fast start is active -> always active
+; 			21.10.2020	Zuschnig	Add speed adjustment for resynchronization with MMD2
+; 			16.10.2020  Weitzer		release P reduction at Load Sharing Line by customer bus signal IN_OP.bRel_P_Red_I_Bus
+;									release speed control by cusotmer bit IN_OP.bN_U_Set_Ext_On
+;									release power mode by customer bit IN_OP.bReq_PowMod_Ext
+;       	10.12.2020	Zuschnig	Included power reduction for Tecjet differential pressure
+;			18.01.2021	Perktold	unbundling emergency stop and fire alarm
+;	     	20.01.2021	Zuschnig	increased max. sy delta speed to -0.06 (from -0.05)
+;			20.01.2021  Zuschnig	Included maximum for power ramp increase and decrease
+;			24.03.2021  Gwiggner	delay of LSL by 300ms
+; V4.11.00	21.05.2021  Zuschnig	Bugfix - B2154 triggered with high frequency bit
+;           16.08.2021	Keller		Droop Mode Power Controller, Overload Protection in Isolated Operation
+;			16.11.2021	Andre		Added SAFI config done bit to the startup release
+;			22.11.2021	Perktold,	added myPlant remote request/P-setpoint
+;			22.12.2021	Andre		Added Power reduction by CAN communication failure for half or more SAFI or too many SAFI reboots
+;			15.03.2022	Zuschnig	Deactivate power ramp when GCB is opened
+;			01.04.2022	Zuschnig 	TOF with 60s for messages 2130, 2152, 2153 and 2154 to prevent too many messages
+; V4.12.00	01.08.2022	Zuschnig	Speed offset selection for AB Energy
+;			19.08.2022	Keller		Limit LSL speed reference offset to +-3.3%Nnom
+;			08.09.2022	Andre		Added SEMIC config done bit to the startup release
+;			26.09.2022	Perktold	Added IN signal to xTOFIgn_Dem in case of a prio 1 trip
+;			22.01.2023	Zuschnig	Increased max. sy delta speed for IN_OP.bSynchDem
+;			22.01.2023  Zuschnig	Include power reduction H2 content
+;			25.01.2023	Tinello		Deleted power reduction by T1HP / Added power reduction by T2HP and T2LP / Added engine blocked by charge temperature after TC
+; V4.13.00  14.04.2023  Bachler     Add overload and reverse power protection in isolated operation
+;       	05.07.2023	Zuschnig	Removed Step Time Display Information
+;			26.09.2023	Farre,		Addition engine blocked by LCB opened (info #37)
+;           16.10.2023  Bachler     Changed initialization of LSL when switching to LSL speed mode for bumpless transition
+;           17.10.2023  Bachler 	Add integrator to compensate for signal errors of the load sharing line
+;			03.11.2023	Zuschnig	Add operating counter low load
+;			20.11.2023	Zengerer	Add counter correction IN_OP.iCnt_OpHours_Set, iCnt_UnitOpHours_Set, iCnt_FastStarts_Set, iCnt_FastStarts_Set
+;			20.11.2023	Farre,		added "request power mode" interface; extended operating range (IN_OP.rP_Set_Min_Norm) (2023-168)
+;       	03.07.2023	Goenczi		Adaptions for Aggreko serialization
+;			17.01.2024	Schmidt		Bugfix deflagration protection: added IN_OP.bIgnDeflPrct_Off to ignition demand logic (issue 1406)
+; 			26.01.2024 	Zuschnig 	Bugfix FPR during demand off
+; V4.14.00	28.03.2024	Soto/Farre,	Added CAN WG configuration for start up release (2023-174)
+;			25.10.2024	Farre		include in bEng_Bloc[1] - rel. sync - when GCB position signal failure and enigne stopped (2024-241)
+;			25.11.2024	Bacci		T6 Start procedure with purge start (2024-219): added waiting time for starter release in state 32 and 7 
+;			28.11.2024	Kafka		remove power reduction from LHE
+; 			29.11.2024	Farre		calculation of power reduction due to CosPhi <1, from OP to GC (issue #1700)
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>OP</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.14.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"<PARA1 Name='iEng_Motortype' MIN='208' MAX='920' />"
+"<PARA2 Name='rN_EngNom' MIN='100.0' MAX='2000.0' />"
+"<PARA3 Name='rP_Nom_Gastype[1]' MIN='10.0' MAX='15000.0' />"
+"<PARA4 />"
+"<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Statement, that this module´s parameter check passing is mandatory (OP is allways mandatory, so other statements than TRUE here in this module are ignored)
+"<MANDATORYMODULE>TRUE</MANDATORYMODULE>"
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_OP</DATAMODULE>"
+"	<DATAMODULE>perm_OP</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='HA' VERSION='04.10.00.00' />"
+"	<DEPENDENCY MODULE='GT' VERSION='04.12.00.00' />"
+"	<DEPENDENCY MODULE='AG' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='EC' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='IG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='SY' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='EX' VERSION='04.10.00.00' />"
+"	<DEPENDENCY MODULE='EG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='HC' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='KN' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='CH' VERSION='04.05.00.00' />"
+"	<DEPENDENCY MODULE='VE' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='GC' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='CU' VERSION='04.13.00.00' />"
+"	<DEPENDENCY MODULE='GR' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='CP' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='04.13.00.00' />"
+"	<DEPENDENCY MODULE='AB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='GM' VERSION='04.01.00.00' />"
+"	<DEPENDENCY MODULE='SA' VERSION='04.11.00.00' />"
+"	<DEPENDENCY MODULE='IC' VERSION='04.12.00.00' />"
+"   <DEPENDENCY VISVERSION='02.15.00.00' />"			; Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	Handling of engines operation mode "
+"	</General>	"
+""
+"	<F1 Name='Engine state machine' LastModified='4.0.2.0'>"
+"	State machine to determine engines operation mode.	"
+"	</F1>"
+"	<F2 Name='Power set value' LastModified='4.0.2.0'>"
+"	Determination the power set value concerning the load ramp gradients and the load reductions.	"
+"	</F2>"
+"	<F3 Name='Speed set value' LastModified='4.0.0.0'>"
+"	Determination of the engine speed set value for idle- and isolated operation mode.	"
+"	</F3>"
+"	<F4 Name=' frequency control' LastModified='4.2.0.1'>"
+"   changed priority order of power setpoint change 	"
+"	</F4>"
+""
+"	<Info>"
+" 	UPDATE V4.01.01.00  Perm datamodule moved from SYS- to USERROM	"
+"   UPDATE V4.02.01.00	version + dependencies changed (IF change with array index 0 for compatibility with c-tasks)	"
+" 	UPDATE V4.04.00.00  delayed version of State32 "
+"	UPDATE V4.05.02.00  BU 01: Correction ramp for demand off - gridcode "
+"	UPDATE V4.05.02.00	BU 01: bugfix function block xTP_OpenGV " 
+"	UPDATE V4.07.05.00	BU 01: Type 6 cooldown run duration modified from 0s to 10s, div by 0"
+"	UPDATE V4.11.00.00	Bugfix - B2154 triggered with high frequency bit"
+"	UPDATE V4.13.00.00	Add counter correction IN_OP.iCnt_OpHours_Set, iCnt_UnitOpHours_Set, iCnt_FastStarts_Set, iCnt_FastStarts_Set "	
+"	</Info>"
+""
+"	<Customized LastModified='4.0.0.0'>	"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

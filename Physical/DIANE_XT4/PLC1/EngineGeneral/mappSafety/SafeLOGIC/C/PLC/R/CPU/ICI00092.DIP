@@ -1,0 +1,13 @@
+(*
+T: FUNCTION_BLOCK SET_DINT_S
+FW: NO
+CI#: 92
+QSL: 3
+QVE: 3
+QVPC: 3
+QPar: 3
+QFBI: 0
+*)
+sbStoreValue	@IV 1	@TYP:43	VAR_INPUT
+siValue	@IV 2	@TYP:59	VAR_INPUT
+siValue_Stored	@IV 3	@TYP:59	VAR_OUTPUT

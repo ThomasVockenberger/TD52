@@ -1,0 +1,26 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO
+ ********************************************************************
+ * Program: caniniSa
+ * File: caniniSa.var
+ * Author: weitzert
+ * Created: March 21, 2012
+ ********************************************************************
+ * Local variables of program caniniSa
+ ********************************************************************)
+VAR
+	MissfCyl_Old : UDINT;
+	ucCylIndex : USINT;
+	usDeviceSeq : UINT;
+	CMSexit_SAFI_DMR : CMSexit;
+	CMSexit_SAFI_Gen : CMSexit;
+	CMSexit_SAFI_Ign : CMSexit;
+	CMSexit_SAFI_KLS : CMSexit;
+	CMSexit_SAFI_PI : CMSexit;
+	bE_SAFI_pdata0 : BOOL;
+	CMSexit_SAFI_DMR_2 : CMSexit;
+	CMSexit_SAFI_Gen_2 : CMSexit;
+	CMSexit_SAFI_Ign_2 : CMSexit;
+	CMSexit_SAFI_KLS_2 : CMSexit;
+	CMSexit_SAFI_PI_2 : CMSexit;
+END_VAR

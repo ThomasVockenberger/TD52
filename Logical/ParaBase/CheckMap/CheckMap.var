@@ -1,0 +1,33 @@
+(********************************************************************
+ * COPYRIGHT --  
+ ********************************************************************
+ * Program: CheckMap
+ * File: CheckMap.var
+ * Author: havlovect
+ * Created: September 27, 2011
+ ********************************************************************
+ * Local variables of program CheckMap
+ ********************************************************************)
+VAR
+	state : UDINT; (*State-Machine Steuerung*)
+END_VAR
+VAR CONSTANT
+	MAX_TABLE : UDINT := 100;
+END_VAR
+VAR
+	retryCount : UDINT;
+	Info : AsIOPVInfo; (*FUB Instanz*)
+	List : AsIOFListDP; (*FUB Instanz*)
+	errState : UDINT; (*Schritt der Statemachine, in der ein Fehler auftrat*)
+	cycleCount : UDINT; (*Anzahl der Zyklen bei fuer einen vollstaendigen Durchlauf*)
+	str : ARRAY[0..1] OF STRING[256]; (*Hilfsvariable*)
+	lflags : ARRAY[0..1] OF USINT; (*Hilfsvariable*)
+	active : BOOL; (*State-Machine ist in Abarbeitung*)
+	Table : ARRAY[0..MAX_TABLE] OF TableEntry; (*Ergebnistabelle*)
+	table_index : UDINT; (*Anzahl Tabelleneintraege*)
+	AsArLogWrite_01 : AsArLogWrite := (0);
+	AsArLogGetInfo_01 : AsArLogGetInfo := (0);
+	logErrorStringPV : STRING[256];
+	hilfstr2 : STRING[200];
+	hilfstr3 : STRING[200];
+END_VAR

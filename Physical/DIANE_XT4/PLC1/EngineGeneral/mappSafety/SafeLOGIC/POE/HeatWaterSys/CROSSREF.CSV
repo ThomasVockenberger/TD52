@@ -1,0 +1,8 @@
+sbF20_OK_HeatWater,POE\HeatWaterSys\HeatWaterSys.GB,7,OUT,9,0,Write,,SAFEBOOL,,,VAR_OUTPUT,LOCAL,,Safety function 20 OK - Heating water system protection
+sbGCB_On_60s,POE\HeatWaterSys\HeatWaterSys.GB,3,IN,77,22,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Generator circuit breaker ON for 60s
+sbGCB_On_60s,POE\HeatWaterSys\HeatWaterSys.GB,7,IN,228,22,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Generator circuit breaker ON for 60s
+sbN_Standstill,POE\HeatWaterSys\HeatWaterSys.GB,3,IN,85,22,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Actual engine speed <  80rpm
+sbN_Standstill,POE\HeatWaterSys\HeatWaterSys.GB,7,IN,236,22,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Actual engine speed <  80rpm
+xDI_MON_HWcirc_Cust,POE\HeatWaterSys\HeatWaterSys.GB,0,,177,40,,,,,,VAR,FB,,FuB
+xHeatWater_HT,POE\HeatWaterSys\HeatWaterSys.GB,0,,402,40,,,,,,VAR,FB,,FuB
+xHeatWater_LT,POE\HeatWaterSys\HeatWaterSys.GB,2,,308,40,,,,,,VAR,FB,,FuB

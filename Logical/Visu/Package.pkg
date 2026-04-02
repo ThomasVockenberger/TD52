@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.14.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="DataObject" Language="Simple" Description="MODUL META data file">META_VI</Object>
+    <Object Type="File" Description="Module global data types" Private="true">Module_Visu.typ</Object>
+    <Object Type="File" Description="Module global variables" Private="true">Module_Visu.var</Object>
+    <Object Type="Program" Language="IEC" Description="+ General task">GeneralVI</Object>
+    <Object Type="Program" Language="IEC" Description="+ Interface HMI - CPU">IF_HMI_CP</Object>
+    <Object Type="Program" Language="IEC" Description="+ Messages">MsgVI</Object>
+    <Object Type="Program" Language="IEC" Description="+ Parameter handling">ParVI</Object>
+    <Object Type="Program" Language="IEC" Description="+ Permanent stored data">PermVI</Object>
+  </Objects>
+</Package>

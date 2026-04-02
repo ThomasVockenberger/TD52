@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.1.12.57 SP?>
+<Package Version="4.00.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI coil type data">sa_coil</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI spark current characteristic data">sa_curr</Object>
+  </Objects>
+</Package>

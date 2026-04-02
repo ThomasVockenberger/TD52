@@ -1,0 +1,70 @@
+VAR
+	bScavVaCoOpen : BOOL := 0; (*scavenging valve command open*)
+	bScavVaCoClose : BOOL := 0; (*scavenging valve command close*)
+	bScavVaIsOpened : BOOL := 0; (*scavenging valve is opened*)
+	bScavVaIsClosed : BOOL := 0; (*scavenging valve is closed*)
+	NoPrelube : BOOL := FALSE;
+	SCAV_AFT : BOOL := FALSE;
+	FG_SCAV_RUN_2 : BOOL;
+	FG_SCAV_RUN : BOOL := FALSE;
+	M_SCAV_RUN : BOOL := FALSE;
+	SCAV_BEF : BOOL := FALSE;
+	T1_StopM : BOOL := FALSE;
+	SCAV_RUN_STOE : BOOL := FALSE;
+	SCAV_RUN : BOOL := FALSE;
+	T_N2_GASV : BOOL;
+	BETR_SPUELV : BOOL := FALSE;
+	AN_STRDRE : BOOL;
+	bZM_N2_GASV : BOOL;
+	FG_SCAV_AFT : BOOL := FALSE;
+	T2_StopM : BOOL := FALSE;
+	xGR_MAXR_EngStaSpeed : GR_MAXR := (0);
+	xGR_MAXR_D1400 : GR_MAXR;
+	xGR_MAXR_MonEngStaSpeed : GR_MAXR := (0);
+	xGR_MAXR_VSD1 : GR_MAXR;
+	xTOF_MDREHZ : TOF := (0);
+	xTON_P_SPUEL : TON;
+	xTON_SCAV_OFF : TON := (0);
+	xTON_T1_STSPKL : TON;
+	xTON_T2_STSPKL : TON;
+	xTON_SCR_OFF1 : TON;
+	xTON_SPKAUF : TON := (0);
+	xTON_VSD1 : TON;
+	xTON_SPKZU : TON := (0);
+	xTON_AuxDemDelayed : TON;
+	xTOF_MAN_SPUEL : TOF;
+	xTON_DREHZ_N2 : TON;
+	bN2_GASV : BOOL;
+	xTON_N2_GASV : TON;
+	xTOF_T_N2_GASV : TOF;
+	xTON_START_SC : TON;
+	bN2_GV_AnyClosed : BOOL;
+	bN2_GV_AnyOpened : BOOL;
+	bT1_STN2V : BOOL;
+	xTON_T2_STN2V : TON;
+	xTON_T1_STN2V : TON;
+	xTON_T1_SCAV_RUN : TON;
+	xTON_T2_SCAV_RUN : TON;
+	xTON_GDMI_N2 : TON;
+	xTON_T1_StopM : TON;
+	xTON_T2_StopM : TON;
+	M_DREHZ_N2 : BOOL;
+	xF_TRIG_M_GASV : F_TRIG;
+	xR_TRIG_M_AGFD : R_TRIG;
+	StepCnt : INT;
+	bNoScavAftEngStop : BOOL;
+	xTON_T_SPUEL : TON;
+	xTON_AB_SPUELV : TON;
+	SPUEL_ST : BOOL := 0; (*Scavenging start*)
+	bScavFanOp : BOOL; (*scavenging fan operating*)
+	xTON_EGScav: TON;						(* Timer Exhaust Gas Scavenging *)
+	xTON_EngRun : TON;						(* Timer Engine Running *)
+	bTON_EngRun : BOOL;						(* Trigger Engine Running *) 
+	xR_TRIG_StorePreEGScavValue : R_TRIG;		
+	xR_TRIG_StoreAftEGScavValue : R_TRIG;		
+	rT_bScavValve_PreEGScavValue : REAL;	(* Stored air temperature - Pre Exhaust Gas Scavenging  *)
+	rT_bScavValve_AftEGScavValue : REAL;	(* Stored air temperature - After Exhaust Gas Scavenging   *)
+	bFS_ScavTime : BOOL;
+	xTON_AutStartPrep : TON;
+	xTON_CloScavVa : TON;
+END_VAR

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ISO15745ProfileContainer xmlns="http://www.ethernet-powerlink.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ethernet-powerlink.org ../Powerlink_Main.xsd">
+	<ISO15745Profile>
+		<ProfileHeader>
+			<ProfileIdentification>EPL_Device_Profile_UR20_16DO_P</ProfileIdentification>
+			<ProfileRevision>1</ProfileRevision>
+			<ProfileName>Ethernet POWERLINK UR20-16DO-P device profile</ProfileName>
+			<ProfileSource/>
+			<ProfileClassID>Device</ProfileClassID>
+			<ISO15745Reference>
+				<ISO15745Part>4</ISO15745Part>
+				<ISO15745Edition>1</ISO15745Edition>
+				<ProfileTechnology>Powerlink</ProfileTechnology>
+			</ISO15745Reference>
+		</ProfileHeader>
+		<ProfileBody xsi:type="ProfileBody_Device_Powerlink_Modular_Child" 	fileName="00000230_UR20_16DO_P.XDD" 	fileCreator="Weidmüller" 	fileCreationDate="2016-08-01" 	fileCreationTime="15:00:00+01:00" 	fileModificationDate="2016-08-01" 	fileModificationTime="16:23:37.341+02:00" 	fileModifiedBy="Weidmüller" 	fileVersion="V01.00" 	supportedLanguages="en de" specificationVersion="1.2.0">
+			<DeviceIdentity>
+				<vendorName>Weidmüller</vendorName>
+				<vendorID>0x00000230</vendorID>
+				<vendorText>
+					<label lang="de">Bei Problemen kontaktieren sie unseren Support: ++49(..</label>
+					<label lang="en">Experiencing problems - contact our support : ++1(..</label>
+				</vendorText>
+				<deviceFamily>
+					<label lang="en">Modular I/O system</label>
+					<label lang="de">Modulares I/O System</label>
+				</deviceFamily>
+				<productName>UR20-16DO-P / 1315250000</productName>
+				<productID>1315250000</productID>
+				<productText>
+					<label lang="en">IO-MODUL 16 DIGITAL OUT 0.5A SOURCE</label>
+					<label lang="de">IO-MODUL 16 DIGITAL OUT 0.5A SOURCE</label>
+				</productText>
+				<orderNumber>1315250000</orderNumber>
+				<buildDate>2016-08-01</buildDate>
+			</DeviceIdentity>
+			<DeviceManager>
+				<moduleManagement>
+					<moduleInterface childID="UR20_16DO_P" type="UR20" moduleAddressing="position">
+						<label lang="en-us">UR20 interface</label>
+						<fileList>
+							<file URI="00000230_*.xdd"/>
+						</fileList>
+						<moduleTypeList>
+							<moduleType uniqueID="UR20_16DO_P_out" type="UR20" />
+						</moduleTypeList>
+					</moduleInterface>
+				</moduleManagement>
+			</DeviceManager>
+			<DeviceFunction>
+				<capabilities>
+					<characteristicsList>
+						<characteristic>
+							<characteristicName>
+								<label lang="en">Input/Output</label>
+								<label lang="de">Ein-/Ausgänge</label>
+							</characteristicName>
+							<characteristicContent>
+								<label lang="en">UR20 IO System</label>
+								<label lang="de">UR20 IO System</label>
+							</characteristicContent>
+						</characteristic>
+					</characteristicsList>
+				</capabilities>
+				<picturesList>
+					<picture URI="UR20_16DO_P.png" type="frontPicture">
+						<label lang="en">FrontFoto</label>
+						<label lang="de">Frontfoto</label>
+					</picture>
+					<picture URI="UR20.ico" type="icon">
+						<label lang="en">Icon</label>
+						<label lang="de">Pictogramm</label>
+					</picture>
+				</picturesList>
+				<connectorList>
+					<connector id="UR20_IF1" connectorType="UR20" interfaceIDRef="UR20_16DO_P" positioning="localLeft" >
+						<label lang="en-us">Left UR20 interface</label>
+					</connector>
+					<connector id="UR20_IF2" connectorType="UR20" interfaceIDRef="UR20_16DO_P_out" positioning="localRight" >
+						<label lang="en-us">Right UR20 interface</label>
+					</connector>
+				</connectorList>
+				<classificationList>
+					<classification>IO</classification>
+					<classification>Digital</classification>
+					<classification>Output</classification>
+				</classificationList>
+			</DeviceFunction>
+			<ApplicationProcess>
+				<templateList>
+				</templateList>
+				<parameterList>
+					<parameter uniqueID="UID_DigitalOutput01" access="readWrite">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<BOOL/>
+						<property name="pin 11" value="DO-01"/>
+					</parameter>
+					<parameter uniqueID="UID_DigitalOutput02" access="readWrite">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<BOOL/>
+						<property name="pin 21" value="DO-02"/>
+					</parameter>
+					<parameter uniqueID="UID_DigitalOutput03" access="readWrite">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<BOOL/>
+						<property name="pin 12" value="DO-03"/>
+					</parameter>
+					<parameter uniqueID="UID_DigitalOutput04" access="readWrite">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<BOOL/>
+						<property name="pin 22" value="DO-04"/>
+					</parameter>
+					<parameter uniqueID="UID_DigitalOutput05" access="readWrite">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<BOOL/>
+						<property name="pin 13" value="DO-05"/>
+					</parameter>
+					<parameter uniqueID="UID_DigitalOutput06" access="readWrite">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<BOOL/>
+						<property name="pin 23" value="DO-06"/>
+					</parameter>
+					<parameter uniqueID="UID_DigitalOutput07" access="readWrite">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<BOOL/>
+						<property name="pin 14" value="DO-07"/>
+					</parameter>
+					<parameter uniqueID="UID_DigitalOutput08" access="readWrite">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<BOOL/>
+						<property name="pin 24" value="DO-08"/>
+					</parameter>
+					<parameter uniqueID="UID_DigitalOutput09" access="readWrite">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<BOOL/>
+						<property name="pin 15" value="DO-09"/>
+					</parameter>
+					<parameter uniqueID="UID_DigitalOutput10" access="readWrite">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<BOOL/>
+						<property name="pin 25" value="DO-10"/>
+					</parameter>
+					<parameter uniqueID="UID_DigitalOutput11" access="readWrite">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<BOOL/>
+						<property name="pin 16" value="DO-11"/>
+					</parameter>
+					<parameter uniqueID="UID_DigitalOutput12" access="readWrite">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<BOOL/>
+						<property name="pin 26" value="DO-12"/>
+					</parameter>
+					<parameter uniqueID="UID_DigitalOutput13" access="readWrite">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<BOOL/>
+						<property name="pin 17" value="DO-13"/>
+					</parameter>
+					<parameter uniqueID="UID_DigitalOutput14" access="readWrite">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<BOOL/>
+						<property name="pin 27" value="DO-14"/>
+					</parameter>
+					<parameter uniqueID="UID_DigitalOutput15" access="readWrite">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<BOOL/>
+						<property name="pin 18" value="DO-15"/>
+					</parameter>
+					<parameter uniqueID="UID_DigitalOutput16" access="readWrite">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<BOOL/>
+						<property name="pin 28" value="DO-16"/>
+					</parameter>
+					<parameter uniqueID="UID_DigitalOutput" access="readWrite">
+						<description lang="en">Packed digital outputs; 24 VDC</description>
+						<description lang="de">Gepackte digitale Ausgänge; 24 VDC</description>
+						<UINT/>
+						<property name="pin 11" value="DO-01"/>
+						<property name="pin 21" value="DO-02"/>
+						<property name="pin 12" value="DO-03"/>
+						<property name="pin 22" value="DO-04"/>
+						<property name="pin 13" value="DO-05"/>
+						<property name="pin 23" value="DO-06"/>
+						<property name="pin 14" value="DO-07"/>
+						<property name="pin 24" value="DO-08"/>
+						<property name="pin 15" value="DO-09"/>
+						<property name="pin 25" value="DO-10"/>
+						<property name="pin 16" value="DO-11"/>
+						<property name="pin 25" value="DO-12"/>
+						<property name="pin 17" value="DO-13"/>
+						<property name="pin 27" value="DO-14"/>
+						<property name="pin 18" value="DO-15"/>
+						<property name="pin 28" value="DO-16"/>
+					</parameter>
+					<parameter uniqueID="UID_DigitalOutputsPacked" access="readWrite">
+						<label lang="en">Packed outputs</label>
+						<label lang="de">Gepackte Ausgänge</label>
+						<description lang="en">Packed I/O data instead of single digital inputs</description>
+						<description lang="de">Gepackte I/O Daten statt einzelne digitale Eingänge</description>
+						<STRING/>
+						<defaultValue value="off"/>
+						<allowedValues>
+							<value value="off">
+								<label lang="en">off</label>
+								<label lang="de">Aus</label>
+							</value>
+							<value value="on">
+								<label lang="en">on</label>
+								<label lang="de">Ein</label>
+							</value>
+						</allowedValues>
+					</parameter>
+				</parameterList>
+				<parameterGroupList>
+					<parameterGroup uniqueID="UID_PG_General" kindOfAccess="Properties" configParameter="true">
+						<label lang="en">General</label>
+						<label lang="de">Allgemein</label>
+						<parameterRef uniqueIDRef="UID_DigitalOutputsPacked" visible="true"/>
+					</parameterGroup>
+					<parameterGroup uniqueID="UID_OutputImage_Map" bitOffset="0">
+						<label lang="en">OutputImages</label>
+						<label lang="de">OutputImages</label>
+						<parameterGroup uniqueID="UID_OutputImage_PackedOff" conditionalUniqueIDRef="UID_DigitalOutputsPacked" conditionalValue="off" bitOffset="0">
+							<label lang="en">OutputImage digital outputs loose</label>
+							<label lang="de">OutputImage Digitalausgang vereinzelt</label>
+							<parameterRef uniqueIDRef="UID_DigitalOutput01" visible="true" bitOffset="0"/>
+							<parameterRef uniqueIDRef="UID_DigitalOutput02" visible="true" bitOffset="1"/>
+							<parameterRef uniqueIDRef="UID_DigitalOutput03" visible="true" bitOffset="2"/>
+							<parameterRef uniqueIDRef="UID_DigitalOutput04" visible="true" bitOffset="3"/>
+							<parameterRef uniqueIDRef="UID_DigitalOutput05" visible="true" bitOffset="4"/>
+							<parameterRef uniqueIDRef="UID_DigitalOutput06" visible="true" bitOffset="5"/>
+							<parameterRef uniqueIDRef="UID_DigitalOutput07" visible="true" bitOffset="6"/>
+							<parameterRef uniqueIDRef="UID_DigitalOutput08" visible="true" bitOffset="7"/>
+							<parameterRef uniqueIDRef="UID_DigitalOutput09" visible="true" bitOffset="8"/>
+							<parameterRef uniqueIDRef="UID_DigitalOutput10" visible="true" bitOffset="9"/>
+							<parameterRef uniqueIDRef="UID_DigitalOutput11" visible="true" bitOffset="10"/>
+							<parameterRef uniqueIDRef="UID_DigitalOutput12" visible="true" bitOffset="11"/>
+							<parameterRef uniqueIDRef="UID_DigitalOutput13" visible="true" bitOffset="12"/>
+							<parameterRef uniqueIDRef="UID_DigitalOutput14" visible="true" bitOffset="13"/>
+							<parameterRef uniqueIDRef="UID_DigitalOutput15" visible="true" bitOffset="14"/>
+							<parameterRef uniqueIDRef="UID_DigitalOutput16" visible="true" bitOffset="15"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_OutputImage_PackedOn" conditionalUniqueIDRef="UID_DigitalOutputsPacked" conditionalValue="on" bitOffset="0">
+							<label lang="en">OutputImage digital outputs packed </label>
+							<label lang="de">OutputImage Digitalausgang gepackt</label>
+							<parameterRef uniqueIDRef="UID_DigitalOutput" visible="true" bitOffset="0"/>
+						</parameterGroup>
+					</parameterGroup>
+				</parameterGroupList>
+			</ApplicationProcess>
+		</ProfileBody>
+	</ISO15745Profile>
+	<ISO15745Profile>
+		<ProfileHeader>
+			<ProfileIdentification>EPL_Device_Profile_UR20_16DO_P</ProfileIdentification>
+			<ProfileRevision>1</ProfileRevision>
+			<ProfileName>Ethernet POWERLINK UR20-16DO-P device profile</ProfileName>
+			<ProfileSource/>
+			<ProfileClassID>CommunicationNetwork</ProfileClassID>
+			<ISO15745Reference>
+				<ISO15745Part>4</ISO15745Part>
+				<ISO15745Edition>1</ISO15745Edition>
+				<ProfileTechnology>Powerlink</ProfileTechnology>
+			</ISO15745Reference>
+		</ProfileHeader>
+		<ProfileBody xsi:type="ProfileBody_CommunicationNetwork_Powerlink_Modular_Child" 	fileName="00000230_UR20_16DO_P.XDD" 	fileCreator="Weidmüller" 	fileCreationDate="2016-08-01" 	fileCreationTime="15:00:00+01:00" 	fileModificationDate="2016-08-01" 	fileModificationTime="16:23:37.341+02:00" 	fileModifiedBy="Weidmüller" 	fileVersion="V01.00" 	supportedLanguages="en de" specificationVersion="1.2.0">
+			<ApplicationLayers>
+				<identity>
+					<vendorID>0x00000230</vendorID>
+					<deviceFamily>
+						<label lang="en">UR20</label>
+						<label lang="de">UR20</label>
+					</deviceFamily>
+					<productID>1315250000</productID>
+				</identity>
+				<ObjectList>
+					<Object index="4700" name="ModuleOutputImages" objectType="9" rangeSelector="ModuleOutputImages">
+						<SubObject subIndex="00" name="OutputImage" objectType="7" dataType="000F" accessType="wo" PDOmapping="RPDO" uniqueIDRef="UID_OutputImage_Map"/>
+					</Object>
+				</ObjectList>
+			</ApplicationLayers>
+			<TransportLayers/>
+		</ProfileBody>
+	</ISO15745Profile>
+</ISO15745ProfileContainer>

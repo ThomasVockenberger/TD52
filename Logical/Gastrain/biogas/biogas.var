@@ -1,0 +1,22 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: biogas
+ * File: biogas.var
+ * Author: 105051626
+ * Created: April 19, 2012
+ ********************************************************************
+ * Local variables of program biogas
+ ********************************************************************)
+VAR
+	ANF_FA : BOOL := 0; (* Anforderung Fackel *)
+	bDem_GC_M : BOOL; (*Intermediate variable for Demand gas compressor*) (*OldName: ANF_V_M*)
+	HM_GDMI11 : BOOL; (*Gas pressure minimum before compresssor*)
+	ANF_GVD_1 : BOOL; (*Intermediate variable for interlocks of Demand gas compressor*)
+	xTON_FA_ZM_GDMI11 : TON;
+	xTON_FA_GASV1 : TON;
+	xTON_FG_FA : TON;
+	xTON_FA_T_GDRUW : TON;
+	TOF_MEGA_GC : TOF; (*Gas compressor timer for Mega Gasvalve option*)
+	xTOFDelayGDKG_GCStarting : TOF; (*prevent saftey device reaction to low gas pressure*)
+END_VAR

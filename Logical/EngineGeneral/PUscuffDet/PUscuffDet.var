@@ -1,0 +1,6 @@
+VAR
+	rPr_CC_Ai_Offs : REAL := 0.0; (*manual crankcase pressure offset*) (* *) (*V04.11.00.00*)
+	xTON_SecondTick : TON := (0); (*FuB*) (* *) (*V04.11.00.00*)
+	xAmmSeq_PUscuff : AmmSequence := (0); (*FuB*) (* *) (*V04.11.00.00*)
+	iNum_Msg2981 : USINT := 0; (*PU scuffing - cylinder number*) (* *) (*V04.11.00.00*)
+END_VAR

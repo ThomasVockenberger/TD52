@@ -1,0 +1,17 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Package: ATD
+ * File: perm_ATD.var
+ * Author: 105026853
+ * Created: November 18, 2015
+ ********************************************************************
+ * Variables of package ATD
+ ********************************************************************)
+VAR
+	FDT_value : perm_FDT;
+	FAM_value : perm_FAM;
+	FAM_struct : strct_FAM;
+    Info_FDT : UDINT; (*Model information*)
+    Version_FDT : UDINT; (*Version of the FDT algorithm*)
+END_VAR

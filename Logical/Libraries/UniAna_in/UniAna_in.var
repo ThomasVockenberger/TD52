@@ -1,0 +1,25 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Library: AnalogIn
+ * File: AnalogIn.var
+ * Author: ZengereS
+ * Created: December 04, 2007
+ ********************************************************************
+ * Constants of library AnalogIn
+ ********************************************************************)
+VAR CONSTANT
+	tiDefaultAlarmDelayTime : TIME := T#5s; (*Vorgabewert Verzögerung bis Alarm (vor Programmierung)*)
+	AI_PT100_NO_SCALING : USINT := 1; (*temperature value, scaling x10*)
+	AI_NO_SCALING : USINT := 0; (*+-value, scaling setpoints are not used*)
+	AI_V_INPUT : USINT := 2; (*Analog Input, scaled from -10V to +10V =-32767 to 32767*)
+	AI_0_20MA_INPUT : USINT := 3; (*Analog Input, scaled from 0-20mA  =0 to 32767*)
+	AI_4_20MA_INPUT : USINT := 4; (*Analog Input, scaled from 4-20mA =6540 to 32767*)
+	LIM_PT100_MIN : INT := -1990; (*signal error limit value for -199°C*)
+	LIM_PT100_MAX : INT := 32000; (*signal error limit value for 3200°C*)
+	LIM_MA_MIN : INT := -32768; (*signal error limit value for -20mA*)
+	LIM_0_20MA_MIN : INT := -1638; (*signal error limit value for -1mA*)
+	LIM_4_20MA_MIN : INT := 4915; (*signal error limit value for 3mA*)
+	LIM_0_5V_MIN : INT := -3276; (*signal error limit value for -1V*)
+	LIM_0_5V_MAX : INT := 19660; (*signal error limit value for +6V*)
+END_VAR

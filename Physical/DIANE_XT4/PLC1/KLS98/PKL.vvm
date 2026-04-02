@@ -1,0 +1,19 @@
+(********************************************************************
+* COPYRIGHT -- INNIO Company
+********************************************************************
+* File: PKL.vvm
+* Author: autmatically generated 
+* Created: 04.11.2013
+********************************************************************
+* PV mapping file
+********************************************************************)
+VAR_CONFIG
+	Cyclic#4.AmmBase::OUT_AB.tAB2KL AT %Q.Cyclic#5.KLS98::IN_KL.tAB2KL;
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#5.KLS98::IN_KL.tPB2MM;
+	Cyclic#5.Opstate::OUT_OP.iIdx_OMSS AT %Q.Cyclic#5.KLS98::IN_KL.iIdx_OMSS;
+	Cyclic#4.Ignition::OUT_IG.rN_EngAct AT %Q.Cyclic#5.KLS98::IN_KL.rN_EngAct;
+	Cyclic#6.HalIO::OUT_HA.iCANIdent AT %Q.Cyclic#7.KLS98::IN_KL.iCANIdent;
+	Cyclic#4.HalIO::OUT_HA.iECanDevGo AT %Q.Cyclic#5.KLS98::IN_KL.iECanDevGo;
+	Cyclic#5.HalIO::OUT_HA.bSimWinMOD_Active AT %Q.Cyclic#5.KLS98::IN_KL.bSimWinMOD_Active;
+	Cyclic#4.Opstate::OUT_OP.rP_Act_Norm_Filt AT %Q.Cyclic#5.KLS98::IN_KL.rP_Act_Norm_Filt;
+END_VAR

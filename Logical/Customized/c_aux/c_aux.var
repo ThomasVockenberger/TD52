@@ -1,0 +1,4 @@
+VAR
+	iOptLocation_CtrlBatMon : ARRAY[1..iNum_CtrlBatMon] OF USINT;
+	iIdx_CtrlBatMon : USINT;
+END_VAR

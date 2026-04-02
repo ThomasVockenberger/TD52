@@ -1,0 +1,6 @@
+VAR
+	xTOF_gcb_rdy : TOF;
+	xTOF_mcb_rdy : TOF;
+	xTON_c_eng_op : TON;
+	xTON_ccb_psf : TON;
+END_VAR

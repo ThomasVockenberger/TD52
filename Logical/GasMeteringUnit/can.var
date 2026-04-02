@@ -1,0 +1,13 @@
+VAR
+
+
+	CMSTecJet_Init : CMSinit; (* FUB CAN CMS communication init *)
+
+
+
+
+	CMSmain_TecJet : CMSmain; (* FUB for comm. to Tecjet *)
+
+
+	
+END_VAR

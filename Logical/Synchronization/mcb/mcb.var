@@ -1,0 +1,7 @@
+VAR
+	tof_mcb_dmnd_sy : TOF;
+	tof_mcb_man_off : TOF;
+	tof_mcb_rel_trip : TOF;
+	ton_mcb_dmnd_sy : TON;
+	ton_mcb_mrc : TON;
+END_VAR

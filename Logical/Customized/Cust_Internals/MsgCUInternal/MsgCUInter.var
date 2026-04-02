@@ -1,0 +1,21 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: MsgCUInter
+ * File: MsgCUInter.var
+ * Author: zengerer
+ * Created: September 10, 2013
+ ********************************************************************
+ * Local variables of program MsgCU
+ ********************************************************************)
+VAR
+	iAdrAmmBase2MM : UDINT;
+	iAdrMM2AmmBase : UDINT;
+	xMsg13 : ARRAY[0..99] OF Msg; (*Array of Msg for Reserve Analog IN*)
+	xMsg14 : ARRAY[0..99] OF Msg; (*Array of Msg for Reserve Analog IN*)
+	xMsg1500 : Msg; (*Msg 1500 for Reserve Analog IN*)
+	xMsg37 : ARRAY[0..99] OF Msg; (*Array of Msg for Reserve Analog IN*)
+	xMsg38 : ARRAY[0..99] OF Msg; (*Array of Msg for Reserve Analog IN*)
+	xMsg39 : ARRAY[0..99] OF Msg; (*Array of Msg for Reserve Analog IN*)
+	xMsg89 : ARRAY[66..99] OF Msg; (*Array of Msg for CustomerIO and Reserve AI*)
+END_VAR

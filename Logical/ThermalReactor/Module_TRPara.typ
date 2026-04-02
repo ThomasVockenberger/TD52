@@ -1,0 +1,42 @@
+
+TYPE
+	PROGRAMMER_INFO : 	STRUCT 
+		DO_NOT_SORT_PARA : STRING[40] := 'DO NOT CHANGE PARAMETER SORTING!'; (*DO NOT CHANGE PARAMETER SORTING!*) (*ADD NEW PARAMETER ONLY AT THE END OF THE Para STRUCTURE. DO NOT DELETE existing Para items.*)
+	END_STRUCT;
+	Para_Struct : 	STRUCT 
+		bSel_FlapActEl : BOOL; (*PARA [12749]: select Flap with electric actuation*) (*OldName: sel_FlapActEl;Cycle:5;*)
+		bCtrThR_Heater_Active : BOOL; (*PARA [12222]: thermal reactor controller active*) (*OldName: newpv ; Cycle: ;*)
+		tCtrTR_Heater : _tGeACtrPara; (*Para controller parameters*) (*OldName: newpv; Cycle: ;*)
+		rT_ThR_SetwoGas : REAL; (*PARA [12236]: TK setpoint without gas injection*) (*OldName:TK_w_woGas; Cycle:5;*)
+		ti_ThR_Val_y2 : TIME; (*PARA [12241]: timer 2 for exhaust gas flap at TK_w + temperature 2 [s]*) (*OldName:i_ThR_Val_y2; Cycle: 5;*)
+		ti_ThR_Val_y1 : TIME; (*PARA [12240]: timer 1 for exhaust gas flap at TK_w + temperature 1 [s]*) (*OldName:i_ThR_Val_y1; Cycle: 5;*)
+		ti_ThR_TimePInc : TIME; (*PARA [12239]: time slot load monitoring P increase [s]*) (*OldName:TimeSlot_Pinc; Cycle:5;*)
+		bThR_Active : BOOL; (*PARA [12223]: thermal reactor active*) (*OldName:bExhReactor; Cycle:5;*)
+		rT_ThR_Val_x2 : REAL; (*PARA [12238]: temperature 2 relative to TK_w for timer 2*) (*OldName:PT_KLrx2; Cycle: 5;*)
+		rT_ThR_Val_x1 : REAL; (*PARA [12237]: temperature 1 relative to TK_w for timer 1*) (*OldName:PT_KLrx1; Cycle: 5;*)
+		bThR_woGas : BOOL; (*PARA [12225]: select w/o gas injection*) (*OldName:sel_woGas; Cycle: 5;*)
+		rP_ThR_ActiveHy : REAL; (*PARA [12227]: power limit thermal reactor active hysteresis*) (*OldName:HY_P_TRACT; Cycle:5;*)
+		rP_Norm_ThR_Active : REAL; (*PARA [12226]: power limit norm thermal reactor active (0-100%)*) (*OldName:GW_P_TRACT; Cycle:5;*)
+		rT_ThR_LimPInc : REAL; (*PARA [12235]: limit P increase*) (*OldName:Limit_Pinc; Cycle:5;*)
+		rT_ThR_LimGasHy : REAL; (*PARA [12234]: limit of reaction chamber temperature for start gas injection hysteresis*) (*OldName:TK_GAS_Hy; Cycle:5;*)
+		rT_ThR_LimGas : REAL; (*PARA [12233]: limit of reaction chamber temperature for start gas injection*) (*OldName:TK_GAS_Gw; Cycle:5;*)
+		rT_ThR_EH_Lim25 : REAL; (*PARA [12230]: limit of reaction chamber temperature for limitation el. heating to 25% *) (*OldName:TK_E25_Gw; Cycle:5;*)
+		rT_ThR_EH_Lim50 : REAL; (*PARA [12231]: limit of reaction chamber temperature for limitation el. heating to 50% *) (*OldName:TK_E50_Gw; Cycle:5;*)
+		rT_ThR_EH_Lim75 : REAL; (*PARA [12232]: limit of reaction chamber temperature for limitation el. heating to 75% *) (*OldName:TK_E75_Gw; Cycle:5;*)
+		rT_ThR_EH_Lim00 : REAL; (*PARA [12229]: limit of reaction chamber temperature for limitation el. heating to 0% *) (*OldName:TK_E00_Gw; Cycle:5;*)
+		ti_ThR_ValDurationPInc : TIME; (*PARA [12242]: duration flap interval increase [s]*) (*OldName:PTOF_KL_Pinc_i; Cycle:5;*)
+		ti_ThR_ValIntervalPInc : TIME; (*PARA [12243]: flap interval time increase [s]*) (*OldName:PT_KL_Pinc; Cycle:5;*)
+		iIdx_Em_AvgMon_Option : INT; (*PARA [14279]: Emission average monitoring options*)
+		bThR_auxGasMonitor : BOOL; (*PARA [14948]: Thermal reactor auxiliary gas injection monitoring *)
+		rThR_auxGasCV_Kv : REAL; (*PARA [14949]: Auxiliary gas injection control valve flow coefficient [m3/h]  *)
+		bThR2_Ena : BOOL; (*PARA [15036]: Thermal reactor 2nd generation enable *)
+		rT_ThR2_EH_Lim00 : REAL; (*PARA [15043]: Thermal reactor chamber temperature for limiting el. Heating to 0% *)
+		rT_ThR2_EH_Lim20 : REAL; (*PARA [15040]: Thermal reactor chamber temperature for limiting el. Heating to 20% *)
+		rT_ThR2_EH_Lim40 : REAL; (*PARA [15039]: Thermal reactor chamber temperature for limiting el. Heating to 40% *)
+		rT_ThR2_EH_Lim60 : REAL; (*PARA [15038]: Thermal reactor chamber temperature for limiting el. Heating to 60% *)
+		rT_ThR2_EH_Lim80 : REAL; (*PARA [15037]: Thermal reactor chamber temperature for limiting el. Heating to 80% *)
+		bPr_SCR_CatIn_Exist : BOOL; (*PARA [13905]: SCR Exhaust pressure CAT inlet active*)
+		bSCR_Active : BOOL; (*PARA [13961]: SCR active*)
+		bSCR_Cust_Active : BOOL; (*PARA [14866]: Customer SCR active*)
+	END_STRUCT;
+END_TYPE

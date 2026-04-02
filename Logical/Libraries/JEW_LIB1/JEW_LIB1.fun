@@ -1,0 +1,424 @@
+
+FUNCTION_BLOCK FILTER
+	VAR_INPUT
+		In : INT;
+		Filter : USINT;
+		Reset : BOOL;
+	END_VAR
+	VAR_OUTPUT
+		Out : INT;
+	END_VAR
+	VAR
+		temp_mw : DINT;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK FILTER_R
+	VAR_INPUT
+		In : REAL;
+		Filter : UINT;
+		Reset : BOOL;
+	END_VAR
+	VAR_OUTPUT
+		Out : REAL;
+	END_VAR
+	VAR
+		temp_mw : LREAL;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK TimeBasedOnOff
+	VAR_INPUT
+		enable : BOOL;
+		x : INT;
+		min_value : INT;
+		max_value : INT;
+		tchange : UDINT;
+		hysteresis : UINT;
+		set_pos : INT;
+		basetime : UDINT;
+	END_VAR
+	VAR_OUTPUT
+		down : BOOL;
+		up : BOOL;
+		y : INT;
+		status : UINT;
+	END_VAR
+	VAR
+		y_act : REAL;
+		fHystUp : REAL;
+		fHystDown : REAL;
+		fUnitTime : REAL;
+		ulLastTime : UDINT;
+		fDiffTime : REAL;
+		fHysteresis : REAL;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK TimeBasedOnOff_R
+	VAR_INPUT
+		enable : BOOL;
+		x : REAL;
+		min_value : REAL;
+		max_value : REAL;
+		tchange : REAL;
+		hysteresis : REAL;
+		set_pos : REAL;
+		basetime : REAL;
+	END_VAR
+	VAR_OUTPUT
+		down : BOOL;
+		up : BOOL;
+		y : REAL;
+		status : UINT;
+	END_VAR
+	VAR
+		y_act : REAL;
+		fHystUp : REAL;
+		fHystDown : REAL;
+		fUnitTime : REAL;
+		ulLastTime : REAL;
+		fDiffTime : REAL;
+		fHysteresis : REAL;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK WDtoBIT
+	VAR_INPUT
+		Word : UINT;
+	END_VAR
+	VAR_OUTPUT
+		Bit00 : BOOL;
+		Bit01 : BOOL;
+		Bit02 : BOOL;
+		Bit03 : BOOL;
+		Bit04 : BOOL;
+		Bit05 : BOOL;
+		Bit06 : BOOL;
+		Bit07 : BOOL;
+		Bit08 : BOOL;
+		Bit09 : BOOL;
+		Bit10 : BOOL;
+		Bit11 : BOOL;
+		Bit12 : BOOL;
+		Bit13 : BOOL;
+		Bit14 : BOOL;
+		Bit15 : BOOL;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK BITtoWD
+	VAR_INPUT
+		Bit00 : BOOL;
+		Bit01 : BOOL;
+		Bit02 : BOOL;
+		Bit03 : BOOL;
+		Bit04 : BOOL;
+		Bit05 : BOOL;
+		Bit06 : BOOL;
+		Bit07 : BOOL;
+		Bit08 : BOOL;
+		Bit09 : BOOL;
+		Bit10 : BOOL;
+		Bit11 : BOOL;
+		Bit12 : BOOL;
+		Bit13 : BOOL;
+		Bit14 : BOOL;
+		Bit15 : BOOL;
+	END_VAR
+	VAR_OUTPUT
+		Word : UINT;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK PID_A
+	VAR_INPUT
+		enable : BOOL;
+		init : BOOL;
+		ist : INT;
+		soll : INT;
+		kp : INT;
+		ki : INT;
+		kd : INT;
+		gunten : INT;
+		goben : INT;
+		C0 : DINT;
+	END_VAR
+	VAR_OUTPUT
+		limit : BOOL;
+		integr : DINT;
+		stell : INT;
+	END_VAR
+	VAR
+		ist_alt : INT;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK PID_A_R
+	VAR_INPUT
+		enable : BOOL;
+		init : BOOL;
+		ist : REAL;
+		soll : REAL;
+		kp : INT;
+		ki : INT;
+		kd : INT;
+		gunten : INT;
+		goben : INT;
+		C0 : DINT;
+	END_VAR
+	VAR_OUTPUT
+		limit : BOOL;
+		integr : DINT;
+		stell : REAL;
+	END_VAR
+	VAR
+		ist_alt : INT;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK TON_R
+	VAR_INPUT
+		IN : BOOL;
+		PT : UDINT;
+		RS : BOOL;
+	END_VAR
+	VAR_OUTPUT
+		Q : BOOL;
+		ET : UDINT;
+	END_VAR
+	VAR
+		init_old : USINT;
+		tick_old : UDINT;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK BH
+	VAR_INPUT
+		enable : BOOL;
+		BH_adr : UDINT;
+	END_VAR
+	VAR_OUTPUT
+		BH_Imp : BOOL;
+		BM_Imp : BOOL;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK RAMPE
+	VAR_INPUT
+		enable : BOOL;
+		In : INT;
+		Rise : UINT;
+		Sink : UINT;
+		TC_Time : UINT;
+	END_VAR
+	VAR_OUTPUT
+		Out : INT;
+	END_VAR
+	VAR
+		f_out : REAL;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK RAMPE_R
+	VAR_INPUT
+		enable : BOOL;
+		In : REAL;
+		Rise : REAL;
+		Sink : REAL;
+		TC_Time : UINT;
+	END_VAR
+	VAR_OUTPUT
+		Out : REAL;
+	END_VAR
+	VAR
+		f_out : REAL;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK GR_MIN_MAXR
+	VAR_INPUT
+		In : REAL;
+		Gw : REAL;
+		Hy_min : REAL;
+		Hy_max : REAL;
+	END_VAR
+	VAR_OUTPUT
+		Q : BOOL;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK GR_MIN
+	VAR_INPUT
+		In : INT;
+		Gw : INT;
+		Hy : INT;
+	END_VAR
+	VAR_OUTPUT
+		Q : BOOL;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK GR_MINR
+	VAR_INPUT
+		In : REAL;
+		Gw : REAL;
+		Hy : REAL;
+	END_VAR
+	VAR_OUTPUT
+		Q : BOOL;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION us_BitClr : UINT
+	VAR_INPUT
+		In : UINT;
+		BitNr : USINT;
+	END_VAR
+END_FUNCTION
+
+FUNCTION_BLOCK GR_MAX
+	VAR_INPUT
+		In : INT;
+		Gw : INT;
+		Hy : INT;
+	END_VAR
+	VAR_OUTPUT
+		Q : BOOL;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK GR_MAXR
+	VAR_INPUT
+		In : REAL;
+		Gw : REAL;
+		Hy : REAL;
+	END_VAR
+	VAR_OUTPUT
+		Q : BOOL;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION us_BitSet : UINT
+	VAR_INPUT
+		In : UINT;
+		BitNr : USINT;
+	END_VAR
+END_FUNCTION
+
+FUNCTION us_BitTest : BOOL
+	VAR_INPUT
+		In : UINT;
+		BitNr : USINT;
+	END_VAR
+END_FUNCTION
+
+FUNCTION uc_BitClr : USINT
+	VAR_INPUT
+		In : USINT;
+		BitNr : USINT;
+	END_VAR
+END_FUNCTION
+
+FUNCTION uc_BitSet : USINT
+	VAR_INPUT
+		In : USINT;
+		BitNr : USINT;
+	END_VAR
+END_FUNCTION
+
+FUNCTION uc_BitTest : BOOL
+	VAR_INPUT
+		In : USINT;
+		BitNr : USINT;
+	END_VAR
+END_FUNCTION
+
+FUNCTION ul_BitSet : UDINT
+	VAR_INPUT
+		In : UDINT;
+		BitNr : USINT;
+	END_VAR
+END_FUNCTION
+
+FUNCTION ul_BitClr : UDINT
+	VAR_INPUT
+		In : UDINT;
+		BitNr : USINT;
+	END_VAR
+END_FUNCTION
+
+FUNCTION ul_BitTest : BOOL
+	VAR_INPUT
+		In : UDINT;
+		BitNr : USINT;
+	END_VAR
+END_FUNCTION
+
+FUNCTION ITOA : SINT
+	VAR_INPUT
+		In : INT;
+		Out : STRING[7];
+	END_VAR
+END_FUNCTION
+
+FUNCTION_BLOCK xSignScal
+	VAR_INPUT
+		enable : BOOL;
+		num : UINT;
+		param : UDINT;
+		In : INT;
+	END_VAR
+	VAR_OUTPUT
+		error : BOOL;
+		exceed : BOOL;
+		Out : INT;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK xSignScal_R
+	VAR_INPUT
+		enable : BOOL;
+		num : UINT;
+		param : UDINT;
+		In : REAL;
+	END_VAR
+	VAR_OUTPUT
+		error : BOOL;
+		exceed : BOOL;
+		Out : REAL;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK TOF_R
+	VAR_INPUT
+		IN : BOOL;
+		PT : UDINT;
+		RS : BOOL;
+	END_VAR
+	VAR_OUTPUT
+		Q : BOOL;
+		ET : UDINT;
+	END_VAR
+	VAR
+		init_old : UDINT;
+		tick_old : UDINT;
+	END_VAR
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK TP_R
+	VAR_INPUT
+		IN : BOOL;
+		PT : UDINT;
+		RS : BOOL;
+	END_VAR
+	VAR_OUTPUT
+		Q : BOOL;
+		ET : UDINT;
+	END_VAR
+	VAR
+		init_old : USINT;
+		tick_old : UDINT;
+		IN_old : BOOL;
+	END_VAR
+END_FUNCTION_BLOCK

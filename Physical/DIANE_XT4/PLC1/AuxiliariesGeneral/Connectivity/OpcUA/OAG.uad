@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="7" ArVersion="H4.90">
+  <Aliases>
+    <ACLAliases>
+      <ACL Id="1">
+        <ACE RoleName="Administrators" Access="0x017F" />
+      </ACL>
+    </ACLAliases>
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView AclId="1">
+    <Module Name="AuxiliariesGeneral">
+      <GlobalVariables>
+        <Variable Name="MM2VIS" AutomaticEnable="True">
+          <Variable Name="tEO_Counter" EnableArrayElements="True" />
+          <Variable Name="rU_CtrlBat" EnableArrayElements="True" />
+          <Variable Name="rU_CtrlBat_BatTest" EnableArrayElements="True" />
+          <Variable Name="sLocIdent_CtrlBatMon" EnableArrayElements="True" />
+          <Variable Name="bCtrlBat_Used" EnableArrayElements="True" />
+          <Variable Name="bCtrlBat_UnderTest" EnableArrayElements="True" />
+          <Variable Name="bBufferBat_UnderTest" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="Para" AutomaticEnable="True" />
+        <Variable Name="VIS2MM" AutomaticEnable="True">
+          <Variable Name="tManAuxCtr">
+            <Variable Name="bAuxCust_Man" EnableArrayElements="True" />
+            <Variable Name="bAuxCust" EnableArrayElements="True" />
+          </Variable>
+        </Variable>
+      </GlobalVariables>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

@@ -1,0 +1,230 @@
+VAR
+	bDem_SafeDevice : BOOL := FALSE; (*V4.07 BU2 change: Modul global variable for Demand Gas Safety Check*) (*oldname: Anf_GDKG*)
+	tGV_struct : ARRAY[0..4] OF gv_struct; (*BETA V4.07*)
+	tCtr_GC_Out : _tGeACtrOut; (* gas compressor *)
+	tCtr_GC_In : _tGeACtrIn; (*gas compressor*)
+	xCtr_GC : GeACtr; (*gas compressor*)
+	bCrossOver : BOOL; (* 1=gas mixing is active *)
+	xOpMode : OpMode; (*Engine operation mode*)
+	MS_CV : BOOL;
+	bTestEnabled : BOOL; (*Module test enabled*)
+	M_STGAS1_2 : BOOL; (* gastrain with up to 4 lines *)
+	M_STGAS1_3 : BOOL; (* gastrain with up to 4 lines *)
+	M_STGAS1_4 : BOOL; (* gastrain with up to 4 lines *)
+	HM_GDMI1_2 : BOOL; (* gastrain with up to 4 lines *)
+	HM_GDMI1_3 : BOOL; (* gastrain with up to 4 lines *)
+	HM_GDMI1_4 : BOOL; (* gastrain with up to 4 lines *)
+	HM_GDMI2 : BOOL; (*gas pressure minimum 2*)
+	HM_GDMI1 : BOOL; (*gas pressure minimum 1*)
+	AKT_Gastrecke1_2 : BOOL; (* gastrain with up to 4 lines *)
+	AKT_Gastrecke1_3 : BOOL; (* gastrain with up to 4 lines *)
+	AKT_Gastrecke1_4 : BOOL; (* gastrain with up to 4 lines *)
+	ANA_PDIFF : REAL; (*Vorkammerdifferenzdruck *)
+	ANW_GST2 : BOOL; (*Select gas train 2*)
+	AN_FGPUFF : BOOL;
+	AN_PDIFF_MN : BOOL;
+	AN_VKDR_MX : BOOL;
+	bDelayGDKG_GCStarting : BOOL := FALSE; (*TRUE while GC starts to build up pressure  (5sec)*)
+	bGasMixture : BOOL;
+	bGnlTrip : BOOL;
+	bGnlTrip1 : BOOL;
+	bGnlTrip2 : BOOL;
+	bGnlTrip3 : BOOL;
+	bGnlWarning : BOOL;
+	bGT_MixingEna : BOOL;
+	bGT_QualMix_Man_Set : BOOL; (*TRUE=Gas quality setted manually*)
+	bGT_RatioMix_Man_Set : BOOL; (*TRUE=Gas mixing setted manually*)
+	bMEGA_GasTrain : BOOL := FALSE; (*Select MEGA Gastrain option in different Gastrain tasks*)
+	bMsg1028_Set : BOOL;
+	bMsg1030_Set : BOOL;
+	bMsg1057_Set : BOOL;
+	bMsg1058_Set : BOOL;
+	bMsg3221_Set : BOOL;
+	bMsg3222_Set : BOOL;
+	bMsg3316_Set : BOOL;
+	bMsg3317_Set : BOOL;
+	bMsg3318_Set : BOOL;
+	bMsg3326_Set : BOOL;
+	bMsg3327_Set : BOOL;
+	bMsg3328_Set : BOOL;
+	bMsg3353_Set : BOOL; (*Set alarm, temp modulglobal*)
+	bMsg3354_Set : BOOL; (*Set alarm, temp modulglobal*)
+	bMsg3355_Set : BOOL; (*Set alarm, temp modulglobal*)
+	bMsg3357_Set : BOOL; (*Set alarm, temp modulglobal*)
+	bMsg3358_Set : BOOL; (*Set alarm, temp modulglobal*)
+	bMsg3356_Set : BOOL; (*Set alarm, temp modulglobal*)
+	bMsg3520_Set : BOOL;
+	bMsg3567_Set : BOOL;
+	bMsg3568_Set : BOOL;
+	bMsg3569_Set : BOOL;
+	bMsg3570_Set : BOOL;
+	bMsg_Dummy_Warn_CV : BOOL;
+	bMsg_Dummy_Trip_CV : BOOL;
+	bMsgDummy_Min_SuctPr : BOOL;
+	bMsgDummy_Max_SuctPr : BOOL;
+	bOMSS_MAT : BOOL; (*operation mode selector switch - MANUAL/AUTO/TEST*)
+	bP_GT_RelMonExt : BOOL := TRUE;
+	bSetMix_Man : BOOL; (*1=gas mixing manual*)
+	CH4_MIN_A : BOOL; (*CH4 content minimum*)
+	CH4_MIN_W : BOOL; (*UW CH4-Gehalt warnend aktiv*)
+	CVRED_0 : BOOL := FALSE;
+	FGGAS : BOOL; (*Release from gas plant missing*)
+	FG_GDRUW : BOOL;
+	FG_HGV : BOOL; (*Release main gas valve*)
+	FG_MIX : BOOL;
+	FL_PUFF : BOOL;
+	GAS1_2_HQ : BOOL;
+	GAS1_3 : BOOL;
+	GAS1_VB : REAL;
+	GAS2_VB : REAL;
+	GASUM : BOOL := 0; (* Gasumschaltung ! *)
+	GASV1_TC3 : BOOL; (* Gasventil 1 TC#3 *)
+	GASV2_TC3 : BOOL; (* Gasventil 2 TC#3 *)
+	GD_MAX : BOOL; (*Gas pressure maximum*)
+	GT_MAX : BOOL; (*Gas temperature maximum*)
+	GT_MIN : BOOL; (*Gas temperature minimum*)
+	GU_TJ : BOOL; (*Gas switching with Tecjet*)
+	iIdx_SelGasTyp : INT := 10; (*Selection of gas type, 1 Gas type 1, 2 Gas type 2, 3 Gas type 3, 4 Gas type 4, 5 Mixed gas 1_3, 6 Mixed gas 1_2_3, 7 Auto gas type switch*)
+	IN_GT : IN_GT_struct;
+END_VAR
+VAR CONSTANT
+	K : REAL := 1.0; (*Gas law deviation factor*)
+END_VAR
+VAR
+	MM2VIS : MM2VIS_struct;
+	MS_CH4 : BOOL; (*Measurement signal CH4 content*)
+	MS_GD : BOOL; (*Measurement signal Gas pressure*)
+	MS_GM : BOOL; (*Measurement signal Gas quantity*)
+	MS_GT : BOOL; (*Measurement signal Gas temperature*)
+	MS_O2 : BOOL; (*Measurement signal O2- content*)
+	MS_O2_A : BOOL; (*Trip: Measurement signal O2 - content*)
+	MS_O2_W : BOOL; (*Warning: Measurement signal O2-content*)
+	MS_SD : BOOL; (*Measurement signal suction pressure*)
+	M_AWGAS1 : BOOL := 0; (* Anwahl Gas 1 *)
+	M_AWGAS1_2 : BOOL := 0; (* Anwahl Gas 1_2 *)
+	M_AWGAS1_3 : BOOL := 0; (* Anwahl Gas 1_3 *)
+	M_AWGAS2 : BOOL := 0; (* Anwahl Gas 2 *)
+	M_AWGAS3 : BOOL := 0; (* Anwahl Gas 3 *)
+	M_AWGAS4 : BOOL := 0; (* Anwahl Gas 4 *)
+	M_DREHZ : BOOL; (*!!! Module level generated signal*)
+	M_DR_ODR : BOOL := 0; (* Zuschaltung Öldrucküberwachung *)
+	M_GASV1 : BOOL := TRUE;
+	M_GASV2 : BOOL := TRUE;
+	M_STGAS1 : BOOL; (*Failure gas train 1*)
+	M_STGAS2 : BOOL; (*Failure gas train 2*)
+	M_STPch : BOOL; (*Failure Prechamber gas train*)
+	O2_MAX : BOOL; (*O2 content maximum*)
+	OUT_GT : OUT_GT_struct;
+	Para : PARA_GT_struct;
+	ParaFactoryDefault : PARA_GT_struct := (0); (*First Init Values*)
+	pm : PARA_GT_struct;
+	Perm : PERM_GT_struct;
+	Perm2 : PERM_GT2_struct;
+	pl_ist : REAL; (*Actual boost pressure [Bar]*)
+END_VAR
+VAR CONSTANT
+	pn : REAL := 1.013; (*Normal Atomspheric pressure in Bar*)
+END_VAR
+VAR
+	P_DIFF : BOOL; (*Deflagration protection difference pressure*)
+	rGT_CH4 : REAL; (*CH4 content, 1.0 = 100%*)
+	rGT_CV : REAL; (*Calorific value*)
+	rGT_QualMix_Man_Set : REAL; (*Gas mixing quality manual setpoint [%], e.g. value 0.75 =75%*)
+	rGT_RatioMix_Man_Set : REAL; (*Gas mixing ratio manual setpoint [%], e.g. value 0.75 =75%*)
+	rP_Red_CV_Norm : REAL; (*power reduction due to Calorific value low [%], e.g. 0.75 =75% power of nominal power  *)
+	T_FGPUFF : BOOL; (*Release deflagration*)
+	T_GDRUW : BOOL := TRUE; (*Release gas pressure monitoring at gas compressor*)
+	T_N2_GASV : BOOL; (* N2 gas valves, del. for monitoring *)
+	T_PUFF_1 : BOOL; (*A puff timer*)
+	T_PUFF_2 : BOOL; (*A puff timer*)
+	T_PUFF_3 : BOOL; (*A puff timer*)
+	UW_GST2 : BOOL := FALSE; (*Monitoring gas train 2*)
+	UW_PDIFF : BOOL; (*Release monitoring pre chamber difference pressure*)
+	UW_VKDR : BOOL; (*Release monitoring pre chamber pressure*)
+	VIS2MM : VIS2MM_Struct;
+	VKGD_MAX : BOOL; (*Prechamber gas pressure maximum*)
+	VKGD_MIN : BOOL; (*Prechamber gas pressure minimum*)
+	VKGV_TC3 : BOOL := 0; (* Vorkammergasventil TC3 *)
+	V_GVD : BOOL; (*Vorhalte Gasverdichter*)
+	W_P_DIFF : BOOL;
+	xEngType : EngType;
+	X_GMISCH_2 : REAL; (*Gas quality [%]*)
+	ZM_GDMA1 : BOOL;
+	ZM_GDMA2 : BOOL;
+	ZM_GDMI1 : BOOL;
+	ZM_GDMI2 : BOOL;
+	ZSZ : REAL; (*Gas volume correction factor*)
+	Z_PUFF : BOOL;
+	bNoInitDetected : BOOL := FALSE; (*allways true, except 1cycle on init up*)
+	bGT1_SafeDevOK : BOOL; (*Gassafety device 1 release from task gasline1_4*)
+	bAMM_Pr_PCGT_Out_MS : BOOL := FALSE; (*gas pressure after pre chamber gas pressure regulator - measurement signal failure*)
+	bAMM_Pr_MGT_a_Filt_MS : BOOL := FALSE; (*main gas train pressure after filter exist - measurement signal failure*)
+	bAMM_Pr_PCGT_a_Filt_MS : BOOL := FALSE; (*pre chamber gas train pressure after filter exist - measurement signal failure*)
+	bAMM_Pr_MGT_a_Filt_Hi : BOOL := FALSE; (*main gas train pressure after filter maximum - warning*)
+	bAMM_Pr_MGT_a_Filt_HiHi : BOOL := FALSE; (*main gas train pressure after filter maximum - error*)
+	bAMM_Pr_MGT_a_Filt_LoLo : BOOL := FALSE; (*main gas train pressure after filter minimum - error*)
+	bAMM_DPr_MGT_SetAct_HiHi : BOOL := FALSE; (*main gas train set-/actual-pressure deviation maximum - error*)
+	bAMM_Pr_PCGT_a_Filt_Hi : BOOL := FALSE; (*pre chamber gas train pressure after filter maximum - warning*)
+	bAMM_Pr_PCGT_a_Filt_Lo : BOOL := FALSE; (*pre chamber gas train pressure after filter minimum - warning*)
+	bAMM_DPr_PCGT_SetAct_Hi : BOOL := FALSE; (*pre chamber gas train set-/actual-pressure deviation maximum - warning*)
+	bAMM_GT_AirSupply_Lo : BOOL := FALSE; (*gas train air supply minimum - error*)
+	bAMM_GT_AirSupply_LoLo : BOOL := FALSE; (*gas train air supply minimum - error*)
+	bAMM_DPr_GR_Baro_HiHi : BOOL := FALSE; (*Gas rail pressure higher than barometric pressure - error*)
+	bAMM_Pr_MGT_a_Filt_Lo : BOOL := FALSE; (*Main gas train pressure after filter minimum - warning*)
+	bAMM_DPr_MGT_SetAct_Hi : BOOL := FALSE; (*Main gas train set-/actual-pressure deviation maximum - warning*)
+	bAMM_Pr_PCGT_a_Filt_HiHi : BOOL := FALSE; (*Pre chamber gas train pressure after filter maximum - error*)
+	bAMM_Pr_PCGT_a_Filt_LoLo : BOOL := FALSE; (*Pre chamber gas train pressure after filter minimum - error*)
+	bAMM_DPr_PCGT_SetAct_HiHi : BOOL := FALSE; (*pre chamber gas train set-/actual-pressure deviation maximum - error*)
+	rPr_PCGT_sp : REAL := 0.0; (*pre chamber gas train pressure - set point [bar]*)
+	rPr_MGT_sp : REAL := 0.0; (*main gas train pressure - set point [bar]*)
+	rPr_GR_Avg_UF : REAL := 0.0; (*Average of 2 Inputs gas rail pressure - average unfiltered [bar]*)
+	rPr_GR_Avg : REAL := 0.0; (*Average of 2 Inputs gas rail pressure - average filtered [bar]*)
+	rDPr_PCGT_SetAct : REAL := 0.0; (*pre chamber gas train set-/actual-pressure deviation [bar]*)
+	rDPr_MGT_SetAct : REAL := 0.0; (*main gas train set-/actual-pressure deviation [bar]*)
+	rPr_MGT_Out_Calc : REAL := 0.0; (*calculated gas pressure after main gas pressure regulator [bar]*)
+	bDevP_GR_TooHigh : BOOL;
+	bAMM_Pr_GR_I_MS : BOOL := FALSE; (*Pressure Sensor Error 2 - measurement signal failure*)
+	bAMM_Pr_GR_II_MS : BOOL := FALSE; (*Pressure Sensor Error 1 - measurement signal failure*)
+	bAMM_T_GR_MS : BOOL := FALSE; (*Gas rail temperature - measurement signal failure*)
+	bAMM_Pr_GR_I_LoLo : BOOL := FALSE; (*Gas rail pressure limit min. - error*)
+	bAMM_Pr_GR_I_HiHi : BOOL := FALSE; (*Gas rail pressure limit max. - error*)
+	bAMM_DPr_GR_I_Lo : BOOL := FALSE; (*Gas rail difference pressure limit min. - warning*)
+	bAMM_DPr_GR_I_Hi : BOOL := FALSE; (*Gas rail difference pressure limit max. - warning*)
+	bAMM_DPr_GR_I_LoLo : BOOL := FALSE; (*Gas rail difference pressure limit min. - error*)
+	bAMM_DPr_GR_I_HiHi : BOOL := FALSE; (*Gas rail difference pressure limit max. - error*)
+	bAMM_T_GR_Hi : BOOL := FALSE; (*Gas rail temperature limit max. - warning*)
+	bAMM_T_GR_Lo : BOOL := FALSE; (*Gas rail temperature limit min. - warning*)
+	bAMM_T_GR_HiHi : BOOL := FALSE; (*Gas rail temperature limit max. - error*)
+	bAMM_T_GR_LoLo : BOOL := FALSE; (*Gas rail temperature limit min. - error*)
+	bRelMon_Pr_GR_Avg : BOOL := FALSE; (*Release monitoring gas rail pressure average*)
+	bN_EngAct_IsZero : BOOL := FALSE; (*Actual speed [1/min] is Zero *)
+	rPr_MGT_Diff : REAL; (*Difference pressure gas rail to charge pressure*)
+	bBlowOff_PrHi_Err : BOOL; (* prechamber difference pressure high during a loadrejection - blow off valve defect *)
+	bMsg2694_Set : BOOL;
+	bMsg2695_Set : BOOL;
+	bMsg2696_Set : BOOL;
+	xFILTER_R_P2s_200ms : FILTER_R;
+	xFILTER_R_P2s_50ms : FILTER_R;
+	xFILTER_R_P2s_500ms : FILTER_R;
+	xFILTER_R_P2s_160ms : FILTER_R;
+	bAMM_Pr_GR_I_II_MS : BOOL := FALSE; (*Pressure Sensor A and B Error  - measurement signal failure*)
+	xCTD_Start : CTD;
+	xCTD_Start2465 : CTD;
+	xSigScal_R_DPr_MGT_sp : xSigScal_R := (0); (*FuB - main gas train - difference pressure setpoint [bar]*)
+	tiDPr_PCGT_SetAct_Hi : TIME;
+	bGasImp_Prescaled : BOOL; (*Gas Counter Impulse Prescaled 1pulse/m3]*)
+	bMsg2997_Set : BOOL := FALSE; (*Gas Compressor demand extended*)
+	rP_Set_Unred_Norm_GT : REAL; (*Unreduced power setpoint related to rP_Nom*) 
+	bPr_TecJetDP_Min : BOOL; (*Gas proportional valve differential pressure minimum*)
+	bPr_TecJetDP_P_Red : BOOL; (*Gas proportional valve differential pressure power reduction*)
+	bPowerMin_PCGT : BOOL; (* A1095 from power reduction prechamber gas train *)
+	bAMM_Pr_MGT_a_Filt_Min : BOOL; (* A2243 - Difference between main gas pressure after filter and gas rail pressure minimum [bar] *)
+	xLCRPT1_H2 : LCRPT1; 
+	bS_MSF_H2 : BOOL; (* Measurement signal failure H2 content *)
+	bMSF_H2 : BOOL; (* W9360 - H2 content measuring signal failure *) 
+	bH2_MAX_A : BOOL; (* A2364 - H2 content high - alarm *)
+	bH2_MAX_W : BOOL; (* W9361 - H2 content high - warning *)
+	bMsg9371_Set : BOOL; (* W9371 - Measuring signal failure setpoint - Gas mixing *)
+	bMsg9387_Set : BOOL; (* W9387 - Prechamber gas pressure low *)
+	bMsg9509_Set : BOOL; (* W9509 - Pre chamber gas bypass valve malfunction *)
+END_VAR

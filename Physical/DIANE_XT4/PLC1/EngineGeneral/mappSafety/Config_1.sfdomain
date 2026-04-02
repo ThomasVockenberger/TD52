@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="gSafeDomain" Type="sfdomain">
+    <Group ID="DefaultSettings">
+      <Property ID="SafeDomain" Value="1" />
+      <Property ID="SafeLOGICName" Value="X20SL8100_S01_00" />
+      <Property ID="SafeLOGICProductId" Value="X20SL8100" />
+      <Property ID="SafeLOGICModulePath" Value="IF3.ST1" />
+      <Property ID="Password" Value="e10adc3949ba59abbe56e057f20f883e" />
+      <Property ID="SafeProject" Value="SafeLOGIC" />
+    </Group>
+    <Group ID="DefaultFiles">
+      <Property ID="TargetApplication" Value="SafeLOGIC.sfapp" />
+      <Property ID="TargetOption" Value="SafeCOMMISSIONING.sfopt" />
+    </Group>
+  </Element>
+</Configuration>

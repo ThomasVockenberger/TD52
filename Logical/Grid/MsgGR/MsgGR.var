@@ -1,0 +1,118 @@
+VAR
+	iAdrMM2AmmBase : UDINT;
+	iAdrAmmBase2MM : UDINT;
+	xMsg2811 : Msg; (* B2811 power limitation by utility *)
+	xMsg2812 : Msg; (* B2812 module blocked by utility *)
+	xMsg2853 : Msg; (* B2853 -  instance of AmBase Library function Msg*)
+	xMsg2854 : Msg; (* B2854 -  instance of AmBase Library function Msg*)
+	xMsg2855 : Msg; (* B2855 -  instance of AmBase Library function Msg*)
+	xMsg2856 : Msg; (* B2856 -  instance of AmBase Library function Msg*)
+	xMsg2857 : Msg; (* B2857 -  instance of AmBase Library function Msg*)
+	xMsg2858 : Msg; (* B2858 -  instance of AmBase Library function Msg*)
+	xMsg2859 : Msg; (* B2859 -  instance of AmBase Library function Msg*)
+	xMsg2860 : Msg; (* B2860 -  instance of AmBase Library function Msg*)
+	xMsg2861 : Msg; (* B2861 -  instance of AmBase Library function Msg*)
+	xMsg2862 : Msg; (* B2862 -  instance of AmBase Library function Msg*)
+	xMsg2863 : Msg; (* B2863 -  instance of AmBase Library function Msg*)
+	xMsg2864 : Msg; (* B2864 -  instance of AmBase Library function Msg*)
+	xMsg2865 : Msg; (* B2865 -  instance of AmBase Library function Msg*)
+	xMsg2866 : Msg; (* B2866 -  instance of AmBase Library function Msg*)
+	xMsg2867 : Msg; (* B2867 -  instance of AmBase Library function Msg*)
+	xMsg2868 : Msg; (* B2868 -  instance of AmBase Library function Msg*)
+	xMsg2869 : Msg; (* B2869 -  instance of AmBase Library function Msg*)
+	xMsg3384 : Msg; (* A3384 - instance of AmBase Library function Msg*)
+	xMsg3385 : Msg; (* A3385 - instance of AmBase Library function Msg*)
+	xMsg3386 : Msg; (* A3386 - instance of AmBase Library function Msg *)
+	xMsg2870 : Msg; (* B2870 -  instance of AmBase Library function Msg*)
+	xMsg3591 : Msg; (* W2891 -  instance of AmBase Library function Msg*)
+	xMsg3592 : Msg; (* W2892 -  instance of AmBase Library function Msg*)
+	xMsg3593 : Msg; (* W2893 -  instance of AmBase Library function Msg*)
+	xMsg3594 : Msg; (* W2894 -  instance of AmBase Library function Msg*)
+	xMsg2799 : Msg; (* W2799 -  P0 DEIE measuring signal failure*)
+	xMsg3595 : Msg; (* W2895 -  instance of AmBase Library function Msg*)
+	xMsg3596 : Msg; (* W2896 -  instance of AmBase Library function Msg*)
+	xMsg2331 : Msg; (* A2331 -  instance of AmBase Library function Msg*)
+	xMsg3000 : Msg; (* W3000 -  instance of AmBase Library function Msg*)
+	xMsg9261 : Msg; (* W9261 -  instance of AmBase Library function Msg*)
+	xMsg9262 : Msg; (* W9262 -  instance of AmBase Library function Msg*)
+	xMsg9263 : Msg; (* W9263 -  instance of AmBase Library function Msg*)
+	xMsg9264 : Msg; (* W9264 -  instance of AmBase Library function Msg*)
+	xMsg9265 : Msg; (* W9265 -  instance of AmBase Library function Msg*)
+	xMsg9266 : Msg; (* W9266 -  instance of AmBase Library function Msg*)
+	xMsg9267 : Msg; (* W9267 -  instance of AmBase Library function Msg*)
+	xMsg9268 : Msg; (* W9268 -  instance of AmBase Library function Msg*)
+	xMsg9269 : Msg; (* W9269 -  instance of AmBase Library function Msg*)
+	xMsg9270 : Msg; (* W9270 -  instance of AmBase Library function Msg*)
+	xMsg9271 : Msg; (* W9271 -  instance of AmBase Library function Msg*)
+	xMsg9272 : Msg; (* W9272 -  instance of AmBase Library function Msg*)
+	xMsg9273 : Msg; (* W9273 -  instance of AmBase Library function Msg*)
+	xMsg9274 : Msg; (* W9274 -  instance of AmBase Library function Msg*)
+	xTP_RMC : TP; (* 0 implements a pulse generator*) (* OldName: TP_RMC; Cycle:0; *)
+	xTP_PFC : TP; (* implements a pulse generator*) (* OldName: TP_PFC; Cycle:0; *)
+	xTP_PFSet : TP := (0);
+	xTP_QSet : TP := (0);
+	xTP_PFP : TP := (0);
+	xTP_PFU : TP := (0);
+	xTP_QLim : TP := (0);
+	xTP_QCus : TP := (0);
+	xTP_UCtrl : TP := (0);
+	xTP_QU : TP := (0);
+	xTP_LFSMO : TP := (0);
+	xTP_LFSMU : TP := (0);
+	xTP_ILF : TP := (0);
+	xTP_QP : TP := (0);
+	xTP_PU : TP := (0);
+	xMsg2171 : Msg;
+	xMsg2172 : Msg;
+	xMsg2173 : Msg;
+	xMsg2174 : Msg;
+	xMsg2175 : Msg;
+	xMsg2176 : Msg;
+	xMsg2177 : Msg;
+	xMsg2178 : Msg;
+	xMsg2179 : Msg;
+	xMsg2180 : Msg;
+	xMsg2181 : Msg;
+	xMsg2182 : Msg;
+	xMsg2183 : Msg;
+	xMsg2184 : Msg;
+	xMsg2185 : Msg;
+	xMsg2186 : Msg;
+	xTP_P0 : TP;
+	xMsg2955 : Msg; (* B2955 -  instance of AmBase Library function Msg*)
+	xMsg2954 : Msg; (* B2954 -  instance of AmBase Library function Msg*)
+	xMsg2953 : Msg; (* B2953 -  instance of AmBase Library function Msg*)
+	xMsg2952 : Msg; (* B2952 -  instance of AmBase Library function Msg*)
+	xMsg2951 : Msg; (* B2951 -  instance of AmBase Library function Msg*)
+	xMsg2950 : Msg; (* B2950 -  instance of AmBase Library function Msg*)
+	xMsg2949 : Msg; (* B2949 -  instance of AmBase Library function Msg*)
+	xMsg2948 : Msg; (* B2948 -  instance of AmBase Library function Msg*)
+	xMsg2947 : Msg; (* B2947 -  instance of AmBase Library function Msg*)
+	xMsg2946 : Msg; (* B2946 -  instance of AmBase Library function Msg*)
+	xMsg2945 : Msg; (* B2945 -  instance of AmBase Library function Msg*)
+	xMsg2944 : Msg; (* B2944 -  instance of AmBase Library function Msg*)
+	xMsg2943 : Msg; (* B2943 -  instance of AmBase Library function Msg*)
+	xMsg2942 : Msg; (* B2942 -  instance of AmBase Library function Msg*)
+	xMsg2941 : Msg; (* B2941 -  instance of AmBase Library function Msg*)
+	xMsg2940 : Msg; (* B2940 -  instance of AmBase Library function Msg*)
+	xMsg9008 : Msg; (* B9008 -  instance of AmBase Library function Msg*)
+	xMsg9009 : Msg; (* B9009 -  instance of AmBase Library function Msg*)
+	xMsg9010 : Msg; (* B9010 -  instance of AmBase Library function Msg*)
+	xMsg9011 : Msg; (* B9011 -  instance of AmBase Library function Msg*)
+	xMsg9012 : Msg; (* B9012 -  instance of AmBase Library function Msg*)
+	xMsg9013 : Msg; (* B9013 -  instance of AmBase Library function Msg*)
+	xMsg9014 : Msg; (* B9014 -  instance of AmBase Library function Msg*)
+	xMsg9015 : Msg; (* B9015 -  instance of AmBase Library function Msg*)
+	xMsg9016 : Msg; (* B9016 -  instance of AmBase Library function Msg*)
+	xMsg9017 : Msg; (* B9017 -  instance of AmBase Library function Msg*)
+	xMsg9018 : Msg; (* B9018 -  instance of AmBase Library function Msg*)
+	xMsg9019 : Msg; (* B9019 -  instance of AmBase Library function Msg*)
+	xMsg9020 : Msg; (* B9020 -  instance of AmBase Library function Msg*)
+	xMsg9021 : Msg; (* B9021 -  instance of AmBase Library function Msg*)
+	xMsg9022 : Msg; (* B9022 -  instance of AmBase Library function Msg*)
+	xMsg9023 : Msg; (* B9023 -  instance of AmBase Library function Msg*)
+	xMsg9093 : Msg; (* B9093 -  instance of AmBase Library function Msg*)
+	xMsg9094 : Msg; (* B9094 -  instance of AmBase Library function Msg*)
+	xMsg2344 : Msg;
+	xMsg2345 : Msg;
+END_VAR

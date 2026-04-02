@@ -1,0 +1,62 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO
+ ********************************************************************
+ * Program: safi_pi
+ * File: safi_pi.var
+ * Author: weitzert
+ * Created: February 23, 2010
+ ********************************************************************
+ * Local variables of program safi_pi
+ ********************************************************************)
+VAR
+	bToggle : BOOL;
+	usEventSum : UINT;
+	bParaSendOK : BOOL;
+	ucCylIndex : USINT;
+	ucReDoCount : USINT;
+	ucSAFIPIParaSend : USINT;
+	SAFI_old : ARRAY[0..12] OF tSAFI;
+	TON_PITest : TON;
+	TON_TestDelay : TON;
+	bToggle2 : BOOL;
+	TON_SecondTick : TON;
+	bAmmSeqClkP : BOOL;
+	bHardwareErr : ARRAY[0..24] OF BOOL;
+	AmmSeqHardwareErr : AmmSequence;
+	bOpenErr : ARRAY[0..24] OF BOOL;
+	bPIShutOff : ARRAY[0..24] OF BOOL;
+	bIGNShutOff : ARRAY[0..24] OF BOOL;
+	AmmSeqOpenErr : AmmSequence;
+	AmmSeqPIShutOff : AmmSequence;
+	AmmSeqIGNShutOff : AmmSequence;
+	ucNrOfOpeningCyl : USINT;
+	ucNrOfHwErr : USINT;
+	bToggleEnab : BOOL;
+	usCheckSum : UINT;
+	bPIOpenCmd : BOOL;
+	bPIOpenCmdOld : BOOL;
+	bToggleOpen : BOOL;
+	usCheckSum2 : UINT;
+	ulDurAvgHelp : UDINT;
+	usDurMaxHelp : UINT;
+	usDurMinHelp : UINT;
+	TON_AvgTick : TON;
+	usFiFoLen : UINT;
+	usCount : UINT;
+	slCurrGradAvgHelp : DINT;
+	ssCurrGradMaxHelp : INT;
+	ssCurrGradMinHelp : INT;
+	bPIDemagFail : ARRAY[0..24] OF BOOL;
+	bPICurrCtrWarn : ARRAY[0..24] OF BOOL;
+	bPICurrCtrRate : ARRAY[0..24] OF BOOL;
+	bPISafLoopOpened : ARRAY[0..24] OF BOOL;
+	AmmSeqPIDemagFail : AmmSequence;
+	AmmSeqPICurrCtrWarn : AmmSequence;
+	AmmSeqPICurrCtrRate : AmmSequence;
+	TON_N_zero : TON;
+	bSAFISendAllPIPara : BOOL;
+	xTON_PICurGradFrozen : ARRAY[0..24] OF TON;
+	xTON_PICurGradAltern : ARRAY[0..24] OF TON;
+	iSA_PICurGrad_old1 : ARRAY[0..24] OF INT; (*PI close current gradient old value 1*)
+	iSA_PICurGrad_old2 : ARRAY[0..24] OF INT; (*PI close current gradient old value 2*)
+END_VAR

@@ -1,0 +1,16 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: IN_Knck
+ * File: IN_Knck.var
+ * Author: WaldharM
+ * Created: October 03, 2011
+ ********************************************************************
+ * Local variables of program IN_Knck
+ ********************************************************************)
+VAR
+	ucCylinderCount : USINT;
+	ucGasTypCount : USINT;
+	rCA_Ign_OP_Max_0 : REAL;
+	DTGetTime_RPS : DTGetTime;
+END_VAR

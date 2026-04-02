@@ -1,0 +1,16 @@
+VAR
+	ucSAFIConfCnt : USINT;
+	usCheckXor : UINT;
+	usCheckXorOld : UINT;
+	ulCheckSum : UDINT;
+	ulCheckSumOld : UDINT;
+	TON_SecondTick : TON;
+	ucCylIndex : USINT;
+	ucStatusCnt : USINT;
+	ucReParaCount : ARRAY[0..12] OF USINT;
+	usEvery10SecOneSAFI : UINT;
+	ucHelp : USINT;
+	usWait : ARRAY[0..12] OF UINT;
+	usReParaDuration : ARRAY[0..12] OF UINT;
+	ucReParaCycl : ARRAY[0..12] OF USINT;
+END_VAR

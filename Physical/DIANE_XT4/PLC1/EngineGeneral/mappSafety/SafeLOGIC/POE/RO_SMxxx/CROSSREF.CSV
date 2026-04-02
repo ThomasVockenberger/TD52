@@ -1,0 +1,9 @@
+bRO_SMxxx,POE\RO_SMxxx\RO_SMxxx.GB,1,OUT,1,1,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,Release Output SMxxx
+sbReset_sPLC,POE\RO_SMxxx\RO_SMxxx.GB,1,IN,26,13,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Reset safety PLC
+sbSafeModuleOK_SMxxx,POE\RO_SMxxx\RO_SMxxx.GB,1,IN,3,5,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe Module xxx OK
+sbSafeOutputOK_01,POE\RO_SMxxx\RO_SMxxx.GB,1,IN,5,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe output OK - DO 01
+sbSafeOutputOK_02,POE\RO_SMxxx\RO_SMxxx.GB,1,IN,28,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe output OK - DO 02
+sbSafeOutputOK_03,POE\RO_SMxxx\RO_SMxxx.GB,1,IN,29,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe output OK - DO 03
+sbSafeOutputOK_04,POE\RO_SMxxx\RO_SMxxx.GB,1,IN,30,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe output OK - DO 04
+xF_TRIG,POE\RO_SMxxx\RO_SMxxx.GB,0,,24,44,,,,,,VAR,FB,,FuB
+xRS,POE\RO_SMxxx\RO_SMxxx.GB,0,,21,71,,,,,,VAR,FB,,FuB

@@ -1,0 +1,18 @@
+VAR
+	xTON_SignalFail1 : TON := (0);
+	xTON_SignalFail0 : TON := (0);
+	tiSignalBack : TIME := T#30s;
+	xTON_Hourly : TON;
+	ResetCommLossCnt : BOOL; (*Manuall reset of comm loss counter*)
+	status_gettime : UINT;
+	rtc_gettime : RTCtime_typ;
+	TON_SecondTick : TON;
+	bCntOn : BOOL := 0;
+	xLogIdleShowCPU : LogIdleShow;
+	bEna_LogIdleShow : BOOL := TRUE;
+	iPeriod_LogIdleShow : UDINT := 100; (*Period for measurement in ms Range: 100 - 60000*)
+	iMeasLevel_LogIdleShow : UDINT := 1; (*Level of idle measurement (priority of the idle task), recommended level = 1 Range: 1 - 189, or for ARwin: 3-189*)
+	bCommLossOver : BOOL := 0;
+	xTON_CommCheck : TON;
+	iDisconnect_old : UDINT := 0;
+END_VAR

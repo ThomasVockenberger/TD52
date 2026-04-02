@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="7" ArVersion="H4.90">
+  <Aliases>
+    <ACLAliases>
+      <ACL Id="1">
+        <ACE RoleName="Administrators" Access="0x017F" />
+      </ACL>
+    </ACLAliases>
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView AclId="1">
+    <Module Name="Grid">
+      <GlobalVariables>
+        <Variable Name="MM2VIS" AutomaticEnable="True">
+          <Variable Name="tPFP_Points" EnableArrayElements="True" />
+          <Variable Name="tPFC_Points" EnableArrayElements="True" />
+          <Variable Name="tPFC_Points2" EnableArrayElements="True" />
+          <Variable Name="tQU_Points" EnableArrayElements="True" />
+          <Variable Name="tQU_Points2" EnableArrayElements="True" />
+          <Variable Name="tPFU_Points" EnableArrayElements="True" />
+          <Variable Name="tPFU_Points2" EnableArrayElements="True" />
+          <Variable Name="rPF_Px" EnableArrayElements="True" />
+          <Variable Name="rPF_Py" EnableArrayElements="True" />
+          <Variable Name="rPF2_Px" EnableArrayElements="True" />
+          <Variable Name="rPF2_Py" EnableArrayElements="True" />
+          <Variable Name="rQ_Px" EnableArrayElements="True" />
+          <Variable Name="rQ_Py" EnableArrayElements="True" />
+          <Variable Name="rQ2_Px" EnableArrayElements="True" />
+          <Variable Name="rQ2_Py" EnableArrayElements="True" />
+          <Variable Name="rQ_Ux" EnableArrayElements="True" />
+          <Variable Name="rQ_Uy" EnableArrayElements="True" />
+          <Variable Name="rQ2_Ux" EnableArrayElements="True" />
+          <Variable Name="rQ2_Uy" EnableArrayElements="True" />
+          <Variable Name="rPF_Ux" EnableArrayElements="True" />
+          <Variable Name="rPF_Uy" EnableArrayElements="True" />
+          <Variable Name="rPF2_Ux" EnableArrayElements="True" />
+          <Variable Name="rPF2_Uy" EnableArrayElements="True" />
+          <Variable Name="rF_FSMPoints_x" EnableArrayElements="True" />
+          <Variable Name="rP_FSMPoints_y" EnableArrayElements="True" />
+          <Variable Name="rF_LFSMOPoints_x" EnableArrayElements="True" />
+          <Variable Name="rP_LFSMOPoints_y" EnableArrayElements="True" />
+          <Variable Name="rF_LFSMUPoints_x" EnableArrayElements="True" />
+          <Variable Name="rP_LFSMUPoints_y" EnableArrayElements="True" />
+          <Variable Name="rF_FSM_Range_Delta_x" EnableArrayElements="True" />
+          <Variable Name="rP_FSM_Range_Delta_y" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="Para" AutomaticEnable="True">
+          <Variable Name="rF_Nom" EnableArrayElements="True" />
+          <Variable Name="rU_Gen_Nom" EnableArrayElements="True" />
+          <Variable Name="rP_Ramp_IncGrad_Norm" EnableArrayElements="True" />
+          <Variable Name="rP_Ramp_DecGrad_Norm" EnableArrayElements="True" />
+          <Variable Name="rQU_GrC_UpointX" EnableArrayElements="True" />
+          <Variable Name="rQU_GrC_QpointY" EnableArrayElements="True" />
+          <Variable Name="rQP_GrC_PpointX" EnableArrayElements="True" />
+          <Variable Name="rQP_GrC_QpointY" EnableArrayElements="True" />
+          <Variable Name="rPFP_GrC_PpointX" EnableArrayElements="True" />
+          <Variable Name="rPFP_GrC_PFpointY" EnableArrayElements="True" />
+          <Variable Name="rPFU_GrC_UpointX" EnableArrayElements="True" />
+          <Variable Name="rPFU_GrC_PFpointY" EnableArrayElements="True" />
+          <Variable Name="rQLimU_GrC_UpointX" EnableArrayElements="True" />
+          <Variable Name="rQLimU_GrC_QpointY" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="VIS2MM" AutomaticEnable="True" />
+      </GlobalVariables>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

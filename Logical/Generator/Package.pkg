@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.14.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="DataObject" Language="Simple" Description="MODUL META data file">META_GC</Object>
+    <Object Type="File" Private="true">module_GC.typ</Object>
+    <Object Type="File" Private="true">module_GCPara.typ</Object>
+    <Object Type="File" Private="true">module_GC.var</Object>
+    <Object Type="Program" Language="IEC" Description="default">defaultGC</Object>
+    <Object Type="Program" Language="IEC" Description="general">general_GC</Object>
+    <Object Type="Program" Language="IEC" Description="excitation">ereg</Object>
+    <Object Type="Program" Language="IEC" Description="gen.winding temperature">gwt</Object>
+    <Object Type="Program" Language="IEC" Description="power factor control">pf_ctr</Object>
+    <Object Type="Program" Language="IEC" Description="power factor custom">pf_cust</Object>
+    <Object Type="Program" Language="IEC" Description="voltage control">v_ctr</Object>
+    <Object Type="Program" Language="IEC" Description="power factor controller, not used">Ctr_GenPF</Object>
+    <Object Type="Program" Language="IEC" Description="reactive power controller">Ctr_Q</Object>
+    <Object Type="Program" Language="IEC" Description="generator auxiliaries">gen_aux</Object>
+    <Object Type="Program" Language="IEC" Description="oilskid">oilskid</Object>
+    <Object Type="Program" Language="IEC" Description="+ PermanentMemory">PermGC</Object>
+    <Object Type="Program" Language="IEC" Description="messages">MsgGC</Object>
+    <Object Type="Program" Language="IEC" Description="+ parameter handling">ParGC</Object>
+    <Object Type="Program" Language="IEC" Description="Visualization &lt;-&gt; Metamodule">VisGC</Object>
+    <Object Type="Program" Language="IEC" Description="MMU Earth Fault detection">MMUEarthFault</Object>
+  </Objects>
+</Package>

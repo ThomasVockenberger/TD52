@@ -1,0 +1,28 @@
+VAR
+	xGRMIN_Pr_ECW_Lo : GR_MINR;
+	xTON_Pr_ECW_Lo : TON;
+	xGRMIN_Pr_ECW_LimOp : GR_MINR;
+	xTON_Pr_ECW_LimOp : TON;
+	xGRMIN_Pr_ECW_LoLo : GR_MINR;
+	xTON_Pr_ECW_LoLo : TON;
+	xTON_Pr_ECW_LoLoPrio2 : TON;
+	xGRMIN_Pr_ECW_LoLoPrio2 : GR_MINR;
+	xGRMIN_Pr_ECW_Lo1 : GR_MINR;
+	xTON_Pr_ECW_Lo1 : TON;
+	xGRMAX_Pr_ECW_Hi : GR_MAXR;
+	xTON_Pr_ECW_Hi : TON;
+	xGRMAX_Pr_ECW_HiHi : GR_MAXR;
+	xGRMAX_Pr_ECW_HiHiPrio2 : GR_MAXR;
+	xTON_Pr_ECW_HiHi : TON;
+	xR_TRIG_ECWP_start : R_TRIG; (*v4.11 new Pr_ECW plausibility check*)
+	xTP_Pr_ECW_Min_ECWP_start : TP; (*v4.11new Pr_ECW plausibility check*)
+	xTOF_Pcheck_MonDeact : TOF; (*v4.11new Pr_ECW plausibility check*)
+	xRS_Pr_ECW_Min_Meas : RS; (*v4.11 new Pr_ECW plausibility check*)
+	xF_TRIG_Pcheck_Meas : F_TRIG; (*v4.11 new Pr_ECW plausibility check*)
+	rN_ThresSpeedUp : REAL; (*v4.11 new Pr_ECW plausibility check*)
+	rN_ThresEngStop : REAL; (*v4.11 new Pr_ECW plausibility check*)
+	bPcheck_Pr_ECW_MonRel : BOOL; (*v4.11 new Pr_ECW plausibility check*)
+	rPr_ECW_MinValue : REAL := 100.0; (*v4.11 new Pr_ECW plausibility check*)
+	rPr_ECW_MaxValue : REAL := 0.0; (*v4.11 new Pr_ECW plausibility check*)
+	xTON_NEng_Exc_Thres : TON;
+END_VAR

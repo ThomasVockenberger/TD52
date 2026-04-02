@@ -1,0 +1,82 @@
+(*
+T: FUNCTION_BLOCK PLAUSIBILITY
+FW: NO
+CI#: 96
+QSL: 12
+QVE: 12
+QVPC: 12
+QPar: 6
+QFBI: 4
+*)
+@V 1 2 0
+sbPC_Active	1	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 3 0
+sbN_Standstill	2	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 4 0
+sDI_Mon	3	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 9 0
+bWarning	4	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 10 0
+iOUT_ET	5	VAR_OUTPUT	@TYP:4
+		     
+
+;
+
+@V 1 11 0
+bOUT_OK_PC	6	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 5 0
+xKeepAMM_2s	7	VAR	@FB:91
+		     
+
+;
+
+@V 1 6 0
+xET_TP	8	VAR	@FB:116
+		     
+
+;
+
+@V 1 7 0
+xR_TRIG	9	VAR	@FB:39
+		     
+
+;
+
+@V 1 8 0
+xRS	10	VAR	@FB:41
+		     
+
+;
+
+@V 2 2 0
+__PLAUSIBILITY@0	11	VAR	@TYP:43
+		     
+
+;
+
+@V 2 16 0
+__PLAUSIBILITY@1	12	VAR	@TYP:1
+		     
+
+;
+

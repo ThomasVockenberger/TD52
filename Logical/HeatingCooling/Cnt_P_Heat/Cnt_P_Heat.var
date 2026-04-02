@@ -1,0 +1,3 @@
+VAR
+	xImp_Cnt_P_Heat : R_TRIG; (* R_TRIG heat counter *)
+END_VAR

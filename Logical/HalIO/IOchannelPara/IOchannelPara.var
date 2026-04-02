@@ -1,0 +1,4 @@
+VAR
+	ucCount : USINT;
+	iHW_Factor : INT := 0;	(* hardware factor for different physical analog out cards *)
+END_VAR

@@ -1,0 +1,57 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: general_EC
+ * File: general_EC.var
+ * Author: WaldharM
+ * Created: May 22, 2012
+ ********************************************************************
+ * Local variables of program general_EC
+ ********************************************************************)
+VAR
+	TOF_Act_Release : TOF;
+	TON_Act_Mon_Release : TON;
+	TON_WGActDO : TON;
+	TON_Act_Mon_Rel_WG : TON;
+	bWG_Dem_Active : BOOL := 0; (* general wastegate demand *)
+	iConf_WG_EEPROM : INT := 0; (*EEPROM configuration state*)
+	tDataSend_WG_EEPROM : ARRAY[0..7] OF BYTE := [8(0)]; (*WG data to send to EEPROM*)
+	tDataSend_WG_ID : ARRAY[0..7] OF BYTE := [8(0)]; (*WG data to send to EEPROM*)
+	bEEPROMRead : BOOL := 0; (*Config EEPROM read modus*)
+	bEEPROMWrite : BOOL := 0; (*Config EEPROM write modus*)
+	iConf_WG_EEPROM_Next : INT := 0; (*next EEPROM configuration step*)
+	xTON_WG_EEPROMTransfer : TON := (0); (*Timer to EEPROM Transfer*)
+	bTON_WG_EEPROMTransfer : BOOL := 0; (*Trigger timer to EEPROM Transfer*)
+	xTON_WG_EEPROMReading : TON := (0);(*Timer to EEPROM Reading*)
+	bTON_WG_EEPROMReading : BOOL := 0; (*Trigger timer to EEPROM Reading*)
+	xTP_WG_EEPROMReadLim : TP := (0); (*Timer EEPROM Read Actuator Info*)
+	xTON_WG_ConfigReset : TON := (0); (*Timer to reset CAN WG actuators*)
+	xTON_WG_WaitingConfig : TON := (0); (*Timer to stop configuration if actuator not responsding*)
+	bTON_WG_Conf_Reset : BOOL := 0; (*Trigger timer to reset CAN WG actuators set flag*)
+	bTON_WG_WaitConfig : BOOL := 0; (*Trigger timer to stop configuration if actuator not responsding*)
+	tCAN_WG_ReqSN : ARRAY[0..3] OF BYTE := [4(0)]; (*CAN wastegate request serial number addresses*)
+	tCAN_WG_ReqSw : ARRAY[0..3] OF BYTE := [4(0)]; (*CAN wastegate request software version addresses*)
+	tCAN_WG_ReqOpH : ARRAY[0..1] OF BYTE := [2(0)]; (*CAN wastegate request operating time addresses*)
+	tCAN_WG_ReqSrcAdd : ARRAY[0..1] OF BYTE := [2(0)]; (*CAN wastegate request source address addresses*)
+	sWG_CAN_Sw_Tmp : STRING[12] := '000000000000'; (*CAN WG actuator software version - TEMPORARY variable*)
+	sWG_CAN_SN_Tmp : STRING[10] := '0000000000'; (*CAN WG actuator serial number - TEMPORARY variable*)
+	tWG_CAN_OpH_Tmp : ARRAY[0..3] OF BYTE := [4(0)]; (*CAN WG actuator operating time [h] - TEMPORARY variable*)
+	tWG_CAN_ActSrcAdd_Tmp : BYTE := 0; (*CAN WG actuator source address - TEMPORARY variable*)
+	iReq_WG_Data : USINT := 0; (*CAN wastegate request data - MSG indexing*)
+	tWG_CAN_EEPROM_Msg : BYTE := 0; (*CAN wastegate expected MSG (0-7 BITS) general*)
+	tWG_CAN_A_EEPROM_Msg : BYTE := 0; (*CAN wastegate expected MSG (0-7 BITS) WG_A*)
+	sTmp_WG_CAN : STRING[4] := ''; (*Temp variable CAN read message*)
+	tWG_CAN_B_EEPROM_Msg : BYTE := 0; (*CAN wastegate expected MSG (0-7 BITS) WG_B*)
+	bWG_CAN_A_ReadEEPROM : BOOL := 0; (*Info (S/N,Sw Vers,OpH,SrcAdd) Device A Read Modus*)
+	bWG_CAN_B_ReadEEPROM : BOOL := 0; (*Info (S/N,Sw Vers,OpH,SrcAdd) Device B Read Modus*)
+	bWG_ReadFunction : BOOL := 0; (*read device Info can be done *)
+	iCnt_OpHours_Old : DINT := 0; (*actual OpH*)
+	bWG_CAN_A_OpH_Reading : BOOL := 0; (*OpH Device A Read Modus*)
+	bWG_CAN_B_OpH_Reading : BOOL := 0; (*OpH Device B Read Modus*)
+	bWG_CAN_A_Reading : BOOL := 0; (*Info WG_A Reading*)
+	bWG_CAN_B_Reading : BOOL := 0; (*Info WG_B Reading*)
+	bWG_CAN_A_Learn_On : BOOL := 0; (*WG CAN A Learn State*)
+	bWG_CAN_B_Learn_On : BOOL := 0; (*WG CAN B Learn State*)
+	bCAN_WG_Dem_Active : BOOL := 0; (*CAN Wastegate demand active*)
+	bWG_CAN_OpH_Rdy : BOOL := 0; (*Reading OpH Ready*)
+END_VAR

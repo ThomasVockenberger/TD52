@@ -1,0 +1,81 @@
+﻿FUNCTION_BLOCK ERV_PC_NotDone
+{ VariableWorksheet := 'Variables' }
+﻿{GroupDefinition(0,'PC NotDone')}
+
+VAR_INPUT {Group(0)}
+    {LINE(1)}
+    PARA_Cust_Active : SAFEBOOL; (*PARA 15188: Customer room ventilation - Monitoring active*)
+    {LINE(2)}
+    sbN_Standstill : SAFEBOOL; (*Actual engine speed <  80rpm*)
+    {LINE(3)}
+    bERV_Lou_PC_OP : BOOL; (*CPU IN: Engine room ventilation - Plausibility check for opening the louvres*)
+    {LINE(4)}
+    bERV_Lou_PC_CL : BOOL; (*CPU IN: Engine room ventilation - Plausibility check for closing the louvres*)
+    {LINE(5)}
+    siNr_PC_NotDone_Save : SAFEDINT; (*Number of plausibility checks not performed - Last cycle*)
+    {LINE(6)}
+    siNr_PC_NotDone_Stored : SAFEDINT; (*Number of plausibility checks not performed - Stored value*)
+    {LINE(7)}
+    sbNr_PC_ND_TakeOver : SAFEBOOL; (*Take over number of plausibility checks not performed - Stored value*)
+END_VAR
+
+VAR_OUTPUT {Group(0)}
+    {LINE(19)}
+    siNr_PC_NotDone : SAFEDINT; (*Number of plausibility checks not performed*)
+END_VAR
+
+VAR {Group(0)}
+    {LINE(8)}
+    xTON_1h : TON_S; (*FuB*)
+    {LINE(9)}
+    xTON_OP : TON_S; (*FuB*)
+    {LINE(10)}
+    xTON_CL : TON_S; (*FuB*)
+    {LINE(11)}
+    xR_TRIG_OP : R_TRIG_S; (*FuB*)
+    {LINE(12)}
+    xF_TRIG_SS : F_TRIG_S; (*FuB*)
+    {LINE(13)}
+    xF_TRIG_CL : F_TRIG_S; (*FuB*)
+    {LINE(14)}
+    xRS_OP : RS_S; (*FuB*)
+    {LINE(15)}
+    xRS_CL : RS_S; (*FuB*)
+    {LINE(16)}
+    sbF_TRIG_SS : SAFEBOOL; (*Falling edge of engine standstill*)
+    {LINE(17)}
+    sbPC_Done : SAFEBOOL; (*Plausibility check was done*)
+    {LINE(18)}
+    sbStandstill_1h : SAFEBOOL; (*Engine standstill longer than one hour*)
+END_VAR
+
+{ CodeWorksheet := 'ERV_PC_NotDone', Type := '.st' }
+﻿(* FuB ERV_PC_NotDone *) (* Plausibility check not done *)
+
+xF_TRIG_CL(CLK  := BOOL_TO_SAFEBOOL(bERV_Lou_PC_CL));
+xF_TRIG_SS(CLK  := sbN_Standstill);
+sbF_TRIG_SS     := xF_TRIG_SS.Q;
+
+xTON_1h(IN      := sbN_Standstill OR_S sbF_TRIG_SS,  PT:= SAFETIME#1h);
+sbStandstill_1h := xTON_1h.Q;
+
+xTON_OP(IN      := BOOL_TO_SAFEBOOL(bERV_Lou_PC_OP),                    PT:= SAFETIME#170s);
+xTON_CL(IN      := BOOL_TO_SAFEBOOL(bERV_Lou_PC_CL) OR_S xF_TRIG_CL.Q,  PT:= SAFETIME#170s);
+xR_TRIG_OP(CLK  := xTON_OP.Q);
+
+xRS_OP(SET      := xR_TRIG_OP.Q,                 RESET1:= NOT_S (sbN_Standstill OR_S sbF_TRIG_SS));
+xRS_CL(SET      := xTON_CL.Q AND_S xF_TRIG_CL.Q, RESET1:= NOT_S (sbN_Standstill OR_S sbF_TRIG_SS));
+sbPC_Done       := xRS_OP.Q1 AND_S xRS_CL.Q1;
+
+IF    PARA_Cust_Active  THEN siNr_PC_NotDone  := SAFEDINT#0;
+ELSIF sbPC_Done         THEN siNr_PC_NotDone  := SAFEDINT#0;                        (* Plausibility check done *)
+ELSIF sbF_TRIG_SS THEN                                                              (* Engine start *)
+    IF sbStandstill_1h  THEN siNr_PC_NotDone  := siNr_PC_NotDone_Save + SAFEDINT#1; (* Standstill was longer than 1h *)
+    END_IF;    
+END_IF;
+
+IF sbNr_PC_ND_TakeOver  THEN siNr_PC_NotDone  := siNr_PC_NotDone_Stored;            (* Take over stored value *)
+END_IF;
+
+
+END_FUNCTION_BLOCK

@@ -1,0 +1,23 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: ERDF
+ * File: ERDF.var
+ * Author: 502297651
+ * Created: April 28, 2014
+ ********************************************************************
+ * Local variables of program ERDF
+ ********************************************************************)
+VAR
+	xSR_MCB_Dcp : SR; (* instance for MCB from DIs*) (* OldName: SR_Plim; Cycle:0; *)
+	bMCB_Dcp : BOOL; (* MCB on/off from Digital inputs *) (* OldName: bGCP_Plim; Cycle:0; *)
+	xSR_MCB_DcpQu : SR; (* instance for MCB from DIs*) (* OldName: SR_Plim; Cycle:0; *)
+	bMCB_DcpQu : BOOL; (* MCB on/off from Digital inputs *) (* OldName: bGCP_Plim; Cycle:0; *)
+	xSR_RSE : SR; (* instance for MCB from DIs*) (* OldName: SR_Plim; Cycle:0; *)
+	bRSE : BOOL; (* MCB on/off from Digital inputs *) (* OldName: bGCP_Plim; Cycle:0; *)
+	xSR_MCB_RelSync : SR; (*instance for MCB_RelSync*) (* OldName: R_TRIG_GCE; Cycle:2; *)
+	bMCB_RelSync : BOOL := FALSE;
+	xTON_GTE : TON := (0);
+	TP_Msg2888 : TP := (0);
+	TP_Msg2889 : TP := (0);
+END_VAR

@@ -1,0 +1,56 @@
+(*Diagnostics*)
+VAR
+	tDiagClient : DiagClient_Struct := (0); (*ANSL Client Diagnostics*)
+	tDiagEngine : ARRAY[0..32] OF DiagConn_Struct := [33((0))]; (*ANSL Communication Diagnostics for Engine Communication*)
+	tDiagMaster : ARRAY[0..4] OF DiagConn_Struct := [5((0))]; (*ANSL Communication Diagnostics for Master Communication*)
+	iNum_InterruptedEngines : USINT := 0; (*Number of interrupted communications to engines*)
+	iNum_InterruptedMasters : USINT := 0; (*Number of interrupted communications to masters*)
+END_VAR
+(*General Communication Variables*)
+VAR
+	bRedundantMasterEnabled : BOOL := FALSE; (*Enable if master control is redundant*)
+	bEng2EngComEnabled : BOOL := FALSE; (*Enabled if valid parameters for Engine Number Min and Max are supplied, disabled for min and max = 0*)
+	bEng2MasComEnabled : BOOL := FALSE; (*Enabled if valid parameters for Master Number Min and Max are supplied, disabled for min and max = 0*)
+	iEngNumMin : USINT := 0; (*First Engine Number  in in the communication*)
+	iEngNumMax : USINT := 0; (*Last Engine Number in the communication*)
+	iMasNumMax : USINT := 0; (*Last Master Number in the communication*)
+	iMasNumMin : USINT := 0; (*First Master Number in the communication*)
+	iSelectedMaster : USINT := 1; (*Master that is controling this engine. Default master 1*)
+END_VAR
+(*ANSL Communication Output/Input Data Variables*)
+VAR
+	tPlantCom_M2E_In_10ms : ARRAY[0..4] OF tData_M2E_10ms_Struct := [5((0))]; (*Fast Inputs (Master -> Engine)*)
+	tPlantCom_E2M_Out_10ms : ARRAY[0..4] OF tData_E2M_10ms_Struct := [5((0))]; (*Fast Outputs (Engine -> Master)*)
+	tPlantCom_E2E_In_10ms : ARRAY[0..32] OF tData_E2E_10ms_Struct := [33((0))]; (*Fast Inputs (Engine -> Engine)*)
+	tPlantCom_E2E_Out_10ms : tData_E2E_10ms_Struct := (0); (*Fast Outputs (Engine -> Engine)*)
+	tPlantCom_M2E_In_100ms : ARRAY[0..4] OF tData_M2E_100ms_Struct := [5((0))]; (*Slow Inputs (Master -> Engine)*)
+	tPlantCom_E2M_Out_100ms : ARRAY[0..4] OF tData_E2M_100ms_Struct := [5((0))]; (*Slow Outputs (Engine -> Master)*)
+	tPlantCom_E2E_In_100ms : ARRAY[0..32] OF tData_E2E_100ms_Struct := [33((0))]; (*Slow Inputs (Engine -> Engine)*)
+	tPlantCom_E2E_Out_100ms : tData_E2E_100ms_Struct := (0); (*Slow Outputs (Engine -> Engine)*)
+END_VAR
+(*Plant Communication Data Variables*)
+VAR
+	tPlantCom_E2E_Out_Hmi : tHmiDiagnosticData := (0); (*HMI Data Outputs (Engine -> Engine)*)
+	tPlantCom_E2E_In_Hmi : ARRAY[0..32] OF tHmiDiagnosticData := [33((0))]; (*HMI Data Inputs (Engine -> Engine)*)
+	tPlantCom_E2M_Out_Hmi : ARRAY[0..4] OF tHmiDiagnosticData := [5((0))]; (*HMI Data Outputs (Engine -> Master)*)
+	tPlantCom_M2E_In_Hmi : ARRAY[0..4] OF tHmiDiagnosticData := [5((0))]; (*HMI Data Inputs (Master  -> Engine)*)
+	tPlantCom_E2E_Out_Bus : tPlantComData_EngEng_Struct := (0); (*Bus Data Outputs (Engine -> Engine)*)
+	tPlantCom_E2E_In_Bus : ARRAY[0..32] OF tPlantComData_EngEng_Struct := [33((0))]; (*Bus Data Inputs (Engine -> Engine)*)
+	tPlantCom_E2M_Out_Bus : ARRAY[0..4] OF tPlantComData_EngEng_Struct := [5((0))]; (*Bus Data Outputs (Engine -> Master)*)
+	tPlantCom_M2E_In_Bus : ARRAY[0..4] OF tPlantComData_EngMas_Struct := [5((0))]; (*Bus Data Inputs (Master  -> Engine)*)
+	tPlantCom_E2E_Out_Plc : tPlantComData_EngEng_Struct := (0); (*Plc Data Outputs (Engine -> Engine)*)
+	tPlantCom_E2E_In_Plc : ARRAY[0..32] OF tPlantComData_EngEng_Struct := [33((0))]; (*Plc Data Inputs (Engine -> Engine)*)
+	tPlantCom_E2M_Out_Plc : ARRAY[0..4] OF tPlantComData_EngEng_Struct := [5((0))]; (*Plc Data Outputs (Engine -> Master)*)
+	tPlantCom_M2E_In_Plc : ARRAY[0..4] OF tPlantComData_EngMas_Struct := [5((0))]; (*Plc Data Inputs (Master  -> Engine)*)
+	tPlantCom_M2E_In_Active : ARRAY[0..4] OF tPlantComActive_EngMas_Struct := [5((0))];
+	tPlantCom_E2E_In_Active : ARRAY[0..32] OF tPlantComActive_EngEng_Struct := [33((0))];
+END_VAR
+(*Plant Communication Array Size Constants*)
+VAR CONSTANT
+	iAnaArrayMaxAll : USINT := iAnaArrayMax10ms+iAnaArrayMax100ms+1; (*Number of Analog Signals (Fast + Slow)*)
+	iDigArrayMaxAll : USINT := iDigArrayMax10ms+iDigArrayMax100ms+1; (*Number of Digital Signals (Fast + Slow)*)
+	iAnaArrayMax10ms : USINT := 15; (*Number of Fast Analog Signals*)
+	iDigArrayMax10ms : USINT := 31; (*Number of Fast Digital Signals*)
+	iAnaArrayMax100ms : USINT := 31; (*Number of Slow Analog Signals*)
+	iDigArrayMax100ms : USINT := 63; (*Number of Slow Digital Signals*)
+END_VAR

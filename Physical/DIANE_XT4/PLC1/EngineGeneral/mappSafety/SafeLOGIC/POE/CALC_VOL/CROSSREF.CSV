@@ -1,0 +1,8 @@
+sbCalc_Run,POE\CALC_VOL\Variables.VBB,0,,3,0,,,SAFEBOOL,,,VAR_INPUT,NOT USED,,Run calculation
+sbCycle_Tick,POE\CALC_VOL\Variables.VBB,0,,2,0,,,SAFEBOOL,,,VAR_INPUT,NOT USED,,Cyclic ticker
+sbVol_Air_Stored_TakeOver,POE\CALC_VOL\Variables.VBB,0,,8,0,,,SAFEBOOL,,,VAR_INPUT,NOT USED,,Take over stored purge air volume
+siN_EngAct,POE\CALC_VOL\Variables.VBB,0,,4,0,,,SAFEDINT,,,VAR_INPUT,NOT USED,,Actual engine speed [rpm]
+siVol_Air,POE\CALC_VOL\Variables.VBB,0,,6,0,,,SAFEDINT,,,VAR_INPUT,NOT USED,,Calculated purge air volume - Last cycle  [Liter]
+siVol_Air_Calc,POE\CALC_VOL\Variables.VBB,0,,9,0,,,SAFEDINT,,,VAR_OUTPUT,NOT USED,,Calculated purge air volume [Liter]
+siVol_Air_Stored,POE\CALC_VOL\Variables.VBB,0,,7,0,,,SAFEDINT,,,VAR_INPUT,NOT USED,,Stored purge air volume [Liter]
+siVol_Stroke,POE\CALC_VOL\Variables.VBB,0,,5,0,,,SAFEDINT,,,VAR_INPUT,NOT USED,,Parameter for Stroke volume per crankshaft turn [Liter / tu

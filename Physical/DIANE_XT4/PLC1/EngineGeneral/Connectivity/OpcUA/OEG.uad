@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="7" ArVersion="H4.90">
+  <Aliases>
+    <ACLAliases>
+      <ACL Id="1">
+        <ACE RoleName="Administrators" Access="0x017F" />
+      </ACL>
+    </ACLAliases>
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView AclId="1">
+    <Module Name="EngineGeneral">
+      <GlobalVariables>
+        <Variable Name="MM2VIS" AutomaticEnable="True">
+          <Variable Name="iPc_T_CBearing_Gain" EnableArrayElements="True" />
+          <Variable Name="iPc_T_CBearing_Sig" EnableArrayElements="True" />
+          <Variable Name="iSt_T_CBearing_Calib" EnableArrayElements="True" />
+          <Variable Name="rT_CBearing" EnableArrayElements="True" />
+          <Variable Name="rT_MBearing" EnableArrayElements="True" />
+          <Variable Name="SlowdownTime" EnableArrayElements="True" />
+          <Variable Name="rVel_VibSens" EnableArrayElements="True" />
+          <Variable Name="rVel_VibSens_Max" EnableArrayElements="True" />
+          <Variable Name="rF_VibSens_Max" EnableArrayElements="True" />
+          <Variable Name="rVel_VibSens_Band1" EnableArrayElements="True" />
+          <Variable Name="rVel_VibSens_Band2" EnableArrayElements="True" />
+          <Variable Name="rVel_VibSens_Band3" EnableArrayElements="True" />
+          <Variable Name="rVel_VibSens_Band4" EnableArrayElements="True" />
+          <Variable Name="rVel_VibSens_Band5" EnableArrayElements="True" />
+          <Variable Name="rVel_VibSens_Band6" EnableArrayElements="True" />
+          <Variable Name="rVel_VibSens_Band7" EnableArrayElements="True" />
+          <Variable Name="rVel_VibSens_Band8" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="Para" AutomaticEnable="True">
+          <Variable Name="rP_Ramp_DecGrad_Norm" EnableArrayElements="True" />
+          <Variable Name="rP_Island_Split_DecGrad_Norm" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="VIS2MM" AutomaticEnable="True" />
+        <Variable Name="MM2VIS_sPLC" AutomaticEnable="True" />
+        <Variable Name="VIS2MM_sPLC" AutomaticEnable="True" />
+      </GlobalVariables>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

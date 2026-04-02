@@ -1,0 +1,100 @@
+VAR
+	IN_SY : IN_SY_struct;
+	OUT_SY : OUT_SY_struct;
+	MM2VIS : MM2VIS_Struct;
+	VIS2MM : VIS2MM_Struct;
+	Para : Para_SY_struct;
+	ParaFactoryDefault : Para_SY_struct;
+	pm : Para_SY_struct;
+	xEngType : EngType; (*engine type*)
+	xOpMode : OpMode; (*engine operation mode*)
+	gcb : cb_Struct; (*generator circuit breaker*)
+	ccb : cb_Struct; (*customer circuit breaker(generator)*)
+	mcb : cb_Struct; (*mains circuit breaker*)
+	mains : mns_Struct; (*mains*)
+	bOMSS_Stop : BOOL; (*engine operation mode selection*)
+	bOMSS_Man : BOOL; (*engine operation mode selection*)
+	bOMSS_Aut : BOOL; (*engine operation mode selection*)
+	bOMSS_Test : BOOL; (*engine operation mode selection*)
+	bOMSS_Scav : BOOL; (*engine operation mode selection*)
+	bOMSS_MAT : BOOL; (*engine operation mode selection*)
+	bSyOMSS_Off : BOOL; (*synchronization operating mode selection OFF*)
+	bSyOMSS_Man : BOOL; (*synchronization operating mode selection MANUAL*)
+	bSyOMSS_Aut : BOOL; (*synchronization operating mode selection AUTO*)
+	bMCB_GnlWarning : BOOL; (*Vis mains circuit breaker general warning*)
+	bGCB_GnlWarning : BOOL; (*Vis generator circuit breaker general warning*)
+	ANW_ENTR : BOOL;
+	bb_alive : BOOL; (*bus bar alive*)
+	bb_dead : BOOL; (*bus bar dead*)
+	bGnlTrip : BOOL;
+	bGnlTrip1 : BOOL;
+	bGnlTrip2 : BOOL;
+	bGnlTrip3 : BOOL;
+	bGnlWarning : BOOL;
+	bMainsReturn : BOOL; (*mains ok with delay*)
+	BLOCK_NS : BOOL; (*demand lock customer mcb while running island operation*)
+	BLOUT : BOOL; (*demand blackout for demand load shedding*)
+	bMsg1041_Test : BOOL; (*test*)
+	bMsg1042_Test : BOOL; (*test*)
+	dmnd_black_start : BOOL; (*demand bloack-out start for demand load shedding*)
+	bDem_Island : BOOL; (*Demand island*)
+	DR_MIN : BOOL; (*Speed below 1400 rpm*)
+	gcb_opf_delay : BOOL; (*opening mcb after delay *)
+	GEN_OSP : BOOL; (*Feedback Generator without voltage*)
+	bN_EngStart : BOOL; (*engine start speed*)
+	P_MAX : BOOL; (*Power above > 95%*)
+	bRelease_Island : BOOL; (*release island for W1175 and block engine*)
+	rel_load_shedd : BOOL; (*load shedding ok*)
+	ton_gcb_dmnd_sy : TON; (*gcb demand synchronization*)
+	any_gcb_on_bb : BOOL; (*any gcb on bus bar*)
+	other_gcb_on : BOOL; (*other gcb on*)
+	other_gcb_off : BOOL; (*other gcb off*)
+	all_gcb_off_bb : BOOL; (*all gcb off bus bar*)
+	any_eng_oper_and_gcb_on_bb : BOOL; (*any engine operating an gcb on bus bar*)
+	no_eng_run_bb : BOOL; (*no engine runing bus bar*)
+	any_eng_run_bb : BOOL; (*any engine runing bus bar*)
+	any_gcb_psf_bb : BOOL; (*any gcb position signal failure bus bar*)
+	any_gcb_opf_bb : BOOL; (*any gcb opening failure bus bar*)
+	any_gcb_alarm_bb : BOOL; (*any gcb alarm bus bar*)
+	any_gcb_edc_bb : BOOL; (*any gcb demand close to dead bus bar *)
+	rel_gcb_on2d_bb : BOOL; (*release gcb on to dead bus bar*)
+	rel_mcb_on2d_bb : BOOL; (*release mcb on to dead bus bar*)
+	bP_Lo : BOOL; (*power low - open gcb, power signal missing*)
+	rel_sy_puls : BOOL; (* release synchronizing pulse *)
+	pulse_sy_line : BOOL; (*pulse synch line*)
+	rU_Gen_Norm : REAL; (*generator voltage [%]*)
+	dmnd_synchline : BOOL; (*demand_synchline*)
+	mcb_man_on2dead_bb : BOOL; (*mcb manual closing to dead bus bar*)
+	mcb_aut_on2dead_bb : BOOL; (*mcb autom. closing to dead bus bar*)
+	rel_i_adl : BOOL; (*release island operation from anti detonation logic*)
+	sel_gcb_mains_cut_off : BOOL; (*select cut off from mains with gcb when mains failure*)
+	rel_black_start : BOOL; (*release black start*)
+	bGen_DeExc_Rdy : BOOL; (*generator deexitation ready*)
+	bGen_DeExc_Err : BOOL; (*generator deexitation failed*)
+	P_MIN_W : BOOL; (*generator power low for load shedding warning*)
+	P_MIN_A : BOOL; (*generator power low for load shedding trip*)
+	bGCB_MOn : BOOL; (*generator cb manual on command form visu button*)
+	bGCB_MOf : BOOL; (*generator cb manual on command form visu button*)
+	bMCB_MOn : BOOL; (*mains cb manual on command form visu button*)
+	bMCB_MOf : BOOL; (*mains cb manual on command form visu button*)
+	bTestBenchMode : BOOL; (*test bench mode active*)
+	iEngNr : INT; (*engine number according IP address*)
+	bAMM_ClosCond_Ok : BOOL; (* Closing condition result*)
+	bBBClosCond_Fault : BOOL; (* Closing conditions fault detected - status after mains failure*)
+	bAMM_AfMnsF_ClosCond_Ok : BOOL; (* Closing condition result*)
+	bGCBctd : BOOL; (*gcb closing time deviation*)
+	bResetWarning : BOOL; (*reset from AmmBase*)
+	bGenDeexitDem : BOOL; (*demand generator deexcitation*)
+	bB9085_GCB_ParaSaved : BOOL; (* B9085 Parameters saved to the GCB *)
+	bW9382_GCB_Wear80 : BOOL; (* W9382 GCB contact wear over 80% *)
+	bW9383_GCB_Wear95 : BOOL; (* W9383 GCB contact wear over 95% *)
+END_VAR
+VAR CONSTANT
+	iPakistan : INT := 92; (*country code*)
+	iHolland : INT := 31; (*country code*)
+END_VAR
+VAR
+	bNoInitDetected : BOOL := FALSE; (*allways true, except 1cycle on init up*)
+	bF_BB_ClosCond : BOOL := 0;
+	bF_BB_AfMnsF_ClosCond : BOOL := 0;
+END_VAR

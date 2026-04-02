@@ -1,0 +1,4 @@
+VAR
+	xCANopen_CB : CANopen := (0); (*FuB*)
+	iCANopen_CB_Err : UDINT := 0; (*error variable for the CAN FUB*)
+END_VAR

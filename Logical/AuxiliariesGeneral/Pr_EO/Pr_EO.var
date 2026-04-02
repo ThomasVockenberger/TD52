@@ -1,0 +1,41 @@
+VAR
+	xGR_MAXR_VSD2 : GR_MAXR;
+	xGR_MAXR_M_D800 : GR_MAXR;
+	xGR_MAXR_VSD1 : GR_MAXR;
+	xGR_MAXR_PrEO_Hi1 : GR_MAXR;
+	xGR_MAXR_PrEO_Hi : GR_MAXR;
+	xGR_MAXR_ODR : GR_MAXR;
+	xGR_MAXR_DR_ODR : GR_MAXR;
+	xGR_MINR_ODRW : GR_MINR;
+	xGR_MINR_ODRA : GR_MINR;
+	xGR_MINR_DREHZ : GR_MINR;
+	xRS_FG_ODRUW : RS;
+	xTON_VSD2 : TON;
+	xTON_PrEO_Hi1 : TON;
+	xTON_Z_ODR : TON;
+	xTON_VSD1 : TON;
+	xTON_UW_ODR_MAX : TON;
+	xTON_PrEO_Hi : TON;
+	xTON_OilPressure : TON;
+	xTON_ODR : TON;
+	xTON_ODRW : TON;
+	xTON_ODR_N : TON;
+	xTON_ODRA : TON;
+	xSigScal_PrEO : xSigScal_R;
+	rPr_EO_StopValue : REAL := 0.0;
+	xR_TRIG_StoreStopValue : R_TRIG;
+	rPr_EO_RunValue : REAL := 0.0;
+	xR_TRIG_StoreRunValue : R_TRIG;
+	xTON_EngStop : TON;
+	xTON_EngRun : TON;
+	xGR_MINR_OD_AF_RA : GR_MINR;
+	xTON_ODR_AF_A : TON;
+	rPr_EOaF_StopValue : REAL := 0.0; (*SWAT920/5*)
+	rPr_EOaF_RunValue : REAL := 0.0; (*SWAT920/5*)
+	xGR_MAXR_DPr_EOF_Limit1 : GR_MAXR; (*FuB*)
+	xGR_MAXR_DPr_EOF_Limit2 : GR_MAXR; (*FuB*)
+	xGR_MAXR_DPr_EOF_Limit3 : GR_MAXR; (*FuB*)
+	bRelMon_Pr_bEOF : BOOL; (*Release monitoring - oil pressure before oil filter*)
+	bRelMon_Pr_aEOF : BOOL; (*Release monitoring - oil pressure after oil filter*)
+	bRelMon_Pr_EngLubOil : BOOL; (*Release monitoring - oil pressure engine lube oil*)
+END_VAR

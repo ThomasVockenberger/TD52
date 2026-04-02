@@ -1,0 +1,66 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: PFPDR
+ * File: PFPDR.var
+ * Author: 502423184
+ * Created: April 15, 2016
+ ********************************************************************
+ * Local variables of program PFPDR
+ ********************************************************************)
+VAR
+	bStartPFPDR_Man : BOOL;
+	bAbortPFPDR_Man : BOOL;
+	rCA_Sum_Corr : REAL;
+	iCnt_Prof : USINT;
+	bBad_Cyl : ARRAY[0..24] OF BOOL;
+	bStartPFPDR_Auto : BOOL;
+	rCnt_Good_Cyl : REAL;
+	rCA_Good_Corr : REAL;
+	bPFPDR_new : BOOL;
+	iCnt_Cyl : USINT;
+	xPFPDR : PFPDR;
+	bProf_Corr_Act : BOOL;
+END_VAR
+VAR CONSTANT
+	bDeleteCylArray : ARRAY[0..24] OF BOOL := [25(0)];
+	rDeleteCylArray : ARRAY[0..24] OF REAL := [25(0.0)];
+END_VAR
+VAR
+	rCA_PFPDR_ABS_Offs : REAL;
+	bLeanox_Man_old : BOOL;
+	i : USINT;
+	rCA_IP_Prof_Lim : ARRAY[0..24] OF REAL;
+	rCA_IP_Prof : ARRAY[0..24] OF REAL;
+	xLCRRamp_IP : ARRAY[0..24] OF LCRRamp;
+END_VAR
+VAR CONSTANT
+	YELLOW : INT := 46;
+	GREEN : INT := 2;
+END_VAR
+VAR
+	iNum_Disp : USINT;
+	iNum_Select : INT;
+	bSim : BOOL := 0;
+	bSimEGT : BOOL := 0;
+	rT_SimEGT : REAL;
+END_VAR
+VAR CONSTANT
+	DeleteData : tPFPDR_Data := (0);
+END_VAR
+VAR
+	Data_Act : tPFPDR_Data := (0);
+	Data_Cache : tPFPDR_Data := (0);
+	rTi_MaxUp : REAL;
+	rTi_MaxDown : REAL;
+	rTi_Cnt : REAL;
+	rTi_Max : REAL;
+	rCA_IP_Prof_Raw : ARRAY[0..24] OF REAL;
+	rP_Set_Unred_Norm_Old : REAL;
+	bAbortPFPDR_Auto : BOOL;
+	xTOF_bMsg2896 : TOF;
+	xTOF_bMsg2895 : TOF;
+	rRatio : REAL;
+	rCA_IP_DR_Prof_Temp : REAL;
+	rCA_IP_DR_Min : REAL;
+END_VAR

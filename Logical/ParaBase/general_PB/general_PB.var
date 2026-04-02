@@ -1,0 +1,4 @@
+VAR
+	xEngType : EngType;
+	xOpMode : OpMode;
+END_VAR

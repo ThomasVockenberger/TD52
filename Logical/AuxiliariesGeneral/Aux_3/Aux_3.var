@@ -1,0 +1,18 @@
+VAR
+	OMIN_NK : BOOL := FALSE; (*engine oil level low for cool down*)
+	VSP_24 : BOOL := 0; (* Vorschmierpumpe 24V *)
+	xGR_MAXR_VSD1 : GR_MAXR;
+	xTON_VSD1 : TON;
+	A_VORW_TEMP1 : BOOL;
+	xTON_BTRB : TON;
+	xTON_MaxPreLubeTime : TON;
+	xTON_OMIN : TON;
+	xTP_EOP_ManDem : TP;
+	xTON_PreLube : TON;
+	xTON_EOP1DC : TON;
+	xTOF_EmLubDem : TOF;
+	xTOF_Eng_MonOff : TOF; (*monitoring off*)
+	xTON_ECW_HydrPreH_Dem : TON;
+	xTOF_ECW_HydrPreH_Dem : TOF;
+	xTOF_EOVal_DemOpen : TOF; (*TOF for engine oil refill valve  V4.14*)
+END_VAR

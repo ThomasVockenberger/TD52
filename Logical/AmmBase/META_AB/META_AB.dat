@@ -1,0 +1,134 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2023
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V03.99.00.00	06.03.2013	Weitzer		generated for modular software	 
+;				29.05.2013	Zengerer	initial dependencies prepared
+;				04.12.2013	lettenb.	dependencies added	
+; V04.00.00.00	31.01.2014	lettenb.	version + dependencies changed		
+; V04.00.02.00	17.06.2014	lettenb.	alarm test corr.		
+; V04.00.03.00	22.07.2014	lettenb.	para_task update, rem.reset logic corr.	
+; V04.03.00.00	02.03.2015	lettenb.	version + dependencies changed (920, CB added
+; V04.03.01.00	02.11.2015	Zengerer 	MANDATORYMODULE statement
+; V04.04.00.00	12.07.2016	Zengerer 	increase version number for changed customized array size
+;               20.03.2017	lettenb.	remote reset from bus prepared, 3003(2103,2104) modif.acc.functional safety
+;				07.08.2017	502413184	no shut down due TO a measuring signal failure, SWAT #3
+; V04.05.00.00	22.12.2017	lettenb.	comment added: Safety-related application software source code (EN 13849-1 / 4.6.3)
+; V04.05.01.00	08.03.2018	lettenb.	reset: 1056 bugfix
+; V04.07.00.00	18.09.2018	lettenb.	iMsg declaration + library corrected
+; V04.07.01.00	24.06.2019	Schmid		valid alarm number space for alarm test/bypass increased from 3999 to 9999
+; V04.08.00.00	24.10.2019	Schmid		test bit for dry test bench added
+; V04.11.00		02.02.2022	Denk		Group alarm for HMI internal warnings
+; V04.12.00		25.01.2023	Perktold	AmmGnlTC5 created - derived from former parts of AmmGnl
+; V04.13.00		04.12.2023	Bencze		Risk Class 10 for remote reset of safety trips
+; V04.14.00		16.12.2024	Maran		bugfix: reset of temporary alarm bypass when the Service button is switched off (issue #1621)
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID: 16961
+"<MODUL>AB</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.14.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"<PARA1 Name='iEng_Motortype' MIN='208' MAX='920' />"
+"<PARA2 Name='rN_EngStart_LimHi' MIN='50.0' MAX='2200.0' />"
+"<PARA3 />"
+"<PARA4 />"
+"<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Statement, if engine operation is also allowed without this module (FALSE) or if this module´s parameter check passing is mandatory (TRUE)
+"<MANDATORYMODULE>TRUE</MANDATORYMODULE>"
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_AB</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='PB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='HA' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='AG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='CB' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='SY' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='OP' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='IG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='HC' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='VE' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='VI' VERSION='04.11.00.00' />" 
+"	<DEPENDENCY MODULE='EX' VERSION='04.06.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='TR' VERSION='04.05.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='GC' VERSION='04.05.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='CU' VERSION='04.06.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='MO' VERSION='04.05.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='IC' VERSION='04.05.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='CP' VERSION='04.06.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='EC' VERSION='04.06.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='EG' VERSION='04.06.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='KN' VERSION='04.06.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='GM' VERSION='04.05.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='GT' VERSION='04.06.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='SA' VERSION='04.06.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='KL' VERSION='04.06.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='GD' VERSION='04.05.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='CH' VERSION='04.06.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='GR' VERSION='04.06.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='EM' VERSION='04.06.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY VISVERSION='02.13.00.00' />" 			;Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	Alarm management. "
+"	</General>	"
+""
+"	<F1 Name='Alarm reset' LastModified='4.00.03.00'>"
+"	Alarms reset, warnings reset, remote reset.	"
+"	</F1>"
+"	<F2 Name='Collect messages' LastModified='4.03.00.00'>"
+"	Generation: general alarm, general warning, triptype 123.	"
+"	</F2>"
+"	<F3 Name='Alarm test' LastModified='4.03.00.00'>"
+"	Alarm test mode control. Protection test function	"
+"	</F3>"
+""
+"	<Info>"
+"	UPDATE 4.07.00.00: iMsg size extended to 9999 "
+"	</Info>"
+""
+"	<Customized LastModified='3.99.00.00'>"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

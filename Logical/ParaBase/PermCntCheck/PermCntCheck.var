@@ -1,0 +1,15 @@
+VAR
+	bTrig_Cnt_Set : BOOL; (*internal*)
+	TON_Trig_Cnt_Set : TON;
+	usStatus_gettime : UINT;
+	tGetTime : RTCtime_typ; (*clock time*)
+	iGetTime : UDINT; (*date/clock time converted*)
+	cnt : USINT := 0;
+END_VAR
+VAR CONSTANT
+	iConst_TimeSimpleYear : UDINT := 2000; (*2000 or 2020 as constant to reduction ofcalendaryear  to 2 or 1 digits, to reduce integer value*)
+END_VAR
+VAR
+	iCnt_Tolerance : DINT := 1;
+	bOpt_AllwaysSetAllCnt : BOOL := FALSE; (*FALSE only corrects lower counters, that have detected errors (those that are lower than database values).*)
+END_VAR

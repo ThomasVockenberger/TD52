@@ -1,0 +1,89 @@
+﻿FUNCTION_BLOCK ERV_NrFailed
+{ VariableWorksheet := 'Variables' }
+﻿{GroupDefinition(0,'Calc of failed number')}
+
+VAR_INPUT {Group(0)}
+    {LINE(1)}
+    PARA_Nr : SAFEDINT; (*PARA: Number of groups*)
+    {LINE(2)}
+    PARA_NrMaxErr : SAFEDINT; (*PARA: Maximum allowed number of groups with failure*)
+    {LINE(3)}
+    sbSL_OK_Group1 : SAFEBOOL; (*Safety loop OK - Group 1*)
+    {LINE(4)}
+    sbSL_OK_Group2 : SAFEBOOL; (*Safety loop OK - Group 2*)
+    {LINE(5)}
+    sbSL_OK_Group3 : SAFEBOOL; (*Safety loop OK - Group 3*)
+    {LINE(6)}
+    sbSL_OK_Group4 : SAFEBOOL; (*Safety loop OK - Group 4*)
+    {LINE(7)}
+    sbSL_OK_Group5 : SAFEBOOL; (*Safety loop OK - Group 5*)
+    {LINE(8)}
+    sbSL_OK_Group6 : SAFEBOOL; (*Safety loop OK - Group 6*)
+END_VAR
+
+VAR_OUTPUT {Group(0)}
+    {LINE(17)}
+    bAMM_NrMax : BOOL; (*TRIP - Reached maximum allowed number of groups with failure*)
+    {LINE(18)}
+    sbSL_OK_All : SAFEBOOL; (*Safety loop OK - Maximum allowed number of groups with failure not reached*)
+END_VAR
+
+VAR {Group(0)}
+    {LINE(9)}
+    iNrErr : SAFEDINT; (*Number of groups with failure*)
+    {LINE(10)}
+    iGroup1_Err : SAFEDINT; (*Group 1 with failure*)
+    {LINE(11)}
+    iGroup2_Err : SAFEDINT; (*Group 2 with failure*)
+    {LINE(12)}
+    iGroup3_Err : SAFEDINT; (*Group 3 with failure*)
+    {LINE(13)}
+    iGroup4_Err : SAFEDINT; (*Group 4 with failure*)
+    {LINE(14)}
+    iGroup5_Err : SAFEDINT; (*Group 5 with failure*)
+    {LINE(15)}
+    iGroup6_Err : SAFEDINT; (*Group 6 with failure*)
+    {LINE(16)}
+    xKeepAMM_2s_A1 : KeepAMM_2s; (*FuB*)
+END_VAR
+
+{ CodeWorksheet := 'ERV_NrFailed', Type := '.st' }
+﻿(* FuB CALC_VOL *)
+
+iGroup1_Err := SAFEDINT#0;
+iGroup2_Err := SAFEDINT#0;
+iGroup3_Err := SAFEDINT#0;
+iGroup4_Err := SAFEDINT#0;
+iGroup5_Err := SAFEDINT#0;
+iGroup6_Err := SAFEDINT#0;
+
+IF sbSL_OK_Group1 = SAFEFALSE THEN 
+    iGroup1_Err := SAFEDINT#1; 
+END_IF;
+IF sbSL_OK_Group2 = SAFEFALSE THEN 
+    iGroup2_Err := SAFEDINT#1; 
+END_IF;
+IF sbSL_OK_Group3 = SAFEFALSE THEN 
+    iGroup3_Err := SAFEDINT#1; 
+END_IF;
+IF sbSL_OK_Group4 = SAFEFALSE THEN 
+    iGroup4_Err := SAFEDINT#1; 
+END_IF;
+IF sbSL_OK_Group5 = SAFEFALSE THEN 
+    iGroup5_Err := SAFEDINT#1; 
+END_IF;
+IF sbSL_OK_Group6 = SAFEFALSE THEN 
+    iGroup6_Err := SAFEDINT#1; 
+END_IF;
+
+iNrErr := iGroup1_Err + iGroup2_Err + iGroup3_Err + iGroup4_Err + iGroup5_Err + iGroup6_Err;                    (*Number of groups with failure*)
+
+sbSL_OK_All := NOT_S(((PARA_Nr = SAFEDINT#1 OR_S PARA_NrMaxErr = SAFEDINT#0) AND_S iNrErr > SAFEDINT#0) OR_S    (*Safety loop - all groups*)
+                     ( PARA_Nr > SAFEDINT#1 AND_S iNrErr > PARA_NrMaxErr)                                    );
+
+xKeepAMM_2s_A1(sbAMMxxxx := sbSL_OK_All);
+
+bAMM_NrMax  := xKeepAMM_2s_A1.bAMMxxxx;                                                                         (*TRIP*)
+ 
+    
+END_FUNCTION_BLOCK

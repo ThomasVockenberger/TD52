@@ -1,0 +1,12 @@
+VAR
+	iSysTime_Diff : DINT := 0;
+	iSysTime_Old : DINT := 0;
+	iSysTime_DiffMax : DINT := 0;
+	bCycleTimeViolTriggered : BOOL := FALSE;
+	nextAdr : UDINT := 0;
+	AddData : STRING[80] := '';
+	strLen : UDINT := 0;
+	ArEventLogWrite_0 : ArEventLogWrite := (0);
+	ArEventLogGetIdent_0 : ArEventLogGetIdent := (0);
+	TON_SecondTick : TON := (0);
+END_VAR

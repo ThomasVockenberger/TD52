@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExternalHardware>
+  <Modules>
+    <Module ModuleID="FBE.00000230_UR20_FBC_PL" Version="1.0" OrderNumber="UR20-FBC-PL">
+      <SourceFile OriginalFile="00000230_UR20_FBC_PL.xdd" TranslationFile="H81JGBCZ.ext" />
+      <SourceFile OriginalFile="CP_PL.png" TranslationFile="BKVG92CN.ext" />
+      <SourceFile OriginalFile="UR20.ico" TranslationFile="77SU29HZ.ext" />
+    </Module>
+    <Module ModuleID="FBE.00000230_UR20_16DI_P" Version="1.0" OrderNumber="UR20-16DI-P / 1315200000">
+      <SourceFile OriginalFile="00000230_UR20_16DI_P.xdd" TranslationFile="0S6T9LTV.ext" />
+      <SourceFile OriginalFile="UR20_16DI_P.png" TranslationFile="PVKCBFOZ.ext" />
+      <SourceFile OriginalFile="UR20.ico" TranslationFile="81MAT3SW.ext" />
+    </Module>
+    <Module ModuleID="FBE.00000230_UR20_16DO_P" Version="1.0" OrderNumber="UR20-16DO-P / 1315250000">
+      <SourceFile OriginalFile="00000230_UR20_16DO_P.xdd" TranslationFile="8TX5BPNH.ext" />
+      <SourceFile OriginalFile="UR20_16DO_P.png" TranslationFile="1CTYFT00.ext" />
+      <SourceFile OriginalFile="UR20.ico" TranslationFile="1A1NR9M1.ext" />
+    </Module>
+    <Module ModuleID="FBE.00000230_UR20_4AI_UI_12" Version="1.0" OrderNumber="UR20-4AI-UI-12 / 1394390000">
+      <SourceFile OriginalFile="00000230_UR20_4AI_UI_12.xdd" TranslationFile="T2VAXGG6.ext" />
+      <SourceFile OriginalFile="UR20_4AI_UI_12.png" TranslationFile="9JVPXXTA.ext" />
+      <SourceFile OriginalFile="UR20.ico" TranslationFile="IDL8W0TP.ext" />
+    </Module>
+    <Module ModuleID="FBE.00000230_UR20_4AO_UI_16" Version="1.0" OrderNumber="UR20-4AO-UI-16 / 1315680000">
+      <SourceFile OriginalFile="00000230_UR20_4AO_UI_16.xdd" TranslationFile="BWJSCFE9.ext" />
+      <SourceFile OriginalFile="UR20_4AO_UI_16.png" TranslationFile="H6MJ4MUU.ext" />
+      <SourceFile OriginalFile="UR20.ico" TranslationFile="6WZ57KDD.ext" />
+    </Module>
+    <Module ModuleID="FBE.00000230_UR20_4AI_RTD_DIAG" Version="1.0" OrderNumber="UR20-4AI-RTD-DIAG / 1315700000">
+      <SourceFile OriginalFile="00000230_UR20_4AI_RTD_DIAG.xdd" TranslationFile="R0EOXNE2.ext" />
+      <SourceFile OriginalFile="UR20_4AI_RTD_DIAG.png" TranslationFile="JF8B7X43.ext" />
+      <SourceFile OriginalFile="UR20.ico" TranslationFile="FWI0KKG6.ext" />
+    </Module>
+    <Module ModuleID="FBE.00000230_UR20_4AI_TC_DIAG" Version="1.0" OrderNumber="UR20-4AI-TC-DIAG / 1315710000">
+      <SourceFile OriginalFile="00000230_UR20_4AI_TC_DIAG.xdd" TranslationFile="S1CAAXR1.ext" />
+      <SourceFile OriginalFile="UR20_4AI_TC_DIAG.png" TranslationFile="SFBLAZL4.ext" />
+      <SourceFile OriginalFile="UR20.ico" TranslationFile="2T9YOTWJ.ext" />
+    </Module>
+  </Modules>
+</ExternalHardware>

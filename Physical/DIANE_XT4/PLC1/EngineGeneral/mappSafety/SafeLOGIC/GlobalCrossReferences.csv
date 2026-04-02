@@ -1,0 +1,1042 @@
+bAMM_A2383,POE\Main\PhaseII.GB,14,OUT,225,15,Write,,BOOL,NSQX7.3,,VAR_GLOBAL,GLOBAL,,TRIP 2383: Exhaust gas backpressure high
+bAMM_A2384,POE\Main\Func01_Speed.GB,5,OUT,37,27,Write,,BOOL,NSQX7.4,,VAR_GLOBAL,GLOBAL,,TRIP 2384: Speed deviation to ignition speed
+bAMM_A2385,POE\Main\Func02_Misfire.GB,1,OUT,20,0,Write,,BOOL,NSQX7.5,,VAR_GLOBAL,GLOBAL,,TRIP 2385: Ignition system failure
+bAMM_A2386,POE\Main\Func03_04_Oil_Pr.GB,4,OUT,40,52,Write,,BOOL,NSQX7.6,,VAR_GLOBAL,GLOBAL,,TRIP 2386: Oil pressure minimum
+bAMM_A2386,POE\Main\Func03_04_Oil_Pr.GB,7,IN,182,17,Read,,BOOL,NSQX7.6,,VAR_GLOBAL,GLOBAL,,TRIP 2386: Oil pressure minimum
+bAMM_A2387,POE\Main\Func03_04_Oil_Pr.GB,2,OUT,14,53,Write,,BOOL,NSQX7.7,,VAR_GLOBAL,GLOBAL,,TRIP 2387: Oil pressure measuring signal failure
+bAMM_A2388,POE\Main\Func03_04_Oil_Pr.GB,4,OUT,98,52,Write,,BOOL,NSQX8.0,,VAR_GLOBAL,GLOBAL,,TRIP 2388: Oil pressure implausible value
+bAMM_A2388,POE\Main\Func03_04_Oil_Pr.GB,7,IN,183,17,Read,,BOOL,NSQX8.0,,VAR_GLOBAL,GLOBAL,,TRIP 2388: Oil pressure implausible value
+bAMM_A2389,POE\Main\Func03_04_Oil_Pr.GB,6,OUT,64,52,Write,,BOOL,NSQX8.1,,VAR_GLOBAL,GLOBAL,,TRIP 2389: Oil pressure deviation between the sensors
+bAMM_A2389,POE\Main\Func03_04_Oil_Pr.GB,7,IN,184,17,Read,,BOOL,NSQX8.1,,VAR_GLOBAL,GLOBAL,,TRIP 2389: Oil pressure deviation between the sensors
+bAMM_A2390,POE\Main\Func03_04_Oil_Pr.GB,6,OUT,90,52,Write,,BOOL,NSQX8.2,,VAR_GLOBAL,GLOBAL,,TRIP 2390: Oil pressure maximum (sensor drift)
+bAMM_A2390,POE\Main\Func03_04_Oil_Pr.GB,7,IN,185,17,Read,,BOOL,NSQX8.2,,VAR_GLOBAL,GLOBAL,,TRIP 2390: Oil pressure maximum (sensor drift)
+bAMM_A2391,POE\Main\Func03_04_Oil_Pr.GB,7,IN,181,17,Read,,BOOL,NSQX8.3,,VAR_GLOBAL,GLOBAL,,TRIP 2391: Oil pressure sensor value frozen
+bAMM_A2391,POE\Main\Func03_04_Oil_Pr.GB,8,OUT,158,52,Write,,BOOL,NSQX8.3,,VAR_GLOBAL,GLOBAL,,TRIP 2391: Oil pressure sensor value frozen
+bAMM_A2392,POE\Main\Func03_04_Oil_Pr.GB,10,OUT,251,52,Write,,BOOL,NSQX8.4,,VAR_GLOBAL,GLOBAL,,TRIP 2392: Oil pressure after pump maximum
+bAMM_A2392,POE\Main\Func03_04_Oil_Pr.GB,11,IN,282,17,Read,,BOOL,NSQX8.4,,VAR_GLOBAL,GLOBAL,,TRIP 2392: Oil pressure after pump maximum
+bAMM_A2393,POE\Main\Func03_04_Oil_Pr.GB,2,OUT,234,53,Write,,BOOL,NSQX8.5,,VAR_GLOBAL,GLOBAL,,TRIP 2393: Oil pressure after pump measuring signal failure
+bAMM_A2394,POE\Main\Func03_04_Oil_Pr.GB,10,OUT,259,52,Write,,BOOL,NSQX8.6,,VAR_GLOBAL,GLOBAL,,TRIP 2394: Oil pressure after pump implausible value
+bAMM_A2394,POE\Main\Func03_04_Oil_Pr.GB,13,IN,283,17,Read,,BOOL,NSQX8.6,,VAR_GLOBAL,GLOBAL,,TRIP 2394: Oil pressure after pump implausible value
+bAMM_A2395,POE\Main\Func03_04_Oil_Pr.GB,12,OUT,278,51,Write,,BOOL,NSQX8.7,,VAR_GLOBAL,GLOBAL,,TRIP 2395: Oil pressure after pump sensor value frozen
+bAMM_A2395,POE\Main\Func03_04_Oil_Pr.GB,13,IN,284,17,Read,,BOOL,NSQX8.7,,VAR_GLOBAL,GLOBAL,,TRIP 2395: Oil pressure after pump sensor value frozen
+bAMM_A2396,POE\Main\Func05_06_ECW_Pr.GB,5,OUT,13,59,Write,,BOOL,NSQX9.0,,VAR_GLOBAL,GLOBAL,,TRIP 2396: Engine cooling water pressure minimum
+bAMM_A2396,POE\Main\Func05_06_ECW_Pr.GB,10,IN,48,17,Read,,BOOL,NSQX9.0,,VAR_GLOBAL,GLOBAL,,TRIP 2396: Engine cooling water pressure minimum
+bAMM_A2397,POE\Main\Func05_06_ECW_Pr.GB,2,OUT,6,59,Write,,BOOL,NSQX9.1,,VAR_GLOBAL,GLOBAL,,TRIP 2397: Engine cooling water pressure measuring signal f
+bAMM_A2398,POE\Main\Func05_06_ECW_Pr.GB,5,OUT,20,59,Write,,BOOL,NSQX9.2,,VAR_GLOBAL,GLOBAL,,TRIP 2398: Engine cooling water pressure deviation between 
+bAMM_A2398,POE\Main\Func05_06_ECW_Pr.GB,10,IN,49,17,Read,,BOOL,NSQX9.2,,VAR_GLOBAL,GLOBAL,,TRIP 2398: Engine cooling water pressure deviation between 
+bAMM_A9408,POE\Main\Func05_06_ECW_Pr.GB,8,OUT,31,59,Write,,BOOL,NSQX9.3,,VAR_GLOBAL,GLOBAL,,TRIP 9408: Engine cooling water pressure maximum (sensor dr
+bAMM_A9408,POE\Main\Func05_06_ECW_Pr.GB,10,IN,50,17,Read,,BOOL,NSQX9.3,,VAR_GLOBAL,GLOBAL,,TRIP 9408: Engine cooling water pressure maximum (sensor dr
+bAMM_A9409,POE\Main\Func05_06_ECW_Pr.GB,8,OUT,44,59,Write,,BOOL,NSQX9.4,,VAR_GLOBAL,GLOBAL,,TRIP 9409: Engine cooling water pressure sensor value froze
+bAMM_A9409,POE\Main\Func05_06_ECW_Pr.GB,10,IN,51,17,Read,,BOOL,NSQX9.4,,VAR_GLOBAL,GLOBAL,,TRIP 9409: Engine cooling water pressure sensor value froze
+bAMM_A9410,POE\Main\Func05_06_ECW_Pr.GB,13,IN,162,17,Read,,BOOL,NSQX9.5,,VAR_GLOBAL,GLOBAL,,TRIP 9410: Engine cooling water pressure after pump maximum
+bAMM_A9410,POE\Main\Func05_06_ECW_Pr.GB,14,OUT,147,59,Write,,BOOL,NSQX9.5,,VAR_GLOBAL,GLOBAL,,TRIP 9410: Engine cooling water pressure after pump maximum
+bAMM_A9411,POE\Main\Func05_06_ECW_Pr.GB,2,OUT,138,59,Write,,BOOL,NSQX9.6,,VAR_GLOBAL,GLOBAL,,TRIP 9411: Engine cooling water pressure after pump measuri
+bAMM_A9412,POE\Main\Func05_06_ECW_Pr.GB,13,IN,163,17,Read,,BOOL,NSQX9.7,,VAR_GLOBAL,GLOBAL,,TRIP 9412: Engine cooling water pressure after pump sensor 
+bAMM_A9412,POE\Main\Func05_06_ECW_Pr.GB,14,OUT,158,59,Write,,BOOL,NSQX9.7,,VAR_GLOBAL,GLOBAL,,TRIP 9412: Engine cooling water pressure after pump sensor 
+bAMM_A9413,POE\Main\Func07_Grid.GB,5,OUT,4,34,Write,,BOOL,NSQX10.0,,VAR_GLOBAL,GLOBAL,,TRIP 9413: Generator circuit breaker opening failure
+bAMM_A9413,POE\Main\Func07_Grid.GB,7,IN,171,19,Read,,BOOL,NSQX10.0,,VAR_GLOBAL,GLOBAL,,TRIP 9413: Generator circuit breaker opening failure
+bAMM_A9414,POE\Main\Func07_Grid.GB,7,IN,172,19,Read,,BOOL,NSQX10.1,,VAR_GLOBAL,GLOBAL,,TRIP 9414: Generator circuit breaker position feedback erro
+bAMM_A9414,POE\Main\Func07_Grid.GB,8,OUT,1,34,Write,,BOOL,NSQX10.1,,VAR_GLOBAL,GLOBAL,,TRIP 9414: Generator circuit breaker position feedback erro
+bAMM_A9415,POE\Main\Func08_Overload.GB,1,OUT,1,5,Write,,BOOL,NSQX10.2,,VAR_GLOBAL,GLOBAL,,TRIP 9415: Generator overload/short circuit
+bAMM_A9416,POE\Main\Func08_Overload.GB,1,OUT,11,5,Write,,BOOL,NSQX10.3,,VAR_GLOBAL,GLOBAL,,TRIP 9416: Generator protection trip
+bAMM_A9417,POE\VENTILATION\VENTILATION.GB,2,OUT,11,38,Write,,BOOL,NSQX10.4,,VAR_GLOBAL,GLOBAL,,TRIP 9417: Collective fault in room ventilation
+bAMM_A9418,POE\Main\Func10_EmStop.GB,2,OUT,6,59,Write,,BOOL,NSQX10.5,,VAR_GLOBAL,GLOBAL,,TRIP 9418: Emergency stop push button - Module interface pa
+bAMM_A9419,POE\Main\Func10_EmStop.GB,2,OUT,16,59,Write,,BOOL,NSQX10.6,,VAR_GLOBAL,GLOBAL,,TRIP 9419: Emergency stop push button
+bAMM_A9420,POE\Main\Func11_SafetyLoop.GB,1,OUT,2,0,Write,,BOOL,NSQX10.7,,VAR_GLOBAL,GLOBAL,,TRIP 9420: Safety loop 1 tripped - Module control panel
+bAMM_A9421,POE\Main\Func12_Gas.GB,2,OUT,241,44,Write,,BOOL,NSQX11.0,,VAR_GLOBAL,GLOBAL,,TRIP 9421: Failure gas train 1
+bAMM_A9421,POE\Main\Func12_Gas.GB,13,IN,46,23,Read,,BOOL,NSQX11.0,,VAR_GLOBAL,GLOBAL,,TRIP 9421: Failure gas train 1
+bAMM_A9422,POE\Main\Func12_Gas.GB,5,OUT,275,44,Write,,BOOL,NSQX11.1,,VAR_GLOBAL,GLOBAL,,TRIP 9422: Failure gas train 2
+bAMM_A9422,POE\Main\Func12_Gas.GB,13,IN,47,23,Read,,BOOL,NSQX11.1,,VAR_GLOBAL,GLOBAL,,TRIP 9422: Failure gas train 2
+bAMM_A9423,POE\Main\Func12_Gas.GB,5,OUT,309,44,Write,,BOOL,NSQX11.2,,VAR_GLOBAL,GLOBAL,,TRIP 9423: Failure gas train 3
+bAMM_A9423,POE\Main\Func12_Gas.GB,13,IN,48,23,Read,,BOOL,NSQX11.2,,VAR_GLOBAL,GLOBAL,,TRIP 9423: Failure gas train 3
+bAMM_A9424,POE\Main\Func12_Gas.GB,8,OUT,342,44,Write,,BOOL,NSQX11.3,,VAR_GLOBAL,GLOBAL,,TRIP 9424: Failure gas train 4
+bAMM_A9424,POE\Main\Func12_Gas.GB,16,IN,49,23,Read,,BOOL,NSQX11.3,,VAR_GLOBAL,GLOBAL,,TRIP 9424: Failure gas train 4
+bAMM_A9425,POE\Main\SafetyLoop.GB,2,OUT,2,44,Write,,BOOL,NSQX11.4,,VAR_GLOBAL,GLOBAL,,TRIP 9425: Safety functions module interface panel - output
+bAMM_A9425,POE\Main\SafetyLoop.GB,4,IN,114,23,Read,,BOOL,NSQX11.4,,VAR_GLOBAL,GLOBAL,,TRIP 9425: Safety functions module interface panel - output
+bAMM_A9426,POE\Main\SafetyLoop.GB,2,OUT,11,44,Write,,BOOL,NSQX11.5,,VAR_GLOBAL,GLOBAL,,TRIP 9426: Safety functions module control panel - output n
+bAMM_A9426,POE\Main\SafetyLoop.GB,4,IN,115,23,Read,,BOOL,NSQX11.5,,VAR_GLOBAL,GLOBAL,,TRIP 9426: Safety functions module control panel - output n
+bAMM_A9427,POE\Main\SafetyLoop.GB,2,OUT,19,44,Write,,BOOL,NSQX11.6,,VAR_GLOBAL,GLOBAL,,TRIP 9427: Engine type mismatch
+bAMM_A9427,POE\Main\SafetyLoop.GB,4,IN,116,23,Read,,BOOL,NSQX11.6,,VAR_GLOBAL,GLOBAL,,TRIP 9427: Engine type mismatch
+bAMM_A9428,POE\VENTILATION\VENTILATION.GB,41,OUT,1268,22,Write,,BOOL,NSQX11.7,,VAR_GLOBAL,GLOBAL,,TRIP 9428: Room ventilation failure - Plausibility check pe
+bAMM_A9429,POE\Main\SafetyLoop.GB,4,IN,110,23,Read,,BOOL,NSQX12.0,,VAR_GLOBAL,GLOBAL,,TRIP 9429: Software handshake not valid
+bAMM_A9429,POE\Main\SafetyLoop.GB,5,OUT,96,44,Write,,BOOL,NSQX12.0,,VAR_GLOBAL,GLOBAL,,TRIP 9429: Software handshake not valid
+bAMM_A9433,POE\Main\Func00_IO_Para.GB,2,OUT,19,47,Write,,BOOL,NSQX12.1,,VAR_GLOBAL,GLOBAL,,TRIP 9433: Malfunction of safe communication channel
+bAMM_A9434,POE\Main\Func05_06_ECW_Pr.GB,8,OUT,212,59,Write,,BOOL,NSQX12.2,,VAR_GLOBAL,GLOBAL,,TRIP 9434: Engine cooling water pump - Difference pressure 
+bAMM_A9434,POE\Main\Func05_06_ECW_Pr.GB,16,IN,239,17,Read,,BOOL,NSQX12.2,,VAR_GLOBAL,GLOBAL,,TRIP 9434: Engine cooling water pump - Difference pressure 
+bAMM_A9437,POE\Main\PhaseII.GB,2,OUT,52,17,Write,,BOOL,NSQX19.7,,VAR_GLOBAL,GLOBAL,,TRIP 9437: Scavenging flap not closed
+bAMM_A9438,POE\Main\PhaseII.GB,5,OUT,106,17,Write,,BOOL,NSQX20.0,,VAR_GLOBAL,GLOBAL,,TRIP 9438: Scavenging flap failure
+bAMM_A9441,POE\HeatWaterSys\HeatWaterSys.GB,1,OUT,2,0,Write,,BOOL,NSQX20.1,,VAR_GLOBAL,GLOBAL,,TRIP 9441: Customer heating water circuit failure
+bAMM_A9442,POE\HeatWaterSys\HeatWaterSys.GB,1,OUT,29,0,Write,,BOOL,NSQX20.2,,VAR_GLOBAL,GLOBAL,,TRIP 9442: High temperature heating water level minimum
+bAMM_A9443,POE\HeatWaterSys\HeatWaterSys.GB,1,OUT,31,0,Write,,BOOL,NSQX20.3,,VAR_GLOBAL,GLOBAL,,TRIP 9443: High temperature heating water pressure 1 maximu
+bAMM_A9444,POE\HeatWaterSys\HeatWaterSys.GB,1,OUT,34,0,Write,,BOOL,NSQX20.4,,VAR_GLOBAL,GLOBAL,,TRIP 9444: High temperature heating water pressure 2 maximu
+bAMM_A9445,POE\HeatWaterSys\HeatWaterSys.GB,1,OUT,37,0,Write,,BOOL,NSQX20.5,,VAR_GLOBAL,GLOBAL,,TRIP 9445: High temperature heating water pressure 1 minimu
+bAMM_A9446,POE\HeatWaterSys\HeatWaterSys.GB,1,OUT,48,0,Write,,BOOL,NSQX20.6,,VAR_GLOBAL,GLOBAL,,TRIP 9446: High temperature heating water pressure 2 minimu
+bAMM_A9447,POE\HeatWaterSys\HeatWaterSys.GB,1,OUT,39,0,Write,,BOOL,NSQX20.7,,VAR_GLOBAL,GLOBAL,,TRIP 9447: High temperature heating water temperature 1 max
+bAMM_A9448,POE\HeatWaterSys\HeatWaterSys.GB,1,OUT,41,0,Write,,BOOL,NSQX21.0,,VAR_GLOBAL,GLOBAL,,TRIP 9448: High temperature heating water temperature 2 max
+bAMM_A9449,POE\HeatWaterSys\HeatWaterSys.GB,1,OUT,52,0,Write,,BOOL,NSQX21.1,,VAR_GLOBAL,GLOBAL,,TRIP 9449: High temperature heating water flow minimum
+bAMM_A9450,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,180,0,Write,,BOOL,NSQX21.2,,VAR_GLOBAL,GLOBAL,,TRIP 9450: Low temperature heating water level minimum
+bAMM_A9451,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,182,0,Write,,BOOL,NSQX21.3,,VAR_GLOBAL,GLOBAL,,TRIP 9451: Low temperature heating water pressure 1 maximum
+bAMM_A9452,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,185,0,Write,,BOOL,NSQX21.4,,VAR_GLOBAL,GLOBAL,,TRIP 9452: Low temperature heating water pressure 2 maximum
+bAMM_A9453,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,188,0,Write,,BOOL,NSQX21.5,,VAR_GLOBAL,GLOBAL,,TRIP 9453: Low temperature heating water pressure 1 minimum
+bAMM_A9454,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,199,0,Write,,BOOL,NSQX21.6,,VAR_GLOBAL,GLOBAL,,TRIP 9454: Low temperature heating water pressure 2 minimum
+bAMM_A9455,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,190,0,Write,,BOOL,NSQX21.7,,VAR_GLOBAL,GLOBAL,,TRIP 9455: Low temperature heating water temperature 1 maxi
+bAMM_A9456,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,192,0,Write,,BOOL,NSQX22.0,,VAR_GLOBAL,GLOBAL,,TRIP 9456: Low temperature heating water temperature 2 maxi
+bAMM_A9457,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,203,0,Write,,BOOL,NSQX22.1,,VAR_GLOBAL,GLOBAL,,TRIP 9457: Low temperature heating water flow minimum
+bAMM_A9458,POE\Main\Func11_SafetyLoop.GB,1,OUT,12,0,Write,,BOOL,NSQX22.2,,VAR_GLOBAL,GLOBAL,,TRIP 9458: Safety loop 2 tripped - Module control panel
+bAMM_A9459,POE\Main\Func11_SafetyLoop.GB,1,OUT,21,0,Write,,BOOL,NSQX22.3,,VAR_GLOBAL,GLOBAL,,TRIP 9457: Safety loop tripped - Module interface panel
+bAMM_A9480,POE\VENTILATION\VENTILATION.GB,5,OUT,130,39,Write,,BOOL,NSQX36.0,,VAR_GLOBAL,GLOBAL,,TRIP 9480: Room ventilation failure - Doors
+bAMM_A9481,POE\VENTILATION\VENTILATION.GB,14,OUT,271,39,Write,,BOOL,NSQX36.1,,VAR_GLOBAL,GLOBAL,,TRIP 9481: Room ventilation failure - Inlet air fan
+bAMM_A9482,POE\VENTILATION\VENTILATION.GB,26,OUT,334,39,Write,,BOOL,NSQX36.2,,VAR_GLOBAL,GLOBAL,,TRIP 9482: Room ventilation failure - Inlet air louvre
+bAMM_A9483,POE\VENTILATION\VENTILATION.GB,35,OUT,410,39,Write,,BOOL,NSQX36.3,,VAR_GLOBAL,GLOBAL,,TRIP 9483: Room ventilation failure - Outlet air louvre
+bAMM_A9484,POE\Main\Func12_Gas.GB,11,OUT,385,44,Write,,BOOL,NSQX36.4,,VAR_GLOBAL,GLOBAL,,TRIP 9484: Failure gas train for decentral gas addition
+bAMM_A9484,POE\Main\Func12_Gas.GB,16,IN,400,23,Read,,BOOL,NSQX36.4,,VAR_GLOBAL,GLOBAL,,TRIP 9484: Failure gas train for decentral gas addition
+bAMM_W9514,POE\Main\Func01_Speed.GB,8,OUT,118,26,Write,,BOOL,NSQX12.3,,VAR_GLOBAL,GLOBAL,,WARNING 9514: Speed signal not valid
+bAMM_W9515,POE\Main\Func02_Misfire.GB,1,OUT,15,0,Write,,BOOL,NSQX12.4,,VAR_GLOBAL,GLOBAL,,WARNING 9515: Ignition plausibility check failure
+bAMM_W9516,POE\Main\Func02_Misfire.GB,1,OUT,62,0,Write,,BOOL,NSQX12.5,,VAR_GLOBAL,GLOBAL,,WARNING 9516: Ignition system running - signal not valid
+bAMM_W9517,POE\Main\Func07_Grid.GB,1,IN,50,21,Read,,BOOL,NSQX12.6,,VAR_GLOBAL,GLOBAL,,WARNING 9517: Release of synchronizing and load - output no
+bAMM_W9517,POE\Main\Func07_Grid.GB,2,OUT,2,33,Write,,BOOL,NSQX12.6,,VAR_GLOBAL,GLOBAL,,WARNING 9517: Release of synchronizing and load - output no
+bAMM_W9517,POE\Main\Func07_Grid.GB,10,IN,179,18,Read,,BOOL,NSQX12.6,,VAR_GLOBAL,GLOBAL,,WARNING 9517: Release of synchronizing and load - output no
+bAMM_W9518,POE\Main\Func07_Grid.GB,2,OUT,3,33,Write,,BOOL,NSQX12.7,,VAR_GLOBAL,GLOBAL,,WARNING 9518: Generator circuit breaker release undervoltag
+bAMM_W9518,POE\Main\Func07_Grid.GB,4,IN,66,21,Read,,BOOL,NSQX12.7,,VAR_GLOBAL,GLOBAL,,WARNING 9518: Generator circuit breaker release undervoltag
+bAMM_W9518,POE\Main\Func07_Grid.GB,10,IN,180,18,Read,,BOOL,NSQX12.7,,VAR_GLOBAL,GLOBAL,,WARNING 9518: Generator circuit breaker release undervoltag
+bAMM_W9519,POE\Main\Func07_Grid.GB,5,OUT,84,33,Write,,BOOL,NSQX13.0,,VAR_GLOBAL,GLOBAL,,WARNING 9519: Generator circuit breaker position ON - signa
+bAMM_W9519,POE\Main\Func07_Grid.GB,10,IN,181,18,Read,,BOOL,NSQX13.0,,VAR_GLOBAL,GLOBAL,,WARNING 9519: Generator circuit breaker position ON - signa
+bAMM_W9520,POE\Main\Func07_Grid.GB,5,OUT,87,33,Write,,BOOL,NSQX13.1,,VAR_GLOBAL,GLOBAL,,WARNING 9520: Generator circuit breaker position OFF - sign
+bAMM_W9520,POE\Main\Func07_Grid.GB,10,IN,182,18,Read,,BOOL,NSQX13.1,,VAR_GLOBAL,GLOBAL,,WARNING 9520: Generator circuit breaker position OFF - sign
+bAMM_W9521,POE\Main\Func08_Overload.GB,1,OUT,3,4,Write,,BOOL,NSQX13.2,,VAR_GLOBAL,GLOBAL,,WARNING 9521: Generator overload/short circuit - signal not
+bAMM_W9522,POE\Main\Func08_Overload.GB,1,OUT,13,4,Write,,BOOL,NSQX13.3,,VAR_GLOBAL,GLOBAL,,WARNING 9522: Generator protection trip - signal not valid
+bAMM_W9523,POE\VENTILATION\VENTILATION.GB,2,OUT,17,38,Write,,BOOL,NSQX13.4,,VAR_GLOBAL,GLOBAL,,WARNING 9523: Collective fault in room ventilation - plausi
+bAMM_W9524,POE\VENTILATION\VENTILATION.GB,2,OUT,30,38,Write,,BOOL,NSQX13.5,,VAR_GLOBAL,GLOBAL,,WARNING 9524: Collective fault in room ventilation - signal
+bAMM_W9525,POE\Main\Func10_EmStop.GB,2,OUT,8,58,Write,,BOOL,NSQX13.6,,VAR_GLOBAL,GLOBAL,,WARNING 9525: Emergency stop push button - Module interface
+bAMM_W9526,POE\Main\Func10_EmStop.GB,2,OUT,18,58,Write,,BOOL,NSQX13.7,,VAR_GLOBAL,GLOBAL,,WARNING 9526: Emergency stop push button - signal not valid
+bAMM_W9527,POE\Main\Func11_SafetyLoop.GB,1,OUT,5,0,Write,,BOOL,NSQX14.0,,VAR_GLOBAL,GLOBAL,,WARNING 9527: Safety loop 1 - Module control panel - signal
+bAMM_W9528,POE\Main\Func12_Gas.GB,2,OUT,230,43,Write,,BOOL,NSQX14.1,,VAR_GLOBAL,GLOBAL,,WARNING 9528: Release gas valve 1a - output not valid
+bAMM_W9528,POE\Main\Func12_Gas.GB,16,IN,50,22,Read,,BOOL,NSQX14.1,,VAR_GLOBAL,GLOBAL,,WARNING 9528: Release gas valve 1a - output not valid
+bAMM_W9529,POE\Main\Func12_Gas.GB,2,OUT,231,43,Write,,BOOL,NSQX14.2,,VAR_GLOBAL,GLOBAL,,WARNING 9529: Release gas valve 1b - output not valid
+bAMM_W9529,POE\Main\Func12_Gas.GB,16,IN,51,22,Read,,BOOL,NSQX14.2,,VAR_GLOBAL,GLOBAL,,WARNING 9529: Release gas valve 1b - output not valid
+bAMM_W9530,POE\Main\Func12_Gas.GB,5,OUT,264,43,Write,,BOOL,NSQX14.3,,VAR_GLOBAL,GLOBAL,,WARNING 9530: Release gas valve 2a - output not valid
+bAMM_W9530,POE\Main\Func12_Gas.GB,16,IN,52,22,Read,,BOOL,NSQX14.3,,VAR_GLOBAL,GLOBAL,,WARNING 9530: Release gas valve 2a - output not valid
+bAMM_W9531,POE\Main\Func12_Gas.GB,5,OUT,265,43,Write,,BOOL,NSQX14.4,,VAR_GLOBAL,GLOBAL,,WARNING 9531: Release gas valve 2b - output not valid
+bAMM_W9531,POE\Main\Func12_Gas.GB,16,IN,53,22,Read,,BOOL,NSQX14.4,,VAR_GLOBAL,GLOBAL,,WARNING 9531: Release gas valve 2b - output not valid
+bAMM_W9532,POE\Main\Func12_Gas.GB,5,OUT,298,43,Write,,BOOL,NSQX14.5,,VAR_GLOBAL,GLOBAL,,WARNING 9532: Release gas valve 3a - output not valid
+bAMM_W9532,POE\Main\Func12_Gas.GB,16,IN,54,22,Read,,BOOL,NSQX14.5,,VAR_GLOBAL,GLOBAL,,WARNING 9532: Release gas valve 3a - output not valid
+bAMM_W9533,POE\Main\Func12_Gas.GB,5,OUT,299,43,Write,,BOOL,NSQX14.6,,VAR_GLOBAL,GLOBAL,,WARNING 9533: Release gas valve 3b - output not valid
+bAMM_W9533,POE\Main\Func12_Gas.GB,16,IN,55,22,Read,,BOOL,NSQX14.6,,VAR_GLOBAL,GLOBAL,,WARNING 9533: Release gas valve 3b - output not valid
+bAMM_W9534,POE\Main\Func12_Gas.GB,8,OUT,331,43,Write,,BOOL,NSQX14.7,,VAR_GLOBAL,GLOBAL,,WARNING 9534: Release gas valve 4a - output not valid
+bAMM_W9534,POE\Main\Func12_Gas.GB,16,IN,56,22,Read,,BOOL,NSQX14.7,,VAR_GLOBAL,GLOBAL,,WARNING 9534: Release gas valve 4a - output not valid
+bAMM_W9535,POE\Main\Func12_Gas.GB,8,OUT,332,43,Write,,BOOL,NSQX15.0,,VAR_GLOBAL,GLOBAL,,WARNING 9535: Release gas valve 4b - output not valid
+bAMM_W9535,POE\Main\Func12_Gas.GB,16,IN,57,22,Read,,BOOL,NSQX15.0,,VAR_GLOBAL,GLOBAL,,WARNING 9535: Release gas valve 4b - output not valid
+bAMM_W9536,POE\Main\Func12_Gas.GB,2,OUT,238,43,Write,,BOOL,NSQX15.1,,VAR_GLOBAL,GLOBAL,,WARNING 9536: Gas safety device 1 - signal not valid
+bAMM_W9536,POE\Main\Func12_Gas.GB,19,IN,58,22,Read,,BOOL,NSQX15.1,,VAR_GLOBAL,GLOBAL,,WARNING 9536: Gas safety device 1 - signal not valid
+bAMM_W9537,POE\Main\Func12_Gas.GB,5,OUT,272,43,Write,,BOOL,NSQX15.2,,VAR_GLOBAL,GLOBAL,,WARNING 9537: Gas safety device 2 - signal not valid
+bAMM_W9537,POE\Main\Func12_Gas.GB,19,IN,59,22,Read,,BOOL,NSQX15.2,,VAR_GLOBAL,GLOBAL,,WARNING 9537: Gas safety device 2 - signal not valid
+bAMM_W9538,POE\Main\Func12_Gas.GB,5,OUT,306,43,Write,,BOOL,NSQX15.3,,VAR_GLOBAL,GLOBAL,,WARNING 9538: Gas safety device 3 - signal not valid
+bAMM_W9538,POE\Main\Func12_Gas.GB,19,IN,60,22,Read,,BOOL,NSQX15.3,,VAR_GLOBAL,GLOBAL,,WARNING 9538: Gas safety device 3 - signal not valid
+bAMM_W9539,POE\Main\Func12_Gas.GB,8,OUT,339,43,Write,,BOOL,NSQX15.4,,VAR_GLOBAL,GLOBAL,,WARNING 9539: Gas safety device 4 - signal not valid
+bAMM_W9539,POE\Main\Func12_Gas.GB,19,IN,61,22,Read,,BOOL,NSQX15.4,,VAR_GLOBAL,GLOBAL,,WARNING 9539: Gas safety device 4 - signal not valid
+bAMM_W9540,POE\Main\Func12_Gas.GB,2,OUT,232,43,Write,,BOOL,NSQX15.5,,VAR_GLOBAL,GLOBAL,,WARNING 9540: Gas safety device 1 - output not valid
+bAMM_W9540,POE\Main\Func12_Gas.GB,19,IN,42,22,Read,,BOOL,NSQX15.5,,VAR_GLOBAL,GLOBAL,,WARNING 9540: Gas safety device 1 - output not valid
+bAMM_W9541,POE\Main\Func12_Gas.GB,5,OUT,266,43,Write,,BOOL,NSQX15.6,,VAR_GLOBAL,GLOBAL,,WARNING 9541: Gas safety device 2 - output not valid
+bAMM_W9541,POE\Main\Func12_Gas.GB,19,IN,43,22,Read,,BOOL,NSQX15.6,,VAR_GLOBAL,GLOBAL,,WARNING 9541: Gas safety device 2 - output not valid
+bAMM_W9542,POE\Main\Func12_Gas.GB,5,OUT,300,43,Write,,BOOL,NSQX15.7,,VAR_GLOBAL,GLOBAL,,WARNING 9542: Gas safety device 3 - output not valid
+bAMM_W9542,POE\Main\Func12_Gas.GB,19,IN,44,22,Read,,BOOL,NSQX15.7,,VAR_GLOBAL,GLOBAL,,WARNING 9542: Gas safety device 3 - output not valid
+bAMM_W9543,POE\Main\Func12_Gas.GB,8,OUT,333,43,Write,,BOOL,NSQX16.0,,VAR_GLOBAL,GLOBAL,,WARNING 9543: Gas safety device 4 - output not valid
+bAMM_W9543,POE\Main\Func12_Gas.GB,19,IN,45,22,Read,,BOOL,NSQX16.0,,VAR_GLOBAL,GLOBAL,,WARNING 9543: Gas safety device 4 - output not valid
+bAMM_W9562,POE\Main\PhaseII.GB,5,OUT,157,16,Write,,BOOL,NSQX16.1,,VAR_GLOBAL,GLOBAL,,WARNING 9562: Scavenging flap plausibility check failure
+bAMM_W9563,POE\Main\PhaseII.GB,2,OUT,54,16,Write,,BOOL,NSQX16.2,,VAR_GLOBAL,GLOBAL,,WARNING 9563: Scavenging flap closed feedback - signal not 
+bAMM_W9564,POE\Main\PhaseII.GB,5,OUT,108,16,Write,,BOOL,NSQX16.3,,VAR_GLOBAL,GLOBAL,,WARNING 9564: Scavenging flap temperature switch - signal n
+bAMM_W9565,POE\HeatWaterSys\HeatWaterSys.GB,1,OUT,3,0,Write,,BOOL,NSQX16.4,,VAR_GLOBAL,GLOBAL,,WARNING 9565: Customer heating water circuit failure - sign
+bAMM_W9566,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,57,0,Write,,BOOL,NSQX16.5,,VAR_GLOBAL,GLOBAL,,WARNING 9566: High temperature heating water flow minimum -
+bAMM_W9566,POE\HeatWaterSys\HeatWaterSys.GB,9,IN,247,19,Read,,BOOL,NSQX16.5,,VAR_GLOBAL,GLOBAL,,WARNING 9566: High temperature heating water flow minimum -
+bAMM_W9567,POE\HeatWaterSys\HeatWaterSys.GB,1,OUT,30,0,Write,,BOOL,NSQX16.6,,VAR_GLOBAL,GLOBAL,,WARNING 9567: High temperature heating water level minimum 
+bAMM_W9568,POE\HeatWaterSys\HeatWaterSys.GB,1,OUT,32,0,Write,,BOOL,NSQX16.7,,VAR_GLOBAL,GLOBAL,,WARNING 9568: High temperature heating water pressure 1 max
+bAMM_W9569,POE\HeatWaterSys\HeatWaterSys.GB,1,OUT,35,0,Write,,BOOL,NSQX17.0,,VAR_GLOBAL,GLOBAL,,WARNING 9569: High temperature heating water pressure 2 max
+bAMM_W9570,POE\HeatWaterSys\HeatWaterSys.GB,1,OUT,38,0,Write,,BOOL,NSQX17.1,,VAR_GLOBAL,GLOBAL,,WARNING 9570: High temperature heating water pressure 1 min
+bAMM_W9571,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,49,0,Write,,BOOL,NSQX17.2,,VAR_GLOBAL,GLOBAL,,WARNING 9571: High temperature heating water pressure 2 min
+bAMM_W9572,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,40,0,Write,,BOOL,NSQX17.3,,VAR_GLOBAL,GLOBAL,,WARNING 9572: High temperature heating water temperature 1 
+bAMM_W9573,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,42,0,Write,,BOOL,NSQX17.4,,VAR_GLOBAL,GLOBAL,,WARNING 9573: High temperature heating water temperature 2 
+bAMM_W9574,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,51,0,Write,,BOOL,NSQX17.5,,VAR_GLOBAL,GLOBAL,,WARNING 9574: High temperature heating water flow minimum -
+bAMM_W9575,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,208,0,Write,,BOOL,NSQX17.6,,VAR_GLOBAL,GLOBAL,,WARNING 9575: Low temperature heating water flow minimum - 
+bAMM_W9575,POE\HeatWaterSys\HeatWaterSys.GB,9,IN,246,19,Read,,BOOL,NSQX17.6,,VAR_GLOBAL,GLOBAL,,WARNING 9575: Low temperature heating water flow minimum - 
+bAMM_W9576,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,181,0,Write,,BOOL,NSQX17.7,,VAR_GLOBAL,GLOBAL,,WARNING 9576: Low temperature heating water level minimum -
+bAMM_W9577,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,183,0,Write,,BOOL,NSQX18.0,,VAR_GLOBAL,GLOBAL,,WARNING 9577: Low temperature heating water pressure 1 maxi
+bAMM_W9578,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,186,0,Write,,BOOL,NSQX18.1,,VAR_GLOBAL,GLOBAL,,WARNING 9578: Low temperature heating water pressure 2 maxi
+bAMM_W9579,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,189,0,Write,,BOOL,NSQX18.2,,VAR_GLOBAL,GLOBAL,,WARNING 9579: Low temperature heating water pressure 1 mini
+bAMM_W9580,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,200,0,Write,,BOOL,NSQX18.3,,VAR_GLOBAL,GLOBAL,,WARNING 9580: Low temperature heating water pressure 2 mini
+bAMM_W9581,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,191,0,Write,,BOOL,NSQX18.4,,VAR_GLOBAL,GLOBAL,,WARNING 9581: Low temperature heating water temperature 1 m
+bAMM_W9582,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,193,0,Write,,BOOL,NSQX18.5,,VAR_GLOBAL,GLOBAL,,WARNING 9582: Low temperature heating water temperature 2 m
+bAMM_W9583,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,202,0,Write,,BOOL,NSQX18.6,,VAR_GLOBAL,GLOBAL,,WARNING 9583: Low temperature heating water flow minimum - 
+bAMM_W9584,POE\Main\Func11_SafetyLoop.GB,1,OUT,14,0,Write,,BOOL,NSQX18.7,,VAR_GLOBAL,GLOBAL,,WARNING 9584: Safety loop 2 - Module control panel - signal
+bAMM_W9585,POE\Main\Func11_SafetyLoop.GB,1,OUT,23,0,Write,,BOOL,NSQX19.0,,VAR_GLOBAL,GLOBAL,,WARNING 9585: Safety loop - Module interface panel - signal
+bAMM_W9586,POE\Main\PhaseII.GB,14,OUT,224,14,Write,,BOOL,NSQX19.1,,VAR_GLOBAL,GLOBAL,,WARNING 9586: Exhaust gas backpressure high - signal not va
+bAMM_W9587,POE\Main\Func10_EmStop.GB,2,OUT,32,58,Write,,BOOL,NSQX19.2,,VAR_GLOBAL,GLOBAL,,WARNING 9587: Emergency stop signalling - output not valid
+bAMM_W9593,POE\Main\SafetyLoop.GB,5,OUT,80,43,Write,,BOOL,NSQX19.3,,VAR_GLOBAL,GLOBAL,,WARNING 9593: Nominal speed mismatch
+bAMM_W9627,POE\VENTILATION\VENTILATION.GB,5,OUT,134,38,Write,,BOOL,NSQX36.5,,VAR_GLOBAL,GLOBAL,,WARNING 9627: Room ventilation failure - Doors - plausibili
+bAMM_W9628,POE\VENTILATION\VENTILATION.GB,5,OUT,141,38,Write,,BOOL,NSQX36.6,,VAR_GLOBAL,GLOBAL,,WARNING 9628: Room ventilation failure - Doors - signal not
+bAMM_W9629,POE\VENTILATION\VENTILATION.GB,8,OUT,265,38,Write,,BOOL,NSQX36.7,,VAR_GLOBAL,GLOBAL,,WARNING 9629: Room ventilation failure - Inlet air fan grou
+bAMM_W9630,POE\VENTILATION\VENTILATION.GB,8,OUT,266,38,Write,,BOOL,NSQX37.0,,VAR_GLOBAL,GLOBAL,,WARNING 9630: Room ventilation failure - Inlet air fan grou
+bAMM_W9631,POE\VENTILATION\VENTILATION.GB,8,OUT,267,38,Write,,BOOL,NSQX37.1,,VAR_GLOBAL,GLOBAL,,WARNING 9631: Room ventilation failure - Inlet air fan grou
+bAMM_W9632,POE\VENTILATION\VENTILATION.GB,11,OUT,302,38,Write,,BOOL,NSQX37.2,,VAR_GLOBAL,GLOBAL,,WARNING 9632: Room ventilation failure - Inlet air fan grou
+bAMM_W9633,POE\VENTILATION\VENTILATION.GB,11,OUT,303,38,Write,,BOOL,NSQX37.3,,VAR_GLOBAL,GLOBAL,,WARNING 9633: Room ventilation failure - Inlet air fan grou
+bAMM_W9634,POE\VENTILATION\VENTILATION.GB,11,OUT,304,38,Write,,BOOL,NSQX37.4,,VAR_GLOBAL,GLOBAL,,WARNING 9634: Room ventilation failure - Inlet air fan grou
+bAMM_W9635,POE\VENTILATION\VENTILATION.GB,11,OUT,601,38,Write,,BOOL,NSQX37.5,,VAR_GLOBAL,GLOBAL,,WARNING 9635: Room ventilation failure - Inlet air fan grou
+bAMM_W9636,POE\VENTILATION\VENTILATION.GB,11,OUT,602,38,Write,,BOOL,NSQX37.6,,VAR_GLOBAL,GLOBAL,,WARNING 9636: Room ventilation failure - Inlet air fan grou
+bAMM_W9637,POE\VENTILATION\VENTILATION.GB,11,OUT,603,38,Write,,BOOL,NSQX37.7,,VAR_GLOBAL,GLOBAL,,WARNING 9637: Room ventilation failure - Inlet air fan grou
+bAMM_W9638,POE\VENTILATION\VENTILATION.GB,11,OUT,640,38,Write,,BOOL,NSQX38.0,,VAR_GLOBAL,GLOBAL,,WARNING 9638: Room ventilation failure - Inlet air fan grou
+bAMM_W9639,POE\VENTILATION\VENTILATION.GB,11,OUT,641,38,Write,,BOOL,NSQX38.1,,VAR_GLOBAL,GLOBAL,,WARNING 9639: Room ventilation failure - Inlet air fan grou
+bAMM_W9640,POE\VENTILATION\VENTILATION.GB,11,OUT,642,38,Write,,BOOL,NSQX38.2,,VAR_GLOBAL,GLOBAL,,WARNING 9640: Room ventilation failure - Inlet air fan grou
+bAMM_W9641,POE\VENTILATION\VENTILATION.GB,14,OUT,679,38,Write,,BOOL,NSQX38.3,,VAR_GLOBAL,GLOBAL,,WARNING 9641: Room ventilation failure - Inlet air fan grou
+bAMM_W9642,POE\VENTILATION\VENTILATION.GB,14,OUT,680,38,Write,,BOOL,NSQX38.4,,VAR_GLOBAL,GLOBAL,,WARNING 9642: Room ventilation failure - Inlet air fan grou
+bAMM_W9643,POE\VENTILATION\VENTILATION.GB,14,OUT,681,38,Write,,BOOL,NSQX38.5,,VAR_GLOBAL,GLOBAL,,WARNING 9643: Room ventilation failure - Inlet air fan grou
+bAMM_W9644,POE\VENTILATION\VENTILATION.GB,14,OUT,718,38,Write,,BOOL,NSQX38.6,,VAR_GLOBAL,GLOBAL,,WARNING 9644: Room ventilation failure - Inlet air fan grou
+bAMM_W9645,POE\VENTILATION\VENTILATION.GB,14,OUT,719,38,Write,,BOOL,NSQX38.7,,VAR_GLOBAL,GLOBAL,,WARNING 9645: Room ventilation failure - Inlet air fan grou
+bAMM_W9646,POE\VENTILATION\VENTILATION.GB,14,OUT,720,38,Write,,BOOL,NSQX39.0,,VAR_GLOBAL,GLOBAL,,WARNING 9646: Room ventilation failure - Inlet air fan grou
+bAMM_W9647,POE\VENTILATION\VENTILATION.GB,17,OUT,331,38,Write,,BOOL,NSQX39.1,,VAR_GLOBAL,GLOBAL,,WARNING 9647: Room ventilation failure - Inlet air louvre g
+bAMM_W9648,POE\VENTILATION\VENTILATION.GB,17,OUT,332,38,Write,,BOOL,NSQX39.2,,VAR_GLOBAL,GLOBAL,,WARNING 9648: Room ventilation failure - Inlet air louvre g
+bAMM_W9649,POE\VENTILATION\VENTILATION.GB,17,OUT,333,38,Write,,BOOL,NSQX39.3,,VAR_GLOBAL,GLOBAL,,WARNING 9649: Room ventilation failure - Inlet air louvre g
+bAMM_W9650,POE\VENTILATION\VENTILATION.GB,17,OUT,432,38,Write,,BOOL,NSQX39.4,,VAR_GLOBAL,GLOBAL,,WARNING 9650: Room ventilation failure - Inlet air louvre g
+bAMM_W9651,POE\VENTILATION\VENTILATION.GB,17,OUT,433,38,Write,,BOOL,NSQX39.5,,VAR_GLOBAL,GLOBAL,,WARNING 9651: Room ventilation failure - Inlet air louvre g
+bAMM_W9652,POE\VENTILATION\VENTILATION.GB,20,OUT,434,38,Write,,BOOL,NSQX39.6,,VAR_GLOBAL,GLOBAL,,WARNING 9652: Room ventilation failure - Inlet air louvre g
+bAMM_W9653,POE\VENTILATION\VENTILATION.GB,20,OUT,435,38,Write,,BOOL,NSQX39.7,,VAR_GLOBAL,GLOBAL,,WARNING 9653: Room ventilation failure - Inlet air louvre g
+bAMM_W9654,POE\VENTILATION\VENTILATION.GB,20,OUT,436,38,Write,,BOOL,NSQX40.0,,VAR_GLOBAL,GLOBAL,,WARNING 9654: Room ventilation failure - Inlet air louvre g
+bAMM_W9655,POE\VENTILATION\VENTILATION.GB,20,OUT,437,38,Write,,BOOL,NSQX40.1,,VAR_GLOBAL,GLOBAL,,WARNING 9655: Room ventilation failure - Inlet air louvre g
+bAMM_W9656,POE\VENTILATION\VENTILATION.GB,20,OUT,438,38,Write,,BOOL,NSQX40.2,,VAR_GLOBAL,GLOBAL,,WARNING 9656: Room ventilation failure - Inlet air louvre g
+bAMM_W9657,POE\VENTILATION\VENTILATION.GB,20,OUT,773,38,Write,,BOOL,NSQX40.3,,VAR_GLOBAL,GLOBAL,,WARNING 9657: Room ventilation failure - Inlet air louvre g
+bAMM_W9658,POE\VENTILATION\VENTILATION.GB,20,OUT,774,38,Write,,BOOL,NSQX40.4,,VAR_GLOBAL,GLOBAL,,WARNING 9658: Room ventilation failure - Inlet air louvre g
+bAMM_W9659,POE\VENTILATION\VENTILATION.GB,20,OUT,775,38,Write,,BOOL,NSQX40.5,,VAR_GLOBAL,GLOBAL,,WARNING 9659: Room ventilation failure - Inlet air louvre g
+bAMM_W9660,POE\VENTILATION\VENTILATION.GB,20,OUT,776,38,Write,,BOOL,NSQX40.6,,VAR_GLOBAL,GLOBAL,,WARNING 9660: Room ventilation failure - Inlet air louvre g
+bAMM_W9661,POE\VENTILATION\VENTILATION.GB,20,OUT,777,38,Write,,BOOL,NSQX40.7,,VAR_GLOBAL,GLOBAL,,WARNING 9661: Room ventilation failure - Inlet air louvre g
+bAMM_W9662,POE\VENTILATION\VENTILATION.GB,20,OUT,823,38,Write,,BOOL,NSQX41.0,,VAR_GLOBAL,GLOBAL,,WARNING 9662: Room ventilation failure - Inlet air louvre g
+bAMM_W9663,POE\VENTILATION\VENTILATION.GB,20,OUT,824,38,Write,,BOOL,NSQX41.1,,VAR_GLOBAL,GLOBAL,,WARNING 9663: Room ventilation failure - Inlet air louvre g
+bAMM_W9664,POE\VENTILATION\VENTILATION.GB,23,OUT,825,38,Write,,BOOL,NSQX41.2,,VAR_GLOBAL,GLOBAL,,WARNING 9664: Room ventilation failure - Inlet air louvre g
+bAMM_W9665,POE\VENTILATION\VENTILATION.GB,23,OUT,826,38,Write,,BOOL,NSQX41.3,,VAR_GLOBAL,GLOBAL,,WARNING 9665: Room ventilation failure - Inlet air louvre g
+bAMM_W9666,POE\VENTILATION\VENTILATION.GB,23,OUT,827,38,Write,,BOOL,NSQX41.4,,VAR_GLOBAL,GLOBAL,,WARNING 9666: Room ventilation failure - Inlet air louvre g
+bAMM_W9667,POE\VENTILATION\VENTILATION.GB,23,OUT,873,38,Write,,BOOL,NSQX41.5,,VAR_GLOBAL,GLOBAL,,WARNING 9667: Room ventilation failure - Inlet air louvre g
+bAMM_W9668,POE\VENTILATION\VENTILATION.GB,23,OUT,874,38,Write,,BOOL,NSQX41.6,,VAR_GLOBAL,GLOBAL,,WARNING 9668: Room ventilation failure - Inlet air louvre g
+bAMM_W9669,POE\VENTILATION\VENTILATION.GB,23,OUT,875,38,Write,,BOOL,NSQX41.7,,VAR_GLOBAL,GLOBAL,,WARNING 9669: Room ventilation failure - Inlet air louvre g
+bAMM_W9670,POE\VENTILATION\VENTILATION.GB,23,OUT,876,38,Write,,BOOL,NSQX42.0,,VAR_GLOBAL,GLOBAL,,WARNING 9670: Room ventilation failure - Inlet air louvre g
+bAMM_W9671,POE\VENTILATION\VENTILATION.GB,23,OUT,877,38,Write,,BOOL,NSQX42.1,,VAR_GLOBAL,GLOBAL,,WARNING 9671: Room ventilation failure - Inlet air louvre g
+bAMM_W9672,POE\VENTILATION\VENTILATION.GB,23,OUT,923,38,Write,,BOOL,NSQX42.2,,VAR_GLOBAL,GLOBAL,,WARNING 9672: Room ventilation failure - Inlet air louvre g
+bAMM_W9673,POE\VENTILATION\VENTILATION.GB,23,OUT,924,38,Write,,BOOL,NSQX42.3,,VAR_GLOBAL,GLOBAL,,WARNING 9673: Room ventilation failure - Inlet air louvre g
+bAMM_W9674,POE\VENTILATION\VENTILATION.GB,23,OUT,925,38,Write,,BOOL,NSQX42.4,,VAR_GLOBAL,GLOBAL,,WARNING 9674: Room ventilation failure - Inlet air louvre g
+bAMM_W9675,POE\VENTILATION\VENTILATION.GB,23,OUT,926,38,Write,,BOOL,NSQX42.5,,VAR_GLOBAL,GLOBAL,,WARNING 9675: Room ventilation failure - Inlet air louvre g
+bAMM_W9676,POE\VENTILATION\VENTILATION.GB,23,OUT,927,38,Write,,BOOL,NSQX42.6,,VAR_GLOBAL,GLOBAL,,WARNING 9676: Room ventilation failure - Inlet air louvre g
+bAMM_W9677,POE\VENTILATION\VENTILATION.GB,26,OUT,446,38,Write,,BOOL,NSQX42.7,,VAR_GLOBAL,GLOBAL,,WARNING 9677: Room ventilation failure - Outlet air louvre 
+bAMM_W9678,POE\VENTILATION\VENTILATION.GB,26,OUT,447,38,Write,,BOOL,NSQX43.0,,VAR_GLOBAL,GLOBAL,,WARNING 9678: Room ventilation failure - Outlet air louvre 
+bAMM_W9679,POE\VENTILATION\VENTILATION.GB,26,OUT,462,38,Write,,BOOL,NSQX43.1,,VAR_GLOBAL,GLOBAL,,WARNING 9679: Room ventilation failure - Outlet air louvre 
+bAMM_W9680,POE\VENTILATION\VENTILATION.GB,26,OUT,463,38,Write,,BOOL,NSQX43.2,,VAR_GLOBAL,GLOBAL,,WARNING 9680: Room ventilation failure - Outlet air louvre 
+bAMM_W9681,POE\VENTILATION\VENTILATION.GB,29,OUT,464,38,Write,,BOOL,NSQX43.3,,VAR_GLOBAL,GLOBAL,,WARNING 9681: Room ventilation failure - Outlet air louvre 
+bAMM_W9682,POE\VENTILATION\VENTILATION.GB,29,OUT,465,38,Write,,BOOL,NSQX43.4,,VAR_GLOBAL,GLOBAL,,WARNING 9682: Room ventilation failure - Outlet air louvre 
+bAMM_W9683,POE\VENTILATION\VENTILATION.GB,29,OUT,466,38,Write,,BOOL,NSQX43.5,,VAR_GLOBAL,GLOBAL,,WARNING 9683: Room ventilation failure - Outlet air louvre 
+bAMM_W9684,POE\VENTILATION\VENTILATION.GB,29,OUT,467,38,Write,,BOOL,NSQX43.6,,VAR_GLOBAL,GLOBAL,,WARNING 9684: Room ventilation failure - Outlet air louvre 
+bAMM_W9685,POE\VENTILATION\VENTILATION.GB,29,OUT,974,38,Write,,BOOL,NSQX43.7,,VAR_GLOBAL,GLOBAL,,WARNING 9685: Room ventilation failure - Outlet air louvre 
+bAMM_W9686,POE\VENTILATION\VENTILATION.GB,29,OUT,975,38,Write,,BOOL,NSQX44.0,,VAR_GLOBAL,GLOBAL,,WARNING 9686: Room ventilation failure - Outlet air louvre 
+bAMM_W9687,POE\VENTILATION\VENTILATION.GB,29,OUT,976,38,Write,,BOOL,NSQX44.1,,VAR_GLOBAL,GLOBAL,,WARNING 9687: Room ventilation failure - Outlet air louvre 
+bAMM_W9688,POE\VENTILATION\VENTILATION.GB,29,OUT,977,38,Write,,BOOL,NSQX44.2,,VAR_GLOBAL,GLOBAL,,WARNING 9688: Room ventilation failure - Outlet air louvre 
+bAMM_W9689,POE\VENTILATION\VENTILATION.GB,32,OUT,1023,38,Write,,BOOL,NSQX44.3,,VAR_GLOBAL,GLOBAL,,WARNING 9689: Room ventilation failure - Outlet air louvre 
+bAMM_W9690,POE\VENTILATION\VENTILATION.GB,32,OUT,1024,38,Write,,BOOL,NSQX44.4,,VAR_GLOBAL,GLOBAL,,WARNING 9690: Room ventilation failure - Outlet air louvre 
+bAMM_W9691,POE\VENTILATION\VENTILATION.GB,32,OUT,1025,38,Write,,BOOL,NSQX44.5,,VAR_GLOBAL,GLOBAL,,WARNING 9691: Room ventilation failure - Outlet air louvre 
+bAMM_W9692,POE\VENTILATION\VENTILATION.GB,32,OUT,1026,38,Write,,BOOL,NSQX44.6,,VAR_GLOBAL,GLOBAL,,WARNING 9692: Room ventilation failure - Outlet air louvre 
+bAMM_W9693,POE\VENTILATION\VENTILATION.GB,32,OUT,1072,38,Write,,BOOL,NSQX44.7,,VAR_GLOBAL,GLOBAL,,WARNING 9693: Room ventilation failure - Outlet air louvre 
+bAMM_W9694,POE\VENTILATION\VENTILATION.GB,32,OUT,1073,38,Write,,BOOL,NSQX45.0,,VAR_GLOBAL,GLOBAL,,WARNING 9694: Room ventilation failure - Outlet air louvre 
+bAMM_W9695,POE\VENTILATION\VENTILATION.GB,32,OUT,1074,38,Write,,BOOL,NSQX45.1,,VAR_GLOBAL,GLOBAL,,WARNING 9695: Room ventilation failure - Outlet air louvre 
+bAMM_W9696,POE\VENTILATION\VENTILATION.GB,32,OUT,1075,38,Write,,BOOL,NSQX45.2,,VAR_GLOBAL,GLOBAL,,WARNING 9696: Room ventilation failure - Outlet air louvre 
+bAMM_W9697,POE\VENTILATION\VENTILATION.GB,35,OUT,1121,38,Write,,BOOL,NSQX45.3,,VAR_GLOBAL,GLOBAL,,WARNING 9697: Room ventilation failure - Outlet air louvre 
+bAMM_W9698,POE\VENTILATION\VENTILATION.GB,35,OUT,1122,38,Write,,BOOL,NSQX45.4,,VAR_GLOBAL,GLOBAL,,WARNING 9698: Room ventilation failure - Outlet air louvre 
+bAMM_W9699,POE\VENTILATION\VENTILATION.GB,35,OUT,1123,38,Write,,BOOL,NSQX45.5,,VAR_GLOBAL,GLOBAL,,WARNING 9699: Room ventilation failure - Outlet air louvre 
+bAMM_W9700,POE\VENTILATION\VENTILATION.GB,35,OUT,1124,38,Write,,BOOL,NSQX45.6,,VAR_GLOBAL,GLOBAL,,WARNING 9700: Room ventilation failure - Outlet air louvre 
+bAMM_W9701,POE\Main\Func12_Gas.GB,11,OUT,374,43,Write,,BOOL,NSQX45.7,,VAR_GLOBAL,GLOBAL,,WARNING 9701: Release gas valve A for decentral gas additio
+bAMM_W9701,POE\Main\Func12_Gas.GB,16,IN,401,22,Read,,BOOL,NSQX45.7,,VAR_GLOBAL,GLOBAL,,WARNING 9701: Release gas valve A for decentral gas additio
+bAMM_W9702,POE\Main\Func12_Gas.GB,11,OUT,375,43,Write,,BOOL,NSQX46.0,,VAR_GLOBAL,GLOBAL,,WARNING 9702: Release gas valve B for decentral gas additio
+bAMM_W9702,POE\Main\Func12_Gas.GB,16,IN,417,22,Read,,BOOL,NSQX46.0,,VAR_GLOBAL,GLOBAL,,WARNING 9702: Release gas valve B for decentral gas additio
+bAMM_W9703,POE\Main\Func12_Gas.GB,11,OUT,382,43,Write,,BOOL,NSQX46.1,,VAR_GLOBAL,GLOBAL,,WARNING 9703: Gas safety device for decentral gas addition 
+bAMM_W9703,POE\Main\Func12_Gas.GB,16,IN,418,22,Read,,BOOL,NSQX46.1,,VAR_GLOBAL,GLOBAL,,WARNING 9703: Gas safety device for decentral gas addition 
+bAMM_W9704,POE\Main\Func12_Gas.GB,11,OUT,376,43,Write,,BOOL,NSQX46.2,,VAR_GLOBAL,GLOBAL,,WARNING 9704: Gas safety device for decentral gas addition 
+bAMM_W9704,POE\Main\Func12_Gas.GB,16,IN,419,22,Read,,BOOL,NSQX46.2,,VAR_GLOBAL,GLOBAL,,WARNING 9704: Gas safety device for decentral gas addition 
+bIN_ECW_PumpsOff,POE\Main\Func05_06_ECW_Pr.GB,1,IN,202,11,Read,,BOOL,NSIX0.3,,VAR_GLOBAL,GLOBAL,,CPU IN: All engine cooling water pumps off
+bIN_Eng_Aux_Dem,POE\HeatWater\HeatWater.GB,5,IN,231,2,Read,,BOOL,NSIX0.4,,VAR_GLOBAL,GLOBAL,,CPU IN: Engine auxiliaries demand
+bIN_Eng_Start,POE\Main\Func01_Speed.GB,4,IN,134,2,Read,,BOOL,NSIX0.1,,VAR_GLOBAL,GLOBAL,,CPU IN: Engine starter demand
+bIN_Eng_Start,POE\Main\Func01_Speed.GB,7,IN,221,22,Read,,BOOL,NSIX0.1,,VAR_GLOBAL,GLOBAL,,CPU IN: Engine starter demand
+bIN_EO_PumpsOff,POE\Main\Func03_04_Oil_Pr.GB,1,IN,376,13,Read,,BOOL,NSIX0.2,,VAR_GLOBAL,GLOBAL,,CPU IN: All engine oil pumps off
+bIN_ERV_ColdCountry,POE\VENTILATION\VENTILATION.GB,7,IN,247,9,Read,,BOOL,NSIX0.7,,VAR_GLOBAL,GLOBAL,,CPU IN: Engine room ventilation - Cold country mode active
+bIN_ERV_Lou_PC_CL,POE\ERV_Lou\ERV_Lou.GB,1,IN,294,6,Read,,BOOL,NSIX0.6,,VAR_GLOBAL,GLOBAL,,CPU IN: Engine room ventilation - Plausibility check for cl
+bIN_ERV_Lou_PC_CL,POE\ERV_Lou\ERV_Lou.GB,4,IN,337,6,Read,,BOOL,NSIX0.6,,VAR_GLOBAL,GLOBAL,,CPU IN: Engine room ventilation - Plausibility check for cl
+bIN_ERV_Lou_PC_CL,POE\ERV_Lou\ERV_Lou.GB,7,IN,407,44,Read,,BOOL,NSIX0.6,,VAR_GLOBAL,GLOBAL,,CPU IN: Engine room ventilation - Plausibility check for cl
+bIN_ERV_Lou_PC_CL,POE\VENTILATION\VENTILATION.GB,38,IN,1185,0,Read,,BOOL,NSIX0.6,,VAR_GLOBAL,GLOBAL,,CPU IN: Engine room ventilation - Plausibility check for cl
+bIN_ERV_Lou_PC_OP,POE\ERV_Fan\ERV_Fan.GB,1,IN,75,5,Read,,BOOL,NSIX0.5,,VAR_GLOBAL,GLOBAL,,CPU IN: Engine room ventilation - Plausibility check for op
+bIN_ERV_Lou_PC_OP,POE\ERV_Lou\ERV_Lou.GB,1,IN,285,5,Read,,BOOL,NSIX0.5,,VAR_GLOBAL,GLOBAL,,CPU IN: Engine room ventilation - Plausibility check for op
+bIN_ERV_Lou_PC_OP,POE\ERV_Lou\ERV_Lou.GB,4,IN,315,5,Read,,BOOL,NSIX0.5,,VAR_GLOBAL,GLOBAL,,CPU IN: Engine room ventilation - Plausibility check for op
+bIN_ERV_Lou_PC_OP,POE\ERV_Lou\ERV_Lou.GB,7,IN,395,43,Read,,BOOL,NSIX0.5,,VAR_GLOBAL,GLOBAL,,CPU IN: Engine room ventilation - Plausibility check for op
+bIN_ERV_Lou_PC_OP,POE\VENTILATION\VENTILATION.GB,38,IN,1184,0,Read,,BOOL,NSIX0.5,,VAR_GLOBAL,GLOBAL,,CPU IN: Engine room ventilation - Plausibility check for op
+bIN_Reset_sPLC,POE\Main\Func00_IO_Para.GB,5,IN,40,4,Read,,BOOL,NSIX0.0,,VAR_GLOBAL,GLOBAL,,CPU IN: Reset safety PLC
+bIN_Reset_sPLC,POE\Main\Func01_Speed.GB,7,IN,93,17,Read,,BOOL,NSIX0.0,,VAR_GLOBAL,GLOBAL,,CPU IN: Reset safety PLC
+bIN_Reset_sPLC,POE\Main\Func03_04_Oil_Pr.GB,9,IN,198,14,Read,,BOOL,NSIX0.0,,VAR_GLOBAL,GLOBAL,,CPU IN: Reset safety PLC
+bIN_Reset_sPLC,POE\Main\Func03_04_Oil_Pr.GB,13,IN,290,14,Read,,BOOL,NSIX0.0,,VAR_GLOBAL,GLOBAL,,CPU IN: Reset safety PLC
+bIN_Reset_sPLC,POE\Main\Func05_06_ECW_Pr.GB,10,IN,57,14,Read,,BOOL,NSIX0.0,,VAR_GLOBAL,GLOBAL,,CPU IN: Reset safety PLC
+bIN_Reset_sPLC,POE\Main\Func05_06_ECW_Pr.GB,16,IN,169,14,Read,,BOOL,NSIX0.0,,VAR_GLOBAL,GLOBAL,,CPU IN: Reset safety PLC
+bOUT_F01_N_DiffOK,POE\Main\Func01_Speed.GB,5,OUT,36,24,Write,,BOOL,NSQX0.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 01 - Speed difference OK
+bOUT_F01_N_Nom90,POE\Main\Func01_Speed.GB,2,OUT,180,23,Write,,BOOL,NSQX0.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 01 - Actual engine speed >= 90% of nomina
+bOUT_F01_OK,POE\Main\Func01_Speed.GB,8,OUT,9,26,Write,,BOOL,NSQX0.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 01 - Speed measurement OK
+bOUT_F02_OK,POE\Main\Func02_Misfire.GB,1,OUT,21,0,Write,,BOOL,NSQX0.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 02 - Ignition is operating
+bOUT_F02_OK_PC,POE\Main\Func02_Misfire.GB,1,OUT,49,0,Write,,BOOL,NSQX0.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 02 - Ignition plausibility check - OK
+bOUT_F03_OK,POE\Main\Func03_04_Oil_Pr.GB,10,OUT,188,52,Write,,BOOL,NSQX0.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 03 - Oil pressure MIN OK
+bOUT_F03_Pr_EO_DiffOK,POE\Main\Func03_04_Oil_Pr.GB,6,OUT,63,42,Write,,BOOL,NSQX0.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 03 - Oil pressure difference OK
+bOUT_F04_OK,POE\Main\Func03_04_Oil_Pr.GB,14,OUT,287,52,Write,,BOOL,NSQX1.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 04 - Oil pressure MAX OK
+bOUT_F05_OK,POE\Main\Func05_06_ECW_Pr.GB,11,OUT,54,59,Write,,BOOL,NSQX1.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 05 - Engine cooling water pressure MIN OK
+bOUT_F05_Pr_ECW_DiffOK,POE\Main\Func05_06_ECW_Pr.GB,5,OUT,19,48,Write,,BOOL,NSQX1.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 05 - Engine cooling water pressure differ
+bOUT_F06_OK,POE\Main\Func05_06_ECW_Pr.GB,17,OUT,166,59,Write,,BOOL,NSQX1.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 06 - Engine cooling water pressure MAX OK
+bOUT_F07_GCB_RUC,POE\Main\Func07_Grid.GB,5,OUT,62,28,Write,,BOOL,NSQX1.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 07 - GCB - Release undervoltage coil OK
+bOUT_F07_GCB_RUC_PS,POE\Main\Func07_Grid.GB,5,OUT,80,25,Write,,BOOL,NSQX2.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 07 - GCB - Release undervoltage coil OK -
+bOUT_F07_OK,POE\Main\Func07_Grid.GB,8,OUT,163,35,Write,,BOOL,NSQX1.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 07 - Grid disconnection OK
+bOUT_F07_Rel_Sync_Load,POE\Main\Func07_Grid.GB,2,OUT,46,22,Write,,BOOL,NSQX1.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 07 - Release synchronizing and load OK
+bOUT_F07_Rel_Sync_Load_PS,POE\Main\Func07_Grid.GB,2,OUT,76,19,Write,,BOOL,NSQX1.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 07 - Release synchronizing and load - Phy
+bOUT_F08_GenPrctTrip_OK,POE\Main\Func08_Overload.GB,1,OUT,17,0,Write,,BOOL,NSQX2.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 08 - Generator protection trip OK
+bOUT_F08_OlShortCirc_OK,POE\Main\Func08_Overload.GB,1,OUT,7,0,Write,,BOOL,NSQX2.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 08 - Generator overload/short circuit OK
+bOUT_F09_Cust_OK,POE\VENTILATION\VENTILATION.GB,5,OUT,6,34,Write,,BOOL,NSQX2.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Customer room ventilation is operati
+bOUT_F09_Cust_OK_PC,POE\VENTILATION\VENTILATION.GB,2,OUT,22,30,Write,,BOOL,NSQX2.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Customer room ventilation plausibili
+bOUT_F09_DI_ERV_Cust,POE\VENTILATION\VENTILATION.GB,5,OUT,98,29,Write,,BOOL,NSQX7.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Customer room ventilation - Status o
+bOUT_F09_Door_OK,POE\VENTILATION\VENTILATION.GB,8,OUT,125,33,Write,,BOOL,NSQX30.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room doors are closed
+bOUT_F09_ERV_PC_Forced,POE\VENTILATION\VENTILATION.GB,41,OUT,1250,10,Write,,BOOL,NSQX7.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Forced pla
+bOUT_F09_INL1_Fan_OK,POE\VENTILATION\VENTILATION.GB,8,OUT,269,30,Write,,BOOL,NSQX30.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL1_Fan_OK_PC,POE\VENTILATION\VENTILATION.GB,8,OUT,270,26,Write,,BOOL,NSQX30.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL1_Lou_OK,POE\VENTILATION\VENTILATION.GB,17,OUT,581,29,Write,,BOOL,NSQX31.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL1_Lou_OK_PC,POE\VENTILATION\VENTILATION.GB,17,OUT,582,26,Write,,BOOL,NSQX31.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL2_Fan_OK,POE\VENTILATION\VENTILATION.GB,8,OUT,306,30,Write,,BOOL,NSQX30.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL2_Fan_OK_PC,POE\VENTILATION\VENTILATION.GB,8,OUT,307,26,Write,,BOOL,NSQX30.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL2_Lou_OK,POE\VENTILATION\VENTILATION.GB,17,OUT,583,29,Write,,BOOL,NSQX31.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL2_Lou_OK_PC,POE\VENTILATION\VENTILATION.GB,17,OUT,584,26,Write,,BOOL,NSQX32.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL3_Fan_OK,POE\VENTILATION\VENTILATION.GB,11,OUT,605,30,Write,,BOOL,NSQX30.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL3_Fan_OK_PC,POE\VENTILATION\VENTILATION.GB,11,OUT,606,26,Write,,BOOL,NSQX30.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL3_Lou_OK,POE\VENTILATION\VENTILATION.GB,20,OUT,779,29,Write,,BOOL,NSQX32.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL3_Lou_OK_PC,POE\VENTILATION\VENTILATION.GB,20,OUT,780,26,Write,,BOOL,NSQX32.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL4_Fan_OK,POE\VENTILATION\VENTILATION.GB,11,OUT,644,30,Write,,BOOL,NSQX30.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL4_Fan_OK_PC,POE\VENTILATION\VENTILATION.GB,11,OUT,645,26,Write,,BOOL,NSQX31.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL4_Lou_OK,POE\VENTILATION\VENTILATION.GB,20,OUT,829,29,Write,,BOOL,NSQX32.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL4_Lou_OK_PC,POE\VENTILATION\VENTILATION.GB,20,OUT,830,26,Write,,BOOL,NSQX32.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL5_Fan_OK,POE\VENTILATION\VENTILATION.GB,14,OUT,683,30,Write,,BOOL,NSQX31.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL5_Fan_OK_PC,POE\VENTILATION\VENTILATION.GB,14,OUT,684,26,Write,,BOOL,NSQX31.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL5_Lou_OK,POE\VENTILATION\VENTILATION.GB,23,OUT,879,29,Write,,BOOL,NSQX32.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL5_Lou_OK_PC,POE\VENTILATION\VENTILATION.GB,23,OUT,880,26,Write,,BOOL,NSQX32.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL6_Fan_OK,POE\VENTILATION\VENTILATION.GB,14,OUT,722,30,Write,,BOOL,NSQX31.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL6_Fan_OK_PC,POE\VENTILATION\VENTILATION.GB,14,OUT,723,26,Write,,BOOL,NSQX31.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL6_Lou_OK,POE\VENTILATION\VENTILATION.GB,23,OUT,929,29,Write,,BOOL,NSQX32.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_INL6_Lou_OK_PC,POE\VENTILATION\VENTILATION.GB,23,OUT,930,26,Write,,BOOL,NSQX33.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+bOUT_F09_OTL1_Lou_OK,POE\VENTILATION\VENTILATION.GB,26,OUT,585,29,Write,,BOOL,NSQX33.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Outlet air
+bOUT_F09_OTL1_Lou_OK_PC,POE\VENTILATION\VENTILATION.GB,26,OUT,586,26,Write,,BOOL,NSQX33.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Outlet air
+bOUT_F09_OTL2_Lou_OK,POE\VENTILATION\VENTILATION.GB,29,OUT,587,29,Write,,BOOL,NSQX33.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Outlet air
+bOUT_F09_OTL2_Lou_OK_PC,POE\VENTILATION\VENTILATION.GB,29,OUT,588,26,Write,,BOOL,NSQX33.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Outlet air
+bOUT_F09_OTL3_Lou_OK,POE\VENTILATION\VENTILATION.GB,29,OUT,979,29,Write,,BOOL,NSQX33.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Outlet air
+bOUT_F09_OTL3_Lou_OK_PC,POE\VENTILATION\VENTILATION.GB,29,OUT,980,26,Write,,BOOL,NSQX33.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Outlet air
+bOUT_F09_OTL4_Lou_OK,POE\VENTILATION\VENTILATION.GB,32,OUT,1028,29,Write,,BOOL,NSQX33.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Outlet air
+bOUT_F09_OTL4_Lou_OK_PC,POE\VENTILATION\VENTILATION.GB,32,OUT,1029,26,Write,,BOOL,NSQX34.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Outlet air
+bOUT_F09_OTL5_Lou_OK,POE\VENTILATION\VENTILATION.GB,32,OUT,1077,29,Write,,BOOL,NSQX34.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Outlet air
+bOUT_F09_OTL5_Lou_OK_PC,POE\VENTILATION\VENTILATION.GB,32,OUT,1078,26,Write,,BOOL,NSQX34.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Outlet air
+bOUT_F09_OTL6_Lou_OK,POE\VENTILATION\VENTILATION.GB,32,OUT,1126,29,Write,,BOOL,NSQX34.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Outlet air
+bOUT_F09_OTL6_Lou_OK_PC,POE\VENTILATION\VENTILATION.GB,32,OUT,1127,26,Write,,BOOL,NSQX34.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Outlet air
+bOUT_F10_DO_EmStop,POE\Main\Func10_EmStop.GB,2,OUT,48,51,Write,,BOOL,NSQX3.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 10 - Emergency stop signalling output OK
+bOUT_F10_DO_EmStop_PS,POE\Main\Func10_EmStop.GB,4,OUT,45,47,Write,,BOOL,NSQX3.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 10 - Emergency stop signalling output - P
+bOUT_F10_EmStop_M_OK,POE\Main\Func10_EmStop.GB,2,OUT,12,48,Write,,BOOL,NSQX2.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 10 - Emergency stop at module interface p
+bOUT_F10_EmStop_OK,POE\Main\Func10_EmStop.GB,2,OUT,22,51,Write,,BOOL,NSQX2.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 10 - Emergency stop
+bOUT_F10_SafetyLoop_EmStop,POE\Main\Func10_EmStop.GB,2,OUT,0,43,Write,,BOOL,NSQX2.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 10 - Safety loop emergency stop OK
+bOUT_F11_SafetyLoop_A1_OK,POE\Main\Func11_SafetyLoop.GB,1,OUT,9,0,Write,,BOOL,NSQX3.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 11 - Safety loop 1 OK - Module control pa
+bOUT_F11_SafetyLoop_A2_OK,POE\Main\Func11_SafetyLoop.GB,1,OUT,18,0,Write,,BOOL,NSQX3.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 11 - Safety loop 2 OK - Module control pa
+bOUT_F11_SafetyLoop_M_OK,POE\Main\Func11_SafetyLoop.GB,1,OUT,27,0,Write,,BOOL,NSQX3.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 11 - Safety loop OK - Module interface pa
+bOUT_F12_DCGA_OK,POE\Main\Func12_Gas.GB,11,OUT,386,38,Write,,BOOL,NSQX35.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas supply interruption OK - DCGA
+bOUT_F12_DCGA_SD_Dem,POE\Main\Func12_Gas.GB,11,OUT,391,33,Write,,BOOL,NSQX35.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Demand gas safety device - DCGA
+bOUT_F12_DCGA_SD_Dem_PS,POE\Main\Func12_Gas.GB,11,OUT,387,29,Write,,BOOL,NSQX35.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Demand gas safety device - DCGA - Ph
+bOUT_F12_DI_DCGA_SafeDevOK,POE\Main\Func12_Gas.GB,11,OUT,584,27,Write,,BOOL,NSQX35.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas safety device OK - DCGA - Status
+bOUT_F12_DI_GT1_SafeDevOK,POE\Main\Func12_Gas.GB,2,OUT,580,29,Write,,BOOL,NSQX34.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas safety device OK - Gastrain 1 - 
+bOUT_F12_DI_GT2_SafeDevOK,POE\Main\Func12_Gas.GB,5,OUT,581,29,Write,,BOOL,NSQX34.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas safety device OK - Gastrain 2 - 
+bOUT_F12_DI_GT3_SafeDevOK,POE\Main\Func12_Gas.GB,8,OUT,582,29,Write,,BOOL,NSQX34.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas safety device OK - Gastrain 3 - 
+bOUT_F12_DI_GT4_SafeDevOK,POE\Main\Func12_Gas.GB,8,OUT,583,29,Write,,BOOL,NSQX35.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas safety device OK - Gastrain 4 - 
+bOUT_F12_GT1_OK,POE\Main\Func12_Gas.GB,2,OUT,242,40,Write,,BOOL,NSQX3.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas supply interruption OK - Gastrai
+bOUT_F12_GT1_SD_Dem,POE\Main\Func12_Gas.GB,2,OUT,247,34,Write,,BOOL,NSQX4.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Demand gas safety device - Gastrain 
+bOUT_F12_GT1_SD_Dem_PS,POE\Main\Func12_Gas.GB,2,OUT,243,31,Write,,BOOL,NSQX4.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Demand gas safety device - Gastrain 
+bOUT_F12_GT2_OK,POE\Main\Func12_Gas.GB,5,OUT,276,40,Write,,BOOL,NSQX3.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas supply interruption OK - Gastrai
+bOUT_F12_GT2_SD_Dem,POE\Main\Func12_Gas.GB,5,OUT,281,34,Write,,BOOL,NSQX5.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Demand gas safety device - Gastrain 
+bOUT_F12_GT2_SD_Dem_PS,POE\Main\Func12_Gas.GB,5,OUT,277,31,Write,,BOOL,NSQX5.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Demand gas safety device - Gastrain 
+bOUT_F12_GT3_OK,POE\Main\Func12_Gas.GB,8,OUT,310,40,Write,,BOOL,NSQX3.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas supply interruption OK - Gastrai
+bOUT_F12_GT3_SD_Dem,POE\Main\Func12_Gas.GB,5,OUT,315,34,Write,,BOOL,NSQX5.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Demand gas safety device - Gastrain 
+bOUT_F12_GT3_SD_Dem_PS,POE\Main\Func12_Gas.GB,5,OUT,311,31,Write,,BOOL,NSQX5.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Demand gas safety device - Gastrain 
+bOUT_F12_GT4_OK,POE\Main\Func12_Gas.GB,8,OUT,343,40,Write,,BOOL,NSQX4.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas supply interruption OK - Gastrai
+bOUT_F12_GT4_SD_Dem,POE\Main\Func12_Gas.GB,8,OUT,348,34,Write,,BOOL,NSQX6.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Demand gas safety device - Gastrain 
+bOUT_F12_GT4_SD_Dem_PS,POE\Main\Func12_Gas.GB,8,OUT,344,31,Write,,BOOL,NSQX6.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Demand gas safety device - Gastrain 
+bOUT_F12_Rel_GV1,POE\Main\Func12_Gas.GB,2,OUT,33,39,Write,,BOOL,NSQX4.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas valves from gas train 1 released
+bOUT_F12_Rel_GV1a_PS,POE\Main\Func12_Gas.GB,2,OUT,244,34,Write,,BOOL,NSQX4.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas valve 1a - Physical state
+bOUT_F12_Rel_GV1b_PS,POE\Main\Func12_Gas.GB,2,OUT,245,34,Write,,BOOL,NSQX4.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas valve 1b - Physical state
+bOUT_F12_Rel_GV2,POE\Main\Func12_Gas.GB,2,OUT,258,39,Write,,BOOL,NSQX4.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas valves from gas train 2 released
+bOUT_F12_Rel_GV2a_PS,POE\Main\Func12_Gas.GB,2,OUT,278,34,Write,,BOOL,NSQX4.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas valve 2a - Physical state
+bOUT_F12_Rel_GV2b_PS,POE\Main\Func12_Gas.GB,2,OUT,279,34,Write,,BOOL,NSQX5.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas valve 2b - Physical state
+bOUT_F12_Rel_GV3,POE\Main\Func12_Gas.GB,5,OUT,292,39,Write,,BOOL,NSQX5.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas valves from gas train 3 released
+bOUT_F12_Rel_GV3a_PS,POE\Main\Func12_Gas.GB,5,OUT,312,34,Write,,BOOL,NSQX5.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas valve 3a - Physical state
+bOUT_F12_Rel_GV3b_PS,POE\Main\Func12_Gas.GB,5,OUT,313,34,Write,,BOOL,NSQX5.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas valve 3b - Physical state
+bOUT_F12_Rel_GV4,POE\Main\Func12_Gas.GB,8,OUT,325,39,Write,,BOOL,NSQX6.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas valves from gas train 4 released
+bOUT_F12_Rel_GV4a_PS,POE\Main\Func12_Gas.GB,8,OUT,345,34,Write,,BOOL,NSQX6.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas valve 4a - Physical state
+bOUT_F12_Rel_GV4b_PS,POE\Main\Func12_Gas.GB,8,OUT,346,34,Write,,BOOL,NSQX6.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas valve 4b - Physical state
+bOUT_F12_Rel_GV_DCGA,POE\Main\Func12_Gas.GB,8,OUT,368,34,Write,,BOOL,NSQX35.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas valves from DCGA released
+bOUT_F12_Rel_GVa_DCGA_PS,POE\Main\Func12_Gas.GB,8,OUT,388,29,Write,,BOOL,NSQX35.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas valve a DCGA - Physical state
+bOUT_F12_Rel_GVb_DCGA_PS,POE\Main\Func12_Gas.GB,11,OUT,389,29,Write,,BOOL,NSQX35.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas valve b DCGA - Physical state
+bOUT_F16_DI_ScavFlapClosed,POE\Main\PhaseII.GB,2,OUT,143,2,Write,,BOOL,NSQX26.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 16 - Scavenging flap closed - Status of d
+bOUT_F16_ScavFlapPos_OK,POE\Main\PhaseII.GB,2,OUT,57,5,Write,,BOOL,NSQX26.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 16 - Scavenging flap position OK
+bOUT_F16_ScavFlapPos_OK_PC,POE\Main\PhaseII.GB,8,OUT,158,1,Write,,BOOL,NSQX26.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 16 - Scavenging flap position plausibilit
+bOUT_F16_TS_ScavFlap_OK,POE\Main\PhaseII.GB,5,OUT,111,5,Write,,BOOL,NSQX26.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 16 - Scavenging flap temperature OK
+bOUT_F17_Purge_OK,POE\Main\PhaseII.GB,11,OUT,13,9,Write,,BOOL,NSQX26.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 17 - Purge state = OK
+bOUT_F17_Purge_OK,POE\Main\PhaseII.GB,13,IN,18,7,Read,,BOOL,NSQX26.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 17 - Purge state = OK
+bOUT_F20_FS_HWHT_Lo_DI,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,238,0,Write,,BOOL,NSQX28.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Min
+bOUT_F20_FS_HWHT_Lo_OK,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,53,0,Write,,BOOL,NSQX28.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Min
+bOUT_F20_FS_HWHT_Lo_OK,POE\HeatWaterSys\HeatWaterSys.GB,9,IN,18,7,Read,,BOOL,NSQX28.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Min
+bOUT_F20_FS_HWHT_Lo_OK_PC,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,58,0,Write,,BOOL,NSQX28.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Min
+bOUT_F20_FS_HWLT_Lo_DI,POE\HeatWaterSys\HeatWaterSys.GB,7,OUT,239,0,Write,,BOOL,NSQX29.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Mini
+bOUT_F20_FS_HWLT_Lo_OK,POE\HeatWaterSys\HeatWaterSys.GB,7,OUT,204,0,Write,,BOOL,NSQX29.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Mini
+bOUT_F20_FS_HWLT_Lo_OK,POE\HeatWaterSys\HeatWaterSys.GB,9,IN,26,7,Read,,BOOL,NSQX29.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Mini
+bOUT_F20_FS_HWLT_Lo_OK_PC,POE\HeatWaterSys\HeatWaterSys.GB,7,OUT,209,0,Write,,BOOL,NSQX29.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Mini
+bOUT_F20_HWcirc_Cust_OK,POE\HeatWaterSys\HeatWaterSys.GB,1,OUT,8,0,Write,,BOOL,NSQX26.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Customer heating water circuit OK
+bOUT_F20_HWcirc_Cust_OK,POE\HeatWaterSys\HeatWaterSys.GB,7,IN,10,7,Read,,BOOL,NSQX26.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Customer heating water circuit OK
+bOUT_F20_LS_HWHT_Lo_OK,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,43,0,Write,,BOOL,NSQX26.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Min
+bOUT_F20_LS_HWHT_Lo_OK,POE\HeatWaterSys\HeatWaterSys.GB,7,IN,11,7,Read,,BOOL,NSQX26.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Min
+bOUT_F20_LS_HWLT_Lo_OK,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,194,0,Write,,BOOL,NSQX28.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Mini
+bOUT_F20_LS_HWLT_Lo_OK,POE\HeatWaterSys\HeatWaterSys.GB,9,IN,19,7,Read,,BOOL,NSQX28.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Mini
+bOUT_F20_PS1_HWHT_Hi_OK,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,33,0,Write,,BOOL,NSQX27.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Max
+bOUT_F20_PS1_HWHT_Hi_OK,POE\HeatWaterSys\HeatWaterSys.GB,7,IN,12,6,Read,,BOOL,NSQX27.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Max
+bOUT_F20_PS1_HWHT_Lo_DI,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,54,0,Write,,BOOL,NSQX27.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Min
+bOUT_F20_PS1_HWHT_Lo_OK,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,44,0,Write,,BOOL,NSQX27.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Min
+bOUT_F20_PS1_HWHT_Lo_OK,POE\HeatWaterSys\HeatWaterSys.GB,7,IN,14,6,Read,,BOOL,NSQX27.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Min
+bOUT_F20_PS1_HWLT_Hi_OK,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,184,0,Write,,BOOL,NSQX28.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Maxi
+bOUT_F20_PS1_HWLT_Hi_OK,POE\HeatWaterSys\HeatWaterSys.GB,9,IN,20,6,Read,,BOOL,NSQX28.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Maxi
+bOUT_F20_PS1_HWLT_Lo_DI,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,205,0,Write,,BOOL,NSQX28.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Mini
+bOUT_F20_PS1_HWLT_Lo_OK,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,195,0,Write,,BOOL,NSQX28.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Mini
+bOUT_F20_PS1_HWLT_Lo_OK,POE\HeatWaterSys\HeatWaterSys.GB,9,IN,22,6,Read,,BOOL,NSQX28.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Mini
+bOUT_F20_PS2_HWHT_Hi_OK,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,36,0,Write,,BOOL,NSQX27.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Max
+bOUT_F20_PS2_HWHT_Hi_OK,POE\HeatWaterSys\HeatWaterSys.GB,7,IN,13,6,Read,,BOOL,NSQX27.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Max
+bOUT_F20_PS2_HWHT_Lo_DI,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,55,0,Write,,BOOL,NSQX27.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Min
+bOUT_F20_PS2_HWHT_Lo_OK,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,50,0,Write,,BOOL,NSQX27.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Min
+bOUT_F20_PS2_HWHT_Lo_OK,POE\HeatWaterSys\HeatWaterSys.GB,7,IN,15,6,Read,,BOOL,NSQX27.4,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Min
+bOUT_F20_PS2_HWLT_Hi_OK,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,187,0,Write,,BOOL,NSQX28.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Maxi
+bOUT_F20_PS2_HWLT_Hi_OK,POE\HeatWaterSys\HeatWaterSys.GB,9,IN,21,6,Read,,BOOL,NSQX28.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Maxi
+bOUT_F20_PS2_HWLT_Lo_DI,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,206,0,Write,,BOOL,NSQX29.1,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Mini
+bOUT_F20_PS2_HWLT_Lo_OK,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,201,0,Write,,BOOL,NSQX29.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Mini
+bOUT_F20_PS2_HWLT_Lo_OK,POE\HeatWaterSys\HeatWaterSys.GB,9,IN,23,6,Read,,BOOL,NSQX29.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Mini
+bOUT_F20_TS1_HWHT_Hi_OK,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,45,0,Write,,BOOL,NSQX27.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Max
+bOUT_F20_TS1_HWHT_Hi_OK,POE\HeatWaterSys\HeatWaterSys.GB,7,IN,16,6,Read,,BOOL,NSQX27.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Max
+bOUT_F20_TS1_HWLT_Hi_OK,POE\HeatWaterSys\HeatWaterSys.GB,5,OUT,196,0,Write,,BOOL,NSQX29.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Maxi
+bOUT_F20_TS1_HWLT_Hi_OK,POE\HeatWaterSys\HeatWaterSys.GB,9,IN,24,6,Read,,BOOL,NSQX29.2,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Maxi
+bOUT_F20_TS2_HWHT_Hi_OK,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,46,0,Write,,BOOL,NSQX27.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Max
+bOUT_F20_TS2_HWHT_Hi_OK,POE\HeatWaterSys\HeatWaterSys.GB,7,IN,17,6,Read,,BOOL,NSQX27.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Max
+bOUT_F20_TS2_HWLT_Hi_OK,POE\HeatWaterSys\HeatWaterSys.GB,7,OUT,197,0,Write,,BOOL,NSQX29.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Maxi
+bOUT_F20_TS2_HWLT_Hi_OK,POE\HeatWaterSys\HeatWaterSys.GB,9,IN,25,6,Read,,BOOL,NSQX29.3,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Maxi
+bOUT_F21_Pr_EG_Hi_OK,POE\Main\PhaseII.GB,14,OUT,222,6,Write,,BOOL,NSQX29.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 21 - Exhaust gas backpressure OK
+bOUT_F99_Rel_SF_OK,POE\Main\SafetyLoop.GB,8,OUT,126,38,Write,,BOOL,NSQX6.5,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 99 - Release safety functions - Module co
+bOUT_F99_Rel_SF_OK_A_PS,POE\Main\SafetyLoop.GB,2,OUT,17,31,Write,,BOOL,NSQX6.6,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 99 - Release safety functions - Module co
+bOUT_F99_Rel_SF_OK_M_PS,POE\Main\SafetyLoop.GB,2,OUT,8,31,Write,,BOOL,NSQX6.7,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 99 - Release safety functions - Module in
+bOUT_F99_SafetyLoop_Eng,POE\Main\SafetyLoop.GB,8,OUT,30,32,Write,,BOOL,NSQX0.0,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 99 - Safety loop engine OK
+bOUT_PARA_DCGA_Exist,POE\Main\Func00_IO_Para.GB,13,OUT,622,8,Write,,BOOL,NSQX23.4,,VAR_GLOBAL,GLOBAL,,PARA 15196: Gas train for DCGA (Decentral gas addition) exi
+bOUT_PARA_ER_Door_MonActive,POE\Main\Func00_IO_Para.GB,13,OUT,625,0,Write,,BOOL,NSQX23.0,,VAR_GLOBAL,GLOBAL,,PARA 15212: Door switch - Monitoring active
+bOUT_PARA_ERV_ColdCountry_Act,POE\Main\Func00_IO_Para.GB,13,OUT,624,0,Write,,BOOL,NSQX22.7,,VAR_GLOBAL,GLOBAL,,PARA 15189: Cold country mode active
+bOUT_PARA_ERV_Cust_Active,POE\Main\Func00_IO_Para.GB,13,OUT,623,2,Write,,BOOL,NSQX22.6,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+bOUT_PARA_FS_HWHT_Lo_Exist,POE\Main\Func00_IO_Para.GB,13,OUT,193,1,Write,,BOOL,NSQX24.7,,VAR_GLOBAL,GLOBAL,,PARA OUT 15117: High temperature heating water - Minimum fl
+bOUT_PARA_FS_HWLT_Lo_Exist,POE\Main\Func00_IO_Para.GB,13,OUT,216,1,Write,,BOOL,NSQX25.7,,VAR_GLOBAL,GLOBAL,,PARA OUT 15125: Low temperature heating water - Minimum flo
+bOUT_PARA_GT2_Exist,POE\Main\Func00_IO_Para.GB,11,OUT,68,10,Write,,BOOL,NSQX23.1,,VAR_GLOBAL,GLOBAL,,PARA OUT 15082: Gas train 2 existing
+bOUT_PARA_GT3_Exist,POE\Main\Func00_IO_Para.GB,11,OUT,70,10,Write,,BOOL,NSQX23.2,,VAR_GLOBAL,GLOBAL,,PARA OUT 15083: Gas train 3 existing
+bOUT_PARA_GT4_Exist,POE\Main\Func00_IO_Para.GB,11,OUT,72,10,Write,,BOOL,NSQX23.3,,VAR_GLOBAL,GLOBAL,,PARA OUT 15103: Gas train 4 existing
+bOUT_PARA_HWcirc_Cust_Exist,POE\Main\Func00_IO_Para.GB,11,OUT,183,1,Write,,BOOL,NSQX23.6,,VAR_GLOBAL,GLOBAL,,PARA OUT 15108: Customer heating water circuit - Monitoring
+bOUT_PARA_LS_HWHT_Lo_Exist,POE\Main\Func00_IO_Para.GB,11,OUT,186,1,Write,,BOOL,NSQX24.0,,VAR_GLOBAL,GLOBAL,,PARA OUT 15110: High temperature heating water - Minimum le
+bOUT_PARA_LS_HWLT_Lo_Exist,POE\Main\Func00_IO_Para.GB,13,OUT,194,1,Write,,BOOL,NSQX25.0,,VAR_GLOBAL,GLOBAL,,PARA OUT 15118: Low temperature heating water - Minimum lev
+bOUT_PARA_Pr_EG_sMonActive,POE\Main\Func00_IO_Para.GB,13,OUT,220,1,Write,,BOOL,NSQX26.0,,VAR_GLOBAL,GLOBAL,,PARA OUT 15085: Exhaust gas backpressure - Safety monitorin
+bOUT_PARA_PS1_HWHT_Hi_Exist,POE\Main\Func00_IO_Para.GB,11,OUT,187,100,Write,,BOOL,NSQX24.1,,VAR_GLOBAL,GLOBAL,,PARA OUT 15111: High temperature heating water - Maximum pr
+bOUT_PARA_PS1_HWHT_Lo_Exist,POE\Main\Func00_IO_Para.GB,11,OUT,189,100,Write,,BOOL,NSQX24.3,,VAR_GLOBAL,GLOBAL,,PARA OUT 15113: High temperature heating water - Minimum pr
+bOUT_PARA_PS1_HWLT_Hi_Exist,POE\Main\Func00_IO_Para.GB,13,OUT,210,100,Write,,BOOL,NSQX25.1,,VAR_GLOBAL,GLOBAL,,PARA OUT 15119: Low temperature heating water - Maximum pre
+bOUT_PARA_PS1_HWLT_Lo_Exist,POE\Main\Func00_IO_Para.GB,13,OUT,212,100,Write,,BOOL,NSQX25.3,,VAR_GLOBAL,GLOBAL,,PARA OUT 15121: Low temperature heating water - Minimum pre
+bOUT_PARA_PS2_HWHT_Hi_Exist,POE\Main\Func00_IO_Para.GB,11,OUT,188,100,Write,,BOOL,NSQX24.2,,VAR_GLOBAL,GLOBAL,,PARA OUT 15112: High temperature heating water - Maximum pr
+bOUT_PARA_PS2_HWHT_Lo_Exist,POE\Main\Func00_IO_Para.GB,13,OUT,190,100,Write,,BOOL,NSQX24.4,,VAR_GLOBAL,GLOBAL,,PARA OUT 15114: High temperature heating water - Minimum pr
+bOUT_PARA_PS2_HWLT_Hi_Exist,POE\Main\Func00_IO_Para.GB,13,OUT,211,100,Write,,BOOL,NSQX25.2,,VAR_GLOBAL,GLOBAL,,PARA OUT 15120: Low temperature heating water - Maximum pre
+bOUT_PARA_PS2_HWLT_Lo_Exist,POE\Main\Func00_IO_Para.GB,13,OUT,213,100,Write,,BOOL,NSQX25.4,,VAR_GLOBAL,GLOBAL,,PARA OUT 15122: Low temperature heating water - Minimum pre
+bOUT_PARA_PS_HW_Lo_MuteAcive,POE\Main\Func00_IO_Para.GB,11,OUT,185,0,Write,,BOOL,NSQX23.7,,VAR_GLOBAL,GLOBAL,,PARA OUT 15109: Muting heating water minimum pressure switc
+bOUT_PARA_SafetyLoop_A2_Exist,POE\Main\Func00_IO_Para.GB,13,OUT,254,0,Write,,BOOL,NSQX22.5,,VAR_GLOBAL,GLOBAL,,PARA OUT 15143: Safety loop 2 in the module control panel e
+bOUT_PARA_SysPurge_MonActive,POE\Main\Func00_IO_Para.GB,11,OUT,181,0,Write,,BOOL,NSQX23.5,,VAR_GLOBAL,GLOBAL,,PARA OUT 15107: System purge - Monitoring active
+bOUT_PARA_TS1_HWHT_Hi_Exist,POE\Main\Func00_IO_Para.GB,13,OUT,191,100,Write,,BOOL,NSQX24.5,,VAR_GLOBAL,GLOBAL,,PARA OUT 15115: High temperature heating water - Maximum te
+bOUT_PARA_TS1_HWLT_Hi_Exist,POE\Main\Func00_IO_Para.GB,13,OUT,214,100,Write,,BOOL,NSQX25.5,,VAR_GLOBAL,GLOBAL,,PARA OUT 15123: Low temperature heating water - Maximum tem
+bOUT_PARA_TS2_HWHT_Hi_Exist,POE\Main\Func00_IO_Para.GB,13,OUT,192,100,Write,,BOOL,NSQX24.6,,VAR_GLOBAL,GLOBAL,,PARA OUT 15116: High temperature heating water - Maximum te
+bOUT_PARA_TS2_HWLT_Hi_Exist,POE\Main\Func00_IO_Para.GB,13,OUT,215,100,Write,,BOOL,NSQX25.6,,VAR_GLOBAL,GLOBAL,,PARA OUT 15124: Low temperature heating water - Maximum tem
+bPhysicalState_DCGA_SafeDev,POE\Main\Func12_Gas.GB,10,IN,380,53,Read,,BOOL,NSIX534.2,,VAR_GLOBAL,GLOBAL,,Physical state of output - Gas safety device - DCGA
+bPhysicalState_EmStop,POE\Main\Func10_EmStop.GB,3,IN,44,13,Read,,BOOL,NSIX516.3,,VAR_GLOBAL,GLOBAL,,Physical state of output - Emergency stop signalling output
+bPhysicalState_GCB_RUC,POE\Main\Func07_Grid.GB,4,IN,79,12,Read,,BOOL,NSIX516.1,,VAR_GLOBAL,GLOBAL,,Physical state of output - Generator circuit breaker - Rele
+bPhysicalState_GCB_RUC,POE\Main\Func07_Grid.GB,7,IN,93,9,Read,,BOOL,NSIX516.1,,VAR_GLOBAL,GLOBAL,,Physical state of output - Generator circuit breaker - Rele
+bPhysicalState_GT1_SafeDev,POE\Main\Func12_Gas.GB,1,IN,236,54,Read,,BOOL,NSIX517.2,,VAR_GLOBAL,GLOBAL,,Physical state of output - Gas safety device - gastrain 1
+bPhysicalState_GT2_SafeDev,POE\Main\Func12_Gas.GB,4,IN,270,54,Read,,BOOL,NSIX518.2,,VAR_GLOBAL,GLOBAL,,Physical state of output - Gas safety device - gastrain 2
+bPhysicalState_GT3_SafeDev,POE\Main\Func12_Gas.GB,4,IN,304,54,Read,,BOOL,NSIX519.2,,VAR_GLOBAL,GLOBAL,,Physical state of output - Gas safety device - gastrain 3
+bPhysicalState_GT4_SafeDev,POE\Main\Func12_Gas.GB,7,IN,337,54,Read,,BOOL,NSIX533.2,,VAR_GLOBAL,GLOBAL,,Physical state of output - Gas safety device - gastrain 4
+bPhysicalState_Rel_GV1a,POE\Main\Func12_Gas.GB,1,IN,234,58,Read,,BOOL,NSIX517.0,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve 1a
+bPhysicalState_Rel_GV1a,POE\Main\Func12_Gas.GB,10,IN,14,13,Read,,BOOL,NSIX517.0,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve 1a
+bPhysicalState_Rel_GV1b,POE\Main\Func12_Gas.GB,1,IN,235,58,Read,,BOOL,NSIX517.1,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve 1b
+bPhysicalState_Rel_GV1b,POE\Main\Func12_Gas.GB,10,IN,17,13,Read,,BOOL,NSIX517.1,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve 1b
+bPhysicalState_Rel_GV2a,POE\Main\Func12_Gas.GB,1,IN,268,58,Read,,BOOL,NSIX518.0,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve 2a
+bPhysicalState_Rel_GV2a,POE\Main\Func12_Gas.GB,10,IN,18,13,Read,,BOOL,NSIX518.0,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve 2a
+bPhysicalState_Rel_GV2b,POE\Main\Func12_Gas.GB,1,IN,269,58,Read,,BOOL,NSIX518.1,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve 2b
+bPhysicalState_Rel_GV2b,POE\Main\Func12_Gas.GB,13,IN,19,13,Read,,BOOL,NSIX518.1,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve 2b
+bPhysicalState_Rel_GV3a,POE\Main\Func12_Gas.GB,4,IN,302,58,Read,,BOOL,NSIX519.0,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve 3a
+bPhysicalState_Rel_GV3a,POE\Main\Func12_Gas.GB,13,IN,23,13,Read,,BOOL,NSIX519.0,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve 3a
+bPhysicalState_Rel_GV3b,POE\Main\Func12_Gas.GB,4,IN,303,58,Read,,BOOL,NSIX519.1,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve 3b
+bPhysicalState_Rel_GV3b,POE\Main\Func12_Gas.GB,13,IN,24,13,Read,,BOOL,NSIX519.1,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve 3b
+bPhysicalState_Rel_GV4a,POE\Main\Func12_Gas.GB,7,IN,335,58,Read,,BOOL,NSIX533.0,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve 4a
+bPhysicalState_Rel_GV4a,POE\Main\Func12_Gas.GB,13,IN,37,13,Read,,BOOL,NSIX533.0,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve 4a
+bPhysicalState_Rel_GV4b,POE\Main\Func12_Gas.GB,7,IN,336,58,Read,,BOOL,NSIX533.1,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve 4b
+bPhysicalState_Rel_GV4b,POE\Main\Func12_Gas.GB,13,IN,38,13,Read,,BOOL,NSIX533.1,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve 4b
+bPhysicalState_Rel_GVa_DCGA,POE\Main\Func12_Gas.GB,7,IN,378,53,Read,,BOOL,NSIX534.0,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve a - DCGA
+bPhysicalState_Rel_GVa_DCGA,POE\Main\Func12_Gas.GB,13,IN,420,8,Read,,BOOL,NSIX534.0,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve a - DCGA
+bPhysicalState_Rel_GVb_DCGA,POE\Main\Func12_Gas.GB,10,IN,379,53,Read,,BOOL,NSIX534.1,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve a - DCGA
+bPhysicalState_Rel_GVb_DCGA,POE\Main\Func12_Gas.GB,13,IN,421,8,Read,,BOOL,NSIX534.1,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release gasvalve a - DCGA
+bPhysicalState_Rel_Sync_Load,POE\Main\Func07_Grid.GB,1,IN,75,7,Read,,BOOL,NSIX516.0,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release synchronizing and load
+bPhysicalState_Rel_Sync_Load,POE\Main\Func07_Grid.GB,4,IN,92,4,Read,,BOOL,NSIX516.0,,VAR_GLOBAL,GLOBAL,,Physical state of output - Release synchronizing and load
+bPhysicalState_SF_OK_A,POE\Main\SafetyLoop.GB,1,IN,16,12,Read,,BOOL,NSIX516.2,,VAR_GLOBAL,GLOBAL,,Physical state of output - Safety functions OK - Aggregat
+bPhysicalState_SF_OK_M,POE\Main\SafetyLoop.GB,1,IN,7,12,Read,,BOOL,NSIX517.3,,VAR_GLOBAL,GLOBAL,,Physical state of output - Safety functions OK - Module int
+bReset_CI_N_EngAct,POE\Main\Func01_Speed.GB,8,OUT,95,20,Write,,BOOL,NSQX518.0,,VAR_GLOBAL,GLOBAL,,Reset - CI Counter input for speed
+bRO_SM102,POE\Main\Func00_IO_Para.GB,8,OUT,30,43,Write,,BOOL,NSQX516.0,,VAR_GLOBAL,GLOBAL,,Release Output SM102
+bRO_SM205,POE\Main\Func00_IO_Para.GB,8,OUT,35,43,Write,,BOOL,NSQX517.0,,VAR_GLOBAL,GLOBAL,,Release Output SM205
+bRO_SM206,POE\Main\Func00_IO_Para.GB,8,OUT,36,43,Write,,BOOL,NSQX520.0,,VAR_GLOBAL,GLOBAL,,Release Output SM206
+bRO_SM207,POE\Main\Func00_IO_Para.GB,10,OUT,42,43,Write,,BOOL,NSQX521.0,,VAR_GLOBAL,GLOBAL,,Release Output SM207
+bRO_SM209,POE\Main\Func00_IO_Para.GB,10,OUT,44,43,Write,,BOOL,NSQX522.0,,VAR_GLOBAL,GLOBAL,,Release Output SM209
+bRO_SM210,POE\Main\Func00_IO_Para.GB,10,OUT,488,43,Write,,BOOL,NSQX523.0,,VAR_GLOBAL,GLOBAL,,Release Output SM210
+iIN_Eng_Motortype,POE\Main\SafetyLoop.GB,1,IN,69,18,Read,,INT,NSIW8,,VAR_GLOBAL,GLOBAL,,CPU IN: Engine motor type
+iIN_N_EngAct,POE\Main\Func01_Speed.GB,4,IN,146,2,Read,,INT,NSIW4,,VAR_GLOBAL,GLOBAL,,CPU IN: Actual engine speed from Ignition [rpm]
+iIN_N_EngAct,POE\Main\Func01_Speed.GB,4,IN,21,2,Read,,INT,NSIW4,,VAR_GLOBAL,GLOBAL,,CPU IN: Actual engine speed from Ignition [rpm]
+iIN_N_EngNom,POE\Main\SafetyLoop.GB,4,IN,83,23,Read,,INT,NSIW6,,VAR_GLOBAL,GLOBAL,,CPU IN: Nominal speed [rpm]
+iOUT_F01_N_EngAct,POE\Main\Func01_Speed.GB,2,OUT,67,23,Write,,DINT,NSQD132,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 01 - Actual engine speed [rpm]
+iOUT_F01_N_EngAct_Diff,POE\Main\Func01_Speed.GB,5,OUT,33,19,Write,,DINT,NSQD136,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 01 - Speed difference [rpm]
+iOUT_F01_N_Nom90_10s_ET,POE\Main\Func01_Speed.GB,2,OUT,174,16,Write,,DINT,NSQD148,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 01 - Speed >= 90% of nominal speed - Elip
+iOUT_F01_SDC_30s_ET,POE\Main\Func01_Speed.GB,4,OUT,62,7,Write,,DINT,NSQD140,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 01 - Speed difference check - Elipsed tim
+iOUT_F01_Standstill_1m_ET,POE\Main\Func01_Speed.GB,5,OUT,130,18,Write,,DINT,NSQD144,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 01 - Speed < 80rpm - Elipsed time
+iOUT_F03_Pr_EO,POE\Main\Func03_04_Oil_Pr.GB,2,OUT,18,51,Write,,DINT,NSQD152,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 03 - Actual oil pressure at last lubricat
+iOUT_F03_Pr_EO_Diff,POE\Main\Func03_04_Oil_Pr.GB,6,OUT,60,45,Write,,DINT,NSQD160,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 03 - Oil pressure difference [mbar]
+iOUT_F03_Pr_EO_Fr_1m_ET,POE\Main\Func03_04_Oil_Pr.GB,8,OUT,152,40,Write,,DINT,NSQD164,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 03 - Oil pressure frozen - Elipsed time
+iOUT_F03_Pr_EO_Standstill,POE\Main\Func03_04_Oil_Pr.GB,4,OUT,117,40,Write,,DINT,NSQD156,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 03 - Oil pressure at last lubrication poi
+iOUT_F04_EO_PumpsOff_2m_ET,POE\Main\Func03_04_Oil_Pr.GB,2,OUT,380,37,Write,,DINT,NSQD180,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 04 - Oil pumps off for 120s - Elipsed tim
+iOUT_F04_Pr_EOaP,POE\Main\Func03_04_Oil_Pr.GB,2,OUT,236,48,Write,,DINT,NSQD168,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 04 - Actual oil pressure after pump [mbar
+iOUT_F04_Pr_EOaP_Fr_1m_ET,POE\Main\Func03_04_Oil_Pr.GB,12,OUT,272,38,Write,,DINT,NSQD176,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 04 - Oil pressure after pump frozen - Eli
+iOUT_F04_Pr_EOaP_Standstill,POE\Main\Func03_04_Oil_Pr.GB,10,OUT,263,38,Write,,DINT,NSQD172,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 04 - Oil pressure after pump - At standst
+iOUT_F05_Pr_ECW,POE\Main\Func05_06_ECW_Pr.GB,2,OUT,9,55,Write,,DINT,NSQD184,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 05 - Actual engine cooling water pressure
+iOUT_F05_Pr_ECW_Diff,POE\Main\Func05_06_ECW_Pr.GB,5,OUT,16,51,Write,,DINT,NSQD188,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 05 - Engine cooling water pressure differ
+iOUT_F05_Pr_ECW_Fr_1m_ET,POE\Main\Func05_06_ECW_Pr.GB,8,OUT,38,45,Write,,DINT,NSQD192,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 05 - Engine cooling water pressure frozen
+iOUT_F06_ECW_PumpsOff_2m_ET,POE\Main\Func05_06_ECW_Pr.GB,2,OUT,206,41,Write,,DINT,NSQD204,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 06 - Engine cooling water pumps off for 1
+iOUT_F06_Pr_ECWaP,POE\Main\Func05_06_ECW_Pr.GB,2,OUT,140,53,Write,,DINT,NSQD196,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 06 - Actual engine cooling water pressure
+iOUT_F06_Pr_ECWaP_Fr_1m_ET,POE\Main\Func05_06_ECW_Pr.GB,14,OUT,152,43,Write,,DINT,NSQD200,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 06 - Engine cooling water pressure after 
+iOUT_F07_GCB_On_10s_ET,POE\Main\Func07_Grid.GB,8,OUT,10,23,Write,,DINT,NSQD208,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 07 - Generator circuit breaker ON for 10s
+iOUT_F07_GCB_On_60s_ET,POE\Main\Func07_Grid.GB,8,OUT,234,23,Write,,DINT,NSQD212,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 07 - Generator circuit breaker ON for 60s
+iOUT_F09_Cust_OK_15s_ET,POE\VENTILATION\VENTILATION.GB,2,OUT,9,28,Write,,DINT,NSQD216,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Customer room ventilation not in ope
+iOUT_F09_Cust_PC_ET,POE\VENTILATION\VENTILATION.GB,2,OUT,19,31,Write,,DINT,NSQD220,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Customer room ventilation plausibili
+iOUT_F09_Door_OK_15s_ET,POE\VENTILATION\VENTILATION.GB,5,OUT,128,27,Write,,DINT,NSQD284,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room door switch not closed -
+iOUT_F09_INL1_Fan_OK_1m_ET,POE\VENTILATION\VENTILATION.GB,8,OUT,268,23,Write,,DINT,NSQD288,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+iOUT_F09_INL1_Lou_OK_1m_ET,POE\VENTILATION\VENTILATION.GB,17,OUT,589,23,Write,,DINT,NSQD312,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+iOUT_F09_INL2_Fan_OK_1m_ET,POE\VENTILATION\VENTILATION.GB,11,OUT,305,23,Write,,DINT,NSQD292,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+iOUT_F09_INL2_Lou_OK_1m_ET,POE\VENTILATION\VENTILATION.GB,20,OUT,590,23,Write,,DINT,NSQD316,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+iOUT_F09_INL3_Fan_OK_1m_ET,POE\VENTILATION\VENTILATION.GB,11,OUT,604,23,Write,,DINT,NSQD296,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+iOUT_F09_INL3_Lou_OK_1m_ET,POE\VENTILATION\VENTILATION.GB,20,OUT,781,23,Write,,DINT,NSQD320,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+iOUT_F09_INL4_Fan_OK_1m_ET,POE\VENTILATION\VENTILATION.GB,11,OUT,643,23,Write,,DINT,NSQD300,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+iOUT_F09_INL4_Lou_OK_1m_ET,POE\VENTILATION\VENTILATION.GB,20,OUT,831,23,Write,,DINT,NSQD324,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+iOUT_F09_INL5_Fan_OK_1m_ET,POE\VENTILATION\VENTILATION.GB,14,OUT,682,23,Write,,DINT,NSQD304,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+iOUT_F09_INL5_Lou_OK_1m_ET,POE\VENTILATION\VENTILATION.GB,23,OUT,881,23,Write,,DINT,NSQD328,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+iOUT_F09_INL6_Fan_OK_1m_ET,POE\VENTILATION\VENTILATION.GB,14,OUT,721,23,Write,,DINT,NSQD308,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+iOUT_F09_INL6_Lou_OK_1m_ET,POE\VENTILATION\VENTILATION.GB,23,OUT,931,23,Write,,DINT,NSQD332,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Inlet air 
+iOUT_F09_Nr_PC_NotDone,POE\VENTILATION\VENTILATION.GB,41,OUT,1258,11,Write,,INT,NSQW48,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Number of plausibility checks not pe
+iOUT_F09_OTL1_Lou_OK_1m_ET,POE\VENTILATION\VENTILATION.GB,26,OUT,591,23,Write,,DINT,NSQD336,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Outlet air
+iOUT_F09_OTL2_Lou_OK_1m_ET,POE\VENTILATION\VENTILATION.GB,29,OUT,592,23,Write,,DINT,NSQD340,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Outlet air
+iOUT_F09_OTL3_Lou_OK_1m_ET,POE\VENTILATION\VENTILATION.GB,29,OUT,981,23,Write,,DINT,NSQD344,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Outlet air
+iOUT_F09_OTL4_Lou_OK_1m_ET,POE\VENTILATION\VENTILATION.GB,32,OUT,1030,23,Write,,DINT,NSQD348,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Outlet air
+iOUT_F09_OTL5_Lou_OK_1m_ET,POE\VENTILATION\VENTILATION.GB,32,OUT,1079,23,Write,,DINT,NSQD352,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Outlet air
+iOUT_F09_OTL6_Lou_OK_1m_ET,POE\VENTILATION\VENTILATION.GB,32,OUT,1128,23,Write,,DINT,NSQD356,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - Engine room ventilation - Outlet air
+iOUT_F12_DCGA_LC_130s_ET,POE\Main\Func12_Gas.GB,11,OUT,384,30,Write,,DINT,NSQD360,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - DCGA - Gas leakage check 130s - Elip
+iOUT_F12_GT1_LC_130s_ET,POE\Main\Func12_Gas.GB,2,OUT,240,32,Write,,DINT,NSQD228,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas train 1 - Gas leakage check 130s
+iOUT_F12_GT2_LC_130s_ET,POE\Main\Func12_Gas.GB,5,OUT,274,32,Write,,DINT,NSQD232,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas train 2 - Gas leakage check 130s
+iOUT_F12_GT3_LC_130s_ET,POE\Main\Func12_Gas.GB,5,OUT,308,32,Write,,DINT,NSQD236,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas train 3 - Gas leakage check 130s
+iOUT_F12_GT4_LC_130s_ET,POE\Main\Func12_Gas.GB,8,OUT,341,32,Write,,DINT,NSQD240,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas train 4 - Gas leakage check 130s
+iOUT_F12_GV_Open_60s_ET,POE\Main\Func12_Gas.GB,14,OUT,25,1,Write,,DINT,NSQD224,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 12 - Gas valves open for 60s - Elipsed ti
+iOUT_F16_ScavFlapPos_PC_ET,POE\Main\PhaseII.GB,5,OUT,162,2,Write,,DINT,NSQD244,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 16 - Scavenging flap position plausibilit
+iOUT_F17_Vol_PurgeAir,POE\Main\PhaseII.GB,11,OUT,312,7,Write,,DINT,NSQD248,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 17 - Calculated volume of purge air [l]
+iOUT_F20_FS_HWHT_Lo_OK_ET,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,59,0,Write,,DINT,NSQD260,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Min
+iOUT_F20_FS_HWHT_Lo_PC_ET,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,56,0,Write,,DINT,NSQD264,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Min
+iOUT_F20_FS_HWLT_Lo_OK_ET,POE\HeatWaterSys\HeatWaterSys.GB,7,OUT,210,0,Write,,DINT,NSQD276,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Mini
+iOUT_F20_FS_HWLT_Lo_PC_ET,POE\HeatWaterSys\HeatWaterSys.GB,7,OUT,207,0,Write,,DINT,NSQD280,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Mini
+iOUT_F20_PS1_HWHT_Lo_OK_ET,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,179,0,Write,,DINT,NSQD252,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Min
+iOUT_F20_PS1_HWLT_Lo_OK_ET,POE\HeatWaterSys\HeatWaterSys.GB,7,OUT,237,0,Write,,DINT,NSQD268,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Mini
+iOUT_F20_PS2_HWHT_Lo_OK_ET,POE\HeatWaterSys\HeatWaterSys.GB,3,OUT,47,0,Write,,DINT,NSQD256,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - High temperature heating water - Min
+iOUT_F20_PS2_HWLT_Lo_OK_ET,POE\HeatWaterSys\HeatWaterSys.GB,7,OUT,198,0,Write,,DINT,NSQD272,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - Low temperature heating water - Mini
+iOUT_PARA_DPr_ECWP_LoLo,POE\Main\Func00_IO_Para.GB,15,OUT,175,6,Write,,WORD,NSQW100,,VAR_GLOBAL,GLOBAL,,PARA OUT 15104: Engine cooling water pump - Difference pres
+iOUT_PARA_Eng_Motortype,POE\Main\Func00_IO_Para.GB,15,OUT,106,7,Write,,WORD,NSQW98,,VAR_GLOBAL,GLOBAL,,PARA OUT 15084: Motortype
+iOUT_PARA_N_EngAct_HiHi_Diff,POE\Main\Func00_IO_Para.GB,13,OUT,74,3,Write,,WORD,NSQW66,,VAR_GLOBAL,GLOBAL,,PARA OUT 15086: Speed - Maximum deviation to ignition speed
+iOUT_PARA_N_EngNom,POE\Main\Func00_IO_Para.GB,13,OUT,66,12,Write,,WORD,NSQW64,,VAR_GLOBAL,GLOBAL,,PARA OUT 15087: Speed - Nominal speed
+iOUT_PARA_N_Pr_EO_LoLo_Lim1,POE\Main\Func00_IO_Para.GB,13,OUT,76,3,Write,,WORD,NSQW68,,VAR_GLOBAL,GLOBAL,,PARA OUT 15088: Oil pressure - Minimum - Speed point 1
+iOUT_PARA_N_Pr_EO_LoLo_Lim2,POE\Main\Func00_IO_Para.GB,13,OUT,78,3,Write,,WORD,NSQW70,,VAR_GLOBAL,GLOBAL,,PARA OUT 15089: Oil pressure - Minimum - Speed point 2
+iOUT_PARA_Nr_ERV_INL_Fan,POE\Main\Func00_IO_Para.GB,15,OUT,632,6,Write,,WORD,NSQW106,,VAR_GLOBAL,GLOBAL,,PARA OUT 15190: Number of inlet air fans
+iOUT_PARA_Nr_ERV_INL_Lou,POE\Main\Func00_IO_Para.GB,15,OUT,633,6,Write,,WORD,NSQW108,,VAR_GLOBAL,GLOBAL,,PARA OUT 15191: Number of inlet air louvres
+iOUT_PARA_Nr_ERV_OTL_Lou,POE\Main\Func00_IO_Para.GB,15,OUT,634,5,Write,,WORD,NSQW110,,VAR_GLOBAL,GLOBAL,,PARA OUT 15192: Number of outlet air louvres
+iOUT_PARA_NrMaxErr_ERV_INL_Fan,POE\Main\Func00_IO_Para.GB,15,OUT,635,100,Write,,WORD,NSQW112,,VAR_GLOBAL,GLOBAL,,PARA OUT 15193: Maximum allowed number of failed inlet air 
+iOUT_PARA_NrMaxErr_ERV_INL_Lou,POE\Main\Func00_IO_Para.GB,15,OUT,636,0,Write,,WORD,NSQW114,,VAR_GLOBAL,GLOBAL,,PARA OUT 15194: Maximum allowed number of failed inlet air 
+iOUT_PARA_NrMaxErr_ERV_OTL_Lou,POE\Main\Func00_IO_Para.GB,15,OUT,637,0,Write,,WORD,NSQW116,,VAR_GLOBAL,GLOBAL,,PARA OUT 15195: Maximum allowed number of failed outlet air
+iOUT_PARA_Pr_ECW_HiHi_Check,POE\Main\Func00_IO_Para.GB,15,OUT,102,3,Write,,WORD,NSQW94,,VAR_GLOBAL,GLOBAL,,PARA OUT 15090: Engine cooling water pressure - Maximum (se
+iOUT_PARA_Pr_ECW_HiHi_Diff,POE\Main\Func00_IO_Para.GB,15,OUT,100,5,Write,,WORD,NSQW92,,VAR_GLOBAL,GLOBAL,,PARA OUT 15091: Engine cooling water pressure - Maximum dev
+iOUT_PARA_Pr_ECW_LoLo,POE\Main\Func00_IO_Para.GB,15,OUT,98,8,Write,,WORD,NSQW90,,VAR_GLOBAL,GLOBAL,,PARA OUT 15092: Engine cooling water pressure - Minimum
+iOUT_PARA_Pr_ECWaP_HiHi,POE\Main\Func00_IO_Para.GB,15,OUT,104,7,Write,,WORD,NSQW96,,VAR_GLOBAL,GLOBAL,,PARA OUT 15093: Engine cooling water pressure after pump - 
+iOUT_PARA_Pr_EO_Diff_EngStop,POE\Main\Func00_IO_Para.GB,15,OUT,84,3,Write,,WORD,NSQW76,,VAR_GLOBAL,GLOBAL,,PARA OUT 15094: Oil pressure - Minimum difference to stands
+iOUT_PARA_Pr_EO_HiHi_Check,POE\Main\Func00_IO_Para.GB,15,OUT,90,4,Write,,WORD,NSQW82,,VAR_GLOBAL,GLOBAL,,PARA OUT 15095: Oil pressure - Maximum (sensor drift)
+iOUT_PARA_Pr_EO_HiHi_Diff,POE\Main\Func00_IO_Para.GB,15,OUT,88,7,Write,,WORD,NSQW80,,VAR_GLOBAL,GLOBAL,,PARA OUT 15096: Oil pressure - Maximum deviation between th
+iOUT_PARA_Pr_EO_HiHi_EngStop,POE\Main\Func00_IO_Para.GB,15,OUT,86,2,Write,,WORD,NSQW78,,VAR_GLOBAL,GLOBAL,,PARA OUT 15097: Oil pressure - Maximum at standstill
+iOUT_PARA_Pr_EO_LoLo_LimN1,POE\Main\Func00_IO_Para.GB,13,OUT,80,4,Write,,WORD,NSQW72,,VAR_GLOBAL,GLOBAL,,PARA OUT 15098: Oil pressure - Minimum at speed point 1
+iOUT_PARA_Pr_EO_LoLo_LimN2,POE\Main\Func00_IO_Para.GB,15,OUT,82,4,Write,,WORD,NSQW74,,VAR_GLOBAL,GLOBAL,,PARA OUT 15099: Oil pressure - Minimum at speed point 2
+iOUT_PARA_Pr_EOaP_Diff_EngStop,POE\Main\Func00_IO_Para.GB,15,OUT,94,100,Write,,WORD,NSQW86,,VAR_GLOBAL,GLOBAL,,PARA OUT 15100: Oil pressure after pump - Minimum differenc
+iOUT_PARA_Pr_EOaP_HiHi,POE\Main\Func00_IO_Para.GB,15,OUT,92,9,Write,,WORD,NSQW84,,VAR_GLOBAL,GLOBAL,,PARA OUT 15101: Oil pressure after pump - Maximum
+iOUT_PARA_Pr_EOaP_HiHi_EngStop,POE\Main\Func00_IO_Para.GB,15,OUT,96,100,Write,,WORD,NSQW88,,VAR_GLOBAL,GLOBAL,,PARA OUT 15102: Oil pressure after pump - Maximum at stands
+iOUT_PARA_Vol_SysPurge_MinAir,POE\Main\Func00_IO_Para.GB,15,OUT,179,1,Write,,WORD,NSQW104,,VAR_GLOBAL,GLOBAL,,PARA OUT 15106: System purge - Minimum air volume
+iOUT_PARA_Vol_SysPurge_Stroke,POE\Main\Func00_IO_Para.GB,15,OUT,177,1,Write,,WORD,NSQW102,,VAR_GLOBAL,GLOBAL,,PARA OUT 15105: System purge - Stroke volume per crankshaft
+iRD_Nr_PC_NotDone,POE\VENTILATION\VENTILATION.GB,37,IN,1187,11,Read,,SAFEINT,SAFEINT#2,,VAR_GLOBAL,GLOBAL,,Remanent Data: Number of not performed plausibility checks
+iRD_Vol_Purge_Air,POE\Main\PhaseII.GB,7,IN,287,9,Read,,SAFEINT,SAFEINT#1,,VAR_GLOBAL,GLOBAL,,Remanent Data: Volume of purge air [l]
+PARA_DCGA_Exist,POE\Main\Func00_IO_Para.GB,3,IN,441,31,Read,,SAFEBOOL,SIX79.0,,VAR_GLOBAL,GLOBAL,,PARA 15196: Gas train for DCGA (Decentral gas addition) exi
+PARA_DCGA_Exist,POE\Main\Func00_IO_Para.GB,5,IN,431,31,Read,,SAFEBOOL,SIX79.0,,VAR_GLOBAL,GLOBAL,,PARA 15196: Gas train for DCGA (Decentral gas addition) exi
+PARA_DCGA_Exist,POE\Main\Func00_IO_Para.GB,13,IN,618,14,Read,,SAFEBOOL,SIX79.0,,VAR_GLOBAL,GLOBAL,,PARA 15196: Gas train for DCGA (Decentral gas addition) exi
+PARA_DCGA_Exist,POE\Main\Func12_Gas.GB,7,IN,392,65,Read,,SAFEBOOL,SIX79.0,,VAR_GLOBAL,GLOBAL,,PARA 15196: Gas train for DCGA (Decentral gas addition) exi
+PARA_DPr_ECWP_LoLo,POE\Main\Func00_IO_Para.GB,15,IN,174,10,Read,,SAFEDINT,SID212,,VAR_GLOBAL,GLOBAL,,PARA 15104: Engine cooling water pump - Difference pressure
+PARA_DPr_ECWP_LoLo,POE\Main\Func05_06_ECW_Pr.GB,7,IN,214,8,Read,,SAFEDINT,SID212,,VAR_GLOBAL,GLOBAL,,PARA 15104: Engine cooling water pump - Difference pressure
+PARA_Eng_Motortype,POE\Main\Func00_IO_Para.GB,11,IN,237,11,Read,,SAFEDINT,SID208,,VAR_GLOBAL,GLOBAL,,PARA 15084: Motortype
+PARA_Eng_Motortype,POE\Main\Func00_IO_Para.GB,11,IN,221,11,Read,,SAFEDINT,SID208,,VAR_GLOBAL,GLOBAL,,PARA 15084: Motortype
+PARA_Eng_Motortype,POE\Main\Func00_IO_Para.GB,15,IN,105,11,Read,,SAFEDINT,SID208,,VAR_GLOBAL,GLOBAL,,PARA 15084: Motortype
+PARA_Eng_Motortype,POE\Main\SafetyLoop.GB,4,IN,64,15,Read,,SAFEDINT,SID208,,VAR_GLOBAL,GLOBAL,,PARA 15084: Motortype
+PARA_ER_Door_MonActive,POE\Main\Func00_IO_Para.GB,13,IN,621,5,Read,,SAFEBOOL,SIX79.3,,VAR_GLOBAL,GLOBAL,,PARA 15212: Door switch - Monitoring active
+PARA_ER_Door_MonActive,POE\VENTILATION\VENTILATION.GB,4,IN,146,67,Read,,SAFEBOOL,SIX79.3,,VAR_GLOBAL,GLOBAL,,PARA 15212: Door switch - Monitoring active
+PARA_ER_Door_MonActive,POE\VENTILATION\VENTILATION.GB,4,IN,147,16,Read,,SAFEBOOL,SIX79.3,,VAR_GLOBAL,GLOBAL,,PARA 15212: Door switch - Monitoring active
+PARA_ER_Door_MonActive,POE\VENTILATION\VENTILATION.GB,7,IN,148,5,Read,,SAFEBOOL,SIX79.3,,VAR_GLOBAL,GLOBAL,,PARA 15212: Door switch - Monitoring active
+PARA_ERV_ColdCountry_Active,POE\ERV_Lou\ERV_Lou.GB,7,IN,378,8,Read,,SAFEBOOL,SIX79.2,,VAR_GLOBAL,GLOBAL,,PARA 15189: Cold country mode active
+PARA_ERV_ColdCountry_Active,POE\Main\Func00_IO_Para.GB,13,IN,620,1,Read,,SAFEBOOL,SIX79.2,,VAR_GLOBAL,GLOBAL,,PARA 15189: Cold country mode active
+PARA_ERV_ColdCountry_Active,POE\VENTILATION\VENTILATION.GB,7,IN,252,9,Read,,SAFEBOOL,SIX79.2,,VAR_GLOBAL,GLOBAL,,PARA 15189: Cold country mode active
+PARA_ERV_Cust_Active,POE\Main\Func00_IO_Para.GB,5,IN,457,49,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\Main\Func00_IO_Para.GB,5,IN,450,49,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\Main\Func00_IO_Para.GB,13,IN,619,8,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,1,IN,84,8,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,1,IN,89,8,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,2,IN,80,0,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,4,IN,202,67,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,4,IN,196,16,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,7,IN,296,7,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,7,IN,236,7,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,7,IN,232,5,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,10,IN,595,7,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,10,IN,634,7,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,13,IN,673,7,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,13,IN,712,7,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,16,IN,339,6,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,16,IN,324,7,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,19,IN,812,6,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,19,IN,762,6,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,22,IN,912,6,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,22,IN,862,6,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,25,IN,440,7,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,28,IN,964,7,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,28,IN,449,7,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,31,IN,1062,7,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,31,IN,1111,7,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,31,IN,1013,7,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,37,IN,1205,7,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_ERV_Cust_Active,POE\VENTILATION\VENTILATION.GB,38,IN,1183,0,Read,,SAFEBOOL,SIX79.1,,VAR_GLOBAL,GLOBAL,,PARA 15188: Customer room ventilation - Monitoring active
+PARA_FS_HWHT_Lo_Exist,POE\HeatWaterSys\HeatWaterSys.GB,3,IN,81,12,Read,,SAFEBOOL,SIX77.5,,VAR_GLOBAL,GLOBAL,,PARA 15117: High temperature heating water - Minimum flow s
+PARA_FS_HWHT_Lo_Exist,POE\Main\Func00_IO_Para.GB,1,IN,318,24,Read,,SAFEBOOL,SIX77.5,,VAR_GLOBAL,GLOBAL,,PARA 15117: High temperature heating water - Minimum flow s
+PARA_FS_HWHT_Lo_Exist,POE\Main\Func00_IO_Para.GB,13,IN,202,7,Read,,SAFEBOOL,SIX77.5,,VAR_GLOBAL,GLOBAL,,PARA 15117: High temperature heating water - Minimum flow s
+PARA_FS_HWLT_Lo_Exist,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,232,12,Read,,SAFEBOOL,SIX78.5,,VAR_GLOBAL,GLOBAL,,PARA 15125: Low temperature heating water - Minimum flow sw
+PARA_FS_HWLT_Lo_Exist,POE\Main\Func00_IO_Para.GB,3,IN,139,24,Read,,SAFEBOOL,SIX78.5,,VAR_GLOBAL,GLOBAL,,PARA 15125: Low temperature heating water - Minimum flow sw
+PARA_FS_HWLT_Lo_Exist,POE\Main\Func00_IO_Para.GB,13,IN,209,7,Read,,SAFEBOOL,SIX78.5,,VAR_GLOBAL,GLOBAL,,PARA 15125: Low temperature heating water - Minimum flow sw
+PARA_GT2_Exist,POE\Main\Func00_IO_Para.GB,3,IN,368,32,Read,,SAFEBOOL,SIX76.0,,VAR_GLOBAL,GLOBAL,,PARA 15082: Gas train 2 existing
+PARA_GT2_Exist,POE\Main\Func00_IO_Para.GB,11,IN,67,15,Read,,SAFEBOOL,SIX76.0,,VAR_GLOBAL,GLOBAL,,PARA 15082: Gas train 2 existing
+PARA_GT2_Exist,POE\Main\Func12_Gas.GB,1,IN,282,66,Read,,SAFEBOOL,SIX76.0,,VAR_GLOBAL,GLOBAL,,PARA 15082: Gas train 2 existing
+PARA_GT3_Exist,POE\Main\Func00_IO_Para.GB,3,IN,370,32,Read,,SAFEBOOL,SIX76.1,,VAR_GLOBAL,GLOBAL,,PARA 15083: Gas train 3 existing
+PARA_GT3_Exist,POE\Main\Func00_IO_Para.GB,3,IN,376,32,Read,,SAFEBOOL,SIX76.1,,VAR_GLOBAL,GLOBAL,,PARA 15083: Gas train 3 existing
+PARA_GT3_Exist,POE\Main\Func00_IO_Para.GB,11,IN,69,15,Read,,SAFEBOOL,SIX76.1,,VAR_GLOBAL,GLOBAL,,PARA 15083: Gas train 3 existing
+PARA_GT3_Exist,POE\Main\Func12_Gas.GB,4,IN,316,66,Read,,SAFEBOOL,SIX76.1,,VAR_GLOBAL,GLOBAL,,PARA 15083: Gas train 3 existing
+PARA_GT4_Exist,POE\Main\Func00_IO_Para.GB,3,IN,372,32,Read,,SAFEBOOL,SIX76.2,,VAR_GLOBAL,GLOBAL,,PARA 15103: Gas train 4 existing
+PARA_GT4_Exist,POE\Main\Func00_IO_Para.GB,5,IN,374,32,Read,,SAFEBOOL,SIX76.2,,VAR_GLOBAL,GLOBAL,,PARA 15103: Gas train 4 existing
+PARA_GT4_Exist,POE\Main\Func00_IO_Para.GB,11,IN,71,15,Read,,SAFEBOOL,SIX76.2,,VAR_GLOBAL,GLOBAL,,PARA 15103: Gas train 4 existing
+PARA_GT4_Exist,POE\Main\Func12_Gas.GB,7,IN,349,66,Read,,SAFEBOOL,SIX76.2,,VAR_GLOBAL,GLOBAL,,PARA 15103: Gas train 4 existing
+PARA_HWcirc_Cust_Exist,POE\HeatWaterSys\HeatWaterSys.GB,1,IN,6,12,Read,,SAFEBOOL,SIX76.4,,VAR_GLOBAL,GLOBAL,,PARA 15108: Customer heating water circuit - Monitoring act
+PARA_HWcirc_Cust_Exist,POE\Main\Func00_IO_Para.GB,3,IN,310,24,Read,,SAFEBOOL,SIX76.4,,VAR_GLOBAL,GLOBAL,,PARA 15108: Customer heating water circuit - Monitoring act
+PARA_HWcirc_Cust_Exist,POE\Main\Func00_IO_Para.GB,11,IN,182,7,Read,,SAFEBOOL,SIX76.4,,VAR_GLOBAL,GLOBAL,,PARA 15108: Customer heating water circuit - Monitoring act
+PARA_LS_HWHT_Lo_Exist,POE\HeatWaterSys\HeatWaterSys.GB,3,IN,67,12,Read,,SAFEBOOL,SIX76.6,,VAR_GLOBAL,GLOBAL,,PARA 15110: High temperature heating water - Minimum level 
+PARA_LS_HWHT_Lo_Exist,POE\Main\Func00_IO_Para.GB,1,IN,311,24,Read,,SAFEBOOL,SIX76.6,,VAR_GLOBAL,GLOBAL,,PARA 15110: High temperature heating water - Minimum level 
+PARA_LS_HWHT_Lo_Exist,POE\Main\Func00_IO_Para.GB,11,IN,195,7,Read,,SAFEBOOL,SIX76.6,,VAR_GLOBAL,GLOBAL,,PARA 15110: High temperature heating water - Minimum level 
+PARA_LS_HWLT_Lo_Exist,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,218,12,Read,,SAFEBOOL,SIX77.6,,VAR_GLOBAL,GLOBAL,,PARA 15118: Low temperature heating water - Minimum level s
+PARA_LS_HWLT_Lo_Exist,POE\Main\Func00_IO_Para.GB,1,IN,132,24,Read,,SAFEBOOL,SIX77.6,,VAR_GLOBAL,GLOBAL,,PARA 15118: Low temperature heating water - Minimum level s
+PARA_LS_HWLT_Lo_Exist,POE\Main\Func00_IO_Para.GB,13,IN,217,7,Read,,SAFEBOOL,SIX77.6,,VAR_GLOBAL,GLOBAL,,PARA 15118: Low temperature heating water - Minimum level s
+PARA_N_EngAct_HiHi_Diff,POE\Main\Func00_IO_Para.GB,13,IN,73,7,Read,,SAFEDINT,SID144,,VAR_GLOBAL,GLOBAL,,PARA 15086: Speed - Maximum deviation to ignition speed
+PARA_N_EngAct_HiHi_Diff,POE\Main\Func01_Speed.GB,4,IN,194,0,Read,,SAFEDINT,SID144,,VAR_GLOBAL,GLOBAL,,PARA 15086: Speed - Maximum deviation to ignition speed
+PARA_N_EngNom,POE\Main\Func00_IO_Para.GB,13,IN,65,16,Read,,SAFEDINT,SID140,,VAR_GLOBAL,GLOBAL,,PARA 15087: Speed - Nominal speed
+PARA_N_EngNom,POE\Main\Func01_Speed.GB,1,IN,97,51,Read,,SAFEDINT,SID140,,VAR_GLOBAL,GLOBAL,,PARA 15087: Speed - Nominal speed
+PARA_N_EngNom,POE\Main\SafetyLoop.GB,4,IN,82,20,Read,,SAFEDINT,SID140,,VAR_GLOBAL,GLOBAL,,PARA 15087: Speed - Nominal speed
+PARA_N_Pr_EO_LoLo_Lim1,POE\Main\Func00_IO_Para.GB,13,IN,75,7,Read,,SAFEDINT,SID148,,VAR_GLOBAL,GLOBAL,,PARA 15088: Oil pressure - Minimum - Speed point 1
+PARA_N_Pr_EO_LoLo_Lim1,POE\Main\Func03_04_Oil_Pr.GB,3,IN,35,54,Read,,SAFEDINT,SID148,,VAR_GLOBAL,GLOBAL,,PARA 15088: Oil pressure - Minimum - Speed point 1
+PARA_N_Pr_EO_LoLo_Lim1,POE\Main\Func03_04_Oil_Pr.GB,3,IN,23,5,Read,,SAFEDINT,SID148,,VAR_GLOBAL,GLOBAL,,PARA 15088: Oil pressure - Minimum - Speed point 1
+PARA_N_Pr_EO_LoLo_Lim2,POE\Main\Func00_IO_Para.GB,13,IN,77,7,Read,,SAFEDINT,SID152,,VAR_GLOBAL,GLOBAL,,PARA 15089: Oil pressure - Minimum - Speed point 2
+PARA_N_Pr_EO_LoLo_Lim2,POE\Main\Func03_04_Oil_Pr.GB,3,IN,24,5,Read,,SAFEDINT,SID152,,VAR_GLOBAL,GLOBAL,,PARA 15089: Oil pressure - Minimum - Speed point 2
+PARA_Nr_ERV_INL_Fan,POE\Main\Func00_IO_Para.GB,5,IN,481,26,Read,,SAFEDINT,SID224,,VAR_GLOBAL,GLOBAL,,PARA 15190: Number of inlet air fans
+PARA_Nr_ERV_INL_Fan,POE\Main\Func00_IO_Para.GB,5,IN,473,26,Read,,SAFEDINT,SID224,,VAR_GLOBAL,GLOBAL,,PARA 15190: Number of inlet air fans
+PARA_Nr_ERV_INL_Fan,POE\Main\Func00_IO_Para.GB,5,IN,475,26,Read,,SAFEDINT,SID224,,VAR_GLOBAL,GLOBAL,,PARA 15190: Number of inlet air fans
+PARA_Nr_ERV_INL_Fan,POE\Main\Func00_IO_Para.GB,15,IN,626,10,Read,,SAFEDINT,SID224,,VAR_GLOBAL,GLOBAL,,PARA 15190: Number of inlet air fans
+PARA_Nr_ERV_INL_Fan,POE\VENTILATION\VENTILATION.GB,7,IN,237,8,Read,,SAFEDINT,SID224,,VAR_GLOBAL,GLOBAL,,PARA 15190: Number of inlet air fans
+PARA_Nr_ERV_INL_Fan,POE\VENTILATION\VENTILATION.GB,10,IN,635,8,Read,,SAFEDINT,SID224,,VAR_GLOBAL,GLOBAL,,PARA 15190: Number of inlet air fans
+PARA_Nr_ERV_INL_Fan,POE\VENTILATION\VENTILATION.GB,10,IN,297,8,Read,,SAFEDINT,SID224,,VAR_GLOBAL,GLOBAL,,PARA 15190: Number of inlet air fans
+PARA_Nr_ERV_INL_Fan,POE\VENTILATION\VENTILATION.GB,10,IN,596,8,Read,,SAFEDINT,SID224,,VAR_GLOBAL,GLOBAL,,PARA 15190: Number of inlet air fans
+PARA_Nr_ERV_INL_Fan,POE\VENTILATION\VENTILATION.GB,13,IN,674,8,Read,,SAFEDINT,SID224,,VAR_GLOBAL,GLOBAL,,PARA 15190: Number of inlet air fans
+PARA_Nr_ERV_INL_Fan,POE\VENTILATION\VENTILATION.GB,13,IN,713,8,Read,,SAFEDINT,SID224,,VAR_GLOBAL,GLOBAL,,PARA 15190: Number of inlet air fans
+PARA_Nr_ERV_INL_Fan,POE\VENTILATION\VENTILATION.GB,14,IN,279,0,Read,,SAFEDINT,SID224,,VAR_GLOBAL,GLOBAL,,PARA 15190: Number of inlet air fans
+PARA_Nr_ERV_INL_Lou,POE\Main\Func00_IO_Para.GB,15,IN,627,10,Read,,SAFEDINT,SID228,,VAR_GLOBAL,GLOBAL,,PARA 15191: Number of inlet air louvres
+PARA_Nr_ERV_INL_Lou,POE\VENTILATION\VENTILATION.GB,16,IN,325,8,Read,,SAFEDINT,SID228,,VAR_GLOBAL,GLOBAL,,PARA 15191: Number of inlet air louvres
+PARA_Nr_ERV_INL_Lou,POE\VENTILATION\VENTILATION.GB,16,IN,340,7,Read,,SAFEDINT,SID228,,VAR_GLOBAL,GLOBAL,,PARA 15191: Number of inlet air louvres
+PARA_Nr_ERV_INL_Lou,POE\VENTILATION\VENTILATION.GB,19,IN,763,7,Read,,SAFEDINT,SID228,,VAR_GLOBAL,GLOBAL,,PARA 15191: Number of inlet air louvres
+PARA_Nr_ERV_INL_Lou,POE\VENTILATION\VENTILATION.GB,19,IN,813,7,Read,,SAFEDINT,SID228,,VAR_GLOBAL,GLOBAL,,PARA 15191: Number of inlet air louvres
+PARA_Nr_ERV_INL_Lou,POE\VENTILATION\VENTILATION.GB,22,IN,913,7,Read,,SAFEDINT,SID228,,VAR_GLOBAL,GLOBAL,,PARA 15191: Number of inlet air louvres
+PARA_Nr_ERV_INL_Lou,POE\VENTILATION\VENTILATION.GB,22,IN,863,7,Read,,SAFEDINT,SID228,,VAR_GLOBAL,GLOBAL,,PARA 15191: Number of inlet air louvres
+PARA_Nr_ERV_INL_Lou,POE\VENTILATION\VENTILATION.GB,26,IN,336,0,Read,,SAFEDINT,SID228,,VAR_GLOBAL,GLOBAL,,PARA 15191: Number of inlet air louvres
+PARA_Nr_ERV_OTL_Lou,POE\Main\Func00_IO_Para.GB,15,IN,628,9,Read,,SAFEDINT,SID232,,VAR_GLOBAL,GLOBAL,,PARA 15192: Number of outlet air louvres
+PARA_Nr_ERV_OTL_Lou,POE\VENTILATION\VENTILATION.GB,25,IN,441,7,Read,,SAFEDINT,SID232,,VAR_GLOBAL,GLOBAL,,PARA 15192: Number of outlet air louvres
+PARA_Nr_ERV_OTL_Lou,POE\VENTILATION\VENTILATION.GB,28,IN,450,7,Read,,SAFEDINT,SID232,,VAR_GLOBAL,GLOBAL,,PARA 15192: Number of outlet air louvres
+PARA_Nr_ERV_OTL_Lou,POE\VENTILATION\VENTILATION.GB,28,IN,965,7,Read,,SAFEDINT,SID232,,VAR_GLOBAL,GLOBAL,,PARA 15192: Number of outlet air louvres
+PARA_Nr_ERV_OTL_Lou,POE\VENTILATION\VENTILATION.GB,31,IN,1014,7,Read,,SAFEDINT,SID232,,VAR_GLOBAL,GLOBAL,,PARA 15192: Number of outlet air louvres
+PARA_Nr_ERV_OTL_Lou,POE\VENTILATION\VENTILATION.GB,31,IN,1112,7,Read,,SAFEDINT,SID232,,VAR_GLOBAL,GLOBAL,,PARA 15192: Number of outlet air louvres
+PARA_Nr_ERV_OTL_Lou,POE\VENTILATION\VENTILATION.GB,31,IN,1063,7,Read,,SAFEDINT,SID232,,VAR_GLOBAL,GLOBAL,,PARA 15192: Number of outlet air louvres
+PARA_Nr_ERV_OTL_Lou,POE\VENTILATION\VENTILATION.GB,35,IN,411,0,Read,,SAFEDINT,SID232,,VAR_GLOBAL,GLOBAL,,PARA 15192: Number of outlet air louvres
+PARA_NrMaxErr_ERV_INL_Fan,POE\Main\Func00_IO_Para.GB,15,IN,629,4,Read,,SAFEDINT,SID236,,VAR_GLOBAL,GLOBAL,,PARA 15193: Maximum allowed number of failed inlet air fans
+PARA_NrMaxErr_ERV_INL_Fan,POE\VENTILATION\VENTILATION.GB,14,IN,280,0,Read,,SAFEDINT,SID236,,VAR_GLOBAL,GLOBAL,,PARA 15193: Maximum allowed number of failed inlet air fans
+PARA_NrMaxErr_ERV_INL_Lou,POE\Main\Func00_IO_Para.GB,15,IN,630,3,Read,,SAFEDINT,SID240,,VAR_GLOBAL,GLOBAL,,PARA 15194: Maximum allowed number of failed inlet air louv
+PARA_NrMaxErr_ERV_INL_Lou,POE\VENTILATION\VENTILATION.GB,26,IN,337,0,Read,,SAFEDINT,SID240,,VAR_GLOBAL,GLOBAL,,PARA 15194: Maximum allowed number of failed inlet air louv
+PARA_NrMaxErr_ERV_OTL_Lou,POE\Main\Func00_IO_Para.GB,15,IN,631,3,Read,,SAFEDINT,SID244,,VAR_GLOBAL,GLOBAL,,PARA 15195: Maximum allowed number of failed outlet air lou
+PARA_NrMaxErr_ERV_OTL_Lou,POE\VENTILATION\VENTILATION.GB,35,IN,412,0,Read,,SAFEDINT,SID244,,VAR_GLOBAL,GLOBAL,,PARA 15195: Maximum allowed number of failed outlet air lou
+PARA_Pr_ECW_HiHi_Check,POE\Main\Func00_IO_Para.GB,15,IN,101,7,Read,,SAFEDINT,SID200,,VAR_GLOBAL,GLOBAL,,PARA 15090: Engine cooling water pressure - Maximum (sensor
+PARA_Pr_ECW_HiHi_Check,POE\Main\Func05_06_ECW_Pr.GB,7,IN,30,4,Read,,SAFEDINT,SID200,,VAR_GLOBAL,GLOBAL,,PARA 15090: Engine cooling water pressure - Maximum (sensor
+PARA_Pr_ECW_HiHi_Diff,POE\Main\Func00_IO_Para.GB,15,IN,99,9,Read,,SAFEDINT,SID196,,VAR_GLOBAL,GLOBAL,,PARA 15091: Engine cooling water pressure - Maximum deviati
+PARA_Pr_ECW_HiHi_Diff,POE\Main\Func05_06_ECW_Pr.GB,4,IN,122,7,Read,,SAFEDINT,SID196,,VAR_GLOBAL,GLOBAL,,PARA 15091: Engine cooling water pressure - Maximum deviati
+PARA_Pr_ECW_LoLo,POE\Main\Func00_IO_Para.GB,15,IN,97,12,Read,,SAFEDINT,SID192,,VAR_GLOBAL,GLOBAL,,PARA 15092: Engine cooling water pressure - Minimum
+PARA_Pr_ECW_LoLo,POE\Main\Func05_06_ECW_Pr.GB,4,IN,117,10,Read,,SAFEDINT,SID192,,VAR_GLOBAL,GLOBAL,,PARA 15092: Engine cooling water pressure - Minimum
+PARA_Pr_ECWaP_HiHi,POE\Main\Func00_IO_Para.GB,15,IN,103,11,Read,,SAFEDINT,SID204,,VAR_GLOBAL,GLOBAL,,PARA 15093: Engine cooling water pressure after pump - Maxi
+PARA_Pr_ECWaP_HiHi,POE\Main\Func05_06_ECW_Pr.GB,13,IN,146,9,Read,,SAFEDINT,SID204,,VAR_GLOBAL,GLOBAL,,PARA 15093: Engine cooling water pressure after pump - Maxi
+PARA_Pr_EG_sMonActive,POE\Main\Func00_IO_Para.GB,13,IN,219,7,Read,,SAFEBOOL,SIX78.6,,VAR_GLOBAL,GLOBAL,,PARA 15085: Exhaust gas backpressure - Safety monitoring ac
+PARA_Pr_EG_sMonActive,POE\Main\PhaseII.GB,13,IN,218,4,Read,,SAFEBOOL,SIX78.6,,VAR_GLOBAL,GLOBAL,,PARA 15085: Exhaust gas backpressure - Safety monitoring ac
+PARA_Pr_EO_Diff_EngStop,POE\Main\Func00_IO_Para.GB,15,IN,83,7,Read,,SAFEDINT,SID164,,VAR_GLOBAL,GLOBAL,,PARA 15094: Oil pressure - Minimum difference to standstill
+PARA_Pr_EO_Diff_EngStop,POE\Main\Func03_04_Oil_Pr.GB,3,IN,15,5,Read,,SAFEDINT,SID164,,VAR_GLOBAL,GLOBAL,,PARA 15094: Oil pressure - Minimum difference to standstill
+PARA_Pr_EO_HiHi_Check,POE\Main\Func00_IO_Para.GB,15,IN,89,8,Read,,SAFEDINT,SID176,,VAR_GLOBAL,GLOBAL,,PARA 15095: Oil pressure - Maximum (sensor drift)
+PARA_Pr_EO_HiHi_Check,POE\Main\Func03_04_Oil_Pr.GB,5,IN,88,6,Read,,SAFEDINT,SID176,,VAR_GLOBAL,GLOBAL,,PARA 15095: Oil pressure - Maximum (sensor drift)
+PARA_Pr_EO_HiHi_Diff,POE\Main\Func00_IO_Para.GB,15,IN,87,11,Read,,SAFEDINT,SID172,,VAR_GLOBAL,GLOBAL,,PARA 15096: Oil pressure - Maximum deviation between the se
+PARA_Pr_EO_HiHi_Diff,POE\Main\Func03_04_Oil_Pr.GB,5,IN,211,9,Read,,SAFEDINT,SID172,,VAR_GLOBAL,GLOBAL,,PARA 15096: Oil pressure - Maximum deviation between the se
+PARA_Pr_EO_HiHi_EngStop,POE\Main\Func00_IO_Para.GB,15,IN,85,6,Read,,SAFEDINT,SID168,,VAR_GLOBAL,GLOBAL,,PARA 15097: Oil pressure - Maximum at standstill
+PARA_Pr_EO_HiHi_EngStop,POE\Main\Func03_04_Oil_Pr.GB,5,IN,97,4,Read,,SAFEDINT,SID168,,VAR_GLOBAL,GLOBAL,,PARA 15097: Oil pressure - Maximum at standstill
+PARA_Pr_EO_LoLo_LimN1,POE\Main\Func00_IO_Para.GB,13,IN,79,8,Read,,SAFEDINT,SID156,,VAR_GLOBAL,GLOBAL,,PARA 15098: Oil pressure - Minimum at speed point 1
+PARA_Pr_EO_LoLo_LimN1,POE\Main\Func03_04_Oil_Pr.GB,3,IN,21,6,Read,,SAFEDINT,SID156,,VAR_GLOBAL,GLOBAL,,PARA 15098: Oil pressure - Minimum at speed point 1
+PARA_Pr_EO_LoLo_LimN2,POE\Main\Func00_IO_Para.GB,15,IN,81,8,Read,,SAFEDINT,SID160,,VAR_GLOBAL,GLOBAL,,PARA 15099: Oil pressure - Minimum at speed point 2
+PARA_Pr_EO_LoLo_LimN2,POE\Main\Func03_04_Oil_Pr.GB,3,IN,22,6,Read,,SAFEDINT,SID160,,VAR_GLOBAL,GLOBAL,,PARA 15099: Oil pressure - Minimum at speed point 2
+PARA_Pr_EOaP_Diff_EngStop,POE\Main\Func00_IO_Para.GB,15,IN,93,4,Read,,SAFEDINT,SID184,,VAR_GLOBAL,GLOBAL,,PARA 15100: Oil pressure after pump - Minimum difference to
+PARA_Pr_EOaP_Diff_EngStop,POE\Main\Func03_04_Oil_Pr.GB,11,IN,247,2,Read,,SAFEDINT,SID184,,VAR_GLOBAL,GLOBAL,,PARA 15100: Oil pressure after pump - Minimum difference to
+PARA_Pr_EOaP_HiHi,POE\Main\Func00_IO_Para.GB,15,IN,91,13,Read,,SAFEDINT,SID180,,VAR_GLOBAL,GLOBAL,,PARA 15101: Oil pressure after pump - Maximum
+PARA_Pr_EOaP_HiHi,POE\Main\Func03_04_Oil_Pr.GB,9,IN,250,11,Read,,SAFEDINT,SID180,,VAR_GLOBAL,GLOBAL,,PARA 15101: Oil pressure after pump - Maximum
+PARA_Pr_EOaP_HiHi_EngStop,POE\Main\Func00_IO_Para.GB,15,IN,95,4,Read,,SAFEDINT,SID188,,VAR_GLOBAL,GLOBAL,,PARA 15102: Oil pressure after pump - Maximum at standstill
+PARA_Pr_EOaP_HiHi_EngStop,POE\Main\Func03_04_Oil_Pr.GB,11,IN,258,2,Read,,SAFEDINT,SID188,,VAR_GLOBAL,GLOBAL,,PARA 15102: Oil pressure after pump - Maximum at standstill
+PARA_PS1_HWHT_Hi_Exist,POE\HeatWaterSys\HeatWaterSys.GB,3,IN,61,11,Read,,SAFEBOOL,SIX76.7,,VAR_GLOBAL,GLOBAL,,PARA 15111: High temperature heating water - Maximum pressu
+PARA_PS1_HWHT_Hi_Exist,POE\Main\Func00_IO_Para.GB,1,IN,313,23,Read,,SAFEBOOL,SIX76.7,,VAR_GLOBAL,GLOBAL,,PARA 15111: High temperature heating water - Maximum pressu
+PARA_PS1_HWHT_Hi_Exist,POE\Main\Func00_IO_Para.GB,11,IN,197,6,Read,,SAFEBOOL,SIX76.7,,VAR_GLOBAL,GLOBAL,,PARA 15111: High temperature heating water - Maximum pressu
+PARA_PS1_HWHT_Lo_Exist,POE\HeatWaterSys\HeatWaterSys.GB,3,IN,62,10,Read,,SAFEBOOL,SIX77.1,,VAR_GLOBAL,GLOBAL,,PARA 15113: High temperature heating water - Minimum pressu
+PARA_PS1_HWHT_Lo_Exist,POE\Main\Func00_IO_Para.GB,1,IN,315,22,Read,,SAFEBOOL,SIX77.1,,VAR_GLOBAL,GLOBAL,,PARA 15113: High temperature heating water - Minimum pressu
+PARA_PS1_HWHT_Lo_Exist,POE\Main\Func00_IO_Para.GB,11,IN,199,5,Read,,SAFEBOOL,SIX77.1,,VAR_GLOBAL,GLOBAL,,PARA 15113: High temperature heating water - Minimum pressu
+PARA_PS1_HWLT_Hi_Exist,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,212,11,Read,,SAFEBOOL,SIX77.7,,VAR_GLOBAL,GLOBAL,,PARA 15119: Low temperature heating water - Maximum pressur
+PARA_PS1_HWLT_Hi_Exist,POE\Main\Func00_IO_Para.GB,1,IN,134,23,Read,,SAFEBOOL,SIX77.7,,VAR_GLOBAL,GLOBAL,,PARA 15119: Low temperature heating water - Maximum pressur
+PARA_PS1_HWLT_Hi_Exist,POE\Main\Func00_IO_Para.GB,13,IN,204,6,Read,,SAFEBOOL,SIX77.7,,VAR_GLOBAL,GLOBAL,,PARA 15119: Low temperature heating water - Maximum pressur
+PARA_PS1_HWLT_Lo_Exist,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,213,11,Read,,SAFEBOOL,SIX78.1,,VAR_GLOBAL,GLOBAL,,PARA 15121: Low temperature heating water - Minimum pressur
+PARA_PS1_HWLT_Lo_Exist,POE\Main\Func00_IO_Para.GB,1,IN,136,23,Read,,SAFEBOOL,SIX78.1,,VAR_GLOBAL,GLOBAL,,PARA 15121: Low temperature heating water - Minimum pressur
+PARA_PS1_HWLT_Lo_Exist,POE\Main\Func00_IO_Para.GB,13,IN,206,6,Read,,SAFEBOOL,SIX78.1,,VAR_GLOBAL,GLOBAL,,PARA 15121: Low temperature heating water - Minimum pressur
+PARA_PS2_HWHT_Hi_Exist,POE\HeatWaterSys\HeatWaterSys.GB,3,IN,60,11,Read,,SAFEBOOL,SIX77.0,,VAR_GLOBAL,GLOBAL,,PARA 15112: High temperature heating water - Maximum pressu
+PARA_PS2_HWHT_Hi_Exist,POE\Main\Func00_IO_Para.GB,1,IN,312,23,Read,,SAFEBOOL,SIX77.0,,VAR_GLOBAL,GLOBAL,,PARA 15112: High temperature heating water - Maximum pressu
+PARA_PS2_HWHT_Hi_Exist,POE\Main\Func00_IO_Para.GB,11,IN,196,6,Read,,SAFEBOOL,SIX77.0,,VAR_GLOBAL,GLOBAL,,PARA 15112: High temperature heating water - Maximum pressu
+PARA_PS2_HWHT_Lo_Exist,POE\HeatWaterSys\HeatWaterSys.GB,3,IN,79,10,Read,,SAFEBOOL,SIX77.2,,VAR_GLOBAL,GLOBAL,,PARA 15114: High temperature heating water - Minimum pressu
+PARA_PS2_HWHT_Lo_Exist,POE\Main\Func00_IO_Para.GB,1,IN,314,22,Read,,SAFEBOOL,SIX77.2,,VAR_GLOBAL,GLOBAL,,PARA 15114: High temperature heating water - Minimum pressu
+PARA_PS2_HWHT_Lo_Exist,POE\Main\Func00_IO_Para.GB,13,IN,198,5,Read,,SAFEBOOL,SIX77.2,,VAR_GLOBAL,GLOBAL,,PARA 15114: High temperature heating water - Minimum pressu
+PARA_PS2_HWLT_Hi_Exist,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,211,11,Read,,SAFEBOOL,SIX78.0,,VAR_GLOBAL,GLOBAL,,PARA 15120: Low temperature heating water - Maximum pressur
+PARA_PS2_HWLT_Hi_Exist,POE\Main\Func00_IO_Para.GB,1,IN,133,23,Read,,SAFEBOOL,SIX78.0,,VAR_GLOBAL,GLOBAL,,PARA 15120: Low temperature heating water - Maximum pressur
+PARA_PS2_HWLT_Hi_Exist,POE\Main\Func00_IO_Para.GB,13,IN,203,6,Read,,SAFEBOOL,SIX78.0,,VAR_GLOBAL,GLOBAL,,PARA 15120: Low temperature heating water - Maximum pressur
+PARA_PS2_HWLT_Lo_Exist,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,230,11,Read,,SAFEBOOL,SIX78.2,,VAR_GLOBAL,GLOBAL,,PARA 15122: Low temperature heating water - Minimum pressur
+PARA_PS2_HWLT_Lo_Exist,POE\Main\Func00_IO_Para.GB,1,IN,135,23,Read,,SAFEBOOL,SIX78.2,,VAR_GLOBAL,GLOBAL,,PARA 15122: Low temperature heating water - Minimum pressur
+PARA_PS2_HWLT_Lo_Exist,POE\Main\Func00_IO_Para.GB,13,IN,205,6,Read,,SAFEBOOL,SIX78.2,,VAR_GLOBAL,GLOBAL,,PARA 15122: Low temperature heating water - Minimum pressur
+PARA_PS_HW_Lo_MuteAcive,POE\HeatWater\HeatWater.GB,3,IN,230,8,Read,,SAFEBOOL,SIX76.5,,VAR_GLOBAL,GLOBAL,,PARA 15109: Muting heating water minimum pressure switches 
+PARA_PS_HW_Lo_MuteAcive,POE\HeatWater\HeatWater.GB,3,IN,85,8,Read,,SAFEBOOL,SIX76.5,,VAR_GLOBAL,GLOBAL,,PARA 15109: Muting heating water minimum pressure switches 
+PARA_PS_HW_Lo_MuteAcive,POE\Main\Func00_IO_Para.GB,11,IN,184,3,Read,,SAFEBOOL,SIX76.5,,VAR_GLOBAL,GLOBAL,,PARA 15109: Muting heating water minimum pressure switches 
+PARA_SafetyLoop_A2_Exist,POE\Main\Func00_IO_Para.GB,3,IN,343,21,Read,,SAFEBOOL,SIX78.7,,VAR_GLOBAL,GLOBAL,,PARA 15143: Safety loop 2 in the module control panel exist
+PARA_SafetyLoop_A2_Exist,POE\Main\Func00_IO_Para.GB,13,IN,253,4,Read,,SAFEBOOL,SIX78.7,,VAR_GLOBAL,GLOBAL,,PARA 15143: Safety loop 2 in the module control panel exist
+PARA_SafetyLoop_A2_Exist,POE\Main\Func11_SafetyLoop.GB,1,IN,73,8,Read,,SAFEBOOL,SIX78.7,,VAR_GLOBAL,GLOBAL,,PARA 15143: Safety loop 2 in the module control panel exist
+PARA_SysPurge_MonActive,POE\Main\Func00_IO_Para.GB,11,IN,180,4,Read,,SAFEBOOL,SIX76.3,,VAR_GLOBAL,GLOBAL,,PARA 15107: System purge - Monitoring active
+PARA_SysPurge_MonActive,POE\Main\PhaseII.GB,4,IN,59,13,Read,,SAFEBOOL,SIX76.3,,VAR_GLOBAL,GLOBAL,,PARA 15107: System purge - Monitoring active
+PARA_SysPurge_MonActive,POE\Main\PhaseII.GB,4,IN,195,12,Read,,SAFEBOOL,SIX76.3,,VAR_GLOBAL,GLOBAL,,PARA 15107: System purge - Monitoring active
+PARA_SysPurge_MonActive,POE\Main\PhaseII.GB,4,IN,113,12,Read,,SAFEBOOL,SIX76.3,,VAR_GLOBAL,GLOBAL,,PARA 15107: System purge - Monitoring active
+PARA_SysPurge_MonActive,POE\Main\PhaseII.GB,7,IN,288,0,Read,,SAFEBOOL,SIX76.3,,VAR_GLOBAL,GLOBAL,,PARA 15107: System purge - Monitoring active
+PARA_SysPurge_MonActive,POE\Main\PhaseII.GB,7,IN,260,0,Read,,SAFEBOOL,SIX76.3,,VAR_GLOBAL,GLOBAL,,PARA 15107: System purge - Monitoring active
+PARA_SysPurge_MonActive,POE\Main\PhaseII.GB,10,IN,356,0,Read,,SAFEBOOL,SIX76.3,,VAR_GLOBAL,GLOBAL,,PARA 15107: System purge - Monitoring active
+PARA_SysPurge_MonActive,POE\Main\PhaseII.GB,10,IN,383,0,Read,,SAFEBOOL,SIX76.3,,VAR_GLOBAL,GLOBAL,,PARA 15107: System purge - Monitoring active
+PARA_SysPurge_MonActive,POE\Main\PhaseII.GB,13,IN,335,0,Read,,SAFEBOOL,SIX76.3,,VAR_GLOBAL,GLOBAL,,PARA 15107: System purge - Monitoring active
+PARA_TS1_HWHT_Hi_Exist,POE\HeatWaterSys\HeatWaterSys.GB,3,IN,64,11,Read,,SAFEBOOL,SIX77.3,,VAR_GLOBAL,GLOBAL,,PARA 15115: High temperature heating water - Maximum temper
+PARA_TS1_HWHT_Hi_Exist,POE\Main\Func00_IO_Para.GB,1,IN,317,23,Read,,SAFEBOOL,SIX77.3,,VAR_GLOBAL,GLOBAL,,PARA 15115: High temperature heating water - Maximum temper
+PARA_TS1_HWHT_Hi_Exist,POE\Main\Func00_IO_Para.GB,13,IN,201,6,Read,,SAFEBOOL,SIX77.3,,VAR_GLOBAL,GLOBAL,,PARA 15115: High temperature heating water - Maximum temper
+PARA_TS1_HWLT_Hi_Exist,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,215,11,Read,,SAFEBOOL,SIX78.3,,VAR_GLOBAL,GLOBAL,,PARA 15123: Low temperature heating water - Maximum tempera
+PARA_TS1_HWLT_Hi_Exist,POE\Main\Func00_IO_Para.GB,3,IN,138,23,Read,,SAFEBOOL,SIX78.3,,VAR_GLOBAL,GLOBAL,,PARA 15123: Low temperature heating water - Maximum tempera
+PARA_TS1_HWLT_Hi_Exist,POE\Main\Func00_IO_Para.GB,13,IN,208,6,Read,,SAFEBOOL,SIX78.3,,VAR_GLOBAL,GLOBAL,,PARA 15123: Low temperature heating water - Maximum tempera
+PARA_TS2_HWHT_Hi_Exist,POE\HeatWaterSys\HeatWaterSys.GB,3,IN,63,11,Read,,SAFEBOOL,SIX77.4,,VAR_GLOBAL,GLOBAL,,PARA 15116: High temperature heating water - Maximum temper
+PARA_TS2_HWHT_Hi_Exist,POE\Main\Func00_IO_Para.GB,1,IN,316,23,Read,,SAFEBOOL,SIX77.4,,VAR_GLOBAL,GLOBAL,,PARA 15116: High temperature heating water - Maximum temper
+PARA_TS2_HWHT_Hi_Exist,POE\Main\Func00_IO_Para.GB,13,IN,200,6,Read,,SAFEBOOL,SIX77.4,,VAR_GLOBAL,GLOBAL,,PARA 15116: High temperature heating water - Maximum temper
+PARA_TS2_HWLT_Hi_Exist,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,214,11,Read,,SAFEBOOL,SIX78.4,,VAR_GLOBAL,GLOBAL,,PARA 15124: Low temperature heating water - Maximum tempera
+PARA_TS2_HWLT_Hi_Exist,POE\Main\Func00_IO_Para.GB,3,IN,137,23,Read,,SAFEBOOL,SIX78.4,,VAR_GLOBAL,GLOBAL,,PARA 15124: Low temperature heating water - Maximum tempera
+PARA_TS2_HWLT_Hi_Exist,POE\Main\Func00_IO_Para.GB,13,IN,207,6,Read,,SAFEBOOL,SIX78.4,,VAR_GLOBAL,GLOBAL,,PARA 15124: Low temperature heating water - Maximum tempera
+PARA_Vol_SysPurge_MinAir,POE\Main\Func00_IO_Para.GB,15,IN,178,5,Read,,SAFEDINT,SID220,,VAR_GLOBAL,GLOBAL,,PARA 15190: System purge - Minimum air volume
+PARA_Vol_SysPurge_MinAir,POE\Main\PhaseII.GB,10,IN,44,0,Read,,SAFEDINT,SID220,,VAR_GLOBAL,GLOBAL,,PARA 15190: System purge - Minimum air volume
+PARA_Vol_SysPurge_Stroke,POE\Main\Func00_IO_Para.GB,15,IN,176,5,Read,,SAFEDINT,SID216,,VAR_GLOBAL,GLOBAL,,PARA 15105: System purge - Stroke volume per crankshaft tur
+PARA_Vol_SysPurge_Stroke,POE\Main\PhaseII.GB,8,IN,8,0,Read,,SAFEDINT,SID216,,VAR_GLOBAL,GLOBAL,,PARA 15105: System purge - Stroke volume per crankshaft tur
+sAI_Pr_ECW,POE\Main\Func05_06_ECW_Pr.GB,1,IN,0,18,Read,,SAFEINT,SIW46,,VAR_GLOBAL,GLOBAL,,AI Pressure engine cooling water
+sAI_Pr_ECWaP,POE\Main\Func05_06_ECW_Pr.GB,1,IN,132,16,Read,,SAFEINT,SIW48,,VAR_GLOBAL,GLOBAL,,AI Pressure engine cooling water after pump
+sAI_Pr_EO,POE\Main\Func03_04_Oil_Pr.GB,1,IN,0,20,Read,,SAFEINT,SIW38,,VAR_GLOBAL,GLOBAL,,AI Pressure engine oil
+sAI_Pr_EOaP,POE\Main\Func03_04_Oil_Pr.GB,1,IN,228,17,Read,,SAFEINT,SIW40,,VAR_GLOBAL,GLOBAL,,AI Pressure engine oil after pump
+sbSafeCurrentOK_AI_Pr_ECW,POE\Main\Func05_06_ECW_Pr.GB,1,IN,11,2,Read,,SAFEBOOL,SIX45.4,,VAR_GLOBAL,GLOBAL,,Safe current OK - AI Pressure engine cooling water
+sbSafeCurrentOK_AI_Pr_ECWaP,POE\Main\Func05_06_ECW_Pr.GB,1,IN,142,0,Read,,SAFEBOOL,SIX45.5,,VAR_GLOBAL,GLOBAL,,Safe current OK - AI Pressure engine cooling water after pu
+sbSafeCurrentOK_AI_Pr_EO,POE\Main\Func03_04_Oil_Pr.GB,1,IN,59,4,Read,,SAFEBOOL,SIX37.4,,VAR_GLOBAL,GLOBAL,,Safe current OK - AI Pressure engine oil
+sbSafeCurrentOK_AI_Pr_EOaP,POE\Main\Func03_04_Oil_Pr.GB,1,IN,238,1,Read,,SAFEBOOL,SIX37.5,,VAR_GLOBAL,GLOBAL,,Safe current OK - AI Pressure engine oil after pump
+sbSafeFrequencyOK_CI_N_EngAct,POE\Main\Func01_Speed.GB,7,IN,116,3,Read,,SAFEBOOL,SIX24.1,,VAR_GLOBAL,GLOBAL,,Safe frequency OK - CI Counter input for speed
+sbSafeInputOK_DCGA_SafeDevOK,POE\Main\Func12_Gas.GB,10,IN,381,50,Read,,SAFEBOOL,SIX57.6,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Gas safety device - DCGA OK
+sbSafeInputOK_EmStop,POE\Main\Func10_EmStop.GB,1,IN,20,11,Read,,SAFEBOOL,SIX9.4,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Emergency stop
+sbSafeInputOK_EmStop_M,POE\Main\Func10_EmStop.GB,1,IN,10,8,Read,,SAFEBOOL,SIX53.4,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Emergency stop at module interface panel
+sbSafeInputOK_ER_Door_CL,POE\VENTILATION\VENTILATION.GB,5,IN,143,0,Read,,SAFEBOOL,SIX10.3,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room door switches closed
+sbSafeInputOK_ERV_Cust,POE\VENTILATION\VENTILATION.GB,2,IN,32,0,Read,,SAFEBOOL,SIX9.7,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Customer room ventilation is operating
+sbSafeInputOK_ERV_INL1_Fan_Run,POE\VENTILATION\VENTILATION.GB,7,IN,1171,57,Read,,SAFEBOOL,SIX63.6,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Inlet air fan 
+sbSafeInputOK_ERV_INL1_Lou_CL,POE\VENTILATION\VENTILATION.GB,16,IN,369,58,Read,,SAFEBOOL,SIX64.0,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Inlet air louv
+sbSafeInputOK_ERV_INL1_Lou_OP,POE\VENTILATION\VENTILATION.GB,16,IN,328,58,Read,,SAFEBOOL,SIX63.7,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Inlet air louv
+sbSafeInputOK_ERV_INL2_Fan_Run,POE\VENTILATION\VENTILATION.GB,10,IN,1169,57,Read,,SAFEBOOL,SIX64.3,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Inlet air fan 
+sbSafeInputOK_ERV_INL2_Lou_CL,POE\VENTILATION\VENTILATION.GB,19,IN,373,58,Read,,SAFEBOOL,SIX64.5,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Inlet air louv
+sbSafeInputOK_ERV_INL2_Lou_OP,POE\VENTILATION\VENTILATION.GB,19,IN,371,58,Read,,SAFEBOOL,SIX64.4,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Inlet air louv
+sbSafeInputOK_ERV_INL3_Fan_Run,POE\VENTILATION\VENTILATION.GB,10,IN,1167,57,Read,,SAFEBOOL,SIX65.0,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Inlet air fan 
+sbSafeInputOK_ERV_INL3_Lou_CL,POE\VENTILATION\VENTILATION.GB,19,IN,771,58,Read,,SAFEBOOL,SIX65.2,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Inlet air louv
+sbSafeInputOK_ERV_INL3_Lou_OP,POE\VENTILATION\VENTILATION.GB,19,IN,769,58,Read,,SAFEBOOL,SIX65.1,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Inlet air louv
+sbSafeInputOK_ERV_INL4_Fan_Run,POE\VENTILATION\VENTILATION.GB,10,IN,1165,57,Read,,SAFEBOOL,SIX65.5,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Inlet air fan 
+sbSafeInputOK_ERV_INL4_Lou_CL,POE\VENTILATION\VENTILATION.GB,22,IN,821,58,Read,,SAFEBOOL,SIX65.7,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Inlet air louv
+sbSafeInputOK_ERV_INL4_Lou_OP,POE\VENTILATION\VENTILATION.GB,22,IN,819,58,Read,,SAFEBOOL,SIX65.6,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Inlet air louv
+sbSafeInputOK_ERV_INL5_Fan_Run,POE\VENTILATION\VENTILATION.GB,13,IN,1163,57,Read,,SAFEBOOL,SIX71.6,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Inlet air fan 
+sbSafeInputOK_ERV_INL5_Lou_CL,POE\VENTILATION\VENTILATION.GB,22,IN,871,58,Read,,SAFEBOOL,SIX72.0,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Inlet air louv
+sbSafeInputOK_ERV_INL5_Lou_OP,POE\VENTILATION\VENTILATION.GB,22,IN,869,58,Read,,SAFEBOOL,SIX71.7,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Inlet air louv
+sbSafeInputOK_ERV_INL6_Fan_Run,POE\VENTILATION\VENTILATION.GB,13,IN,1161,57,Read,,SAFEBOOL,SIX72.3,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Inlet air fan 
+sbSafeInputOK_ERV_INL6_Lou_CL,POE\VENTILATION\VENTILATION.GB,22,IN,921,58,Read,,SAFEBOOL,SIX72.5,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Inlet air louv
+sbSafeInputOK_ERV_INL6_Lou_OP,POE\VENTILATION\VENTILATION.GB,22,IN,919,58,Read,,SAFEBOOL,SIX72.4,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Inlet air louv
+sbSafeInputOK_ERV_OTL1_Lou_CL,POE\VENTILATION\VENTILATION.GB,25,IN,456,58,Read,,SAFEBOOL,SIX64.2,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Outlet air lou
+sbSafeInputOK_ERV_OTL1_Lou_OP,POE\VENTILATION\VENTILATION.GB,25,IN,444,57,Read,,SAFEBOOL,SIX64.1,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Outlet air lou
+sbSafeInputOK_ERV_OTL2_Lou_CL,POE\VENTILATION\VENTILATION.GB,28,IN,460,58,Read,,SAFEBOOL,SIX64.7,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Outlet air lou
+sbSafeInputOK_ERV_OTL2_Lou_OP,POE\VENTILATION\VENTILATION.GB,28,IN,458,57,Read,,SAFEBOOL,SIX64.6,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Outlet air lou
+sbSafeInputOK_ERV_OTL3_Lou_CL,POE\VENTILATION\VENTILATION.GB,28,IN,972,58,Read,,SAFEBOOL,SIX65.4,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Outlet air lou
+sbSafeInputOK_ERV_OTL3_Lou_OP,POE\VENTILATION\VENTILATION.GB,28,IN,970,57,Read,,SAFEBOOL,SIX65.3,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Outlet air lou
+sbSafeInputOK_ERV_OTL4_Lou_CL,POE\VENTILATION\VENTILATION.GB,31,IN,1021,58,Read,,SAFEBOOL,SIX66.1,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Outlet air lou
+sbSafeInputOK_ERV_OTL4_Lou_OP,POE\VENTILATION\VENTILATION.GB,31,IN,1019,57,Read,,SAFEBOOL,SIX66.0,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Outlet air lou
+sbSafeInputOK_ERV_OTL5_Lou_CL,POE\VENTILATION\VENTILATION.GB,31,IN,1070,58,Read,,SAFEBOOL,SIX72.2,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Outlet air lou
+sbSafeInputOK_ERV_OTL5_Lou_OP,POE\VENTILATION\VENTILATION.GB,31,IN,1068,57,Read,,SAFEBOOL,SIX72.1,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Outlet air lou
+sbSafeInputOK_ERV_OTL6_Lou_CL,POE\VENTILATION\VENTILATION.GB,34,IN,1119,58,Read,,SAFEBOOL,SIX72.7,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Outlet air lou
+sbSafeInputOK_ERV_OTL6_Lou_OP,POE\VENTILATION\VENTILATION.GB,34,IN,1117,57,Read,,SAFEBOOL,SIX72.6,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Engine room ventilation - Outlet air lou
+sbSafeInputOK_FS_HWHT_Lo,POE\HeatWaterSys\HeatWaterSys.GB,3,IN,82,9,Read,,SAFEBOOL,SIX14.3,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI High temperature heating water - Minimum
+sbSafeInputOK_FS_HWLT_Lo,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,233,9,Read,,SAFEBOOL,SIX18.3,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Low temperature heating water - Minimum 
+sbSafeInputOK_GCB_Off,POE\Main\Func07_Grid.GB,4,IN,86,13,Read,,SAFEBOOL,SIX10.2,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Generator circuit breaker - Opened
+sbSafeInputOK_GCB_On,POE\Main\Func07_Grid.GB,4,IN,85,14,Read,,SAFEBOOL,SIX10.1,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Generator circuit breaker - Closed
+sbSafeInputOK_GenPrctTrip,POE\Main\Func08_Overload.GB,1,IN,15,7,Read,,SAFEBOOL,SIX9.6,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Generator protection trip
+sbSafeInputOK_GT1_SafeDevOK,POE\Main\Func12_Gas.GB,1,IN,237,52,Read,,SAFEBOOL,SIX53.6,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Gas safety device - Gastrain 1 OK
+sbSafeInputOK_GT2_SafeDevOK,POE\Main\Func12_Gas.GB,4,IN,271,52,Read,,SAFEBOOL,SIX54.2,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Gas safety device - Gastrain 2 OK
+sbSafeInputOK_GT3_SafeDevOK,POE\Main\Func12_Gas.GB,4,IN,305,52,Read,,SAFEBOOL,SIX57.4,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Gas safety device - Gastrain 3 OK
+sbSafeInputOK_GT4_SafeDevOK,POE\Main\Func12_Gas.GB,7,IN,338,52,Read,,SAFEBOOL,SIX57.5,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Gas safety device - Gastrain 4 OK
+sbSafeInputOK_HWcirc_Cust,POE\HeatWaterSys\HeatWaterSys.GB,1,IN,4,9,Read,,SAFEBOOL,SIX21.4,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI High temperature heating water - DI Cust
+sbSafeInputOK_Ign_Run,POE\Main\Func02_Misfire.GB,1,IN,64,7,Read,,SAFEBOOL,SIX53.5,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Ignition running
+sbSafeInputOK_LS_HWHT_Lo,POE\HeatWaterSys\HeatWaterSys.GB,1,IN,65,9,Read,,SAFEBOOL,SIX13.4,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI High temperature heating water - Minimum
+sbSafeInputOK_LS_HWLT_Lo,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,216,9,Read,,SAFEBOOL,SIX17.4,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Low temperature heating water - Minimum 
+sbSafeInputOK_OlShortCirc,POE\Main\Func08_Overload.GB,1,IN,5,7,Read,,SAFEBOOL,SIX9.5,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Generator overload/short circuit
+sbSafeInputOK_Pr_EG_Hi,POE\Main\PhaseII.GB,13,IN,217,4,Read,,SAFEBOOL,SIX54.1,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Exhaust gas backpressure high OK
+sbSafeInputOK_PS1_HWHT_Hi,POE\HeatWaterSys\HeatWaterSys.GB,1,IN,68,8,Read,,SAFEBOOL,SIX13.5,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI High temperature heating water - Maximum
+sbSafeInputOK_PS1_HWHT_Lo,POE\HeatWaterSys\HeatWaterSys.GB,1,IN,72,7,Read,,SAFEBOOL,SIX13.7,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI High temperature heating water - Minimum
+sbSafeInputOK_PS1_HWLT_Hi,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,219,8,Read,,SAFEBOOL,SIX17.5,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Low temperature heating water - Maximum 
+sbSafeInputOK_PS1_HWLT_Lo,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,223,8,Read,,SAFEBOOL,SIX17.7,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Low temperature heating water - Minimum 
+sbSafeInputOK_PS2_HWHT_Hi,POE\HeatWaterSys\HeatWaterSys.GB,1,IN,70,8,Read,,SAFEBOOL,SIX13.6,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI High temperature heating water - Maximum
+sbSafeInputOK_PS2_HWHT_Lo,POE\HeatWaterSys\HeatWaterSys.GB,3,IN,80,7,Read,,SAFEBOOL,SIX14.0,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI High temperature heating water - Minimum
+sbSafeInputOK_PS2_HWLT_Hi,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,221,8,Read,,SAFEBOOL,SIX17.6,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Low temperature heating water - Maximum 
+sbSafeInputOK_PS2_HWLT_Lo,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,231,8,Read,,SAFEBOOL,SIX18.0,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Low temperature heating water - Minimum 
+sbSafeInputOK_SafetyLoop_A1,POE\Main\Func11_SafetyLoop.GB,1,IN,7,5,Read,,SAFEBOOL,SIX10.0,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Safety loop 1 - Module control panel
+sbSafeInputOK_SafetyLoop_A2,POE\Main\Func11_SafetyLoop.GB,1,IN,16,5,Read,,SAFEBOOL,SIX22.3,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Safety loop 2 - Module control panel
+sbSafeInputOK_SafetyLoop_M,POE\Main\Func11_SafetyLoop.GB,1,IN,25,6,Read,,SAFEBOOL,SIX54.3,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Safety loop - Module interface panel
+sbSafeInputOK_ScavFlapClose,POE\Main\PhaseII.GB,4,IN,56,11,Read,,SAFEBOOL,SIX53.7,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Scavenging flap closed
+sbSafeInputOK_TS1_HWHT_Hi,POE\HeatWaterSys\HeatWaterSys.GB,3,IN,73,8,Read,,SAFEBOOL,SIX14.1,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI High temperature heating water - Maximum
+sbSafeInputOK_TS1_HWLT_Hi,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,224,8,Read,,SAFEBOOL,SIX18.1,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Low temperature heating water - Maximum 
+sbSafeInputOK_TS2_HWHT_Hi,POE\HeatWaterSys\HeatWaterSys.GB,3,IN,75,8,Read,,SAFEBOOL,SIX14.2,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI High temperature heating water - Maximum
+sbSafeInputOK_TS2_HWLT_Hi,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,226,8,Read,,SAFEBOOL,SIX18.2,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Low temperature heating water - Maximum 
+sbSafeInputOK_TS_ScavFlap,POE\Main\PhaseII.GB,4,IN,110,12,Read,,SAFEBOOL,SIX54.0,,VAR_GLOBAL,GLOBAL,,Safe input OK - DI Scavenging flap temperature switch OK
+sbSafeModuleOK_SM101,POE\Main\Func00_IO_Para.GB,1,IN,3,5,Read,,SAFEBOOL,SIX4.0,,VAR_GLOBAL,GLOBAL,,Safe Module 101 OK
+sbSafeModuleOK_SM102,POE\Main\Func00_IO_Para.GB,1,IN,5,6,Read,,SAFEBOOL,SIX4.1,,VAR_GLOBAL,GLOBAL,,Safe Module 102 OK
+sbSafeModuleOK_SM102,POE\Main\Func00_IO_Para.GB,8,IN,32,0,Read,,SAFEBOOL,SIX4.1,,VAR_GLOBAL,GLOBAL,,Safe Module 102 OK
+sbSafeModuleOK_SM103,POE\Main\Func00_IO_Para.GB,1,IN,7,6,Read,,SAFEBOOL,SIX4.2,,VAR_GLOBAL,GLOBAL,,Safe Module 103 OK
+sbSafeModuleOK_SM104,POE\Main\Func00_IO_Para.GB,1,IN,10,6,Read,,SAFEBOOL,SIX4.3,,VAR_GLOBAL,GLOBAL,,Safe Module 104 OK
+sbSafeModuleOK_SM105,POE\Main\Func00_IO_Para.GB,3,IN,302,6,Read,,SAFEBOOL,SIX4.4,,VAR_GLOBAL,GLOBAL,,Safe Module 104 OK
+sbSafeModuleOK_SM201,POE\Main\Func00_IO_Para.GB,3,IN,366,5,Read,,SAFEBOOL,SIX4.5,,VAR_GLOBAL,GLOBAL,,Safe Module 201 OK
+sbSafeModuleOK_SM202,POE\Main\Func00_IO_Para.GB,3,IN,363,5,Read,,SAFEBOOL,SIX4.6,,VAR_GLOBAL,GLOBAL,,Safe Module 202 OK
+sbSafeModuleOK_SM203,POE\Main\Func00_IO_Para.GB,3,IN,364,5,Read,,SAFEBOOL,SIX4.7,,VAR_GLOBAL,GLOBAL,,Safe Module 203 OK
+sbSafeModuleOK_SM204,POE\Main\Func00_IO_Para.GB,3,IN,365,5,Read,,SAFEBOOL,SIX5.0,,VAR_GLOBAL,GLOBAL,,Safe Module 204 OK
+sbSafeModuleOK_SM205,POE\Main\Func00_IO_Para.GB,3,IN,367,5,Read,,SAFEBOOL,SIX5.1,,VAR_GLOBAL,GLOBAL,,Safe Module 205 OK
+sbSafeModuleOK_SM205,POE\Main\Func00_IO_Para.GB,8,IN,33,0,Read,,SAFEBOOL,SIX5.1,,VAR_GLOBAL,GLOBAL,,Safe Module 205 OK
+sbSafeModuleOK_SM206,POE\Main\Func00_IO_Para.GB,3,IN,369,6,Read,,SAFEBOOL,SIX5.2,,VAR_GLOBAL,GLOBAL,,Safe Module 206 OK
+sbSafeModuleOK_SM206,POE\Main\Func00_IO_Para.GB,8,IN,34,0,Read,,SAFEBOOL,SIX5.2,,VAR_GLOBAL,GLOBAL,,Safe Module 206 OK
+sbSafeModuleOK_SM207,POE\Main\Func00_IO_Para.GB,3,IN,371,6,Read,,SAFEBOOL,SIX5.3,,VAR_GLOBAL,GLOBAL,,Safe Module 207 OK
+sbSafeModuleOK_SM207,POE\Main\Func00_IO_Para.GB,10,IN,41,0,Read,,SAFEBOOL,SIX5.3,,VAR_GLOBAL,GLOBAL,,Safe Module 207 OK
+sbSafeModuleOK_SM208,POE\Main\Func00_IO_Para.GB,3,IN,373,6,Read,,SAFEBOOL,SIX5.4,,VAR_GLOBAL,GLOBAL,,Safe Module 208 OK
+sbSafeModuleOK_SM209,POE\Main\Func00_IO_Para.GB,5,IN,375,6,Read,,SAFEBOOL,SIX5.5,,VAR_GLOBAL,GLOBAL,,Safe Module 209 OK
+sbSafeModuleOK_SM209,POE\Main\Func00_IO_Para.GB,10,IN,43,0,Read,,SAFEBOOL,SIX5.5,,VAR_GLOBAL,GLOBAL,,Safe Module 209 OK
+sbSafeModuleOK_SM210,POE\Main\Func00_IO_Para.GB,5,IN,432,6,Read,,SAFEBOOL,SIX5.6,,VAR_GLOBAL,GLOBAL,,Safe Module 210 OK
+sbSafeModuleOK_SM210,POE\Main\Func00_IO_Para.GB,10,IN,487,0,Read,,SAFEBOOL,SIX5.6,,VAR_GLOBAL,GLOBAL,,Safe Module 210 OK
+sbSafeModuleOK_SM300,POE\Main\Func00_IO_Para.GB,5,IN,451,6,Read,,SAFEBOOL,SIX5.7,,VAR_GLOBAL,GLOBAL,,Safe Module 300 OK
+sbSafeModuleOK_SM301,POE\Main\Func00_IO_Para.GB,5,IN,458,6,Read,,SAFEBOOL,SIX6.0,,VAR_GLOBAL,GLOBAL,,Safe Module 301 OK
+sbSafeOutputOK_DCGA_SafeDev,POE\Main\Func00_IO_Para.GB,10,IN,491,0,Read,,SAFEBOOL,SIX43.2,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Gas safety device - DCGA
+sbSafeOutputOK_DCGA_SafeDev,POE\Main\Func12_Gas.GB,10,IN,377,51,Read,,SAFEBOOL,SIX43.2,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Gas safety device - DCGA
+sbSafeOutputOK_EmStop,POE\Main\Func00_IO_Para.GB,8,IN,218,0,Read,,SAFEBOOL,SIX11.3,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Emergency stop signalling output
+sbSafeOutputOK_EmStop,POE\Main\Func10_EmStop.GB,1,IN,34,11,Read,,SAFEBOOL,SIX11.3,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Emergency stop signalling output
+sbSafeOutputOK_GCB_RUC,POE\Main\Func00_IO_Para.GB,8,IN,48,0,Read,,SAFEBOOL,SIX11.1,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Generator circuit breaker - Release und
+sbSafeOutputOK_GCB_RUC,POE\Main\Func07_Grid.GB,1,IN,40,11,Read,,SAFEBOOL,SIX11.1,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Generator circuit breaker - Release und
+sbSafeOutputOK_GT1_SafeDev,POE\Main\Func00_IO_Para.GB,8,IN,53,0,Read,,SAFEBOOL,SIX15.2,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Gas safety device - gastrain 1
+sbSafeOutputOK_GT1_SafeDev,POE\Main\Func12_Gas.GB,1,IN,233,53,Read,,SAFEBOOL,SIX15.2,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Gas safety device - gastrain 1
+sbSafeOutputOK_GT2_SafeDev,POE\Main\Func00_IO_Para.GB,8,IN,56,0,Read,,SAFEBOOL,SIX19.2,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Gas safety device - gastrain 2
+sbSafeOutputOK_GT2_SafeDev,POE\Main\Func12_Gas.GB,4,IN,267,53,Read,,SAFEBOOL,SIX19.2,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Gas safety device - gastrain 2
+sbSafeOutputOK_GT3_SafeDev,POE\Main\Func00_IO_Para.GB,10,IN,59,0,Read,,SAFEBOOL,SIX23.2,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Gas safety device - gastrain 3
+sbSafeOutputOK_GT3_SafeDev,POE\Main\Func12_Gas.GB,4,IN,301,53,Read,,SAFEBOOL,SIX23.2,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Gas safety device - gastrain 3
+sbSafeOutputOK_GT4_SafeDev,POE\Main\Func00_IO_Para.GB,10,IN,62,0,Read,,SAFEBOOL,SIX35.2,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Gas safety device - gastrain 4
+sbSafeOutputOK_GT4_SafeDev,POE\Main\Func12_Gas.GB,7,IN,334,53,Read,,SAFEBOOL,SIX35.2,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Gas safety device - gastrain 4
+sbSafeOutputOK_Rel_GV1a,POE\Main\Func00_IO_Para.GB,8,IN,52,0,Read,,SAFEBOOL,SIX15.0,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve 1a
+sbSafeOutputOK_Rel_GV1a,POE\Main\Func12_Gas.GB,1,IN,228,56,Read,,SAFEBOOL,SIX15.0,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve 1a
+sbSafeOutputOK_Rel_GV1b,POE\Main\Func00_IO_Para.GB,8,IN,51,0,Read,,SAFEBOOL,SIX15.1,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve 1b
+sbSafeOutputOK_Rel_GV1b,POE\Main\Func12_Gas.GB,1,IN,229,56,Read,,SAFEBOOL,SIX15.1,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve 1b
+sbSafeOutputOK_Rel_GV2a,POE\Main\Func00_IO_Para.GB,8,IN,55,0,Read,,SAFEBOOL,SIX19.0,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve 2a
+sbSafeOutputOK_Rel_GV2a,POE\Main\Func12_Gas.GB,4,IN,262,56,Read,,SAFEBOOL,SIX19.0,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve 2a
+sbSafeOutputOK_Rel_GV2b,POE\Main\Func00_IO_Para.GB,8,IN,54,0,Read,,SAFEBOOL,SIX19.1,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve 2b
+sbSafeOutputOK_Rel_GV2b,POE\Main\Func12_Gas.GB,4,IN,263,56,Read,,SAFEBOOL,SIX19.1,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve 2b
+sbSafeOutputOK_Rel_GV3a,POE\Main\Func00_IO_Para.GB,10,IN,58,0,Read,,SAFEBOOL,SIX23.0,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve 3a
+sbSafeOutputOK_Rel_GV3a,POE\Main\Func12_Gas.GB,4,IN,296,56,Read,,SAFEBOOL,SIX23.0,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve 3a
+sbSafeOutputOK_Rel_GV3b,POE\Main\Func00_IO_Para.GB,10,IN,57,0,Read,,SAFEBOOL,SIX23.1,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve 3b
+sbSafeOutputOK_Rel_GV3b,POE\Main\Func12_Gas.GB,4,IN,297,56,Read,,SAFEBOOL,SIX23.1,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve 3b
+sbSafeOutputOK_Rel_GV4a,POE\Main\Func00_IO_Para.GB,10,IN,61,0,Read,,SAFEBOOL,SIX35.0,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve 4a
+sbSafeOutputOK_Rel_GV4a,POE\Main\Func12_Gas.GB,7,IN,329,56,Read,,SAFEBOOL,SIX35.0,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve 4a
+sbSafeOutputOK_Rel_GV4b,POE\Main\Func00_IO_Para.GB,10,IN,60,0,Read,,SAFEBOOL,SIX35.1,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve 4b
+sbSafeOutputOK_Rel_GV4b,POE\Main\Func12_Gas.GB,7,IN,330,56,Read,,SAFEBOOL,SIX35.1,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve 4b
+sbSafeOutputOK_Rel_GVa_DCGA,POE\Main\Func00_IO_Para.GB,10,IN,490,0,Read,,SAFEBOOL,SIX43.0,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve a - DCGA
+sbSafeOutputOK_Rel_GVa_DCGA,POE\Main\Func12_Gas.GB,10,IN,372,51,Read,,SAFEBOOL,SIX43.0,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve a - DCGA
+sbSafeOutputOK_Rel_GVb_DCGA,POE\Main\Func00_IO_Para.GB,10,IN,489,0,Read,,SAFEBOOL,SIX43.1,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve b - DCGA
+sbSafeOutputOK_Rel_GVb_DCGA,POE\Main\Func12_Gas.GB,10,IN,373,51,Read,,SAFEBOOL,SIX43.1,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release gasvalve b - DCGA
+sbSafeOutputOK_Rel_Sync_Load,POE\Main\Func00_IO_Para.GB,8,IN,49,0,Read,,SAFEBOOL,SIX11.0,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release synchronizing and load
+sbSafeOutputOK_Rel_Sync_Load,POE\Main\Func07_Grid.GB,1,IN,29,5,Read,,SAFEBOOL,SIX11.0,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Release synchronizing and load
+sbSafeOutputOK_SF_OK_A,POE\Main\Func00_IO_Para.GB,8,IN,50,0,Read,,SAFEBOOL,SIX11.2,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Safety functions OK - Aggregat
+sbSafeOutputOK_SF_OK_A,POE\Main\SafetyLoop.GB,1,IN,12,11,Read,,SAFEBOOL,SIX11.2,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Safety functions OK - Aggregat
+sbSafeOutputOK_SF_OK_M,POE\Main\Func00_IO_Para.GB,8,IN,63,0,Read,,SAFEBOOL,SIX15.3,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Safety functions OK - Module interface
+sbSafeOutputOK_SF_OK_M,POE\Main\SafetyLoop.GB,1,IN,3,11,Read,,SAFEBOOL,SIX15.3,,VAR_GLOBAL,GLOBAL,,Safe output OK - DO Safety functions OK - Module interface
+sbSafeRelease_AI_Pr_ECW,POE\Main\Func05_06_ECW_Pr.GB,11,OUT,58,46,Write,,SAFEBOOL,SQX7.0,,VAR_GLOBAL,GLOBAL,,Safe release - AI Pressure engine cooling water
+sbSafeRelease_AI_Pr_ECWaP,POE\Main\Func05_06_ECW_Pr.GB,17,OUT,170,44,Write,,SAFEBOOL,SQX7.1,,VAR_GLOBAL,GLOBAL,,Safe release - AI Pressure engine cooling water after pump
+sbSafeRelease_AI_Pr_EO,POE\Main\Func03_04_Oil_Pr.GB,10,OUT,199,41,Write,,SAFEBOOL,SQX5.0,,VAR_GLOBAL,GLOBAL,,Safe release - AI Pressure engine oil
+sbSafeRelease_AI_Pr_EOaP,POE\Main\Func03_04_Oil_Pr.GB,14,OUT,291,39,Write,,SAFEBOOL,SQX5.1,,VAR_GLOBAL,GLOBAL,,Safe release - AI Pressure engine oil after pump
+sCI_N_EngAct,POE\Main\Func01_Speed.GB,1,IN,6,1,Read,,SAFEINT,SIW26,,VAR_GLOBAL,GLOBAL,,CI Counter input for speed
+sDI_DCGA_SafeDevOK,POE\Main\Func12_Gas.GB,10,IN,383,61,Read,,SAFEBOOL,SIX56.2,,VAR_GLOBAL,GLOBAL,,DI Gas safety device - DCGA OK
+sDI_EmStop,POE\Main\Func10_EmStop.GB,1,IN,15,21,Read,,SAFEBOOL,SIX8.0,,VAR_GLOBAL,GLOBAL,,DI Emergency stop
+sDI_EmStop_M,POE\Main\Func10_EmStop.GB,1,IN,14,18,Read,,SAFEBOOL,SIX52.0,,VAR_GLOBAL,GLOBAL,,DI Emergency stop at module interface panel
+sDI_ER_Door_CL,POE\VENTILATION\VENTILATION.GB,4,IN,189,26,Read,,SAFEBOOL,SIX8.7,,VAR_GLOBAL,GLOBAL,,DI Engine room door switches closed
+sDI_ER_Door_CL,POE\VENTILATION\VENTILATION.GB,4,IN,123,2,Read,,SAFEBOOL,SIX8.7,,VAR_GLOBAL,GLOBAL,,DI Engine room door switches closed
+sDI_ER_Door_CL,POE\VENTILATION\VENTILATION.GB,7,IN,220,14,Read,,SAFEBOOL,SIX8.7,,VAR_GLOBAL,GLOBAL,,DI Engine room door switches closed
+sDI_ERV_Cust,POE\VENTILATION\VENTILATION.GB,1,IN,21,16,Read,,SAFEBOOL,SIX8.3,,VAR_GLOBAL,GLOBAL,,DI Customer room ventilation is operating
+sDI_ERV_Cust,POE\VENTILATION\VENTILATION.GB,1,IN,13,16,Read,,SAFEBOOL,SIX8.3,,VAR_GLOBAL,GLOBAL,,DI Customer room ventilation is operating
+sDI_ERV_Cust,POE\VENTILATION\VENTILATION.GB,1,IN,3,4,Read,,SAFEBOOL,SIX8.3,,VAR_GLOBAL,GLOBAL,,DI Customer room ventilation is operating
+sDI_ERV_Cust,POE\VENTILATION\VENTILATION.GB,4,IN,103,16,Read,,SAFEBOOL,SIX8.3,,VAR_GLOBAL,GLOBAL,,DI Customer room ventilation is operating
+sDI_ERV_Cust,POE\VENTILATION\VENTILATION.GB,4,IN,16,16,Read,,SAFEBOOL,SIX8.3,,VAR_GLOBAL,GLOBAL,,DI Customer room ventilation is operating
+sDI_ERV_INL1_Fan_Run,POE\VENTILATION\VENTILATION.GB,7,IN,1170,68,Read,,SAFEBOOL,SIX60.0,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Inlet air fan - Group 1 in ope
+sDI_ERV_INL1_Lou_CL,POE\VENTILATION\VENTILATION.GB,16,IN,368,69,Read,,SAFEBOOL,SIX60.2,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Inlet air louvre - Group 1 clo
+sDI_ERV_INL1_Lou_OP,POE\VENTILATION\VENTILATION.GB,16,IN,327,69,Read,,SAFEBOOL,SIX60.1,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Inlet air louvre - Group 1 ope
+sDI_ERV_INL2_Fan_Run,POE\VENTILATION\VENTILATION.GB,10,IN,1168,68,Read,,SAFEBOOL,SIX60.5,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Inlet air fan - Group 2 in ope
+sDI_ERV_INL2_Lou_CL,POE\VENTILATION\VENTILATION.GB,19,IN,372,69,Read,,SAFEBOOL,SIX60.7,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Inlet air louvre - Group 2 clo
+sDI_ERV_INL2_Lou_OP,POE\VENTILATION\VENTILATION.GB,19,IN,370,69,Read,,SAFEBOOL,SIX60.6,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Inlet air louvre - Group 2 ope
+sDI_ERV_INL3_Fan_Run,POE\VENTILATION\VENTILATION.GB,10,IN,1166,68,Read,,SAFEBOOL,SIX61.2,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Inlet air fan - Group 3 in ope
+sDI_ERV_INL3_Lou_CL,POE\VENTILATION\VENTILATION.GB,19,IN,770,69,Read,,SAFEBOOL,SIX61.4,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Inlet air louvre - Group 3 clo
+sDI_ERV_INL3_Lou_OP,POE\VENTILATION\VENTILATION.GB,19,IN,768,69,Read,,SAFEBOOL,SIX61.3,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Inlet air louvre - Group 3 ope
+sDI_ERV_INL4_Fan_Run,POE\VENTILATION\VENTILATION.GB,10,IN,1164,68,Read,,SAFEBOOL,SIX61.7,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Inlet air fan - Group 4 in ope
+sDI_ERV_INL4_Lou_CL,POE\VENTILATION\VENTILATION.GB,22,IN,820,69,Read,,SAFEBOOL,SIX62.1,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Inlet air louvre - Group 4 clo
+sDI_ERV_INL4_Lou_OP,POE\VENTILATION\VENTILATION.GB,19,IN,818,69,Read,,SAFEBOOL,SIX62.0,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Inlet air louvre - Group 4 ope
+sDI_ERV_INL5_Fan_Run,POE\VENTILATION\VENTILATION.GB,13,IN,1162,68,Read,,SAFEBOOL,SIX68.0,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Inlet air fan - Group 5 in ope
+sDI_ERV_INL5_Lou_CL,POE\VENTILATION\VENTILATION.GB,22,IN,870,69,Read,,SAFEBOOL,SIX68.2,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Inlet air louvre - Group 5 clo
+sDI_ERV_INL5_Lou_OP,POE\VENTILATION\VENTILATION.GB,22,IN,868,69,Read,,SAFEBOOL,SIX68.1,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Inlet air louvre - Group 5 ope
+sDI_ERV_INL6_Fan_Run,POE\VENTILATION\VENTILATION.GB,13,IN,1160,68,Read,,SAFEBOOL,SIX68.5,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Inlet air fan - Group 6 in ope
+sDI_ERV_INL6_Lou_CL,POE\VENTILATION\VENTILATION.GB,22,IN,920,69,Read,,SAFEBOOL,SIX68.7,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Inlet air louvre - Group 6 clo
+sDI_ERV_INL6_Lou_OP,POE\VENTILATION\VENTILATION.GB,22,IN,918,69,Read,,SAFEBOOL,SIX68.6,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Inlet air louvre - Group 6 ope
+sDI_ERV_OTL1_Lou_CL,POE\VENTILATION\VENTILATION.GB,25,IN,455,68,Read,,SAFEBOOL,SIX60.4,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Outlet air louvre - Group 1 cl
+sDI_ERV_OTL1_Lou_OP,POE\VENTILATION\VENTILATION.GB,25,IN,443,68,Read,,SAFEBOOL,SIX60.3,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Outlet air louvre - Group 1 op
+sDI_ERV_OTL2_Lou_CL,POE\VENTILATION\VENTILATION.GB,28,IN,459,68,Read,,SAFEBOOL,SIX61.1,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Outlet air louvre - Group 2 cl
+sDI_ERV_OTL2_Lou_OP,POE\VENTILATION\VENTILATION.GB,28,IN,457,68,Read,,SAFEBOOL,SIX61.0,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Outlet air louvre - Group 2 op
+sDI_ERV_OTL3_Lou_CL,POE\VENTILATION\VENTILATION.GB,28,IN,971,68,Read,,SAFEBOOL,SIX61.6,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Outlet air louvre - Group 3 cl
+sDI_ERV_OTL3_Lou_OP,POE\VENTILATION\VENTILATION.GB,28,IN,969,68,Read,,SAFEBOOL,SIX61.5,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Outlet air louvre - Group 3 op
+sDI_ERV_OTL4_Lou_CL,POE\VENTILATION\VENTILATION.GB,31,IN,1020,68,Read,,SAFEBOOL,SIX62.3,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Outlet air louvre - Group 4 cl
+sDI_ERV_OTL4_Lou_OP,POE\VENTILATION\VENTILATION.GB,31,IN,1018,68,Read,,SAFEBOOL,SIX62.2,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Outlet air louvre - Group 4 op
+sDI_ERV_OTL5_Lou_CL,POE\VENTILATION\VENTILATION.GB,31,IN,1069,68,Read,,SAFEBOOL,SIX68.4,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Outlet air louvre - Group 5 cl
+sDI_ERV_OTL5_Lou_OP,POE\VENTILATION\VENTILATION.GB,31,IN,1067,68,Read,,SAFEBOOL,SIX68.3,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Outlet air louvre - Group 5 op
+sDI_ERV_OTL6_Lou_CL,POE\VENTILATION\VENTILATION.GB,34,IN,1118,68,Read,,SAFEBOOL,SIX69.1,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Outlet air louvre - Group 6 cl
+sDI_ERV_OTL6_Lou_OP,POE\VENTILATION\VENTILATION.GB,34,IN,1116,68,Read,,SAFEBOOL,SIX69.0,,VAR_GLOBAL,GLOBAL,,DI Engine room ventilation - Outlet air louvre - Group 6 op
+sDI_FS_HWHT_Lo,POE\HeatWaterSys\HeatWaterSys.GB,1,IN,83,19,Read,,SAFEBOOL,SIX12.7,,VAR_GLOBAL,GLOBAL,,DI High temperature heating water - Minimum flow switch
+sDI_FS_HWLT_Lo,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,234,20,Read,,SAFEBOOL,SIX16.7,,VAR_GLOBAL,GLOBAL,,DI Low temperature heating water - Minimum flow switch
+sDI_GCB_Off,POE\Main\Func07_Grid.GB,4,IN,117,21,Read,,SAFEBOOL,SIX8.6,,VAR_GLOBAL,GLOBAL,,DI Generator circuit breaker - Opened
+sDI_GCB_Off,POE\Main\Func07_Grid.GB,7,IN,138,21,Read,,SAFEBOOL,SIX8.6,,VAR_GLOBAL,GLOBAL,,DI Generator circuit breaker - Opened
+sDI_GCB_Off,POE\Main\Func07_Grid.GB,7,IN,6,21,Read,,SAFEBOOL,SIX8.6,,VAR_GLOBAL,GLOBAL,,DI Generator circuit breaker - Opened
+sDI_GCB_Off,POE\Main\Func07_Grid.GB,7,IN,148,21,Read,,SAFEBOOL,SIX8.6,,VAR_GLOBAL,GLOBAL,,DI Generator circuit breaker - Opened
+sDI_GCB_On,POE\Main\Func07_Grid.GB,4,IN,118,21,Read,,SAFEBOOL,SIX8.5,,VAR_GLOBAL,GLOBAL,,DI Generator circuit breaker - Closed
+sDI_GCB_On,POE\Main\Func07_Grid.GB,7,IN,139,21,Read,,SAFEBOOL,SIX8.5,,VAR_GLOBAL,GLOBAL,,DI Generator circuit breaker - Closed
+sDI_GCB_On,POE\Main\Func07_Grid.GB,7,IN,7,21,Read,,SAFEBOOL,SIX8.5,,VAR_GLOBAL,GLOBAL,,DI Generator circuit breaker - Closed
+sDI_GCB_On,POE\Main\Func07_Grid.GB,7,IN,149,21,Read,,SAFEBOOL,SIX8.5,,VAR_GLOBAL,GLOBAL,,DI Generator circuit breaker - Closed
+sDI_GenPrctTrip,POE\Main\Func08_Overload.GB,1,IN,10,13,Read,,SAFEBOOL,SIX8.2,,VAR_GLOBAL,GLOBAL,,DI Generator protection trip
+sDI_GT1_SafeDevOK,POE\Main\Func12_Gas.GB,1,IN,239,61,Read,,SAFEBOOL,SIX52.2,,VAR_GLOBAL,GLOBAL,,DI Gas safety device - Gastrain 1 OK
+sDI_GT2_SafeDevOK,POE\Main\Func12_Gas.GB,4,IN,273,63,Read,,SAFEBOOL,SIX52.6,,VAR_GLOBAL,GLOBAL,,DI Gas safety device - Gastrain 2 OK
+sDI_GT3_SafeDevOK,POE\Main\Func12_Gas.GB,4,IN,307,63,Read,,SAFEBOOL,SIX56.0,,VAR_GLOBAL,GLOBAL,,DI Gas safety device - Gastrain 3 OK
+sDI_GT4_SafeDevOK,POE\Main\Func12_Gas.GB,7,IN,340,63,Read,,SAFEBOOL,SIX56.1,,VAR_GLOBAL,GLOBAL,,DI Gas safety device - Gastrain 4 OK
+sDI_HWcirc_Cust,POE\HeatWaterSys\HeatWaterSys.GB,1,IN,5,20,Read,,SAFEBOOL,SIX20.0,,VAR_GLOBAL,GLOBAL,,DI High temperature heating water - DI Customer heating wat
+sDI_Ign_Run,POE\Main\Func01_Speed.GB,7,IN,11,26,Read,,SAFEBOOL,SIX52.1,,VAR_GLOBAL,GLOBAL,,DI Ignition running
+sDI_Ign_Run,POE\Main\Func02_Misfire.GB,1,IN,45,7,Read,,SAFEBOOL,SIX52.1,,VAR_GLOBAL,GLOBAL,,DI Ignition running
+sDI_Ign_Run,POE\Main\Func02_Misfire.GB,1,IN,36,7,Read,,SAFEBOOL,SIX52.1,,VAR_GLOBAL,GLOBAL,,DI Ignition running
+sDI_Ign_Run,POE\Main\Func02_Misfire.GB,1,IN,3,10,Read,,SAFEBOOL,SIX52.1,,VAR_GLOBAL,GLOBAL,,DI Ignition running
+sDI_Ign_Run,POE\Main\Func02_Misfire.GB,1,IN,23,16,Read,,SAFEBOOL,SIX52.1,,VAR_GLOBAL,GLOBAL,,DI Ignition running
+sDI_Ign_Run,POE\Main\Func12_Gas.GB,1,IN,10,10,Read,,SAFEBOOL,SIX52.1,,VAR_GLOBAL,GLOBAL,,DI Ignition running
+sDI_LS_HWHT_Lo,POE\HeatWaterSys\HeatWaterSys.GB,1,IN,66,19,Read,,SAFEBOOL,SIX12.0,,VAR_GLOBAL,GLOBAL,,DI High temperature heating water - Minimum level switch
+sDI_LS_HWLT_Lo,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,217,20,Read,,SAFEBOOL,SIX16.0,,VAR_GLOBAL,GLOBAL,,DI Low temperature heating water - Minimum level switch
+sDI_OlShortCirc,POE\Main\Func08_Overload.GB,1,IN,9,18,Read,,SAFEBOOL,SIX8.1,,VAR_GLOBAL,GLOBAL,,DI Generator overload/short circuit
+sDI_Pr_EG_Hi,POE\Main\PhaseII.GB,13,IN,219,15,Read,,SAFEBOOL,SIX52.5,,VAR_GLOBAL,GLOBAL,,DI Exhaust gas backpressure high OK
+sDI_PS1_HWHT_Hi,POE\HeatWaterSys\HeatWaterSys.GB,1,IN,69,18,Read,,SAFEBOOL,SIX12.1,,VAR_GLOBAL,GLOBAL,,DI High temperature heating water - Maximum pressure switch
+sDI_PS1_HWHT_Lo,POE\HeatWaterSys\HeatWaterSys.GB,1,IN,78,18,Read,,SAFEBOOL,SIX12.3,,VAR_GLOBAL,GLOBAL,,DI High temperature heating water - Minimum pressure switch
+sDI_PS1_HWLT_Hi,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,220,19,Read,,SAFEBOOL,SIX16.1,,VAR_GLOBAL,GLOBAL,,DI Low temperature heating water - Maximum pressure switch 
+sDI_PS1_HWLT_Lo,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,229,18,Read,,SAFEBOOL,SIX16.3,,VAR_GLOBAL,GLOBAL,,DI Low temperature heating water - Minimum pressure switch 
+sDI_PS2_HWHT_Hi,POE\HeatWaterSys\HeatWaterSys.GB,1,IN,71,18,Read,,SAFEBOOL,SIX12.2,,VAR_GLOBAL,GLOBAL,,DI High temperature heating water - Maximum pressure switch
+sDI_PS2_HWHT_Lo,POE\HeatWaterSys\HeatWaterSys.GB,1,IN,84,18,Read,,SAFEBOOL,SIX12.4,,VAR_GLOBAL,GLOBAL,,DI High temperature heating water - Minimum pressure switch
+sDI_PS2_HWLT_Hi,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,222,19,Read,,SAFEBOOL,SIX16.2,,VAR_GLOBAL,GLOBAL,,DI Low temperature heating water - Maximum pressure switch 
+sDI_PS2_HWLT_Lo,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,235,18,Read,,SAFEBOOL,SIX16.4,,VAR_GLOBAL,GLOBAL,,DI Low temperature heating water - Minimum pressure switch 
+sDI_SafetyLoop_A1,POE\Main\Func11_SafetyLoop.GB,1,IN,11,16,Read,,SAFEBOOL,SIX8.4,,VAR_GLOBAL,GLOBAL,,DI Safety loop 1 - Module control panel
+sDI_SafetyLoop_A2,POE\Main\Func11_SafetyLoop.GB,1,IN,20,16,Read,,SAFEBOOL,SIX20.7,,VAR_GLOBAL,GLOBAL,,DI Safety loop 2 - Module control panel
+sDI_SafetyLoop_M,POE\Main\Func11_SafetyLoop.GB,1,IN,29,17,Read,,SAFEBOOL,SIX52.7,,VAR_GLOBAL,GLOBAL,,DI Safety loop - Module interface panel
+sDI_ScavFlapClosed,POE\Main\PhaseII.GB,1,IN,78,5,Read,,SAFEBOOL,SIX52.3,,VAR_GLOBAL,GLOBAL,,DI Scavenging flap closed
+sDI_ScavFlapClosed,POE\Main\PhaseII.GB,7,IN,161,20,Read,,SAFEBOOL,SIX52.3,,VAR_GLOBAL,GLOBAL,,DI Scavenging flap closed
+sDI_TS1_HWHT_Hi,POE\HeatWaterSys\HeatWaterSys.GB,1,IN,74,19,Read,,SAFEBOOL,SIX12.5,,VAR_GLOBAL,GLOBAL,,DI High temperature heating water - Maximum temperature swi
+sDI_TS1_HWLT_Hi,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,225,19,Read,,SAFEBOOL,SIX16.5,,VAR_GLOBAL,GLOBAL,,DI Low temperature heating water - Maximum temperature swit
+sDI_TS2_HWHT_Hi,POE\HeatWaterSys\HeatWaterSys.GB,1,IN,76,19,Read,,SAFEBOOL,SIX12.6,,VAR_GLOBAL,GLOBAL,,DI High temperature heating water - Maximum temperature swi
+sDI_TS2_HWLT_Hi,POE\HeatWaterSys\HeatWaterSys.GB,5,IN,227,19,Read,,SAFEBOOL,SIX16.6,,VAR_GLOBAL,GLOBAL,,DI Low temperature heating water - Maximum temperature swit
+sDI_TS_ScavFlap,POE\Main\PhaseII.GB,4,IN,115,23,Read,,SAFEBOOL,SIX52.4,,VAR_GLOBAL,GLOBAL,,DI Scavenging flap temperature switch OK
+sDO_DCGA_SafeDevice,POE\Main\Func12_Gas.GB,11,OUT,390,35,Write,,SAFEBOOL,SQX12.2,,VAR_GLOBAL,GLOBAL,,DO Gas safety device - DCGA
+sDO_EmStop,POE\Main\Func10_EmStop.GB,2,OUT,43,60,Write,,SAFEBOOL,SQX1.3,,VAR_GLOBAL,GLOBAL,,DO Emergency stop signalling
+sDO_GCB_RUC,POE\Main\Func07_Grid.GB,2,OUT,20,35,Write,,SAFEBOOL,SQX1.1,,VAR_GLOBAL,GLOBAL,,DO Generator circuit breaker - Release undervoltage coil
+sDO_GCB_RUC,POE\Main\Func07_Grid.GB,4,IN,65,23,Read,,SAFEBOOL,SQX1.1,,VAR_GLOBAL,GLOBAL,,DO Generator circuit breaker - Release undervoltage coil
+sDO_GT1_SafeDevice,POE\Main\Func12_Gas.GB,2,OUT,246,37,Write,,SAFEBOOL,SQX8.2,,VAR_GLOBAL,GLOBAL,,DO Gas safety device - gastrain 1
+sDO_GT1_SafeDevice,POE\Main\Func12_Gas.GB,10,IN,64,17,Read,,SAFEBOOL,SQX8.2,,VAR_GLOBAL,GLOBAL,,DO Gas safety device - gastrain 1
+sDO_GT2_SafeDevice,POE\Main\Func12_Gas.GB,2,OUT,280,37,Write,,SAFEBOOL,SQX9.2,,VAR_GLOBAL,GLOBAL,,DO Gas safety device - gastrain 2
+sDO_GT3_SafeDevice,POE\Main\Func12_Gas.GB,5,OUT,314,37,Write,,SAFEBOOL,SQX10.2,,VAR_GLOBAL,GLOBAL,,DO Gas safety device - gastrain 3
+sDO_GT4_SafeDevice,POE\Main\Func12_Gas.GB,8,OUT,347,37,Write,,SAFEBOOL,SQX11.2,,VAR_GLOBAL,GLOBAL,,DO Gas safety device - gastrain 4
+sDO_Rel_GV1a,POE\Main\Func12_Gas.GB,2,OUT,8,40,Write,,SAFEBOOL,SQX8.0,,VAR_GLOBAL,GLOBAL,,DO Release gasvalve 1a
+sDO_Rel_GV1b,POE\Main\Func12_Gas.GB,2,OUT,9,40,Write,,SAFEBOOL,SQX8.1,,VAR_GLOBAL,GLOBAL,,DO Release gasvalve 1b
+sDO_Rel_GV2a,POE\Main\Func12_Gas.GB,2,OUT,256,41,Write,,SAFEBOOL,SQX9.0,,VAR_GLOBAL,GLOBAL,,DO Release gasvalve 2a
+sDO_Rel_GV2b,POE\Main\Func12_Gas.GB,2,OUT,257,41,Write,,SAFEBOOL,SQX9.1,,VAR_GLOBAL,GLOBAL,,DO Release gasvalve 2b
+sDO_Rel_GV3a,POE\Main\Func12_Gas.GB,5,OUT,290,41,Write,,SAFEBOOL,SQX10.0,,VAR_GLOBAL,GLOBAL,,DO Release gasvalve 3a
+sDO_Rel_GV3b,POE\Main\Func12_Gas.GB,5,OUT,291,41,Write,,SAFEBOOL,SQX10.1,,VAR_GLOBAL,GLOBAL,,DO Release gasvalve 3b
+sDO_Rel_GV4a,POE\Main\Func12_Gas.GB,8,OUT,323,41,Write,,SAFEBOOL,SQX11.0,,VAR_GLOBAL,GLOBAL,,DO Release gasvalve 4a
+sDO_Rel_GV4b,POE\Main\Func12_Gas.GB,8,OUT,324,41,Write,,SAFEBOOL,SQX11.1,,VAR_GLOBAL,GLOBAL,,DO Release gasvalve 4b
+sDO_Rel_GVa_DCGA,POE\Main\Func12_Gas.GB,8,OUT,366,36,Write,,SAFEBOOL,SQX12.0,,VAR_GLOBAL,GLOBAL,,DO Release gasvalve a - DCGA
+sDO_Rel_GVb_DCGA,POE\Main\Func12_Gas.GB,8,OUT,367,36,Write,,SAFEBOOL,SQX12.1,,VAR_GLOBAL,GLOBAL,,DO Release gasvalve b - DCGA
+sDO_Rel_Sync_Load,POE\Main\Func07_Grid.GB,1,IN,49,17,Read,,SAFEBOOL,SQX1.0,,VAR_GLOBAL,GLOBAL,,DO Release synchronizing and load
+sDO_Rel_Sync_Load,POE\Main\Func07_Grid.GB,2,OUT,19,29,Write,,SAFEBOOL,SQX1.0,,VAR_GLOBAL,GLOBAL,,DO Release synchronizing and load
+sDO_SF_OK_A,POE\Main\SafetyLoop.GB,8,OUT,33,45,Write,,SAFEBOOL,SQX1.2,,VAR_GLOBAL,GLOBAL,,DO Safety functions OK - Module control panel
+sDO_SF_OK_M,POE\Main\SafetyLoop.GB,8,OUT,34,43,Write,,SAFEBOOL,SQX8.3,,VAR_GLOBAL,GLOBAL,,DO Safety functions OK - Module interface panel
+szOUT_F09_CRC,POE\Main\PhaseII.GB,2,OUT,423,16,Write,,DWORD,NSQD124,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 09 - CRC of ventilation FuB
+szOUT_F20_CRC,POE\Main\PhaseII.GB,14,OUT,404,13,Write,,DWORD,NSQD128,,VAR_GLOBAL,GLOBAL,,CPU OUT: Function 20 - CRC of heating water FuB

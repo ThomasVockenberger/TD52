@@ -1,0 +1,107 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2023
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V3.99	06-03-2013	Weitzer, generated for modular software	 
+; V4.00 11-09-2013  pankajrodey, updated file with relevant information
+; V4.01 18-10-2013  Zengerer   typo corr., NO duplicate para Chk entries!
+; 		08-05-2014  Weitzer, switch to CAN interface identifier from HAL_IO
+;							 "hard code" missing parameters
+; V4.04.00.00	04-07-2016	Gwiggner,	Bugfix: Tecjet Monitoring
+; V4.04.00.00	05-08-2016	Gwiggner,	Bugfix: Mapping bDualTJ
+; V4.04.00.00	28-10-2016	Gwiggner,	Bugfix: correction interpolation of gas density
+; V4.05.00.00	27.07.2017	Messner,	CAN Diagnosis Picture added
+; V4.05.01.00	05.04.2018	Perktold,	GMU - Monitoring Delay for TJs increased from 5 to 7s
+; V4.11.00.00	15.11.2021	Perktold,	defined ucTecNr as local variable, correction REAL_TO_USINT -> INT_TO_USINT, A3093 DGS
+; V4.12.00.00	13.12.2022	Gwiggner,	GMU self diagnosis
+; V4.12.00.00	22.01.2023	Zuschnig,	Interpolation od gas density done in EC module
+; V4.13.00.00	16.11.2022	Gwiggner,	adaption for W3213 & B3249 
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>GD</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.13.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"<PARA1 Name='iEng_Motortype' MIN='208' MAX='920' />"
+"<PARA2 Name='iN_GMU_Devices' MIN='0' MAX='5' />"
+"<PARA3 Name='usGasDensN[1]' MIN='200' MAX='2500' />"
+"<PARA4 />"
+"<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; <--Permanent Datamodule Filenames:  NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_GD</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='AB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='GT' VERSION='04.12.00.00' />"
+"	<DEPENDENCY MODULE='OP' VERSION='04.00.00.00' />" 
+"	<DEPENDENCY MODULE='HA' VERSION='04.05.00.00' />"
+"	<DEPENDENCY MODULE='EC' VERSION='04.12.00.00' />"
+"   <DEPENDENCY VISVERSION='02.06.00.00' />"			; Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	GD Module for the TecJet(tm) valve actuator - an integrated and digitally compensated control valve and actuator system"
+" 	for regulating and metering the flow of gas "
+"	</General>	"
+""
+"	<F1 Name='Gas metering' LastModified='4.0.0.0'>"
+"	These paramaeters of the Air-Fuel mixture are measured by the module:	"
+"	Valve differential pressure, Valve position, Gas Temperature, Running hours, Software version, Gas pressure	"
+"	</F1>"
+"	<F2 Name='Errors and alarms' LastModified='4.0.0.0'>"
+"	Errors in the Tecjet module are sent by this module to the controller	"
+"	</F2>"
+"	<F3 Name='enter name of main function 3 here' LastModified='4.0.0.0'>"
+"	Enter function 3 description for module here.	"
+"	</F3>"
+""							
+"	<Info>"
+"	V4.04.00.00	Bugfix: Tecjet Monitoring	"
+"   V4.04.00.00	Bugfix: Mapping bDualTJ	"
+"   V4.04.00.00	Bugfix: correction interpolation of gas density	"
+"	</Info>"
+""
+"	<Customized LastModified='4.0.0.0'>	"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

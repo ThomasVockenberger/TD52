@@ -1,0 +1,355 @@
+VAR
+	bAnyHWC_SL_FailActive : BOOL;
+	bHWC_SL_Active : BOOL;
+	HBT_3 : BOOL; (*Failure motor cooling water pump*)
+	HBT_4 : BOOL;
+	HBT_5 : BOOL;
+	HBT_6 : BOOL;
+	HBT_7 : BOOL;
+	HBT_8 : BOOL;
+	iAdrAmmBase2MM : UDINT;
+	iAdrMM2AmmBase : UDINT;
+	xGR_MAXR_1120 : GR_MAXR;
+	xTOF_CCWP_Fail : TOF;
+	xTOF_ECWP_PreH_FS : TOF;
+	xTOF_EngAuxMon : TOF;
+	xTOF_EngDemEPS : TOF;
+	xTOF_HWP_Fail : TOF;
+	xTON_1120 : TON;
+	xTON_ECWP_PreH_Mon : TON;
+	xTON_HWP_Fail : TON;
+	xTON_PrGO_Lo : TON;
+	xTON_PrGO_Rel : TON;
+	xGR_MIN_Pr_TCO_Lo : GR_MINR;
+	xGR_MAXR_Pr_TCO_hihi : GR_MAXR;
+	xTON_Pr_TCO_Mon : TON;
+	xGR_MAXR_Pr_TCO_hi : GR_MAXR;
+	xGR_MAXR_OTMAA : GR_MAXR;
+	xGR_MAXR_OTMA : GR_MAXR;
+	xGR_MAXR_OTMA_Prio2 : GR_MAXR;
+	xTON_BRTB_60s : TON;
+	xTON_OTMAA : TON;
+	xTON_OTMA : TON;
+	xTON_OT : TON;
+	xTON_OT_Prio2 : TON;
+	AN_OTMA : BOOL; (* Öltemperatur maximum *)
+	AN_OTMA_Prio2 : BOOL; (* Oil temperature maximum Prio2*)
+	AN_OTMAA : BOOL; (* Öltemperatur max Sofortabstellung *)
+	T_OTMA : BOOL; (* Öltemperatur maximum *)
+	M_OMIN_DREHZ : BOOL;
+	xTON_OilPreH_Of : TON;
+	xTON_OilPreH_On : TON;
+	xF_TRIG_ACP_Start : F_TRIG;
+	xMsg1017 : Msg;
+	xMsg1018 : Msg;
+	xMsg1020 : Msg;
+	xMsg1023 : Msg;
+	xMsg1043 : Msg;
+	xMsg1051 : Msg;
+	xMsg1052 : Msg;
+	xMsg1053 : Msg;
+	xMsg1054 : Msg;
+	xMsg1059 : Msg;
+	xMsg1060 : Msg;
+	xMsg1090 : Msg;
+	xMsg1091 : Msg;
+	xMsg1100 : Msg;
+	xMsg1101 : Msg;
+	xMsg1120 : Msg;
+	xMsg1129 : Msg;
+	xMsg1137 : Msg;
+	xMsg1139 : Msg;
+	xMsg1140 : Msg;
+	xMsg1148 : Msg;
+	xMsg1159 : Msg;
+	xMsg1160 : Msg;
+	xMsg1166 : Msg;
+	xMsg1249 : Msg;
+	xMsg1250 : Msg;
+	xMsg1257 : Msg;
+	xMsg1258 : Msg;
+	xMsg1259 : Msg;
+	xMsg1260 : Msg;
+	xMsg1261 : Msg;
+	xMsg1262 : Msg;
+	xMsg1263 : Msg;
+	xMsg1264 : Msg;
+	xMsg1281 : Msg;
+	xMsg1282 : Msg;
+	xMsg1292 : Msg; (*Manual operating auxiliaries control - Handbedienebene*)
+	xMsg2102 : Msg;
+	xMsg2103 : Msg;
+	xMsg2114 : Msg;
+	xMsg2118 : Msg;
+	xMsg2201 : Msg;
+	xMsg2213 : Msg;
+	xMsg2224 : Msg;
+	xMsg2233 : Msg;
+	xMsg2234 : Msg;
+	xMsg2238 : Msg;
+	xMsg2242 : Msg;
+	xMsg2260 : Msg;
+	xMsg2263 : Msg;
+	xMsg2264 : Msg;
+	xMsg2265 : Msg;
+	xMsg2266 : Msg;
+	xMsg2267 : Msg;
+	xMsg2268 : Msg;
+	xMsg2269 : Msg;
+	xMsg2284 : Msg;
+	xMsg2291 : Msg;
+	xMsg2292 : Msg;
+	xMsg2304 : Msg;
+	xMsg2332 : Msg;
+	xMsg2333 : Msg;
+	xMsg2348 : Msg;
+	xMsg2349 : Msg;
+	xMsg2350 : Msg;
+	xMsg2351 : Msg;
+	xMsg2352 : Msg;
+	xMsg2353 : Msg;
+	xMsg2355 : Msg;
+	xMsg2359 : Msg;
+	xMsg2360 : Msg;
+	xMsg2361 : Msg;
+	xMsg2376 : Msg; (*Scavenging by starting system not successful*)
+	xMsg2377 : Msg; (*Measuring signal failure voltage start motor 1 *)
+	xMsg2378 : Msg; (*Measuring signal failure voltage start motor 1 *)
+	xMsg2379 : Msg; (*Measuring signal failure voltage start motor 1 *)
+	xMsg2382 : Msg; (*Start attempt failed minimum speed*)
+	xMsg2421 : Msg;
+	xMsg2422 : Msg;
+	xMsg2423 : Msg; (*SWAT920/1*)
+	xMsg2424 : Msg; (*SWAT920/2*)
+	xMsg2425 : Msg; (*SWAT920/2*)
+	xMsg2426 : Msg; (*SWAT920/2*)
+	xMsg2427 : Msg;
+	xMsg2431 : Msg; (*SWAT920/1*)
+	xMsg2432 : Msg; (*SWAT920/1*)
+	xMsg2433 : Msg; (*SWAT920/1*)
+	xMsg2434 : Msg;
+	xMsg2435 : Msg; (*SWAT920/2*)
+	xMsg2459 : Msg;
+	xMsg2473 : Msg;
+	xMsg2475 : Msg;
+	xMsg2524 : Msg;
+	xMsg2534 : Msg;
+	xMsg2545 : Msg;
+	xMsg2554 : Msg;
+	xMsg2557 : Msg; (*SWAT920/2*)
+	xMsg2558 : Msg;
+	xMsg2559 : Msg;
+	xMsg2560 : Msg;
+	xMsg2571 : Msg;
+	xMsg2572 : Msg;
+	xMsg2576 : Msg;
+	xMsg2579 : Msg;
+	xMsg2582 : Msg;
+	xMsg2587 : Msg;
+	xMsg2589 : Msg;
+	xMsg2590 : Msg;
+	xMsg2591 : Msg;
+	xMsg2592 : Msg;
+	xMsg2594 : Msg;
+	xMsg2595 : Msg;
+	xMsg2596 : Msg;
+	xMsg2597 : Msg;
+	xMsg2598 : Msg;
+	xMsg2599 : Msg;
+	xMsg2600 : Msg;
+	xMsg2602 : Msg;
+	xMsg2603 : Msg;
+	xMsg2604 : Msg;
+	xMsg2605 : Msg;
+	xMsg2606 : Msg;
+	xMsg2608 : Msg;
+	xMsg2613 : Msg;
+	xMsg2624 : Msg;
+	xMsg2625 : Msg;
+	xMsg2627 : Msg;
+	xMsg2628 : Msg;
+	xMsg2629 : Msg;
+	xMsg2636 : Msg;
+	xMsg2642 : Msg;
+	xMsg2643 : Msg;
+	xMsg2644 : Msg;
+	xMsg2645 : Msg;
+	xMsg2646 : Msg;
+	xMsg2648 : Msg;
+	xMsg2649 : Msg; (*W2649 Crank case pressure low  *)
+	xMsg2650 : Msg; (*W2650 Blow by blower not ready  *)
+	xMsg2651 : Msg; (*W2651 Measuring signal failure pressure before blow by filter  *)
+	xMsg2652 : Msg; (*W2652 Measuring signal failure pressure after blow by filter  *)
+	xMsg2653 : Msg; (*W2653 Blow by filter difference pressure high - maintenance  *)
+	xMsg2654 : Msg; (*W2654 Blow by filter difference pressure low  *)
+	xMsg2666 : Msg;
+	xMsg2689 : Msg;
+	xMsg2722 : Msg;
+	xMsg2723 : Msg;
+	xMsg2724 : Msg;
+	xMsg2725 : Msg;
+	xMsg2726 : Msg;
+	xMsg2727 : Msg;
+	xMsg2728 : Msg;
+	xMsg2729 : Msg;
+	xMsg2737 : Msg;
+	xMsg2738 : Msg;
+	xMsg2739 : Msg;
+	xMsg2740 : Msg;
+	xMsg2741 : Msg;
+	xMsg2742 : Msg;
+	xMsg2754 : Msg;
+	xMsg2755 : Msg;
+	xMsg2756 : Msg;
+	xMsg2757 : Msg;
+	xMsg2758 : Msg;
+	xMsg2759 : Msg;
+	xMsg2760 : Msg;
+	xMsg2761 : Msg;
+	xMsg2762 : Msg;
+	xMsg2770 : Msg;
+	xMsg2771 : Msg;
+	xMsg2772 : Msg;
+	xMsg2773 : Msg;
+	xMsg2774 : Msg;
+	xMsg2775 : Msg;
+	xMsg2776 : Msg;
+	xMsg2777 : Msg;
+	xMsg2778 : Msg;
+	xMsg2781 : Msg;
+	xMsg2782 : Msg;
+	xMsg2783 : Msg;
+	xMsg2784 : Msg;
+	xMsg2785 : Msg;
+	xMsg2786 : Msg;
+	xMsg2787 : Msg;
+	xMsg2788 : Msg;
+	xMsg2789 : Msg;
+	xMsg2791 : Msg;
+	xMsg2792 : Msg;
+	xMsg2809 : Msg;
+	xMsg2810 : Msg;
+	xMsg2931 : Msg;
+	xMsg2932 : Msg;
+	xMsg2933 : Msg;
+	xMsg2956 : Msg;
+	xMsg2957 : Msg;
+	xMsg2978 : Msg;
+	xMsg2979 : Msg;
+	xMsg3216 : Msg;
+	xMsg3218 : Msg;
+	xMsg3300 : Msg;
+	xMsg3301 : Msg;
+	xMsg3304 : Msg;
+	xMsg3305 : Msg;
+	xMsg3322 : Msg;
+	xMsg3323 : Msg;
+	xMsg3350 : Msg;
+	xMsg3351 : Msg;
+	xMsg3369 : Msg;
+	xMsg3370 : Msg;
+	xMsg3375 : Msg;
+	xMsg3401 : Msg;
+	xMsg3403 : Msg;
+	xMsg3405 : Msg;
+	xMsg3413 : Msg;
+	xMsg3414 : Msg;
+	xMsg3415 : Msg;
+	xMsg3416 : Msg;
+	xMsg3495 : Msg;
+	xMsg3496 : Msg;
+	xMsg3497 : Msg;
+	xMsg3507 : Msg;
+	xMsg3515 : Msg;
+	xMsg3519 : Msg;
+	xMsg3572 : Msg;
+	xMsg3574 : Msg;
+	xMsg3578 : Msg;
+	xMsg3579 : Msg;
+	xMsg3587 : Msg;
+	xMsg3588 : Msg;
+	xMsg9214 : Msg; (*SWAT920/5*)
+	xMsg9220 : Msg; (*SWAT920/5a*)
+	xMsg9221 : Msg;
+	xMsg9222 : Msg;
+	xMsg9224 : Msg;
+	xMsg9225 : Msg;
+	xMsg9227 : Msg;
+	xMsg9254 : Msg;
+	xMsg9255 : Msg;
+	xMsg9256 : Msg;
+	xMsg9257 : Msg;
+	xMsg9258 : Msg;
+	xMsg9279 : Msg;
+	xMsg9280 : Msg;
+	xMsg9281 : Msg;
+	xMsg9282 : Msg;
+	xMsg9283 : Msg;
+	xMsg9303 : Msg;
+	xMsg9314 : Msg;
+	xMsg9316 : Msg;
+	xMsg9317 : Msg;
+	xMsg9001 : Msg;
+	xMsg9002 : Msg;
+	xMsg9003 : Msg;
+	xMsg9048 : Msg;
+	xMsg9067 : Msg;
+	xMsg9069 : Msg;
+	xMsg9070 : Msg;
+	xMsg9074 : Msg;
+	xMsg9088 : Msg; (*Scavenging by starting system successful*)
+	xMsg9089 : Msg; (*Starter motor 1 did not engage*)
+	xMsg9090 : Msg; (*Starter motor 2 did not engage*)
+	xMsg9091 : Msg; (*Starter motor 3 did not engage*)
+	xMsg9096 : Msg; (*Starter overheated*)
+	xMsg9097 : Msg; (*Purge cranking cycle initiated*)
+	xMsg9322 : Msg;
+	xMsg9323 : Msg;
+	xMsg9324 : Msg;
+	xMsg9325 : Msg;
+	xMsg9326 : Msg;
+	xMsg9327 : Msg;
+	xMsg9328 : Msg;
+	xMsg9332 : Msg;
+	xMsg9333 : Msg;
+	xMsg9334 : Msg;
+	xMsg9335 : Msg;
+	xMsg9336 : Msg;
+	xMsg9352 : Msg;
+	xMsg9353 : Msg;
+	xMsg9354 : Msg;
+	xMsg9355 : Msg;
+	xMsg9356 : Msg;
+	xMsg9357 : Msg;
+	xMsg9358 : Msg;
+	xMsg9359 : Msg;
+	xMsg9369 : Msg;
+	xMsg9378 : Msg; (*V4.13*)
+	xMsg9390 : Msg; (*Oil temperature before engine start too low*)
+	xMsg9435 : Msg; (*FuB*) (*SAFETY PLC*)
+	xMsg9436 : Msg; (*FuB*) (*SAFETY PLC*)
+	xMsg9513 : Msg; (*Failure engine oil refilling*) (*2024-225*)
+	xMsg9560 : Msg; (*FuB*) (*SAFETY PLC*)
+	xMsg9561 : Msg; (*FuB*) (*SAFETY PLC*)
+	TON_FOP : TON;
+	bFOP_LZ_max : BOOL;
+	xR_TRIG_N_TCO_FS : R_TRIG;
+	GR_MIN_OIL_STARTFG : GR_MINR;
+	xTOF_CC2WP_Fail : TOF;
+	bPLC_Startup : BOOL;
+	xTOF_EmCWP_Fail : TOF;
+	xTON_EmCWP_Dem : TON;
+	iIdx_CtrlBat : USINT;
+	bAMM_CtrlBat_ChargeDev_Fail : BOOL;
+	xMsg9362 : Msg; (*V4.12*)
+	xMsg9363 : Msg; (*V4.12*)
+	xMsg9364 : Msg; (*V4.12*)
+	rDPr_ECWP1 : REAL; (*cooling water difference pressure over ECWP1 (M.04-PI-010 minus M.04-PI-001)*)
+	rDPr_ECWP2 : REAL; (*cooling water difference pressure over ECWP2 (M.04-PI-011 minus M.04-PI-001)*)
+	xTON_DPr_ECWP_MonRel : TON;
+	xTON_DPr_ECWP_LoLo : TON;
+	xTON_EleStarter_Dem : TON; (*Starter MSF detection delay*)
+	xRT_EleStarter_Dem : R_TRIG; (*Starter MSF detection trigger*)
+	xTON_Msg9222 : TON; (*FuB*)
+	xTON_Msg9225 : TON; (*FuB*)
+END_VAR

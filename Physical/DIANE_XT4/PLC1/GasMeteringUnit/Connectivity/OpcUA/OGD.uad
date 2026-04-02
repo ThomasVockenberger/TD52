@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OpcUaSource FileVersion="4" ArVersion="B4.53">
+  <Aliases>
+    <ACLAliases>
+      <ACL Id="1">
+        <ACE RoleId="1" RoleName="Administrators" Access="0x017F" />
+      </ACL>
+    </ACLAliases>
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView AclId="1">
+    <Module Name="GasMeteringUnit">
+      <GlobalVariables>
+        <Variable Name="MM2VIS" AutomaticEnable="True">
+          <Variable Name="rGMU_Pr_DiffGas" EnableArrayElements="True" />
+          <Variable Name="rGMU_Pos_Valve_Rad" EnableArrayElements="True" />
+          <Variable Name="rGMU_Pos_Valve_Prom" EnableArrayElements="True" />
+          <Variable Name="rGMU_Pr_FuelGas" EnableArrayElements="True" />
+          <Variable Name="rGMU_T_FuelGas" EnableArrayElements="True" />
+          <Variable Name="rGMU_Q_FuelGas" EnableArrayElements="True" />
+          <Variable Name="rGMU_D_FuelGas" EnableArrayElements="True" />
+          <Variable Name="rGMU_N_RunningHours" EnableArrayElements="True" />
+          <Variable Name="rGMU_S_Status" EnableArrayElements="True" />
+          <Variable Name="rGMU_Vers_SW" EnableArrayElements="True" />
+          <Variable Name="bFlow_GMU_Down" EnableArrayElements="True" />
+          <Variable Name="bPr_Diff_GMU_Down" EnableArrayElements="True" />
+          <Variable Name="bT_EU_GMU_HiHi" EnableArrayElements="True" />
+          <Variable Name="bPos_GMU_Err" EnableArrayElements="True" />
+          <Variable Name="bFlow_GMU_Min" EnableArrayElements="True" />
+          <Variable Name="bValS_GMU_Ok" EnableArrayElements="True" />
+          <Variable Name="bPr_GMU_HiHi" EnableArrayElements="True" />
+          <Variable Name="bPr_Diff_GMU_HiHi" EnableArrayElements="True" />
+          <Variable Name="bT_GMU_HiHi" EnableArrayElements="True" />
+          <Variable Name="bU_GMU_HiHi" EnableArrayElements="True" />
+          <Variable Name="bPr_GMU_LoLo" EnableArrayElements="True" />
+          <Variable Name="bPr_Diff_GMU_LoLo" EnableArrayElements="True" />
+          <Variable Name="bT_GMU_LoLo" EnableArrayElements="True" />
+          <Variable Name="bU_GMU_LoLo" EnableArrayElements="True" />
+          <Variable Name="bInt_GMU_Err" EnableArrayElements="True" />
+          <Variable Name="bMech_GMU_Err" EnableArrayElements="True" />
+          <Variable Name="bFlow_GMU_SetErr" EnableArrayElements="True" />
+          <Variable Name="iGMU_Num_Ser" EnableArrayElements="True" />
+          <Variable Name="sGMU_Num_HWP" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="Para" AutomaticEnable="True">
+          <Variable Name="usGasDensN" EnableArrayElements="True" />
+        </Variable>
+      </GlobalVariables>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

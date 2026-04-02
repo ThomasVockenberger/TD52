@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.1.9.44 SP?>
+<Program xmlns="http://br-automation.co.at/AS/Program">
+  <Files>
+    <File Description="Cyclic code">delta_signalCyclic.st</File>
+    <File Description="Initialization code">delta_signalInit.st</File>
+    <File Description="Local variables" Private="true">delta_signal.var</File>
+  </Files>
+</Program>

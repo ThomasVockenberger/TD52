@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Cpu xmlns="http://br-automation.co.at/AS/Cpu">
+  <Objects>
+    <Object Type="File" Description="Software configuration">Cpu.sw</Object>
+    <Object Type="File" Description="Declaration of permanent variables">Cpu.per</Object>
+    <Object Type="File" Description="IO mapping file">IoMap.iom</Object>
+    <Object Type="Package" Description="AB: Alarm Management Base">AmmBase</Object>
+    <Object Type="Package" Description="AG: Auxiliaries General">AuxiliariesGeneral</Object>
+    <Object Type="Package" Description="CH: Charging Unit">ChargingUnit</Object>
+    <Object Type="Package" Description="CP: Customer Coupling">Coupling</Object>
+    <Object Type="Package" Description="CU: Customize">Customized</Object>
+    <Object Type="Package" Description="EC: Engine Controller">EngineController</Object>
+    <Object Type="Package" Description="EG: Engine General">EngineGeneral</Object>
+    <Object Type="Package" Description="EM: Emission Control">Emission</Object>
+    <Object Type="Package" Description="EX: Exhaust System">Exhaust</Object>
+    <Object Type="Package" Description="GC: Generator Control">Generator</Object>
+    <Object Type="Package" Description="GD: Gas Metering Unit Device">GasMeteringUnit</Object>
+    <Object Type="Package" Description="GM: Gas Mixer">Gasmixer</Object>
+    <Object Type="Package" Description="GR: Gridcode">Grid</Object>
+    <Object Type="Package" Description="GT: Gas Train">Gastrain</Object>
+    <Object Type="Package" Description="HA: Hardware Abstraction Layer for Inputs/Outputs">HalIO</Object>
+    <Object Type="Package" Description="HC: Heating Cooling">HeatingCooling</Object>
+    <Object Type="Package" Description="IC: Ignition Controller">ICxx</Object>
+    <Object Type="Package" Description="IG: Ignition">Ignition</Object>
+    <Object Type="Package" Description="KL: KLS98">KLS98</Object>
+    <Object Type="Package" Description="KN: Knocking Prevention">Knocking</Object>
+    <Object Type="Package" Description="MO: MONIC">Monic</Object>
+    <Object Type="Package" Description="OP: Operation State">Opstate</Object>
+    <Object Type="Package" Description="PB: Parameter Base">ParaBase</Object>
+    <Object Type="Package" Description="SA: SAFI (Sensor Actor Function Interface)">SAFI</Object>
+    <Object Type="Package" Description="SY: Synchronization">Synchronization</Object>
+    <Object Type="Package" Description="TR: Thermo Reactor">ThermalReactor</Object>
+    <Object Type="Package" Description="VE: Ventilation">Ventilation</Object>
+    <Object Type="Package" Description="VI: Visualization">Visu</Object>
+    <Object Type="Package" Description="CB: CBM">CBM</Object>
+    <Object Type="Package">DTM</Object>
+    <Object Type="Package">AccessAndSecurity</Object>
+    <Object Type="File">prfmod$e.br</Object>
+    <Object Type="Package">ExternalHardware</Object>
+    <Object Type="Package">Connectivity</Object>
+    <Object Type="Package">mappServices</Object>
+  </Objects>
+  <Configuration LocalVariablesMemory="MemoryPool" ModuleId="X20CP3686X">
+    <AutomationRuntime Version="H4.90" />
+    <Build GccVersion="4.1.2" GeneratePPCode="false" PreBuildStep="" />
+    <DefaultTargetMemory DataObjects="UserROM" Libraries="UserROM" Tasks="UserROM" />
+    <Io ArConfigDataModule="false" ArConfigDataModulePath="$(AS_CPU_PATH)\AS\CfgData.br" DisabledHardware="false" IoMapDataModule="false" IoMapDataModulePath="$(AS_CPU_PATH)\AS\IomData.br" ManualIoOffsets="false" />
+    <Opc EncryptOpcs="false" UseShortNames="true" WindowsServer="true" />
+    <Safety SafetyRelease="0.0" />
+    <TaskClasses DefaultIoTaskClass="Cyclic1" DefaultTaskClass="Cyclic4" />
+    <Transfer AddToUserPart="False" AdditionalUserDir="" AllowDowngrade="True" AllowInitialTransfer="True" AllowPartitioning="True" DownloadMode="Overload" ExecuteInitExitProgram="True" ForceInitialTransfer="False" IdentificationTypeValue="" IgnoreBrDependencies="false" IgnoreTargetOnlyObjects="true" IgnoreVersion="False" KeepNonVolatileMemory="False" ModuleSystemForPip="" PreserveVariableValues="False" ProjectConsistent="True" PromptBeforeProject="false" PromptBeforeTask="false" RebootDuringTransfer="False" SavedOfflineInstallationFolder="" SavedPipDestinationFolder="" SavedRuntimeUtilityCenterPackagePath="" TargetIdentificationType="Always" TransferInServiceMode="false" TransferOnlyRelevantChanges="false" TryToBootInRunMode="False" UserFilesIgnoreDifference="False" />
+    <Vc FirmwareVersion="V4.14.1" />
+    <OnlineConfiguration Name="Engine_10" DeviceType="TCPIP" DeviceParameters="/IF=tcpip /LOPO=11159 /SA=2" ConnectionParameters="/COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=192.168.122.11 /REPO=11159 /ANSL=1 /PT=11169" Description="" />
+  </Configuration>
+</Cpu>

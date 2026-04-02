@@ -1,0 +1,11 @@
+VAR
+	bF_BB_ClosCond_ZW_on : BOOL := 0;
+	bF_BB_ClosCond_ZW_off : BOOL := 0;
+	xTON_F_BB_ClosCond_ZW_on : TON;
+	xTON_F_BB_ClosCond_ZW_off : TON;
+	
+	bF_BB_AfMnsF_ClosCond_ZW_on : BOOL := 0;
+	bF_BB_AfMnsF_ClosCond_ZW_off : BOOL := 0;
+	xTON_F_BB_AfMnsF_ClosCond_ZW_on : TON;
+	xTON_F_BB_AfMnsF_ClosCond_ZW_off : TON;
+END_VAR

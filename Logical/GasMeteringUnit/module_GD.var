@@ -1,0 +1,139 @@
+(*******************************************************************************
+	module_GMU : Module level global variables for the GMU module
+	
+	This code is confidential and proprietary to the INNIO Company.
+	It may not be used in any form, or reproduced in any manner, without the express
+	written permission of the INNIO Company.
+	Copyright, INNIO Company, 2019
+	
+	- calcualtion of different gas inject valve concerning parameters for gas sort 0
+	- send parameter to gas inject valve
+	- handling gas inject valve communication problem
+	- read software version, operating hours, and gas inject valve status
+	- check gas inject valve software version
+	
+	Customized modifications: -
+	------------------------
+	 
+	History:
+	-------
+
+	V3.99.0 07-04-2012  pankajrodey	,  Added new version for Modular software
+	V3.99.1 28-08-2012  pankajrodey	,  Added structures for MM2VIS ans VIS2MM
+	V3.99.1 27-11-2013  pankajrodey	,  Deleted variables to remove compilation warning
+	
+								
+	Instructions for use:
+	--------------------
+	
+	
+	Outstandings:
+	------------
+	*******************************************************************************)
+VAR
+	pm : Para_struct;
+	Para : Para_struct;
+	ParaFactoryDefault : Para_struct := (0);
+	OUT_GD : OUT_GD_struct := (0);
+	IN_GD : IN_GD_struct := (0);
+	bSendParTecJet : BOOL; (* TJ Send Parameter to TecJet *)
+	gasart : USINT; (* actual gassort 0 to 4 *)
+	usGasDensN : ARRAY[0..4] OF UINT; (* nominal gas density *)
+	ucNrTJCommErr : USINT; (* number of TJ valve comm. problem *)
+	TecJet_ID : USINT; (* TecJet CAN-ID number *)
+	bTecJetFlowErr : BOOL; (* TRUE=wrong transmission of gasflow *)
+	ucTecJetCommErrCount : USINT; (* timeout counter for comm. error *)
+	CANDevGo : ARRAY[0..1] OF USINT; (* startup parameter for CAN devices *)
+	ECANDevGo : USINT; (* event startup parameter CAN device *)
+	usSWTecJet : ARRAY[0..4] OF UINT; (* software version of all TecJet´s *)
+	usWobbeRef : UINT; (* reference wobbe index TecJet *)
+	bReRunHour : INT; (* set operating hour gas inject v. *)
+	ssMinDP : INT; (* gas difference pressure minimum *)
+	ssMaxDP : INT; (* gas difference pressure max. Tec *)
+	ssMinPress : INT; (* gas pressure minimum TecJet *)
+	ssMaxPress : INT; (* gas pressure maximum TecJet *)
+	ssTempMin : INT; (* gastemperature minimum TecJet *)
+	ssTempMax : INT; (* gas temperature maximum TecJet *)
+	TJ_Can : ARRAY[0..4] OF BOOL; (* TJ CAN communication error *)
+	ssDPress : ARRAY[0..4] OF INT; (* actual gas diffrence pressure *)
+	ssValvePos : ARRAY[0..4] OF INT; (* actual valve position gas inject v *)
+	ssGasPress : ARRAY[0..4] OF INT; (* actual gas pressure gas inject  v. *)
+	ssGasTemp : ARRAY[0..4] OF INT; (* actual gas temp. gas inject valves *)
+	slGasFlow : ARRAY[0..4] OF DINT; (* actual gas flow gas inject valves *)
+	ssGasDens : ARRAY[0..4] OF INT; (* actual gas density gas inject valv *)
+	usRHourTJ : ARRAY[0..4] OF UINT; (* running hour each gas inject valve *)
+	usStateTJ : ARRAY[0..4] OF UINT; (* status of each gas inject valve *)
+	usGasDens : ARRAY[0..4] OF UINT; (* actual gas density *)
+	TJ_SOFTW_B : BOOL; (* wrong SW version operational msg. *)
+	ucTJ_SOFTW : USINT; (* number of TJ with wrong SW version *)
+	ucNumberOfCylinder : USINT; (* number of cylinders *)
+	ZylZahl : USINT; (* number of cylinders for CAN-Comm. *)
+	tTecError : ARRAY[0..4] OF _TecJetError; (* error status gas inject valves *)
+	usTecErrCntMax : ARRAY[0..4] OF USINT; (* max value for wrong gas flow trans *)
+	StopM : BOOL; (* TRUE=engine is stopped *)
+	CANopen_error : UINT; (* CAN CONTROLLER STATUS 0=OK *)
+	usTecErrCnt : ARRAY[0..4] OF USINT; (* counter for wrong gas flow transm. *)
+	bSuctionMon : BOOL;
+	bPump : BOOL; (* TRUE =  alarm turbo suction mon. *)
+	ssTJ2_StzPkt : ARRAY[0..11] OF INT; (* scaling TecJet110 position *)
+	ssTJ1_StzPkt : ARRAY[0..9] OF INT; (* scaling TecJet50 position *)
+	ucSendParTJ : USINT; (* number of actual handled TecJet *)
+	ucStateOfPar : USINT; (* state of parameter transmission *)
+	bTecJetStatErr : BOOL; (* TRUE= problem status read *)
+	bTecJetParErr : BOOL; (* TRUE= problem para. transmission *)
+	ucParCount : USINT; (* counter for actual handled param. *)
+	TON_SecondTick : TON; (* second tick TRUE for 0,1 sec. *)
+	ucNextParTJ : USINT; (* number of actual  handled TecJet *)
+	bTJ_CAN : ARRAY[0..4] OF BOOL; (* TJ CAN communication error *)
+	TecJetVers : UINT; (* gas inject valve software version *)
+	ucStatNr : USINT; (* read status value counter *)
+	bTJ_SOFTW : BOOL; (* trigger for wrong SW version delay *)
+	TON_SOFTW : TON; (* delay for wrong software version *)
+	xSignScal_TJpos : xSignScal; (* scale TecJet valve opening *)
+	TJ_CAN : BOOL; (* TJ CAN KOPPLUNG GESTÖRT *)
+	TJ_SOFTW : BOOL := 0; (* TJ FALSCHE SOFTWARE *)
+	TJ_GASD : BOOL := 0; (* TJ GASVORDRUCK NICHT ERFUELLT *)
+	TJ_GAST : BOOL := 0; (* TJ GASTEMPERATUR NICHT ERFUELLT *)
+	TJ_INT : BOOL := 0; (* TJ INTERNER FEHLER *)
+	TJ_MECH : BOOL := 0; (* TJ MECHANISCHE FEHLFUNKTION *)
+	TJ_MECH_B : BOOL; (* TJ mechanical error message *)
+	ucTJ_MECH : USINT; (* valve with mechanic error *)
+	TJ_CAN_B : BOOL; (* TJ CAN comm. error message *)
+	ucTJ_CAN : USINT; (* vlave with CAN communication error *)
+	TJ_GAST_B : BOOL; (* TJ gas temperature message *)
+	ucTJ_GAST : USINT; (* valve with wrong gas temperature *)
+	TJ_GASD_B : BOOL; (* TJ gas inlet pressure message *)
+	ucTJ_GASD : USINT; (* valve with wrong inlet pressure *)
+	TJ_INT_B : BOOL; (* TJ internal error message *)
+	ucTJ_INT : USINT; (* valve with internal error *)
+	TJ_GASN_B : BOOL; (* TJ gas flow not reached message *)
+	ucTJ_GASN : USINT; (* valve with gas flow not reached *)
+	AmmSeqCAN : AmmSequence; (* FUB can communication *)
+	AmmSeqGASD : AmmSequence; (* FUB gas pressure*)
+	AmmSeqGASM : AmmSequence; (* FUB gas flow change *)
+	AmmSeqGASN : AmmSequence; (* FUB gas flow not reached *)
+	AmmSeqGASO : AmmSequence; (* FUB gas flow max. reached *)
+	AmmSeqGAST : AmmSequence; (* FUB wrong gas temperature *)
+	AmmSeqINT : AmmSequence; (* FUB gas valve internal error *)
+	AmmSeqMECH : AmmSequence; (* FUB gas valve malfunction *)
+	TON_SecondTick_1 : TON;
+	E_TEC : ARRAY[0..4] OF _tEventTEC; (* CAN events gas inject valve param. *)
+	ssTJPos : ARRAY[0..4] OF INT; (* TecJet opening in permill *)
+	TJ_GASN : BOOL := 0; (* TJ GASMENGE NICHT ERREICHT *)
+	MM2VIS : MM2VIS_struct; (*Module VISU-Interface (Module --> VISU)*)
+	ETecError : ARRAY[0..4] OF USINT;
+	usWobbeAct : UINT;
+	P : USINT;
+	ulGasFlowN : ARRAY[0..4] OF UDINT;
+	CANopen_CMS_GMU : CANopen;
+	bNoInitDetected : BOOL := FALSE; (*allways true, except 1cycle on init up*)
+	SIM_rGMU_Pr_DiffGas : ARRAY[0..4] OF REAL; (*Differential Pressure over device [mbar*10]*)
+	SIM_rGMU_Pos_Valve_Rad : ARRAY[0..4] OF REAL; (*Valve Position [rad *10]*)
+	SIM_rGMU_Pos_Valve_Prom : ARRAY[0..4] OF REAL; (*Valve Position [%o]*)
+	SIM_rGMU_Pr_FuelGas : ARRAY[0..4] OF REAL; (*Fuel Gas Pressure at device inlet [mbar*10]*)
+	SIM_rGMU_T_FuelGas : ARRAY[0..4] OF REAL; (*Fuel Gas Temperature at device inlet [°C *10]*)
+	SIM_rGMU_Q_FuelGas : ARRAY[0..4] OF REAL; (*Fuel Gas Amount denormalized [l/s*1000]*)
+	SIM_rGMU_D_FuelGas : ARRAY[0..4] OF REAL; (*Fuel Gas Density denormalized [kg/m3*1000]*)
+	ulHWPNumTJ : ARRAY[0..4] OF UDINT; (* hardware part number gas inject valve *)
+	ulSerNumTJ : ARRAY[0..4] OF UDINT; (* serial number gas inject valve *)
+END_VAR

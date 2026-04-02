@@ -1,0 +1,4 @@
+VAR
+	idx : USINT := 0;
+	x : USINT := 0;
+END_VAR

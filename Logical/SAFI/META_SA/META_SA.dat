@@ -1,0 +1,151 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2024
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V3.99		06-03-2013	Weitzer, generated for modular software	 
+; V4.00 	31.01.2014	Weitzer, versions changed
+; V4.00.4	30-10-2014	Weitzer, correction of sticking at parameter download
+;								 correct PV name for coil time 0 power limit
+; V4.00.5	28-07-2015	Weitzer, move speed measuring to new task safi_spd
+;								 optimize call of misfire command
+; V4.03		14-10-2014	Weitzer, PI modified for new CAL Version 7.24
+; V4.03.1	10-05-2016	Weitzer, adapt SAFI reset for SAFI1 devices
+; V4.04		10-10-2016	Weitzer, add new PI monitoring functionalities
+;			27-10-2016	Weitzer, add SAFI FW K7.71, D7.52
+;			07-11-2016	Weitzer, improve parameter sending
+; V4.05		16-05-2017	Weitzer, add MPM monitoring
+;			30-10-2017  Zengerer call for unused interfacet to avoid msg
+;			27.07.2017	Messner, CAN Diagnosis Picture added
+; V4.5.1	04.12.2017	Weitzer	 SPAX cam monitoring added
+;			22-03-2018	Weitzer, Reduce SAFI FW version according to released versions
+; V4.05.2	12-03-2017	Weitzer, PI correct current ctr: change reset source to warning
+; V4.06.0	05-07-2018	Perktold,activating MPMs also in stop mode if engine should be ready for fast start
+; V4.07.0	20-12-2018	Andre,   Added invertion of cross over bit if MORIS rail swapped and shell of valve closure detection
+; V4.09.0	27-01-2020	Denk, 	 no warning 3548 “Ignition voltage to high” when selftest is executed
+; 			01-04-2020	Andre, 	 Improved PI close detection including PI faults reset and skip fire
+; V4.10.0	18-01-2021	Perktold,released dyn spark duration function for all engines
+; V4.10.0	28-01-2021	Denk, 	 Alarm deactivation when DGS/WinMOD Simulation is active (3552).
+; V4.11.0	16-11-2021	Andre,	 SAFI software reset only if necessary. A3333 if no configuration done bit for 1 min. No A2214 in simulation
+;			01.12.2021	Kafka,	 Lambda Controller PBC
+;			22-12-2021	Andre,	 Added plausibility check of SAFI measurements. Added type 3 F changes. Added unbalance valve detection
+; V4.12.0	25-08-2022	Andre,	 Bug fixes safety loop check and FW version monitoring
+;			08-09-2022	Andre,	 Added SEMIC changes.
+;			11-11-2022	Andre,	 Added SAFI3/KLS21 changes.
+;			05-12-2022	Andre,	 Added 2nd CAN bus card changes.
+; V4.13.0	17-10-2023	Andre,	 Fixed issues 1207, 1242, 1244, 1262.
+;			08-03-2024	Andre,	 Added KLS21 FW 20.04.
+; V4.14.0	10-06-2024	Andre,	 Fixed issue 1492, 1476.
+;			07-10-2024	Andre,	 Added activation bit for KLS and DMR parallel mode, enable 2nd CAN bus card for type 9. Fix issue 1587.
+;			25-11-2024	Bacci,	 T6 Start procedure with purge start (2024-219): added reset ignition in operation bit
+;			27-11-2024	Andre,	 Extended maximum time for skip fire during purge starts with skip fire.
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+; datamodule syntax checker 
+; (caution: syntax errors here may cause plc runtime errors!)
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>SA</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.14.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"	<PARA1 Name='iEng_Motortype' MIN='208' MAX='920' />"
+"	<PARA2 Name='rN_OvrSpeed' MIN='800.0' MAX='2200.0' />"
+"	<PARA3 />"
+"	<PARA4 />"
+"	<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Permanent Datamodule Filenames<!-- enter filenames for counter and INTERNAL parameter only; filename without extention-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_SA</DATAMODULE>"
+"	<DATAMODULE>CUp_perm</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='AB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='AG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='CB' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='CH' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='EC' VERSION='04.06.00.00' />"
+"	<DEPENDENCY MODULE='GT' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='HA' VERSION='04.12.00.00' />"
+"	<DEPENDENCY MODULE='IC' VERSION='04.12.00.00' />"
+"	<DEPENDENCY MODULE='IG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='KN' VERSION='04.11.00.00' />"
+"	<DEPENDENCY MODULE='OP' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='04.00.00.00' />"
+"   <DEPENDENCY VISVERSION='02.13.00.00' />"			; Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	CAN communication to SAFI devices. "
+"	</General>	"
+""
+"	<F1 Name='CAN Communication' LastModified='04.00.0.0'>"
+"	Manage and monitor CAN communication to SAFI devices.	"
+"	</F1>"
+"	<F2 Name='Parameter sending' LastModified='04.00.0.0'>"
+"	 Send general parameters and operation values to the devices.	"
+"	</F2>"
+"	<F3 Name='Error handling' LastModified='04.00.0.0'>"
+"	 Forward errors from SAFIs to the control system. 	"
+"	</F3>"
+"	<F4 Name='Ignition' LastModified='04.00.0.0'>"
+"	Send ignition parameters and operation values to the devices.	"
+"	</F4>"
+"	<F5 Name='Knock Detection' LastModified='04.00.0.0'>"
+"	Send knocking detection parameters and operation values to the devices.	"
+"	</F5>"
+"	<F6 Name='High Voltage measurement' LastModified='04.00.0.0'>"
+"	Send High voltage measurement parameters and operation values to the devices.	"
+"	</F6>"
+"	<F7 Name='Pressure based engine control' LastModified='04.00.0.0'>"
+"	Send PBC parameters and operation values to the devices.	"
+"	</F7>"
+"	<F8 Name='Port injection' LastModified='04.00.0.0'>"
+"	Send port injection parameters and operation values to the devices.	"
+"	</F8>"
+"	<F9 Name='Valve closure detection' LastModified='04.07.0.0'>"
+"	Detect valve closure noise and timing.	"
+"	</F9>"
+"	<Info>"
+"	no furhter information	"
+"	</Info>"
+""
+"	<Customized LastModified='04.00.0.1'>	"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

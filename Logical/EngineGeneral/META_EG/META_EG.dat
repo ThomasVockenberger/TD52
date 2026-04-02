@@ -1,0 +1,159 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2025
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V03.99.00.00	06.03.2013	Weitzer 	generated for modular software	 
+; V04.00.00.00	31.01.2014	Weitzer 	versions changed
+; V04.00.01.00	10.04.2014	lettenb. 	new version
+; V04.01.00.00	01.08.2014	Tinello 	Para Task update and SDT added
+; V04.02.00.00	24.02.2015	Tinello 	barometric pressure and bearing monitoring added
+; V04.03.00.00	20.01.2016	Tinello 	MIN, MAX, AVG for bearing temperature 
+;										SDT bugfix --> speed gradient monitoring only if speed > 90rpm
+; V04.04.00.00	12.07.2016	Zengerer 	increase version number for changed customized array size
+;							Tinello		Update bearing software to Specification version (d)
+;							Weitzer		add idle friction monitoring
+;				31.10.2016	Tinello		add B2190 - B2200 emergency stop push button identification
+; V04.05.00.00	07.12.2017	Tinello		Update bearing software to Specification version (e)
+; V04.05.01.00	19.03.2018	Tinello		Para Check erweitert
+; V04.05.02.00	19.03.2018	Tinello		Update bearing software to Specification version (f)
+; V04.05.03.00	12.09.2018	Tinello		Bugfix: Alarm bypass, bu
+; V04.06.00.00	28.09.2018	Zengerer	SlowdownT/perm
+; V04.07.00.00	04.04.2019	Tinello		Bugfix: conrod: power was compared to 30 instead of 0.3 / speed gradient monitoring only if speed >= 130rpm
+; V04.07.01.00	04.10.2019	Tinello		reduced perm file write interval, bu1
+; V04.09.00.00	10.09.2019	Tinello		slowdownT modification / slow-down time including engine cooling water temperature
+; V04.10.00.00	28.01.2021	Tinello		BugFix: Timer & other FuB's / engine running without demand in island operation / WinMOD simulation included
+; V04.11.00.00	05.07.2021	Weitzer		Vibration monitoring for engine and generator added
+; 				14.01.2022	Schmidt		Power-unit scuffing detection added
+; V04.11.01.00	04.02.2022	Schmid		Automatic PLC address detection for vibration monitoring
+; V04.12.00.00	19.12.2022	Perktold	added comments for sr-code (EN 13849-1 / 4.6.3) for A1026
+;				26.01.2023	Tinello		Allowed slow-down time for type 6 engines changed from 80s to 100s (#802)
+; V04.13.00.00	05.12.2023	Bencze		A1026: changed risc class to 10 (from 4), no remote reset possible
+; V04.14.00.00	21.10.2024	Gwiggner	A2362: changed priority from 2 to 3
+; V04.14.00.00	06.01.2025	Tinello		Added SafetyPLC
+; V04.14.01.00	23.06.2025	Tinello		Upgrade SafetyPLC for release Phase I
+; V04.25.00.00	29.06.2025	Tinello		Added SafetyPLC PhaseII
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>EG</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.25.00.02</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"<PARA1 Name='iEng_Motortype' MIN='208' MAX='920' />"
+"<PARA2 Name='rN_EngStart_LimHi' MIN='50.0' MAX='2200.0' />"
+"<PARA3 />"
+"<PARA4 />"
+"<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_EG</DATAMODULE>"
+"	<DATAMODULE>SDT_perm</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='AB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='AG' VERSION='04.01.00.00' />"
+"	<DEPENDENCY MODULE='CH' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='CU' VERSION='04.04.00.00' />"
+"	<DEPENDENCY MODULE='EC' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='GT' VERSION='04.25.00.00' />"
+"	<DEPENDENCY MODULE='HA' VERSION='04.25.00.00' />"
+"	<DEPENDENCY MODULE='IG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='OP' VERSION='04.10.00.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='04.06.00.00' />"		;new permanent file info
+"	<DEPENDENCY MODULE='VI' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='KN' VERSION='04.11.00.00' />"
+"	<DEPENDENCY MODULE='HC' VERSION='04.09.00.00' />"
+"	<DEPENDENCY MODULE='VE' VERSION='04.25.00.00' />"
+" <DEPENDENCY VISVERSION='02.16.00.00' />"				;Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	Collection of overall alarms "
+"	</General>	"
+""
+"	<F1 Name='Perm datamodule moved from SYS- to USERROM' LastModified='04.01.01.00'>"
+"	</F1>"
+"	<F2 Name='barometric pressure' LastModified='04.02.00.00'>"
+"	barometric pressure added "
+"	main and conrod bearing temperature monitoring added"
+"	alarm 3396 added "
+"	</F2>"
+"	<F3 Name='bearing and slow down time' LastModified='04.03.00.00'>"
+"	MIN, MAX, AVG for bearing temperature "
+"	calibration and parametrization; read signal strength"
+"	SDT bugfix --> speed gradient monitoring only if speed > 80rpm "
+"	</F3>"
+"	<F4 Name='bearing update / idle friction' LastModified='04.04.00.00'>"
+"	W2790, B2904 and B2905 added; A3378 changed to W2794"
+"	Conrod CANQueue, low load and fault tolerant mode added --> Specification (d)"
+"	idle friction monitoring added"
+"	emergency stop push button identification added"
+"	</F4>"
+"	<F5 Name='bearing update / idle friction' LastModified='04.05.00.00'>"
+"	Update bearing software to Specification version (e)"
+"	</F5>"
+"	<F6 Name='bearing update' LastModified='04.05.02.00'>"
+"	Update bearing software to Specification version (f)"
+"	</F6>"
+"	<F7 Name='bugfix update' LastModified='04.07.01.00'>"
+"	Bugfix: conrod: power was compared to 30 instead of 0.3"
+"	speed gradient monitoring only if speed >= 130rpm"
+"	reduced perm file write interval to avoid CF card wear down, bu1"
+"	</F7>"
+"	<F8 Name='slow-down time update' LastModified='04.09.00.00'>"
+"	Extrapolation between 15% and 5% nominal speed added, correction over cooling water temperature added, plausibility of the speed gradient modified"
+"	</F8>"
+"	<F9 Name='BugFix' LastModified='04.10.00.00'>"
+"	Bugfix: Timer & other FuB's"
+"	Bugfix: engine running without demand in island operation"
+"	WinMOD simulation included"
+"	</F9>"
+"	<F10 Name='New feature' LastModified='04.11.00.00'>"
+"	Vibration monitoring for engine and generator added"
+"	</F10>"
+""
+"	<Info>"
+"	 Please enter additional module info here.	"
+"	</Info>"
+""
+"	<Customized LastModified='04.00.00.00'>	"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

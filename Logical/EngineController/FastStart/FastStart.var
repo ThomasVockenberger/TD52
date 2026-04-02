@@ -1,0 +1,78 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: FastStart
+ * File: FastStart.var
+ * Author: 502423184
+ * Created: March 03, 2016
+ ********************************************************************
+ * Local variables of program FastStart
+ ********************************************************************)
+VAR
+	bOM_FastStart_Fail : BOOL;
+	bOM_FastStart_Okay : BOOL;
+	xTP_OM_FastStart_Okay : TP;
+	xTP_OM_FastStart_Fail : TP;
+	bFS_IP_Offs_OnlyIdle_Ena : BOOL; (*oldname: rIT_off_start_glob_En2*)
+	rP_Set_Unred_Norm_old : REAL;
+	rCF_IP_StartOffs_P : REAL; (*correction factor from power deviation*)
+	rCA_IP_StartOffs_T : REAL; (*ignition point offset from temperatur lookup table*)
+	bFS_IP_Offs_Ena : BOOL; (*oldname: rIT_off_start_glob_En*)
+	bFS_IP_Offs_Trip : BOOL; (*oldname: rIT_off_start_glob_Trip*)
+	xRamp_IP_StartOffs : RAMPE_R;
+	rP_Ramp_FS_Norm : REAL;
+	bEng_Dem_EDGE : BOOL;
+	rTi_Start : REAL;
+	bFS_Req : BOOL;
+	bFS_Rdy : BOOL;
+	bVFS_Req_Test : BOOL;
+	bFS_Req_Test : BOOL;
+	rTi_Left : REAL;
+	rTi_Target : REAL;
+	rTi_Desired : REAL;
+	rP_Ramp_UL : REAL;
+	bTarget_Hold : BOOL;
+	xLCRCByP_IP_Pdev : LCRCurveByPoints;
+	xLCRCByP_IP_T3LP : LCRCurveByPoints;
+	xLCRCByP_Start_Offs : LCRCurveByPoints;
+	bFS_Rel : BOOL;
+	xIP_EGTCtr : fIP_EGTCtr;
+	rP_Targ_Norm : REAL;
+	bIP_EGTCtr_Rel : BOOL;
+	xLCRCByP_IP_EGT : LCRCurveByPoints;
+	rCA_IP_EGTCtr : REAL;
+	bVerrigelung : BOOL := 0;
+	bVerrigelung2 : BOOL := 0;
+	LCRLimScal_ZZPffs : LCRLimScal;
+	LCRLimScal_ZZPffs2 : LCRLimScal;
+	TON_ITP : TON;
+	LCRScal_StartITOffs : LCRScal;
+	bITPStAct : BOOL := 0;
+	rT_it_offset : REAL;
+	rZZPStart_T_low : REAL;
+	rZZPStart_T_high : REAL;
+	ucCylinderCount : USINT;
+	bForce_FastStartOFF : BOOL := 0; (*TRUE = FASTSTART AUSGESCHALTET*)
+	bWait_in_Idle : BOOL;
+	rTime_before_SY : REAL;
+	rDT_Idle : REAL;
+	xTON_NetP : TON;
+	bTrigger_GT_SafeDev : BOOL;
+	TP_GT_SafeDev : TP;
+	TP_110sBlock : TP;
+	xTOF_R4VFS : TOF;
+	TON_PowerReached : TON;
+	tStopBlockFS : TIME := T#30s;
+	TP_Stop : TP;
+	iSSCount : INT;
+	bGEN2_transient : BOOL := 0;
+	tDelay_Transient : TIME := T#2s;
+	TON_Transient : TON;
+	tDelay_stable : TIME := T#5s;
+	TOF_Transient : TOF;
+	rP_des_lastCyl : REAL;
+	RAMPE_R_ITP : RAMPE_R;
+	tTP_Verrigelung2 : TIME := T#30s;
+	TP_bVerrigelung2 : TP;
+	xTOF_MnsOk : TOF;
+END_VAR

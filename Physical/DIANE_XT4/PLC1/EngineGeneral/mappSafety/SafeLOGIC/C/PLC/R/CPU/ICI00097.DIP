@@ -1,0 +1,13 @@
+(*
+T: FUNCTION_BLOCK HeatWaterSys
+FW: NO
+CI#: 97
+QSL: 6
+QVE: 6
+QVPC: 6
+QPar: 3
+QFBI: 3
+*)
+sbF20_OK_HeatWater	@IV 3	@TYP:43	VAR_OUTPUT
+sbGCB_On_60s	@IV 1	@TYP:43	VAR_INPUT
+sbN_Standstill	@IV 2	@TYP:43	VAR_INPUT

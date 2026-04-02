@@ -1,0 +1,13 @@
+VAR
+	xTON_lim_LoLo : ARRAY[0..120] OF TON;
+	xTON_lim_lo : ARRAY[0..120] OF TON;
+	xTON_lim_hi : ARRAY[0..120] OF TON;
+	xTON_lim_HiHi : ARRAY[0..120] OF TON;
+	xLCRScal_10 : LCRScal;
+	xLCRScal_15 : LCRScal;
+	xLCRScal_16 : LCRScal;
+	bGR_MIN_lim_LoLo_Q : BOOL := 0;
+	bGR_MIN_lim_lo_Q : BOOL := 0;
+	bGR_MAX_lim_hi_Q : BOOL := 0;
+	bGR_MAX_lim_HiHi_Q : BOOL := 0;
+END_VAR

@@ -1,0 +1,26 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: IN_HA
+ * File: IN_HA.var
+ * Author: weitzert
+ * Created: June 14, 2012
+ ********************************************************************
+ * Local variables of program IN_HA
+ ********************************************************************)
+VAR
+	ucCount : USINT;
+	TOF_SyImp : ARRAY[0..2] OF TOF;
+	xTON_OMS : TON;
+	xTON_RMS : TON;
+	xTON_SyOMS : TON;
+	tiTimeout : TIME := T#5s;
+	xTON_WatchdogSIM2AR0 : TON;
+	xTON_WatchdogSIM2AR1 : TON;
+	sMMD_SerialNumber : STRING[11];
+	iMMD_ModuleID : UINT;
+	iMMD_ModuleID_Char : INT;
+	iIdx_ModuleID : INT;
+	sMMD_ModuleID : STRING[4];
+	sMMD_Temp : STRING[1];
+END_VAR

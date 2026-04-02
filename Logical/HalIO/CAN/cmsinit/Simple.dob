@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.1.9.44 SP?>
+<DataObject Version="4.00.0" xmlns="http://br-automation.co.at/AS/DataObject">
+  <Files>
+    <File>cmsinit.dat</File>
+  </Files>
+</DataObject>

@@ -1,0 +1,26 @@
+VAR_CONFIG
+	Cyclic#4.AmmBase::OUT_AB.tAB2GM AT %Q.Cyclic#5.Gasmixer::IN_GM.tAB2GM;
+	Cyclic#4.EngineController::OUT_EC.bLeanox_Active AT %Q.Cyclic#5.Gasmixer::IN_GM.bLeanox_Active;
+	Cyclic#5.EngineController::OUT_EC.bLeanox_Man AT %Q.Cyclic#5.Gasmixer::IN_GM.bLeanox_Man;
+	Cyclic#4.EngineController::OUT_EC.rPos_GM_Set_Norm AT %Q.Cyclic#5.Gasmixer::IN_GM.rPos_GM_Set_Norm;
+	Cyclic#2.EngineController::OUT_EC.rPos_GM_Set_Norm AT %Q.Cyclic#2.Gasmixer::IN_GM.rPos_GM_Set_Norm_TC2; (*V04.05.00.00*)
+	Cyclic#5.Gastrain::OUT_GT.iIdx_Gtyp_Dem AT %Q.Cyclic#2.Gasmixer::IN_GM.iIdx_Gtyp_Dem;
+	Cyclic#5.Gastrain::OUT_GT.rGT_QualMix_1_2 AT %Q.Cyclic#2.Gasmixer::IN_GM.rGT_QualMix_1_2;
+	Cyclic#5.HalIO::OUT_HA.bSimWinMOD_Active AT %Q.Cyclic#5.Gasmixer::IN_GM.bSimWinMOD_Active; (*V04.04.00.00*)
+	Cyclic#5.HalIO::OUT_HA.iGM1_MStepActPos AT %Q.Cyclic#5.Gasmixer::IN_GM.iGM1_MStepActPos;
+	Cyclic#5.HalIO::OUT_HA.iGM1_Status AT %Q.Cyclic#5.Gasmixer::IN_GM.iGM1_Status;
+	Cyclic#5.HalIO::OUT_HA.iGM2_MStepActPos AT %Q.Cyclic#5.Gasmixer::IN_GM.iGM2_MStepActPos;
+	Cyclic#5.HalIO::OUT_HA.iGM2_Status AT %Q.Cyclic#5.Gasmixer::IN_GM.iGM2_Status;
+	Cyclic#4.HalIO::tPos_Act_GM1_Norm AT %Q.Cyclic#5.Gasmixer::IN_GM.tPos_Act_GM1_Norm;
+	Cyclic#4.HalIO::tPos_Act_GM2_Norm AT %Q.Cyclic#5.Gasmixer::IN_GM.tPos_Act_GM2_Norm;
+	Cyclic#2.HalIO::tPos_SGM_Enc1 AT %Q.Cyclic#2.Gasmixer::IN_GM.tPos_SGM_Enc1;
+	Cyclic#2.HalIO::tPos_SGM_Enc2 AT %Q.Cyclic#2.Gasmixer::IN_GM.tPos_SGM_Enc2;
+	Cyclic#2.HalIO::tPos_SGM_Enc3 AT %Q.Cyclic#2.Gasmixer::IN_GM.tPos_SGM_Enc3;
+	Cyclic#2.Ignition::OUT_IG.rN_EngAct AT %Q.Cyclic#2.Gasmixer::IN_GM.rN_EngAct;
+	Cyclic#5.Opstate::OUT_OP.iIdx_OMSS AT %Q.Cyclic#5.Gasmixer::IN_GM.iIdx_OMSS;
+	Cyclic#4.Opstate::OUT_OP.iSt_OpMode AT %Q.Cyclic#5.Gasmixer::IN_GM.iSt_OpMode;
+	Cyclic#2.Opstate::OUT_OP.rP_Act_Norm_Filt AT %Q.Cyclic#2.Gasmixer::IN_GM.rP_Act_Norm_Filt;
+	Cyclic#2.Opstate::OUT_OP.rP_Nom AT %Q.Cyclic#2.Gasmixer::IN_GM.rP_Nom;
+	Cyclic#2.Opstate::OUT_OP.rP_Set_Norm AT %Q.Cyclic#2.Gasmixer::IN_GM.rP_Set_Norm;
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#5.Gasmixer::IN_GM.tPB2MM;
+END_VAR

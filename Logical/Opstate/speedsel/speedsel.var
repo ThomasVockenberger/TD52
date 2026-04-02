@@ -1,0 +1,60 @@
+VAR
+	rN_Sync_Delta_Norm : REAL := 0.0;
+	bInitRamp : BOOL;
+	xLCRRAMP_IslandLoading : LCRRamp;
+	xLCRRAMP_N_Delta : LCRRamp;
+	rN_Loadsharing_Delta_Norm : REAL := 0.0;
+	rLoadsharing_Scal : REAL := 0.1; (*control gain for engine speed set value of load sharing line*)
+	DEM_ISOL : BOOL;
+	anz_vmod : REAL;
+	wert1 : REAL;
+	wert2 : REAL;
+	wert3 : REAL;
+	wert4 : REAL;
+	wert_unten : REAL;
+	wert_oben : REAL;
+	xRamp_GH_lsl : RAMPE_R;
+	rCnt_Pmax : REAL;
+	bPDrift_Rel : BOOL;
+	bPDrift_Ena : BOOL;
+	rP_Avg_Norm : REAL;
+	rP_Set_ext_Norm : REAL;
+	rP_Dev_Norm : REAL;
+	rP_Dev_Lim : REAL;
+	rP_Offs : REAL;
+	rF_Offs : REAL;
+	rP_Max : REAL;
+	rP_Offs_Input : REAL;
+	xRAMPE_R_Droop : RAMPE_R;
+	rF_Offs_Norm : REAL;
+	xLCRScal_F_WPt : LCRScal := (0);
+	x_win : ARRAY[0..1] OF REAL;
+	xLCRRamp_N_Set_Offset : LCRRamp;
+	rN_F_Offset : REAL;
+	rP_Red_Norm_Island_Set : REAL;
+	xFILTER_R_P_Act_Norm : FILTER_R;
+	rN_F_Offset_Old : REAL;
+	rP_Offs_Input_0kW : REAL;
+	rN_Offs_notDem : REAL := 10; (* [rpm] offset if engine not demanded, in external speed reference mode*)
+	rP_OffsInit : REAL := 0.0;
+	bAddDroop_NrefExt : BOOL := TRUE; (* activate additional droop fro external speed ref.*)
+	rN_F_Offset_AddDroop : REAL := 0.0; (* additional droop term for external speed ref. *)
+	rLim_AddDroop : REAL := 1; (* Limit for additional droop *)
+	rN_delta_OvldProt : REAL; (*Spd Ctrl, speed ref. offset for overload protection *)
+	bDroopPowCtrl : BOOL; (*Compatibility to Microgrid Ctrl: droop for power controller active*)
+	rN_delta_RevPowProt : REAL := 0.0; (*Spd Ctrl, speed ref. offset for reverse power protection*)
+	xLCRPT1_PActNorm_LoadProt : LCRPT1; (*Filter of actual power for load protection*)
+	rN_F_Offset_norm_lim : REAL := 0.06; (*normalized speed ref. offset limit*)
+	xRAMPE_R_overLoadProt : RAMPE_R := (0); (*rate limiter for output of the overload protection*)
+	xRAMPE_R_reversePowerProt : RAMPE_R := (0); (*rate limiter for output of the reverse power protection*)
+	rN_Gradient_Ramps_LoadProtection : REAL := 0.0; (*gradient of load protection rate limiter *)
+	rN_delta_OvldProt_Cont : REAL := 0.0; (*speed offset from overload protection p controller*)
+	rN_delta_RevPowProt_Cont : REAL := 0.0; (*speed offset from reverse power protection p controller*)
+	rFact_Rampback_Loadprotection : REAL; (*Factor for ramp gradient ramping back from overload or reverse power reaction*)
+	xR_Trig_LSLTransition : R_TRIG; (*rising edge trigger used for LSL transitions *)
+	bOtherGensInLSL : BOOL; (*TRUE if other generators in parallel participating in the LSL *)
+	rP_Island_Split_Max : REAL; (*Maximum of the rP_Island_Split variable *)
+	xLCRRamp_LSLTransition : LCRRamp; (*Ramp used for smooth transition to LSL *)
+	rN_Grad_LSLTransition : REAL; (*Gradient used for smooth transition to LSL *)
+	xLCRIntegrate_LSL_Correction : LCRIntegrate; (*Integrator for LSL signal error compensation *)
+END_VAR

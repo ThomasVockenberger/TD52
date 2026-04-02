@@ -1,0 +1,17 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: gas_flow
+ * File: gas_flow.var
+ * Author: 105046866
+ * Created: May 10, 2012
+ ********************************************************************
+ * Local variables of program gas_flow
+ ********************************************************************)
+VAR
+	bAdmitFlow : BOOL; (* TRUE=gas flow is admited *)
+	RAMPE_MixGas : RAMPE_R; (* limit gas mixture change speed *)
+	R_TRIG_GasImp_Prescaler : R_TRIG;
+	iGasImp_PrescalCount : DINT;
+END_VAR
+

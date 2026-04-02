@@ -1,0 +1,13 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: Ctr_ChC
+ * File: Ctr_ChC.var
+ * Author: lettenb
+ * Created: April 17, 2012
+ ********************************************************************
+ * Local variables of program Ctr_ChC
+ ********************************************************************)
+VAR
+	bBlockRetrigger : BOOL; (*block retrigger events*)
+END_VAR

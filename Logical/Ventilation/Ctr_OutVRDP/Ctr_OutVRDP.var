@@ -1,0 +1,9 @@
+VAR
+	rCtr_OutlVe_RDP_Y_old : REAL; (*write the actual Y on this internal variable*)
+	xSigScal_R_CtrRDP_EngP : xSigScal_R := (0);
+	xSigScal_R_CtrRDP_CtrER : xSigScal_R := (0);
+	TON_DC : TON; (*TON door contact*)
+	RAMPE_R_0 : RAMPE_R := (0);
+	RAMPE_Y_set_intern : BOOL := 0;
+	Y_set_intern : REAL;
+END_VAR

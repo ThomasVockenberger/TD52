@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.1.15.54 SP?>
+<Library Version="0.04.1" Type="AnsiC" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>lGEN2diag.fun</File>
+    <File>lGEN2diag.typ</File>
+    <File>lGEN2diag.var</File>
+    <File>G2Fdiag.h</File>
+    <File>G2Fdiag_private.h</File>
+    <File>G2Fdiag_types.h</File>
+    <File>rtwtypes.h</File>
+    <File>G2Fdiag.c</File>
+    <File>fGEN2diag.c</File>
+    <File>lib_properties.txt</File>
+  </Files>
+</Library>

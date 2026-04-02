@@ -1,0 +1,307 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: dyn_GR
+ * File: 
+ * Author: 
+ * Created: 
+ ********************************************************************
+ * Local variables of program 
+ ********************************************************************)
+VAR
+	bSimulate : BOOL; (*simulation variable*) (* OldName: bSimulate; Cycle:2; *)
+	xF_TRIG_IgnOFF : F_TRIG; (* 0 *) (* OldName: F_TRIG_IgnOFF; Cycle:2; *)
+	xF_TRIG_VoltRecovPlusT : F_TRIG; (* 0 *) (* OldName: F_TRIG_VoltRecovPlusT; Cycle:2; *)
+	xF_TRIG_GCEventPeriode_PA : F_TRIG; (* 0 *) (* OldName: F_TRIG_GCEventPeriode_PA; Cycle:2; *)
+	xF_TRIG_GCEvent : F_TRIG; (* 0 *) (* OldName: F_TRIG_GCEvent; Cycle:2; *)
+	rN_GrC_Speed : REAL; (* speed for Grid Code calculations *) (* OldName: ssGridCodeSpeed; Cycle:2; *)
+	rI_GrC_Lim : REAL; (* Grid Code current limit in [A ]*) (* OldName: ssCurrentLimit; Cycle:2; *)
+	rPhase_Ang_Const : REAL; (* constant for phase angel calculation *) (* OldName: fPhaseAngleConst; Cycle:2; *)
+	rN_GrC_SpeedChange_Lim : REAL; (* speed change limit for Grid Code event detection *) (* OldName: ssGridCodeSpeedChangeLimit; Cycle:2; *)
+	r_Eng_Cyc : REAL; (* Length of motor cycle [ms]*) (* OldName: ssMotorzyklus; Cycle:2; *)
+	rU_GrC_Lim : REAL; (* Grid Code voltage limit in [V ]*) (* OldName: ssVoltageLimit; Cycle:2; *)
+	rN_Ign_Int : REAL; (* speed ignition [1/min] *) (* OldName: n_Ign_INTERNAL; Cycle:2; *)
+	xR_TRIG_IgnOFFON : R_TRIG; (* 0 *) (* OldName: R_TRIG_IgnOFFON; Cycle:2; *)
+	xR_TRIG_IgnOFF : R_TRIG; (* 0 *) (* OldName: R_TRIG_IgnOFF; Cycle:2; *)
+	xR_TRIG_Wait : R_TRIG; (* 0 *) (* OldName: R_TRIG_Wart; Cycle:2; *)
+	xR_TRIG_GCE_Power : R_TRIG; (* 0 *) (* OldName: R_TRIG_GCE_Power; Cycle:2; *)
+	xR_TRIG_GCE : R_TRIG; (* 0 *) (* OldName: R_TRIG_GCE; Cycle:2; *)
+	xR_TRIG_GCEvent : R_TRIG; (* 0 *) (* OldName: R_TRIG_GCEvent; Cycle:2; *)
+	tLam_Ada : TIME; (* 0 *) (* OldName: tLambdaAdabt; Cycle:2; *)
+	tLeanoxCtrMan : TIME; (* 0 *) (* OldName: tLeanoxCtrMan; Cycle:2; *)
+	tEventPulse : TIME; (* Pulse time for Grid Code event *) (* OldName: tEventPulse; Cycle:2; *)
+	tHilfsbetriebeTripOFF : TIME; (* 0 *) (* OldName: tHilfsbetriebeTripOFF; Cycle:2; *)
+	tPumpErk : TIME; (* Dauer fuer Aktivierung der Pumperkennung *) (* OldName: tPumpErk; Cycle:2; *)
+	tTimeAfterVoltRecov : TIME; (* Zeit nach der, nach Wiederkehr der Spannung, die Zuendung eingeschaltet wird *) (* OldName: tTimeAfterVoltRecov; Cycle:2; *)
+	tLeanoxErrorOFF : TIME; (* tLeanoxErrorOFF : TIME; *) (* OldName: tLeanoxErrorOFF; Cycle:2; *)
+	tPowerFIX : TIME; (* Dauer Leistungsfixierung bei GCEvent / time Power setting *) (* OldName: tPowerFIX; Cycle:2; *)
+	xTOF_GCEventPeriode_PA : TOF; (* *) (* OldName: TOF_GCEventPeriode_PA; Cycle:2; *)
+	xTOF_GrC_EventPeriode : TOF; (* No phase angle reset for 1 sec. in case of Grid Code event *) (* OldName: TOF_GirdCodeEventPeriode; Cycle:2; *)
+	xTOF_Netp : TOF; (* wait 5 sec. after disconnection from grid to disable the simulation flag *) (* OldName: TOF_Netp; Cycle:2; *)
+	xTON_Netp : TON; (* wait 5 sec, after switch to netprallel before use average speed *) (* OldName: xTON_Netp; Cycle:2; *)
+	xTON_PoleSlip : TON; (* 0 *) (* OldName: xTON_PoleSlip; Cycle:2; *)
+	xTON_ConstGenPF : TON; (* TON check const generator power factor *) (* OldName: TON_ConstGenPF; Cycle:2; *)
+	xTON_AvgPeriode : TON; (* time period for average calculation *) (* OldName: TON_AvgPeriode; Cycle:2; *)
+	xTON_ConstGenCurr : TON; (*TON check const generator current *) (* OldName: TON_ConstGenCurr; Cycle:2; *)
+	xTON_ConstGenFreq : TON; (* 0 *) (* OldName: TON_ConstGenFreq; Cycle:2; *)
+	xTP_GrC_Event : TP; (* 0 *) (* OldName: TP_GridCodeEvent; Cycle:2; *)
+	xTP_GrC_Event_BM : TP; (* 0 *) (* OldName: TP_GridCodeEvent_BM; Cycle:2; *)
+	xTP_GrC_Event_Sim_BM : TP; (* 0 *)
+	xTP_GCE_PumpErk : TP; (* 0 *) (* OldName: TP_GCE_PumpErk; Cycle:2; *)
+	xTP_GCE_LeanoxErr : TP; (* 0 *) (* OldName: TP_GCE_LeanoxErr; Cycle:2; *)
+	xTP_GCE_PowerFIX : TP; (* 0 *) (* OldName: TP_GCE_PowerFIX; Cycle:2; *)
+	xTP_VoltRecov : TP; (* 0 *) (* OldName: TP_VoltRecov; Cycle:2; *)
+	xTP_Wart : TP; (* 0 *) (* OldName: TP_Wart; Cycle:2; *)
+	xTP_PoleSlip : TP; (* 0 *) (* OldName: TP_PoleSlip; Cycle:2; *)
+	xTP_IgnOffPump : TP; (* 0 *) (* OldName: TP_IgnOffPump; Cycle:2; *)
+	xTP_IgnOnVoltRecov : TP; (* 0 *) (* OldName: TP_IgnOnVoltRecov ; Cycle:2; *)
+	xTP_GCE_LeanoxCtr : TP; (* 0 *) (* OldName: TP_GCE_LeanoxCtr; Cycle:2; *)
+	xTP_Disc_dynAng_Min_BM : TP; (* 0 *) (* OldName: TP_disconnect_dynAngle_Min_BM; Cycle:2; *)
+	xTP_Disc_Power_BM : TP; (* 0 *) (* OldName: TP_disconnect_Power_BM; Cycle:2; *)
+	xTP_Disc_dynAng_BM : TP; (* 0 *) (* OldName: TP_disconnect_dynAngle_BM; Cycle:2; *)
+	xTP_GCE_Power : TP; (* 0 *) (* OldName: TP_GCE_Power; Cycle:2; *)
+	xTP_Disc_CapMode_BM : TP; (* 0 *) (* OldName: TP_disconnect_CapMode_BM; Cycle:2; *)
+	xTP_GCE_HBTrip : TP; (* 0 *) (* OldName: TP_GCE_HBTrip; Cycle:2; *)
+	xTP_GCE_Lam_Ada : TP; (* 0 *) (* OldName: TP_GCE_LambdaAdabt; Cycle:2; *)
+	xTP_GCE : TP; (* 0 *) (* OldName: TP_GCE; Cycle:2; *)
+	xTP_DO_GRIDCODE_DCON_TC1 : TP; (* 0 *) (* OldName: TP_DO_GRIDCODE_DCON_TC1; Cycle:2; *)
+	xTP_Disc_staticAng_BM : TP; (* 0 *) (* OldName: TP_disconnect_staticAngle_BM; Cycle:2; *)
+	xTP_GCE_FIXAct : TP; (* 0 *) (* OldName: TP_GCE_FIXAct; Cycle:2; *)
+	xTP_CurrentChange : TP; (* 0 *) (* OldName: TP_CurrentChange; Cycle:2; *)
+	xTP_SpeedChange : TP; (* 0 *) (* OldName: TP_SpeedChange; Cycle:2; *)
+	xTP_VoltageLow : TP; (* 0 *) (* OldName: TP_VoltageLow; Cycle:2; *)
+	b_GrC_VoltageLow : BOOL; (* TRUE if Grid Code event low voltage is detected *) (* OldName: TP_VoltRecov; Cycle:2; *)
+	bRel_PA_RESET : BOOL; (* TRUE = PA after 350ms reset *) (* OldName: bFREIGABE_PA_RESET; Cycle:2; *)
+	bGrC_Disc_Cap : BOOL; (* Decoupling when capacitance operating in Grid Code Event *) (* OldName: bGC_disconnect_Cap; Cycle:2; *)
+	bGrC_Disc_DynAng : BOOL; (* Decouple when static + dynamic angle during GCEvents> Limit*) (* OldName: bGC_disconnect_DynAngle; Cycle:2; *)
+	bGrC_Disc_DynAng_Min : BOOL; (* Decouple when static + dynamic angle during GCEvents <Limit*(-1) and voltage below Limi *) (* OldName: bGC_disconnect_DynAngle_Min; Cycle:2; *)
+	bGrC_Disc_Power : BOOL; (* Decouple when power < Limit when entering the GC events *) (* OldName: bGC_disconnect_Power; Cycle:2; *)
+	bGrC_Disc_StaticAng : BOOL; (* Decouple when static angle already when entering the GC Events> Limit *) (* OldName: bGC_disconnect_StaticAngle; Cycle:2; *)
+	bGrC_DO_int : BOOL; (* 0 *) (* OldName: bGC_DO_int; Cycle:2; *)
+	bGrC_LamAdabt : BOOL; (* TRUE = Lambda-Adaption aktiv (BR<6) bei BR6 sowieso aktiv LVIC Gasmengenberechnung *) (* OldName: bGC_LambdaAdabt; Cycle:2; *)
+	bGrC_LeanoxCtrMAN : BOOL; (* TRUE = Leanox Regler ist im Handbetrieb (GCEvent) *) (* OldName: bGC_LeanoxCtrMAN; Cycle:2; *)
+	bGrC_LeanoxCtrMan : BOOL; (* TRUE = Leanox Regler bei GCEvent fuer def. Zeit in Hand *) (* OldName: bGC_LeanoxCtrMan; Cycle:2; *)
+	bGrC_LeanoxErrOFF : BOOL; (* TRUE = LoxAbw. A1080 wird bei GCEvent blockiert *) (* OldName: bGC_LeanoxErrOFF; Cycle:2; *)
+	bGrC_PowerFIX_Akt : BOOL; (* TRUE = Leistungsfixierung bei GridCodeEvent im eng_ctr aktiv *) (* OldName: bGC_PowerFIX_Akt; Cycle:2; *)
+	bGrC_CurrentChange : BOOL; (* TRUE if generator current change is above limit *) (* OldName: bGridCodeCurrentChange; Cycle:2; *)
+	bGrC_CurrentChange_Mer : BOOL; (*cuurent chagne merker*) (* OldName: bGridCodeCurrentChange_MERKER; Cycle:2; *)
+	bGrC_SpeedChange : BOOL; (* TRUE if Grid Code event speed change is detected *) (* OldName: bGridCodeSpeedChange; Cycle:2; *)
+	bGrC_SpeedChange_Mer : BOOL; (*speed change merker*) (* OldName: bGridCodeSpeedChange_MERKER; Cycle:2; *)
+	bGrC_Missf : BOOL; (* Switch off the ignition active /TRUE = Zuendungausschalten AKTIV *) (* OldName: bGridMissf; Cycle:2; *)
+	bIgnOFF_Mer : BOOL; (* Merker fuer Zuendung AUS *) (* OldName: bIgnOFF_MERKER; Cycle:2; *)
+	bIgnON_Mer : BOOL; (* Merker fuer Zuendung EIN *) (* OldName: bIgnON_MERKER; Cycle:2; *)
+	bCap : BOOL; (* TRUE = capacitive Engine Run *) (* OldName: bKap; Cycle:2; *)
+	bNFilter2 : BOOL; (* TRUE = Avg 2 Perioden | FALSE = 3 Perioden *) (* OldName: bNFilter2; Cycle:2; *)
+	bPoleSlip : BOOL; (* TRUE if pole slip detected *) (* OldName: bPoleSlip; Cycle:2; *)
+	bPoleSlip_INT : BOOL; (*Pole slip detection*) (* OldName: bPoleSlip_INT; Cycle:2; *)
+	bTP_GrC_Event : BOOL; (* TP TRUE Grid Code event *) (* OldName: bTP_GridCodeEvent; Cycle:2; *)
+	r_CosPhi : REAL; (* generator cos phi *) (* OldName: fCosPhi; Cycle:2; *)
+	r_Phi : REAL; (* generator phi in radian *) (* OldName: fPhi; Cycle:2; *)
+	r_Divisor : REAL; (* divisor for polar wheel angle calculation *) (* OldName: fDivisor; Cycle:2; *)
+	xFILTER_cosphi : FILTER_R; (*Filter fuer Cos Phi - da Messung im Falle eines Events nicht plausibel*) (* OldName: FILTER_cosphi; Cycle:2; *)
+	r_PhaseAng_OFF : REAL; (* dyn. Winkel bei dem die Zuendung AUSgeschalten wird [°] *) (* OldName: fPhaseAngelIgnOFF; Cycle:2; *)
+	r_PhaseAng_ON : REAL; (* dyn. Winkel bei dem die Zuendung wieder EINgeschalten wird [°] *) (* OldName: fPhaseAngelIgnON; Cycle:2; *)
+	r_PolarWheelAng : REAL; (* calcualted polar wheel angle in degree *) (* OldName: fPolarWheelAngle; Cycle:2; *)
+	r_PolarWheelAng_GC : REAL; (* 0 *) (* OldName: fPolarWheelAngle_GC; Cycle:2; *)
+	r_Xqo : REAL; (* 0 *) (* OldName: fXqo; Cycle:2; *)
+	i_IgnOFF_Time : INT; (* Ignition off aktiv, counter wie lange *) (* OldName: IgnOFF_Time; Cycle:2; *)
+	i_IgnOFF_TimeMin : INT; (* 0 *) (* OldName: IgnOFF_TimeMIN; Cycle:2; *)
+	iMissfCyl_old_GC : UDINT; (* 0 *) (* OldName: MissfCyl_old_GC; Cycle:2; *)
+	rN_Ign1_Avg : REAL; (* avarage speed ignition [1/min] *) (* OldName: n_Ign1_Avg; Cycle:2; *)
+	rN_Ign1_old : REAL; (* old speed ignition [1/min] *) (* OldName: n_Ign1_old; Cycle:2; *)
+	rN_Ign1_old2 : REAL; (* old speed ignition [1/min] *) (* OldName: n_Ign1_old2; Cycle:2; *)
+	rN_GrC_SpeedSumm : REAL; (* speed average sample summ *) (* OldName: slGridCodeSpeedSumm; Cycle:2; *)
+	rN_AvgSpeed : REAL; (* 100 sample speed average used for phase angle calcualtion *) (* OldName: ssAvgSpeed; Cycle:2; *)
+	rN_AvgSpeed1 : REAL; (* ast sample speed average used for phase angle calcualtion *) (* OldName: ssAvgSpeed1; Cycle:2; *)
+	rN_AvgSpeed2 : REAL; (* last sample speed average used for phase angle calcualtion *) (* OldName: ssAvgSpeed2; Cycle:2; *)
+	rCnT_GrC_CurrentChange_PULSE : REAL; (* current change puls counter *) (* OldName: ssGCCurrentChange_PULSE_COUNTER; Cycle:2; *)
+	rI_GrC_CurrentChange_PULSE_Lim : REAL; (* 0 *) (* OldName: ssGCCurrentChange_PULSE_LIMIT; Cycle:2; *)
+	rCnt_GrC_SpeedChange_PULSE : REAL; (* 0 *) (* OldName: ssGCSpeedChange_PULSE_COUNTER; Cycle:2; *)
+	rN_GrC_SpeedChange_PULSE_Lim : REAL; (* 0 *) (* OldName: ssGCSpeedChange_PULSE_LIMIT; Cycle:2; *)
+	rIgn_Cnt_Off : REAL; (* ignition OFF activate / Zuendung AUS aktiv -> zaehlen wie lange *) (* OldName: ssIgnAUS_Countms; Cycle:2; *)
+	rCnt_IGN_Off : REAL; (*Counter for ignition OFF / Counter fuer Zuendung AUS *) (* OldName: ssIGNOFF_COUNTER; Cycle:2; *)
+	rCnt_IGN_On : REAL; (*Counter for ignition ON / Counter fuer Zuendung EIN *) (* OldName: ssIGNON_COUNTER; Cycle:2; *)
+	r_IL1_Change : REAL; (* change of generator current L1 since last task cycle *) (* OldName: ssIL1Change; Cycle:2; *)
+	r_IL2_Change : REAL; (* change of generator current L2 since last task cycle *) (* OldName: ssIL2Change; Cycle:2; *)
+	r_IL3_Change : REAL; (* change of generator current L3 since last task cycle *) (* OldName: ssIL3Change; Cycle:2; *)
+	r_IL1_Last : REAL; (* Generator current phase 1 from last cycle *) (* OldName: ssLastIL1; Cycle:2; *)
+	r_IL2_Last : REAL; (* Generator current phase 2 from last cycle *) (* OldName: ssLastIL2; Cycle:2; *)
+	r_IL3_Last : REAL; (* Generator current phase 3 from last cycle *) (* OldName: ssLastIL3; Cycle:2; *)
+	r_CosPhi_Last : REAL; (* last power factor *) (* OldName: ssLastCosPhi; Cycle:2; *)
+	r_GrC_LastSpeed : REAL; (*speed from last cycle *) (* OldName: ssLastGridCodeSpeed; Cycle:2; *)
+	r_Freq_Last : REAL; (*last generator frequency *) (* OldName: usLastFreq; Cycle:2; *)
+	iSpeedOption : USINT; (*speed options*) (* OldName: ucSpeedOption; Cycle:2; *)
+	bGrC_PumpErk : BOOL; (* TRUE = Pumperkennung bei GC Events aktiv *) (* OldName: bGC_PumpErk; Cycle:2; *)
+	iMMUSynchFWVers : ARRAY[0..2] OF UINT; (* Firmware version MMUsynch *) (* OldName: usMMUSynchFWVers; Cycle:2; *)
+	iFreqConv : UINT; (* Conversion fuer usFreqNenn[1] *) (* OldName: usFreqConv; Cycle:2; *)
+	iCnt_Avr : USINT; (* counter for calcualte average of engine speed *) (* OldName: usCounter; Cycle:2; *)
+	iSWCycltime : USINT; (* Softwarezykluszeit des GridCode Tasks [ms] *) (* OldName: ucSWCycltime; Cycle:2; *)
+	iCnt_GrC_Event_Lim : DINT; (* Limit for mains failure maintenance request *) (* OldName: ucGCEvent_CounterLIMIT; Cycle:2; *)
+	iCylOFF_cycl : USINT; (* Max. Anzahl an Motorzyklen fuer Zuendung AUS [Motorzyklen * 10] *) (* OldName: ucCylOFF_cycl; Cycle:2; *)
+	iCylON_cycl : USINT; (* Min. Anzahl an Motorzyklen fuer anschliessend Zuendung EIN [Motorzyklen * 10] *) (* OldName: ucCylON_cycl; Cycle:2; *)
+	rSpeedChange : REAL; (* speed change since last task cycle *) (* OldName: ssSpeedChange; Cycle:2; *)
+	iSpeedMinus : INT; (* Ausloesung Zuendung EIN bei Drehzahl x U/min unter Durchschnittsdrehzahl *) (* OldName: ssSpeedMinus; Cycle:2; *)
+	iSpeedMinus2 : INT; (* 0 *) (* OldName: ssSpeedMinus2; Cycle:2; *)
+	iSpeedPlus : INT; (* Ausloesung Zuendung AUS bei Drehzahl x U/min ueber Durchschnittsdrehzahl *) (* OldName: ssSpeedPlus; Cycle:2; *)
+	iSpeedPlus2 : INT; (* 0 *) (* OldName: ssSpeedPlus2; Cycle:2; *)
+	tFIXActuators : TIME; (* 0 *) (* OldName: tFIXActuators; Cycle:2; *)
+	bLeanox_Man_old : BOOL; (* leanox controller in manual old *) (* OldName: l_einst_a_old; Cycle:2; *)
+	bVoltRecovAct : BOOL; (* TRUE = Zuendung spaetestens ein sobald Spannung wieder da + Zeit | FALSE = Zuendung spaetestens nach "tPulseEvent" ein*) (* OldName: bVoltRecovAct; Cycle:2; *)
+	bGC_HilfsbetriebeTripOFF : BOOL; (*TRUE = Stoerung HB (A1129) wird bei GCEvent blockiert*) (*  *)
+	iNrOfPolePair : INT; (*amount of pole pairs*)
+	bGearBox : BOOL; (*TRUE = GearBox (Motor with 1500U/min in 60Hz Netz)*) (* OldName: ; Cycle: 2 *)
+	rF_Calc : REAL;
+	FILTER_R_P2s_WP : FILTER_R; (*Filter fuer den p2s Arbeitspunkt bei Eventeintritt*)
+	rPr_P2s_t0 : REAL; (*Laderuck gefiltert vor GC-Event (t0)*)
+	rPos_CBV_t0 : REAL; (*CBV Position vor GC-EVent (t0)*)
+	iT_GrC_1_2 : INT; (*Verzoegerungszeit fuer Oeffnen des CBV [10ms]*)
+	iT_GrC : INT; (*Timer [10ms] waehrend dem Event*)
+	rDPos_Phase2 : REAL; (*delta CBV Position fuer Phase 2 (oeffnen) )[-]*)
+	rDPos_Phase3 : REAL; (*delta CBV Position fuer Phase 3 (schliessen) )[-]*)
+	usFilt_P2s_t0 : USINT; (*Filterzeitkonstante fuer die Ermittlung der P2s zum Zeitpunkt t0 [10ms]*)
+	usFilt_P2s_tn : USINT; (*Filterzeitkonstante fuer die Ermittlung der P2s waehrend dem Event [10ms] 0 = keine Filterung*)
+	FILTER_R_P2s_tn : FILTER_R;
+	rPr_P2s_tn : REAL;
+	iGrC_Phase_old : INT;
+	rPos_TV_t0 : REAL; (*TV Position vor GC-EVent (t0)*)
+	rLam_Leanox_Set_t0 : REAL; (*Lambda Wert vor GC-EVent (t0)*)
+	rLam_Leanox_Set_GrC : REAL;
+	rLamOfs_GrC : REAL;
+	bGrC_SimulateEvent : BOOL; (*DO NOT CHANGE!!!*)
+	b_RelLamAdapt : BOOL;
+	rK_Lam : REAL;
+	rmaxdLam : REAL;
+	tSimuVLow : TIME := T#250ms;
+	TP_SimulateVoltageLow : TP;
+	bGrC_SimulateVLow : BOOL;
+	b_SIMULATE : BOOL;
+	rObereGrenze_p2s : REAL;
+	rUntereGrenze_p2s : REAL; (*Untere p2s Grenze fuer An*)
+	iGrC_Phase : INT; (*Phase des LVRT Events*)
+	bFG_GC_III : BOOL; (*TRUE = GridCode Phase III Funktionen AKTIV*)
+	iIgnOffTestMode_t : ARRAY[0..3] OF INT; (*Zeit fuer IgnOffTestMode [10ms] Phase[i]*)
+	iIgnOffTestModeCount : INT;
+	rdPos_CBV_GrC : REAL; (*Offset fuer Rampe Anfang Phase 2*)
+	rRampe_CBV : REAL; (*Rampe fuer CBV in Phase 2[-/100ms]*)
+	rPos_CBV_max_GrC : REAL; (*Max. Absolutposition CBV*)
+	iUBV_fix : INT; (*Nummer vom zu fixierenden UBV*)
+	rPos_CBVfixed : REAL;
+	bVorStIgnOFF : BOOL; (*Vorsteuerung IgnOFF bei GC-Event*)
+	iVorstIgnOFF : INT; (*Dauer Vorsteuerung IgnOFF bei GC-Event [*10ms]*)
+	bVorStIgnON : BOOL; (*Vorsteuerung IgnON bei GC-Event*)
+	iVorstIgnON : INT; (*Dauer Vorsteuerung IgnON bei GC-Event [*10ms]*)
+	iCountVorstIgnON : INT;
+	iCountVorstIgnOFF : INT;
+	rcosphiLim_VorstIgn : REAL; (*Cos phi Limit fuer Freigebe der Vorsteuerung Zuendung AUS*)
+	rPLim_VorstIgn : REAL; (*Wirkleistungs Limit fuer Freigebe der Vorsteuerung Zuendung AUS bezogen auf die Nennleistung*)
+	bVorstIgnAct : BOOL; (*TRUE = Cos phi und Leistungs-Limits fuer Freigabe der Vorsteuerung Zuendung AUS erfuellt*)
+	TON_Vorst : TON;
+	iGrC_Phase_Old : INT;
+	rRampe_CBV_neg : REAL;
+	rDPos_Rampe : REAL;
+	rU_GrC_Min : REAL; (*min. Spannung Phase - Phase*)
+	bVorstIgnAct_U : BOOL;
+	rPos_WG_GrCfixed : REAL;
+	rPos_WG_t0 : REAL; (*WG Position vor GC-EVent (t0)*)
+	bGrC_WG_open_close : BOOL; (*WG bei Event oeffnen - anschliessend komplett schliessen (Prio. 2)*)
+	bGrC_WG_open_back : BOOL; (*WG bei Event oeffnen - anschliessend zurueck auf Ausgangswert (Prio. 3)*)
+	bGrC_WG_close : BOOL; (*WG bei Event schliessen (Prio. 1)*)
+	ucCylinderCount : USINT; (* loop counter number of cylinder *)
+	bSIM_HVRT : BOOL;
+	bGrC_SimulateVHigh : BOOL;
+	rU_GrC_Lim_HVRT : REAL;
+	rGrC_Voltage_Lim_HVRT : REAL;
+	rN_GrC_SpeedChange_Lim_HVRT : REAL;
+	rGrC_SpeedChange_Lim_HVRT : REAL;
+	rI_GrC_Lim_HVRT : REAL;
+	rGrC_CurChange_Lim_HVRT : REAL;
+	b_GrC_VoltageHigh : BOOL;
+	bGrC_NChangeHVRT : BOOL;
+	bGrC_CurChange_HVRT : BOOL;
+	rCnt_GrC_NChange_PULSE_HVRT : REAL;
+	rN_GrC_NChange_PULSE_Lim_HVRT : REAL;
+	bGrC_NChange_Mer_HVRT : BOOL;
+	rCnT_GrC_Cur_PULSE_HVRT : REAL;
+	rI_GrC_CurChange_PULSE_Lim_HVRT : REAL;
+	bGrC_CurChange_Mer_HVRT : BOOL;
+	bGrC_Event_HVRT : BOOL;
+	bVorStIgn_simu : BOOL := 0;
+	iVorstIgnOFF_simu : INT := 0;
+	bGrC_Freeze_HVRT : BOOL := 0;
+	bFreeze_at_HVRT : BOOL;
+	xTP_GCE_PowerFIX_HVRT : TP;
+	bManCBV_Vorgabe : BOOL := 0;
+	rDPos_Phase2man : REAL;
+	iVorstIgnLATE : INT; (*Dauer Vorsteuerung IgnLATE bei GC-Event [*10ms]*)
+	bIGTLatePhase2ON_simu : BOOL := 0;
+	bIGTLatePhase2_komplett : BOOL := 0;
+	bVorstIgnLATE : BOOL := 0;
+	bNO_LEANOX_MAN_GEN2 : BOOL := 0;
+	xFILTER_pel : FILTER_R := (0);
+	rP_IST_NOM : REAL;
+	PF_Act_lin : REAL;
+	PF_Act_lin_back : REAL;
+	uiFiltercosphi : UINT := 100;
+	MisfireCyl : ARRAY[0..24] OF UDINT;
+	bReleaseTest : BOOL := 0; (*Aktivierung der Zylinder.Zuendung-Abschaltfunktion*)
+	iCylNummer : INT; (*Zylindernummer des 1. Zylinders der abgeschalten werden soll*)
+	iCylNummer2 : INT; (*Zylindernummer des 2. Zylinders der abgeschalten werden soll*)
+	iZeitLimit : INT := 0; (*Zeit fuer das Abschalten der Zylinder [ms]*)
+	iZeitCount : INT;
+	iGrC_Phase_CBV : INT; (*Phase of LVRT event for CBV*)
+	ti_TON_GrCPhase4 : TIME := T#1s; (* Minimum time before release of CBV in phase 4 *)
+	xTON_GrC_Phase4 : TON; (*  TON Minimum time before release of CBV in phase 4 *)
+	rOffsetSollWert : REAL; (* PI-Duration setpoint of offset *)
+	xSigScalR_rGasFlowDec_GrC : xSigScal_R; (* Interpolation of gas flow factor depending on engine power *)
+	rGasFlowDec_GrC : REAL; (* Interpolated gas flow factor depending on engine power *)
+	xTOF_ITP_DynGrC : TOF; (* TOF ITP change for dynamic grid code *)
+	ti_TOF_ITP_DynGrC : TIME; (* Duration of ITP change for dynamic grid code *)
+	rCA_Ign_Act_old : ARRAY[0..24] OF REAL; (* Actual cylinder ignition point before grid event  *)
+	xLCRRamp_GrC_Offset : LCRRamp; (* Ramp for gas flow factor *)
+	xTOF_rGasflow_Factor_GrC : TOF; (* Holding time of gas flow factor *)
+	bTestBit_GasFlowRed_GrC : BOOL; (* Activate gas flow factor for testing *)
+	bTestBit_ITP_GrC : BOOL; (* Activate ITP change for testing *)
+	rFactor_Gearbox : REAL; (* Factor for gear transmission ratio *)
+	xTON_Insel : TON; (* TON for transition to island operation *)
+	rN_FRT_SpeedChange_Lim_EPS : REAL; (* Speed change limit for fault ride trough detection in island operation [1/min/s] *)
+	rI_FRT_Lim_EPS : REAL; (* Fault ride trough detection current limit in island operation [%Inenn/s] *)
+	rU_FRT_Lim_EPS : REAL; (* Fault ride trough detection voltage limit in island operation [%Unenn] *)
+	bFRT_VoltageLow_EPS : BOOL; (* TRUE if fault ride trough event low voltage in island operation is detected *)
+	rSpeedChange_EPS : REAL; (* Speed change since last task cycle in island operation [rpm] *)
+	rN_FRT_LastSpeed_EPS : REAL; (* Speed from last cycle in island operation [rpm] *)
+	bFRT_SpeedChange_EPS : BOOL; (* TRUE if fault ride trough speed change in island operation is detected *)
+	iCnt_FRT_SpeedChangePULSE_EPS : INT; (* Counter of speed change flag in island operation *)
+	iN_FRT_SpeedChangePULSELim_EPS : INT; (* Limit for counter of speed change flag in island operation *)
+	bFRT_SpeedChange_Mer_EPS : BOOL; (* Speed change flag in island operation *)
+	rIL1_Change_EPS : REAL; (* Change of generator current L1 since last task cycle in island operation [A] *)
+	rIL1_Last_EPS : REAL; (* Generator current phase 1 from last cycle in island operation [A] *)
+	rIL2_Change_EPS : REAL; (* Change of generator current L2 since last task cycle in island operation [A] *)
+	rIL2_Last_EPS : REAL; (* Generator current phase 2 from last cycle in island operation [A] *)
+	rIL3_Change_EPS : REAL; (* Change of generator current L3 since last task cycle in island operation [A] *)
+	rIL3_Last_EPS : REAL; (* Generator current phase 3 from last cycle in island operation [A] *)
+	bFRT_I_Change_EPS : BOOL; (* TRUE if generator current change in island operation is above limit *)
+	iCnT_FRT_I_ChangePULSE_EPS : INT; (* Counter of current change flag in island operation *)
+	iFRT_I_ChangePULSELim_EPS : INT; (* Limit for counter of current change flag in island operation *)
+	bFRT_I_Change_Mer_EPS : BOOL; (* Current change flag in island operation *)
+	xTP_FRT_Event_BM : TP; (* TP Fault ride trough in island operation *)
+	bPoleSlip_EPS_INT : BOOL; (*Pole slip detection in island operation*)
+	bPoleSlip_EPS : BOOL; (* TRUE if pole slip in island operation is detected *)
+	xTON_PoleSlip_EPS : TON; (* TON for pole slip detection in island operation *)
+	xTP_PoleSlip_EPS : TP; (* TP for pole slip detection in island operation *)
+	xTP_FRT_Event_BM_EPS : TP; (* TP for FRT event in island operation *)
+	bTestbutton_Deact : BOOL; (* Deactivate the gridcode test buttons for debug *)
+	TOF_GrC_Test_150 : TOF; (* TOF start 150ms gridcode test *)
+	TOF_GrC_Test_250 : TOF; (* TOF start 250ms gridcode test *)
+	TOF_GrC_Test_Var : TOF; (* TOF start variable gridcode test *)
+	R_TRIG_GrC_Test : R_TRIG; (* Trigger of dynamic grid code test buttons *)
+	iNrOfPoleSlipSinceStart : INT := 0; (* Number of pole slip events since last start *)
+	iEngineCycleTime : INT; (* Engine cylce time depending on nominal speed *)
+	xTP_DO_GRIDCODE_EPS_DCON_TC1 : TP; (* TP for opening GCB with pole slip detection in island operation *)
+	iMissfCyl_FRT_Set : UDINT; (* Set point of switched off cylinders during FRT event *)
+	xTOF_FRT_Offset_PI : TOF; (* Delay of PI valve offset after FRT event *)
+	bITP_Shift_FRT : BOOL; (* ITP shift during Ignition OFF at FRT event *)
+	xRAMPE_R_ITP_FRT : LCRRamp; (* Ramp of ITP set point after FRT event *)
+	xTOF_ITP_Ramp_FRT : TOF; (* TOF of active ITP set point ramp *)
+	ti_TOF_ITP_Ramp_FRT : TIME; (* Duration of active ITP set point ramp after FRT event *)
+	rCA_Ign_Act_Max : REAL; (* Maximum IPT set point of all cylinders when no FRT event is active *)
+END_VAR

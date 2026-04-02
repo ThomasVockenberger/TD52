@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.5.113 SP?>
+<Library Version="0.05.0" SubType="ANSIC" Description="ModBusTCP" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File Description="Exported functions and function blocks">MBTCP.fun</File>
+    <File Description="Exported data types">MBTCP.typ</File>
+    <File Description="Exported constants">MBTCP.var</File>
+    <File>fMBTSOpen.c</File>
+    <File>fMBTSlave.c</File>
+    <File>fMBTSClose.c</File>
+    <File>fMBTSRW.c</File>
+    <File>fMBTSFill.c</File>
+    <File>fMBTMOpen.c</File>
+    <File>fMBTMaster.c</File>
+    <File>fMBTMClose.c</File>
+    <File>fMBTMRW.c</File>
+    <File>MBTSlave.h</File>
+    <File>MBTSlave.c</File>
+    <File>MBTMaster.h</File>
+    <File>MBTMaster.c</File>
+    <File>Convert.c</File>
+    <File>Convert.h</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="Runtime" />
+    <Dependency ObjectName="standard" />
+    <Dependency ObjectName="AsTCP" />
+    <Dependency ObjectName="sys_lib" />
+    <Dependency ObjectName="brsystem" />
+    <Dependency ObjectName="asstring" />
+  </Dependencies>
+</Library>

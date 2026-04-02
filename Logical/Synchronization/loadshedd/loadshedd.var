@@ -1,0 +1,12 @@
+VAR
+	xGR_MAXR_P_LS_Hi : GR_MAXR;
+	xGR_MINR_P_LS_Lo : GR_MINR;
+	xGR_MINR_P_LS_LoLo : GR_MINR;
+	xGR_MINR_N_LS_Lo : GR_MINR;
+	xTON_P_LS_Hi : TON;
+	xTON_P_LS_Lo : TON;
+	xTON_P_LS_LoLo : TON;
+	xTON_N_LS_Lo : TON;
+	bLS4I_Dem : BOOL;
+	bLS4BL_Dem : BOOL;
+END_VAR

@@ -1,0 +1,17 @@
+VAR CONSTANT
+	iFreshOil_VolTable_NrOfPoints : USINT := 11; (*Number of value-pairs in volume table*)
+	iWasteOil_VolTable_NrOfPoints : USINT := 11; (*Number of value-pairs in volume table*)
+	iDayOil_VolTable_NrOfPoints : USINT := 11; (*Number of value-pairs in volume table*)
+	iVolTableArray_MAX : USINT := 100;
+	iFreshOil_VolTable_Array : USINT := iFreshOil_VolTable_NrOfPoints -1; (*maximum index of array*)
+	iWasteOil_VolTable_Array : USINT := iWasteOil_VolTable_NrOfPoints -1; (*maximum index of array*)
+	iDayOil_VolTable_Array : USINT := iDayOil_VolTable_NrOfPoints -1; (*maximum index of array*)
+END_VAR
+VAR
+	rFreshOil_VolTable_Height : ARRAY[0..iFreshOil_VolTable_Array] OF REAL; (*ARRAY - Level height Values*)
+	rFreshOil_VolTable_Volume : ARRAY[0..iFreshOil_VolTable_Array] OF REAL; (*ARRAY - Volume Values*)
+	rWasteOil_VolTable_Height : ARRAY[0..iWasteOil_VolTable_Array] OF REAL; (*ARRAY - Level height Values*)
+	rWasteOil_VolTable_Volume : ARRAY[0..iWasteOil_VolTable_Array] OF REAL; (*ARRAY - Volume Values*)
+	rDayOil_VolTable_Height : ARRAY[0..iDayOil_VolTable_Array] OF REAL; (*ARRAY - Level height Values*)
+	rDayOil_VolTable_Volume : ARRAY[0..iDayOil_VolTable_Array] OF REAL; (*ARRAY - Volume Values*)
+END_VAR

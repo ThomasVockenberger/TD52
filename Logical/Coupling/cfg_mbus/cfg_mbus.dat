@@ -1,0 +1,48 @@
+(*******************************************************************************
+Coupling:    Modbus RTU Master query configuration
+
+This code is confidential and proprietary to the INNIO Company.
+It may not be used in any form, or reproduced in any manner,
+without written permission of the INNIO Company.
+Copyright, INNIO Company, 2019
+
+Customized modifications: -
+------------------------
+ 
+History:
+-------
+V04.05.00	22.07.2017	Denk		new 
+	
+
+Instructions for use:
+--------------------
+Modbus RTU Master <--> SCR HUG Smart Dosing Box Slave
+Register query configuration
+Possible Slave#2 prepared
+
+Outstandings:
+------------
+
+
+*******************************************************************************)
+; Structure of entry
+; ------------------
+; "EventPV1 ", 01, $01, "LocalPV1 ", 0000, 0005
+;     |        |    |       |         |     |
+;     |        |    |       |         |     +--- data lenght
+;     |        |    |       |         +--------- data offsset
+;     |        |    |       +------------------- scr/dest PV
+;     |        |    +--------------------------- destination ID
+;     |        +-------------------------------- function code
+;     +----------------------------------------- event PV
+
+;--------------------
+; Modbus command file
+;--------------------
+
+"MBRMaster:EvReadMBR_SCR", 03, $01, "MBRMaster:MBM_SCR_Register[65]",  0064, 0020,
+"MBRMaster:EvWriteMBR_SCR",  16, $01, "MBRMaster:MBM_SCR_Register[1]", 0000, 0010,
+
+(*"MBRMaster:EvReadMBR_4_1_1", 03, $06, "MBRMaster:MBM_FieldDevice1_Register[0]",   0000, 0016,
+"MBRMaster:EvWriteMBR_4_1",  16, $06, "MBRMaster:MBM_FieldDevice1_Register[200]", 0016, 0016*)
+

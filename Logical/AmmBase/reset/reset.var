@@ -1,0 +1,36 @@
+VAR
+	bResetRemVis : BOOL;
+	bResetLocVis : BOOL;
+	bResetRemExt : BOOL;
+	iNumAlarmTestX : DINT; (*number alarm test*)
+	iNumAlarmTest : DINT; (*number alarm test*)
+	QUITT : BOOL;
+	VIS_FQUITT : BOOL;
+	r_trig_SetAmmTestStart : R_TRIG := (0);
+	f_trig_UW_EIN : F_TRIG := (0);
+	ton_FQ_timeout : TON := (0);
+	xR_TRIG_CD : R_TRIG := (0);
+	xR_TRIG_LD : R_TRIG := (0);
+	xCTD_RRC : CTD := (0);
+	ton_oper : TON := (0);
+	NumAmmTestValid : BOOL := FALSE;
+	tp_AmmTestReset : TP := (0);
+	E_FQUITT : BOOL;
+	QUITT2_RUHE : BOOL;
+	xR_TRIG_Run : R_TRIG := (0);
+	xTP_MonOn : TP := (0);
+	bRemResMem : BOOL;
+	E_QUITT : BOOL;
+	xTP_RemResCmd : TP;
+	xTP_ResetWarning : TP;
+	xTP_ResetTrip : TP;
+	xTP_Reset : TP;
+	xF_TRIG_ResetRemExt : F_TRIG;
+	xTON_ServiceTimeOut : TON;
+	tp_MMD_GenAmmTestReset : TP := (0);
+	r_trig_SetMMD_GenAmmTestStart : R_TRIG := (0);
+	tp_MMD_BB_AmmTestReset : TP := (0);
+	r_trig_SetMMD_BB_AmmTestStart : R_TRIG := (0);
+	bDryTB_AB : BOOL;
+	xTP_DryTB_AB : TP;
+END_VAR

@@ -1,0 +1,63 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: IN_EngCtr
+ * File: IN_EngCtr.var
+ * Author: 502293141
+ * Created: March 03, 2015
+ ********************************************************************
+ * Local variables of program IN_EngCtr
+ ********************************************************************)
+VAR
+	ti_Cycle_lim : TIME;
+	ti_Cycle : TIME;
+	xSS : SS;
+	xSS_WG : SS_Cust := (0);
+	xSS_PFPDR : SS_Cust := (0);
+	xSS_Opt : SS_Cust := (0);
+	xSS_LamLim : SS_Cust := (0);
+END_VAR
+VAR CONSTANT
+	_SS_P2s : USINT := 1;
+	_SS_T2s : USINT := 2;
+	_SS_T_EG : USINT := 4;
+	_SS_P_Norm : USINT := 8;
+	_SS_Pd_Norm : USINT := 64;
+END_VAR
+VAR
+	xTON_Amb : TON;
+	xFILTER_Pr_Amb : FILTER_R;
+	iMainMode_OP : INT := 0;
+	iMainMode_OP_Last : INT := 0; (* operation mode from the previous cycle *)
+	iMainMode_OP_Prev : INT := 0; (* operation mode from the previous operation *)
+	rN_limit_norm_Gen2Idle : REAL := 0.005; (*if GCB OFF and speed in tolerance band around Nnom switch to Idle controller*)
+	bDeactIdleAfterGCBoff : BOOL := FALSE; (* Only island controller active after GCB off *)
+	bSpeed_recovered_afterGCBoff : BOOL := FALSE; (* speed inside tolerance band after GCB off*)
+	bRelease_IdleCtr_afterGCBoff : BOOL := FALSE; (*Idle controller released after GCB off*)
+	bForce_Gen2island_afterGCBoff : BOOL := FALSE;
+	TP_force_Gen2island_afterGCBoff : TP;
+	rT_force_Gen2island_afterGCBoff : REAL := 1.0; (* [s] time to force Gen2 island after GCB off *)
+	TP_wait_SpeedRecovered : TP;
+	rTWait_Release : REAL := 5.0; (* [s] time to delay the release for idle control after speed recovered *)
+	bSpeed_recovered_delay : BOOL := FALSE; (* speed inside tolerance band after GCB off and waiting time TWait_Release over*)
+	rP_Act_Norm_GCBoff : REAL := 0.0; (* normalized power at time when GCBoff *)
+	rPmin_norm_Gen2idle : REAL := 0.2; (* normalized minimal power at time GCBoff to activate Gen2*)
+	LCRCurveByPoints_VE_Eng_P2s : LCRCurveByPoints; (* linear interpolation function for volumetric efficiency boost pressure dependency *)
+	LCRCurveByPoints_VE_Eng_T2s : LCRCurveByPoints; (* linear interpolation function for volumetric efficiency charge temperature dependency *)
+	LCRCurveByPoints_VE_Eng_N : LCRCurveByPoints; (* linear interpolation function for volumetric efficiency speed dependency *)
+	rVE_Eng_P2s : REAL; (* volumetric efficiency boost pressure dependency *)
+	rVE_Eng_T2s : REAL; (* volumetric efficiency charge temperature dependency *)
+	rVE_Eng_N : REAL; (* volumetric efficiency speed dependency *)
+	xTOF_SyDemand : TOF; (* Grid Status Detection: TOF block for function reset after SY *)
+	tiOf_afterIdle : TIME := T#5s; (* Grid Status Detection: TOF time for function reset after SY*)
+	bResetGridStat : BOOL; (* Grid Status Detection: manual reset of function *)
+	xTP_GCB_DCon : TP;
+	bTrig_GCB_DCon_EC : BOOL;
+	tiTrig_Duration : TIME := T#2s;
+	xTON_ParaOK_Lp_c_Ena : TON;
+	bGEN2island_T6premixed : BOOL := FALSE; (* Release GEN2 island for T6 premixed *)
+	LCRCByP_rEtaVolOffs : LCRCurveByPoints; (* T4 vol. efficiency offset depending on p2s*)
+	refPoint_rEtaVolOffs : ARRAY[0..5] OF lcrCurveByPoints_TabEntry_type;
+	rQ_offset : REAL; (* offset to shift reactive power range to posite range 0-Qnom [kVAr] *)
+	rQ_nom : REAL;  (* reactve power range [kVAr] *)
+END_VAR

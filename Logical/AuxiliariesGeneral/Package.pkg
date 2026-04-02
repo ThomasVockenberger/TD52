@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.25.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="DataObject" Language="Simple" Description="MODUL META data file">META_AG</Object>
+    <Object Type="File" Private="true">module_AG.typ</Object>
+    <Object Type="File" Private="true">module_AGPara.typ</Object>
+    <Object Type="File" Private="true">module_AGPerm.typ</Object>
+    <Object Type="File" Private="true">module_AG.var</Object>
+    <Object Type="Program" Language="IEC" Description="default">default_AG</Object>
+    <Object Type="Program" Language="IEC" Description="default_TC2">default_AG_TC2</Object>
+    <Object Type="Program" Language="IEC" Description="auxiliaries general">AuxGnl</Object>
+    <Object Type="Program" Language="IEC" Description="general">general_AG</Object>
+    <Object Type="Program" Language="IEC" Description="hupe">Horn</Object>
+    <Object Type="Program" Language="IEC" Description="ex pb4_3">Aux_3</Object>
+    <Object Type="Program" Language="IEC" Description="ex pb4_4">Aux_4</Object>
+    <Object Type="Program" Language="IEC" Description="ex pb4_6">Aux_6</Object>
+    <Object Type="Program" Language="IEC" Description="ex pb4_9">Aux_9</Object>
+    <Object Type="Program" Language="IEC" Description="release engine release">AuxRelEngOp</Object>
+    <Object Type="Program" Language="IEC" Description="electric start">EleStart</Object>
+    <Object Type="Program" Language="IEC" Description="air start">AirStart</Object>
+    <Object Type="Program" Language="IEC" Description="blow by blower and Crank case">blowby</Object>
+    <Object Type="Program" Language="IEC" Description="controller crank case pressure">Ctr_CC</Object>
+    <Object Type="Program" Language="IEC" Description="controller engine cooling water">Ctr_ECW</Object>
+    <Object Type="Program" Language="IEC" Description="controller engine oil temperature">Ctr_EOVal</Object>
+    <Object Type="Program" Language="IEC" Description="controller engine oil temperature LT circuit">Ctr_EOVal_LT</Object>
+    <Object Type="Program" Language="IEC" Description="messages">MsgAG</Object>
+    <Object Type="Program" Language="IEC" Description="visualization">Vis_AG</Object>
+    <Object Type="Program" Language="IEC" Description="+ parameter handling">ParAG</Object>
+    <Object Type="Program" Language="IEC" Description="pressure engine oil">Pr_EO</Object>
+    <Object Type="Program" Language="IEC" Description="temperature engine oil">T_EO_AG</Object>
+    <Object Type="Program" Language="IEC" Description="transformer power reduction">TrP_red</Object>
+    <Object Type="Program" Language="IEC" Description="engine oil counter">Cnt_EO</Object>
+    <Object Type="Program" Language="IEC" Description="Oil condition monitoring">OilQsens</Object>
+    <Object Type="Program" Language="IEC" Description="Oil filter unit">FiltUnit</Object>
+    <Object Type="Program" Language="IEC" Description="+ PermanentMemory">PermAG</Object>
+    <Object Type="Program" Language="IEC" Description="Oiltank volume for fresh- &amp; waste- oil tank &amp; day tank">OilTank</Object>
+    <Object Type="Program" Language="IEC" Description="Engine Oil and Tank filling ">OilFill</Object>
+  </Objects>
+</Package>

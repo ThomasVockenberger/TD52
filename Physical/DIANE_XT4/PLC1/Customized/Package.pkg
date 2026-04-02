@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="ApplicationModule" PackageType="ApplicationModule" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="Software configuration">CU.sw</Object>
+    <Object Type="File" Description="Variable mapping">PCU.vvm</Object>
+    <Object Type="File" Description="Variable mapping">PCU_ORDER.vvm</Object>
+    <Object Type="File" Description="Variable mapping for HAL Datapoints">PCU_HAL.vvm</Object>
+    <Object Type="Package">Connectivity</Object>
+  </Objects>
+</Package>

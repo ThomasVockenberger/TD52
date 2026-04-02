@@ -1,0 +1,77 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company Company, 2007
+ ********************************************************************
+ * Program: Peak_var
+ * File: Peak_var.var
+ * Author: TinelloM
+ * Created: December 14, 2006
+ ********************************************************************
+ * Local variables of program Peak_var
+ ********************************************************************)
+VAR
+	bWriteSyncPara : BOOL; (*Send all Parameters to MMD-Sync*)
+	ssFreqDiffMin_old : INT; (* Save Parameter for comparison	*)
+	ssReactMin_old : INT; (* Save Parameter for comparison	*)
+	TON_IOAccRead : TON := (0); (*FuB*)
+	ucReadCount : USINT;
+	ucResetCount : USINT;
+	ucWriteCount : USINT;
+	usCAsymDel_old : UINT; (* Save Parameter for comparison	*)
+	usCNMax_old : UINT; (* Save Parameter for comparison	*)
+	usCNMaxDel_old : UINT; (* Save Parameter for comparison	*)
+	usCTherm_old : UINT; (* Save Parameter for comparison	*)
+	usDO1Cfg_old : UINT; (* Save Parameter for comparison	*)
+	usFreqDiffMax_old : UINT; (* Save Parameter for comparison	*)
+	usFreqNenn_old : UINT; (* Save Parameter for comparison	*)
+	usImpDO4Min_old : UINT; (* Save Parameter for comparison	*)
+	usImpVal_old : UINT; (* Save Parameter for comparison	*)
+	usINennGen_old : UINT; (* Save Parameter for comparison	*)
+	usIntValue_old : UINT; (* Save Parameter for comparison	*)
+	usMulIL1L3_old : UINT; (* Save Parameter for comparison	*)
+	usMulUBus_old : UINT; (* Save Parameter for comparison	*)
+	usMulUL1L3_old : UINT; (* Save Parameter for comparison	*)
+	usMulUSync1_old : UINT; (* Save Parameter for comparison	*)
+	usMulUSync2_old : UINT; (* Save Parameter for comparison	*)
+	usOFreq_old : UINT; (* Save Parameter for comparison	*)
+	usOFreqDel_old : UINT; (* Save Parameter for comparison	*)
+	usOutput20Cfg : ARRAY[0..2] OF UINT; (*configuration Output 20*)
+	usOutput20Cfg_old : UINT; (* Save Parameter for comparison	*)
+	usOutput68Cfg : ARRAY[0..2] OF UINT; (*configuration Output 68*)
+	usOutput68Cfg_old : UINT; (* Save Parameter for comparison	*)
+	usOVolt_old : UINT; (* Save Parameter for comparison	*)
+	usOVoltDel_old : UINT; (* Save Parameter for comparison	*)
+	usPhiDiffMax_old : UINT; (* Save Parameter for comparison	*)
+	usPhiSync1_old : UINT; (* Save Parameter for comparison	*)
+	usPsumFiltDel_old : UINT; (* Save Parameter for comparison	*)
+	usReactDel_old : UINT; (* Save Parameter for comparison	*)
+	usShort_old : UINT; (* Save Parameter for comparison	*)
+	usShortDel_old : UINT; (* Save Parameter for comparison	*)
+	usSwitchDelDO4_old : UINT; (* Save Parameter for comparison	*)
+	usSyncCfg_old : UINT; (* Save Parameter for comparison	*)
+	usUdeadBus_old : UINT; (* Save Parameter for comparison	*)
+	usUdeadSync_old : UINT; (* Save Parameter for comparison	*)
+	usUDiffMax_old : UINT; (* Save Parameter for comparison	*)
+	usUFreq_old : UINT; (* Save Parameter for comparison	*)
+	usUFreqDel_old : UINT; (* Save Parameter for comparison	*)
+	usUNennBus_old : UINT; (* Save Parameter for comparison	*)
+	usUNennGen_old : UINT; (* Save Parameter for comparison	*)
+	usUNennSync_old : UINT; (* Save Parameter for comparison	*)
+	usUVolt_old : UINT; (* Save Parameter for comparison	*)
+	usUVolt2_old : UINT; (* Save Parameter for comparison	*)
+	usUVolt2Del_old : UINT; (* Save Parameter for comparison	*)
+	usUVoltDel_old : UINT; (* Save Parameter for comparison	*)
+	usVAsym_old : UINT; (* Save Parameter for comparison	*)
+	usVAsymDel_old : UINT; (* Save Parameter for comparison	*)
+	usP_ThermOverChar_old : UINT; (* Save Parameter for comparison *)
+	usOutput21Cfg_old : UINT; (* Save Parameter for comparison *)
+	xAsIOAccReadSync : AsIOAccRead; (*FuB*)
+	xAsIOAccWriteSync : AsIOAccWrite; (*FuB*)
+	xAsIOAccWriteSyncReset : AsIOAccWrite; (*FuB*)
+	xAsIOAccWriteSyncWork : AsIOAccWrite; (*FuB*)
+	rP_WorkA : ARRAY[0..2] OF REAL; (*counter for produced engine work*)
+	rQ_WorkR : ARRAY[0..2] OF REAL; (*counter reactive engine work *)
+	rP_WorkA_Ret : ARRAY[0..2] OF REAL; (*counter for received engine work*)
+	rQ_WorkR_Ret : ARRAY[0..2] OF REAL; (*counter received reactive engine work*)
+	usDO1Cfg : ARRAY[0..2] OF UINT;
+	bStopReading : BOOL := 0;
+END_VAR

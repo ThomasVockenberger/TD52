@@ -1,0 +1,65 @@
+VAR
+	AF_BYPASS : BOOL;
+	AF_CO2 : BOOL := FALSE;
+	AF_KAUF : BOOL := 0; (*Demand CO2 Exhaust Valve*)
+	AF_KESSEL : BOOL := 0; (*Demand Boiler*)
+	AF_KKAUF : BOOL := 0; (*Demand Exhaust bypass*)
+	AN_VSD1 : BOOL := 0; (*Prelubrication pressure 1 Pump*)
+	AUTO : BOOL := 0; (*Operation mode AUTO*)
+	AWS_F : BOOL := 0; (*Demand selection switch remote*)
+	bGnlTrip : BOOL; (*general trip *)
+	bGnlTrip1 : BOOL; (*general trip *)
+	bGnlTrip2 : BOOL; (*general trip *)
+	bGnlTrip3 : BOOL; (*general trip *)
+	bGnlWarning : BOOL; (*general warning*)
+	bNoInitDetected : BOOL := FALSE; (*allways true, except 1cycle on init up*)
+	bOMSS_Aut : BOOL; (*engine operation mode*)
+	bOMSS_Man : BOOL; (*engine operation mode*)
+	bOMSS_MAT : BOOL; (*engine operation mode*)
+	bOMSS_Scav : BOOL; (*engine operation mode*)
+	bOMSS_Test : BOOL; (*engine operation mode*)
+	bT_bScavValve_PcheckFail : BOOL; (* plausibility check measuring signal T_bScavValve *)
+	BYPASS : BOOL := 0; (* position bypass *)
+	B_BKAUF : BOOL := 0; (*Command Bypass valve OPEN*)
+	B_BKZU : BOOL := 0; (*Command Bypass valve CLOSE*)
+	B_KAUF : BOOL := 0; (*Command CO2_Exh valve OPEN*)
+	B_KKAUF : BOOL := 0; (*Command Boiler valve OPEN*)
+	B_KKZU : BOOL := 0; (*Command boiler valve CLOSE*)
+	B_KZU : BOOL := 0; (*Command CO2_Exh Valve CLOSE*)
+	CO2KLST_A : BOOL := 0; (* CO2 valve failure *)
+	CO2KLST_W : BOOL := 0; (* CO2 valve failure *)
+	CODINOX : BOOL := 0; (* CODINOX active *)
+	DREH_MOM : BOOL := FALSE; (*torch controlled exhaust gas valves*)
+	FG_CO2 : BOOL := 0; (*Release for CO2 Exhaust*)
+	FG_REG : BOOL := 0; (*Release controller*)
+	IN_EX : IN_Exhaust_Struct := (0);
+	KESSEL : BOOL := 0; (*Position boiler*)
+	KL_MINUS : BOOL := 0; (*Heater power decrement DEC*)
+	KL_PLUS : BOOL := 0; (*Heater power increment INC*)
+	MAN_SPUEL : BOOL := FALSE;
+	MM2VIS : MM2VIS_Struct := (0);
+	M_D1400 : BOOL := 0; (*Spped > Nominal speed minus 100*)
+	M_DREHZ : BOOL := FALSE; (*Engine starter speed exceeded*)
+	M_KAUF : BOOL := 0; (*CO2 Exhaust valve OPEN *)
+	M_KLST_Exh : BOOL := FALSE;
+	M_KZU : BOOL := 0; (*CO2 Exhaust valve CLOSED*)
+	M_SPUELV : BOOL := 0; (*Demand scavening*)
+	OUT_EX : OUT_Exhaust_Struct := (0);
+	Para : Para_Exhaust_Struct;
+	ParaFactoryDefault : Para_Exhaust_Struct := (0);
+	pm : Para_Exhaust_Struct;
+	StopM : BOOL; (*TRUE=engine is stopped *)
+	T1_SCAV_RUN : BOOL := 0; (*monitoring N2 gas valves position *)
+	T1_STN2V : BOOL := 0; (*N2 gas valves position failure *)
+	T1_STSPKL : BOOL := FALSE;
+	T2_SCAV_RUN : BOOL := 0; (*monitoring scavenging time limit *)
+	T2_STSPKL : BOOL := FALSE;
+	T91 : BOOL := 0; (*Open Exhaust valves after 24H *)
+	VIS2MM : VIS2MM_Struct := (0);
+	xEngType : EngType := (0);
+	bPr_EG_Deflag_Fast : BOOL; (* Trigger for exhaust gas pressure fast maximum *) (*OldName:bPr_OXIcat_In_Fast; Cycle:1*)
+	xTOF_Pr_EG_Deflag_Fast : TOF; (* TOF exhaust gas pressure fast peak detection *) (*OldName:xTOF_Pr_OXIcat_In_Fast; Cycle:1*)
+	bResetWarning : BOOL; (* Reset Warning *)
+	NoScavFan : BOOL := FALSE; (*no scavenging fan*)
+	NoScavFlap : BOOL := FALSE; (*no scavenging flap*)
+END_VAR

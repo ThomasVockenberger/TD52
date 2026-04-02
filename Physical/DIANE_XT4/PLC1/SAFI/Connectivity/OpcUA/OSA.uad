@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="7" ArVersion="H4.90">
+  <Aliases>
+    <ACLAliases>
+      <ACL Id="1">
+        <ACE RoleName="Administrators" Access="0x017F" />
+      </ACL>
+    </ACLAliases>
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView AclId="1">
+    <Module Name="SAFI">
+      <GlobalVariables>
+        <Variable Name="MM2VIS" AutomaticEnable="True">
+          <Variable Name="iCnt_SA_ComErr" EnableArrayElements="True" />
+          <Variable Name="tSA_HW_Vers" EnableArrayElements="True" />
+          <Variable Name="rSA_SW_Vers" EnableArrayElements="True" />
+          <Variable Name="rTi_SA_OpHours" EnableArrayElements="True" />
+          <Variable Name="iSA_SerialNr" EnableArrayElements="True" />
+          <Variable Name="tSA_ProdDate" EnableArrayElements="True" />
+          <Variable Name="rT_SA_ElecTemp" EnableArrayElements="True" />
+          <Variable Name="iSA_ErrToothNr" EnableArrayElements="True" />
+          <Variable Name="rSA_FiltVers" EnableArrayElements="True" />
+          <Variable Name="iSA_ERZuV" EnableArrayElements="True" />
+          <Variable Name="iSA_ERDurTol" EnableArrayElements="True" />
+          <Variable Name="rCanUpFwVers" EnableArrayElements="True" />
+          <Variable Name="iSA_PICurGrad" EnableArrayElements="True" />
+          <Variable Name="iU_SAFI_Win3" EnableArrayElements="True" />
+          <Variable Name="iU_SAFI_Win4" EnableArrayElements="True" />
+          <Variable Name="iCA_SAFI_Win3" EnableArrayElements="True" />
+          <Variable Name="iCA_SAFI_Win4" EnableArrayElements="True" />
+          <Variable Name="iNum_SafiType" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="Para" AutomaticEnable="True">
+          <Variable Name="tIgn_LimitMonitor" EnableArrayElements="True" />
+          <Variable Name="bIgn_LimitMonitorActive" EnableArrayElements="True" />
+          <Variable Name="rHCR" EnableArrayElements="True" />
+          <Variable Name="rSA_PI_clodet_st_time" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="VIS2MM" AutomaticEnable="True">
+          <Variable Name="bCanUpDevSel" EnableArrayElements="True" />
+          <Variable Name="bSAFI_ValveLashSet" EnableArrayElements="True" />
+        </Variable>
+      </GlobalVariables>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

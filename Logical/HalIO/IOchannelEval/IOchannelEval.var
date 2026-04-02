@@ -1,0 +1,18 @@
+(********************************************************************
+ * COPYRIGHT -- Bernecker + Rainer
+ ********************************************************************
+ * Program: IOcannelEval
+ * File: TestHALio.var
+ * Author: Perktold
+ * Created: January 25, 2023
+ ********************************************************************
+ * Local variables of program IOcannelEval
+ ********************************************************************)
+VAR
+	rtInfo : RTInfo := (0);
+	CycleTimeMs : REAL := 0.0;
+	TaskClass : UINT := 0;
+	SignalError : UINT;
+	SignalErrorIdx : UINT;
+	pHALioSignal : REFERENCE TO ARRAY[0..1299] OF HALioSignal;
+END_VAR

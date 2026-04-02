@@ -1,0 +1,7 @@
+VAR
+	xGR_MAXR_StartSpd : GR_MAXR := (0); (*Engine start speed passed*)
+	xTOF_OMSS_MAT : TOF := (0); (*FuB*)
+	xTOF_StartSpd : TOF := (0); (*FuB*)
+	xTON_ParaSetupOk : TON := (0); (*FuB*)
+	xTON_StartSpd_5m : TON := (0); (*FuB*)
+END_VAR

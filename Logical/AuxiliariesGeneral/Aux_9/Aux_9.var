@@ -1,0 +1,67 @@
+VAR
+	OMIN_NK : BOOL := FALSE; (*engine oil level low for cool down*)
+	VSP_24 : BOOL := 0; (* Vorschmierpumpe 24V *)
+	VSP_400 : BOOL := 0; (* Vorschmierpumpe 400V *)
+	A_MKWP_TEMP1 : BOOL;
+	A_MKWP_TEMP2 : BOOL;
+	A_MKWP_TEMP3 : BOOL;
+	A_VORW_TEMP1 : BOOL;
+	xTON_SPG_N : TON;
+	xTON_SPG_W : TON;
+	xTON_BTRB : TON;
+	xTON_OMIN : TON;
+	xTON_MaxPreLubeTime : TON;
+	xTON_EOP1DC : TON;
+	xTON_EOP1AC : TON;
+	xGR_MAXR_VSD1 : GR_MAXR;
+	xTON_VSD1 : TON;
+	xGR_MAXR_VSD2 : GR_MAXR;
+	xTON_VSD2 : TON;
+	xGR_MINR_Pr_OTC : GR_MINR;
+	xTON_Pr_OTC : TON;
+	xTON_MinPreLubeTime : TON;
+	xTOF_CoDoAfMnsFail : TOF;
+	bCoDoAfMnsFail : BOOL;
+	xTOF_EmLubDem : TOF;
+	xGR_MAX_OMAX : GR_MAXR;
+	xGR_MAXR_OMAX_W : GR_MAXR;
+	xGR_MAX_OELVZ : GR_MAXR;
+	xGR_MIN_OIL_VORW : GR_MINR;
+	GR_MIN_AtlOilPress : GR_MINR;
+	xGR_MIN_OMIN : GR_MINR;
+	xGR_MIN_Pr_TCOaF_Prelub_Lo : GR_MINR;
+	xGR_MIN_OELVA : GR_MINR;
+	xTON_Heizfreigabe : TON;
+	xTON_Pr_TCOaF_Prelub_Lo : TON;
+	xTON_N_TCO_PrMon : TON;
+	xSigScal_TC_Oilpress : xSigScal_R;
+	xTON_ANF_VWKL : TON;
+	xTON_ECW_PreHV_CoClose : TON;
+	xTON_ECW_PreHV_CoOpen : TON;
+	xTOF_OIL_VORW : TOF; (* lag run preheating oil pump *)
+	xTON_OilMin : TON;
+	xTOF_Eng_MonOff : TOF; (*monitoring off*)
+	xTON_TCOP : TON;
+	xTOF_EO_PrelubeDemIgn : TOF;
+	xTOF_N2_ScavCoPrelubeOn : TOF;
+	bEOP_PreH : BOOL;
+	bEO_PreH_MonRel : BOOL;
+	bFS_Req : BOOL;
+	xTON_Pr_EO_FSPreL : TON;
+	xTON_W_OMIN : TON := (0);
+	xGR_MAXR_VSD1_2 : GR_MAXR := (0);
+	xGR_MAXR_VSD2_2 : GR_MAXR := (0);
+	xGR_MINR_OMIN_W : GR_MINR;
+	xTON_OilMin_W : TON;
+	xTON_ShortPreLubeTime : TON; (* engine short prelubrication *)
+	xR_TRIG_ShortPreLubeTime : R_TRIG; (* engine short prelubrication ON *)
+	bShortPreLubeTime : BOOL; (* engine short prelubrication time *)
+	xTON_PreLubeTime_Interval : TON; (* interval prelubrication timer *)
+	bPreLubeDem_Interval : BOOL; (* interval prelubrication demand *)
+	bPreLube_Interval_On : BOOL;
+	rPr_Oil_LPTC_In_Min : REAL; (*Lower value of LP turbocharger A and B inlet oil pressure M.03-PI-101/201*)
+	rPr_Oil_LPTC_In_Max : REAL; (*Higher value of LP turbocharger A and B inlet oil pressure M.03-PI-101/201*)
+	xTON_Pr_Oil_LPTC_In_A_RelMon : TON;
+	xTON_Pr_Oil_LPTC_In_B_RelMon : TON;
+	xTOF_EOVal_DemOpen : TOF; (*TOF for engine oil refill valve  V4.14*)
+END_VAR

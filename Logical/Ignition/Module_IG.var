@@ -1,0 +1,32 @@
+VAR
+	M_DREHZ : BOOL; (* Startdrehzahl *)
+	AN_STRDRE : BOOL; (* Startdrehzahl *)
+	bGnlTrip1_IG : BOOL;
+	bGnlTrip2_IG : BOOL;
+	bGnlTrip3_IG : BOOL;
+	bGnlTrip_IG : BOOL;
+	bGnlWarning_IG : BOOL;
+	bMsg1061_Set : BOOL; (*Module global variable to set message 1061*)
+	iIdx_IgnSelfTest : INT; (*Number of shown picture regarding step of execution. 0 - 50 in steps of 10. Detailded description in every step where used.*)
+	IN_IG : IN_IG_Struct;
+	MM2VIS : MM2VIS_Struct;
+	M_STRDRE : BOOL; (*Engine speed fallen below starter speed *)
+	OUT_IG : OUT_IG_Struct;
+	Para : Para_IG_Struct;
+	ParaFactoryDefault : Para_IG_Struct := (0);
+	pm : Para_IG_Struct;
+	rU_Ign_Avg : REAL; (*Average ignition voltage*)
+	rU_Ign_Max : REAL; (*Maximum ignition voltage*)
+	rU_Ign_Min : REAL; (*Minimum ignition voltage*)
+	usP5xSelftestStep : UINT;
+	VIS2MM : VIS2MM_Struct;
+	xEngtype : EngType; (*FB for Engine type specific values*)
+	ZEST_1 : BOOL := 0; (*Ignition 1 failure*)
+	ZEST_2 : BOOL := 0; (*Ignition 2 failure*)
+	ZM1_ZEST : BOOL; (*Ignition failure*)
+	ZM2_ZEST : BOOL; (*Ignition failure*)
+	ZZPAvg : REAL; (* actual ignition point average *)
+	ZZPMax : REAL; (* actual max.cylinder ignition point *)
+	ZZPMin : REAL; (* actual min.cylinder ignition point *)
+	bNoInitDetected : BOOL := FALSE; (*allways true, except 1cycle on init up*)
+END_VAR

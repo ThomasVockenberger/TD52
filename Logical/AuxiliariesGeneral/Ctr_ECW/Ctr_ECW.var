@@ -1,0 +1,4 @@
+VAR
+	bCtr_ECW_Activation : BOOL; (*activation of CW controller if X is above W_min *)
+	bBlockRetrigger : BOOL; (*block retrigger events*)
+END_VAR

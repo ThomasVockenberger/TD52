@@ -1,0 +1,70 @@
+VAR
+	bAuxRel_Louvers_OutlAir : BOOL; (*Release auxiliaries from outlet air louvers*)
+	bAuxRel_FireProtFlaps_OutlAir : BOOL; (*Release auxiliaires from outlet air fire protection flaps*)
+	bAuxRel_Louvers_InlAir : BOOL; (*Release auxiliaries from inlet air louvers*)
+	bAuxRel_FireProtFlaps_InlAir : BOOL; (*Release auxiliaires from inlet air fire protection flaps*)
+	bLouvers : BOOL; (*Louver status*)
+	bAuxRel_FireProtFlaps : BOOL; (*Release auxiliaires from  protection flaps*)
+	xGR_MINR_PrDiff : GR_MINR := (0); (*Limit low for engine room difference pressure *)
+	xGR_MAXR_PrDiff : GR_MAXR := (0); (*Limit high for engine room difference pressure*)
+	bPrDiff_Hi : BOOL; (*Limit high reached*)
+	bPrDiff_Lo : BOOL; (*Limit low reached*)
+	xTON_ERV_On : TON;
+	xTON_ERV_Of : TON;
+	xTON_ERV_Inl_On : TON;
+	xTON_ERV_Inl_Of : TON;
+	xTON_ERV_Outl_On : TON;
+	xTON_ERV_Outl_Of : TON;
+	xTON_MonAuxV : TON;
+	xTON_RoomTemp : TON;
+	T_RTM : BOOL;
+	RTM_VISA : BOOL;
+	xTON_purge : TON;
+	xTON_PurgeNoRel : TON;
+	iAdrAmmBase2MM : UDINT;
+	iAdrMM2AmmBase : UDINT;
+	xTON_StartERV : TON;
+	bERV_AirFlowMon_Off : BOOL; (*ERV air flow monitoring off*)
+	bERV_InlAirFlowMon_Off : BOOL; (*ERV inlet air flow monitoring off*)
+	bERV_OutlAirFlowMon_Off : BOOL; (*ERV outlet air flow monitoring off*)
+	bNoMon4BlackStart : BOOL;
+	xTOF_EngDemEPS : TOF;
+	bAuxRel_Louvers : BOOL;
+	xMsg1135 : Msg;
+	xMsg1138 : Msg;
+	xMsg2120 : Msg;
+	xMsg2295 : Msg;
+	xMsg2296 : Msg;
+	xMsg2630 : Msg;
+	xMsg2701 : Msg;
+	xMsg2702 : Msg;
+	xMsg2703 : Msg;
+	xMsg2704 : Msg;
+	xMsg2705 : Msg;
+	xMsg2706 : Msg;
+	xMsg2707 : Msg;
+	xMsg2708 : Msg;
+	xMsg2709 : Msg;
+	xMsg2795 : Msg;
+	xMsg2796 : Msg;
+	xMsg2797 : Msg;
+	xMsg2798 : Msg;
+	xMsg3152 : Msg;
+	xMsg3223 : Msg;
+	xMsg3224 : Msg;
+	xMsg3302 : Msg;
+	xMsg3367 : Msg;
+	xMsg3571 : Msg;
+	TON_InlLou_ssf : TON;
+	TON_OutLou_ssf : TON;
+	xTON_ERV : TON;
+	xTON_ERV_In : TON;
+	xTON_ERV_Out : TON;
+	xMsg2968 : Msg; (* B2968 Air inlet louver position feedback not plausible *)
+	xMsg2969 : Msg; (* B2969 Air outlet louver position feedback not plausible *)
+	xMsg2472 : Msg; (* B2472 Engine room temperature high warning*)
+	xMsg9401 : Msg; (* A9401 Louvers failure*)
+	xTON_InAirER_LouFail : TON; (* Inlet louver required and not opened*)
+	xTON_MonFS : TON;
+	xTON_Wait_louver : TON;  (*Wait for louver*)
+END_VAR

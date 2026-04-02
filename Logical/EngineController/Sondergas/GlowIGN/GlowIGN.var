@@ -1,0 +1,67 @@
+VAR
+	bFPR_Timer : BOOL; (* fix valves delay time is running *)
+	bSCO_Timer : BOOL; (* fix valves delay time is running *)
+	bSCO_PBC_Req : BOOL; (*Sicherheitsschliessen angefordert, DMR*)
+	xTP_SCO_1 : TP;
+	xTON_SCO_2 : TON;
+	xTP_SCO_2 : TP;
+	xTOF_SCO : TOF;
+	FA_TS_UW : GR_MINR;
+	i : USINT; (* Counter variable *)
+	bSCO_Rel_1 : BOOL := 0; (* Sicherheitsschliessen Gasventil 1 *)
+	bSCO_Rel_2 : BOOL := 0; (* Sicherheitsschliessen Gasventil 2 *)
+	xTON_FPR : TON; (* delay time for fix valves PRED *)
+	xTON_SCO : TON; (* delay time for fix valves VALVE *)
+	xTP_FPR_block : TP;
+	xTP_SCO_block : TP;
+	bSCO_EGT_DevLim : BOOL;
+	bSCO_PBC_Rel : BOOL; (*Auslösen Sicherheitsschließen DMR*)
+	bSCO_Ena : BOOL; (*Sicherheitsschließen freigegeben*)
+	rLam_old : REAL;
+	bFPR_LimMax : BOOL; (* Leistungsreduktion wegen maximaler anzahl an FPR*) (* Oldname: bmaxPRed; *)
+	rPr_Error : REAL;
+	bLeanox_Man_old : BOOL;
+	xLCRPT1_FA_GMISCH : LCRPT1;
+	bSCO_Rel : BOOL; (*safety cut out release*)
+	xTON_30min : TON;
+	bEngBlock : BOOL;
+	xTP_BLOCK : TP;
+	bSCO_Ena_2 : BOOL; (*Freigabe Schliessen Gasventil 2*)
+	xCnt_FPR_Max : COUNTER50;
+	xTP_2 : TP;
+	xCnt_Block1 : COUNTER100;
+	xCnt_Block2 : COUNTER100;
+	iCnt_100ms : INT;
+	rPLevel1 : REAL;
+	rPLevel2 : REAL;
+	rP_Act_Norm_Filt_OLD3 : REAL;
+	rP_Act_Norm_OLD1 : REAL;
+	rP_Act_Norm_OLD2 : REAL;
+	rP_Act_Norm_Filt_OLD2 : REAL;
+	rP_Act_Norm_Filt_OLD1 : REAL;
+	bBackFireNetP : BOOL;
+	Ring_P2sMon : RING500_R;
+	Ring_PowMon : RING1000_R;
+	bSG_P2s_GlowRed : BOOL;
+	bSG_Pow_GlowRed : BOOL;
+	bSG_GlowRed : BOOL;
+	xTOF_Block2 : TOF;
+	rPr_IMEP_sum : REAL;
+	rIMEPLevel1 : REAL;
+	rIMEPLevel2 : REAL;
+	rPr_IMEP_sum_OLD1 : REAL;
+	rPr_IMEP_sum_OLD2 : REAL;
+	bBackFirePBC : BOOL;
+	rPos_Gm_old : REAL;
+	bGlowIGN_Off : BOOL; (* Deactivate Glow ignition detection *) 	
+	bLeanox_Man_old_FGQC : BOOL; (* LEANOX status before FGQC *)
+	rLam_old_FGQC : REAL; (* Lambda setpoint before FGQC *)
+	rPos_Gm_old_FGQC : REAL; (* Gas mixer setpoint before FGQC *)
+	xTP_T1_FGQC : TP; (* Delay time after customer signal *) 
+	xTP_T2_FGQC : TP; (* Deactivated glow ignition detection *) 
+	xTP_T3_FGQC : TP; (* Freeze of Controller *)
+	xTP_T4_FGQC : TP; (* Delay until function can be activated again *)
+	rPos_FGQC_TV : REAL; (* Actual position of TV *)
+	rPos_FGQC_CBV : REAL; (* Actual position of CBV *)
+	tiGasQualChange_Release : TIME; (* Delay time until function can be activated again *)
+END_VAR

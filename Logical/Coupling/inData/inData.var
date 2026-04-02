@@ -1,0 +1,20 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Programm: empfang
+ * Datei: empfang.var
+ * Autor: 105046866
+ * Erstellt: 4. Juni 2013
+ ********************************************************************
+ * Lokale Variablen des Programms empfang
+ ********************************************************************)
+VAR
+	bBus_Dem : BOOL; (*Demand module from bus system*)
+	xTONBusFail_1 : TON; (*Bus failure*)
+	xTONBusFail_0 : TON; (*Bus failure*)
+	bBusPulse : BOOL; (*Bus pulse signal from customer*)
+	xWDtoBIT_InData1 : WDtoBIT;
+	xWDtoBIT_InData2 : WDtoBIT;
+	bFastStartReq_Bus : BOOL; (*Demand preparation for fast start*)
+	bVeryFastStartReq_Bus : BOOL; (*Demand preparation for very fast start*)
+END_VAR

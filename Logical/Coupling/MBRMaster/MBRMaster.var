@@ -1,0 +1,19 @@
+VAR
+	device : STRING[40];
+	mode : STRING[40];
+	config : STRING[40];
+	timeout : UINT;
+	stepMbMaster : stepMbMasterEnum;
+	cmdMbMOpen : BOOL;
+	cmdMbMClose : BOOL;
+	cmdMbMQuitError : BOOL;
+	MBMOpen_0 : MBMOpen;
+	MBMaster_0 : MBMaster;
+	MBMClose_0 : MBMClose;
+	EvReadMBR_SCR : BOOL;
+	EvWriteMBR_SCR : BOOL;
+	ucTeilerMaster : INT := 20;
+	ucTeilerLauf : INT;
+	ArrayCntOut : INT;
+	ArrayCntIn : INT;
+END_VAR

@@ -1,0 +1,68 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Package: ParaBase
+ * File: ParaBase.var
+ * Author: zengeres
+ * Created: September 17, 2012
+ ********************************************************************
+ * Variables of package ParaBase
+ ********************************************************************)
+VAR
+	IN_PB : IN_PB_Struct;
+	OUT_PB : OUT_PB_Struct;
+	MM2VIS : MM2VIS_Struct;
+	VIS2MM : VIS2MM_Struct;
+	Para : Para_PB;
+	ParaFactoryDefault : Para_PB := (0);
+	pm : Para_PB;
+	bOMSS_Stop : BOOL; (*engine operation mode selection*)
+	bOMSS_Man : BOOL; (*engine operation mode selection*)
+	bOMSS_Aut : BOOL; (*engine operation mode selection*)
+	bOMSS_Test : BOOL; (*engine operation mode selection*)
+	bOMSS_Scav : BOOL; (*engine operation mode selection*)
+	bOMSS_MAT : BOOL; (*engine operation mode selection*)
+	bForceModuleMandatory_VE : BOOL;
+	bForceModuleMandatory_HC : BOOL;
+	bForceModuleMandatory_EX : BOOL;
+	bForceModuleMandatory_TR : BOOL;
+	bForceModuleMandatory_GC : BOOL;
+	bForceModuleMandatory_CU : BOOL;
+	bForceModuleMandatory_MO : BOOL;
+	bForceModuleMandatory_IC : BOOL;
+	bForceModuleMandatory_IG : BOOL;
+	bForceModuleMandatory_GR : BOOL;
+	bForceModuleMandatory_SY : BOOL;
+	bForceModuleMandatory_CP : BOOL;
+	bForceModuleMandatory_EC : BOOL;
+	bForceModuleMandatory_EG : BOOL;
+	bForceModuleMandatory_EM : BOOL;
+	bForceModuleMandatory_KN : BOOL;
+	bForceModuleMandatory_GM : BOOL;
+	bForceModuleMandatory_GT : BOOL;
+	bForceModuleMandatory_AG : BOOL;
+	bForceModuleMandatory_OP : BOOL;
+	bForceModuleMandatory_SA : BOOL;
+	bForceModuleMandatory_KL : BOOL;
+	bForceModuleMandatory_GD : BOOL;
+	bForceModuleMandatory_CH : BOOL;
+	bForceModuleMandatory_HA : BOOL;
+	bForceModuleMandatory_AB : BOOL;
+	bForceModuleMandatory_VI : BOOL;
+	bForceModuleMandatory_CB : BOOL;
+	bForceModuleMandatory_PB : BOOL; (*(MYSELF)*)
+	bParaReadBackRelease : BOOL; (*has to be true to allow parameter restore*)
+	iTestMissingParaModule : DINT; (*prepared*)
+	iNoOfFirstParaMissing : DINT; (*iNoOfFirstParaMissing*)
+	iNoOfFirstParaWarnings : DINT;
+	iNoOfFirstPermMissing : DINT; (*new V4.06*)
+	iIDOfFirstPermMissing : DINT; (*new V4.06*)
+	szFirstPermMissing : STRING[2]; (*new V4.06*)
+	bPermMissingError : BOOL; (*new V4.06*)
+	iDebugFirstMissing_SysRun : DINT;
+	iDebugFirstMissing_DLD : DINT; (*prepared*)
+	bNoInitDetected : BOOL := FALSE; (*allways true, except 1cycle on init up*)
+	bErr_PermStore : ARRAY[0..31] OF BOOL; (*V4.13   Alarmbits for unplausible Perm values*)
+	Perm : PERM_PB_Struct; (*Values permanetly stored in Flash Datamodule*)
+	pm1 : PERM_PB_Struct; (*Flash Datamodule*)
+END_VAR

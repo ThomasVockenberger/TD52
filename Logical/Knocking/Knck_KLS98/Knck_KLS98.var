@@ -1,0 +1,34 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: Knck_KLS_98
+ * File: Knck_KLS_98.var
+ * Author: WaldharM
+ * Created: October 03, 2011
+ ********************************************************************
+ * Local variables of program Knck_KLS_98
+ ********************************************************************)
+VAR
+	KLimitVar : ARRAY[0..24] OF UINT; (* individual knock limit *)
+	lIntKlopfAvg : DINT; (* sample average knock signal *)
+	slFenst2LiMx : DINT; (* limit for knock detection [mV] *)
+	ssMinIntKl : INT; (* temporary memory *)
+	ssMinIntKlopf : INT; (* minimum allowed knock integrator *)
+	ssRestIntDown : ARRAY[0..24] OF UINT; (* remainder of knock integrators *)
+	ssRestIntUp : ARRAY[0..24] OF UINT; (* remainder of knock integrators *)
+	TON_DecPowerRed : TON; (* FUB timer decrement misfire power *)
+	TP_LowKnockLimit : TP; (* FUB timer for low knock limit *)
+	ucCylinderCount : USINT; (* loop counter for cylinder number *)
+	ucFenst2Cnt : USINT; (* sample counter valve noise values *)
+	ucFenst2LimitCount : ARRAY[0..24] OF USINT;
+	ucKlopfSensorCount : USINT; (* counter actual active knock sensor *)
+	ulFenst1Avg : UDINT; (* sample average of knock noise *)
+	ulFenst2Avg : UDINT; (* sample average of valve noise *)
+	rFilt_Fenst1 : ARRAY[0..24] OF REAL; (* used for individual knock limit *)
+	rGainFactor : REAL; (* individual knock limit gain factor *)
+	rFilterFactor : REAL; (* time constant knock signal filter *)
+	usFenst1 : UINT;
+	usKLmin : UINT;
+	rOff : REAL; (* individual knock limit offset *)
+	xOpMode : OpMode; (*	bKlopfregAkt : BOOL;*) (*	klopf_hys : INT;*)
+END_VAR

@@ -1,0 +1,7 @@
+VAR
+	xGR_MAXR_N_EngStart : GR_MAXR;
+	xTOF_N_EngStart : TOF;
+	xECW_ShutOffVal_Dem_Active : OutExist;
+	xValHeater_Dem_Active : OutExist;
+	xFanRingHeater_Dem_Active : OutExist;
+END_VAR

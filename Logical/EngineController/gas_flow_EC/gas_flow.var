@@ -1,0 +1,240 @@
+VAR
+	a : ARRAY[0..3] OF REAL;
+	af : ARRAY[0..3] OF REAL;
+	AmmSeqGASM : AmmSequence;
+	AmmSeqGASO : AmmSequence;
+	an : ARRAY[0..3] OF REAL;
+	an_f : ARRAY[0..3] OF REAL;
+	b : ARRAY[0..3] OF REAL;
+	bAdmitCtrl : BOOL;
+	bAdmitFlow : BOOL; (* TRUE=gas flow is admited *)
+	bf : ARRAY[0..3] OF REAL;
+	bn : ARRAY[0..3] OF REAL;
+	bn_f : ARRAY[0..3] OF REAL;
+	bPumpErkennung : BOOL;
+	bSpeedCorr : BOOL; (*Drehzahlkorrektur ist ein*)
+	FILTER_R_T2s_RAW : FILTER_R;
+	FILTER_R_P2_RAW : FILTER_R;
+	FILTER_R_P2s_RAW : FILTER_R;
+	FILTER_R_P2s_50ms : FILTER_R; (* FUB filter boost pressure T=50 ms *)
+	LCRMovAvg_tg : LCRMovAvgFlt;
+	rFlow_GMK_Lo : REAL;
+	rFlow_GMK_Hi : REAL;
+	P2s_NReg_DigFil : DigFil;
+	P2s_TJ_DigFil : DigFil;
+	P2_NReg_DigFil : DigFil;
+	P2_TJ_DigFil : DigFil;
+	RAMPE_AddGas : RAMPE;
+	RAMPE_MixGas : RAMPE; (* limit gas mixture change speed *)
+	rCF_TV_Ctr : REAL;
+	rCF_CBV_Ctr : REAL;
+	rCBV_Comp_Amt : REAL;
+	rCF_Speed : REAL; (*Drehzahlkorrektur*)
+	rCorr_Pr : REAL; (*Preassure Compensation*)
+	rCorr_T : REAL; (*Temp correctur factor*)
+	rDkScal2 : REAL;
+	rCF_Rot : REAL; (* Correction factor Volumenstrom Rotation *)
+	rPos_CBV_dt : REAL; (* Letzte CBV Änderung *)
+	rCF_CBV_dyn : REAL;
+	rCF_TV_dyn_rated : REAL;
+	rCF_TV_dyn : REAL;
+	rCF_TV_dyn_lim : REAL;
+	rCF_CBV_dyn_lim : REAL;
+	rFlow : REAL; (* Volumenstrom Engine [m3/s] *)
+	rFlowDiff : REAL;
+	rFlowDiffM : REAL;
+	rFlowMax : REAL; (* max. allowed gas flow*)
+	rFlowMaxDiff : REAL;
+	rFlowMaxDiffM : REAL;
+	rFlowMaxM : REAL; (* max. allowed gas flow gas train 2 *)
+	rFlowScal2 : REAL;
+	rFlow_reg : REAL; (* Volumenstrom Engine reg [m3/s] *)
+	rCF_CBV_dt : REAL; (* compensation by relativ turbo bypass compensation *)
+	rGasFlow : REAL; (*setpoint gasflow whole engine*)
+	rGasFlowM : REAL; (*setpoint gasflow gas train 2*)
+	rJkorr : REAL;
+	rN_LamCorr : REAL := 0.0; (* value speed dependend compensation *)
+	rCF_Lam_Speed : REAL;
+	rCF_Lam_Hi : REAL := 0.0; (* constand speed dep. compensation *)
+	rCF_Lam_Lo : REAL := 0.0; (* constant speed dep. compensation *)
+	rLambda : REAL; (* engine lambda for calc. gas flow *)
+	rLambdaAdaptGC : REAL;
+	rLambdaAdaptGC_P : REAL;
+	rLam_min : REAL;
+	rLam_max : REAL;
+	rPos_CBV_dt_f : REAL; (* Letzte CBV Änderung gefiltert *)
+	rPos_CBV_dt_f_old : REAL; (* alter Wert: Letzte CBV Änderung gefiltert *)
+	rMonGasFlow : ARRAY[0..4] OF REAL;
+	rN_DigFil : DigFil;
+	rN_Eng_df_1 : REAL; (*Drehzahl Digital gefiltert 1 [U/min]*)
+	rN_Eng_df_2 : REAL; (*Drehzahl Digital gefiltert 2 [U/min]*)
+	rN_Eng_df_2_dt : REAL; (*Differenz von Drehzahl Digital gefiltert 2 [(U/min)/s]*)
+	rN_Set : REAL; (*Speed Setpoint Speed controller [U/min]*)
+	rN_TJ_DigFil : DigFil;
+	rPos_CBV_old : REAL;
+	rPr_DkScal1 : REAL;
+	rPr_FlowScal1 : REAL;
+	rPr_P2_df : REAL; (*P2 Digital gefiltert in [bar]*)
+	rPr_P2_df_TJ : REAL; (*P2 Digital gefiltert in [bar]*)
+	rPumpGrenzwert : REAL;
+	rPumpQuotient : REAL;
+	rCF_Flow_LimLo : REAL; (* Correction Factor Limit Low *)
+	rCF_Flow_LimHi : REAL; (* Correction Factor Limit High *)
+	rT_GMK : REAL; (* Durchschnittliche Temperatur GMK [°C] *)
+	rT_T2s_f : REAL; (* Temperatur T2s gefiltert [°C] *)
+	rCF_VR_GMK : REAL; (* Correction Factor Volumenänderung in V-Raum und GMK *)
+	rFlow_LIVC : REAL; (*Volumenstrom für Inselbetrieb (LIVC Regler)*)
+	rFlow_CBV_dyn : REAL; (* dynamic Volumenstrom für CBV Betrieb [m3/s] *)
+	rFlow_CBV_dyn_lim : REAL; (* dynamic Volumenstrom für CBV Betrieb [m3/s] *)
+	rFlow_TV_dyn : REAL; (* dynamic Volumenstrom limitiert für TV Betrieb [m3/s] *)
+	rFlow_TV_dyn_lim : REAL; (* dynamic Volumenstrom limitiert für TV Betrieb [m3/s] *)
+	rVol_GMK : REAL; (* Volumen GMK [m3]*)
+	rVol_GMK_old : REAL; (* alter Wert: Volumen GMK [m3]*)
+	rVol_GMK_TJ_old : REAL; (* alter Wert: Volumen GMK (TJ filter) [m3]*)
+	rVol_GMK_TJ : REAL; (* Volumen GMK (TJ filter) [m3]*)
+	rVol_GMK_208 : REAL; (*208 GMK Volumen in [m3]*)
+	rVol_GMK_312 : REAL; (*312 GMK Volumen in [m3]*)
+	rVol_GMK_316 : REAL; (*316 GMK Volumen in [m3]*)
+	rVol_GMK_320 : REAL; (*320 GMK Volumen in [m3]*)
+	rVol_GMK_412 : REAL; (*412 GMK Volumen in [m3]*)
+	rVol_GMK_416 : REAL; (*416 GMK Volumen in [m3]*)
+	rVol_GMK_420 : REAL; (*420 GMK Volumen in [m3]*)
+	rVol_GMK_424 : REAL; (*424 GMK Volumen in [m3]*)
+	rVol_GMK_612 : REAL; (*612 GMK Volumen in [m3]*)
+	rVol_GMK_616 : REAL; (*616 GMK Volumen in [m3]*)
+	rVol_GMK_620 : REAL; (*620 GMK Volumen in [m3]*)
+	rVol_GMK_624 : REAL; (*624 GMK Volumen in [m3]*)
+	rVol_VR : REAL; (* Volumen VR [m3]*)
+	rVol_VR_old : REAL; (* alter Wert: Volumen VR [m3]*)
+	rVol_VR_TJ_old : REAL; (* alter Wert: Volumen VR (TJ filter) [m3]*)
+	rVol_VR_TJ : REAL; (* Volumen VR (TJ filter) [m3]*)
+	rVol_VR_P2s : REAL; (*Volumen VR abhängig von P2s [m3]*)
+	rFlow_VR : REAL; (* Differenz Volumen VR [m3/s]*)
+	rFlow_VR_TJ : REAL; (* Differenz Volumen VR (TJ filter) [m3/s]*)
+	rFlow_GMK : REAL; (* Differenz Volumen GMK [m3/s]*)
+	rFlow_GMK_TJ : REAL; (* Differenz Volumen GMK (TJ filter) [m3/s]*)
+	rFlow_TJ : REAL; (* Differenz Volumen GMK+VR (TJ filter) [m3/s]*)
+	rFlow_TJ_lim : REAL; (* limitiertes Differenz Volumen GMK+VR (TJ filter) [m3/s]*)
+	rFlow_L : REAL; (* Soll Volumenstrom ausgehend vom Leanox Soll Druck *)
+	rVol_GMK_P2 : REAL; (*Volumen GMK abhängig von P2 [m3]*)
+	rFlow_Rot : REAL; (*Ersatzvolumenstrom berechnet aus Rotationsleistung in [Nm3/s]*)
+	rCF_VR : REAL; (* Correction Factor Volumenänderung in V-Raum *)
+	rVol_VR_208 : REAL; (*208 VR Volumen in [m3]*)
+	rVol_VR_312 : REAL; (*312 VR Volumen in [m3]*)
+	rVol_VR_316 : REAL; (*316 VR Volumen in [m3]*)
+	rVol_VR_320 : REAL; (*320 VR Volumen in [m3]*)
+	rVol_VR_412 : REAL; (*412 VR Volumen in [m3]*)
+	rVol_VR_416 : REAL; (*416 VR Volumen in [m3]*)
+	rVol_VR_420 : REAL; (*420 VR Volumen in [m3]*)
+	rVol_VR_424 : REAL; (*424 VR Volumen in [m3]*)
+	rVol_VR_612 : REAL; (*612 VR Volumen in [m3]*)
+	rVol_VR_616 : REAL; (*616 VR Volumen in [m3]*)
+	rVol_VR_620 : REAL; (*620 VR Volumen in [m3]*)
+	rVol_VR_624 : REAL; (*624 VR Volumen in [m3]*)
+	rV_Act : REAL; (*aktueller Volumenstrom in [m3/h]*)
+	rV_DK_ist : REAL;
+	rV_DK_soll : REAL;
+	rFlow_Gas : REAL; (*aktueller Gasvolumenstrom in [m3/h]*)
+	rFlow_Gas_M : REAL;
+	rFlow_Gas_M_old : REAL;
+	rFlow_Gas_old : REAL;
+	rV_UB_ist : REAL;
+	rV_UB_soll : REAL;
+	ssGrenz : INT; (* turbo suction monitoring limit *)
+	ssP2s_l : INT;
+	TJ_GasM : ARRAY[0..4] OF BOOL; (* TJ gas flow change error *)
+	TJ_GasO : ARRAY[0..4] OF BOOL; (* TJ gas flow maximum error *)
+	TON_Monitoring1 : TON;
+	TON_Monitoring2 : TON;
+	TON_SecondTick : TON; (* second tick timer *)
+	xTP_PumpPuls : TP;
+	ucCountMax : USINT; (* delay counter for gas flow limits *)
+	ucCountMaxM : USINT; (* delay counter for gas flow limits *)
+	rFlow_VR_Lo : REAL;
+	rFlow_VR_Hi : REAL;
+	usordnung : UINT;
+	usordnung_f : UINT;
+	usordnung_n : UINT;
+	usordnung_n_f : UINT;
+	usReleaseCnt : UINT;
+	xRAMPE_Lambda : RAMPE_R; (* maximum speed of lambda change *)
+	xRAMPE_Lmin : RAMPE_R; (* limit speed of change of lmin *)
+	xRAMPE_Lmin3 : RAMPE_R; (* limit speed of change of lmin 3 *)
+	rEng_N_QC_lim : REAL;
+	LCRMovAvgFlt_Eng_N_A : LCRMovAvgFlt;
+	LCRMovAvgFlt_Eng_N_B : LCRMovAvgFlt;
+	FILTER_R_Eng_N_QC : FILTER_R;
+	rTV_QC_lim : REAL;
+	rCBV_QC_lim : REAL;
+	LCRMovAvgFlt_TV_A : LCRMovAvgFlt;
+	LCRMovAvgFlt_TV_B : LCRMovAvgFlt;
+	FILTER_R_TV_QC : FILTER_R;
+	LCRMovAvgFlt_CBV_A : LCRMovAvgFlt;
+	LCRMovAvgFlt_CBV_B : LCRMovAvgFlt;
+	FILTER_R_CBV_QC : FILTER_R;
+	xLamCorr : lLamCorr;
+	xLCRCurve_rLam_Trans_Corr_N : LCRCurveByPoints;
+	xLCRCurve_rLam_Trans_Corr_N_tab : ARRAY[0..3] OF lcrCurveByPoints_TabEntry_type;
+	xLCRCurve_Dyn_Lambda_LimD : LCRCurveByPoints;
+	rDLam_Lim_ManOFF : REAL;
+	rT_LambdaFreeze_Max : TIME;
+	xTP_LambdaFreeze : TP;
+	rT_Lam_Corr_Save : TIME;
+	xTP_Lambda_Corr_Disable : TP;
+	xTP_Lambda_Freeze_LoadReject : TP;
+	bPumpErkennungAktiv : BOOL;
+	bSimPID_PID_A_Werte : BOOL; (*Insel: verwende für SimPID Werte aus PID_A*)
+	rLam_Trans_Corr_N : REAL;
+	rN_Delta : REAL; (* Drehzahlabweichung in [U/min]*)
+	rPR_p : REAL;
+	rdn_p : REAL;
+	xTON_LambdaKorr0 : TON;
+	rLam_Trans_Corr_old : REAL; (*old value of transient Lambda correction*)
+	rLam_Trans_Corr_DN : REAL; (*transient Lambda correction by speed delta*)
+	rLam_Trans_Corr_DP : REAL; (*transient Lambda correction by power delta*)
+	l_einst_a_tmp : BOOL;
+	bPR_neg : BOOL;
+	bPR_pos : BOOL;
+	rFlow_LIVC_M : REAL;
+	R_TRIG_FPR : R_TRIG;
+	TP_Dauer : TP := (0);
+	rGasFlowSAVE : REAL;
+	rGASObergrenze : REAL;
+	rGASObergrenzeM : REAL;
+	rGasFlowSAVEM : REAL;
+	rGasFlowMSAVE : REAL;
+	rGasFlow_Ori : REAL;
+	iFPRGasRedOpt : INT;
+	rFPRGasRed : REAL;
+	tFPRGasRedTime : TIME;
+	bFiltInputVolFlow_OWN_Filt : BOOL;
+	iT_filt_INPUT_T : USINT;
+	iT_filt_INPUT_P : USINT;
+	ulGasSprungVoldone : UDINT;
+	rGasFlow_ORI : REAL;
+	rGasFlowM_ORI : REAL;
+	GRMAXPrDiff : GR_MAX;
+	GRMAXPrDiff_2 : GR_MAX;
+	TPSprung : TP;
+	TPSprung_2 : TP;
+	TPMin : TP;
+	TONTrigger : TON;
+	bOld_Island : BOOL;
+	bOld_Island2 : BOOL;
+	rLamGen2_GCBon : REAL := 0.0;
+	rGasFlowGen2_GCBon : REAL := 0.0; (* save Gen2 gas flow during NetP or Island *)
+	rGasFlowMGen2_GCBon : REAL := 0.0; (* save Gen2 gas flowM during NetP or Island *)
+	xTP_GasFlowGen2_lim_AfterGCBoff : TP; (* Pulse to disable Gen2 gas flow incr. after GCBoff*)
+	rTimeGasFlowGen2_lim_AfterGCBoff : REAL := 0.3; (*[s] duration to disable Gen2 gas flow incr. after GCBoff*)
+	bPrevStartOk : BOOL := FALSE; (*Check of previous start for gas push function*)
+	xF_TRIG_TPSprung : F_TRIG; (* Detect falling edge of gas push *)
+	rGasFlow_Old_GrC : REAL; (* Store gas flow when no grid event is detected *)
+	rGasFlowM_Old_GrC : REAL; (* Store gas flowM when no grid event is detected *)
+	rLamCorr_Enrich_Scale : REAL;
+	rLam_Trans_Corr_N_Scale : REAL;
+	iLam_Thresh_HiCalVal : UINT; (*[kWh/Nm3]*1000*)
+	bGasSprungDone_HiGasDens : BOOL;
+	rVolPrc_GT1 : REAL; (*Volume percent of gas type 1 [%] *)
+	rCorrFactor_HiGasDens : REAL := 1.0;
+	xLCRCurve_Lam_Adapt_Offs : LCRCurveByPoints; (*T6 GEN1 island controller lambda adaption offset map*)
+END_VAR

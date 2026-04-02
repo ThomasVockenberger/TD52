@@ -1,0 +1,13 @@
+VAR CONSTANT
+	PowerUp : USINT := 0;
+	Configuration : USINT := 10;
+	Operation : USINT := 20;
+	SelfTest : USINT := 30;
+	Reset : USINT := 40;
+END_VAR
+VAR
+	bDelayReset : BOOL;
+	TON_Reset : TON;
+	ucCylIndex : UINT;
+	ucSAFIState : USINT;
+END_VAR

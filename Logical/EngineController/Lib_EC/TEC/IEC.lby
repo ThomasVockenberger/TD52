@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.1.8.44 SP?>
+<Library Description="A new source library" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File Description="Exported functions and function blocks">TEC.fun</File>
+    <File>convert.st</File>
+  </Files>
+</Library>

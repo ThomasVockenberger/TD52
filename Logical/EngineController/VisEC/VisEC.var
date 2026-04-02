@@ -1,0 +1,16 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: VisEC
+ * File: VisEC.var
+ * Author: 502423184
+ * Created: October 27, 2015
+ ********************************************************************
+ * Local variables of program VisEC
+ ********************************************************************)
+VAR
+	rT_EG_System : REAL;
+	xTON_Load_Delay : TON := (0);
+	bOld_RKS_Ena : BOOL;
+	bAut_Opt_Act_old : BOOL;
+END_VAR

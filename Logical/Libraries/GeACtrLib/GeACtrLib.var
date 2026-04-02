@@ -1,0 +1,18 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Library: GeACtr
+ * File: GeACtrLib.var
+ * Author: maierm
+ * Created: May 22, 2012
+ ********************************************************************
+ * Constants of library GeACtr
+ ********************************************************************)
+VAR CONSTANT
+	Y_MIN : REAL := -1.0; (*minimal y value*)
+	Y_MAX : REAL := 1.0; (*maximal y value*)
+	SCALE_TIME : REAL := 1000.0; (*scaling factor "external millisecond" to "internal second"*)
+	SCALE_PERCENT : REAL := 100.0; (*scaling factor "external 1.0%" to "internal 100%"*)
+	LCR_TUNE_NOT_SAVED : USINT := 1; (*tuning finished, but not saved *)
+	LCR_TUNE_ACTIVE : USINT := 2; (*tuning active*)
+END_VAR

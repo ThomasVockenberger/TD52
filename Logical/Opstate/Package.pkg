@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.14.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="DataObject" Language="Simple" Description="Simple data object.">META_OP</Object>
+    <Object Type="File" Description="Package data types" Private="true">module_Opstate.typ</Object>
+    <Object Type="File" Description="Package variables" Private="true">module_Opstate.var</Object>
+    <Object Type="Program" Language="IEC" Description="OpState task">op_state</Object>
+    <Object Type="Program" Language="IEC" Description="+ Power Setpoint selection">powersel</Object>
+    <Object Type="Program" Language="IEC" Description="+ Speed Selection">speedsel</Object>
+    <Object Type="Program" Language="IEC" Description="OpState Messages">MsgOP</Object>
+    <Object Type="Program" Language="IEC" Description="Visualisation Communication">VisOP</Object>
+    <Object Type="Program" Language="IEC" Description="+ Parameter Management OpState">ParOP</Object>
+    <Object Type="Program" Language="IEC" Description="OpState setting values">default_OP</Object>
+    <Object Type="Program" Language="IEC" Description="+ Permanent variable storage OP">PermOP</Object>
+  </Objects>
+</Package>

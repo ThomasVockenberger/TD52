@@ -1,0 +1,85 @@
+VAR
+	CH4_MIN : BOOL := 0; (* CH4-Gehalt minimum *)
+	CH4_MIN_W_1 : BOOL;
+	CH4_MIN_W_a : BOOL;
+	CV_MIN : BOOL := 0; (* Heizwert minimum *)
+	CV_MIN_W_a : BOOL;
+	GD_MAX_a : BOOL;
+	GD_MIN : BOOL;
+	GD_MIN_a : BOOL;
+	GD_MIN_W : BOOL;
+	RED_CH4_a : BOOL;
+	RED_CV_a : BOOL;
+	RED_GD_a : BOOL;
+	RED_SD_a : BOOL;
+	S_MS_CH4 : BOOL := 0; (* Messignal CH4-Gehalt *)
+	S_MS_CV : BOOL := 0; (* Messignal Heizwert *)
+	T_FG_GAS : BOOL;
+	xGR_MAXR_FA_SDMAX : GR_MAXR;
+	xGR_MAX_FA_GD_MAX : GR_MAXR;
+	xGR_MAX_FA_GT_MAX : GR_MAXR;
+	xGR_MAX_FA_O2_MAX : GR_MAXR;
+	xGR_MINR_FA_CH4_MIN_A : GR_MINR;
+	xGR_MINR_FA_CH4_MIN_W : GR_MINR;
+	xGR_MINR_FA_CV_MIN_A : GR_MINR;
+	xGR_MINR_FA_CV_MIN_W : GR_MINR;
+	xGR_MINR_FA_SDMIN : GR_MINR;
+	xGR_MIN_FA_GD_MIN : GR_MINR;
+	xGR_MIN_FA_GT_MIN : GR_MINR;
+	xSigScalR_FA_CH4_GMV : xSigScal_R;
+	xSigScalR_FA_CH4_RED : xSigScal_R;
+	xSigScalR_FA_GD_RED : xSigScal_R;
+	xSigScalR_FA_SD_RED : xSigScal_R;
+	xSigScal_FA_CV_RED : xSigScal_R;
+	xSigScal_R_FA_CalVal_GMV : xSigScal_R;
+	xTOF_FA_T_FG_GAS : TOF;
+	xTOF_N2_GASV : TOF;
+	xTON_FA_CH4_MIN : TON;
+	xTON_FA_CV_MIN : TON;
+	xTON_FA_T_CH4_A : TON;
+	xTON_FA_T_CH4_W : TON;
+	xTON_FA_T_CV_A : TON;
+	xTON_FA_T_CV_W : TON;
+	xTON_FA_T_GD_MAX : TON;
+	xTON_FA_T_GT_MAX : TON;
+	xTON_FA_T_GT_MIN : TON;
+	xTON_FA_T_O2_MAX : TON;
+	xTON_FA_T_SD_MAX : TON;
+	xTON_FA_T_SD_MIN : TON;
+	xTON_GDMA1 : TON;
+	xTON_GDMA1_2_VISA : TON;
+	xTON_GDMA1_3_VISA : TON;
+	xTON_GDMA1_4_VISA : TON;
+	xTON_GDMA1_VISA : TON;
+	xTON_GDMA2 : TON;
+	xTON_GDMA2_VISA : TON;
+	xTON_GDMI1 : TON;
+	xTON_GDMI1_2 : TON;
+	xTON_GDMI1_3 : TON;
+	xTON_GDMI1_4 : TON;
+	xTON_GDMI2 : TON;
+	xTON_GDMIA1_2 : TON;
+	xTON_GDMIA1_3 : TON;
+	xTON_GDMIA1_4 : TON;
+	xTP_FA_FG_GAS : TP;
+	xTP_FA_GD_MIN_W : TP;
+	Y_SCAL_CalVal : REAL;
+	ZM : BOOL := 0; (* Zwischenmerker *)
+	ZM_GDMA1_2 : BOOL;
+	ZM_GDMA1_3 : BOOL;
+	ZM_GDMA1_4 : BOOL;
+	ZM_GDMI1_2 : BOOL;
+	ZM_GDMI1_3 : BOOL;
+	ZM_GDMI1_4 : BOOL;
+	i : INT;
+	SimPID_deltaP_TJ : SimPID4 := (0);
+	rGMU_Pr_DiffGas_min : REAL; (* Minimum gas proportional valve differential pressure *)
+	xTON_TJdeltaP_min : TON;
+	rReductionPowerH2 : REAL; (* Power reduction value [%Pnom] *)
+	rReductionPowerH2_MSF : REAL; (* Power reduction value [%Pnom] *)
+	xGR_MAXR_H2_Comp : GR_MAXR;
+	rGwH2_Comp : REAL := 0.02; (* Trehshold of H2 content [%] *)
+	rHyH2_Comp : REAL := 0.01; (* Trehshold of H2 content [%] *)
+	xGR_MAXR_FA_H2_MAX_A : GR_MAXR; 
+	xGR_MAXR_FA_H2_MAX_W : GR_MAXR;
+END_VAR

@@ -1,0 +1,28 @@
+VAR
+	rPchange : REAL;
+	rPchange_max : REAL;
+	rPel_csm_old : REAL;
+	rPgen_min : REAL;
+	rP_Gen_Act_Norm : REAL;
+	rP_Mns_Act_Norm : REAL;
+	rP_Csm_Act_Norm : REAL := 0.0;
+	tof_mns_connection : TOF;
+	ton_gcb_on : TON;
+	ton_ls_ok : TON;
+	black_status_bb : BOOL;
+	xTON_Sys_Run : TON;
+	dmnd_bs_over : BOOL;
+	bRelease_VKE10 : BOOL; (* release island operation busbar: false = mains-cut-off with gcb *)
+	VKE40 : BOOL;
+	VKE41 : BOOL;
+	bPcalc : BOOL;
+	dmnd_load_shedd : BOOL; (*Demand load shed*)
+	rP_I_Act_Norm_Expected : REAL;
+	bIsl_mode : ARRAY[0..2] OF BOOL := [3(0)];
+	bIsland_mode : BOOL := 0;
+	bRel_Isl : ARRAY[0..5] OF BOOL := [6(0)];
+	bRel_Isl_BB : ARRAY[0..5] OF BOOL := [6(0)]; (* release island operation busbar condition OR array: false = mains-cut-off with gcb *)
+	bRelease_Isl_BB : BOOL := 0; (* release island operation busbar part1 *)
+	bDem_Isl : ARRAY[0..1] OF BOOL := [2(0)]; (* demand island operation (INSEL) condition array*)
+	bRel_VKE10 : ARRAY[0..4] OF BOOL := [5(0)]; (* release island operation busbar condition AND array: false = mains-cut-off with gcb *)
+END_VAR

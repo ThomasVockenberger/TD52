@@ -1,0 +1,16 @@
+VAR
+	DatObjInfo_META : DatObjInfo;
+	DatObjRead_META : DatObjRead;
+	szMetaDataRaw : STRING[1000];
+	szMetaData : ARRAY[0..3] OF STRING[35];
+	ssIndex : INT;
+	ssCount : INT;
+	ucMetaDataRaw : ARRAY[0..1000] OF USINT;
+	ssCount2 : INT;
+	szMetaDataFile : STRING[35];
+	pm_Error : UDINT; (* permanent value error *) (* Deleted: pm : ParaMem_typ; permanent memory tags mathias, 22.8.11*)
+	bReadOutMETA_Once : BOOL;
+END_VAR
+VAR CONSTANT
+	ERR_NOERROR : UINT := 0;
+END_VAR

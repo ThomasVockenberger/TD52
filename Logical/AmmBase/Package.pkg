@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.14.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="DataObject" Language="Simple" Description="MODUL META data file">META_AB</Object>
+    <Object Type="File" Private="true">module_AB.typ</Object>
+    <Object Type="File" Private="true">module_ABPara.typ</Object>
+    <Object Type="File" Private="true">module_AB.var</Object>
+    <Object Type="Program" Language="IEC" Description="values">default_AB</Object>
+    <Object Type="Program" Language="IEC" Description="functions">general_AB</Object>
+    <Object Type="Program" Language="IEC" Description="alarms">reset</Object>
+    <Object Type="Program" Language="IEC" Description="+ alarm management general">AmmGnl</Object>
+    <Object Type="Program" Language="IEC" Description="message">MsgAB</Object>
+    <Object Type="Program" Language="IEC" Description="visualization">vis_AB</Object>
+    <Object Type="Program" Language="IEC" Description="+ parameter handling">ParAB</Object>
+    <Object Type="Program" Language="IEC" Description="+ alarm management general">AmmGnlTC5</Object>
+  </Objects>
+</Package>

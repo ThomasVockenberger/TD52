@@ -1,0 +1,20 @@
+VAR
+	IN_VI : IN_VI_Struct;
+	OUT_VI : OUT_VI_Struct;
+	VIS2MM : VIS2MM_Struct;
+	MM2VIS : MM2VIS_Struct;
+	bMsg3517Set : BOOL; (*Temp variable for setting alarm bMsg3517*)
+	bGnlTrip1 : BOOL; (*general trip*)
+	bGnlTrip2 : BOOL; (*general trip*)
+	bGnlTrip3 : BOOL; (*general trip*)
+	bGnlWarning : BOOL; (*general warning*)
+	bGnlTrip : BOOL; (*general trip*)
+	bNoInitDetected : BOOL := FALSE; (*allways true, except 1cycle on init up*)
+	pm : PARA_VI_Struct;
+	Para : PARA_VI_Struct;
+	ParaFactoryDefault : PARA_VI_Struct;
+	pmm : PERM_VI_struct;
+	bMsg9007_Set : BOOL; (*Module global variable for creation of hourly message*)
+	bResetFromCounter : BOOL := FALSE; (*RAM Tracking*)
+	iDisconnect : UDINT;
+END_VAR

@@ -1,0 +1,27 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: c_ctr
+ * File: c_ctr.var
+ * Author: ZengereS
+ * Created: May 30, 2012
+ ********************************************************************
+ * Local variables of program c_ctr
+ ********************************************************************)
+VAR
+	xGeACtr_1 : GeACtr;
+	xGeACtr_2 : GeACtr;
+	xGeACtr_3 : GeACtr;
+	xGeACtr_4 : GeACtr;
+	xGeACtr_5 : GeACtr;
+	xGeACtr_6 : GeACtr;
+	xGeACtr_7 : GeACtr;
+	xGeACtr_8 : GeACtr;
+	xGeACtr_41 : GeACtr;
+	xGeACtr_42 : GeACtr;
+	xGeACtr_43 : GeACtr;
+	xGeACtr_44 : GeACtr;
+	xGeACtr_45 : GeACtr;
+	rReplaceMeWithVarname : REAL; (*void*)
+	bReplaceMeWithVarname : BOOL; (*void*)
+END_VAR

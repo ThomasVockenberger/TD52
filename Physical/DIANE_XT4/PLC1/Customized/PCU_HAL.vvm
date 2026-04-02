@@ -1,0 +1,422 @@
+(********************************************************************
+* COPYRIGHT -- INNIO Company
+********************************************************************
+* File: PCU.vvm
+* Author: autmatically generated 
+* Created: 08.10.2012; last edit 07.10.2019 Ze
+********************************************************************
+remark:	Cyclic#2.HalIO::tGenPrctTrip AT %Q.Cyclic#2.Customized::IN_CU.tGenPrctTrip_TC2;            //Nothing in TC2 prepared for customisations)
+remark:	Cyclic#2.HalIO::tGndFailure AT %Q.Cyclic#2.Customized::IN_CU.tGndFailure_TC2;                //Nothing in TC2 prepared for customisations)
+******************************************************************* 
+* PV mapping file 
+********************************************************************)
+VAR_CONFIG
+	Cyclic#4.HalIO::tL_DayOilSump_Hi AT %Q.Cyclic#5.Customized::IN_CU.tL_DayOilSump_Hi; (*V4.12  #828*)
+	Cyclic#4.HalIO::tDayOilTank_Leck AT %Q.Cyclic#5.Customized::IN_CU.tDayOilTank_Leck; (*V4.12  #828*)
+	Cyclic#4.HalIO::tGF_OilSystem AT %Q.Cyclic#5.Customized::IN_CU.tGF_OilSystem; (*V4.12  #828*)
+	Cyclic#4.HalIO::tL_DayOilTank_Hi AT %Q.Cyclic#5.Customized::IN_CU.tL_DayOilTank_Hi; (*V4.12  #828*)
+	Cyclic#4.HalIO::tL_FreshOilTank_Hi AT %Q.Cyclic#5.Customized::IN_CU.tL_FreshOilTank_Hi; (*V4.12  #828*)
+	Cyclic#4.HalIO::tLeak_FreshOilPump AT %Q.Cyclic#5.Customized::IN_CU.tLeak_FreshOilPump; (*V4.12  #828*)
+	Cyclic#4.HalIO::tLeak_FreshOilTank AT %Q.Cyclic#5.Customized::IN_CU.tLeak_FreshOilTank; (*V4.12  #828*)
+	Cyclic#4.HalIO::tLeak_WasteOilPump AT %Q.Cyclic#5.Customized::IN_CU.tLeak_WasteOilPump; (*V4.12  #828*)
+	Cyclic#4.HalIO::tLeak_WasteOilTank AT %Q.Cyclic#5.Customized::IN_CU.tLeak_WasteOilTank; (*V4.12  #828*)
+	Cyclic#4.HalIO::tL_OilSump2Hi AT %Q.Cyclic#5.Customized::IN_CU.tL_OilSump2Hi; (*V4.12  #828*)
+	Cyclic#4.HalIO::tL_OilSump3Hi AT %Q.Cyclic#5.Customized::IN_CU.tL_OilSump3Hi; (*V4.12  #828*)
+	Cyclic#4.HalIO::tOF_FreshOilTank AT %Q.Cyclic#5.Customized::IN_CU.tOF_FreshOilTank; (*V4.12  #828*)
+	Cyclic#4.HalIO::tOF_WasteOilTank AT %Q.Cyclic#5.Customized::IN_CU.tOF_WasteOilTank; (*V4.12  #828*)
+	Cyclic#5.HalIO::tActuator_Ok AT %Q.Cyclic#5.Customized::IN_CU.tActuator_Ok;
+	Cyclic#5.HalIO::tActuator_Ok_CBV1 AT %Q.Cyclic#5.Customized::IN_CU.tActuator_Ok_CBV1;
+	Cyclic#5.HalIO::tAuxV_Eng_ok AT %Q.Cyclic#5.Customized::IN_CU.tAuxV_Eng_ok;
+	Cyclic#5.HalIO::tAuxV_Supply_Ok AT %Q.Cyclic#5.Customized::IN_CU.tAuxV_Supply_Ok;
+	Cyclic#5.HalIO::tAuxV_ModIf_ok AT %Q.Cyclic#5.Customized::IN_CU.tAuxV_ModIf_ok;
+	Cyclic#5.HalIO::tAuxV_Aux_ok AT %Q.Cyclic#5.Customized::IN_CU.tAuxV_Aux_ok;
+	Cyclic#5.HalIO::tBB_Dead_MMD AT %Q.Cyclic#5.Customized::IN_CU.tBB_Dead_MMD;
+	Cyclic#5.HalIO::tCCWP_Op AT %Q.Cyclic#5.Customized::IN_CU.tCCWP_Op;
+	Cyclic#5.HalIO::tChC_Failure AT %Q.Cyclic#5.Customized::IN_CU.tChC_Failure;
+	Cyclic#5.HalIO::tCO2_Demand AT %Q.Cyclic#5.Customized::IN_CU.tCO2_Demand;
+	Cyclic#5.HalIO::tCO2_DevFailure AT %Q.Cyclic#5.Customized::IN_CU.tCO2_DevFailure;
+	Cyclic#5.HalIO::tCO2_FanFailure AT %Q.Cyclic#5.Customized::IN_CU.tCO2_FanFailure;
+	Cyclic#5.HalIO::tCO2_VaClosed AT %Q.Cyclic#5.Customized::IN_CU.tCO2_VaClosed;
+	Cyclic#5.HalIO::tCO2_VaFailure AT %Q.Cyclic#5.Customized::IN_CU.tCO2_VaFailure;
+	Cyclic#5.HalIO::tCO2_VaLockout AT %Q.Cyclic#5.Customized::IN_CU.tCO2_VaLockout;
+	Cyclic#5.HalIO::tCO2_VaOpened AT %Q.Cyclic#5.Customized::IN_CU.tCO2_VaOpened;
+	Cyclic#5.HalIO::tCodinox_Rdy AT %Q.Cyclic#5.Customized::IN_CU.tCodinox_Rdy;
+	Cyclic#5.HalIO::tCtr_Mns_Anain_Setp_W_ext AT %Q.Cyclic#5.Customized::IN_CU.tCtr_Mns_Anain_Setp_W_ext; (*V4.4 Basisupdate 01*)
+	Cyclic#2.HalIO::tCnt_GasImp AT %Q.Cyclic#2.Customized::IN_CU.tCnt_GasImp; (*New: V4.10*)
+	Cyclic#5.HalIO::tCustAnaIn AT %Q.Cyclic#5.Customized::IN_CU.tCustAnaIn; (*New: Mathias 16.04.2013*)
+	Cyclic#5.HalIO::tCustDigIn AT %Q.Cyclic#5.Customized::IN_CU.tCustDigIn; (*Prepared Spare Inputs for project specific customisation*)
+	Cyclic#2.HalIO::tCustDigIn AT %Q.Cyclic#2.Customized::IN_CU.tCustDigIn_TC2; (*Prepared Spare Inputs FAST,  for project specific use in task class 2*xxx)	Cyclic#2.HalIO::tCustDigCnt AT %Q.Cyclic#2.Customized::IN_CU.tCustDigCnt_TC2; (*Prepared Spare Inputs FAST,  for project specific counters in task class 2*)
+	Cyclic#5.HalIO::tDem_Ctr_Mns AT %Q.Cyclic#5.Customized::IN_CU.tDem_Ctr_Mns; (*V4.4 Basisupdate 01*)
+	Cyclic#5.HalIO::tDemEngOpExt AT %Q.Cyclic#5.Customized::IN_CU.tDemEngOpExt;
+	Cyclic#5.HalIO::tDemFlair AT %Q.Cyclic#5.Customized::IN_CU.tDemFlair;
+	Cyclic#5.HalIO::tDI_Dem_EU_Block AT %Q.Cyclic#5.Customized::IN_CU.tDI_Dem_EU_Block;
+	Cyclic#5.HalIO::tDiffPrct AT %Q.Cyclic#5.Customized::IN_CU.tDiffPrct;
+	Cyclic#5.HalIO::tDPr_AirFilt AT %Q.Cyclic#5.Customized::IN_CU.tDPr_AirFilt; (*V4.7 Basisupdate 01*)
+	Cyclic#5.HalIO::tDPr_AirFilt_A AT %Q.Cyclic#5.Customized::IN_CU.tDPr_AirFilt_A; (*V4.7 Basisupdate 01*)
+	Cyclic#5.HalIO::tDPr_AirFilt_B AT %Q.Cyclic#5.Customized::IN_CU.tDPr_AirFilt_B; (*V4.7 Basisupdate 01*)
+	Cyclic#5.HalIO::tEarthCB_Off AT %Q.Cyclic#5.Customized::IN_CU.tEarthCB_Off;
+	Cyclic#5.HalIO::tEC_Failure AT %Q.Cyclic#5.Customized::IN_CU.tEC_Failure;
+	Cyclic#5.HalIO::tECWP_Op AT %Q.Cyclic#5.Customized::IN_CU.tECWP_Op;
+	Cyclic#5.HalIO::tEG_BoVaClosed AT %Q.Cyclic#5.Customized::IN_CU.tEG_BoVaClosed;
+	Cyclic#5.HalIO::tEG_BoVaClosedTo AT %Q.Cyclic#5.Customized::IN_CU.tEG_BoVaClosedTo;
+	Cyclic#5.HalIO::tEG_BoVaFailure AT %Q.Cyclic#5.Customized::IN_CU.tEG_BoVaFailure;
+	Cyclic#5.HalIO::tEG_BoVaOpened AT %Q.Cyclic#5.Customized::IN_CU.tEG_BoVaOpened;
+	Cyclic#5.HalIO::tEG_BypassDemand AT %Q.Cyclic#5.Customized::IN_CU.tEG_BypassDemand;
+	Cyclic#5.HalIO::tER_DoorClosed AT %Q.Cyclic#5.Customized::IN_CU.tER_DoorClosed;
+	Cyclic#5.HalIO::tEG_ByVaClosed AT %Q.Cyclic#5.Customized::IN_CU.tEG_ByVaClosed;
+	Cyclic#5.HalIO::tEG_ByVaClosedTo AT %Q.Cyclic#5.Customized::IN_CU.tEG_ByVaClosedTo;
+	Cyclic#5.HalIO::tERV_InlAir_Op AT %Q.Cyclic#5.Customized::IN_CU.tERV_InlAir_Op;
+	Cyclic#5.HalIO::tEG_ByVaFailure AT %Q.Cyclic#5.Customized::IN_CU.tEG_ByVaFailure;
+	Cyclic#5.HalIO::tEG_ByVaOpened AT %Q.Cyclic#5.Customized::IN_CU.tEG_ByVaOpened;
+	Cyclic#5.HalIO::tEngDemIsland AT %Q.Cyclic#5.Customized::IN_CU.tEngDemIsland;
+	Cyclic#5.HalIO::tEO_Level AT %Q.Cyclic#5.Customized::IN_CU.tEO_Level;
+	Cyclic#5.HalIO::tEO_Level_Hi AT %Q.Cyclic#5.Customized::IN_CU.tEO_Level_Hi;
+	Cyclic#5.HalIO::tEO_Level_Lo AT %Q.Cyclic#5.Customized::IN_CU.tEO_Level_Lo;
+	Cyclic#5.HalIO::tEO_Refill AT %Q.Cyclic#5.Customized::IN_CU.tEO_Refill;
+	Cyclic#5.HalIO::tEOF_DiffMax AT %Q.Cyclic#5.Customized::IN_CU.tEOF_DiffMax;
+	Cyclic#5.HalIO::tEOP_Op AT %Q.Cyclic#5.Customized::IN_CU.tEOP_Op;
+	Cyclic#5.HalIO::tER_Ext_Err AT %Q.Cyclic#5.Customized::IN_CU.tER_Ext_Err;
+	Cyclic#5.HalIO::tER_InlAir_Ext_Err AT %Q.Cyclic#5.Customized::IN_CU.tER_InlAir_Ext_Err;
+	Cyclic#5.HalIO::tER_OutlAir_Ext_Err AT %Q.Cyclic#5.Customized::IN_CU.tER_OutlAir_Ext_Err;
+	Cyclic#5.HalIO::tERV_Op AT %Q.Cyclic#5.Customized::IN_CU.tERV_Op;
+	Cyclic#5.HalIO::tERV_OutlAir_Op AT %Q.Cyclic#5.Customized::IN_CU.tERV_OutlAir_Op;
+	Cyclic#5.HalIO::tF_MMD_BusBar AT %Q.Cyclic#5.Customized::IN_CU.tF_MMD_BusBar;
+	Cyclic#5.HalIO::tF_MMD_LimHi AT %Q.Cyclic#5.Customized::IN_CU.tF_MMD_LimHi;
+	Cyclic#5.HalIO::tF_MMD_LimLo AT %Q.Cyclic#5.Customized::IN_CU.tF_MMD_LimLo;
+	Cyclic#5.HalIO::tF_MMD_Synch1 AT %Q.Cyclic#5.Customized::IN_CU.tF_MMD_Synch1;
+	Cyclic#5.HalIO::tF_MMD_Synch2 AT %Q.Cyclic#5.Customized::IN_CU.tF_MMD_Synch2;
+	Cyclic#5.HalIO::tF_N_DI_Dec AT %Q.Cyclic#5.Customized::IN_CU.tF_N_DI_Dec;
+	Cyclic#5.HalIO::tF_N_DI_Inc AT %Q.Cyclic#5.Customized::IN_CU.tF_N_DI_Inc;
+	Cyclic#5.HalIO::tFireAlarm AT %Q.Cyclic#5.Customized::IN_CU.tFireAlarm;
+	Cyclic#5.HalIO::tFlairRdy AT %Q.Cyclic#5.Customized::IN_CU.tFlairRdy;
+	Cyclic#5.HalIO::tFlow_HW_Lo AT %Q.Cyclic#5.Customized::IN_CU.tFlow_HW_Lo;
+	Cyclic#5.HalIO::tFS_ECW AT %Q.Cyclic#5.Customized::IN_CU.tFS_ECW;
+	Cyclic#5.HalIO::tGasAlarm AT %Q.Cyclic#5.Customized::IN_CU.tGasAlarm;
+	Cyclic#5.HalIO::tGasPreAlarm AT %Q.Cyclic#5.Customized::IN_CU.tGasPreAlarm;
+	Cyclic#5.HalIO::tGCB_AGO AT %Q.Cyclic#5.Customized::IN_CU.tGCB_AGO;
+	Cyclic#5.HalIO::tGCB_DSY AT %Q.Cyclic#5.Customized::IN_CU.tGCB_DSY;
+	Cyclic#5.HalIO::tGCB_DVM AT %Q.Cyclic#5.Customized::IN_CU.tGCB_DVM;
+	Cyclic#5.HalIO::tGCB_MDL AT %Q.Cyclic#5.Customized::IN_CU.tGCB_MDL;
+	Cyclic#5.HalIO::tGCB_MRC AT %Q.Cyclic#5.Customized::IN_CU.tGCB_MRC;
+	Cyclic#5.HalIO::tGCB_Off AT %Q.Cyclic#5.Customized::IN_CU.tGCB_Off;
+	Cyclic#5.HalIO::tGCB_OGP AT %Q.Cyclic#5.Customized::IN_CU.tGCB_OGP;
+	Cyclic#5.HalIO::tGCB_On AT %Q.Cyclic#5.Customized::IN_CU.tGCB_On;
+	Cyclic#5.HalIO::tGCB_Rac AT %Q.Cyclic#5.Customized::IN_CU.tGCB_Rac;
+	Cyclic#5.HalIO::tGCB_Rdy AT %Q.Cyclic#5.Customized::IN_CU.tGCB_Rdy;
+	Cyclic#5.HalIO::tGCB_RI AT %Q.Cyclic#5.Customized::IN_CU.tGCB_RI;
+	Cyclic#5.HalIO::tGCB_SM1 AT %Q.Cyclic#5.Customized::IN_CU.tGCB_SM1;
+	Cyclic#5.HalIO::tGCB_SM2 AT %Q.Cyclic#5.Customized::IN_CU.tGCB_SM2;
+	Cyclic#5.HalIO::tGenPrctTrip AT %Q.Cyclic#5.Customized::IN_CU.tGenPrctTrip; (*No TC2 task prepared for customisations -> no IN_CU.tGenPrctTrip_TC2*)
+	Cyclic#5.HalIO::tGndFailure AT %Q.Cyclic#5.Customized::IN_CU.tGndFailure; (*No TC2 task prepared for customisations -> no IN_CU.tGndFailure_TC2_TC2*)
+	Cyclic#2.HalIO::tGT_AirSupply_LoLo AT %Q.Cyclic#2.Customized::IN_CU.tGT_AirSupply_LoLo; (*V04.02.00.00*)
+	Cyclic#4.HalIO::tGT_BackFireDev AT %Q.Cyclic#5.Customized::IN_CU.tGT_BackFireDev;
+	Cyclic#5.HalIO::tGT_CalibrateActive AT %Q.Cyclic#5.Customized::IN_CU.tGT_CalibrateActive;
+	Cyclic#5.HalIO::tGT_CH4 AT %Q.Cyclic#5.Customized::IN_CU.tGT_CH4;
+	Cyclic#4.HalIO::tGT_CV AT %Q.Cyclic#5.Customized::IN_CU.tGT_CV;
+	Cyclic#5.HalIO::tGT_FlairFail AT %Q.Cyclic#5.Customized::IN_CU.tGT_FlairFail;
+	Cyclic#4.HalIO::tGT_Flap1_Closed AT %Q.Cyclic#5.Customized::IN_CU.tGT_Flap1_Closed;
+	Cyclic#4.HalIO::tGT_Flap1_Opened AT %Q.Cyclic#5.Customized::IN_CU.tGT_Flap1_Opened;
+	Cyclic#4.HalIO::tGT_Flap2_Closed AT %Q.Cyclic#5.Customized::IN_CU.tGT_Flap2_Closed;
+	Cyclic#4.HalIO::tGT_Flap2_Opened AT %Q.Cyclic#5.Customized::IN_CU.tGT_Flap2_Opened;
+	Cyclic#5.HalIO::tGT_FlareOpMod AT %Q.Cyclic#5.Customized::IN_CU.tGT_FlareOpMod;
+	Cyclic#5.HalIO::tGT_GC_Fail AT %Q.Cyclic#5.Customized::IN_CU.tGT_GC_Fail;
+	Cyclic#5.HalIO::tGT_O2 AT %Q.Cyclic#5.Customized::IN_CU.tGT_O2;
+	Cyclic#4.HalIO::tGT_SelectRatioMix AT %Q.Cyclic#5.Customized::IN_CU.tGT_SelectRatioMix;
+	Cyclic#4.HalIO::tGT_TypSwitch AT %Q.Cyclic#5.Customized::IN_CU.tGT_TypSwitch;
+	Cyclic#4.HalIO::tGT1_1_BackFireDev AT %Q.Cyclic#5.Customized::IN_CU.tGT1_1_BackFireDev; (* v4.2.0.0 *)
+	Cyclic#4.HalIO::tGT1_2_BackFireDev AT %Q.Cyclic#5.Customized::IN_CU.tGT1_2_BackFireDev; (* v4.2.0.0 *)
+	Cyclic#4.HalIO::tGT1_3_BackFireDev AT %Q.Cyclic#5.Customized::IN_CU.tGT1_3_BackFireDev; (* v4.2.0.0 *)
+	Cyclic#4.HalIO::tGT1_4_BackFireDev AT %Q.Cyclic#5.Customized::IN_CU.tGT1_4_BackFireDev; (* v4.2.0.0 *)
+	Cyclic#5.HalIO::tGT1_SafeDevOK AT %Q.Cyclic#5.Customized::IN_CU.tGT1_SafeDevOK;
+	Cyclic#5.HalIO::tHWP_Op AT %Q.Cyclic#5.Customized::IN_CU.tHWP_Op;
+	Cyclic#5.HalIO::tI_Avg AT %Q.Cyclic#5.Customized::IN_CU.tI_Avg;
+	Cyclic#5.HalIO::tI_Diff AT %Q.Cyclic#5.Customized::IN_CU.tI_Diff;
+	Cyclic#5.HalIO::tI_L1 AT %Q.Cyclic#5.Customized::IN_CU.tI_L1;
+	Cyclic#5.HalIO::tI_L2 AT %Q.Cyclic#5.Customized::IN_CU.tI_L2;
+	Cyclic#5.HalIO::tI_L3 AT %Q.Cyclic#5.Customized::IN_CU.tI_L3;
+	Cyclic#5.HalIO::tI_MMD_Asy AT %Q.Cyclic#5.Customized::IN_CU.tI_MMD_Asy;
+	Cyclic#5.HalIO::tI_MMD_LimHi AT %Q.Cyclic#5.Customized::IN_CU.tI_MMD_LimHi;
+	Cyclic#5.HalIO::tI_MMD_Neutr_LimHi AT %Q.Cyclic#5.Customized::IN_CU.tI_MMD_Neutr_LimHi;
+	Cyclic#5.HalIO::tIFCP_CBTrip AT %Q.Cyclic#5.Customized::IN_CU.tIFCP_CBTrip;
+	Cyclic#5.HalIO::tIgn_OverspeedRelay AT %Q.Cyclic#5.Customized::IN_CU.tIgn_OverspeedRelay;
+	Cyclic#5.HalIO::tIgn_Run_Hal AT %Q.Cyclic#5.Customized::IN_CU.tIgn_Run_Hal;
+	Cyclic#5.HalIO::tInAirER_Lou1Opened AT %Q.Cyclic#5.Customized::IN_CU.tInAirER_Lou1Opened;
+	Cyclic#5.HalIO::tInAirER_Lou2Opened AT %Q.Cyclic#5.Customized::IN_CU.tInAirER_Lou2Opened;
+	Cyclic#5.HalIO::tKLS90_1 AT %Q.Cyclic#5.Customized::IN_CU.tKLS90_1;
+	Cyclic#5.HalIO::tKLS90_2 AT %Q.Cyclic#5.Customized::IN_CU.tKLS90_2;
+	Cyclic#5.HalIO::tL_FreshOilTank_Lo AT %Q.Cyclic#5.Customized::IN_CU.tL_FreshOilTank_Lo;
+	Cyclic#5.HalIO::tL_OilSumpHi AT %Q.Cyclic#5.Customized::IN_CU.tL_OilSumpHi;
+	Cyclic#5.HalIO::tL_WasteOilTank_Hi AT %Q.Cyclic#5.Customized::IN_CU.tL_WasteOilTank_Hi;
+	Cyclic#4.HalIO::tLineCB_On AT %Q.Cyclic#5.Customized::IN_CU.tLineCB_On; (*added in V4.07 BU1*)
+	Cyclic#5.HalIO::tLSL_In AT %Q.Cyclic#5.Customized::IN_CU.tLSL_In;
+	Cyclic#4.HalIO::tMCB_Dcp_SetEUCOf AT %Q.Cyclic#5.Customized::IN_CU.tMCB_Dcp_SetEUCOf;
+	Cyclic#4.HalIO::tMCB_Dcp_SetEUCOn AT %Q.Cyclic#5.Customized::IN_CU.tMCB_Dcp_SetEUCOn;
+	Cyclic#4.HalIO::tMCB_DcpQu_SetEUCOf AT %Q.Cyclic#5.Customized::IN_CU.tMCB_DcpQu_SetEUCOf;
+	Cyclic#4.HalIO::tMCB_DcpQu_SetEUCOn AT %Q.Cyclic#5.Customized::IN_CU.tMCB_DcpQu_SetEUCOn;
+	Cyclic#5.HalIO::tMCB_Off AT %Q.Cyclic#5.Customized::IN_CU.tMCB_Off;
+	Cyclic#5.HalIO::tMCB_OL AT %Q.Cyclic#5.Customized::IN_CU.tMCB_OL;
+	Cyclic#5.HalIO::tMCB_On AT %Q.Cyclic#5.Customized::IN_CU.tMCB_On;
+	Cyclic#5.HalIO::tMCB_Rac AT %Q.Cyclic#5.Customized::IN_CU.tMCB_Rac;
+	Cyclic#5.HalIO::tMCB_Rdy AT %Q.Cyclic#5.Customized::IN_CU.tMCB_Rdy;
+	Cyclic#4.HalIO::tMCB_Rel_Sync AT %Q.Cyclic#5.Customized::IN_CU.tMCB_Rel_Sync;
+	Cyclic#5.HalIO::tMCB_Rem AT %Q.Cyclic#5.Customized::IN_CU.tMCB_Rem;
+	Cyclic#5.HalIO::tMCB_SM AT %Q.Cyclic#5.Customized::IN_CU.tMCB_SM;
+	Cyclic#5.HalIO::tMMD_FW_Version AT %Q.Cyclic#5.Customized::IN_CU.tMMD_FW_Version;
+	Cyclic#5.HalIO::tMns_MDF AT %Q.Cyclic#5.Customized::IN_CU.tMns_MDF;
+	Cyclic#5.HalIO::tMnsOk AT %Q.Cyclic#5.Customized::IN_CU.tMnsOk;
+	Cyclic#5.HalIO::tMO_SaftyLoop AT %Q.Cyclic#5.Customized::IN_CU.tMO_SaftyLoop;
+	Cyclic#5.HalIO::tOlShortCirc AT %Q.Cyclic#5.Customized::IN_CU.tOlShortCirc;
+	Cyclic#5.HalIO::tOnly_Island AT %Q.Cyclic#5.Customized::IN_CU.tOnly_Island;
+	Cyclic#5.HalIO::tOutAirER_LouOpened AT %Q.Cyclic#5.Customized::IN_CU.tOutAirER_LouOpened;
+	Cyclic#5.HalIO::tP_Act AT %Q.Cyclic#5.Customized::IN_CU.tP_Act;
+	Cyclic#5.HalIO::tP_FC_RMC_neg AT %Q.Cyclic#5.Customized::IN_CU.tP_FC_RMC_neg;
+	Cyclic#5.HalIO::tP_FC_RMC_pos AT %Q.Cyclic#5.Customized::IN_CU.tP_FC_RMC_pos;
+	Cyclic#4.HalIO::tP_GenC_SetEUCOf AT %Q.Cyclic#5.Customized::IN_CU.tP_GenC_SetEUCOf;
+	Cyclic#4.HalIO::tP_GenC_SetEUCOn AT %Q.Cyclic#5.Customized::IN_CU.tP_GenC_SetEUCOn;
+	Cyclic#4.HalIO::tP_GenC_SetFix1EU AT %Q.Cyclic#5.Customized::IN_CU.tP_GenC_SetFix1EU; (*V4.03.00*)
+	Cyclic#4.HalIO::tP_GenC_SetFix2EU AT %Q.Cyclic#5.Customized::IN_CU.tP_GenC_SetFix2EU; (*V4.03.00*)
+	Cyclic#4.HalIO::tP_GenC_SetFix3EU AT %Q.Cyclic#5.Customized::IN_CU.tP_GenC_SetFix3EU; (*V4.03.00*)
+	Cyclic#4.HalIO::tP_GenC_SetFix4EU AT %Q.Cyclic#5.Customized::IN_CU.tP_GenC_SetFix4EU; (*V4.03.00*)
+	Cyclic#4.HalIO::tP_GenC_SetFix5EU AT %Q.Cyclic#5.Customized::IN_CU.tP_GenC_SetFix5EU; (*V4.03.00*)
+	Cyclic#4.HalIO::tP_GT_Max_Backfire AT %Q.Cyclic#5.Customized::IN_CU.tP_GT_Max_Backfire;
+	Cyclic#5.HalIO::tP_Heat AT %Q.Cyclic#5.Customized::IN_CU.tP_Heat; (*STM 2*)
+	Cyclic#5.HalIO::tP_Mns_AnaIn AT %Q.Cyclic#5.Customized::IN_CU.tP_Mns_AnaIn; (*V4.4 Basisupdate 01*)
+	Cyclic#5.HalIO::tP_Red_CH4Active AT %Q.Cyclic#5.Customized::IN_CU.tP_Red_CH4Active; (*v4.1.0.0*)
+	Cyclic#6.HalIO::tP_Red_AI_Norm AT %Q.Cyclic#6.Customized::IN_CU.tP_Red_AI_Norm; (*new, V4.06*)
+	Cyclic#5.HalIO::tP_Red_GasPrActive AT %Q.Cyclic#5.Customized::IN_CU.tP_Red_GasPrActive; (*v4.1.0.0*)
+	Cyclic#5.HalIO::tP_Red_SuctPrActive AT %Q.Cyclic#5.Customized::IN_CU.tP_Red_SuctPrActive; (*v4.1.0.0*)
+	Cyclic#5.HalIO::tP_Set_ExtAI_Norm AT %Q.Cyclic#5.Customized::IN_CU.tP_Set_ExtAI_Norm; (*New: Mathias 24.04.2013*)
+	Cyclic#5.HalIO::tP_Set_FC AT %Q.Cyclic#5.Customized::IN_CU.tP_Set_FC;
+	Cyclic#4.HalIO::tP0_BLOCK_DEIE AT %Q.Cyclic#5.Customized::IN_CU.tP0_BLOCK_DEIE;
+	Cyclic#4.HalIO::tPCaComp_BackFireDev AT %Q.Cyclic#5.Customized::IN_CU.tPCaComp_BackFireDev; (* v4.2.0.0 *)
+	Cyclic#4.HalIO::tPCbComp_BackFireDev AT %Q.Cyclic#5.Customized::IN_CU.tPCbComp_BackFireDev; (* v4.2.0.0 *)
+	Cyclic#5.HalIO::tPF_Act AT %Q.Cyclic#5.Customized::IN_CU.tPF_Act;
+	Cyclic#4.HalIO::tPF_GenC_SetEUCOf AT %Q.Cyclic#5.Customized::IN_CU.tPF_GenC_SetEUCOf;
+	Cyclic#4.HalIO::tPF_GenC_SetEUCOn AT %Q.Cyclic#5.Customized::IN_CU.tPF_GenC_SetEUCOn;
+	Cyclic#4.HalIO::tPF_GenC_SetFix1EU AT %Q.Cyclic#5.Customized::IN_CU.tPF_GenC_SetFix1EU;
+	Cyclic#4.HalIO::tPF_GenC_SetFix2EU AT %Q.Cyclic#5.Customized::IN_CU.tPF_GenC_SetFix2EU;
+	Cyclic#4.HalIO::tPF_GenC_SetFix3EU AT %Q.Cyclic#5.Customized::IN_CU.tPF_GenC_SetFix3EU;
+	Cyclic#4.HalIO::tPF_GenC_SetFix4EU AT %Q.Cyclic#5.Customized::IN_CU.tPF_GenC_SetFix4EU;
+	Cyclic#4.HalIO::tPF_GenC_SetFix5EU AT %Q.Cyclic#5.Customized::IN_CU.tPF_GenC_SetFix5EU;
+	Cyclic#4.HalIO::tPFC_SetCOf AT %Q.Cyclic#5.Customized::IN_CU.tPFC_SetCOf;
+	Cyclic#4.HalIO::tPFC_SetCOn AT %Q.Cyclic#5.Customized::IN_CU.tPFC_SetCOn;
+	Cyclic#4.HalIO::tPFUC_GenC_SetEUCOf AT %Q.Cyclic#5.Customized::IN_CU.tPFUC_GenC_SetEUCOf;
+	Cyclic#4.HalIO::tPFUC_GenC_SetEUCOn AT %Q.Cyclic#5.Customized::IN_CU.tPFUC_GenC_SetEUCOn;
+	Cyclic#4.HalIO::tQP_GenC_SetEUCOn AT %Q.Cyclic#5.Customized::IN_CU.tQP_GenC_SetEUCOn;
+	Cyclic#4.HalIO::tQP_GenC_SetEUCOf AT %Q.Cyclic#5.Customized::IN_CU.tQP_GenC_SetEUCOf;
+	Cyclic#4.HalIO::tPLim_GenC_SetEUCOf AT %Q.Cyclic#5.Customized::IN_CU.tPLim_GenC_SetEUCOf;
+	Cyclic#4.HalIO::tPLim_GenC_SetEUCOn AT %Q.Cyclic#5.Customized::IN_CU.tPLim_GenC_SetEUCOn;
+	Cyclic#5.HalIO::tPLim_GenC_SetEUPFix1 AT %Q.Cyclic#5.Customized::IN_CU.tPLim_GenC_SetEUPFix1;
+	Cyclic#5.HalIO::tPLim_GenC_SetEUPFix2 AT %Q.Cyclic#5.Customized::IN_CU.tPLim_GenC_SetEUPFix2;
+	Cyclic#5.HalIO::tPLim_GenC_SetEUPFix3 AT %Q.Cyclic#5.Customized::IN_CU.tPLim_GenC_SetEUPFix3;
+	Cyclic#5.HalIO::tPLim_GenC_SetEUPFix4 AT %Q.Cyclic#5.Customized::IN_CU.tPLim_GenC_SetEUPFix4;
+	Cyclic#5.HalIO::tPLim_GenC_SetEUPFix5 AT %Q.Cyclic#5.Customized::IN_CU.tPLim_GenC_SetEUPFix5;
+	Cyclic#5.HalIO::tPos_Act_GM1_Norm AT %Q.Cyclic#5.Customized::IN_CU.tPos_Act_GM1_Norm;
+	Cyclic#5.HalIO::tPos_Act_CBV_A1 AT %Q.Cyclic#5.Customized::IN_CU.tPos_Act_CBV_A1; (*V04.10.00.00*)
+	Cyclic#5.HalIO::tPos_Act_CBV_A2 AT %Q.Cyclic#5.Customized::IN_CU.tPos_Act_CBV_A2; (*V04.10.00.00*)
+	Cyclic#5.HalIO::tPos_Act_CBV_B1 AT %Q.Cyclic#5.Customized::IN_CU.tPos_Act_CBV_B1; (*V04.10.00.00*)
+	Cyclic#5.HalIO::tPos_Act_CBV_B2 AT %Q.Cyclic#5.Customized::IN_CU.tPos_Act_CBV_B2; (*V04.10.00.00*)
+	Cyclic#5.HalIO::tPos_SGM_Enc1 AT %Q.Cyclic#5.Customized::IN_CU.tPos_SGM_Enc1;
+	Cyclic#5.HalIO::tPos_SGM_Enc2 AT %Q.Cyclic#5.Customized::IN_CU.tPos_SGM_Enc2;
+	Cyclic#5.HalIO::tPos_SGM_Enc3 AT %Q.Cyclic#5.Customized::IN_CU.tPos_SGM_Enc3;
+	Cyclic#5.HalIO::tPr_AirStarter_Supply AT %Q.Cyclic#5.Customized::IN_CU.tPr_AirStarter_Supply;
+	Cyclic#5.HalIO::tPr_AirStarter_Tank AT %Q.Cyclic#5.Customized::IN_CU.tPr_AirStarter_Tank;
+	Cyclic#4.HalIO::tPr_CC AT %Q.Cyclic#5.Customized::IN_CU.tPr_CC;
+	Cyclic#5.HalIO::tPr_CCircuit_Lo AT %Q.Cyclic#5.Customized::IN_CU.tPr_CCircuit_Lo;
+	Cyclic#5.HalIO::tPr_Ch_P2 AT %Q.Cyclic#5.Customized::IN_CU.tPr_Ch_P2; (*V04.10.00.00*)
+	Cyclic#5.HalIO::tPr_Ch_P2s AT %Q.Cyclic#5.Customized::IN_CU.tPr_Ch_P2s;
+	Cyclic#5.HalIO::tPr_ChC_Lo AT %Q.Cyclic#5.Customized::IN_CU.tPr_ChC_Lo;
+	Cyclic#5.HalIO::tPr_ECW AT %Q.Cyclic#5.Customized::IN_CU.tPr_ECW;
+	Cyclic#5.HalIO::tPr_EG_Hi AT %Q.Cyclic#5.Customized::IN_CU.tPr_EG_Hi;
+	Cyclic#5.HalIO::tPr_EngLubOil AT %Q.Cyclic#5.Customized::IN_CU.tPr_EngLubOil;
+	Cyclic#4.HalIO::tPr_EO_Mod_Out AT %Q.Cyclic#5.Customized::IN_CU.tPr_EO_Mod_Out; (*V04.03.00.00*)
+	Cyclic#5.HalIO::tPr_EOF_DiffMon AT %Q.Cyclic#5.Customized::IN_CU.tPr_EOF_DiffMon;
+	Cyclic#2.HalIO::tPr_GR_I AT %Q.Cyclic#2.Customized::IN_CU.tPr_GR_I; (*V04.02.00.00*)
+	Cyclic#2.HalIO::tPr_GR_II AT %Q.Cyclic#2.Customized::IN_CU.tPr_GR_II; (*V04.02.00.00*)
+	Cyclic#5.HalIO::tPr_GT_Gas AT %Q.Cyclic#5.Customized::IN_CU.tPr_GT_Gas;
+	Cyclic#5.HalIO::tPr_GT_MinBefCompr AT %Q.Cyclic#5.Customized::IN_CU.tPr_GT_MinBefCompr;
+	Cyclic#5.HalIO::tPr_GT_Suct AT %Q.Cyclic#5.Customized::IN_CU.tPr_GT_Suct;
+	Cyclic#5.HalIO::tPr_GT1_Max AT %Q.Cyclic#5.Customized::IN_CU.tPr_GT1_Max;
+	Cyclic#5.HalIO::tPr_GT1_Min AT %Q.Cyclic#5.Customized::IN_CU.tPr_GT1_Min;
+	Cyclic#5.HalIO::tPr_HW_Hi AT %Q.Cyclic#5.Customized::IN_CU.tPr_HW_Hi;
+	Cyclic#5.HalIO::tPr_HW_Hi1 AT %Q.Cyclic#5.Customized::IN_CU.tPr_HW_Hi1;
+	Cyclic#5.HalIO::tPr_HW_Lo AT %Q.Cyclic#5.Customized::IN_CU.tPr_HW_Lo;
+	Cyclic#4.HalIO::tPr_HW_Re_HT AT %Q.Cyclic#5.Customized::IN_CU.tPr_HW_Re_HT; (*V04.03.00.00*)
+	Cyclic#4.HalIO::tPr_HW_Re_LT AT %Q.Cyclic#5.Customized::IN_CU.tPr_HW_Re_LT; (*V04.03.00.00*)
+	Cyclic#4.HalIO::tPr_HW_Re_PreH_ECW AT %Q.Cyclic#5.Customized::IN_CU.tPr_HW_Re_PreH_ECW; (*V04.03.00.00*)
+	Cyclic#4.HalIO::tPr_HW_Re_PreH_EO AT %Q.Cyclic#5.Customized::IN_CU.tPr_HW_Re_PreH_EO; (*V04.03.00.00*)
+	Cyclic#4.HalIO::tPr_HW_Su_HT AT %Q.Cyclic#5.Customized::IN_CU.tPr_HW_Su_HT; (*V04.03.00.00*)
+	Cyclic#4.HalIO::tPr_HW_Su_LT AT %Q.Cyclic#5.Customized::IN_CU.tPr_HW_Su_LT; (*V04.03.00.00*)
+	Cyclic#2.HalIO::tPr_MGT_a_Filt AT %Q.Cyclic#2.Customized::IN_CU.tPr_MGT_a_Filt; (*V04.02.00.00*)
+	Cyclic#5.HalIO::tPr_PC AT %Q.Cyclic#5.Customized::IN_CU.tPr_PC;
+	Cyclic#5.HalIO::tPr_PCG AT %Q.Cyclic#5.Customized::IN_CU.tPr_PCG;
+	Cyclic#5.HalIO::tPr_PCG_Min AT %Q.Cyclic#5.Customized::IN_CU.tPr_PCG_Min;
+	Cyclic#2.HalIO::tPr_PCGT_a_Filt AT %Q.Cyclic#2.Customized::IN_CU.tPr_PCGT_a_Filt; (*V04.05.00.00 changed*)
+	Cyclic#2.HalIO::tPr_PCGT_Out AT %Q.Cyclic#2.Customized::IN_CU.tPr_PCGT_Out; (*V04.02.00.00*)
+	Cyclic#5.HalIO::tPrDiff_ER AT %Q.Cyclic#5.Customized::IN_CU.tPrDiff_ER; (*STM am 11/02/16 hinzu*)
+	Cyclic#5.HalIO::tQ_Act AT %Q.Cyclic#5.Customized::IN_CU.tQ_Act;
+	Cyclic#5.HalIO::tQ_GenC_SetEU AT %Q.Cyclic#5.Customized::IN_CU.tQ_GenC_SetEU;
+	Cyclic#4.HalIO::tQ_GenC_SetEUCOf AT %Q.Cyclic#5.Customized::IN_CU.tQ_GenC_SetEUCOf;
+	Cyclic#4.HalIO::tQ_GenC_SetEUCOn AT %Q.Cyclic#5.Customized::IN_CU.tQ_GenC_SetEUCOn;
+	Cyclic#5.HalIO::tQ_GenC_SetFix1EU AT %Q.Cyclic#5.Customized::IN_CU.tQ_GenC_SetFix1EU;
+	Cyclic#5.HalIO::tQ_GenC_SetFix2EU AT %Q.Cyclic#5.Customized::IN_CU.tQ_GenC_SetFix2EU;
+	Cyclic#5.HalIO::tQ_GenC_SetFix3EU AT %Q.Cyclic#5.Customized::IN_CU.tQ_GenC_SetFix3EU;
+	Cyclic#5.HalIO::tQ_GenC_SetFix4EU AT %Q.Cyclic#5.Customized::IN_CU.tQ_GenC_SetFix4EU;
+	Cyclic#5.HalIO::tQ_GenC_SetFix5EU AT %Q.Cyclic#5.Customized::IN_CU.tQ_GenC_SetFix5EU;
+	Cyclic#4.HalIO::tQLim_GenC_SetEUCOf AT %Q.Cyclic#5.Customized::IN_CU.tQLim_GenC_SetEUCOf;
+	Cyclic#4.HalIO::tQLim_GenC_SetEUCOn AT %Q.Cyclic#5.Customized::IN_CU.tQLim_GenC_SetEUCOn;
+	Cyclic#4.HalIO::tQPC_GenC_SetEUCOf AT %Q.Cyclic#5.Customized::IN_CU.tQPC_GenC_SetEUCOf;
+	Cyclic#4.HalIO::tQPC_GenC_SetEUCOn AT %Q.Cyclic#5.Customized::IN_CU.tQPC_GenC_SetEUCOn;
+	Cyclic#4.HalIO::tQUC_GenC_SetEUCOf AT %Q.Cyclic#5.Customized::IN_CU.tQUC_GenC_SetEUCOf;
+	Cyclic#4.HalIO::tQUC_GenC_SetEUCOn AT %Q.Cyclic#5.Customized::IN_CU.tQUC_GenC_SetEUCOn;
+	Cyclic#5.HalIO::tRel_BS AT %Q.Cyclic#5.Customized::IN_CU.tRel_BS;
+	Cyclic#5.HalIO::tRel_I AT %Q.Cyclic#5.Customized::IN_CU.tRel_I;
+	Cyclic#5.HalIO::tRelAux AT %Q.Cyclic#5.Customized::IN_CU.tRelAux;
+	Cyclic#5.HalIO::tRelGasPlant AT %Q.Cyclic#5.Customized::IN_CU.tRelGasPlant;
+	Cyclic#5.HalIO::tReq_PowMod AT %Q.Cyclic#5.Customized::IN_CU.tReq_PowMod;
+	Cyclic#4.HalIO::tRMC_SetCOf AT %Q.Cyclic#5.Customized::IN_CU.tRMC_SetCOf;
+	Cyclic#4.HalIO::tRMC_SetCOn AT %Q.Cyclic#5.Customized::IN_CU.tRMC_SetCOn;
+	Cyclic#4.HalIO::tRSE_SetEUCOf AT %Q.Cyclic#5.Customized::IN_CU.tRSE_SetEUCOf;
+	Cyclic#4.HalIO::tRSE_SetEUCOn AT %Q.Cyclic#5.Customized::IN_CU.tRSE_SetEUCOn;
+	Cyclic#5.HalIO::tS_Act AT %Q.Cyclic#5.Customized::IN_CU.tS_Act;
+	Cyclic#5.HalIO::tSafetyLoop_EmStop AT %Q.Cyclic#5.Customized::IN_CU.tSafetyLoop_EmStop;
+	Cyclic#5.HalIO::tSafetyLoop_Eng AT %Q.Cyclic#5.Customized::IN_CU.tSafetyLoop_Eng;
+	Cyclic#5.HalIO::tSafetyLoop_HWC AT %Q.Cyclic#5.Customized::IN_CU.tSafetyLoop_HWC;
+	Cyclic#5.HalIO::tScavFanOp AT %Q.Cyclic#5.Customized::IN_CU.tScavFanOp;
+	Cyclic#5.HalIO::tScavVaClosed AT %Q.Cyclic#5.Customized::IN_CU.tScavVaClosed;
+	Cyclic#5.HalIO::tScavVaFailure AT %Q.Cyclic#5.Customized::IN_CU.tScavVaFailure;
+	Cyclic#5.HalIO::tScavVaOpened AT %Q.Cyclic#5.Customized::IN_CU.tScavVaOpened;
+	Cyclic#5.HalIO::tSet_FC_COf AT %Q.Cyclic#5.Customized::IN_CU.tSet_FC_COf;
+	Cyclic#5.HalIO::tSet_FC_COn AT %Q.Cyclic#5.Customized::IN_CU.tSet_FC_COn;
+	Cyclic#5.HalIO::tSet_ILF_COf AT %Q.Cyclic#5.Customized::IN_CU.tSet_ILF_COf;
+	Cyclic#5.HalIO::tSet_ILF_COn AT %Q.Cyclic#5.Customized::IN_CU.tSet_ILF_COn;
+	Cyclic#5.HalIO::tSet_PU_COn AT %Q.Cyclic#5.Customized::IN_CU.tSet_PU_COn;
+	Cyclic#5.HalIO::tSet_PU_COf AT %Q.Cyclic#5.Customized::IN_CU.tSet_PU_COf;
+	Cyclic#5.HalIO::tT_AirER AT %Q.Cyclic#5.Customized::IN_CU.tT_AirER;
+	Cyclic#5.HalIO::tT_AirER_Ext_Hi AT %Q.Cyclic#5.Customized::IN_CU.tT_AirER_Ext_Hi;
+	Cyclic#5.HalIO::tT_AirIFCP_Hi AT %Q.Cyclic#5.Customized::IN_CU.tT_AirIFCP_Hi;
+	Cyclic#5.HalIO::tT_AirOutdoor AT %Q.Cyclic#5.Customized::IN_CU.tT_AirOutdoor;
+	Cyclic#5.HalIO::tT_Ch_T2s AT %Q.Cyclic#5.Customized::IN_CU.tT_Ch_T2s;
+	Cyclic#5.HalIO::tT_ChCW_Hi AT %Q.Cyclic#5.Customized::IN_CU.tT_ChCW_Hi;
+	Cyclic#5.HalIO::tT_CO2_Hi AT %Q.Cyclic#5.Customized::IN_CU.tT_CO2_Hi;
+	Cyclic#5.HalIO::tT_ECW AT %Q.Cyclic#5.Customized::IN_CU.tT_ECW;
+	Cyclic#5.HalIO::tT_ECW.Ai AT %Q.Cyclic#5.Customized::IN_CU.rT_ECW;
+	Cyclic#4.HalIO::tT_ECW_AfEng AT %Q.Cyclic#5.Customized::IN_CU.tT_ECW_AfEng; (*V04.03.00.00*)
+	Cyclic#4.HalIO::tT_ECW_Mod_In AT %Q.Cyclic#5.Customized::IN_CU.tT_ECW_Mod_In; (*V04.03.00.00*)
+	Cyclic#4.HalIO::tT_ECW_Mod_Out AT %Q.Cyclic#5.Customized::IN_CU.tT_ECW_Mod_Out; (*V04.03.00.00*)
+	Cyclic#5.HalIO::tT_EG_Cyl AT %Q.Cyclic#5.Customized::IN_CU.tT_EG_Cyl;
+	Cyclic#5.HalIO::tT_EGaCat AT %Q.Cyclic#5.Customized::IN_CU.tT_EGaCat;
+	Cyclic#5.HalIO::tT_EGaHE AT %Q.Cyclic#5.Customized::IN_CU.tT_EGaHE;
+	Cyclic#5.HalIO::tT_EGaHE1 AT %Q.Cyclic#5.Customized::IN_CU.tT_EGaHE1; (*added in V04.07 Basisupdate*)
+	Cyclic#5.HalIO::tT_EGaHE2 AT %Q.Cyclic#5.Customized::IN_CU.tT_EGaHE2; (*added in V04.07 Basisupdate*)
+	Cyclic#5.HalIO::tT_EGaHPTC_A AT %Q.Cyclic#5.Customized::IN_CU.tT_EGaHPTC_A; (*added in V04.07 Basisupdate*)
+	Cyclic#5.HalIO::tT_EGaHPTC_B AT %Q.Cyclic#5.Customized::IN_CU.tT_EGaHPTC_B; (*added in V04.07 Basisupdate*)
+	Cyclic#5.HalIO::tT_EGaLPTC_A AT %Q.Cyclic#5.Customized::IN_CU.tT_EGaLPTC_A; (*added in V04.07 Basisupdate*)
+	Cyclic#5.HalIO::tT_EGaLPTC_B AT %Q.Cyclic#5.Customized::IN_CU.tT_EGaLPTC_B; (*added in V04.07 Basisupdate*)
+	Cyclic#5.HalIO::tT_EGaTC AT %Q.Cyclic#5.Customized::IN_CU.tT_EGaTC;
+	Cyclic#5.HalIO::tT_EGbHPTC_A AT %Q.Cyclic#5.Customized::IN_CU.tT_EGbHPTC_A; (*added in V04.07 Basisupdate*)
+	Cyclic#5.HalIO::tT_EGbHPTC_B AT %Q.Cyclic#5.Customized::IN_CU.tT_EGbHPTC_B; (*added in V04.07 Basisupdate*)
+	Cyclic#5.HalIO::tT_EGbTC AT %Q.Cyclic#5.Customized::IN_CU.tT_EGbTC; (*added in V04.07 Basisupdate*)
+	Cyclic#5.HalIO::tT_EGbCat AT %Q.Cyclic#5.Customized::IN_CU.tT_EGbCat;
+	Cyclic#5.HalIO::tT_EO AT %Q.Cyclic#5.Customized::IN_CU.tT_EO;
+	Cyclic#5.HalIO::tT_EO_Mod_In AT %Q.Cyclic#5.Customized::IN_CU.tT_EO_Mod_In; (*V04.03.00.00*)
+	Cyclic#5.HalIO::tT_EO_Mod_Out AT %Q.Cyclic#5.Customized::IN_CU.tT_EO_Mod_Out; (*V04.03.00.00*)
+	Cyclic#5.HalIO::tT_Gen_Bear_A_Act AT %Q.Cyclic#5.Customized::IN_CU.tT_Gen_Bear_A_Act;
+	Cyclic#5.HalIO::tT_Gen_Bear_B_Act AT %Q.Cyclic#5.Customized::IN_CU.tT_Gen_Bear_B_Act;
+	Cyclic#5.HalIO::tT_Gen_Wind_Act_L1 AT %Q.Cyclic#5.Customized::IN_CU.tT_Gen_Wind_Act_L1;
+	Cyclic#5.HalIO::tT_Gen_Wind_Act_L2 AT %Q.Cyclic#5.Customized::IN_CU.tT_Gen_Wind_Act_L2;
+	Cyclic#5.HalIO::tT_Gen_Wind_Act_L3 AT %Q.Cyclic#5.Customized::IN_CU.tT_Gen_Wind_Act_L3;
+	Cyclic#2.HalIO::tT_GR AT %Q.Cyclic#2.Customized::IN_CU.tT_GR; (*V04.02.00.00*)
+	Cyclic#5.HalIO::tT_GT AT %Q.Cyclic#5.Customized::IN_CU.tT_GT;
+	Cyclic#5.HalIO::tT_GT_Ok AT %Q.Cyclic#5.Customized::IN_CU.tT_GT_Ok;
+	Cyclic#5.HalIO::tT_HW_Hi AT %Q.Cyclic#5.Customized::IN_CU.tT_HW_Hi;
+	Cyclic#5.HalIO::tT_HW_Hi1 AT %Q.Cyclic#5.Customized::IN_CU.tT_HW_Hi1;
+	Cyclic#5.HalIO::tT_HW_Re AT %Q.Cyclic#5.Customized::IN_CU.tT_HW_Re;
+	Cyclic#4.HalIO::tT_HW_Re_LT AT %Q.Cyclic#5.Customized::IN_CU.tT_HW_Re_LT; (*V04.03.00.00*)
+	Cyclic#4.HalIO::tT_HW_Re_PreH_ECW AT %Q.Cyclic#5.Customized::IN_CU.tT_HW_Re_PreH_ECW; (*V04.03.00.00*)
+	Cyclic#4.HalIO::tT_HW_Re_PreH_EO AT %Q.Cyclic#5.Customized::IN_CU.tT_HW_Re_PreH_EO; (*V04.03.00.00*)
+	Cyclic#5.HalIO::tT_HW_ReAfEC AT %Q.Cyclic#5.Customized::IN_CU.tT_HW_ReAfEC;
+	Cyclic#5.HalIO::tT_HW_ReBeEng AT %Q.Cyclic#5.Customized::IN_CU.tT_HW_ReBeEng;
+	Cyclic#5.HalIO::tT_HW_Su AT %Q.Cyclic#5.Customized::IN_CU.tT_HW_Su;
+	Cyclic#4.HalIO::tT_HW_Su_LT AT %Q.Cyclic#5.Customized::IN_CU.tT_HW_Su_LT; (*V04.03.00.00*)
+	Cyclic#4.HalIO::tT_HW_Su_PreH_ECW AT %Q.Cyclic#5.Customized::IN_CU.tT_HW_Su_PreH_ECW; (*V04.03.00.00*)
+	Cyclic#4.HalIO::tT_HW_Su_PreH_EO AT %Q.Cyclic#5.Customized::IN_CU.tT_HW_Su_PreH_EO; (*V04.03.00.00*)
+	Cyclic#5.HalIO::tT_Re_PriCirc AT %Q.Cyclic#5.Customized::IN_CU.tT_Re_PriCirc; (*STM*)
+	Cyclic#5.HalIO::tT_Re_SecCirc AT %Q.Cyclic#5.Customized::IN_CU.tT_Re_SecCirc; (*STM*)
+	Cyclic#5.HalIO::tT_Su_PriCirc AT %Q.Cyclic#5.Customized::IN_CU.tT_Su_PriCirc; (*STM*)
+	Cyclic#5.HalIO::tT_Su_SecCirc AT %Q.Cyclic#5.Customized::IN_CU.tT_Su_SecCirc; (*STM*)
+	Cyclic#5.HalIO::tTBMode AT %Q.Cyclic#5.Customized::IN_CU.tTBMode;
+	Cyclic#5.HalIO::tTransformerTrip AT %Q.Cyclic#5.Customized::IN_CU.tTransformerTrip;
+	Cyclic#5.HalIO::tTransformerWarning AT %Q.Cyclic#5.Customized::IN_CU.tTransformerWarning;
+	Cyclic#5.HalIO::tU_Avg AT %Q.Cyclic#5.Customized::IN_CU.tU_Avg;
+	Cyclic#5.HalIO::tU_Gen_Contr_Fail AT %Q.Cyclic#5.Customized::IN_CU.tU_Gen_Contr_Fail;
+	Cyclic#5.HalIO::tU_Gen_Dec AT %Q.Cyclic#5.Customized::IN_CU.tU_Gen_Dec;
+	Cyclic#5.HalIO::tU_Gen_Exc AT %Q.Cyclic#5.Customized::IN_CU.tU_Gen_Exc;
+	Cyclic#5.HalIO::tU_Gen_Inc AT %Q.Cyclic#5.Customized::IN_CU.tU_Gen_Inc;
+	Cyclic#5.HalIO::tU_Gen_LimHi AT %Q.Cyclic#5.Customized::IN_CU.tU_Gen_LimHi;
+	Cyclic#5.HalIO::tU_Gen_LimLo AT %Q.Cyclic#5.Customized::IN_CU.tU_Gen_LimLo;
+	Cyclic#5.HalIO::tU_Gen_LimLo2 AT %Q.Cyclic#5.Customized::IN_CU.tU_Gen_LimLo2;
+	Cyclic#5.HalIO::tU_GenDiode_Fail AT %Q.Cyclic#5.Customized::IN_CU.tU_GenDiode_Fail;
+	Cyclic#5.HalIO::tU_GenOverVolt AT %Q.Cyclic#5.Customized::IN_CU.tU_GenOverVolt;
+	Cyclic#5.HalIO::tU_L1L2 AT %Q.Cyclic#5.Customized::IN_CU.tU_L1L2;
+	Cyclic#5.HalIO::tU_L1N AT %Q.Cyclic#5.Customized::IN_CU.tU_L1N;
+	Cyclic#5.HalIO::tU_L2L3 AT %Q.Cyclic#5.Customized::IN_CU.tU_L2L3;
+	Cyclic#5.HalIO::tU_L2N AT %Q.Cyclic#5.Customized::IN_CU.tU_L2N;
+	Cyclic#5.HalIO::tU_L3L1 AT %Q.Cyclic#5.Customized::IN_CU.tU_L3L1;
+	Cyclic#5.HalIO::tU_L3N AT %Q.Cyclic#5.Customized::IN_CU.tU_L3N;
+	Cyclic#5.HalIO::tU_MMD_Asy AT %Q.Cyclic#5.Customized::IN_CU.tU_MMD_Asy;
+	Cyclic#5.HalIO::tU_MMD_Synch1 AT %Q.Cyclic#5.Customized::IN_CU.tU_MMD_Synch1;
+	Cyclic#5.HalIO::tU_MMD_Synch2 AT %Q.Cyclic#5.Customized::IN_CU.tU_MMD_Synch2;
+	Cyclic#5.HalIO::tU_StarterBat_Lo AT %Q.Cyclic#5.Customized::IN_CU.tU_StarterBat_Lo;
+	Cyclic#5.HalIO::tVol_GT AT %Q.Cyclic#5.Customized::IN_CU.tVol_GT;
+	Cyclic#5.HalIO::tHA2CU AT %Q.Cyclic#5.Customized::IN_CU.tHA2CU;
+	Cyclic#5.HalIO::tCO_Alarm AT %Q.Cyclic#5.Customized::IN_CU.tCO_Alarm;
+	Cyclic#5.HalIO::tU_SetExtAI_Norm AT %Q.Cyclic#5.Customized::IN_CU.tU_SetExtAI_Norm;
+	Cyclic#5.HalIO::tThR_Val_Air AT %Q.Cyclic#5.Customized::IN_CU.tThR_Val_Air;
+	Cyclic#5.HalIO::tThR_GT_COn1 AT %Q.Cyclic#5.Customized::IN_CU.tThR_GT_COn1;
+	Cyclic#5.HalIO::tThR_GT_COn2 AT %Q.Cyclic#5.Customized::IN_CU.tThR_GT_COn2;
+	Cyclic#5.HalIO::tPos_ThR_Val_In1 AT %Q.Cyclic#5.Customized::IN_CU.tPos_ThR_Val_In1;
+	Cyclic#5.HalIO::tPos_ThR_Val_In2 AT %Q.Cyclic#5.Customized::IN_CU.tPos_ThR_Val_In2;
+	Cyclic#5.HalIO::tPos_ThR_Val_Mid AT %Q.Cyclic#5.Customized::IN_CU.tPos_ThR_Val_Mid;
+	Cyclic#5.HalIO::tPos_ThR_Val_Out1 AT %Q.Cyclic#5.Customized::IN_CU.tPos_ThR_Val_Out1;
+	Cyclic#5.HalIO::tPos_ThR_Val_Out2 AT %Q.Cyclic#5.Customized::IN_CU.tPos_ThR_Val_Out2;
+	Cyclic#5.HalIO::tExtCtrOk AT %Q.Cyclic#5.Customized::IN_CU.tExtCtrOk;
+	Cyclic#5.HalIO::tPos_HW_ReValve AT %Q.Cyclic#5.Customized::IN_CU.tPos_HW_ReValve; (*added in V4.07.1 Basisupdate*)
+	Cyclic#5.HalIO::tPos_HW_EC_ReValve AT %Q.Cyclic#5.Customized::IN_CU.tPos_HW_EC_ReValve; (*added in V4.07.1 Basisupdate*)
+	Cyclic#5.HalIO::tPos_ChC_Valve AT %Q.Cyclic#5.Customized::IN_CU.tPos_ChC_Valve; (*added in V4.07.1 Basisupdate*)
+	Cyclic#5.HalIO::tBHV_Op AT %Q.Cyclic#5.Customized::IN_CU.tBHV_Op; (*added in V4.07.1 Basisupdate*)
+	Cyclic#5.HalIO::tDemnd_BHV AT %Q.Cyclic#5.Customized::IN_CU.tDemnd_BHV; (*added in V4.07.1 Basisupdate*)
+	Cyclic#5.HalIO::tN_Set_ExtAI_Norm AT %Q.Cyclic#5.Customized::IN_CU.tN_Set_ExtAI_Norm;
+	Cyclic#5.HalIO::OUT_HA.rAng_MMD_Diff AT %Q.Cyclic#5.Customized::IN_CU.rAng_MMD_Diff; (*V4.10 added*)
+	Cyclic#5.HalIO::tPr_Ch_P1HP_A AT %Q.Cyclic#5.Customized::IN_CU.tPr_Ch_P1HP_A; (*V4.10 added*)
+	Cyclic#5.HalIO::tPr_Ch_P1HP_B AT %Q.Cyclic#5.Customized::IN_CU.tPr_Ch_P1HP_B; (*V4.10 added*)
+	Cyclic#5.HalIO::tT_Ch_T1HP_A AT %Q.Cyclic#5.Customized::IN_CU.tT_Ch_T1HP_A; (*V4.10 added*)
+	Cyclic#5.HalIO::tT_Ch_T1HP_B AT %Q.Cyclic#5.Customized::IN_CU.tT_Ch_T1HP_B; (*V4.10 added*)
+	Cyclic#5.HalIO::tPr_TCO AT %Q.Cyclic#5.Customized::IN_CU.tPr_TCO; (*V4.10 added*)
+	Cyclic#5.HalIO::tPr_OFUbFilt AT %Q.Cyclic#5.Customized::IN_CU.tPr_OFUbFilt; (*V4.10 added*)
+	Cyclic#5.HalIO::tPr_OFUaFilt AT %Q.Cyclic#5.Customized::IN_CU.tPr_OFUaFilt; (*V4.10 added*)
+	Cyclic#5.HalIO::tN_TCHP_A AT %Q.Cyclic#5.Customized::IN_CU.tN_TCHP_A; (*V4.10 added*)
+	Cyclic#5.HalIO::tN_TCHP_B AT %Q.Cyclic#5.Customized::IN_CU.tN_TCHP_B; (*V4.10 added*)
+	Cyclic#5.HalIO::tN_TCLP_A AT %Q.Cyclic#5.Customized::IN_CU.tN_TCLP_A; (*V4.10 added*)
+	Cyclic#5.HalIO::tN_TCLP_B AT %Q.Cyclic#5.Customized::IN_CU.tN_TCLP_B; (*V4.10 added*)
+	Cyclic#5.HalIO::tRelEngOpFromGSy AT %Q.Cyclic#5.Customized::IN_CU.tRelEngOpFromGSy; (*V4.10 added*)
+	Cyclic#5.HalIO::tL_FreshOilTank_LoLo AT %Q.Cyclic#5.Customized::IN_CU.tL_FreshOilTank_LoLo; (*V4.10 BU02 added*)
+	Cyclic#5.HalIO::tL_DayOilTank_Lo AT %Q.Cyclic#5.Customized::IN_CU.tL_DayOilTank_Lo; (*V4.10 BU02 added*)
+	Cyclic#5.HalIO::tL_DayOilTank_LoLo AT %Q.Cyclic#5.Customized::IN_CU.tL_DayOilTank_LoLo; (*V4.10 BU02 added*)
+	Cyclic#5.HalIO::tOF_DayOilTank AT %Q.Cyclic#5.Customized::IN_CU.tOF_DayOilTank; (*V4.10 BU02 added*)
+	Cyclic#5.HalIO::tL_WasteOilDayTank_Hi AT %Q.Cyclic#5.Customized::IN_CU.tL_WasteOilDayTank_Hi; (*V4.10 BU02 added*)
+	Cyclic#5.HalIO::tOF_WasteOilDayTank AT %Q.Cyclic#5.Customized::IN_CU.tOF_WasteOilDayTank; (*V4.10 BU02 added*)
+	Cyclic#5.HalIO::tPS_FreshOilPump_Hi AT %Q.Cyclic#5.Customized::IN_CU.tPS_FreshOilPump_Hi; (*V4.10 BU02 added*)
+	Cyclic#5.HalIO::tU_Bus_L1_2 AT %Q.Cyclic#5.Customized::IN_CU.tU_Bus_L1_2;
+	Cyclic#5.HalIO::tU_Bus_L2_3 AT %Q.Cyclic#5.Customized::IN_CU.tU_Bus_L2_3;
+	Cyclic#5.HalIO::tU_Bus_L3_1 AT %Q.Cyclic#5.Customized::IN_CU.tU_Bus_L3_1;
+	Cyclic#5.HalIO::tU_Bus_L1N AT %Q.Cyclic#5.Customized::IN_CU.tU_Bus_L1N;
+	Cyclic#5.HalIO::tU_Bus_L2N AT %Q.Cyclic#5.Customized::IN_CU.tU_Bus_L2N;
+	Cyclic#5.HalIO::tU_Bus_L3N AT %Q.Cyclic#5.Customized::IN_CU.tU_Bus_L3N;
+	Cyclic#5.HalIO::tDI_Dem_P_Red_EVU_Stage1 AT %Q.Cyclic#5.Customized::IN_CU.tDI_Dem_P_Red_EVU_Stage1;
+	Cyclic#5.HalIO::tDI_Dem_P_Red_EVU_Stage2 AT %Q.Cyclic#5.Customized::IN_CU.tDI_Dem_P_Red_EVU_Stage2;
+	Cyclic#5.HalIO::tDI_Dem_P_Red_EVU_Stage3 AT %Q.Cyclic#5.Customized::IN_CU.tDI_Dem_P_Red_EVU_Stage3;
+	Cyclic#5.HalIO::tDI_Dem_P_Red_EVU_Stage4 AT %Q.Cyclic#5.Customized::IN_CU.tDI_Dem_P_Red_EVU_Stage4;
+	Cyclic#5.HalIO::tDI_Dem_P_Red_EVU_Stage5 AT %Q.Cyclic#5.Customized::IN_CU.tDI_Dem_P_Red_EVU_Stage5;
+	Cyclic#5.HalIO::tQ_GenC_CUST AT %Q.Cyclic#5.Customized::IN_CU.tQ_GenC_CUST; (*v4.13*)
+END_VAR

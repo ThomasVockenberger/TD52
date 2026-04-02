@@ -1,0 +1,30 @@
+(********************************************************************
+* COPYRIGHT -- INNIO Company
+********************************************************************
+* File: PVI.vvm
+* Author: automatically generated 
+* Created: 07.03.2014
+********************************************************************
+* PV mapping file
+********************************************************************)
+VAR_CONFIG
+	Cyclic#5.HalIO::OUT_HA.iT_CFast2 AT %Q.Cyclic#5.Visu::IN_VI.iT_CFast2; (*v4.08*)
+	Cyclic#4.Opstate::OUT_OP.bEng_Rdy_Aut AT %Q.Cyclic#5.Visu::IN_VI.bEng_Rdy_Aut; (*v4.07*)
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#5.Visu::IN_VI.tPB2MM;
+	Cyclic#4.AmmBase::OUT_AB.tAB2VI AT %Q.Cyclic#5.Visu::IN_VI.tAB2VI; (*V4.05 changed 2-->5*)
+	Cyclic#5.HalIO::OUT_HA.iSerialNumber_CPU AT %Q.Cyclic#5.Visu::IN_VI.iSerialNumber_CPU;
+	Cyclic#5.HalIO::OUT_HA.iModulID_CPU AT %Q.Cyclic#5.Visu::IN_VI.iModulID_CPU;
+	Cyclic#5.HalIO::OUT_HA.iPowerOnCycles AT %Q.Cyclic#5.Visu::IN_VI.iPowerOnCycles;
+	Cyclic#5.HalIO::OUT_HA.iOperatingHours_CPU AT %Q.Cyclic#5.Visu::IN_VI.iOperatingHours_CPU;
+	Cyclic#5.HalIO::OUT_HA.iBatterieStatus AT %Q.Cyclic#5.Visu::IN_VI.iBatterieStatus;
+	Cyclic#5.HalIO::OUT_HA.iT_CPU AT %Q.Cyclic#5.Visu::IN_VI.iT_CPU;
+	Cyclic#5.HalIO::OUT_HA.iT_CPU_PLC AT %Q.Cyclic#5.Visu::IN_VI.iT_CPU_PLC;
+	Cyclic#5.HalIO::OUT_HA.iT_Board AT %Q.Cyclic#5.Visu::IN_VI.iT_Board;
+	Cyclic#5.HalIO::OUT_HA.iT_Chipset AT %Q.Cyclic#5.Visu::IN_VI.iT_Chipset;
+	Cyclic#5.HalIO::OUT_HA.iT_PS AT %Q.Cyclic#5.Visu::IN_VI.iT_PS;
+	Cyclic#5.HalIO::OUT_HA.iT_CFast AT %Q.Cyclic#5.Visu::IN_VI.iT_CFast;
+	Cyclic#8.HalIO::OUT_HA.szMBTCP_DeviceName AT %Q.Cyclic#5.Visu::IN_VI.szMBTCP_DeviceName; (*V4.05 changed 8-->5*)
+	Cyclic#5.HalIO::OUT_HA.bSimWinMOD_Active AT %Q.Cyclic#5.Visu::IN_VI.bSimWinMOD_Active;
+	Cyclic#5.Customized::OUT_CU.iPanelSelection_Cust AT %Q.Cyclic#5.Visu::IN_VI.iPanelSelection_Cust;
+	Cyclic#5.Customized::OUT_CU.bPanelSelection_Cust AT %Q.Cyclic#5.Visu::IN_VI.bPanelSelection_Cust;
+END_VAR

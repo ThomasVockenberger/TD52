@@ -1,0 +1,8 @@
+VAR
+  	xTP_U_Gen_Inc : TP;
+  	xTP_U_Gen_Dec : TP;
+END_VAR
+
+VAR CONSTANT
+
+END_VAR

@@ -1,0 +1,4 @@
+VAR
+	iOut_SparePara_Size : UDINT := 0;
+	n : UDINT := 0;
+END_VAR

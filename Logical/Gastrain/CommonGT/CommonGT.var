@@ -1,0 +1,6 @@
+VAR
+	xGR_MAXR_FA_AN_DREHZ : GR_MAXR;
+	xTOF_FA_M_DREHZ : TOF;
+	TON_SecondTick : TON; (* FUB 1 second timer tick *)
+	rPr_PCGT_PipeLoss : REAL := 0.1; (* Pressure loss offset PCGT [bar] *)
+END_VAR

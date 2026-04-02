@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Program xmlns="http://br-automation.co.at/AS/Program">
+   <Files>
+      <File>lSimPIDx.fun</File>
+      <File>lSimPIDx.typ</File>
+      <File>lSimPIDx.var</File>
+      <File>SimPIDBR6.h</File>
+      <File>SimPIDBR6_private.h</File>
+      <File>SimPIDBR6_types.h</File>
+      <File>rtwtypes.h</File>
+      <File>SimPIDBR6.c</File>
+      <File>fSimPIDx.c</File>
+      <File>lib_properties.txt</File>
+   </Files>
+</Program><?AutomationStudio Version=3.0?>

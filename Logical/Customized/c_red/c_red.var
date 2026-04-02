@@ -1,0 +1,18 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Programm: c_red
+ * Datei: c_red.var
+ * Autor: ZengereS
+ * Erstellt: 20. Februar 2013
+ ********************************************************************
+ * Lokale Variablen des Programms c_red
+ ********************************************************************)
+VAR
+	ton_RM_EVU : ARRAY[0..5] OF TON;
+	lim_lo : ARRAY[0..5] OF GR_MAXR;
+	rP_Red_AI_Norm : REAL;
+	xSigScalR_Lim1Act : xSigScal_R;
+	xSigScalR_Lim2Act : xSigScal_R;
+	xSigScalR_Lim3Act : xSigScal_R;
+END_VAR

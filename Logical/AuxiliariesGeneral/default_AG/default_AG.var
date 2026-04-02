@@ -1,0 +1,3 @@
+VAR
+	iIdx_CtrlBat : USINT;
+END_VAR

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.14.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Package">Lib_KN</Object>
+    <Object Type="DataObject" Language="Simple" Description="MODUL META data file">META_KN</Object>
+    <Object Type="File" Description="Package data types" Private="true">module_Knocking.typ</Object>
+    <Object Type="File" Description="Package variables" Private="true">module_Knocking.var</Object>
+    <Object Type="Program" Language="IEC" Description="+ IN task of knocking modul">IN_Knck</Object>
+    <Object Type="Program" Language="IEC" Description="+ knock monitoring with KLS90">Kn_knock</Object>
+    <Object Type="Program" Language="IEC" Description="+ knock monitoring with KLS98">Knck_KLS98</Object>
+    <Object Type="Program" Language="IEC" Description="+ knock monitoring with SAFI-KLS">Kn_safi_kls</Object>
+    <Object Type="Program" Language="IEC" Description="+ knock monitoring with SAFI-DMR">Kn_safi_dmr</Object>
+    <Object Type="Program" Language="IEC" Description="+ Messages Knocking">MsgKN</Object>
+    <Object Type="Program" Language="IEC" Description="+ OUT task of knocking modul">OUT_Knck</Object>
+    <Object Type="Program" Language="IEC" Description="+ Visualization task">VisKN</Object>
+    <Object Type="Program" Language="IEC" Description="+ Parameter handling">ParKN</Object>
+  </Objects>
+</Package>

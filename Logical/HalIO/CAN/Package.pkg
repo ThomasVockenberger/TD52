@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.14.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Private="true">CAN_HA.var</Object>
+    <Object Type="Program" Language="IEC" Description="HalIO CAN communication init">caninitHA</Object>
+    <Object Type="Program" Language="IEC" Description="HalIO CAN communication check">cancheckHA</Object>
+    <Object Type="Program" Language="IEC" Description="HalIO get CAN device ID for NOx sensor and WG actuators">CAN_NOx_WG</Object>
+    <Object Type="Program" Language="IEC" Description="HalIO get CAN device ID for NOx sensor">CAN_Conrod</Object>
+    <Object Type="Program" Language="IEC" Description="HalIO get CAN device ID for OQS sensor">CAN_OQS</Object>
+    <Object Type="DataObject" Language="Simple" Description="HalIO CAL init">cmsinit</Object>
+  </Objects>
+</Package>

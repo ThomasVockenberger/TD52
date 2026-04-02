@@ -1,0 +1,15 @@
+(*
+QWS: 00012
+*)
+00001	00655	POE\Main\Func00_IO_Para.gb
+00002	00267	POE\Main\Func01_Speed.gb
+00003	00072	POE\Main\Func02_Misfire.gb
+00004	00521	POE\Main\Func03_04_Oil_Pr.gb
+00005	00370	POE\Main\Func05_06_ECW_Pr.gb
+00006	00239	POE\Main\Func07_Grid.gb
+00007	00030	POE\Main\Func08_Overload.gb
+00008	00064	POE\Main\Func10_EmStop.gb
+00009	00045	POE\Main\Func11_SafetyLoop.gb
+00010	00583	POE\Main\Func12_Gas.gb
+00011	00340	POE\Main\PhaseII.gb
+00012	00168	POE\Main\SafetyLoop.gb

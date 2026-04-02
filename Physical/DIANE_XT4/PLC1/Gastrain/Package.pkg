@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="ApplicationModule" PackageType="ApplicationModule" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="Software configuration file">GT.sw</Object>
+    <Object Type="File" Description="A new PV mapping file">PGT.vvm</Object>
+    <Object Type="Package">Connectivity</Object>
+  </Objects>
+</Package>

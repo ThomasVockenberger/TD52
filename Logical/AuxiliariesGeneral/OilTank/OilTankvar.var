@@ -1,0 +1,14 @@
+(********************************************************************
+ COPYRIGHT -- INNIO Company, 2022
+ ******************************************************************
+OilTank: variable declaration
+ ********************************************************************)
+VAR
+	rFresh_OilTank_level : REAL := 0.0;
+	rWaste_OilTank_level : REAL := 0.0;
+	rDay_OilTank_level : REAL := 0.0;
+	i : USINT := 0;
+	xWasteOilTank : OilTank_Obj; (*Function Block Waste Oil Tank*)
+	xDayOilTank : OilTank_Obj; (*Function Block Day Oil Tank*)
+	xFreshOilTank : OilTank_Obj; (*Function Block Fresh Oil Tank*)
+END_VAR

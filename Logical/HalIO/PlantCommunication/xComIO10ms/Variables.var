@@ -1,0 +1,3 @@
+VAR
+	x : USINT := 0;
+END_VAR

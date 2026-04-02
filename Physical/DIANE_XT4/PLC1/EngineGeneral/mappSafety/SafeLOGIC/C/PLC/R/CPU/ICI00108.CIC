@@ -1,0 +1,19 @@
+(*
+T: FUNCTION_BLOCK MathBib_CALC
+FW: YES
+CI#: 108
+QSL: 0
+QJM: 0
+QJ: 0
+QR: 0
+*)
+		PARV	@IV 1
+		PARV	@IV 2
+		PARV	@IV 3
+		PARV	@IV 4
+		PARV	@IV 5
+		PARA	@IV 6
+		PARA	@IV 7
+		PARA	@IV 8
+		PARA	@IV 9
+		CAL	@SFB 215

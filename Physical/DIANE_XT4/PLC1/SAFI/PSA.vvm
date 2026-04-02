@@ -1,0 +1,70 @@
+(********************************************************************
+* COPYRIGHT -- INNIO
+********************************************************************
+* File: PSA.vvm
+* Author: automatically generated 
+* Created: 07.03.2014
+********************************************************************
+* PV mapping file
+********************************************************************)
+VAR_CONFIG
+	Cyclic#4.AmmBase::OUT_AB.tAB2SA AT %Q.Cyclic#5.SAFI::IN_SA.tAB2SA;
+	Cyclic#2.AmmBase::OUT_AB.tAB2SA AT %Q.Cyclic#2.SAFI::IN_SA.tAB2SA_TC2;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bEng_Start AT %Q.Cyclic#2.SAFI::IN_SA.bEng_Start_TC2;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bEng_Start AT %Q.Cyclic#5.SAFI::IN_SA.bEng_Start;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.STP_STRT AT %Q.Cyclic#5.SAFI::IN_SA.STP_STRT; (*V04.04.00.00*)
+	Cyclic#2.ChargingUnit::OUT_CH.rPr_Ch_P2s_Avg AT %Q.Cyclic#2.SAFI::IN_SA.rPr_Ch_P2s_Avg_TC2;
+	Cyclic#4.ChargingUnit::OUT_CH.rPr_Ch_P2s_Avg AT %Q.Cyclic#5.SAFI::IN_SA.rPr_Ch_P2s_Avg;
+	Cyclic#4.ChargingUnit::OUT_CH.rT_Ch_T2s_Avg AT %Q.Cyclic#5.SAFI::IN_SA.rT_Ch_T2s_Avg;
+	Cyclic#2.ChargingUnit::OUT_CH.rT_Ch_T2s_Avg AT %Q.Cyclic#2.SAFI::IN_SA.rT_Ch_T2s_Avg_TC2;
+	Cyclic#2.EngineController::OUT_EC.bLimpHomeCyl AT %Q.Cyclic#2.SAFI::IN_SA.bLimpHomeCyl;
+	Cyclic#4.EngineController::OUT_EC.bTrip_IPC_MSF AT %Q.Cyclic#5.SAFI::IN_SA.bTrip_IPC_MSF;
+	Cyclic#1.EngineController::OUT_EC.iMisfCyl AT %Q.Cyclic#1.SAFI::IN_SA.iMisfCyl;
+	Cyclic#1.EngineController::OUT_EC.iMisfCyl AT %Q.Cyclic#2.SAFI::IN_SA.iMisfCyl_TC2;
+	Cyclic#2.EngineController::OUT_EC.rCA_Ign_Act AT %Q.Cyclic#2.SAFI::IN_SA.rCA_Ign_Act;
+	Cyclic#2.EngineController::OUT_EC.rLam_Eng_LL_Set AT %Q.Cyclic#2.SAFI::IN_SA.rLam_Eng_LL_Set;
+	Cyclic#2.EngineController::OUT_EC.tPIopenH AT %Q.Cyclic#2.SAFI::IN_SA.tPIopenH;
+	Cyclic#2.EngineController::OUT_EC.tPIopenL AT %Q.Cyclic#2.SAFI::IN_SA.tPIopenL;
+	Cyclic#5.EngineController::OUT_EC.bGridCode_ON AT %Q.Cyclic#5.SAFI::IN_SA.bGridCode_ON;
+	Cyclic#2.EngineController::OUT_EC.bFastStart_ready_running AT %Q.Cyclic#2.SAFI::IN_SA.bFastStart_ready_running;
+	Cyclic#5.Gastrain::OUT_GT.bGV_On AT %Q.Cyclic#2.SAFI::IN_SA.bGV_On;
+	Cyclic#5.Gastrain::OUT_GT.iIdx_Gtyp_Dem AT %Q.Cyclic#5.SAFI::IN_SA.iIdx_Gtyp_Dem;
+	Cyclic#5.HalIO::OUT_HA.bSimWinMOD_Active AT %Q.Cyclic#5.SAFI::IN_SA.bSimWinMOD_Active;
+	Cyclic#6.HalIO::OUT_HA.iCANIdent AT %Q.Cyclic#7.SAFI::IN_SA.iCANIdent;
+	Cyclic#2.HalIO::OUT_HA.iCANIdent AT %Q.Cyclic#8.SAFI::IN_SA.iCANIdent_TC8;
+	Cyclic#6.HalIO::OUT_HA.iCANIdentIGN2 AT %Q.Cyclic#7.SAFI::IN_SA.iCANIdentIGN2;
+	Cyclic#2.HalIO::OUT_HA.iCANIdentIGN2 AT %Q.Cyclic#8.SAFI::IN_SA.iCANIdentIGN2_TC8;
+	Cyclic#2.HalIO::OUT_HA.iECanDevGo AT %Q.Cyclic#2.SAFI::IN_SA.iECanDevGo;
+	Cyclic#1.HalIO::tGCB_On AT %Q.Cyclic#2.SAFI::IN_SA.tGCB_On;
+	Cyclic#4.HalIO::tGCB_On AT %Q.Cyclic#5.SAFI::IN_SA.tGCB_On_TC5;
+	Cyclic#1.HalIO::tMO_PowerOverload AT %Q.Cyclic#2.SAFI::IN_SA.tMO_PowerOverload;
+	Cyclic#1.HalIO::tMO_PowerOverload2 AT %Q.Cyclic#2.SAFI::IN_SA.tMO_PowerOverload2;
+	Cyclic#1.HalIO::tMO_PowerOverload3 AT %Q.Cyclic#2.SAFI::IN_SA.tMO_PowerOverload3;
+	Cyclic#1.HalIO::tMO_PowerOverload4 AT %Q.Cyclic#2.SAFI::IN_SA.tMO_PowerOverload4;
+	Cyclic#4.HalIO::tMO_PwrReply AT %Q.Cyclic#5.SAFI::IN_SA.tMO_PwrReply_TC5;
+	Cyclic#1.HalIO::tMO_PwrReply AT %Q.Cyclic#2.SAFI::IN_SA.tMO_PwrReply;
+	Cyclic#1.HalIO::tMO_PwrReply2 AT %Q.Cyclic#2.SAFI::IN_SA.tMO_PwrReply2;
+	Cyclic#1.HalIO::tMO_PwrReply3 AT %Q.Cyclic#2.SAFI::IN_SA.tMO_PwrReply3;
+	Cyclic#1.HalIO::tMO_PwrReply4 AT %Q.Cyclic#2.SAFI::IN_SA.tMO_PwrReply4;
+	Cyclic#1.HalIO::tMO_SaftyLoop AT %Q.Cyclic#2.SAFI::IN_SA.tMO_SaftyLoop_TC2;
+	Cyclic#4.HalIO::tMO_SaftyLoop AT %Q.Cyclic#5.SAFI::IN_SA.tMO_SaftyLoop;
+	Cyclic#4.HalIO::tSafetyLoop_EmStop AT %Q.Cyclic#5.SAFI::IN_SA.tSafetyLoop_EmStop;
+	Cyclic#1.HalIO::tSafetyLoop_Eng AT %Q.Cyclic#2.SAFI::IN_SA.tSafetyLoop_Eng_TC2;
+	Cyclic#4.HalIO::tSafetyLoop_Eng AT %Q.Cyclic#5.SAFI::IN_SA.tSafetyLoop_Eng;
+	Cyclic#5.HalIO::OUT_HA.bCANCntReset AT %Q.Cyclic#2.SAFI::IN_SA.bCANCntReset;
+	Cyclic#5.ICxx::OUT_IC.bIC_IgnEngergy_Hi AT %Q.Cyclic#5.SAFI::IN_SA.bIC_IgnEngergy_Hi; (*V4.12*)
+	Cyclic#5.Ignition::OUT_IG.bIgn_SelfTest AT %Q.Cyclic#5.SAFI::IN_SA.bIgn_SelfTest;
+	Cyclic#5.HalIO::tSPAx_CamDev AT %Q.Cyclic#5.SAFI::IN_SA.tSPAx_CamDev;
+	Cyclic#2.Knocking::OUT_KN.bP_Red_SAErr AT %Q.Cyclic#2.SAFI::IN_SA.bP_Red_SAErr;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem AT %Q.Cyclic#5.SAFI::IN_SA.bEng_Dem;
+	Cyclic#2.Opstate::OUT_OP.bEng_Dem AT %Q.Cyclic#2.SAFI::IN_SA.bEng_Dem_TC2;
+	Cyclic#4.Opstate::OUT_OP.bIgn_Dem AT %Q.Cyclic#5.SAFI::IN_SA.bIgn_Dem;
+	Cyclic#2.Opstate::OUT_OP.bIgn_Dem AT %Q.Cyclic#1.SAFI::IN_SA.bIgn_Dem_TC1;
+	Cyclic#2.Opstate::OUT_OP.bIgn_Dem AT %Q.Cyclic#2.SAFI::IN_SA.bIgn_Dem_TC2;
+	Cyclic#5.Opstate::OUT_OP.iIdx_OMSS AT %Q.Cyclic#5.SAFI::IN_SA.iIdx_OMSS;
+	Cyclic#5.Opstate::OUT_OP.iIdx_OMSS AT %Q.Cyclic#2.SAFI::IN_SA.iIdx_OMSS_TC2;
+	Cyclic#4.Opstate::OUT_OP.iSt_OpMode AT %Q.Cyclic#5.SAFI::IN_SA.iSt_OpMode;
+	Cyclic#2.Opstate::OUT_OP.rP_Act_Norm_Filt AT %Q.Cyclic#2.SAFI::IN_SA.rP_Act_Norm_Filt;
+	Cyclic#4.Opstate::OUT_OP.rP_Act_Norm_Filt AT %Q.Cyclic#5.SAFI::IN_SA.rP_Act_Norm_Filt_TC5;
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#5.SAFI::IN_SA.tPB2MM;
+END_VAR

@@ -1,0 +1,89 @@
+VAR
+	bPowerMode : BOOL;
+	bEng_StaSpdExc_old : BOOL;
+	ZM_H_ANF : BOOL;
+	M_ABLOCK : BOOL;
+	ZM_M_BERAUT : BOOL;
+	bs_15s_rel_oper : BOOL;
+	bs_15s_rpm_hi : BOOL;
+	ZM_IN_bEng_CDR : BOOL;
+	ZM_RS_bEng_CDR : BOOL;
+	ZM_bEng_RSBoc : BOOL;
+	xTON_RUN : TON;
+	xTP_bEng_RSBoc : TP;
+	xTOF_R_bEng_CDR : TOF_R;
+	xTOF_SoftShutdown : TOF;
+	xTON_T_Z_AUS : TON;
+	xTP_AT27 : TP;
+	xTON_T105 : TON;
+	xTOF_ANFBLO : TOF;
+	xTOF_T9 : TOF;
+	xTOF_Eng_Aux_Dem : TOF;
+	xTON_kwtp : TON;
+	xTOF_Eng_StaSpdExc : TOF;
+	xTP_Imp_Start : TP;
+	xTOF_BlocDelay_ManStart : TOF; (*Pulse generator for engine start*)
+	xGR_MAXR_Eng_StaSpdExc : GR_MAXR;
+	xGR_MAXR_bs_15s_rpm_hi : GR_MAXR;
+	xGRMinR_KWT : GR_MINR;
+	xBH_UnitOpHour : BH; (*Unit operating hours counter*)
+	xTOF_UnitOpHour : TOF; (*10 seconds delay for engine begin of operation*)
+	xBH_OpHour : BH; (*Hour counter for engine operating hours*)
+	xTOF_OpHour : TOF; (*Off delay for engine operating hours*)
+	xGR_MINR_P_Lo : GR_MINR;
+	xTON_Rel_P_DevHi : TON;
+	xGR_MAXR_P_Dev : GR_MAXR;
+	xTON_P_DevHi : TON;
+	xGR_MAXR_OpenGV : GR_MAXR;
+	xTP_OpenGV : TP;
+	bStop2Start : BOOL; (*transition from stop state to start state*)
+	bRSS_OFF : BOOL;
+	bRSS_ON : BOOL;
+	bIgn_DemTemp : BOOL; (*Wegen Abstellstörung 1023 und Auftreten von 1056*)
+	Ign_Dem_DelayTime : TIME := T#200ms; (*Wegen Abstellstörung 1023 und Auftreten von 1056*)
+	xTOFIgn_Dem : TOF; (*Wegen Abstellstörung 1023 und Auftreten von 1056*)
+	xTOF_OFF : TOF;
+	xTOF_MAN : TOF;
+	xTOF_AUTO : TOF;
+	xTOF_TEST : TOF;
+	xTOF_SCAV : TOF;
+	xTON_Eng_SU_Aut : TON; (*new for V4.04 - State 32*)
+	xBH_DemHour : BH; (*Engine demand hours counter*)
+	xTOF_DemHour : TOF; (*Off delay for engine demand*)
+	xBH_NetPHour : BH; (*Engine grid running hours counter*)
+	xTOF_NetPHour : TOF; (*Off delay for engine grid running*)
+	xBH_IslandHour : BH; (*Engine island running hours counter*)
+	xTOF_IslandHour : TOF; (*Off delay for engine island running*)
+	IslandHour_Imp : bh_typ; (* Island Operation Hour Counter*)
+	NetPHour_Imp : bh_typ; (* Net Parallel Operation Hour Counter*)
+	DemHour_Imp : bh_typ; (* Demand Hour Counter*)
+	rN_Eng_Limit : REAL := 1545; (* Speed Limit for type 6 housload rejection [rpm] *)
+	bTrigger_Island : BOOL; (* island trigger for type 6 housload rejection *)
+	tOff_Trigger : TIME := T#1s; (* Duration island trigger for type 6 housload rejection *)
+	TOF_bTrigger_Island : TOF;
+	bDryTestBench : BOOL := 0; (*DONT TOUCH THIS SIGNAL!*)
+	bEng_Bloc : ARRAY[0..50] OF BOOL;
+	bSync_Rel : ARRAY[0..15] OF BOOL;
+	bEng_SU : ARRAY[0..6] OF BOOL;
+	bIgn_Dem : ARRAY[0..5] OF BOOL;
+	bEng_Dem_A : ARRAY[0..9] OF BOOL;
+	bRequest_A : BOOL;
+	bRequest_EPS : BOOL := 0;
+	bGV_Open : ARRAY[0..7] OF BOOL;
+	bReq_Dem : ARRAY[0..7] OF BOOL;
+	bRequest_Dem : BOOL;
+	bReq_Bloc : ARRAY[0..6] OF BOOL;
+	bReq_A : ARRAY[0..5] OF BOOL;
+	bT_ECW_Lo : BOOL; (* AN_KTMI wird lokal gebildet und nur im modul verwendet *)
+	bN_Eng_Run : BOOL; (*Speed Condition ok for Eng_Run*)
+	xTON_Block_PlantCtr : TON;
+	TOF_b2973 : TOF;
+	xTOF_EngDemEPS : TOF;
+	Ign_Dem_DelayTime2 : TIME := T#200ms;
+	bOpt_AllowCounterCorrection : BOOL := TRUE; (*Allways TRUE, except for debugging*)
+	xBH_OpLowLoad : BH; (* Low load operation counter *)
+	OpLowLoad_Imp : bh_typ; (* Low load operation minutes counter*)
+	xTON_OpLowLoadAct : TON; (* Delay after GCB-On for low load operation counter *)
+	bOpLowLoad : BOOL; (* Low load operation counter active *)
+	xTOF_OpLowLoad : TOF; (* Ten second pulse for low load operation counter *)
+END_VAR

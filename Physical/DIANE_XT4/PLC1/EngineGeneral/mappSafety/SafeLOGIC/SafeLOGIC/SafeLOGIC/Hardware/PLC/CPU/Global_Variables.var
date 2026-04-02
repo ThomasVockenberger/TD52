@@ -1,0 +1,1592 @@
+﻿{GroupDefinition(0,'RemanentData')}
+{GroupDefinition(3,'SafeModuleOK')}
+{GroupDefinition(21,'Inputs')}
+{GroupDefinition(94,'Parameter')}
+{GroupDefinition(150,'Outputs')}
+{GroupDefinition(171,'Release Output')}
+{GroupDefinition(178,'To CPU BOOL')}
+{GroupDefinition(316,'To CPU INT')}
+{GroupDefinition(318,'To CPU DINT')}
+{GroupDefinition(377,'To CPU UDINT')}
+{GroupDefinition(380,'PARA To CPU')}
+{GroupDefinition(436,'Alarms to CPU')}
+{GroupDefinition(503,'Warnings to CPU')}
+{GroupDefinition(639,'From CPU BOOL')}
+{GroupDefinition(648,'From CPU INT')}
+{GroupDefinition(652,'Physical State Monitor')}
+{GroupDefinition(673,'SafeOutputOK')}
+{GroupDefinition(694,'SafeFrequencyOK')}
+{GroupDefinition(697,'SafeCurrentOK')}
+{GroupDefinition(702,'SafeRelease')}
+{GroupDefinition(707,'SafeInputOK')}
+
+VAR_GLOBAL {Group(0)}
+    {LINE(1)}
+    iRD_Vol_Purge_Air AT %SAFEINT#1 : SAFEINT := SAFEINT#1 {Custom('SL1.SM1.RemanentDataDINT01#SAFEINT.1')}; (*Remanent Data: Volume of purge air [l]*)
+    {LINE(2)}
+    iRD_Nr_PC_NotDone AT %SAFEINT#2 : SAFEINT := SAFEINT#2 {Custom('SL1.SM1.RemanentDataDINT02#SAFEINT.2')}; (*Remanent Data: Number of not performed plausibility checks*)
+END_VAR
+
+VAR_GLOBAL {Group(3)}
+    {LINE(4)}
+    sbSafeModuleOK_SM101 AT %IX4.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM101.SafeModuleOK')}; (*Safe Module 101 OK*)
+    {LINE(5)}
+    sbSafeModuleOK_SM102 AT %IX4.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM102.SafeModuleOK')}; (*Safe Module 102 OK*)
+    {LINE(6)}
+    sbSafeModuleOK_SM103 AT %IX4.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM103.SafeModuleOK')}; (*Safe Module 103 OK*)
+    {LINE(7)}
+    sbSafeModuleOK_SM104 AT %IX4.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM104.SafeModuleOK')}; (*Safe Module 104 OK*)
+    {LINE(8)}
+    sbSafeModuleOK_SM105 AT %IX4.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM105.SafeModuleOK')}; (*Safe Module 104 OK*)
+    {LINE(9)}
+    sbSafeModuleOK_SM201 AT %IX4.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM201.SafeModuleOK')}; (*Safe Module 201 OK*)
+    {LINE(10)}
+    sbSafeModuleOK_SM202 AT %IX4.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM202.SafeModuleOK')}; (*Safe Module 202 OK*)
+    {LINE(11)}
+    sbSafeModuleOK_SM203 AT %IX4.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM203.SafeModuleOK')}; (*Safe Module 203 OK*)
+    {LINE(12)}
+    sbSafeModuleOK_SM204 AT %IX5.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM204.SafeModuleOK')}; (*Safe Module 204 OK*)
+    {LINE(13)}
+    sbSafeModuleOK_SM205 AT %IX5.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM205.SafeModuleOK')}; (*Safe Module 205 OK*)
+    {LINE(14)}
+    sbSafeModuleOK_SM206 AT %IX5.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM206.SafeModuleOK')}; (*Safe Module 206 OK*)
+    {LINE(15)}
+    sbSafeModuleOK_SM207 AT %IX5.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM207.SafeModuleOK')}; (*Safe Module 207 OK*)
+    {LINE(16)}
+    sbSafeModuleOK_SM208 AT %IX5.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM208.SafeModuleOK')}; (*Safe Module 208 OK*)
+    {LINE(17)}
+    sbSafeModuleOK_SM209 AT %IX5.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM209.SafeModuleOK')}; (*Safe Module 209 OK*)
+    {LINE(18)}
+    sbSafeModuleOK_SM210 AT %IX5.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM210.SafeModuleOK')}; (*Safe Module 210 OK*)
+    {LINE(19)}
+    sbSafeModuleOK_SM300 AT %IX5.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeModuleOK')}; (*Safe Module 300 OK*)
+    {LINE(20)}
+    sbSafeModuleOK_SM301 AT %IX6.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeModuleOK')}; (*Safe Module 301 OK*)
+END_VAR
+
+VAR_GLOBAL {Group(21)}
+    {LINE(22)}
+    sDI_EmStop AT %IX8.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM101.SafeDigitalInput01')}; (*DI Emergency stop*)
+    {LINE(23)}
+    sDI_OlShortCirc AT %IX8.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM101.SafeDigitalInput02')}; (*DI Generator overload/short circuit*)
+    {LINE(24)}
+    sDI_GenPrctTrip AT %IX8.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM101.SafeDigitalInput03')}; (*DI Generator protection trip*)
+    {LINE(25)}
+    sDI_ERV_Cust AT %IX8.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM101.SafeDigitalInput04')}; (*DI Customer room ventilation is operating*)
+    {LINE(26)}
+    sDI_SafetyLoop_A1 AT %IX8.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM101.SafeDigitalInput05')}; (*DI Safety loop 1 - Module control panel*)
+    {LINE(27)}
+    sDI_GCB_On AT %IX8.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM101.SafeDigitalInput06')}; (*DI Generator circuit breaker - Closed*)
+    {LINE(28)}
+    sDI_GCB_Off AT %IX8.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM101.SafeDigitalInput07')}; (*DI Generator circuit breaker - Opened*)
+    {LINE(29)}
+    sDI_ER_Door_CL AT %IX8.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM101.SafeDigitalInput08')}; (*DI Engine room door switches closed*)
+    {LINE(30)}
+    sDI_SafetyLoop_A2 AT %IX20.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM105.SafeDigitalInput08')}; (*DI Safety loop 2 - Module control panel*)
+    {LINE(31)}
+    sDI_LS_HWHT_Lo AT %IX12.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM103.SafeDigitalInput01')}; (*DI High temperature heating water - Minimum level switch*)
+    {LINE(32)}
+    sDI_PS1_HWHT_Hi AT %IX12.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM103.SafeDigitalInput02')}; (*DI High temperature heating water - Maximum pressure switch 1*)
+    {LINE(33)}
+    sDI_PS2_HWHT_Hi AT %IX12.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM103.SafeDigitalInput03')}; (*DI High temperature heating water - Maximum pressure switch 2*)
+    {LINE(34)}
+    sDI_PS1_HWHT_Lo AT %IX12.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM103.SafeDigitalInput04')}; (*DI High temperature heating water - Minimum pressure switch 1*)
+    {LINE(35)}
+    sDI_PS2_HWHT_Lo AT %IX12.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM103.SafeDigitalInput05')}; (*DI High temperature heating water - Minimum pressure switch 2*)
+    {LINE(36)}
+    sDI_TS1_HWHT_Hi AT %IX12.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM103.SafeDigitalInput06')}; (*DI High temperature heating water - Maximum temperature switch 1*)
+    {LINE(37)}
+    sDI_TS2_HWHT_Hi AT %IX12.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM103.SafeDigitalInput07')}; (*DI High temperature heating water - Maximum temperature switch 2*)
+    {LINE(38)}
+    sDI_FS_HWHT_Lo AT %IX12.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM103.SafeDigitalInput08')}; (*DI High temperature heating water - Minimum flow switch*)
+    {LINE(39)}
+    sDI_LS_HWLT_Lo AT %IX16.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM104.SafeDigitalInput01')}; (*DI Low temperature heating water - Minimum level switch*)
+    {LINE(40)}
+    sDI_PS1_HWLT_Hi AT %IX16.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM104.SafeDigitalInput02')}; (*DI Low temperature heating water - Maximum pressure switch 1*)
+    {LINE(41)}
+    sDI_PS2_HWLT_Hi AT %IX16.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM104.SafeDigitalInput03')}; (*DI Low temperature heating water - Maximum pressure switch 2*)
+    {LINE(42)}
+    sDI_PS1_HWLT_Lo AT %IX16.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM104.SafeDigitalInput04')}; (*DI Low temperature heating water - Minimum pressure switch 1*)
+    {LINE(43)}
+    sDI_PS2_HWLT_Lo AT %IX16.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM104.SafeDigitalInput05')}; (*DI Low temperature heating water - Minimum pressure switch 2*)
+    {LINE(44)}
+    sDI_TS1_HWLT_Hi AT %IX16.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM104.SafeDigitalInput06')}; (*DI Low temperature heating water - Maximum temperature switch 1*)
+    {LINE(45)}
+    sDI_TS2_HWLT_Hi AT %IX16.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM104.SafeDigitalInput07')}; (*DI Low temperature heating water - Maximum temperature switch 2*)
+    {LINE(46)}
+    sDI_FS_HWLT_Lo AT %IX16.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM104.SafeDigitalInput08')}; (*DI Low temperature heating water - Minimum flow switch*)
+    {LINE(47)}
+    sDI_HWcirc_Cust AT %IX20.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM105.SafeDigitalInput01')}; (*DI High temperature heating water - DI Customer heating water circuit failure*)
+    {LINE(48)}
+    sCI_N_EngAct AT %IW26 : SAFEINT {SafeAdr(true),Custom('SL1.SM201.SafeFrequency')}; (*CI Counter input for speed*)
+    {LINE(49)}
+    sAI_Pr_EO AT %IW38 : SAFEINT {SafeAdr(true),Custom('SL1.SM202.SafeCurrent0102')}; (*AI Pressure engine oil*)
+    {LINE(50)}
+    sAI_Pr_EOaP AT %IW40 : SAFEINT {SafeAdr(true),Custom('SL1.SM202.SafeCurrent0304')}; (*AI Pressure engine oil after pump*)
+    {LINE(51)}
+    sAI_Pr_ECW AT %IW46 : SAFEINT {SafeAdr(true),Custom('SL1.SM203.SafeCurrent0102')}; (*AI Pressure engine cooling water*)
+    {LINE(52)}
+    sAI_Pr_ECWaP AT %IW48 : SAFEINT {SafeAdr(true),Custom('SL1.SM203.SafeCurrent0304')}; (*AI Pressure engine cooling water after pump*)
+    {LINE(53)}
+    sDI_EmStop_M AT %IX52.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM204.SafeDigitalInput01')}; (*DI Emergency stop at module interface panel*)
+    {LINE(54)}
+    sDI_Ign_Run AT %IX52.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM204.SafeDigitalInput02')}; (*DI Ignition running*)
+    {LINE(55)}
+    sDI_ScavFlapClosed AT %IX52.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM204.SafeDigitalInput04')}; (*DI Scavenging flap closed*)
+    {LINE(56)}
+    sDI_TS_ScavFlap AT %IX52.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM204.SafeDigitalInput05')}; (*DI Scavenging flap temperature switch OK*)
+    {LINE(57)}
+    sDI_Pr_EG_Hi AT %IX52.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM204.SafeDigitalInput06')}; (*DI Exhaust gas backpressure high OK*)
+    {LINE(58)}
+    sDI_SafetyLoop_M AT %IX52.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM204.SafeDigitalInput08')}; (*DI Safety loop - Module interface panel*)
+    {LINE(59)}
+    sDI_GT1_SafeDevOK AT %IX52.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM204.SafeDigitalInput03')}; (*DI Gas safety device - Gastrain 1 OK*)
+    {LINE(60)}
+    sDI_GT2_SafeDevOK AT %IX52.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM204.SafeDigitalInput07')}; (*DI Gas safety device - Gastrain 2 OK*)
+    {LINE(61)}
+    sDI_GT3_SafeDevOK AT %IX56.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM208.SafeDigitalInput01')}; (*DI Gas safety device - Gastrain 3 OK*)
+    {LINE(62)}
+    sDI_GT4_SafeDevOK AT %IX56.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM208.SafeDigitalInput02')}; (*DI Gas safety device - Gastrain 4 OK*)
+    {LINE(63)}
+    sDI_DCGA_SafeDevOK AT %IX56.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM208.SafeDigitalInput03')}; (*DI Gas safety device - DCGA OK*)
+    {LINE(64)}
+    sDI_ERV_INL1_Fan_Run AT %IX60.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput01')}; (*DI Engine room ventilation - Inlet air fan - Group 1 in operation*)
+    {LINE(65)}
+    sDI_ERV_INL1_Lou_OP AT %IX60.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput02')}; (*DI Engine room ventilation - Inlet air louvre - Group 1 opened*)
+    {LINE(66)}
+    sDI_ERV_INL1_Lou_CL AT %IX60.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput03')}; (*DI Engine room ventilation - Inlet air louvre - Group 1 closed*)
+    {LINE(67)}
+    sDI_ERV_OTL1_Lou_OP AT %IX60.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput04')}; (*DI Engine room ventilation - Outlet air louvre - Group 1 opened*)
+    {LINE(68)}
+    sDI_ERV_OTL1_Lou_CL AT %IX60.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput05')}; (*DI Engine room ventilation - Outlet air louvre - Group 1 closed*)
+    {LINE(69)}
+    sDI_ERV_INL2_Fan_Run AT %IX60.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput06')}; (*DI Engine room ventilation - Inlet air fan - Group 2 in operation*)
+    {LINE(70)}
+    sDI_ERV_INL2_Lou_OP AT %IX60.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput07')}; (*DI Engine room ventilation - Inlet air louvre - Group 2 opened*)
+    {LINE(71)}
+    sDI_ERV_INL2_Lou_CL AT %IX60.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput08')}; (*DI Engine room ventilation - Inlet air louvre - Group 2 closed*)
+    {LINE(72)}
+    sDI_ERV_OTL2_Lou_OP AT %IX61.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput09')}; (*DI Engine room ventilation - Outlet air louvre - Group 2 opened*)
+    {LINE(73)}
+    sDI_ERV_OTL2_Lou_CL AT %IX61.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput10')}; (*DI Engine room ventilation - Outlet air louvre - Group 2 closed*)
+    {LINE(74)}
+    sDI_ERV_INL3_Fan_Run AT %IX61.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput11')}; (*DI Engine room ventilation - Inlet air fan - Group 3 in operation*)
+    {LINE(75)}
+    sDI_ERV_INL3_Lou_OP AT %IX61.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput12')}; (*DI Engine room ventilation - Inlet air louvre - Group 3 opened*)
+    {LINE(76)}
+    sDI_ERV_INL3_Lou_CL AT %IX61.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput13')}; (*DI Engine room ventilation - Inlet air louvre - Group 3 closed*)
+    {LINE(77)}
+    sDI_ERV_OTL3_Lou_OP AT %IX61.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput14')}; (*DI Engine room ventilation - Outlet air louvre - Group 3 opened*)
+    {LINE(78)}
+    sDI_ERV_OTL3_Lou_CL AT %IX61.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput15')}; (*DI Engine room ventilation - Outlet air louvre - Group 3 closed*)
+    {LINE(79)}
+    sDI_ERV_INL4_Fan_Run AT %IX61.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput16')}; (*DI Engine room ventilation - Inlet air fan - Group 4 in operation*)
+    {LINE(80)}
+    sDI_ERV_INL4_Lou_OP AT %IX62.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput17')}; (*DI Engine room ventilation - Inlet air louvre - Group 4 opened*)
+    {LINE(81)}
+    sDI_ERV_INL4_Lou_CL AT %IX62.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput18')}; (*DI Engine room ventilation - Inlet air louvre - Group 4 closed*)
+    {LINE(82)}
+    sDI_ERV_OTL4_Lou_OP AT %IX62.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput19')}; (*DI Engine room ventilation - Outlet air louvre - Group 4 opened*)
+    {LINE(83)}
+    sDI_ERV_OTL4_Lou_CL AT %IX62.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeDigitalInput20')}; (*DI Engine room ventilation - Outlet air louvre - Group 4 closed*)
+    {LINE(84)}
+    sDI_ERV_INL5_Fan_Run AT %IX68.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeDigitalInput01')}; (*DI Engine room ventilation - Inlet air fan - Group 5 in operation*)
+    {LINE(85)}
+    sDI_ERV_INL5_Lou_OP AT %IX68.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeDigitalInput02')}; (*DI Engine room ventilation - Inlet air louvre - Group 5 opened*)
+    {LINE(86)}
+    sDI_ERV_INL5_Lou_CL AT %IX68.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeDigitalInput03')}; (*DI Engine room ventilation - Inlet air louvre - Group 5 closed*)
+    {LINE(87)}
+    sDI_ERV_OTL5_Lou_OP AT %IX68.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeDigitalInput04')}; (*DI Engine room ventilation - Outlet air louvre - Group 5 opened*)
+    {LINE(88)}
+    sDI_ERV_OTL5_Lou_CL AT %IX68.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeDigitalInput05')}; (*DI Engine room ventilation - Outlet air louvre - Group 5 closed*)
+    {LINE(89)}
+    sDI_ERV_INL6_Fan_Run AT %IX68.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeDigitalInput06')}; (*DI Engine room ventilation - Inlet air fan - Group 6 in operation*)
+    {LINE(90)}
+    sDI_ERV_INL6_Lou_OP AT %IX68.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeDigitalInput07')}; (*DI Engine room ventilation - Inlet air louvre - Group 6 opened*)
+    {LINE(91)}
+    sDI_ERV_INL6_Lou_CL AT %IX68.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeDigitalInput08')}; (*DI Engine room ventilation - Inlet air louvre - Group 6 closed*)
+    {LINE(92)}
+    sDI_ERV_OTL6_Lou_OP AT %IX69.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeDigitalInput09')}; (*DI Engine room ventilation - Outlet air louvre - Group 6 opened*)
+    {LINE(93)}
+    sDI_ERV_OTL6_Lou_CL AT %IX69.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeDigitalInput10')}; (*DI Engine room ventilation - Outlet air louvre - Group 6 closed*)
+END_VAR
+
+VAR_GLOBAL {Group(94)}
+    {LINE(95)}
+    PARA_N_EngNom AT %ID140 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT00')}; (*PARA 15087: Speed - Nominal speed*)
+    {LINE(96)}
+    PARA_N_EngAct_HiHi_Diff AT %ID144 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT01')}; (*PARA 15086: Speed - Maximum deviation to ignition speed*)
+    {LINE(97)}
+    PARA_N_Pr_EO_LoLo_Lim1 AT %ID148 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT02')}; (*PARA 15088: Oil pressure - Minimum - Speed point 1*)
+    {LINE(98)}
+    PARA_N_Pr_EO_LoLo_Lim2 AT %ID152 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT03')}; (*PARA 15089: Oil pressure - Minimum - Speed point 2*)
+    {LINE(99)}
+    PARA_Pr_EO_LoLo_LimN1 AT %ID156 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT04')}; (*PARA 15098: Oil pressure - Minimum at speed point 1*)
+    {LINE(100)}
+    PARA_Pr_EO_LoLo_LimN2 AT %ID160 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT05')}; (*PARA 15099: Oil pressure - Minimum at speed point 2*)
+    {LINE(101)}
+    PARA_Pr_EO_Diff_EngStop AT %ID164 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT06')}; (*PARA 15094: Oil pressure - Minimum difference to standstill*)
+    {LINE(102)}
+    PARA_Pr_EO_HiHi_EngStop AT %ID168 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT07')}; (*PARA 15097: Oil pressure - Maximum at standstill*)
+    {LINE(103)}
+    PARA_Pr_EO_HiHi_Diff AT %ID172 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT08')}; (*PARA 15096: Oil pressure - Maximum deviation between the sensors*)
+    {LINE(104)}
+    PARA_Pr_EO_HiHi_Check AT %ID176 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT09')}; (*PARA 15095: Oil pressure - Maximum (sensor drift)*)
+    {LINE(105)}
+    PARA_Pr_EOaP_HiHi AT %ID180 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT10')}; (*PARA 15101: Oil pressure after pump - Maximum*)
+    {LINE(106)}
+    PARA_Pr_EOaP_Diff_EngStop AT %ID184 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT11')}; (*PARA 15100: Oil pressure after pump - Minimum difference to standstill*)
+    {LINE(107)}
+    PARA_Pr_EOaP_HiHi_EngStop AT %ID188 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT12')}; (*PARA 15102: Oil pressure after pump - Maximum at standstill*)
+    {LINE(108)}
+    PARA_Pr_ECW_LoLo AT %ID192 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT13')}; (*PARA 15092: Engine cooling water pressure - Minimum*)
+    {LINE(109)}
+    PARA_Pr_ECW_HiHi_Diff AT %ID196 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT14')}; (*PARA 15091: Engine cooling water pressure - Maximum deviation between the sensors*)
+    {LINE(110)}
+    PARA_Pr_ECW_HiHi_Check AT %ID200 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT15')}; (*PARA 15090: Engine cooling water pressure - Maximum (sensor drift)*)
+    {LINE(111)}
+    PARA_Pr_ECWaP_HiHi AT %ID204 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT16')}; (*PARA 15093: Engine cooling water pressure after pump - Maximum*)
+    {LINE(112)}
+    PARA_Eng_Motortype AT %ID208 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT17')}; (*PARA 15084: Motortype*)
+    {LINE(113)}
+    PARA_DPr_ECWP_LoLo AT %ID212 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT18')}; (*PARA 15104: Engine cooling water pump - Difference pressure minimum*)
+    {LINE(114)}
+    PARA_Vol_SysPurge_Stroke AT %ID216 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT19')}; (*PARA 15105: System purge - Stroke volume per crankshaft turn*)
+    {LINE(115)}
+    PARA_Vol_SysPurge_MinAir AT %ID220 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT20')}; (*PARA 15190: System purge - Minimum air volume*)
+    {LINE(116)}
+    PARA_Nr_ERV_INL_Fan AT %ID224 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT21')}; (*PARA 15190: Number of inlet air fans*)
+    {LINE(117)}
+    PARA_Nr_ERV_INL_Lou AT %ID228 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT22')}; (*PARA 15191: Number of inlet air louvres*)
+    {LINE(118)}
+    PARA_Nr_ERV_OTL_Lou AT %ID232 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT23')}; (*PARA 15192: Number of outlet air louvres*)
+    {LINE(119)}
+    PARA_NrMaxErr_ERV_INL_Fan AT %ID236 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT24')}; (*PARA 15193: Maximum allowed number of failed inlet air fans*)
+    {LINE(120)}
+    PARA_NrMaxErr_ERV_INL_Lou AT %ID240 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT25')}; (*PARA 15194: Maximum allowed number of failed inlet air louvres*)
+    {LINE(121)}
+    PARA_NrMaxErr_ERV_OTL_Lou AT %ID244 : SAFEDINT {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionDINT26')}; (*PARA 15195: Maximum allowed number of failed outlet air louvres*)
+    {LINE(122)}
+    PARA_GT2_Exist AT %IX76.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT000')}; (*PARA 15082: Gas train 2 existing*)
+    {LINE(123)}
+    PARA_GT3_Exist AT %IX76.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT001')}; (*PARA 15083: Gas train 3 existing*)
+    {LINE(124)}
+    PARA_GT4_Exist AT %IX76.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT002')}; (*PARA 15103: Gas train 4 existing*)
+    {LINE(125)}
+    PARA_SysPurge_MonActive AT %IX76.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT003')}; (*PARA 15107: System purge - Monitoring active*)
+    {LINE(126)}
+    PARA_HWcirc_Cust_Exist AT %IX76.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT004')}; (*PARA 15108: Customer heating water circuit - Monitoring active*)
+    {LINE(127)}
+    PARA_PS_HW_Lo_MuteAcive AT %IX76.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT005')}; (*PARA 15109: Muting heating water minimum pressure switches at engine standstill active*)
+    {LINE(128)}
+    PARA_LS_HWHT_Lo_Exist AT %IX76.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT006')}; (*PARA 15110: High temperature heating water - Minimum level switch available*)
+    {LINE(129)}
+    PARA_PS1_HWHT_Hi_Exist AT %IX76.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT007')}; (*PARA 15111: High temperature heating water - Maximum pressure switch 1 available*)
+    {LINE(130)}
+    PARA_PS2_HWHT_Hi_Exist AT %IX77.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT008')}; (*PARA 15112: High temperature heating water - Maximum pressure switch 2 available*)
+    {LINE(131)}
+    PARA_PS1_HWHT_Lo_Exist AT %IX77.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT009')}; (*PARA 15113: High temperature heating water - Minimum pressure switch 1 available*)
+    {LINE(132)}
+    PARA_PS2_HWHT_Lo_Exist AT %IX77.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT010')}; (*PARA 15114: High temperature heating water - Minimum pressure switch 2 available*)
+    {LINE(133)}
+    PARA_TS1_HWHT_Hi_Exist AT %IX77.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT011')}; (*PARA 15115: High temperature heating water - Maximum temperature switch 1 available*)
+    {LINE(134)}
+    PARA_TS2_HWHT_Hi_Exist AT %IX77.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT012')}; (*PARA 15116: High temperature heating water - Maximum temperature switch 2 available*)
+    {LINE(135)}
+    PARA_FS_HWHT_Lo_Exist AT %IX77.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT013')}; (*PARA 15117: High temperature heating water - Minimum flow switch available*)
+    {LINE(136)}
+    PARA_LS_HWLT_Lo_Exist AT %IX77.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT014')}; (*PARA 15118: Low temperature heating water - Minimum level switch available*)
+    {LINE(137)}
+    PARA_PS1_HWLT_Hi_Exist AT %IX77.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT015')}; (*PARA 15119: Low temperature heating water - Maximum pressure switch 1 available*)
+    {LINE(138)}
+    PARA_PS2_HWLT_Hi_Exist AT %IX78.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT016')}; (*PARA 15120: Low temperature heating water - Maximum pressure switch 2 available*)
+    {LINE(139)}
+    PARA_PS1_HWLT_Lo_Exist AT %IX78.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT017')}; (*PARA 15121: Low temperature heating water - Minimum pressure switch 1 available*)
+    {LINE(140)}
+    PARA_PS2_HWLT_Lo_Exist AT %IX78.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT018')}; (*PARA 15122: Low temperature heating water - Minimum pressure switch 2 available*)
+    {LINE(141)}
+    PARA_TS1_HWLT_Hi_Exist AT %IX78.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT019')}; (*PARA 15123: Low temperature heating water - Maximum temperature switch 1 available*)
+    {LINE(142)}
+    PARA_TS2_HWLT_Hi_Exist AT %IX78.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT020')}; (*PARA 15124: Low temperature heating water - Maximum temperature switch 2 available*)
+    {LINE(143)}
+    PARA_FS_HWLT_Lo_Exist AT %IX78.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT021')}; (*PARA 15125: Low temperature heating water - Minimum flow switch available*)
+    {LINE(144)}
+    PARA_Pr_EG_sMonActive AT %IX78.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT022')}; (*PARA 15085: Exhaust gas backpressure - Safety monitoring active*)
+    {LINE(145)}
+    PARA_SafetyLoop_A2_Exist AT %IX78.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT023')}; (*PARA 15143: Safety loop 2 in the module control panel existing*)
+    {LINE(146)}
+    PARA_DCGA_Exist AT %IX79.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT024')}; (*PARA 15196: Gas train for DCGA (Decentral gas addition) existing*)
+    {LINE(147)}
+    PARA_ERV_Cust_Active AT %IX79.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT025')}; (*PARA 15188: Customer room ventilation - Monitoring active*)
+    {LINE(148)}
+    PARA_ERV_ColdCountry_Active AT %IX79.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT026')}; (*PARA 15189: Cold country mode active*)
+    {LINE(149)}
+    PARA_ER_Door_MonActive AT %IX79.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM1.SafeCommissioningOptionBIT027')}; (*PARA 15212: Door switch - Monitoring active*)
+END_VAR
+
+VAR_GLOBAL {Group(150)}
+    {LINE(151)}
+    sDO_Rel_Sync_Load AT %QX1.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM102.SafeDigitalOutput01')}; (*DO Release synchronizing and load*)
+    {LINE(152)}
+    sDO_GCB_RUC AT %QX1.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM102.SafeDigitalOutput02')}; (*DO Generator circuit breaker - Release undervoltage coil*)
+    {LINE(153)}
+    sDO_SF_OK_A AT %QX1.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM102.SafeDigitalOutput03')}; (*DO Safety functions OK - Module control panel*)
+    {LINE(154)}
+    sDO_EmStop AT %QX1.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM102.SafeDigitalOutput04')}; (*DO Emergency stop signalling*)
+    {LINE(155)}
+    sDO_SF_OK_M AT %QX8.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM205.SafeDigitalOutput04')}; (*DO Safety functions OK - Module interface panel*)
+    {LINE(156)}
+    sDO_Rel_GV1a AT %QX8.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM205.SafeDigitalOutput01')}; (*DO Release gasvalve 1a*)
+    {LINE(157)}
+    sDO_Rel_GV1b AT %QX8.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM205.SafeDigitalOutput02')}; (*DO Release gasvalve 1b*)
+    {LINE(158)}
+    sDO_GT1_SafeDevice AT %QX8.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM205.SafeDigitalOutput03')}; (*DO Gas safety device - gastrain 1*)
+    {LINE(159)}
+    sDO_Rel_GV2a AT %QX9.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM206.SafeDigitalOutput01')}; (*DO Release gasvalve 2a*)
+    {LINE(160)}
+    sDO_Rel_GV2b AT %QX9.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM206.SafeDigitalOutput02')}; (*DO Release gasvalve 2b*)
+    {LINE(161)}
+    sDO_GT2_SafeDevice AT %QX9.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM206.SafeDigitalOutput03')}; (*DO Gas safety device - gastrain 2*)
+    {LINE(162)}
+    sDO_Rel_GV3a AT %QX10.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM207.SafeDigitalOutput01')}; (*DO Release gasvalve 3a*)
+    {LINE(163)}
+    sDO_Rel_GV3b AT %QX10.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM207.SafeDigitalOutput02')}; (*DO Release gasvalve 3b*)
+    {LINE(164)}
+    sDO_GT3_SafeDevice AT %QX10.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM207.SafeDigitalOutput03')}; (*DO Gas safety device - gastrain 3*)
+    {LINE(165)}
+    sDO_Rel_GV4a AT %QX11.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM209.SafeDigitalOutput01')}; (*DO Release gasvalve 4a*)
+    {LINE(166)}
+    sDO_Rel_GV4b AT %QX11.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM209.SafeDigitalOutput02')}; (*DO Release gasvalve 4b*)
+    {LINE(167)}
+    sDO_GT4_SafeDevice AT %QX11.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM209.SafeDigitalOutput03')}; (*DO Gas safety device - gastrain 4*)
+    {LINE(168)}
+    sDO_Rel_GVa_DCGA AT %QX12.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM210.SafeDigitalOutput01')}; (*DO Release gasvalve a - DCGA*)
+    {LINE(169)}
+    sDO_Rel_GVb_DCGA AT %QX12.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM210.SafeDigitalOutput02')}; (*DO Release gasvalve b - DCGA*)
+    {LINE(170)}
+    sDO_DCGA_SafeDevice AT %QX12.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM210.SafeDigitalOutput03')}; (*DO Gas safety device - DCGA*)
+END_VAR
+
+VAR_GLOBAL {Group(171)}
+    {LINE(172)}
+    bRO_SM102 AT %QX516.0 : BOOL {Custom('SL1.SM102.ReleaseOutput')}; (*Release Output SM102*)
+    {LINE(173)}
+    bRO_SM205 AT %QX517.0 : BOOL {Custom('SL1.SM205.ReleaseOutput')}; (*Release Output SM205*)
+    {LINE(174)}
+    bRO_SM206 AT %QX520.0 : BOOL {Custom('SL1.SM206.ReleaseOutput')}; (*Release Output SM206*)
+    {LINE(175)}
+    bRO_SM207 AT %QX521.0 : BOOL {Custom('SL1.SM207.ReleaseOutput')}; (*Release Output SM207*)
+    {LINE(176)}
+    bRO_SM209 AT %QX522.0 : BOOL {Custom('SL1.SM209.ReleaseOutput')}; (*Release Output SM209*)
+    {LINE(177)}
+    bRO_SM210 AT %QX523.0 : BOOL {Custom('SL1.SM210.ReleaseOutput')}; (*Release Output SM210*)
+END_VAR
+
+VAR_GLOBAL {Group(178)}
+    {LINE(179)}
+    bOUT_F99_SafetyLoop_Eng AT %QX0.0 : BOOL {Custom('SL1.SM1.BOOL00001')}; (*CPU OUT: Function 99 - Safety loop engine OK*)
+    {LINE(180)}
+    bOUT_F01_OK AT %QX0.1 : BOOL {Custom('SL1.SM1.BOOL00002')}; (*CPU OUT: Function 01 - Speed measurement OK*)
+    {LINE(181)}
+    bOUT_F01_N_DiffOK AT %QX0.2 : BOOL {Custom('SL1.SM1.BOOL00003')}; (*CPU OUT: Function 01 - Speed difference OK*)
+    {LINE(182)}
+    bOUT_F01_N_Nom90 AT %QX0.3 : BOOL {Custom('SL1.SM1.BOOL00004')}; (*CPU OUT: Function 01 - Actual engine speed >= 90% of nominal speed*)
+    {LINE(183)}
+    bOUT_F02_OK AT %QX0.4 : BOOL {Custom('SL1.SM1.BOOL00005')}; (*CPU OUT: Function 02 - Ignition is operating*)
+    {LINE(184)}
+    bOUT_F02_OK_PC AT %QX0.5 : BOOL {Custom('SL1.SM1.BOOL00006')}; (*CPU OUT: Function 02 - Ignition plausibility check - OK*)
+    {LINE(185)}
+    bOUT_F03_OK AT %QX0.6 : BOOL {Custom('SL1.SM1.BOOL00007')}; (*CPU OUT: Function 03 - Oil pressure MIN OK*)
+    {LINE(186)}
+    bOUT_F03_Pr_EO_DiffOK AT %QX0.7 : BOOL {Custom('SL1.SM1.BOOL00008')}; (*CPU OUT: Function 03 - Oil pressure difference OK*)
+    {LINE(187)}
+    bOUT_F04_OK AT %QX1.0 : BOOL {Custom('SL1.SM1.BOOL00009')}; (*CPU OUT: Function 04 - Oil pressure MAX OK*)
+    {LINE(188)}
+    bOUT_F05_OK AT %QX1.1 : BOOL {Custom('SL1.SM1.BOOL00010')}; (*CPU OUT: Function 05 - Engine cooling water pressure MIN OK*)
+    {LINE(189)}
+    bOUT_F05_Pr_ECW_DiffOK AT %QX1.2 : BOOL {Custom('SL1.SM1.BOOL00011')}; (*CPU OUT: Function 05 - Engine cooling water pressure difference OK*)
+    {LINE(190)}
+    bOUT_F06_OK AT %QX1.3 : BOOL {Custom('SL1.SM1.BOOL00012')}; (*CPU OUT: Function 06 - Engine cooling water pressure MAX OK*)
+    {LINE(191)}
+    bOUT_F07_OK AT %QX1.4 : BOOL {Custom('SL1.SM1.BOOL00013')}; (*CPU OUT: Function 07 - Grid disconnection OK*)
+    {LINE(192)}
+    bOUT_F07_Rel_Sync_Load AT %QX1.5 : BOOL {Custom('SL1.SM1.BOOL00014')}; (*CPU OUT: Function 07 - Release synchronizing and load OK*)
+    {LINE(193)}
+    bOUT_F07_Rel_Sync_Load_PS AT %QX1.6 : BOOL {Custom('SL1.SM1.BOOL00015')}; (*CPU OUT: Function 07 - Release synchronizing and load - Physical state*)
+    {LINE(194)}
+    bOUT_F07_GCB_RUC AT %QX1.7 : BOOL {Custom('SL1.SM1.BOOL00016')}; (*CPU OUT: Function 07 - GCB - Release undervoltage coil OK*)
+    {LINE(195)}
+    bOUT_F07_GCB_RUC_PS AT %QX2.0 : BOOL {Custom('SL1.SM1.BOOL00017')}; (*CPU OUT: Function 07 - GCB - Release undervoltage coil OK - Physical state*)
+    {LINE(196)}
+    bOUT_F08_OlShortCirc_OK AT %QX2.1 : BOOL {Custom('SL1.SM1.BOOL00018')}; (*CPU OUT: Function 08 - Generator overload/short circuit OK*)
+    {LINE(197)}
+    bOUT_F08_GenPrctTrip_OK AT %QX2.2 : BOOL {Custom('SL1.SM1.BOOL00019')}; (*CPU OUT: Function 08 - Generator protection trip OK*)
+    {LINE(198)}
+    bOUT_F09_Cust_OK AT %QX2.3 : BOOL {Custom('SL1.SM1.BOOL00020')}; (*CPU OUT: Function 09 - Customer room ventilation is operating*)
+    {LINE(199)}
+    bOUT_F09_Cust_OK_PC AT %QX2.4 : BOOL {Custom('SL1.SM1.BOOL00021')}; (*CPU OUT: Function 09 - Customer room ventilation plausibility check - OK*)
+    {LINE(200)}
+    bOUT_F09_DI_ERV_Cust AT %QX7.0 : BOOL {Custom('SL1.SM1.BOOL00057')}; (*CPU OUT: Function 09 - Customer room ventilation - Status of digital input*)
+    {LINE(201)}
+    bOUT_F09_ERV_PC_Forced AT %QX7.1 : BOOL {Custom('SL1.SM1.BOOL00058')}; (*CPU OUT: Function 09 - Engine room ventilation - Forced plausibility check*)
+    {LINE(202)}
+    bOUT_F09_Door_OK AT %QX30.0 : BOOL {Custom('SL1.SM1.BOOL00241')}; (*CPU OUT: Function 09 - Engine room doors are closed*)
+    {LINE(203)}
+    bOUT_F09_INL1_Fan_OK AT %QX30.1 : BOOL {Custom('SL1.SM1.BOOL00242')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air fan - Group 1 is operating*)
+    {LINE(204)}
+    bOUT_F09_INL1_Fan_OK_PC AT %QX30.2 : BOOL {Custom('SL1.SM1.BOOL00243')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air fan - Group 1 plausibility check - OK*)
+    {LINE(205)}
+    bOUT_F09_INL2_Fan_OK AT %QX30.3 : BOOL {Custom('SL1.SM1.BOOL00244')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air fan - Group 2 is operating*)
+    {LINE(206)}
+    bOUT_F09_INL2_Fan_OK_PC AT %QX30.4 : BOOL {Custom('SL1.SM1.BOOL00245')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air fan - Group 2 plausibility check - OK*)
+    {LINE(207)}
+    bOUT_F09_INL3_Fan_OK AT %QX30.5 : BOOL {Custom('SL1.SM1.BOOL00246')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air fan - Group 3 is operating*)
+    {LINE(208)}
+    bOUT_F09_INL3_Fan_OK_PC AT %QX30.6 : BOOL {Custom('SL1.SM1.BOOL00247')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air fan - Group 3 plausibility check - OK*)
+    {LINE(209)}
+    bOUT_F09_INL4_Fan_OK AT %QX30.7 : BOOL {Custom('SL1.SM1.BOOL00248')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air fan - Group 4 is operating*)
+    {LINE(210)}
+    bOUT_F09_INL4_Fan_OK_PC AT %QX31.0 : BOOL {Custom('SL1.SM1.BOOL00249')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air fan - Group 4 plausibility check - OK*)
+    {LINE(211)}
+    bOUT_F09_INL5_Fan_OK AT %QX31.1 : BOOL {Custom('SL1.SM1.BOOL00250')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air fan - Group 5 is operating*)
+    {LINE(212)}
+    bOUT_F09_INL5_Fan_OK_PC AT %QX31.2 : BOOL {Custom('SL1.SM1.BOOL00251')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air fan - Group 5 plausibility check - OK*)
+    {LINE(213)}
+    bOUT_F09_INL6_Fan_OK AT %QX31.3 : BOOL {Custom('SL1.SM1.BOOL00252')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air fan - Group 6 is operating*)
+    {LINE(214)}
+    bOUT_F09_INL6_Fan_OK_PC AT %QX31.4 : BOOL {Custom('SL1.SM1.BOOL00253')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air fan - Group 6 plausibility check - OK*)
+    {LINE(215)}
+    bOUT_F09_INL1_Lou_OK AT %QX31.5 : BOOL {Custom('SL1.SM1.BOOL00254')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air louvre - Group 1 is operating*)
+    {LINE(216)}
+    bOUT_F09_INL1_Lou_OK_PC AT %QX31.6 : BOOL {Custom('SL1.SM1.BOOL00255')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air louvre - Group 1 plausibility check - OK*)
+    {LINE(217)}
+    bOUT_F09_INL2_Lou_OK AT %QX31.7 : BOOL {Custom('SL1.SM1.BOOL00256')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air louvre - Group 2 is operating*)
+    {LINE(218)}
+    bOUT_F09_INL2_Lou_OK_PC AT %QX32.0 : BOOL {Custom('SL1.SM1.BOOL00257')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air louvre - Group 2 plausibility check - OK*)
+    {LINE(219)}
+    bOUT_F09_INL3_Lou_OK AT %QX32.1 : BOOL {Custom('SL1.SM1.BOOL00258')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air louvre - Group 3 is operating*)
+    {LINE(220)}
+    bOUT_F09_INL3_Lou_OK_PC AT %QX32.2 : BOOL {Custom('SL1.SM1.BOOL00259')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air louvre - Group 3 plausibility check - OK*)
+    {LINE(221)}
+    bOUT_F09_INL4_Lou_OK AT %QX32.3 : BOOL {Custom('SL1.SM1.BOOL00260')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air louvre - Group 4 is operating*)
+    {LINE(222)}
+    bOUT_F09_INL4_Lou_OK_PC AT %QX32.4 : BOOL {Custom('SL1.SM1.BOOL00261')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air louvre - Group 4 plausibility check - OK*)
+    {LINE(223)}
+    bOUT_F09_INL5_Lou_OK AT %QX32.5 : BOOL {Custom('SL1.SM1.BOOL00262')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air louvre - Group 5 is operating*)
+    {LINE(224)}
+    bOUT_F09_INL5_Lou_OK_PC AT %QX32.6 : BOOL {Custom('SL1.SM1.BOOL00263')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air louvre - Group 5 plausibility check - OK*)
+    {LINE(225)}
+    bOUT_F09_INL6_Lou_OK AT %QX32.7 : BOOL {Custom('SL1.SM1.BOOL00264')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air louvre - Group 6 is operating*)
+    {LINE(226)}
+    bOUT_F09_INL6_Lou_OK_PC AT %QX33.0 : BOOL {Custom('SL1.SM1.BOOL00265')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air louvre - Group 6 plausibility check - OK*)
+    {LINE(227)}
+    bOUT_F09_OTL1_Lou_OK AT %QX33.1 : BOOL {Custom('SL1.SM1.BOOL00266')}; (*CPU OUT: Function 09 - Engine room ventilation - Outlet air louvre - Group 1 is operating*)
+    {LINE(228)}
+    bOUT_F09_OTL1_Lou_OK_PC AT %QX33.2 : BOOL {Custom('SL1.SM1.BOOL00267')}; (*CPU OUT: Function 09 - Engine room ventilation - Outlet air louvre - Group 1 plausibility check - OK*)
+    {LINE(229)}
+    bOUT_F09_OTL2_Lou_OK AT %QX33.3 : BOOL {Custom('SL1.SM1.BOOL00268')}; (*CPU OUT: Function 09 - Engine room ventilation - Outlet air louvre - Group 2 is operating*)
+    {LINE(230)}
+    bOUT_F09_OTL2_Lou_OK_PC AT %QX33.4 : BOOL {Custom('SL1.SM1.BOOL00269')}; (*CPU OUT: Function 09 - Engine room ventilation - Outlet air louvre - Group 2 plausibility check - OK*)
+    {LINE(231)}
+    bOUT_F09_OTL3_Lou_OK AT %QX33.5 : BOOL {Custom('SL1.SM1.BOOL00270')}; (*CPU OUT: Function 09 - Engine room ventilation - Outlet air louvre - Group 3 is operating*)
+    {LINE(232)}
+    bOUT_F09_OTL3_Lou_OK_PC AT %QX33.6 : BOOL {Custom('SL1.SM1.BOOL00271')}; (*CPU OUT: Function 09 - Engine room ventilation - Outlet air louvre - Group 3 plausibility check - OK*)
+    {LINE(233)}
+    bOUT_F09_OTL4_Lou_OK AT %QX33.7 : BOOL {Custom('SL1.SM1.BOOL00272')}; (*CPU OUT: Function 09 - Engine room ventilation - Outlet air louvre - Group 4 is operating*)
+    {LINE(234)}
+    bOUT_F09_OTL4_Lou_OK_PC AT %QX34.0 : BOOL {Custom('SL1.SM1.BOOL00273')}; (*CPU OUT: Function 09 - Engine room ventilation - Outlet air louvre - Group 4 plausibility check - OK*)
+    {LINE(235)}
+    bOUT_F09_OTL5_Lou_OK AT %QX34.1 : BOOL {Custom('SL1.SM1.BOOL00274')}; (*CPU OUT: Function 09 - Engine room ventilation - Outlet air louvre - Group 5 is operating*)
+    {LINE(236)}
+    bOUT_F09_OTL5_Lou_OK_PC AT %QX34.2 : BOOL {Custom('SL1.SM1.BOOL00275')}; (*CPU OUT: Function 09 - Engine room ventilation - Outlet air louvre - Group 5 plausibility check - OK*)
+    {LINE(237)}
+    bOUT_F09_OTL6_Lou_OK AT %QX34.3 : BOOL {Custom('SL1.SM1.BOOL00276')}; (*CPU OUT: Function 09 - Engine room ventilation - Outlet air louvre - Group 6 is operating*)
+    {LINE(238)}
+    bOUT_F09_OTL6_Lou_OK_PC AT %QX34.4 : BOOL {Custom('SL1.SM1.BOOL00277')}; (*CPU OUT: Function 09 - Engine room ventilation - Outlet air louvre - Group 6 plausibility check - OK*)
+    {LINE(239)}
+    bOUT_F10_EmStop_M_OK AT %QX2.5 : BOOL {Custom('SL1.SM1.BOOL00022')}; (*CPU OUT: Function 10 - Emergency stop at module interface panel*)
+    {LINE(240)}
+    bOUT_F10_EmStop_OK AT %QX2.6 : BOOL {Custom('SL1.SM1.BOOL00023')}; (*CPU OUT: Function 10 - Emergency stop*)
+    {LINE(241)}
+    bOUT_F10_SafetyLoop_EmStop AT %QX2.7 : BOOL {Custom('SL1.SM1.BOOL00024')}; (*CPU OUT: Function 10 - Safety loop emergency stop OK*)
+    {LINE(242)}
+    bOUT_F10_DO_EmStop AT %QX3.0 : BOOL {Custom('SL1.SM1.BOOL00025')}; (*CPU OUT: Function 10 - Emergency stop signalling output OK*)
+    {LINE(243)}
+    bOUT_F10_DO_EmStop_PS AT %QX3.1 : BOOL {Custom('SL1.SM1.BOOL00026')}; (*CPU OUT: Function 10 - Emergency stop signalling output - Physical state*)
+    {LINE(244)}
+    bOUT_F11_SafetyLoop_A1_OK AT %QX3.2 : BOOL {Custom('SL1.SM1.BOOL00027')}; (*CPU OUT: Function 11 - Safety loop 1 OK - Module control panel*)
+    {LINE(245)}
+    bOUT_F11_SafetyLoop_A2_OK AT %QX3.3 : BOOL {Custom('SL1.SM1.BOOL00028')}; (*CPU OUT: Function 11 - Safety loop 2 OK - Module control panel*)
+    {LINE(246)}
+    bOUT_F11_SafetyLoop_M_OK AT %QX3.4 : BOOL {Custom('SL1.SM1.BOOL00029')}; (*CPU OUT: Function 11 - Safety loop OK - Module interface panel*)
+    {LINE(247)}
+    bOUT_F12_GT1_OK AT %QX3.5 : BOOL {Custom('SL1.SM1.BOOL00030')}; (*CPU OUT: Function 12 - Gas supply interruption OK - Gastrain 1*)
+    {LINE(248)}
+    bOUT_F12_GT2_OK AT %QX3.6 : BOOL {Custom('SL1.SM1.BOOL00031')}; (*CPU OUT: Function 12 - Gas supply interruption OK - Gastrain 2*)
+    {LINE(249)}
+    bOUT_F12_GT3_OK AT %QX3.7 : BOOL {Custom('SL1.SM1.BOOL00032')}; (*CPU OUT: Function 12 - Gas supply interruption OK - Gastrain 3*)
+    {LINE(250)}
+    bOUT_F12_GT4_OK AT %QX4.0 : BOOL {Custom('SL1.SM1.BOOL00033')}; (*CPU OUT: Function 12 - Gas supply interruption OK - Gastrain 4*)
+    {LINE(251)}
+    bOUT_F12_Rel_GV1 AT %QX4.1 : BOOL {Custom('SL1.SM1.BOOL00034')}; (*CPU OUT: Function 12 - Gas valves from gas train 1 released*)
+    {LINE(252)}
+    bOUT_F12_Rel_GV1a_PS AT %QX4.2 : BOOL {Custom('SL1.SM1.BOOL00035')}; (*CPU OUT: Function 12 - Gas valve 1a - Physical state*)
+    {LINE(253)}
+    bOUT_F12_Rel_GV1b_PS AT %QX4.3 : BOOL {Custom('SL1.SM1.BOOL00036')}; (*CPU OUT: Function 12 - Gas valve 1b - Physical state*)
+    {LINE(254)}
+    bOUT_F12_GT1_SD_Dem AT %QX4.4 : BOOL {Custom('SL1.SM1.BOOL00037')}; (*CPU OUT: Function 12 - Demand gas safety device - Gastrain 1*)
+    {LINE(255)}
+    bOUT_F12_GT1_SD_Dem_PS AT %QX4.5 : BOOL {Custom('SL1.SM1.BOOL00038')}; (*CPU OUT: Function 12 - Demand gas safety device - Gastrain 1 - Physical state*)
+    {LINE(256)}
+    bOUT_F12_Rel_GV2 AT %QX4.6 : BOOL {Custom('SL1.SM1.BOOL00039')}; (*CPU OUT: Function 12 - Gas valves from gas train 2 released*)
+    {LINE(257)}
+    bOUT_F12_Rel_GV2a_PS AT %QX4.7 : BOOL {Custom('SL1.SM1.BOOL00040')}; (*CPU OUT: Function 12 - Gas valve 2a - Physical state*)
+    {LINE(258)}
+    bOUT_F12_Rel_GV2b_PS AT %QX5.0 : BOOL {Custom('SL1.SM1.BOOL00041')}; (*CPU OUT: Function 12 - Gas valve 2b - Physical state*)
+    {LINE(259)}
+    bOUT_F12_GT2_SD_Dem AT %QX5.1 : BOOL {Custom('SL1.SM1.BOOL00042')}; (*CPU OUT: Function 12 - Demand gas safety device - Gastrain 2*)
+    {LINE(260)}
+    bOUT_F12_GT2_SD_Dem_PS AT %QX5.2 : BOOL {Custom('SL1.SM1.BOOL00043')}; (*CPU OUT: Function 12 - Demand gas safety device - Gastrain 2 - Physical state*)
+    {LINE(261)}
+    bOUT_F12_Rel_GV3 AT %QX5.3 : BOOL {Custom('SL1.SM1.BOOL00044')}; (*CPU OUT: Function 12 - Gas valves from gas train 3 released*)
+    {LINE(262)}
+    bOUT_F12_Rel_GV3a_PS AT %QX5.4 : BOOL {Custom('SL1.SM1.BOOL00045')}; (*CPU OUT: Function 12 - Gas valve 3a - Physical state*)
+    {LINE(263)}
+    bOUT_F12_Rel_GV3b_PS AT %QX5.5 : BOOL {Custom('SL1.SM1.BOOL00046')}; (*CPU OUT: Function 12 - Gas valve 3b - Physical state*)
+    {LINE(264)}
+    bOUT_F12_GT3_SD_Dem AT %QX5.6 : BOOL {Custom('SL1.SM1.BOOL00047')}; (*CPU OUT: Function 12 - Demand gas safety device - Gastrain 3*)
+    {LINE(265)}
+    bOUT_F12_GT3_SD_Dem_PS AT %QX5.7 : BOOL {Custom('SL1.SM1.BOOL00048')}; (*CPU OUT: Function 12 - Demand gas safety device - Gastrain 3 - Physical state*)
+    {LINE(266)}
+    bOUT_F12_Rel_GV4 AT %QX6.0 : BOOL {Custom('SL1.SM1.BOOL00049')}; (*CPU OUT: Function 12 - Gas valves from gas train 4 released*)
+    {LINE(267)}
+    bOUT_F12_Rel_GV4a_PS AT %QX6.1 : BOOL {Custom('SL1.SM1.BOOL00050')}; (*CPU OUT: Function 12 - Gas valve 4a - Physical state*)
+    {LINE(268)}
+    bOUT_F12_Rel_GV4b_PS AT %QX6.2 : BOOL {Custom('SL1.SM1.BOOL00051')}; (*CPU OUT: Function 12 - Gas valve 4b - Physical state*)
+    {LINE(269)}
+    bOUT_F12_GT4_SD_Dem AT %QX6.3 : BOOL {Custom('SL1.SM1.BOOL00052')}; (*CPU OUT: Function 12 - Demand gas safety device - Gastrain 4*)
+    {LINE(270)}
+    bOUT_F12_GT4_SD_Dem_PS AT %QX6.4 : BOOL {Custom('SL1.SM1.BOOL00053')}; (*CPU OUT: Function 12 - Demand gas safety device - Gastrain 4 - Physical state*)
+    {LINE(271)}
+    bOUT_F12_DI_GT1_SafeDevOK AT %QX34.5 : BOOL {Custom('SL1.SM1.BOOL00278')}; (*CPU OUT: Function 12 - Gas safety device OK - Gastrain 1 - Status of digital input*)
+    {LINE(272)}
+    bOUT_F12_DI_GT2_SafeDevOK AT %QX34.6 : BOOL {Custom('SL1.SM1.BOOL00279')}; (*CPU OUT: Function 12 - Gas safety device OK - Gastrain 2 - Status of digital input*)
+    {LINE(273)}
+    bOUT_F12_DI_GT3_SafeDevOK AT %QX34.7 : BOOL {Custom('SL1.SM1.BOOL00280')}; (*CPU OUT: Function 12 - Gas safety device OK - Gastrain 3 - Status of digital input*)
+    {LINE(274)}
+    bOUT_F12_DI_GT4_SafeDevOK AT %QX35.0 : BOOL {Custom('SL1.SM1.BOOL00281')}; (*CPU OUT: Function 12 - Gas safety device OK - Gastrain 4 - Status of digital input*)
+    {LINE(275)}
+    bOUT_F12_DI_DCGA_SafeDevOK AT %QX35.1 : BOOL {Custom('SL1.SM1.BOOL00282')}; (*CPU OUT: Function 12 - Gas safety device OK - DCGA - Status of digital input*)
+    {LINE(276)}
+    bOUT_F12_DCGA_OK AT %QX35.2 : BOOL {Custom('SL1.SM1.BOOL00283')}; (*CPU OUT: Function 12 - Gas supply interruption OK - DCGA*)
+    {LINE(277)}
+    bOUT_F12_Rel_GV_DCGA AT %QX35.3 : BOOL {Custom('SL1.SM1.BOOL00284')}; (*CPU OUT: Function 12 - Gas valves from DCGA released*)
+    {LINE(278)}
+    bOUT_F12_Rel_GVa_DCGA_PS AT %QX35.4 : BOOL {Custom('SL1.SM1.BOOL00285')}; (*CPU OUT: Function 12 - Gas valve a DCGA - Physical state*)
+    {LINE(279)}
+    bOUT_F12_Rel_GVb_DCGA_PS AT %QX35.5 : BOOL {Custom('SL1.SM1.BOOL00286')}; (*CPU OUT: Function 12 - Gas valve b DCGA - Physical state*)
+    {LINE(280)}
+    bOUT_F12_DCGA_SD_Dem AT %QX35.6 : BOOL {Custom('SL1.SM1.BOOL00287')}; (*CPU OUT: Function 12 - Demand gas safety device - DCGA*)
+    {LINE(281)}
+    bOUT_F12_DCGA_SD_Dem_PS AT %QX35.7 : BOOL {Custom('SL1.SM1.BOOL00288')}; (*CPU OUT: Function 12 - Demand gas safety device - DCGA - Physical state*)
+    {LINE(282)}
+    bOUT_F16_ScavFlapPos_OK AT %QX26.1 : BOOL {Custom('SL1.SM1.BOOL00210')}; (*CPU OUT: Function 16 - Scavenging flap position OK*)
+    {LINE(283)}
+    bOUT_F16_ScavFlapPos_OK_PC AT %QX26.2 : BOOL {Custom('SL1.SM1.BOOL00211')}; (*CPU OUT: Function 16 - Scavenging flap position plausibility check - OK*)
+    {LINE(284)}
+    bOUT_F16_DI_ScavFlapClosed AT %QX26.3 : BOOL {Custom('SL1.SM1.BOOL00212')}; (*CPU OUT: Function 16 - Scavenging flap closed - Status of digital input*)
+    {LINE(285)}
+    bOUT_F16_TS_ScavFlap_OK AT %QX26.4 : BOOL {Custom('SL1.SM1.BOOL00213')}; (*CPU OUT: Function 16 - Scavenging flap temperature OK*)
+    {LINE(286)}
+    bOUT_F17_Purge_OK AT %QX26.5 : BOOL {Custom('SL1.SM1.BOOL00214')}; (*CPU OUT: Function 17 - Purge state = OK*)
+    {LINE(287)}
+    bOUT_F20_HWcirc_Cust_OK AT %QX26.6 : BOOL {Custom('SL1.SM1.BOOL00215')}; (*CPU OUT: Function 20 - Customer heating water circuit OK*)
+    {LINE(288)}
+    bOUT_F20_LS_HWHT_Lo_OK AT %QX26.7 : BOOL {Custom('SL1.SM1.BOOL00216')}; (*CPU OUT: Function 20 - High temperature heating water - Minimum level switch OK*)
+    {LINE(289)}
+    bOUT_F20_PS1_HWHT_Hi_OK AT %QX27.0 : BOOL {Custom('SL1.SM1.BOOL00217')}; (*CPU OUT: Function 20 - High temperature heating water - Maximum pressure switch 1 OK*)
+    {LINE(290)}
+    bOUT_F20_PS2_HWHT_Hi_OK AT %QX27.1 : BOOL {Custom('SL1.SM1.BOOL00218')}; (*CPU OUT: Function 20 - High temperature heating water - Maximum pressure switch 2 OK*)
+    {LINE(291)}
+    bOUT_F20_PS1_HWHT_Lo_OK AT %QX27.2 : BOOL {Custom('SL1.SM1.BOOL00219')}; (*CPU OUT: Function 20 - High temperature heating water - Minimum pressure switch 1 OK*)
+    {LINE(292)}
+    bOUT_F20_PS1_HWHT_Lo_DI AT %QX27.3 : BOOL {Custom('SL1.SM1.BOOL00220')}; (*CPU OUT: Function 20 - High temperature heating water - Minimum pressure switch 1 - Status of digital input*)
+    {LINE(293)}
+    bOUT_F20_PS2_HWHT_Lo_OK AT %QX27.4 : BOOL {Custom('SL1.SM1.BOOL00221')}; (*CPU OUT: Function 20 - High temperature heating water - Minimum pressure switch 2 OK*)
+    {LINE(294)}
+    bOUT_F20_PS2_HWHT_Lo_DI AT %QX27.5 : BOOL {Custom('SL1.SM1.BOOL00222')}; (*CPU OUT: Function 20 - High temperature heating water - Minimum pressure switch 2 - Status of digital input*)
+    {LINE(295)}
+    bOUT_F20_TS1_HWHT_Hi_OK AT %QX27.6 : BOOL {Custom('SL1.SM1.BOOL00223')}; (*CPU OUT: Function 20 - High temperature heating water - Maximum temperature switch 1 OK*)
+    {LINE(296)}
+    bOUT_F20_TS2_HWHT_Hi_OK AT %QX27.7 : BOOL {Custom('SL1.SM1.BOOL00224')}; (*CPU OUT: Function 20 - High temperature heating water - Maximum temperature switch 2 OK*)
+    {LINE(297)}
+    bOUT_F20_FS_HWHT_Lo_OK AT %QX28.0 : BOOL {Custom('SL1.SM1.BOOL00225')}; (*CPU OUT: Function 20 - High temperature heating water - Minimum flow switch OK*)
+    {LINE(298)}
+    bOUT_F20_FS_HWHT_Lo_OK_PC AT %QX28.1 : BOOL {Custom('SL1.SM1.BOOL00226')}; (*CPU OUT: Function 20 - High temperature heating water - Minimum flow switch plausibility check OK*)
+    {LINE(299)}
+    bOUT_F20_FS_HWHT_Lo_DI AT %QX28.2 : BOOL {Custom('SL1.SM1.BOOL00227')}; (*CPU OUT: Function 20 - High temperature heating water - Minimum flow switch - Status of digital input*)
+    {LINE(300)}
+    bOUT_F20_LS_HWLT_Lo_OK AT %QX28.3 : BOOL {Custom('SL1.SM1.BOOL00228')}; (*CPU OUT: Function 20 - Low temperature heating water - Minimum level switch OK*)
+    {LINE(301)}
+    bOUT_F20_PS1_HWLT_Hi_OK AT %QX28.4 : BOOL {Custom('SL1.SM1.BOOL00229')}; (*CPU OUT: Function 20 - Low temperature heating water - Maximum pressure switch 1 OK*)
+    {LINE(302)}
+    bOUT_F20_PS2_HWLT_Hi_OK AT %QX28.5 : BOOL {Custom('SL1.SM1.BOOL00230')}; (*CPU OUT: Function 20 - Low temperature heating water - Maximum pressure switch 2 OK*)
+    {LINE(303)}
+    bOUT_F20_PS1_HWLT_Lo_OK AT %QX28.6 : BOOL {Custom('SL1.SM1.BOOL00231')}; (*CPU OUT: Function 20 - Low temperature heating water - Minimum pressure switch 1 OK*)
+    {LINE(304)}
+    bOUT_F20_PS1_HWLT_Lo_DI AT %QX28.7 : BOOL {Custom('SL1.SM1.BOOL00232')}; (*CPU OUT: Function 20 - Low temperature heating water - Minimum pressure switch 1 - Status of digital input*)
+    {LINE(305)}
+    bOUT_F20_PS2_HWLT_Lo_OK AT %QX29.0 : BOOL {Custom('SL1.SM1.BOOL00233')}; (*CPU OUT: Function 20 - Low temperature heating water - Minimum pressure switch 2 OK*)
+    {LINE(306)}
+    bOUT_F20_PS2_HWLT_Lo_DI AT %QX29.1 : BOOL {Custom('SL1.SM1.BOOL00234')}; (*CPU OUT: Function 20 - Low temperature heating water - Minimum pressure switch 2 - Status of digital input*)
+    {LINE(307)}
+    bOUT_F20_TS1_HWLT_Hi_OK AT %QX29.2 : BOOL {Custom('SL1.SM1.BOOL00235')}; (*CPU OUT: Function 20 - Low temperature heating water - Maximum temperature switch 1 OK*)
+    {LINE(308)}
+    bOUT_F20_TS2_HWLT_Hi_OK AT %QX29.3 : BOOL {Custom('SL1.SM1.BOOL00236')}; (*CPU OUT: Function 20 - Low temperature heating water - Maximum temperature switch 2 OK*)
+    {LINE(309)}
+    bOUT_F20_FS_HWLT_Lo_OK AT %QX29.4 : BOOL {Custom('SL1.SM1.BOOL00237')}; (*CPU OUT: Function 20 - Low temperature heating water - Minimum flow switch OK*)
+    {LINE(310)}
+    bOUT_F20_FS_HWLT_Lo_OK_PC AT %QX29.5 : BOOL {Custom('SL1.SM1.BOOL00238')}; (*CPU OUT: Function 20 - Low temperature heating water - Minimum flow switch plausibility check OK*)
+    {LINE(311)}
+    bOUT_F20_FS_HWLT_Lo_DI AT %QX29.6 : BOOL {Custom('SL1.SM1.BOOL00239')}; (*CPU OUT: Function 20 - Low temperature heating water - Minimum flow switch - Status of digital input*)
+    {LINE(312)}
+    bOUT_F21_Pr_EG_Hi_OK AT %QX29.7 : BOOL {Custom('SL1.SM1.BOOL00240')}; (*CPU OUT: Function 21 - Exhaust gas backpressure OK*)
+    {LINE(313)}
+    bOUT_F99_Rel_SF_OK AT %QX6.5 : BOOL {Custom('SL1.SM1.BOOL00054')}; (*CPU OUT: Function 99 - Release safety functions - Module control panel*)
+    {LINE(314)}
+    bOUT_F99_Rel_SF_OK_A_PS AT %QX6.6 : BOOL {Custom('SL1.SM1.BOOL00055')}; (*CPU OUT: Function 99 - Release safety functions - Module control panel - Physical state*)
+    {LINE(315)}
+    bOUT_F99_Rel_SF_OK_M_PS AT %QX6.7 : BOOL {Custom('SL1.SM1.BOOL00056')}; (*CPU OUT: Function 99 - Release safety functions - Module interface panel - Physical state*)
+END_VAR
+
+VAR_GLOBAL {Group(316)}
+    {LINE(317)}
+    iOUT_F09_Nr_PC_NotDone AT %QW48 : INT {Custom('SL1.SM1.INT0001')}; (*CPU OUT: Function 09 - Number of plausibility checks not performed*)
+END_VAR
+
+VAR_GLOBAL {Group(318)}
+    {LINE(319)}
+    iOUT_F01_N_EngAct AT %QD132 : DINT {Custom('SL1.SM1.DINT0001')}; (*CPU OUT: Function 01 - Actual engine speed [rpm]*)
+    {LINE(320)}
+    iOUT_F01_N_EngAct_Diff AT %QD136 : DINT {Custom('SL1.SM1.DINT0002')}; (*CPU OUT: Function 01 - Speed difference [rpm]*)
+    {LINE(321)}
+    iOUT_F01_SDC_30s_ET AT %QD140 : DINT {Custom('SL1.SM1.DINT0003')}; (*CPU OUT: Function 01 - Speed difference check - Elipsed time*)
+    {LINE(322)}
+    iOUT_F01_Standstill_1m_ET AT %QD144 : DINT {Custom('SL1.SM1.DINT0004')}; (*CPU OUT: Function 01 - Speed < 80rpm - Elipsed time*)
+    {LINE(323)}
+    iOUT_F01_N_Nom90_10s_ET AT %QD148 : DINT {Custom('SL1.SM1.DINT0005')}; (*CPU OUT: Function 01 - Speed >= 90% of nominal speed - Elipsed time*)
+    {LINE(324)}
+    iOUT_F03_Pr_EO AT %QD152 : DINT {Custom('SL1.SM1.DINT0006')}; (*CPU OUT: Function 03 - Actual oil pressure at last lubrication point [mbar]*)
+    {LINE(325)}
+    iOUT_F03_Pr_EO_Standstill AT %QD156 : DINT {Custom('SL1.SM1.DINT0007')}; (*CPU OUT: Function 03 - Oil pressure at last lubrication point - At standstill [mbar]*)
+    {LINE(326)}
+    iOUT_F03_Pr_EO_Diff AT %QD160 : DINT {Custom('SL1.SM1.DINT0008')}; (*CPU OUT: Function 03 - Oil pressure difference [mbar]*)
+    {LINE(327)}
+    iOUT_F03_Pr_EO_Fr_1m_ET AT %QD164 : DINT {Custom('SL1.SM1.DINT0009')}; (*CPU OUT: Function 03 - Oil pressure frozen - Elipsed time*)
+    {LINE(328)}
+    iOUT_F04_Pr_EOaP AT %QD168 : DINT {Custom('SL1.SM1.DINT0010')}; (*CPU OUT: Function 04 - Actual oil pressure after pump [mbar]*)
+    {LINE(329)}
+    iOUT_F04_Pr_EOaP_Standstill AT %QD172 : DINT {Custom('SL1.SM1.DINT0011')}; (*CPU OUT: Function 04 - Oil pressure after pump - At standstill [mbar]*)
+    {LINE(330)}
+    iOUT_F04_Pr_EOaP_Fr_1m_ET AT %QD176 : DINT {Custom('SL1.SM1.DINT0012')}; (*CPU OUT: Function 04 - Oil pressure after pump frozen - Elipsed time*)
+    {LINE(331)}
+    iOUT_F04_EO_PumpsOff_2m_ET AT %QD180 : DINT {Custom('SL1.SM1.DINT0013')}; (*CPU OUT: Function 04 - Oil pumps off for 120s - Elipsed time*)
+    {LINE(332)}
+    iOUT_F05_Pr_ECW AT %QD184 : DINT {Custom('SL1.SM1.DINT0014')}; (*CPU OUT: Function 05 - Actual engine cooling water pressure [mbar]*)
+    {LINE(333)}
+    iOUT_F05_Pr_ECW_Diff AT %QD188 : DINT {Custom('SL1.SM1.DINT0015')}; (*CPU OUT: Function 05 - Engine cooling water pressure difference [mbar]*)
+    {LINE(334)}
+    iOUT_F05_Pr_ECW_Fr_1m_ET AT %QD192 : DINT {Custom('SL1.SM1.DINT0016')}; (*CPU OUT: Function 05 - Engine cooling water pressure frozen - Elipsed time*)
+    {LINE(335)}
+    iOUT_F06_Pr_ECWaP AT %QD196 : DINT {Custom('SL1.SM1.DINT0017')}; (*CPU OUT: Function 06 - Actual engine cooling water pressure after pump [mbar]*)
+    {LINE(336)}
+    iOUT_F06_Pr_ECWaP_Fr_1m_ET AT %QD200 : DINT {Custom('SL1.SM1.DINT0018')}; (*CPU OUT: Function 06 - Engine cooling water pressure after pump frozen - Elipsed time*)
+    {LINE(337)}
+    iOUT_F06_ECW_PumpsOff_2m_ET AT %QD204 : DINT {Custom('SL1.SM1.DINT0019')}; (*CPU OUT: Function 06 - Engine cooling water pumps off for 120s - Elipsed time*)
+    {LINE(338)}
+    iOUT_F07_GCB_On_10s_ET AT %QD208 : DINT {Custom('SL1.SM1.DINT0020')}; (*CPU OUT: Function 07 - Generator circuit breaker ON for 10s - Elipsed time*)
+    {LINE(339)}
+    iOUT_F07_GCB_On_60s_ET AT %QD212 : DINT {Custom('SL1.SM1.DINT0021')}; (*CPU OUT: Function 07 - Generator circuit breaker ON for 60s - Elipsed time*)
+    {LINE(340)}
+    iOUT_F09_Cust_OK_15s_ET AT %QD216 : DINT {Custom('SL1.SM1.DINT0022')}; (*CPU OUT: Function 09 - Customer room ventilation not in operation - Elipsed time*)
+    {LINE(341)}
+    iOUT_F09_Cust_PC_ET AT %QD220 : DINT {Custom('SL1.SM1.DINT0023')}; (*CPU OUT: Function 09 - Customer room ventilation plausibility check - Elipsed time*)
+    {LINE(342)}
+    iOUT_F09_Door_OK_15s_ET AT %QD284 : DINT {Custom('SL1.SM1.DINT0039')}; (*CPU OUT: Function 09 - Engine room door switch not closed - Elipsed time*)
+    {LINE(343)}
+    iOUT_F09_INL1_Fan_OK_1m_ET AT %QD288 : DINT {Custom('SL1.SM1.DINT0040')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air fan - Group 1 not operating - Elipsed time*)
+    {LINE(344)}
+    iOUT_F09_INL2_Fan_OK_1m_ET AT %QD292 : DINT {Custom('SL1.SM1.DINT0041')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air fan - Group 2 not operating - Elipsed time*)
+    {LINE(345)}
+    iOUT_F09_INL3_Fan_OK_1m_ET AT %QD296 : DINT {Custom('SL1.SM1.DINT0042')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air fan - Group 3 not operating - Elipsed time*)
+    {LINE(346)}
+    iOUT_F09_INL4_Fan_OK_1m_ET AT %QD300 : DINT {Custom('SL1.SM1.DINT0043')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air fan - Group 4 not operating - Elipsed time*)
+    {LINE(347)}
+    iOUT_F09_INL5_Fan_OK_1m_ET AT %QD304 : DINT {Custom('SL1.SM1.DINT0044')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air fan - Group 5 not operating - Elipsed time*)
+    {LINE(348)}
+    iOUT_F09_INL6_Fan_OK_1m_ET AT %QD308 : DINT {Custom('SL1.SM1.DINT0045')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air fan - Group 6 not operating - Elipsed time*)
+    {LINE(349)}
+    iOUT_F09_INL1_Lou_OK_1m_ET AT %QD312 : DINT {Custom('SL1.SM1.DINT0046')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air louvre - Group 1 not operating - Elipsed time*)
+    {LINE(350)}
+    iOUT_F09_INL2_Lou_OK_1m_ET AT %QD316 : DINT {Custom('SL1.SM1.DINT0047')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air louvre - Group 2 not operating - Elipsed time*)
+    {LINE(351)}
+    iOUT_F09_INL3_Lou_OK_1m_ET AT %QD320 : DINT {Custom('SL1.SM1.DINT0048')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air louvre - Group 3 not operating - Elipsed time*)
+    {LINE(352)}
+    iOUT_F09_INL4_Lou_OK_1m_ET AT %QD324 : DINT {Custom('SL1.SM1.DINT0049')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air louvre - Group 4 not operating - Elipsed time*)
+    {LINE(353)}
+    iOUT_F09_INL5_Lou_OK_1m_ET AT %QD328 : DINT {Custom('SL1.SM1.DINT0050')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air louvre - Group 5 not operating - Elipsed time*)
+    {LINE(354)}
+    iOUT_F09_INL6_Lou_OK_1m_ET AT %QD332 : DINT {Custom('SL1.SM1.DINT0051')}; (*CPU OUT: Function 09 - Engine room ventilation - Inlet air louvre - Group 6 not operating - Elipsed time*)
+    {LINE(355)}
+    iOUT_F09_OTL1_Lou_OK_1m_ET AT %QD336 : DINT {Custom('SL1.SM1.DINT0052')}; (*CPU OUT: Function 09 - Engine room ventilation - Outlet air louvre - Group 1 not operating - Elipsed time*)
+    {LINE(356)}
+    iOUT_F09_OTL2_Lou_OK_1m_ET AT %QD340 : DINT {Custom('SL1.SM1.DINT0053')}; (*CPU OUT: Function 09 - Engine room ventilation - Outlet air louvre - Group 2 not operating - Elipsed time*)
+    {LINE(357)}
+    iOUT_F09_OTL3_Lou_OK_1m_ET AT %QD344 : DINT {Custom('SL1.SM1.DINT0054')}; (*CPU OUT: Function 09 - Engine room ventilation - Outlet air louvre - Group 3 not operating - Elipsed time*)
+    {LINE(358)}
+    iOUT_F09_OTL4_Lou_OK_1m_ET AT %QD348 : DINT {Custom('SL1.SM1.DINT0055')}; (*CPU OUT: Function 09 - Engine room ventilation - Outlet air louvre - Group 4 not operating - Elipsed time*)
+    {LINE(359)}
+    iOUT_F09_OTL5_Lou_OK_1m_ET AT %QD352 : DINT {Custom('SL1.SM1.DINT0056')}; (*CPU OUT: Function 09 - Engine room ventilation - Outlet air louvre - Group 5 not operating - Elipsed time*)
+    {LINE(360)}
+    iOUT_F09_OTL6_Lou_OK_1m_ET AT %QD356 : DINT {Custom('SL1.SM1.DINT0057')}; (*CPU OUT: Function 09 - Engine room ventilation - Outlet air louvre - Group 6 not operating - Elipsed time*)
+    {LINE(361)}
+    iOUT_F12_GV_Open_60s_ET AT %QD224 : DINT {Custom('SL1.SM1.DINT0024')}; (*CPU OUT: Function 12 - Gas valves open for 60s - Elipsed time*)
+    {LINE(362)}
+    iOUT_F12_GT1_LC_130s_ET AT %QD228 : DINT {Custom('SL1.SM1.DINT0025')}; (*CPU OUT: Function 12 - Gas train 1 - Gas leakage check 130s - Elipsed time*)
+    {LINE(363)}
+    iOUT_F12_GT2_LC_130s_ET AT %QD232 : DINT {Custom('SL1.SM1.DINT0026')}; (*CPU OUT: Function 12 - Gas train 2 - Gas leakage check 130s - Elipsed time*)
+    {LINE(364)}
+    iOUT_F12_GT3_LC_130s_ET AT %QD236 : DINT {Custom('SL1.SM1.DINT0027')}; (*CPU OUT: Function 12 - Gas train 3 - Gas leakage check 130s - Elipsed time*)
+    {LINE(365)}
+    iOUT_F12_GT4_LC_130s_ET AT %QD240 : DINT {Custom('SL1.SM1.DINT0028')}; (*CPU OUT: Function 12 - Gas train 4 - Gas leakage check 130s - Elipsed time*)
+    {LINE(366)}
+    iOUT_F12_DCGA_LC_130s_ET AT %QD360 : DINT {Custom('SL1.SM1.DINT0058')}; (*CPU OUT: Function 12 - DCGA - Gas leakage check 130s - Elipsed time*)
+    {LINE(367)}
+    iOUT_F16_ScavFlapPos_PC_ET AT %QD244 : DINT {Custom('SL1.SM1.DINT0029')}; (*CPU OUT: Function 16 - Scavenging flap position plausibility check - Elipsed time*)
+    {LINE(368)}
+    iOUT_F17_Vol_PurgeAir AT %QD248 : DINT {Custom('SL1.SM1.DINT0030')}; (*CPU OUT: Function 17 - Calculated volume of purge air [l]*)
+    {LINE(369)}
+    iOUT_F20_PS1_HWHT_Lo_OK_ET AT %QD252 : DINT {Custom('SL1.SM1.DINT0031')}; (*CPU OUT: Function 20 - High temperature heating water - Minimum pressure switch 1 OK - Elipsed time*)
+    {LINE(370)}
+    iOUT_F20_PS2_HWHT_Lo_OK_ET AT %QD256 : DINT {Custom('SL1.SM1.DINT0032')}; (*CPU OUT: Function 20 - High temperature heating water - Minimum pressure switch 2 OK - Elipsed time*)
+    {LINE(371)}
+    iOUT_F20_FS_HWHT_Lo_OK_ET AT %QD260 : DINT {Custom('SL1.SM1.DINT0033')}; (*CPU OUT: Function 20 - High temperature heating water - Minimum flow switch OK - Elipsed time*)
+    {LINE(372)}
+    iOUT_F20_FS_HWHT_Lo_PC_ET AT %QD264 : DINT {Custom('SL1.SM1.DINT0034')}; (*CPU OUT: Function 20 - High temperature heating water - Minimum flow switch plausibility check - Elipsed time*)
+    {LINE(373)}
+    iOUT_F20_PS1_HWLT_Lo_OK_ET AT %QD268 : DINT {Custom('SL1.SM1.DINT0035')}; (*CPU OUT: Function 20 - Low temperature heating water - Minimum pressure switch 1 OK - Elipsed time*)
+    {LINE(374)}
+    iOUT_F20_PS2_HWLT_Lo_OK_ET AT %QD272 : DINT {Custom('SL1.SM1.DINT0036')}; (*CPU OUT: Function 20 - Low temperature heating water - Minimum pressure switch 2 OK - Elipsed time*)
+    {LINE(375)}
+    iOUT_F20_FS_HWLT_Lo_OK_ET AT %QD276 : DINT {Custom('SL1.SM1.DINT0037')}; (*CPU OUT: Function 20 - Low temperature heating water - Minimum flow switch OK - Elipsed time*)
+    {LINE(376)}
+    iOUT_F20_FS_HWLT_Lo_PC_ET AT %QD280 : DINT {Custom('SL1.SM1.DINT0038')}; (*CPU OUT: Function 20 - Low temperature heating water - Minimum flow switch plausibility check - Elipsed time*)
+END_VAR
+
+VAR_GLOBAL {Group(377)}
+    {LINE(378)}
+    szOUT_F09_CRC AT %QD124 : DWORD {Custom('SL1.SM1.UDINT0001')}; (*CPU OUT: Function 09 - CRC of ventilation FuB*)
+    {LINE(379)}
+    szOUT_F20_CRC AT %QD128 : DWORD {Custom('SL1.SM1.UDINT0002')}; (*CPU OUT: Function 20 - CRC of heating water FuB*)
+END_VAR
+
+VAR_GLOBAL {Group(380)}
+    {LINE(381)}
+    iOUT_PARA_N_EngNom AT %QW64 : WORD {Custom('SL1.SM1.UINT0001')}; (*PARA OUT 15087: Speed - Nominal speed*)
+    {LINE(382)}
+    iOUT_PARA_N_EngAct_HiHi_Diff AT %QW66 : WORD {Custom('SL1.SM1.UINT0002')}; (*PARA OUT 15086: Speed - Maximum deviation to ignition speed*)
+    {LINE(383)}
+    iOUT_PARA_N_Pr_EO_LoLo_Lim1 AT %QW68 : WORD {Custom('SL1.SM1.UINT0003')}; (*PARA OUT 15088: Oil pressure - Minimum - Speed point 1*)
+    {LINE(384)}
+    iOUT_PARA_N_Pr_EO_LoLo_Lim2 AT %QW70 : WORD {Custom('SL1.SM1.UINT0004')}; (*PARA OUT 15089: Oil pressure - Minimum - Speed point 2*)
+    {LINE(385)}
+    iOUT_PARA_Pr_EO_LoLo_LimN1 AT %QW72 : WORD {Custom('SL1.SM1.UINT0005')}; (*PARA OUT 15098: Oil pressure - Minimum at speed point 1*)
+    {LINE(386)}
+    iOUT_PARA_Pr_EO_LoLo_LimN2 AT %QW74 : WORD {Custom('SL1.SM1.UINT0006')}; (*PARA OUT 15099: Oil pressure - Minimum at speed point 2*)
+    {LINE(387)}
+    iOUT_PARA_Pr_EO_Diff_EngStop AT %QW76 : WORD {Custom('SL1.SM1.UINT0007')}; (*PARA OUT 15094: Oil pressure - Minimum difference to standstill*)
+    {LINE(388)}
+    iOUT_PARA_Pr_EO_HiHi_EngStop AT %QW78 : WORD {Custom('SL1.SM1.UINT0008')}; (*PARA OUT 15097: Oil pressure - Maximum at standstill*)
+    {LINE(389)}
+    iOUT_PARA_Pr_EO_HiHi_Diff AT %QW80 : WORD {Custom('SL1.SM1.UINT0009')}; (*PARA OUT 15096: Oil pressure - Maximum deviation between the sensors*)
+    {LINE(390)}
+    iOUT_PARA_Pr_EO_HiHi_Check AT %QW82 : WORD {Custom('SL1.SM1.UINT0010')}; (*PARA OUT 15095: Oil pressure - Maximum (sensor drift)*)
+    {LINE(391)}
+    iOUT_PARA_Pr_EOaP_HiHi AT %QW84 : WORD {Custom('SL1.SM1.UINT0011')}; (*PARA OUT 15101: Oil pressure after pump - Maximum*)
+    {LINE(392)}
+    iOUT_PARA_Pr_EOaP_Diff_EngStop AT %QW86 : WORD {Custom('SL1.SM1.UINT0012')}; (*PARA OUT 15100: Oil pressure after pump - Minimum difference to standstill*)
+    {LINE(393)}
+    iOUT_PARA_Pr_EOaP_HiHi_EngStop AT %QW88 : WORD {Custom('SL1.SM1.UINT0013')}; (*PARA OUT 15102: Oil pressure after pump - Maximum at standstill*)
+    {LINE(394)}
+    iOUT_PARA_Pr_ECW_LoLo AT %QW90 : WORD {Custom('SL1.SM1.UINT0014')}; (*PARA OUT 15092: Engine cooling water pressure - Minimum*)
+    {LINE(395)}
+    iOUT_PARA_Pr_ECW_HiHi_Diff AT %QW92 : WORD {Custom('SL1.SM1.UINT0015')}; (*PARA OUT 15091: Engine cooling water pressure - Maximum deviation between the sensors*)
+    {LINE(396)}
+    iOUT_PARA_Pr_ECW_HiHi_Check AT %QW94 : WORD {Custom('SL1.SM1.UINT0016')}; (*PARA OUT 15090: Engine cooling water pressure - Maximum (sensor drift)*)
+    {LINE(397)}
+    iOUT_PARA_Pr_ECWaP_HiHi AT %QW96 : WORD {Custom('SL1.SM1.UINT0017')}; (*PARA OUT 15093: Engine cooling water pressure after pump - Maximum*)
+    {LINE(398)}
+    iOUT_PARA_Eng_Motortype AT %QW98 : WORD {Custom('SL1.SM1.UINT0018')}; (*PARA OUT 15084: Motortype*)
+    {LINE(399)}
+    iOUT_PARA_DPr_ECWP_LoLo AT %QW100 : WORD {Custom('SL1.SM1.UINT0019')}; (*PARA OUT 15104: Engine cooling water pump - Difference pressure minimum*)
+    {LINE(400)}
+    iOUT_PARA_Vol_SysPurge_Stroke AT %QW102 : WORD {Custom('SL1.SM1.UINT0020')}; (*PARA OUT 15105: System purge - Stroke volume per crankshaft turn*)
+    {LINE(401)}
+    iOUT_PARA_Vol_SysPurge_MinAir AT %QW104 : WORD {Custom('SL1.SM1.UINT0021')}; (*PARA OUT 15106: System purge - Minimum air volume*)
+    {LINE(402)}
+    iOUT_PARA_Nr_ERV_INL_Fan AT %QW106 : WORD {Custom('SL1.SM1.UINT0022')}; (*PARA OUT 15190: Number of inlet air fans*)
+    {LINE(403)}
+    iOUT_PARA_Nr_ERV_INL_Lou AT %QW108 : WORD {Custom('SL1.SM1.UINT0023')}; (*PARA OUT 15191: Number of inlet air louvres*)
+    {LINE(404)}
+    iOUT_PARA_Nr_ERV_OTL_Lou AT %QW110 : WORD {Custom('SL1.SM1.UINT0024')}; (*PARA OUT 15192: Number of outlet air louvres*)
+    {LINE(405)}
+    iOUT_PARA_NrMaxErr_ERV_INL_Fan AT %QW112 : WORD {Custom('SL1.SM1.UINT0025')}; (*PARA OUT 15193: Maximum allowed number of failed inlet air fans*)
+    {LINE(406)}
+    iOUT_PARA_NrMaxErr_ERV_INL_Lou AT %QW114 : WORD {Custom('SL1.SM1.UINT0026')}; (*PARA OUT 15194: Maximum allowed number of failed inlet air louvres*)
+    {LINE(407)}
+    iOUT_PARA_NrMaxErr_ERV_OTL_Lou AT %QW116 : WORD {Custom('SL1.SM1.UINT0027')}; (*PARA OUT 15195: Maximum allowed number of failed outlet air louvres*)
+    {LINE(408)}
+    bOUT_PARA_SafetyLoop_A2_Exist AT %QX22.5 : BOOL {Custom('SL1.SM1.BOOL00182')}; (*PARA OUT 15143: Safety loop 2 in the module control panel existing*)
+    {LINE(409)}
+    bOUT_PARA_ERV_Cust_Active AT %QX22.6 : BOOL {Custom('SL1.SM1.BOOL00183')}; (*PARA 15188: Customer room ventilation - Monitoring active*)
+    {LINE(410)}
+    bOUT_PARA_ERV_ColdCountry_Act AT %QX22.7 : BOOL {Custom('SL1.SM1.BOOL00184')}; (*PARA 15189: Cold country mode active*)
+    {LINE(411)}
+    bOUT_PARA_ER_Door_MonActive AT %QX23.0 : BOOL {Custom('SL1.SM1.BOOL00185')}; (*PARA 15212: Door switch - Monitoring active*)
+    {LINE(412)}
+    bOUT_PARA_GT2_Exist AT %QX23.1 : BOOL {Custom('SL1.SM1.BOOL00186')}; (*PARA OUT 15082: Gas train 2 existing*)
+    {LINE(413)}
+    bOUT_PARA_GT3_Exist AT %QX23.2 : BOOL {Custom('SL1.SM1.BOOL00187')}; (*PARA OUT 15083: Gas train 3 existing*)
+    {LINE(414)}
+    bOUT_PARA_GT4_Exist AT %QX23.3 : BOOL {Custom('SL1.SM1.BOOL00188')}; (*PARA OUT 15103: Gas train 4 existing*)
+    {LINE(415)}
+    bOUT_PARA_DCGA_Exist AT %QX23.4 : BOOL {Custom('SL1.SM1.BOOL00189')}; (*PARA 15196: Gas train for DCGA (Decentral gas addition) existing*)
+    {LINE(416)}
+    bOUT_PARA_SysPurge_MonActive AT %QX23.5 : BOOL {Custom('SL1.SM1.BOOL00190')}; (*PARA OUT 15107: System purge - Monitoring active*)
+    {LINE(417)}
+    bOUT_PARA_HWcirc_Cust_Exist AT %QX23.6 : BOOL {Custom('SL1.SM1.BOOL00191')}; (*PARA OUT 15108: Customer heating water circuit - Monitoring active*)
+    {LINE(418)}
+    bOUT_PARA_PS_HW_Lo_MuteAcive AT %QX23.7 : BOOL {Custom('SL1.SM1.BOOL00192')}; (*PARA OUT 15109: Muting heating water minimum pressure switches at engine standstill active*)
+    {LINE(419)}
+    bOUT_PARA_LS_HWHT_Lo_Exist AT %QX24.0 : BOOL {Custom('SL1.SM1.BOOL00193')}; (*PARA OUT 15110: High temperature heating water - Minimum level switch available*)
+    {LINE(420)}
+    bOUT_PARA_PS1_HWHT_Hi_Exist AT %QX24.1 : BOOL {Custom('SL1.SM1.BOOL00194')}; (*PARA OUT 15111: High temperature heating water - Maximum pressure switch 1 available*)
+    {LINE(421)}
+    bOUT_PARA_PS2_HWHT_Hi_Exist AT %QX24.2 : BOOL {Custom('SL1.SM1.BOOL00195')}; (*PARA OUT 15112: High temperature heating water - Maximum pressure switch 2 available*)
+    {LINE(422)}
+    bOUT_PARA_PS1_HWHT_Lo_Exist AT %QX24.3 : BOOL {Custom('SL1.SM1.BOOL00196')}; (*PARA OUT 15113: High temperature heating water - Minimum pressure switch 1 available*)
+    {LINE(423)}
+    bOUT_PARA_PS2_HWHT_Lo_Exist AT %QX24.4 : BOOL {Custom('SL1.SM1.BOOL00197')}; (*PARA OUT 15114: High temperature heating water - Minimum pressure switch 2 available*)
+    {LINE(424)}
+    bOUT_PARA_TS1_HWHT_Hi_Exist AT %QX24.5 : BOOL {Custom('SL1.SM1.BOOL00198')}; (*PARA OUT 15115: High temperature heating water - Maximum temperature switch 1 available*)
+    {LINE(425)}
+    bOUT_PARA_TS2_HWHT_Hi_Exist AT %QX24.6 : BOOL {Custom('SL1.SM1.BOOL00199')}; (*PARA OUT 15116: High temperature heating water - Maximum temperature switch 2 available*)
+    {LINE(426)}
+    bOUT_PARA_FS_HWHT_Lo_Exist AT %QX24.7 : BOOL {Custom('SL1.SM1.BOOL00200')}; (*PARA OUT 15117: High temperature heating water - Minimum flow switch available*)
+    {LINE(427)}
+    bOUT_PARA_LS_HWLT_Lo_Exist AT %QX25.0 : BOOL {Custom('SL1.SM1.BOOL00201')}; (*PARA OUT 15118: Low temperature heating water - Minimum level switch available*)
+    {LINE(428)}
+    bOUT_PARA_PS1_HWLT_Hi_Exist AT %QX25.1 : BOOL {Custom('SL1.SM1.BOOL00202')}; (*PARA OUT 15119: Low temperature heating water - Maximum pressure switch 1 available*)
+    {LINE(429)}
+    bOUT_PARA_PS2_HWLT_Hi_Exist AT %QX25.2 : BOOL {Custom('SL1.SM1.BOOL00203')}; (*PARA OUT 15120: Low temperature heating water - Maximum pressure switch 2 available*)
+    {LINE(430)}
+    bOUT_PARA_PS1_HWLT_Lo_Exist AT %QX25.3 : BOOL {Custom('SL1.SM1.BOOL00204')}; (*PARA OUT 15121: Low temperature heating water - Minimum pressure switch 1 available*)
+    {LINE(431)}
+    bOUT_PARA_PS2_HWLT_Lo_Exist AT %QX25.4 : BOOL {Custom('SL1.SM1.BOOL00205')}; (*PARA OUT 15122: Low temperature heating water - Minimum pressure switch 2 available*)
+    {LINE(432)}
+    bOUT_PARA_TS1_HWLT_Hi_Exist AT %QX25.5 : BOOL {Custom('SL1.SM1.BOOL00206')}; (*PARA OUT 15123: Low temperature heating water - Maximum temperature switch 1 available*)
+    {LINE(433)}
+    bOUT_PARA_TS2_HWLT_Hi_Exist AT %QX25.6 : BOOL {Custom('SL1.SM1.BOOL00207')}; (*PARA OUT 15124: Low temperature heating water - Maximum temperature switch 2 available*)
+    {LINE(434)}
+    bOUT_PARA_FS_HWLT_Lo_Exist AT %QX25.7 : BOOL {Custom('SL1.SM1.BOOL00208')}; (*PARA OUT 15125: Low temperature heating water - Minimum flow switch available*)
+    {LINE(435)}
+    bOUT_PARA_Pr_EG_sMonActive AT %QX26.0 : BOOL {Custom('SL1.SM1.BOOL00209')}; (*PARA OUT 15085: Exhaust gas backpressure - Safety monitoring active*)
+END_VAR
+
+VAR_GLOBAL {Group(436)}
+    {LINE(437)}
+    bAMM_A2383 AT %QX7.3 : BOOL {Custom('SL1.SM1.BOOL00060')}; (*TRIP 2383: Exhaust gas backpressure high*)
+    {LINE(438)}
+    bAMM_A2384 AT %QX7.4 : BOOL {Custom('SL1.SM1.BOOL00061')}; (*TRIP 2384: Speed deviation to ignition speed*)
+    {LINE(439)}
+    bAMM_A2385 AT %QX7.5 : BOOL {Custom('SL1.SM1.BOOL00062')}; (*TRIP 2385: Ignition system failure*)
+    {LINE(440)}
+    bAMM_A2386 AT %QX7.6 : BOOL {Custom('SL1.SM1.BOOL00063')}; (*TRIP 2386: Oil pressure minimum*)
+    {LINE(441)}
+    bAMM_A2387 AT %QX7.7 : BOOL {Custom('SL1.SM1.BOOL00064')}; (*TRIP 2387: Oil pressure measuring signal failure*)
+    {LINE(442)}
+    bAMM_A2388 AT %QX8.0 : BOOL {Custom('SL1.SM1.BOOL00065')}; (*TRIP 2388: Oil pressure implausible value*)
+    {LINE(443)}
+    bAMM_A2389 AT %QX8.1 : BOOL {Custom('SL1.SM1.BOOL00066')}; (*TRIP 2389: Oil pressure deviation between the sensors*)
+    {LINE(444)}
+    bAMM_A2390 AT %QX8.2 : BOOL {Custom('SL1.SM1.BOOL00067')}; (*TRIP 2390: Oil pressure maximum (sensor drift)*)
+    {LINE(445)}
+    bAMM_A2391 AT %QX8.3 : BOOL {Custom('SL1.SM1.BOOL00068')}; (*TRIP 2391: Oil pressure sensor value frozen*)
+    {LINE(446)}
+    bAMM_A2392 AT %QX8.4 : BOOL {Custom('SL1.SM1.BOOL00069')}; (*TRIP 2392: Oil pressure after pump maximum*)
+    {LINE(447)}
+    bAMM_A2393 AT %QX8.5 : BOOL {Custom('SL1.SM1.BOOL00070')}; (*TRIP 2393: Oil pressure after pump measuring signal failure*)
+    {LINE(448)}
+    bAMM_A2394 AT %QX8.6 : BOOL {Custom('SL1.SM1.BOOL00071')}; (*TRIP 2394: Oil pressure after pump implausible value*)
+    {LINE(449)}
+    bAMM_A2395 AT %QX8.7 : BOOL {Custom('SL1.SM1.BOOL00072')}; (*TRIP 2395: Oil pressure after pump sensor value frozen*)
+    {LINE(450)}
+    bAMM_A2396 AT %QX9.0 : BOOL {Custom('SL1.SM1.BOOL00073')}; (*TRIP 2396: Engine cooling water pressure minimum*)
+    {LINE(451)}
+    bAMM_A2397 AT %QX9.1 : BOOL {Custom('SL1.SM1.BOOL00074')}; (*TRIP 2397: Engine cooling water pressure measuring signal failure*)
+    {LINE(452)}
+    bAMM_A2398 AT %QX9.2 : BOOL {Custom('SL1.SM1.BOOL00075')}; (*TRIP 2398: Engine cooling water pressure deviation between the sensors*)
+    {LINE(453)}
+    bAMM_A9408 AT %QX9.3 : BOOL {Custom('SL1.SM1.BOOL00076')}; (*TRIP 9408: Engine cooling water pressure maximum (sensor drift)*)
+    {LINE(454)}
+    bAMM_A9409 AT %QX9.4 : BOOL {Custom('SL1.SM1.BOOL00077')}; (*TRIP 9409: Engine cooling water pressure sensor value frozen*)
+    {LINE(455)}
+    bAMM_A9410 AT %QX9.5 : BOOL {Custom('SL1.SM1.BOOL00078')}; (*TRIP 9410: Engine cooling water pressure after pump maximum*)
+    {LINE(456)}
+    bAMM_A9411 AT %QX9.6 : BOOL {Custom('SL1.SM1.BOOL00079')}; (*TRIP 9411: Engine cooling water pressure after pump measuring signal failure*)
+    {LINE(457)}
+    bAMM_A9412 AT %QX9.7 : BOOL {Custom('SL1.SM1.BOOL00080')}; (*TRIP 9412: Engine cooling water pressure after pump sensor value frozen*)
+    {LINE(458)}
+    bAMM_A9413 AT %QX10.0 : BOOL {Custom('SL1.SM1.BOOL00081')}; (*TRIP 9413: Generator circuit breaker opening failure*)
+    {LINE(459)}
+    bAMM_A9414 AT %QX10.1 : BOOL {Custom('SL1.SM1.BOOL00082')}; (*TRIP 9414: Generator circuit breaker position feedback error*)
+    {LINE(460)}
+    bAMM_A9415 AT %QX10.2 : BOOL {Custom('SL1.SM1.BOOL00083')}; (*TRIP 9415: Generator overload/short circuit*)
+    {LINE(461)}
+    bAMM_A9416 AT %QX10.3 : BOOL {Custom('SL1.SM1.BOOL00084')}; (*TRIP 9416: Generator protection trip*)
+    {LINE(462)}
+    bAMM_A9417 AT %QX10.4 : BOOL {Custom('SL1.SM1.BOOL00085')}; (*TRIP 9417: Collective fault in room ventilation*)
+    {LINE(463)}
+    bAMM_A9418 AT %QX10.5 : BOOL {Custom('SL1.SM1.BOOL00086')}; (*TRIP 9418: Emergency stop push button - Module interface panel*)
+    {LINE(464)}
+    bAMM_A9419 AT %QX10.6 : BOOL {Custom('SL1.SM1.BOOL00087')}; (*TRIP 9419: Emergency stop push button*)
+    {LINE(465)}
+    bAMM_A9420 AT %QX10.7 : BOOL {Custom('SL1.SM1.BOOL00088')}; (*TRIP 9420: Safety loop 1 tripped - Module control panel*)
+    {LINE(466)}
+    bAMM_A9421 AT %QX11.0 : BOOL {Custom('SL1.SM1.BOOL00089')}; (*TRIP 9421: Failure gas train 1*)
+    {LINE(467)}
+    bAMM_A9422 AT %QX11.1 : BOOL {Custom('SL1.SM1.BOOL00090')}; (*TRIP 9422: Failure gas train 2*)
+    {LINE(468)}
+    bAMM_A9423 AT %QX11.2 : BOOL {Custom('SL1.SM1.BOOL00091')}; (*TRIP 9423: Failure gas train 3*)
+    {LINE(469)}
+    bAMM_A9424 AT %QX11.3 : BOOL {Custom('SL1.SM1.BOOL00092')}; (*TRIP 9424: Failure gas train 4*)
+    {LINE(470)}
+    bAMM_A9425 AT %QX11.4 : BOOL {Custom('SL1.SM1.BOOL00093')}; (*TRIP 9425: Safety functions module interface panel - output not valid*)
+    {LINE(471)}
+    bAMM_A9426 AT %QX11.5 : BOOL {Custom('SL1.SM1.BOOL00094')}; (*TRIP 9426: Safety functions module control panel - output not valid*)
+    {LINE(472)}
+    bAMM_A9427 AT %QX11.6 : BOOL {Custom('SL1.SM1.BOOL00095')}; (*TRIP 9427: Engine type mismatch*)
+    {LINE(473)}
+    bAMM_A9428 AT %QX11.7 : BOOL {Custom('SL1.SM1.BOOL00096')}; (*TRIP 9428: Room ventilation failure - Plausibility check pending*)
+    {LINE(474)}
+    bAMM_A9429 AT %QX12.0 : BOOL {Custom('SL1.SM1.BOOL00097')}; (*TRIP 9429: Software handshake not valid*)
+    {LINE(475)}
+    bAMM_A9433 AT %QX12.1 : BOOL {Custom('SL1.SM1.BOOL00098')}; (*TRIP 9433: Malfunction of safe communication channel*)
+    {LINE(476)}
+    bAMM_A9434 AT %QX12.2 : BOOL {Custom('SL1.SM1.BOOL00099')}; (*TRIP 9434: Engine cooling water pump - Difference pressure minimum*)
+    {LINE(477)}
+    bAMM_A9437 AT %QX19.7 : BOOL {Custom('SL1.SM1.BOOL00160')}; (*TRIP 9437: Scavenging flap not closed*)
+    {LINE(478)}
+    bAMM_A9438 AT %QX20.0 : BOOL {Custom('SL1.SM1.BOOL00161')}; (*TRIP 9438: Scavenging flap failure*)
+    {LINE(479)}
+    bAMM_A9441 AT %QX20.1 : BOOL {Custom('SL1.SM1.BOOL00162')}; (*TRIP 9441: Customer heating water circuit failure*)
+    {LINE(480)}
+    bAMM_A9442 AT %QX20.2 : BOOL {Custom('SL1.SM1.BOOL00163')}; (*TRIP 9442: High temperature heating water level minimum*)
+    {LINE(481)}
+    bAMM_A9443 AT %QX20.3 : BOOL {Custom('SL1.SM1.BOOL00164')}; (*TRIP 9443: High temperature heating water pressure 1 maximum*)
+    {LINE(482)}
+    bAMM_A9444 AT %QX20.4 : BOOL {Custom('SL1.SM1.BOOL00165')}; (*TRIP 9444: High temperature heating water pressure 2 maximum*)
+    {LINE(483)}
+    bAMM_A9445 AT %QX20.5 : BOOL {Custom('SL1.SM1.BOOL00166')}; (*TRIP 9445: High temperature heating water pressure 1 minimum*)
+    {LINE(484)}
+    bAMM_A9446 AT %QX20.6 : BOOL {Custom('SL1.SM1.BOOL00167')}; (*TRIP 9446: High temperature heating water pressure 2 minimum*)
+    {LINE(485)}
+    bAMM_A9447 AT %QX20.7 : BOOL {Custom('SL1.SM1.BOOL00168')}; (*TRIP 9447: High temperature heating water temperature 1 maximum*)
+    {LINE(486)}
+    bAMM_A9448 AT %QX21.0 : BOOL {Custom('SL1.SM1.BOOL00169')}; (*TRIP 9448: High temperature heating water temperature 2 maximum*)
+    {LINE(487)}
+    bAMM_A9449 AT %QX21.1 : BOOL {Custom('SL1.SM1.BOOL00170')}; (*TRIP 9449: High temperature heating water flow minimum*)
+    {LINE(488)}
+    bAMM_A9450 AT %QX21.2 : BOOL {Custom('SL1.SM1.BOOL00171')}; (*TRIP 9450: Low temperature heating water level minimum*)
+    {LINE(489)}
+    bAMM_A9451 AT %QX21.3 : BOOL {Custom('SL1.SM1.BOOL00172')}; (*TRIP 9451: Low temperature heating water pressure 1 maximum*)
+    {LINE(490)}
+    bAMM_A9452 AT %QX21.4 : BOOL {Custom('SL1.SM1.BOOL00173')}; (*TRIP 9452: Low temperature heating water pressure 2 maximum*)
+    {LINE(491)}
+    bAMM_A9453 AT %QX21.5 : BOOL {Custom('SL1.SM1.BOOL00174')}; (*TRIP 9453: Low temperature heating water pressure 1 minimum*)
+    {LINE(492)}
+    bAMM_A9454 AT %QX21.6 : BOOL {Custom('SL1.SM1.BOOL00175')}; (*TRIP 9454: Low temperature heating water pressure 2 minimum*)
+    {LINE(493)}
+    bAMM_A9455 AT %QX21.7 : BOOL {Custom('SL1.SM1.BOOL00176')}; (*TRIP 9455: Low temperature heating water temperature 1 maximum*)
+    {LINE(494)}
+    bAMM_A9456 AT %QX22.0 : BOOL {Custom('SL1.SM1.BOOL00177')}; (*TRIP 9456: Low temperature heating water temperature 2 maximum*)
+    {LINE(495)}
+    bAMM_A9457 AT %QX22.1 : BOOL {Custom('SL1.SM1.BOOL00178')}; (*TRIP 9457: Low temperature heating water flow minimum*)
+    {LINE(496)}
+    bAMM_A9458 AT %QX22.2 : BOOL {Custom('SL1.SM1.BOOL00179')}; (*TRIP 9458: Safety loop 2 tripped - Module control panel*)
+    {LINE(497)}
+    bAMM_A9459 AT %QX22.3 : BOOL {Custom('SL1.SM1.BOOL00180')}; (*TRIP 9457: Safety loop tripped - Module interface panel*)
+    {LINE(498)}
+    bAMM_A9480 AT %QX36.0 : BOOL {Custom('SL1.SM1.BOOL00289')}; (*TRIP 9480: Room ventilation failure - Doors*)
+    {LINE(499)}
+    bAMM_A9481 AT %QX36.1 : BOOL {Custom('SL1.SM1.BOOL00290')}; (*TRIP 9481: Room ventilation failure - Inlet air fan*)
+    {LINE(500)}
+    bAMM_A9482 AT %QX36.2 : BOOL {Custom('SL1.SM1.BOOL00291')}; (*TRIP 9482: Room ventilation failure - Inlet air louvre*)
+    {LINE(501)}
+    bAMM_A9483 AT %QX36.3 : BOOL {Custom('SL1.SM1.BOOL00292')}; (*TRIP 9483: Room ventilation failure - Outlet air louvre*)
+    {LINE(502)}
+    bAMM_A9484 AT %QX36.4 : BOOL {Custom('SL1.SM1.BOOL00293')}; (*TRIP 9484: Failure gas train for decentral gas addition*)
+END_VAR
+
+VAR_GLOBAL {Group(503)}
+    {LINE(504)}
+    bAMM_W9514 AT %QX12.3 : BOOL {Custom('SL1.SM1.BOOL00100')}; (*WARNING 9514: Speed signal not valid*)
+    {LINE(505)}
+    bAMM_W9515 AT %QX12.4 : BOOL {Custom('SL1.SM1.BOOL00101')}; (*WARNING 9515: Ignition plausibility check failure*)
+    {LINE(506)}
+    bAMM_W9516 AT %QX12.5 : BOOL {Custom('SL1.SM1.BOOL00102')}; (*WARNING 9516: Ignition system running - signal not valid*)
+    {LINE(507)}
+    bAMM_W9517 AT %QX12.6 : BOOL {Custom('SL1.SM1.BOOL00103')}; (*WARNING 9517: Release of synchronizing and load - output not valid*)
+    {LINE(508)}
+    bAMM_W9518 AT %QX12.7 : BOOL {Custom('SL1.SM1.BOOL00104')}; (*WARNING 9518: Generator circuit breaker release undervoltage trip coil - output not valid*)
+    {LINE(509)}
+    bAMM_W9519 AT %QX13.0 : BOOL {Custom('SL1.SM1.BOOL00105')}; (*WARNING 9519: Generator circuit breaker position ON - signal not valid*)
+    {LINE(510)}
+    bAMM_W9520 AT %QX13.1 : BOOL {Custom('SL1.SM1.BOOL00106')}; (*WARNING 9520: Generator circuit breaker position OFF - signal not valid*)
+    {LINE(511)}
+    bAMM_W9521 AT %QX13.2 : BOOL {Custom('SL1.SM1.BOOL00107')}; (*WARNING 9521: Generator overload/short circuit - signal not valid*)
+    {LINE(512)}
+    bAMM_W9522 AT %QX13.3 : BOOL {Custom('SL1.SM1.BOOL00108')}; (*WARNING 9522: Generator protection trip - signal not valid*)
+    {LINE(513)}
+    bAMM_W9523 AT %QX13.4 : BOOL {Custom('SL1.SM1.BOOL00109')}; (*WARNING 9523: Collective fault in room ventilation - plausibility check failure*)
+    {LINE(514)}
+    bAMM_W9524 AT %QX13.5 : BOOL {Custom('SL1.SM1.BOOL00110')}; (*WARNING 9524: Collective fault in room ventilation - signal not valid*)
+    {LINE(515)}
+    bAMM_W9525 AT %QX13.6 : BOOL {Custom('SL1.SM1.BOOL00111')}; (*WARNING 9525: Emergency stop push button - Module interface panel - signal not valid*)
+    {LINE(516)}
+    bAMM_W9526 AT %QX13.7 : BOOL {Custom('SL1.SM1.BOOL00112')}; (*WARNING 9526: Emergency stop push button - signal not valid*)
+    {LINE(517)}
+    bAMM_W9527 AT %QX14.0 : BOOL {Custom('SL1.SM1.BOOL00113')}; (*WARNING 9527: Safety loop 1 - Module control panel - signal not valid*)
+    {LINE(518)}
+    bAMM_W9528 AT %QX14.1 : BOOL {Custom('SL1.SM1.BOOL00114')}; (*WARNING 9528: Release gas valve 1a - output not valid*)
+    {LINE(519)}
+    bAMM_W9529 AT %QX14.2 : BOOL {Custom('SL1.SM1.BOOL00115')}; (*WARNING 9529: Release gas valve 1b - output not valid*)
+    {LINE(520)}
+    bAMM_W9530 AT %QX14.3 : BOOL {Custom('SL1.SM1.BOOL00116')}; (*WARNING 9530: Release gas valve 2a - output not valid*)
+    {LINE(521)}
+    bAMM_W9531 AT %QX14.4 : BOOL {Custom('SL1.SM1.BOOL00117')}; (*WARNING 9531: Release gas valve 2b - output not valid*)
+    {LINE(522)}
+    bAMM_W9532 AT %QX14.5 : BOOL {Custom('SL1.SM1.BOOL00118')}; (*WARNING 9532: Release gas valve 3a - output not valid*)
+    {LINE(523)}
+    bAMM_W9533 AT %QX14.6 : BOOL {Custom('SL1.SM1.BOOL00119')}; (*WARNING 9533: Release gas valve 3b - output not valid*)
+    {LINE(524)}
+    bAMM_W9534 AT %QX14.7 : BOOL {Custom('SL1.SM1.BOOL00120')}; (*WARNING 9534: Release gas valve 4a - output not valid*)
+    {LINE(525)}
+    bAMM_W9535 AT %QX15.0 : BOOL {Custom('SL1.SM1.BOOL00121')}; (*WARNING 9535: Release gas valve 4b - output not valid*)
+    {LINE(526)}
+    bAMM_W9536 AT %QX15.1 : BOOL {Custom('SL1.SM1.BOOL00122')}; (*WARNING 9536: Gas safety device 1 - signal not valid*)
+    {LINE(527)}
+    bAMM_W9537 AT %QX15.2 : BOOL {Custom('SL1.SM1.BOOL00123')}; (*WARNING 9537: Gas safety device 2 - signal not valid*)
+    {LINE(528)}
+    bAMM_W9538 AT %QX15.3 : BOOL {Custom('SL1.SM1.BOOL00124')}; (*WARNING 9538: Gas safety device 3 - signal not valid*)
+    {LINE(529)}
+    bAMM_W9539 AT %QX15.4 : BOOL {Custom('SL1.SM1.BOOL00125')}; (*WARNING 9539: Gas safety device 4 - signal not valid*)
+    {LINE(530)}
+    bAMM_W9540 AT %QX15.5 : BOOL {Custom('SL1.SM1.BOOL00126')}; (*WARNING 9540: Gas safety device 1 - output not valid*)
+    {LINE(531)}
+    bAMM_W9541 AT %QX15.6 : BOOL {Custom('SL1.SM1.BOOL00127')}; (*WARNING 9541: Gas safety device 2 - output not valid*)
+    {LINE(532)}
+    bAMM_W9542 AT %QX15.7 : BOOL {Custom('SL1.SM1.BOOL00128')}; (*WARNING 9542: Gas safety device 3 - output not valid*)
+    {LINE(533)}
+    bAMM_W9543 AT %QX16.0 : BOOL {Custom('SL1.SM1.BOOL00129')}; (*WARNING 9543: Gas safety device 4 - output not valid*)
+    {LINE(534)}
+    bAMM_W9562 AT %QX16.1 : BOOL {Custom('SL1.SM1.BOOL00130')}; (*WARNING 9562: Scavenging flap plausibility check failure*)
+    {LINE(535)}
+    bAMM_W9563 AT %QX16.2 : BOOL {Custom('SL1.SM1.BOOL00131')}; (*WARNING 9563: Scavenging flap closed feedback - signal not valid*)
+    {LINE(536)}
+    bAMM_W9564 AT %QX16.3 : BOOL {Custom('SL1.SM1.BOOL00132')}; (*WARNING 9564: Scavenging flap temperature switch - signal not valid*)
+    {LINE(537)}
+    bAMM_W9565 AT %QX16.4 : BOOL {Custom('SL1.SM1.BOOL00133')}; (*WARNING 9565: Customer heating water circuit failure - signal not valid*)
+    {LINE(538)}
+    bAMM_W9566 AT %QX16.5 : BOOL {Custom('SL1.SM1.BOOL00134')}; (*WARNING 9566: High temperature heating water flow minimum - plausibility check failure*)
+    {LINE(539)}
+    bAMM_W9567 AT %QX16.6 : BOOL {Custom('SL1.SM1.BOOL00135')}; (*WARNING 9567: High temperature heating water level minimum - signal not valid*)
+    {LINE(540)}
+    bAMM_W9568 AT %QX16.7 : BOOL {Custom('SL1.SM1.BOOL00136')}; (*WARNING 9568: High temperature heating water pressure 1 maximum - signal not valid*)
+    {LINE(541)}
+    bAMM_W9569 AT %QX17.0 : BOOL {Custom('SL1.SM1.BOOL00137')}; (*WARNING 9569: High temperature heating water pressure 2 maximum - signal not valid*)
+    {LINE(542)}
+    bAMM_W9570 AT %QX17.1 : BOOL {Custom('SL1.SM1.BOOL00138')}; (*WARNING 9570: High temperature heating water pressure 1 minimum - signal not valid*)
+    {LINE(543)}
+    bAMM_W9571 AT %QX17.2 : BOOL {Custom('SL1.SM1.BOOL00139')}; (*WARNING 9571: High temperature heating water pressure 2 minimum - signal not valid*)
+    {LINE(544)}
+    bAMM_W9572 AT %QX17.3 : BOOL {Custom('SL1.SM1.BOOL00140')}; (*WARNING 9572: High temperature heating water temperature 1 maximum - signal not valid*)
+    {LINE(545)}
+    bAMM_W9573 AT %QX17.4 : BOOL {Custom('SL1.SM1.BOOL00141')}; (*WARNING 9573: High temperature heating water temperature 2 maximum - signal not valid*)
+    {LINE(546)}
+    bAMM_W9574 AT %QX17.5 : BOOL {Custom('SL1.SM1.BOOL00142')}; (*WARNING 9574: High temperature heating water flow minimum - signal not valid*)
+    {LINE(547)}
+    bAMM_W9575 AT %QX17.6 : BOOL {Custom('SL1.SM1.BOOL00143')}; (*WARNING 9575: Low temperature heating water flow minimum - plausibility check failure*)
+    {LINE(548)}
+    bAMM_W9576 AT %QX17.7 : BOOL {Custom('SL1.SM1.BOOL00144')}; (*WARNING 9576: Low temperature heating water level minimum - signal not valid*)
+    {LINE(549)}
+    bAMM_W9577 AT %QX18.0 : BOOL {Custom('SL1.SM1.BOOL00145')}; (*WARNING 9577: Low temperature heating water pressure 1 maximum - signal not valid*)
+    {LINE(550)}
+    bAMM_W9578 AT %QX18.1 : BOOL {Custom('SL1.SM1.BOOL00146')}; (*WARNING 9578: Low temperature heating water pressure 2 maximum - signal not valid*)
+    {LINE(551)}
+    bAMM_W9579 AT %QX18.2 : BOOL {Custom('SL1.SM1.BOOL00147')}; (*WARNING 9579: Low temperature heating water pressure 1 minimum - signal not valid*)
+    {LINE(552)}
+    bAMM_W9580 AT %QX18.3 : BOOL {Custom('SL1.SM1.BOOL00148')}; (*WARNING 9580: Low temperature heating water pressure 2 minimum - signal not valid*)
+    {LINE(553)}
+    bAMM_W9581 AT %QX18.4 : BOOL {Custom('SL1.SM1.BOOL00149')}; (*WARNING 9581: Low temperature heating water temperature 1 maximum - signal not valid*)
+    {LINE(554)}
+    bAMM_W9582 AT %QX18.5 : BOOL {Custom('SL1.SM1.BOOL00150')}; (*WARNING 9582: Low temperature heating water temperature 2 maximum - signal not valid*)
+    {LINE(555)}
+    bAMM_W9583 AT %QX18.6 : BOOL {Custom('SL1.SM1.BOOL00151')}; (*WARNING 9583: Low temperature heating water flow minimum - signal not valid*)
+    {LINE(556)}
+    bAMM_W9584 AT %QX18.7 : BOOL {Custom('SL1.SM1.BOOL00152')}; (*WARNING 9584: Safety loop 2 - Module control panel - signal not valid*)
+    {LINE(557)}
+    bAMM_W9585 AT %QX19.0 : BOOL {Custom('SL1.SM1.BOOL00153')}; (*WARNING 9585: Safety loop - Module interface panel - signal not valid*)
+    {LINE(558)}
+    bAMM_W9586 AT %QX19.1 : BOOL {Custom('SL1.SM1.BOOL00154')}; (*WARNING 9586: Exhaust gas backpressure high - signal not valid*)
+    {LINE(559)}
+    bAMM_W9587 AT %QX19.2 : BOOL {Custom('SL1.SM1.BOOL00155')}; (*WARNING 9587: Emergency stop signalling - output not valid*)
+    {LINE(560)}
+    bAMM_W9593 AT %QX19.3 : BOOL {Custom('SL1.SM1.BOOL00156')}; (*WARNING 9593: Nominal speed mismatch*)
+    {LINE(561)}
+    bAMM_W9627 AT %QX36.5 : BOOL {Custom('SL1.SM1.BOOL00294')}; (*WARNING 9627: Room ventilation failure - Doors - plausibility check failure*)
+    {LINE(562)}
+    bAMM_W9628 AT %QX36.6 : BOOL {Custom('SL1.SM1.BOOL00295')}; (*WARNING 9628: Room ventilation failure - Doors - signal not valid*)
+    {LINE(563)}
+    bAMM_W9629 AT %QX36.7 : BOOL {Custom('SL1.SM1.BOOL00296')}; (*WARNING 9629: Room ventilation failure - Inlet air fan group 1*)
+    {LINE(564)}
+    bAMM_W9630 AT %QX37.0 : BOOL {Custom('SL1.SM1.BOOL00297')}; (*WARNING 9630: Room ventilation failure - Inlet air fan group 1 - plausibility check failure*)
+    {LINE(565)}
+    bAMM_W9631 AT %QX37.1 : BOOL {Custom('SL1.SM1.BOOL00298')}; (*WARNING 9631: Room ventilation failure - Inlet air fan group 1 - signal not valid*)
+    {LINE(566)}
+    bAMM_W9632 AT %QX37.2 : BOOL {Custom('SL1.SM1.BOOL00299')}; (*WARNING 9632: Room ventilation failure - Inlet air fan group 2*)
+    {LINE(567)}
+    bAMM_W9633 AT %QX37.3 : BOOL {Custom('SL1.SM1.BOOL00300')}; (*WARNING 9633: Room ventilation failure - Inlet air fan group 2 - plausibility check failure*)
+    {LINE(568)}
+    bAMM_W9634 AT %QX37.4 : BOOL {Custom('SL1.SM1.BOOL00301')}; (*WARNING 9634: Room ventilation failure - Inlet air fan group 2 - signal not valid*)
+    {LINE(569)}
+    bAMM_W9635 AT %QX37.5 : BOOL {Custom('SL1.SM1.BOOL00302')}; (*WARNING 9635: Room ventilation failure - Inlet air fan group 3*)
+    {LINE(570)}
+    bAMM_W9636 AT %QX37.6 : BOOL {Custom('SL1.SM1.BOOL00303')}; (*WARNING 9636: Room ventilation failure - Inlet air fan group 3 - plausibility check failure*)
+    {LINE(571)}
+    bAMM_W9637 AT %QX37.7 : BOOL {Custom('SL1.SM1.BOOL00304')}; (*WARNING 9637: Room ventilation failure - Inlet air fan group 3 - signal not valid*)
+    {LINE(572)}
+    bAMM_W9638 AT %QX38.0 : BOOL {Custom('SL1.SM1.BOOL00305')}; (*WARNING 9638: Room ventilation failure - Inlet air fan group 4*)
+    {LINE(573)}
+    bAMM_W9639 AT %QX38.1 : BOOL {Custom('SL1.SM1.BOOL00306')}; (*WARNING 9639: Room ventilation failure - Inlet air fan group 4 - plausibility check failure*)
+    {LINE(574)}
+    bAMM_W9640 AT %QX38.2 : BOOL {Custom('SL1.SM1.BOOL00307')}; (*WARNING 9640: Room ventilation failure - Inlet air fan group 4 - signal not valid*)
+    {LINE(575)}
+    bAMM_W9641 AT %QX38.3 : BOOL {Custom('SL1.SM1.BOOL00308')}; (*WARNING 9641: Room ventilation failure - Inlet air fan group 5*)
+    {LINE(576)}
+    bAMM_W9642 AT %QX38.4 : BOOL {Custom('SL1.SM1.BOOL00309')}; (*WARNING 9642: Room ventilation failure - Inlet air fan group 5 - plausibility check failure*)
+    {LINE(577)}
+    bAMM_W9643 AT %QX38.5 : BOOL {Custom('SL1.SM1.BOOL00310')}; (*WARNING 9643: Room ventilation failure - Inlet air fan group 5 - signal not valid*)
+    {LINE(578)}
+    bAMM_W9644 AT %QX38.6 : BOOL {Custom('SL1.SM1.BOOL00311')}; (*WARNING 9644: Room ventilation failure - Inlet air fan group 6*)
+    {LINE(579)}
+    bAMM_W9645 AT %QX38.7 : BOOL {Custom('SL1.SM1.BOOL00312')}; (*WARNING 9645: Room ventilation failure - Inlet air fan group 6 - plausibility check failure*)
+    {LINE(580)}
+    bAMM_W9646 AT %QX39.0 : BOOL {Custom('SL1.SM1.BOOL00313')}; (*WARNING 9646: Room ventilation failure - Inlet air fan group 6 - signal not valid*)
+    {LINE(581)}
+    bAMM_W9647 AT %QX39.1 : BOOL {Custom('SL1.SM1.BOOL00314')}; (*WARNING 9647: Room ventilation failure - Inlet air louvre group 1 - opened signal*)
+    {LINE(582)}
+    bAMM_W9648 AT %QX39.2 : BOOL {Custom('SL1.SM1.BOOL00315')}; (*WARNING 9648: Room ventilation failure - Inlet air louvre group 1 - closed signal*)
+    {LINE(583)}
+    bAMM_W9649 AT %QX39.3 : BOOL {Custom('SL1.SM1.BOOL00316')}; (*WARNING 9649: Room ventilation failure - Inlet air louvre group 1 - opened signal not valid*)
+    {LINE(584)}
+    bAMM_W9650 AT %QX39.4 : BOOL {Custom('SL1.SM1.BOOL00317')}; (*WARNING 9650: Room ventilation failure - Inlet air louvre group 1 - closed signal not valid*)
+    {LINE(585)}
+    bAMM_W9651 AT %QX39.5 : BOOL {Custom('SL1.SM1.BOOL00318')}; (*WARNING 9651: Room ventilation failure - Inlet air louvre group 1 - plausibility check failure*)
+    {LINE(586)}
+    bAMM_W9652 AT %QX39.6 : BOOL {Custom('SL1.SM1.BOOL00319')}; (*WARNING 9652: Room ventilation failure - Inlet air louvre group 2 - opened signal*)
+    {LINE(587)}
+    bAMM_W9653 AT %QX39.7 : BOOL {Custom('SL1.SM1.BOOL00320')}; (*WARNING 9653: Room ventilation failure - Inlet air louvre group 2 - closed signal*)
+    {LINE(588)}
+    bAMM_W9654 AT %QX40.0 : BOOL {Custom('SL1.SM1.BOOL00321')}; (*WARNING 9654: Room ventilation failure - Inlet air louvre group 2 - opened signal not valid*)
+    {LINE(589)}
+    bAMM_W9655 AT %QX40.1 : BOOL {Custom('SL1.SM1.BOOL00322')}; (*WARNING 9655: Room ventilation failure - Inlet air louvre group 2 - closed signal not valid*)
+    {LINE(590)}
+    bAMM_W9656 AT %QX40.2 : BOOL {Custom('SL1.SM1.BOOL00323')}; (*WARNING 9656: Room ventilation failure - Inlet air louvre group 2 - plausibility check failure*)
+    {LINE(591)}
+    bAMM_W9657 AT %QX40.3 : BOOL {Custom('SL1.SM1.BOOL00324')}; (*WARNING 9657: Room ventilation failure - Inlet air louvre group 3 - opened signal*)
+    {LINE(592)}
+    bAMM_W9658 AT %QX40.4 : BOOL {Custom('SL1.SM1.BOOL00325')}; (*WARNING 9658: Room ventilation failure - Inlet air louvre group 3 - closed signal*)
+    {LINE(593)}
+    bAMM_W9659 AT %QX40.5 : BOOL {Custom('SL1.SM1.BOOL00326')}; (*WARNING 9659: Room ventilation failure - Inlet air louvre group 3 - opened signal not valid*)
+    {LINE(594)}
+    bAMM_W9660 AT %QX40.6 : BOOL {Custom('SL1.SM1.BOOL00327')}; (*WARNING 9660: Room ventilation failure - Inlet air louvre group 3 - closed signal not valid*)
+    {LINE(595)}
+    bAMM_W9661 AT %QX40.7 : BOOL {Custom('SL1.SM1.BOOL00328')}; (*WARNING 9661: Room ventilation failure - Inlet air louvre group 3 - plausibility check failure*)
+    {LINE(596)}
+    bAMM_W9662 AT %QX41.0 : BOOL {Custom('SL1.SM1.BOOL00329')}; (*WARNING 9662: Room ventilation failure - Inlet air louvre group 4 - opened signal*)
+    {LINE(597)}
+    bAMM_W9663 AT %QX41.1 : BOOL {Custom('SL1.SM1.BOOL00330')}; (*WARNING 9663: Room ventilation failure - Inlet air louvre group 4 - closed signal*)
+    {LINE(598)}
+    bAMM_W9664 AT %QX41.2 : BOOL {Custom('SL1.SM1.BOOL00331')}; (*WARNING 9664: Room ventilation failure - Inlet air louvre group 4 - opened signal not valid*)
+    {LINE(599)}
+    bAMM_W9665 AT %QX41.3 : BOOL {Custom('SL1.SM1.BOOL00332')}; (*WARNING 9665: Room ventilation failure - Inlet air louvre group 4 - closed signal not valid*)
+    {LINE(600)}
+    bAMM_W9666 AT %QX41.4 : BOOL {Custom('SL1.SM1.BOOL00333')}; (*WARNING 9666: Room ventilation failure - Inlet air louvre group 4 - plausibility check failure*)
+    {LINE(601)}
+    bAMM_W9667 AT %QX41.5 : BOOL {Custom('SL1.SM1.BOOL00334')}; (*WARNING 9667: Room ventilation failure - Inlet air louvre group 5 - opened signal*)
+    {LINE(602)}
+    bAMM_W9668 AT %QX41.6 : BOOL {Custom('SL1.SM1.BOOL00335')}; (*WARNING 9668: Room ventilation failure - Inlet air louvre group 5 - closed signal*)
+    {LINE(603)}
+    bAMM_W9669 AT %QX41.7 : BOOL {Custom('SL1.SM1.BOOL00336')}; (*WARNING 9669: Room ventilation failure - Inlet air louvre group 5 - opened signal not valid*)
+    {LINE(604)}
+    bAMM_W9670 AT %QX42.0 : BOOL {Custom('SL1.SM1.BOOL00337')}; (*WARNING 9670: Room ventilation failure - Inlet air louvre group 5 - closed signal not valid*)
+    {LINE(605)}
+    bAMM_W9671 AT %QX42.1 : BOOL {Custom('SL1.SM1.BOOL00338')}; (*WARNING 9671: Room ventilation failure - Inlet air louvre group 5 - plausibility check failure*)
+    {LINE(606)}
+    bAMM_W9672 AT %QX42.2 : BOOL {Custom('SL1.SM1.BOOL00339')}; (*WARNING 9672: Room ventilation failure - Inlet air louvre group 6 - opened signal*)
+    {LINE(607)}
+    bAMM_W9673 AT %QX42.3 : BOOL {Custom('SL1.SM1.BOOL00340')}; (*WARNING 9673: Room ventilation failure - Inlet air louvre group 6 - closed signal*)
+    {LINE(608)}
+    bAMM_W9674 AT %QX42.4 : BOOL {Custom('SL1.SM1.BOOL00341')}; (*WARNING 9674: Room ventilation failure - Inlet air louvre group 6 - opened signal not valid*)
+    {LINE(609)}
+    bAMM_W9675 AT %QX42.5 : BOOL {Custom('SL1.SM1.BOOL00342')}; (*WARNING 9675: Room ventilation failure - Inlet air louvre group 6 - closed signal not valid*)
+    {LINE(610)}
+    bAMM_W9676 AT %QX42.6 : BOOL {Custom('SL1.SM1.BOOL00343')}; (*WARNING 9676: Room ventilation failure - Inlet air louvre group 6 - plausibility check failure*)
+    {LINE(611)}
+    bAMM_W9677 AT %QX42.7 : BOOL {Custom('SL1.SM1.BOOL00344')}; (*WARNING 9677: Room ventilation failure - Outlet air louvre group 1 - closed signal*)
+    {LINE(612)}
+    bAMM_W9678 AT %QX43.0 : BOOL {Custom('SL1.SM1.BOOL00345')}; (*WARNING 9678: Room ventilation failure - Outlet air louvre group 1 - opened signal not valid*)
+    {LINE(613)}
+    bAMM_W9679 AT %QX43.1 : BOOL {Custom('SL1.SM1.BOOL00346')}; (*WARNING 9679: Room ventilation failure - Outlet air louvre group 1 - closed signal not valid*)
+    {LINE(614)}
+    bAMM_W9680 AT %QX43.2 : BOOL {Custom('SL1.SM1.BOOL00347')}; (*WARNING 9680: Room ventilation failure - Outlet air louvre group 1 - plausibility check failure*)
+    {LINE(615)}
+    bAMM_W9681 AT %QX43.3 : BOOL {Custom('SL1.SM1.BOOL00348')}; (*WARNING 9681: Room ventilation failure - Outlet air louvre group 2 - closed signal*)
+    {LINE(616)}
+    bAMM_W9682 AT %QX43.4 : BOOL {Custom('SL1.SM1.BOOL00349')}; (*WARNING 9682: Room ventilation failure - Outlet air louvre group 2 - opened signal not valid*)
+    {LINE(617)}
+    bAMM_W9683 AT %QX43.5 : BOOL {Custom('SL1.SM1.BOOL00350')}; (*WARNING 9683: Room ventilation failure - Outlet air louvre group 2 - closed signal not valid*)
+    {LINE(618)}
+    bAMM_W9684 AT %QX43.6 : BOOL {Custom('SL1.SM1.BOOL00351')}; (*WARNING 9684: Room ventilation failure - Outlet air louvre group 2 - plausibility check failure*)
+    {LINE(619)}
+    bAMM_W9685 AT %QX43.7 : BOOL {Custom('SL1.SM1.BOOL00352')}; (*WARNING 9685: Room ventilation failure - Outlet air louvre group 3 - closed signal*)
+    {LINE(620)}
+    bAMM_W9686 AT %QX44.0 : BOOL {Custom('SL1.SM1.BOOL00353')}; (*WARNING 9686: Room ventilation failure - Outlet air louvre group 3 - opened signal not valid*)
+    {LINE(621)}
+    bAMM_W9687 AT %QX44.1 : BOOL {Custom('SL1.SM1.BOOL00354')}; (*WARNING 9687: Room ventilation failure - Outlet air louvre group 3 - closed signal not valid*)
+    {LINE(622)}
+    bAMM_W9688 AT %QX44.2 : BOOL {Custom('SL1.SM1.BOOL00355')}; (*WARNING 9688: Room ventilation failure - Outlet air louvre group 3- plausibility check failure*)
+    {LINE(623)}
+    bAMM_W9689 AT %QX44.3 : BOOL {Custom('SL1.SM1.BOOL00356')}; (*WARNING 9689: Room ventilation failure - Outlet air louvre group 4 - closed signal*)
+    {LINE(624)}
+    bAMM_W9690 AT %QX44.4 : BOOL {Custom('SL1.SM1.BOOL00357')}; (*WARNING 9690: Room ventilation failure - Outlet air louvre group 4 - opened signal not valid*)
+    {LINE(625)}
+    bAMM_W9691 AT %QX44.5 : BOOL {Custom('SL1.SM1.BOOL00358')}; (*WARNING 9691: Room ventilation failure - Outlet air louvre group 4 - closed signal not valid*)
+    {LINE(626)}
+    bAMM_W9692 AT %QX44.6 : BOOL {Custom('SL1.SM1.BOOL00359')}; (*WARNING 9692: Room ventilation failure - Outlet air louvre group 4 - plausibility check failure*)
+    {LINE(627)}
+    bAMM_W9693 AT %QX44.7 : BOOL {Custom('SL1.SM1.BOOL00360')}; (*WARNING 9693: Room ventilation failure - Outlet air louvre group 5 - closed signal*)
+    {LINE(628)}
+    bAMM_W9694 AT %QX45.0 : BOOL {Custom('SL1.SM1.BOOL00361')}; (*WARNING 9694: Room ventilation failure - Outlet air louvre group 5 - opened signal not valid*)
+    {LINE(629)}
+    bAMM_W9695 AT %QX45.1 : BOOL {Custom('SL1.SM1.BOOL00362')}; (*WARNING 9695: Room ventilation failure - Outlet air louvre group 5 - closed signal not valid*)
+    {LINE(630)}
+    bAMM_W9696 AT %QX45.2 : BOOL {Custom('SL1.SM1.BOOL00363')}; (*WARNING 9696: Room ventilation failure - Outlet air louvre group 5 - plausibility check failure*)
+    {LINE(631)}
+    bAMM_W9697 AT %QX45.3 : BOOL {Custom('SL1.SM1.BOOL00364')}; (*WARNING 9697: Room ventilation failure - Outlet air louvre group 6 - closed signal*)
+    {LINE(632)}
+    bAMM_W9698 AT %QX45.4 : BOOL {Custom('SL1.SM1.BOOL00365')}; (*WARNING 9698: Room ventilation failure - Outlet air louvre group 6 - opened signal not valid*)
+    {LINE(633)}
+    bAMM_W9699 AT %QX45.5 : BOOL {Custom('SL1.SM1.BOOL00366')}; (*WARNING 9699: Room ventilation failure - Outlet air louvre group 6 - closed signal not valid*)
+    {LINE(634)}
+    bAMM_W9700 AT %QX45.6 : BOOL {Custom('SL1.SM1.BOOL00367')}; (*WARNING 9700: Room ventilation failure - Outlet air louvre group 6 - plausibility check failure*)
+    {LINE(635)}
+    bAMM_W9701 AT %QX45.7 : BOOL {Custom('SL1.SM1.BOOL00368')}; (*WARNING 9701: Release gas valve A for decentral gas addition - output not valid*)
+    {LINE(636)}
+    bAMM_W9702 AT %QX46.0 : BOOL {Custom('SL1.SM1.BOOL00369')}; (*WARNING 9702: Release gas valve B for decentral gas addition - output not valid*)
+    {LINE(637)}
+    bAMM_W9703 AT %QX46.1 : BOOL {Custom('SL1.SM1.BOOL00370')}; (*WARNING 9703: Gas safety device for decentral gas addition - signal not valid*)
+    {LINE(638)}
+    bAMM_W9704 AT %QX46.2 : BOOL {Custom('SL1.SM1.BOOL00371')}; (*WARNING 9704: Gas safety device for decentral gas addition - output not valid*)
+END_VAR
+
+VAR_GLOBAL {Group(639)}
+    {LINE(640)}
+    bIN_Reset_sPLC AT %IX0.0 : BOOL {Custom('SL1.SM1.BOOL10001')}; (*CPU IN: Reset safety PLC*)
+    {LINE(641)}
+    bIN_Eng_Start AT %IX0.1 : BOOL {Custom('SL1.SM1.BOOL10002')}; (*CPU IN: Engine starter demand*)
+    {LINE(642)}
+    bIN_EO_PumpsOff AT %IX0.2 : BOOL {Custom('SL1.SM1.BOOL10003')}; (*CPU IN: All engine oil pumps off*)
+    {LINE(643)}
+    bIN_ECW_PumpsOff AT %IX0.3 : BOOL {Custom('SL1.SM1.BOOL10004')}; (*CPU IN: All engine cooling water pumps off*)
+    {LINE(644)}
+    bIN_Eng_Aux_Dem AT %IX0.4 : BOOL {Custom('SL1.SM1.BOOL10005')}; (*CPU IN: Engine auxiliaries demand*)
+    {LINE(645)}
+    bIN_ERV_Lou_PC_OP AT %IX0.5 : BOOL {Custom('SL1.SM1.BOOL10006')}; (*CPU IN: Engine room ventilation - Plausibility check for opening the louvres*)
+    {LINE(646)}
+    bIN_ERV_Lou_PC_CL AT %IX0.6 : BOOL {Custom('SL1.SM1.BOOL10007')}; (*CPU IN: Engine room ventilation - Plausibility check for closing the louvres*)
+    {LINE(647)}
+    bIN_ERV_ColdCountry AT %IX0.7 : BOOL {Custom('SL1.SM1.BOOL10008')}; (*CPU IN: Engine room ventilation - Cold country mode active*)
+END_VAR
+
+VAR_GLOBAL {Group(648)}
+    {LINE(649)}
+    iIN_N_EngAct AT %IW4 : INT {Custom('SL1.SM1.INT1001')}; (*CPU IN: Actual engine speed from Ignition [rpm]*)
+    {LINE(650)}
+    iIN_N_EngNom AT %IW6 : INT {Custom('SL1.SM1.INT1002')}; (*CPU IN: Nominal speed [rpm]*)
+    {LINE(651)}
+    iIN_Eng_Motortype AT %IW8 : INT {Custom('SL1.SM1.INT1003')}; (*CPU IN: Engine motor type*)
+END_VAR
+
+VAR_GLOBAL {Group(652)}
+    {LINE(653)}
+    bPhysicalState_Rel_Sync_Load AT %IX516.0 : BOOL {Custom('SL1.SM102.PhysicalStateOutput01')}; (*Physical state of output - Release synchronizing and load*)
+    {LINE(654)}
+    bPhysicalState_GCB_RUC AT %IX516.1 : BOOL {Custom('SL1.SM102.PhysicalStateOutput02')}; (*Physical state of output - Generator circuit breaker - Release undervoltage coil*)
+    {LINE(655)}
+    bPhysicalState_SF_OK_A AT %IX516.2 : BOOL {Custom('SL1.SM102.PhysicalStateOutput03')}; (*Physical state of output - Safety functions OK - Aggregat*)
+    {LINE(656)}
+    bPhysicalState_EmStop AT %IX516.3 : BOOL {Custom('SL1.SM102.PhysicalStateOutput04')}; (*Physical state of output - Emergency stop signalling output*)
+    {LINE(657)}
+    bPhysicalState_SF_OK_M AT %IX517.3 : BOOL {Custom('SL1.SM205.PhysicalStateOutput04')}; (*Physical state of output - Safety functions OK - Module interface*)
+    {LINE(658)}
+    bPhysicalState_Rel_GV1a AT %IX517.0 : BOOL {Custom('SL1.SM205.PhysicalStateOutput01')}; (*Physical state of output - Release gasvalve 1a*)
+    {LINE(659)}
+    bPhysicalState_Rel_GV1b AT %IX517.1 : BOOL {Custom('SL1.SM205.PhysicalStateOutput02')}; (*Physical state of output - Release gasvalve 1b*)
+    {LINE(660)}
+    bPhysicalState_Rel_GV2a AT %IX518.0 : BOOL {Custom('SL1.SM206.PhysicalStateOutput01')}; (*Physical state of output - Release gasvalve 2a*)
+    {LINE(661)}
+    bPhysicalState_Rel_GV2b AT %IX518.1 : BOOL {Custom('SL1.SM206.PhysicalStateOutput02')}; (*Physical state of output - Release gasvalve 2b*)
+    {LINE(662)}
+    bPhysicalState_Rel_GV3a AT %IX519.0 : BOOL {Custom('SL1.SM207.PhysicalStateOutput01')}; (*Physical state of output - Release gasvalve 3a*)
+    {LINE(663)}
+    bPhysicalState_Rel_GV3b AT %IX519.1 : BOOL {Custom('SL1.SM207.PhysicalStateOutput02')}; (*Physical state of output - Release gasvalve 3b*)
+    {LINE(664)}
+    bPhysicalState_Rel_GV4a AT %IX533.0 : BOOL {Custom('SL1.SM209.PhysicalStateOutput01')}; (*Physical state of output - Release gasvalve 4a*)
+    {LINE(665)}
+    bPhysicalState_Rel_GV4b AT %IX533.1 : BOOL {Custom('SL1.SM209.PhysicalStateOutput02')}; (*Physical state of output - Release gasvalve 4b*)
+    {LINE(666)}
+    bPhysicalState_Rel_GVa_DCGA AT %IX534.0 : BOOL {Custom('SL1.SM210.PhysicalStateOutput01')}; (*Physical state of output - Release gasvalve a - DCGA*)
+    {LINE(667)}
+    bPhysicalState_Rel_GVb_DCGA AT %IX534.1 : BOOL {Custom('SL1.SM210.PhysicalStateOutput02')}; (*Physical state of output - Release gasvalve a - DCGA*)
+    {LINE(668)}
+    bPhysicalState_GT1_SafeDev AT %IX517.2 : BOOL {Custom('SL1.SM205.PhysicalStateOutput03')}; (*Physical state of output - Gas safety device - gastrain 1*)
+    {LINE(669)}
+    bPhysicalState_GT2_SafeDev AT %IX518.2 : BOOL {Custom('SL1.SM206.PhysicalStateOutput03')}; (*Physical state of output - Gas safety device - gastrain 2*)
+    {LINE(670)}
+    bPhysicalState_GT3_SafeDev AT %IX519.2 : BOOL {Custom('SL1.SM207.PhysicalStateOutput03')}; (*Physical state of output - Gas safety device - gastrain 3*)
+    {LINE(671)}
+    bPhysicalState_GT4_SafeDev AT %IX533.2 : BOOL {Custom('SL1.SM209.PhysicalStateOutput03')}; (*Physical state of output - Gas safety device - gastrain 4*)
+    {LINE(672)}
+    bPhysicalState_DCGA_SafeDev AT %IX534.2 : BOOL {Custom('SL1.SM210.PhysicalStateOutput03')}; (*Physical state of output - Gas safety device - DCGA*)
+END_VAR
+
+VAR_GLOBAL {Group(673)}
+    {LINE(674)}
+    sbSafeOutputOK_Rel_Sync_Load AT %IX11.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM102.SafeOutputOK01')}; (*Safe output OK - DO Release synchronizing and load*)
+    {LINE(675)}
+    sbSafeOutputOK_GCB_RUC AT %IX11.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM102.SafeOutputOK02')}; (*Safe output OK - DO Generator circuit breaker - Release undervoltage coil*)
+    {LINE(676)}
+    sbSafeOutputOK_SF_OK_A AT %IX11.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM102.SafeOutputOK03')}; (*Safe output OK - DO Safety functions OK - Aggregat*)
+    {LINE(677)}
+    sbSafeOutputOK_SF_OK_M AT %IX15.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM205.SafeOutputOK04')}; (*Safe output OK - DO Safety functions OK - Module interface*)
+    {LINE(678)}
+    sbSafeOutputOK_Rel_GV1a AT %IX15.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM205.SafeOutputOK01')}; (*Safe output OK - DO Release gasvalve 1a*)
+    {LINE(679)}
+    sbSafeOutputOK_Rel_GV1b AT %IX15.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM205.SafeOutputOK02')}; (*Safe output OK - DO Release gasvalve 1b*)
+    {LINE(680)}
+    sbSafeOutputOK_Rel_GV2a AT %IX19.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM206.SafeOutputOK01')}; (*Safe output OK - DO Release gasvalve 2a*)
+    {LINE(681)}
+    sbSafeOutputOK_Rel_GV2b AT %IX19.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM206.SafeOutputOK02')}; (*Safe output OK - DO Release gasvalve 2b*)
+    {LINE(682)}
+    sbSafeOutputOK_Rel_GV3a AT %IX23.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM207.SafeOutputOK01')}; (*Safe output OK - DO Release gasvalve 3a*)
+    {LINE(683)}
+    sbSafeOutputOK_Rel_GV3b AT %IX23.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM207.SafeOutputOK02')}; (*Safe output OK - DO Release gasvalve 3b*)
+    {LINE(684)}
+    sbSafeOutputOK_Rel_GV4a AT %IX35.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM209.SafeOutputOK01')}; (*Safe output OK - DO Release gasvalve 4a*)
+    {LINE(685)}
+    sbSafeOutputOK_Rel_GV4b AT %IX35.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM209.SafeOutputOK02')}; (*Safe output OK - DO Release gasvalve 4b*)
+    {LINE(686)}
+    sbSafeOutputOK_Rel_GVa_DCGA AT %IX43.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM210.SafeOutputOK01')}; (*Safe output OK - DO Release gasvalve a - DCGA*)
+    {LINE(687)}
+    sbSafeOutputOK_Rel_GVb_DCGA AT %IX43.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM210.SafeOutputOK02')}; (*Safe output OK - DO Release gasvalve b - DCGA*)
+    {LINE(688)}
+    sbSafeOutputOK_GT1_SafeDev AT %IX15.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM205.SafeOutputOK03')}; (*Safe output OK - DO Gas safety device - gastrain 1*)
+    {LINE(689)}
+    sbSafeOutputOK_GT2_SafeDev AT %IX19.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM206.SafeOutputOK03')}; (*Safe output OK - DO Gas safety device - gastrain 2*)
+    {LINE(690)}
+    sbSafeOutputOK_GT3_SafeDev AT %IX23.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM207.SafeOutputOK03')}; (*Safe output OK - DO Gas safety device - gastrain 3*)
+    {LINE(691)}
+    sbSafeOutputOK_GT4_SafeDev AT %IX35.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM209.SafeOutputOK03')}; (*Safe output OK - DO Gas safety device - gastrain 4*)
+    {LINE(692)}
+    sbSafeOutputOK_DCGA_SafeDev AT %IX43.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM210.SafeOutputOK03')}; (*Safe output OK - DO Gas safety device - DCGA*)
+    {LINE(693)}
+    sbSafeOutputOK_EmStop AT %IX11.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM102.SafeOutputOK04')}; (*Safe output OK - DO Emergency stop signalling output*)
+END_VAR
+
+VAR_GLOBAL {Group(694)}
+    {LINE(695)}
+    sbSafeFrequencyOK_CI_N_EngAct AT %IX24.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM201.SafeFrequencyOK')}; (*Safe frequency OK - CI Counter input for speed*)
+    {LINE(696)}
+    bReset_CI_N_EngAct AT %QX518.0 : BOOL {Custom('SL1.SM201.Reset')}; (*Reset - CI Counter input for speed*)
+END_VAR
+
+VAR_GLOBAL {Group(697)}
+    {LINE(698)}
+    sbSafeCurrentOK_AI_Pr_EO AT %IX37.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM202.SafeCurrentOK0102')}; (*Safe current OK - AI Pressure engine oil*)
+    {LINE(699)}
+    sbSafeCurrentOK_AI_Pr_EOaP AT %IX37.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM202.SafeCurrentOK0304')}; (*Safe current OK - AI Pressure engine oil after pump*)
+    {LINE(700)}
+    sbSafeCurrentOK_AI_Pr_ECW AT %IX45.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM203.SafeCurrentOK0102')}; (*Safe current OK - AI Pressure engine cooling water*)
+    {LINE(701)}
+    sbSafeCurrentOK_AI_Pr_ECWaP AT %IX45.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM203.SafeCurrentOK0304')}; (*Safe current OK - AI Pressure engine cooling water after pump*)
+END_VAR
+
+VAR_GLOBAL {Group(702)}
+    {LINE(703)}
+    sbSafeRelease_AI_Pr_EO AT %QX5.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM202.SafeRelease0102')}; (*Safe release - AI Pressure engine oil*)
+    {LINE(704)}
+    sbSafeRelease_AI_Pr_EOaP AT %QX5.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM202.SafeRelease0304')}; (*Safe release - AI Pressure engine oil after pump*)
+    {LINE(705)}
+    sbSafeRelease_AI_Pr_ECW AT %QX7.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM203.SafeRelease0102')}; (*Safe release - AI Pressure engine cooling water*)
+    {LINE(706)}
+    sbSafeRelease_AI_Pr_ECWaP AT %QX7.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM203.SafeRelease0304')}; (*Safe release - AI Pressure engine cooling water after pump*)
+END_VAR
+
+VAR_GLOBAL {Group(707)}
+    {LINE(708)}
+    sbSafeInputOK_EmStop AT %IX9.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM101.SafeInputOK01')}; (*Safe input OK - DI Emergency stop*)
+    {LINE(709)}
+    sbSafeInputOK_OlShortCirc AT %IX9.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM101.SafeInputOK02')}; (*Safe input OK - DI Generator overload/short circuit*)
+    {LINE(710)}
+    sbSafeInputOK_GenPrctTrip AT %IX9.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM101.SafeInputOK03')}; (*Safe input OK - DI Generator protection trip*)
+    {LINE(711)}
+    sbSafeInputOK_ERV_Cust AT %IX9.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM101.SafeInputOK04')}; (*Safe input OK - DI Customer room ventilation is operating*)
+    {LINE(712)}
+    sbSafeInputOK_SafetyLoop_A1 AT %IX10.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM101.SafeInputOK05')}; (*Safe input OK - DI Safety loop 1 - Module control panel*)
+    {LINE(713)}
+    sbSafeInputOK_GCB_On AT %IX10.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM101.SafeInputOK06')}; (*Safe input OK - DI Generator circuit breaker - Closed*)
+    {LINE(714)}
+    sbSafeInputOK_GCB_Off AT %IX10.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM101.SafeInputOK07')}; (*Safe input OK - DI Generator circuit breaker - Opened*)
+    {LINE(715)}
+    sbSafeInputOK_SafetyLoop_A2 AT %IX22.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM105.SafeInputOK08')}; (*Safe input OK - DI Safety loop 2 - Module control panel*)
+    {LINE(716)}
+    sbSafeInputOK_LS_HWHT_Lo AT %IX13.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM103.SafeInputOK01')}; (*Safe input OK - DI High temperature heating water - Minimum level switch*)
+    {LINE(717)}
+    sbSafeInputOK_PS1_HWHT_Hi AT %IX13.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM103.SafeInputOK02')}; (*Safe input OK - DI High temperature heating water - Maximum pressure switch 1*)
+    {LINE(718)}
+    sbSafeInputOK_PS2_HWHT_Hi AT %IX13.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM103.SafeInputOK03')}; (*Safe input OK - DI High temperature heating water - Maximum pressure switch 2*)
+    {LINE(719)}
+    sbSafeInputOK_PS1_HWHT_Lo AT %IX13.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM103.SafeInputOK04')}; (*Safe input OK - DI High temperature heating water - Minimum pressure switch 1*)
+    {LINE(720)}
+    sbSafeInputOK_PS2_HWHT_Lo AT %IX14.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM103.SafeInputOK05')}; (*Safe input OK - DI High temperature heating water - Minimum pressure switch 2*)
+    {LINE(721)}
+    sbSafeInputOK_TS1_HWHT_Hi AT %IX14.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM103.SafeInputOK06')}; (*Safe input OK - DI High temperature heating water - Maximum temperature switch 1*)
+    {LINE(722)}
+    sbSafeInputOK_TS2_HWHT_Hi AT %IX14.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM103.SafeInputOK07')}; (*Safe input OK - DI High temperature heating water - Maximum temperature switch 2*)
+    {LINE(723)}
+    sbSafeInputOK_FS_HWHT_Lo AT %IX14.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM103.SafeInputOK08')}; (*Safe input OK - DI High temperature heating water - Minimum flow switch*)
+    {LINE(724)}
+    sbSafeInputOK_LS_HWLT_Lo AT %IX17.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM104.SafeInputOK01')}; (*Safe input OK - DI Low temperature heating water - Minimum level switch*)
+    {LINE(725)}
+    sbSafeInputOK_PS1_HWLT_Hi AT %IX17.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM104.SafeInputOK02')}; (*Safe input OK - DI Low temperature heating water - Maximum pressure switch 1*)
+    {LINE(726)}
+    sbSafeInputOK_PS2_HWLT_Hi AT %IX17.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM104.SafeInputOK03')}; (*Safe input OK - DI Low temperature heating water - Maximum pressure switch 2*)
+    {LINE(727)}
+    sbSafeInputOK_PS1_HWLT_Lo AT %IX17.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM104.SafeInputOK04')}; (*Safe input OK - DI Low temperature heating water - Minimum pressure switch 1*)
+    {LINE(728)}
+    sbSafeInputOK_PS2_HWLT_Lo AT %IX18.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM104.SafeInputOK05')}; (*Safe input OK - DI Low temperature heating water - Minimum pressure switch 2*)
+    {LINE(729)}
+    sbSafeInputOK_TS1_HWLT_Hi AT %IX18.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM104.SafeInputOK06')}; (*Safe input OK - DI Low temperature heating water - Maximum temperature switch 1*)
+    {LINE(730)}
+    sbSafeInputOK_TS2_HWLT_Hi AT %IX18.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM104.SafeInputOK07')}; (*Safe input OK - DI Low temperature heating water - Maximum temperature switch 2*)
+    {LINE(731)}
+    sbSafeInputOK_FS_HWLT_Lo AT %IX18.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM104.SafeInputOK08')}; (*Safe input OK - DI Low temperature heating water - Minimum flow switch*)
+    {LINE(732)}
+    sbSafeInputOK_HWcirc_Cust AT %IX21.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM105.SafeInputOK01')}; (*Safe input OK - DI High temperature heating water - DI Customer heating water circuit failure*)
+    {LINE(733)}
+    sbSafeInputOK_EmStop_M AT %IX53.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM204.SafeInputOK01')}; (*Safe input OK - DI Emergency stop at module interface panel*)
+    {LINE(734)}
+    sbSafeInputOK_Ign_Run AT %IX53.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM204.SafeInputOK02')}; (*Safe input OK - DI Ignition running*)
+    {LINE(735)}
+    sbSafeInputOK_ScavFlapClose AT %IX53.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM204.SafeInputOK04')}; (*Safe input OK - DI Scavenging flap closed*)
+    {LINE(736)}
+    sbSafeInputOK_TS_ScavFlap AT %IX54.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM204.SafeInputOK05')}; (*Safe input OK - DI Scavenging flap temperature switch OK*)
+    {LINE(737)}
+    sbSafeInputOK_Pr_EG_Hi AT %IX54.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM204.SafeInputOK06')}; (*Safe input OK - DI Exhaust gas backpressure high OK*)
+    {LINE(738)}
+    sbSafeInputOK_SafetyLoop_M AT %IX54.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM204.SafeInputOK08')}; (*Safe input OK - DI Safety loop - Module interface panel*)
+    {LINE(739)}
+    sbSafeInputOK_GT1_SafeDevOK AT %IX53.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM204.SafeInputOK03')}; (*Safe input OK - DI Gas safety device - Gastrain 1 OK*)
+    {LINE(740)}
+    sbSafeInputOK_GT2_SafeDevOK AT %IX54.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM204.SafeInputOK07')}; (*Safe input OK - DI Gas safety device - Gastrain 2 OK*)
+    {LINE(741)}
+    sbSafeInputOK_GT3_SafeDevOK AT %IX57.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM208.SafeInputOK01')}; (*Safe input OK - DI Gas safety device - Gastrain 3 OK*)
+    {LINE(742)}
+    sbSafeInputOK_GT4_SafeDevOK AT %IX57.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM208.SafeInputOK02')}; (*Safe input OK - DI Gas safety device - Gastrain 4 OK*)
+    {LINE(743)}
+    sbSafeInputOK_DCGA_SafeDevOK AT %IX57.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM208.SafeInputOK03')}; (*Safe input OK - DI Gas safety device - DCGA OK*)
+    {LINE(744)}
+    sbSafeInputOK_ER_Door_CL AT %IX10.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM101.SafeInputOK08')}; (*Safe input OK - DI Engine room door switches closed*)
+    {LINE(745)}
+    sbSafeInputOK_ERV_INL1_Fan_Run AT %IX63.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK01')}; (*Safe input OK - DI Engine room ventilation - Inlet air fan - Group 1 in operation*)
+    {LINE(746)}
+    sbSafeInputOK_ERV_INL1_Lou_OP AT %IX63.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK02')}; (*Safe input OK - DI Engine room ventilation - Inlet air louvre - Group 1 opened*)
+    {LINE(747)}
+    sbSafeInputOK_ERV_INL1_Lou_CL AT %IX64.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK03')}; (*Safe input OK - DI Engine room ventilation - Inlet air louvre - Group 1 closed*)
+    {LINE(748)}
+    sbSafeInputOK_ERV_OTL1_Lou_OP AT %IX64.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK04')}; (*Safe input OK - DI Engine room ventilation - Outlet air louvre - Group 1 opened*)
+    {LINE(749)}
+    sbSafeInputOK_ERV_OTL1_Lou_CL AT %IX64.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK05')}; (*Safe input OK - DI Engine room ventilation - Outlet air louvre - Group 1 closed*)
+    {LINE(750)}
+    sbSafeInputOK_ERV_INL2_Fan_Run AT %IX64.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK06')}; (*Safe input OK - DI Engine room ventilation - Inlet air fan - Group 2 in operation*)
+    {LINE(751)}
+    sbSafeInputOK_ERV_INL2_Lou_OP AT %IX64.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK07')}; (*Safe input OK - DI Engine room ventilation - Inlet air louvre - Group 2 opened*)
+    {LINE(752)}
+    sbSafeInputOK_ERV_INL2_Lou_CL AT %IX64.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK08')}; (*Safe input OK - DI Engine room ventilation - Inlet air louvre - Group 2 closed*)
+    {LINE(753)}
+    sbSafeInputOK_ERV_OTL2_Lou_OP AT %IX64.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK09')}; (*Safe input OK - DI Engine room ventilation - Outlet air louvre - Group 2 opened*)
+    {LINE(754)}
+    sbSafeInputOK_ERV_OTL2_Lou_CL AT %IX64.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK10')}; (*Safe input OK - DI Engine room ventilation - Outlet air louvre - Group 2 closed*)
+    {LINE(755)}
+    sbSafeInputOK_ERV_INL3_Fan_Run AT %IX65.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK11')}; (*Safe input OK - DI Engine room ventilation - Inlet air fan - Group 3 in operation*)
+    {LINE(756)}
+    sbSafeInputOK_ERV_INL3_Lou_OP AT %IX65.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK12')}; (*Safe input OK - DI Engine room ventilation - Inlet air louvre - Group 3 opened*)
+    {LINE(757)}
+    sbSafeInputOK_ERV_INL3_Lou_CL AT %IX65.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK13')}; (*Safe input OK - DI Engine room ventilation - Inlet air louvre - Group 3 closed*)
+    {LINE(758)}
+    sbSafeInputOK_ERV_OTL3_Lou_OP AT %IX65.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK14')}; (*Safe input OK - DI Engine room ventilation - Outlet air louvre - Group 3 opened*)
+    {LINE(759)}
+    sbSafeInputOK_ERV_OTL3_Lou_CL AT %IX65.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK15')}; (*Safe input OK - DI Engine room ventilation - Outlet air louvre - Group 3 closed*)
+    {LINE(760)}
+    sbSafeInputOK_ERV_INL4_Fan_Run AT %IX65.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK16')}; (*Safe input OK - DI Engine room ventilation - Inlet air fan - Group 4 in operation*)
+    {LINE(761)}
+    sbSafeInputOK_ERV_INL4_Lou_OP AT %IX65.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK17')}; (*Safe input OK - DI Engine room ventilation - Inlet air louvre - Group 4 opened*)
+    {LINE(762)}
+    sbSafeInputOK_ERV_INL4_Lou_CL AT %IX65.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK18')}; (*Safe input OK - DI Engine room ventilation - Inlet air louvre - Group 4 closed*)
+    {LINE(763)}
+    sbSafeInputOK_ERV_OTL4_Lou_OP AT %IX66.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK19')}; (*Safe input OK - DI Engine room ventilation - Outlet air louvre - Group 4 opened*)
+    {LINE(764)}
+    sbSafeInputOK_ERV_OTL4_Lou_CL AT %IX66.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM300.SafeInputOK20')}; (*Safe input OK - DI Engine room ventilation - Outlet air louvre - Group 4 closed*)
+    {LINE(765)}
+    sbSafeInputOK_ERV_INL5_Fan_Run AT %IX71.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeInputOK01')}; (*Safe input OK - DI Engine room ventilation - Inlet air fan - Group 5 in operation*)
+    {LINE(766)}
+    sbSafeInputOK_ERV_INL5_Lou_OP AT %IX71.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeInputOK02')}; (*Safe input OK - DI Engine room ventilation - Inlet air louvre - Group 5 opened*)
+    {LINE(767)}
+    sbSafeInputOK_ERV_INL5_Lou_CL AT %IX72.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeInputOK03')}; (*Safe input OK - DI Engine room ventilation - Inlet air louvre - Group 5 closed*)
+    {LINE(768)}
+    sbSafeInputOK_ERV_OTL5_Lou_OP AT %IX72.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeInputOK04')}; (*Safe input OK - DI Engine room ventilation - Outlet air louvre - Group 5 opened*)
+    {LINE(769)}
+    sbSafeInputOK_ERV_OTL5_Lou_CL AT %IX72.2 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeInputOK05')}; (*Safe input OK - DI Engine room ventilation - Outlet air louvre - Group 5 closed*)
+    {LINE(770)}
+    sbSafeInputOK_ERV_INL6_Fan_Run AT %IX72.3 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeInputOK06')}; (*Safe input OK - DI Engine room ventilation - Inlet air fan - Group 6 in operation*)
+    {LINE(771)}
+    sbSafeInputOK_ERV_INL6_Lou_OP AT %IX72.4 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeInputOK07')}; (*Safe input OK - DI Engine room ventilation - Inlet air louvre - Group 6 opened*)
+    {LINE(772)}
+    sbSafeInputOK_ERV_INL6_Lou_CL AT %IX72.5 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeInputOK08')}; (*Safe input OK - DI Engine room ventilation - Inlet air louvre - Group 6 closed*)
+    {LINE(773)}
+    sbSafeInputOK_ERV_OTL6_Lou_OP AT %IX72.6 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeInputOK09')}; (*Safe input OK - DI Engine room ventilation - Outlet air louvre - Group 6 opened*)
+    {LINE(774)}
+    sbSafeInputOK_ERV_OTL6_Lou_CL AT %IX72.7 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM301.SafeInputOK10')}; (*Safe input OK - DI Engine room ventilation - Outlet air louvre - Group 6 closed*)
+END_VAR

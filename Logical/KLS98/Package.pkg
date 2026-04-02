@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.1.15.54 SP?>
+<Package Version="4.06.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="DataObject" Language="Simple" Description="Simple data object.">META_KL</Object>
+    <Object Type="File" Description="Package data types" Private="true">module_KLS.typ</Object>
+    <Object Type="File" Description="Package variables" Private="true">module_KLS.var</Object>
+    <Object Type="Program" Language="IEC" Description="+ Engine type and firing order selection">EngTypeKL</Object>
+    <Object Type="Program" Language="IEC" Description="+ IN variables for KLS98">IN_KLS</Object>
+    <Object Type="Program" Language="IEC" Description="+ KLS98 main logic">kls_98</Object>
+    <Object Type="Program" Language="IEC" Description="+ KLS98 alarms">MsgKLS</Object>
+    <Object Type="Program" Language="IEC" Description="+ Out variables for KLS98">OUT_KLS</Object>
+    <Object Type="Program" Language="IEC" Description="+ Parameters KLS98">ParKL</Object>
+    <Object Type="Program" Language="IEC" Description="+ Visu interface for KLS98">VisKL</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ CAN variables for KLS - 1">cmskls_1</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ CAN variables for KLS - 2">cmskls_2</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ CAN variables for KLS - 3">cmskls_3</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ CAN variables for KLS - 4">cmskls_4</Object>
+    <Object Type="Program" Language="IEC" Description="+ CAN init KLS98">caniniKL</Object>
+    <Object Type="Program" Language="IEC" Description="+ CAN main KLS98">canmai</Object>
+  </Objects>
+</Package>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Library Version="1.93.0" SubType="ANSIC" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>JEW_LIB1.fun</File>
+    <File>JEW_LIB1.typ</File>
+    <File>bh.c</File>
+    <File>bittowd.c</File>
+    <File>filter.c</File>
+    <File>gr_max.c</File>
+    <File>gr_min_maxR.c</File>
+    <File>gr_maxR.c</File>
+    <File>gr_min.c</File>
+    <File>itoa.c</File>
+    <File>pid_a_R.c</File>
+    <File>pid_a.c</File>
+    <File>rampe_R.c</File>
+    <File>us_bitset.c</File>
+    <File>rampe.c</File>
+    <File>timebasedonoff_R.c</File>
+    <File>timebasedonoff.c</File>
+    <File>tof_r.c</File>
+    <File>ton_r.c</File>
+    <File>tp_r.c</File>
+    <File>uc_bitclr.c</File>
+    <File>uc_bitset.c</File>
+    <File>uc_bittest.c</File>
+    <File>us_bitclr.c</File>
+    <File>us_bittest.c</File>
+    <File>wdtobit.c</File>
+    <File>xsignscal_R.c</File>
+    <File>xsignscal.c</File>
+    <File>gr_minR.c</File>
+    <File>filter_R.c</File>
+    <File>ul_bitset.c</File>
+    <File>ul_bitclr.c</File>
+    <File>ul_bittest.c</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="brsystem" Target="SG4" FromVersion="1.10.0" />
+    <Dependency ObjectName="SYS_LIB" Target="SG4" FromVersion="1.38.0" />
+    <Dependency ObjectName="brsystem" Target="SG3" FromVersion="1.10.0" />
+    <Dependency ObjectName="SYS_LIB" Target="SG3" FromVersion="1.38.0" />
+  </Dependencies>
+</Library>

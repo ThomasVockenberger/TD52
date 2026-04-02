@@ -1,0 +1,28 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: RdMeta
+ * File: RdMeta.var
+ * Author: weitzert
+ * Created: January 27, 2014
+ ********************************************************************
+ * Local variables of program RdMeta
+ ********************************************************************)
+VAR
+	DatObjInfo_META : DatObjInfo;
+	DatObjRead_META : DatObjRead;
+	szMetaDataRaw : STRING[1000];
+	ssIndex : INT;
+	ssCount : INT;
+	ucMetaDataRaw : ARRAY[0..1000] OF USINT;
+	ssCount2 : INT;
+	szMetaDataFile : STRING[10];
+	pm_Error : UDINT; (* permanent value error *) (* Deleted: pm : ParaMem_typ; permanent memory tags mathias, 22.8.11*)
+	ssIndex2 : INT;
+	ssIndex3 : INT;
+	ssIndex4 : INT;
+	ssIndex5 : INT;
+	ssIndex6 : INT;
+	szSnippet : STRING[150];
+	szMetaDataPart : STRING[15];
+END_VAR

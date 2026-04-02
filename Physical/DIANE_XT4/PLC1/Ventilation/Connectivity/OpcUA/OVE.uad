@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="7" ArVersion="H4.90">
+  <Aliases>
+    <ACLAliases>
+      <ACL Id="1">
+        <ACE RoleName="Administrators" Access="0x017F" />
+      </ACL>
+    </ACLAliases>
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView AclId="1">
+    <Module Name="Ventilation">
+      <GlobalVariables>
+        <Variable Name="MM2VIS" AutomaticEnable="True" />
+        <Variable Name="Para" AutomaticEnable="True" />
+        <Variable Name="VIS2MM" AutomaticEnable="True" />
+      </GlobalVariables>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

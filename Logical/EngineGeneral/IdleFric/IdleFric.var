@@ -1,0 +1,9 @@
+VAR
+	bMonitoringAct : BOOL := FALSE; (*Monitoring active*)
+	rN_Hys : REAL := 0; (*speed hysteresis*)
+	rPos_TV_HiHi : REAL := 0; (*throttle valve position maximum*)
+	rPr_Ch_P2s_HiHi : REAL := 0; (*boost pressure maximum*)
+	xTON_Monitoring : TON := (0); (*FuB*)
+	iCntOpH : UINT;
+	bServiceMon : BOOL := 0;
+END_VAR

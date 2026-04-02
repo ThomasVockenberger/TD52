@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="Air_Inlet_Fan_3_CS2" Type="mpj1939receive">
+    <Group ID="GeneralSettings">
+      <Property ID="OwnDeviceAddress" Value="1" />
+      <Property ID="CounterpartAddress" Value="80" />
+      <Property ID="CANInterface" Value="IF1.ST16.IF1.ST4.IF1" />
+    </Group>
+  </Element>
+</Configuration>

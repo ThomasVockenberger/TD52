@@ -1,0 +1,137 @@
+VAR
+	M_STRT_TEMP3 : BOOL;
+	M_STRT_TEMP4 : BOOL;
+	M_STRT_TEMP5 : BOOL;
+	M_STRT_TEMP6 : BOOL;
+	M_STRT_TEMP7 : BOOL;
+	T7_TEMP1 : BOOL;
+	xCTD_Start : CTD;
+	xR_TRIG_AutoStartErr : R_TRIG;
+	xR_TRIG_Reset1 : R_TRIG;
+	xR_TRIG_Reset2 : R_TRIG;
+	xR_TRIG_Reset3 : R_TRIG;
+	xR_TRIG_Reset4 : R_TRIG;
+	xF_TRIG_Start : F_TRIG;
+	xTOF_LockAckStarter : TOF;
+	xTON_StartErr : TON;
+	xTON_StartScav : TON;
+	xTON_ChargeOff : TON;
+	xTON_H_STRT : TON;
+	xTON_DelayStart : TON;
+	xTON_Reset4 : TON;
+	xTON_ZAZ : TON;
+	xTP_StarterON : TP;
+	xTP_StarterOFF : TP;
+	ZM_HSTART : BOOL;
+	xTON_DelayManStart : TON;
+	xTP_StarterMeas : TP;
+	bCalcAdaptiveStartTime : BOOL;
+	rN_EngStartAvg : REAL;
+	rCnt_EngStartAvg : REAL; (*internal use only: avarage counter*)
+	xF_TRIG_StarterMeas : F_TRIG;
+	rTiFactor_Cylinders : REAL;
+	rTiFactor_N_EngStart : REAL;
+	LCRScal_Cylinders : LCRScal;
+	LCRScal_N_EngStart : LCRScal;
+	tiStarterON1 : TIME; (*Testbench ONLY*)
+	tiStarterON2 : TIME; (*Testbench ONLY*)
+	tiStarterON3 : TIME; (*Testbench ONLY*)
+	tiStarterOFF1 : TIME; (*Testbench ONLY*)
+	tiStarterOFF2 : TIME; (*Testbench ONLY*)
+	tiStarterOFF3 : TIME; (*Testbench ONLY*)
+	tiStartScav1 : TIME; (*Testbench ONLY*)
+	tiStartScav2 : TIME; (*Testbench ONLY*)
+	tiStartScav3 : TIME; (*Testbench ONLY*)
+	tiStarterON_Base : TIME;
+	bDebugStartActive : BOOL;
+	tiStartScav : TIME;
+	tiStarterOFF : TIME;
+	xTON_StarterMeas2 : TON;
+	xTP_PreStartScav : TP; (*scavenging at the beginning of the start attempt*)
+	xTON_PostStartScav : TON; (*scavenging at the end of the start attempt*)
+	bDebugTON_StarterMeas2 : BOOL;
+	bTriggerStarterMeas : BOOL;
+	tiStarterON_Max : TIME;
+	xTP_StarterON_Extended : TP;
+	bTP_StarterON : BOOL;
+	ti_EngStart_Max : TIME;
+	usStatus_gettime : UINT;
+	tGetTime : RTCtime_typ;
+	tiStartTime : RTCtime_typ;
+	xRT_EngStart : R_TRIG;
+	xFT_EngStart : F_TRIG;
+	xRT_EngRun : R_TRIG; (*Engine running*)
+	rN_EngStart : REAL; (*Display Value of start speed*)
+	rN_EngStartScavAvg : REAL; (*Average engine speed during scavenging*)
+	rCnt_EngStartScavAvg : REAL; (*internal use only: avarage speed scavenging counter*)
+	bAdoptiveStartEnab : BOOL; (*Activation bit for whole new start process*)
+	rStarterON_Max : REAL; (*internal*)
+	xR_TRIG_StartScav : R_TRIG; (*beginning of scavenging*)
+	xF_TRIG_StartScav : F_TRIG; (*end of scavenging*)
+	xRT_bDebugStartActive : R_TRIG; (*extended starting time calculation enabled*)
+	bDebugStartActive_Delay : TIME; (*detect turning starter delay*)
+	xTON_Ign_Run_CAN : TON; (*ignition system running during scavenging for 3s*)
+	bIgn_Run_CAN_Ok : BOOL; (*ignition system running during scavenging ok*)
+	bStartScavCmpl : BOOL; (*10 sec scavenging completed*)
+	xTON_EleStarter_Mon : TON; (*starter/s correct engagement monitoring trigger*)
+	xTP_EleStarter_Mon : TP; (*timer for voltage measurement*)
+	xFT_EleStarter_Mon : F_TRIG; (*correct engagement monitoring evaluation instant*)
+	rU_EleStarterAvg1 : REAL; (*starter 1 terminal 45 average voltage*)
+	rU_EleStarterAvg2 : REAL; (*starter 2 terminal 45 average voltage*)
+	rU_EleStarterAvg3 : REAL; (*starter 3 terminal 45 average voltage*)
+	rCnt_EleStarterAvg : REAL; (*internal use only: starter terminal 45 average voltage counter*)
+	b_EleStarter_EngageFail : BOOL; (*starters did not engage*)
+	iVolFlow_RunEng : UDINT; (*volume flow through the engine [lt/s]*)
+	rVol_CylDis : REAL; (*Single cylinder displacement [lt]*)
+	rVolFlow_RunEng : REAL; (*volume flow through the engine [lt/s]*)
+	rVol_PurgeAir : REAL; (*Volume of purge air [lt]*)
+	xTON_GVOpen_1s : TON; (*Gas valve open for more than 1 second*)
+	tiCycleTime : TIME; (*task cycle time*)
+	rCycleTime : REAL; (*task cycle time, real variable in seconds*)
+	RTInfo_CTR : RTInfo;
+	xF_TRIG_bEleStarter_Dem : F_TRIG; (*detect beginning of starter cool down phase*)
+	rTi_ST_Active : REAL; (*cumulated starting time [s]*)
+	rTi_ST_Active_zero : REAL; (*cumulated starting time at the beginning of cool down phase [s]*)
+	rTi_ST_Cooldown : REAL; (*starter cood down phase duration [s]*)
+	rTi_ST_Res : REAL; (*remaining starting time[s]*)
+	xGR_MINR_bSt_STT : GR_MINR; (*starter temperature status*)
+	bSt_STT : BOOL; (*starter temperature status (TRUE: not overheated, FALSE: overheated)*)
+	bReq_Rel_STT : BOOL; (*request for the starter temperature release*)
+	bReq_Rel_STT_PurgeCrk : BOOL; (*request from the purge cranking cycle for the starter temperature release*)
+	bRel_STT_Ena : BOOL; (*Starter temperature release function enabled*)
+	bSt_RelAuxOff_STT : BOOL; (*starter temperature release off*)
+	rTi_ST_Active_AftCooldown : REAL; (*cumulated starting time after cooldown phase [s]*)
+	rTi_ST_UntRelDur : REAL; (*time duration until starter temperature release [s]*)
+	bReq_PurgeCrk : BOOL; (*purge cranking cycle request*)
+	bPurgeCrk_Run : BOOL; (*purge cranking cycle running*)
+	bGV_Block_PurgeCrk : BOOL; (*purge cranking cycle GV blocked*)
+	xR_TRIG_bSt_Purge : R_TRIG; (*purge cranking cycle successful rising egde*)
+	bDem_ST_PurgeCrk : BOOL; (*demand starter from purge cranking cycle *)
+	bEleStarter_Dem_PurgeCrk : BOOL; (*starter demanded and released from purge cranking cycle *)
+	rFuelAdm : REAL; (*fuel admission status*)
+	rVol_Mx : REAL; (*volume of mixture [lt]*)
+	xR_TRIG_bReq_StartAtt : R_TRIG; (*request for start attempt rising edge*)
+	bReq_StartAtt : BOOL; (*request for start attempt*)
+	bRel_STT_StartAtt : BOOL; (*release from starter temperature for start attempt*)
+	bStartAtt_Run : BOOL; (*start attempt running*)
+	bDem_ST_StartAtt : BOOL; (*demand starter from start attempt*)
+	rTiStartAttDur : REAL; (*start attempt duration*)
+	xR_TRIG_bReq_Rel_STT_StartAtt : R_TRIG; (*request release from starter temperature for start attempt*)
+	xTON_bSt_RelAuxOff_STT : TON; (*starter temperature release off delay before setting message*)
+	xGR_MAXR_SpeedMon : GR_MAXR; (*detect filtered speed drop below 50 rpm*)
+	xF_TRIG_SpeedMon : F_TRIG; (*detect filtered speed drop below 50 rpm*)
+	bSpeedMon_PurgeCrkStartAtt : BOOL; (*Speed monioring status during purge cranking cycle and start attempt (true: unsuccessfull, false, successful)*)
+	bEng_SU_Man_Req : BOOL; (*Manual startup released and requested *)
+	bEleStarter_Dem_StartAtt : BOOL; (*starter demanded and released from start attempt*)
+	bRel_Nospeed : BOOL; (*starter released when no speed*)
+	xF_TRIG_bEng_Dem_EPS : F_TRIG; (*emergency operation demand reset*)
+	bFS_Req : BOOL; (*Fast start requested*)
+	xR_TRIG_bParaSetupOk : R_TRIG; (*parameter set up rising edge*)
+	xF_TRIG_bSt_RelAuxOff_STT : F_TRIG; (*starter temperature release off falling edge*)
+	xF_TRIG_GVopen_bEGScavAct : F_TRIG; (*Gas valve open and EG scavenging active falling edge*)
+	xF_TRIG_bEleStarter_DemOffPurge : F_TRIG; (*EleStarter demand after purge cranking cylce falling edge*)
+	bMissfCyl_AftPurgeCrk : BOOL; (*Skip fire order after purge cranking cycle*)
+	xTP_bSfl_PurgeCrk : TP; (*Purge cranking cycle successfull TP*)
+	iVol_MinAirLim_SysPurge : UDINT; (*Limited minimum air volume required for system purge *)
+	xTON_Nospeed15s : TON; (*zero speed for 15 s*)
+END_VAR

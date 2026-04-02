@@ -1,0 +1,5 @@
+VAR
+	xBH_OpHour_Oxi : BH;
+	xR_TRIG_OpHour_Oxi : R_TRIG;
+	OpHour_Oxi : bh_typ;
+END_VAR

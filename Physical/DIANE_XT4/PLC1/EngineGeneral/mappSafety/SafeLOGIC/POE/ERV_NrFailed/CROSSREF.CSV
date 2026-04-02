@@ -1,0 +1,18 @@
+bAMM_NrMax,POE\ERV_NrFailed\Variables.VBB,0,,18,0,,,BOOL,,,VAR_OUTPUT,NOT USED,,TRIP - Reached maximum allowed number of groups with failur
+iGroup1_Err,POE\ERV_NrFailed\Variables.VBB,0,,11,0,,,SAFEDINT,,,VAR,NOT USED,,Group 1 with failure
+iGroup2_Err,POE\ERV_NrFailed\Variables.VBB,0,,12,0,,,SAFEDINT,,,VAR,NOT USED,,Group 2 with failure
+iGroup3_Err,POE\ERV_NrFailed\Variables.VBB,0,,13,0,,,SAFEDINT,,,VAR,NOT USED,,Group 3 with failure
+iGroup4_Err,POE\ERV_NrFailed\Variables.VBB,0,,14,0,,,SAFEDINT,,,VAR,NOT USED,,Group 4 with failure
+iGroup5_Err,POE\ERV_NrFailed\Variables.VBB,0,,15,0,,,SAFEDINT,,,VAR,NOT USED,,Group 5 with failure
+iGroup6_Err,POE\ERV_NrFailed\Variables.VBB,0,,16,0,,,SAFEDINT,,,VAR,NOT USED,,Group 6 with failure
+iNrErr,POE\ERV_NrFailed\Variables.VBB,0,,10,0,,,SAFEDINT,,,VAR,NOT USED,,Number of groups with failure
+PARA_Nr,POE\ERV_NrFailed\Variables.VBB,0,,2,0,,,SAFEDINT,,,VAR_INPUT,NOT USED,,PARA: Number of groups
+PARA_NrMaxErr,POE\ERV_NrFailed\Variables.VBB,0,,3,0,,,SAFEDINT,,,VAR_INPUT,NOT USED,,PARA: Maximum allowed number of groups with failure
+sbSL_OK_All,POE\ERV_NrFailed\Variables.VBB,0,,19,0,,,SAFEBOOL,,,VAR_OUTPUT,NOT USED,,Safety loop OK - Maximum allowed number of groups with fail
+sbSL_OK_Group1,POE\ERV_NrFailed\Variables.VBB,0,,4,0,,,SAFEBOOL,,,VAR_INPUT,NOT USED,,Safety loop OK - Group 1
+sbSL_OK_Group2,POE\ERV_NrFailed\Variables.VBB,0,,5,0,,,SAFEBOOL,,,VAR_INPUT,NOT USED,,Safety loop OK - Group 2
+sbSL_OK_Group3,POE\ERV_NrFailed\Variables.VBB,0,,6,0,,,SAFEBOOL,,,VAR_INPUT,NOT USED,,Safety loop OK - Group 3
+sbSL_OK_Group4,POE\ERV_NrFailed\Variables.VBB,0,,7,0,,,SAFEBOOL,,,VAR_INPUT,NOT USED,,Safety loop OK - Group 4
+sbSL_OK_Group5,POE\ERV_NrFailed\Variables.VBB,0,,8,0,,,SAFEBOOL,,,VAR_INPUT,NOT USED,,Safety loop OK - Group 5
+sbSL_OK_Group6,POE\ERV_NrFailed\Variables.VBB,0,,9,0,,,SAFEBOOL,,,VAR_INPUT,NOT USED,,Safety loop OK - Group 6
+xKeepAMM_2s_A1,POE\ERV_NrFailed\Variables.VBB,0,,17,0,,,,,,VAR,NOT USED,,FuB

@@ -1,0 +1,146 @@
+VAR
+	bLoad_Para : BOOL;
+	bPFC_TestEnable : BOOL := 0;
+	bSimu_HMI : BOOL := 0;
+	bSimu_Test2 : BOOL := 0; (*Activation of Simulation PFC function (TRUE = active)*)
+	bTest_f_force : BOOL; (* 0 *) (* OldName: bTest_f_force; Cycle:5; *)
+	FILTER_R_P_Act : FILTER_R;
+	iCnt_GrC_CnP : INT; (* point counter *) (* OldName: ssanz_punkte; Cycle:5; *)
+	iCnt_PFCSimu : UDINT;
+	iCnt_PFCSimuMax : UDINT;
+	iCnt_Simu : INT;
+	iCnt_Simu_Inc : INT;
+	iCnt_Simu_Min : INT;
+	iIdxMin : INT; (*counter*)
+	iLoopCnP : INT; (* counter point loop variable *) (* OldName: i; Cycle:5; *)
+	iLoopTable : INT; (*Counter Table Curve*)
+	iPFCRMC_GrC_SetCurOlV : INT; (* old PFC/RMC curve value *) (* OldName: ssRCurve_PFC_RMC_old; Cycle:5; *)
+	iPFilt : USINT; (*filter constant for power*) (* OldName: ucPFilt; Cycle:5; *)
+	iPFP_GrC_SetCurOlV : INT; (* old power characteristics COS(phi)=f(P) curve value *) (* OldName: ssRCurve_PF_P_old; Cycle:5; *)
+	iPFP_NoOfPoints : INT;
+	iPFU_GrC_SetCurOlV : INT; (* old PF= f(U) curve value *) (* OldName: ssRCurve_PF_U_old; Cycle:5; *)
+	iPFU_NoOfPoints : INT;
+	iQPointRef : INT; (*Point of Referene MMU1/MMU2/Customer*)
+	iQU_GrC_SetCurOlV : INT; (* old Q = f(U) curve value *) (* OldName: ssRCurve_Q_U_old; Cycle:5; *)
+	iQU_NoOfPoints : INT;
+	iTFilt_P : UINT := 60;
+	iUFilt : UINT; (*filter constant for voltage*) (* OldName: usUFilt; Cycle:5; *)
+	i_PFC_Test_var : INT;
+	rftest_PFC : REAL; (* actual frequency [Hz] for PFC function if Testmode is active *) (* OldName: rftest_PFC; Cycle:5; *)
+	rF_Delta_PFCTest : REAL; (* actuel frequency in Hz *) (* OldName: rfist_deltaHz; Cycle:5; *)
+	rF_Nom_sim : REAL; (*simulated nominal frequenzy [Hz]*)
+	rF_Nom_sim_HMI : REAL; (*Simulierte Nennfrequenz für PFC Test per HMI*)
+	rF_PFC_Simu_Man_Act : REAL;
+	rF_PFC_Simu_Man_Ref : REAL;
+	rF_Simu_Act : REAL;
+	rF_Simu_dlt : REAL;
+	rF_Simu_Ref : REAL;
+	rMaxPFU : REAL; (* PFU maximal value *) (* OldName: rmaxPF_U; Cycle:5; *)
+	rMinPFU : REAL; (* PFU minimal vale *) (* OldName: rminPF_U; Cycle:5; *)
+	rPAct_Prozent : REAL; (* actuel power value  % *) (* OldName: rPist_Prozent; Cycle:5; *)
+	rPFP_Max : REAL; (* max vale PF = f(P) *) (* OldName: PF_U_max; Cycle:5; *)
+	rPFP_Min : REAL; (* min vale PF = f(P) *) (* OldName: PF_U_min; Cycle:5; *)
+	rPFU_Max : REAL; (* max vale PF = f(U) *) (* OldName: PF_U_max; Cycle:5; *)
+	rPFU_Min : REAL; (* min vale PF = f(U) *) (* OldName: PF_U_min; Cycle:5; *)
+	rCosPhi_P_Setlin : REAL; (* set vale PF = f(P) *) (* OldName: PF_U_setlin; Cycle:5; *)
+	rPFU_Setlin : REAL; (* set vale PF = f(U) *) (* OldName: PF_U_setlin; Cycle:5; *)
+	rPF_Max : REAL; (* power factor maximal value *) (* OldName: rmaxPF; Cycle:5; *)
+	rPF_Min : REAL; (* power factor minimal value *) (* OldName: rminPF; Cycle:5; *)
+	rP_Act_Norm_Filt_PFP : REAL;
+	rP_Set_Val : REAL; (* Preset value for active power					   *)
+	rP_Time_Delay_Filt : REAL; (* Time constants, delay time. Units: Seconds 		   *)
+	rQU_Max : REAL; (* max vale Q = f(U) [kVAr] *) (* OldName: Q_U_max; Cycle:5; *)
+	rQU_Min : REAL; (* min vale Q = f(U) [kVAr] *) (* OldName: Q_U_min; Cycle:5; *)
+	rQU_Set : REAL; (* set vale Q = f(U) [kVAr] *) (* OldName: Q_U_set; Cycle:5; *)
+	rQ_Max : REAL; (* Q maximal value *) (* OldName: rmaxQ; Cycle:5; *)
+	rQ_Min : REAL; (* Q minimal vale *) (* OldName: rminQ; Cycle:5; *)
+	rTempY : REAL; (*Temporary Y-value - Reactive Power*)
+	rUAct_Pro_URef : REAL; (* actuele volgare %, referenc voltage *) (* OldName: rUist_Prozent_Uref; Cycle:5; *)
+	rUAct_to_URef_Pro_UF : REAL; (*actuele voltage in percent*) (* OldName: UF_rUist_zu_Uref_Prozent; Cycle:5; *)
+	rUphase_Max : REAL; (* maximale voltage betwin phases *) (* OldName: ssUphasemax; Cycle:5; *)
+	rU_ActV : REAL; (* actuele voltage betwin phase *) (* OldName: rUistV; Cycle:5; *)
+	iU_IdxMin : INT; (*Index table minimum voltage*)
+	rU_Min : REAL; (*Minimum Voltage Table*)
+	rU_RefNom_Shift : REAL; (*Shift Curve 1 Uref/Unom*)
+	rTempX : REAL; (*Temporary X-value - Voltage*)
+	R_TRIG_Start : R_TRIG := (0);
+	R_TRIG_Stop : R_TRIG;
+	tcosphi_P_Cur2 : LCRCurveByPoints; (* curve value for cos(phi) = f(P)  - hyteresis curve*) (* OldName: cosphi_P_Curve; Cycle:5; *)
+	tcosphi_P_Cur : LCRCurveByPoints; (* curve value for cos(phi) = f(P) *) (* OldName: cosphi_P_Curve; Cycle:5; *)
+	tcosphi_P_Points2 : ARRAY[0..7] OF lcrCurveByPoints_TabEntry_type; (* points value for cos(phi) = f(P) - hyteresis curve*) (* OldName: cosphi_P_Points; Cycle:5; *)
+	tcosphi_P_Points : ARRAY[0..7] OF lcrCurveByPoints_TabEntry_type; (* points value for cos(phi) = f(P) *) (* OldName: cosphi_P_Points; Cycle:5; *)
+	tPFU_Cur : LCRCurveByPoints; (* points value for PF = f(U) *) (* OldName: PF_U_Curve; Cycle:5; *)
+	tPFU_Cur2 : LCRCurveByPoints; (* points value for PF = f(U) *) (* OldName: PF_U_Curve2; Cycle:5; *)
+	tPFU_Points : ARRAY[0..7] OF lcrCurveByPoints_TabEntry_type; (* points value for PF = f(U) *) (* OldName: PF_U_Points; Cycle:5; *)
+	tPFU_Points2 : ARRAY[0..7] OF lcrCurveByPoints_TabEntry_type; (* points value for PF = f(U) *) (* OldName: PF_U_Points2; Cycle:5; *)
+	tQU_Cur : LCRCurveByPoints; (* points value for Q = f(U) *) (* OldName: Q_U_Curve; Cycle:5; *)
+	tQU_Cur2 : LCRCurveByPoints; (* points value for Q = f(U)  - curve2*)
+	tQU_Points : ARRAY[0..7] OF lcrCurveByPoints_TabEntry_type; (* points value for Q = f(U) *) (* OldName: Q_U_Points; Cycle:5; *)
+	tQU_Points2 : ARRAY[0..7] OF lcrCurveByPoints_TabEntry_type; (* points value for Q = f(U)  - curve2*)
+	xF_TRIG_NetpM : F_TRIG; (*positive edge*) (* OldName: F_TRIG_NetpM; Cycle:5; *)
+	xLCRMovAvgFlt_UAct_to_URef : LCRMovAvgFlt; (* actuel voltage moveable average value filter. *) (* OldName: LCRMovAvgFlt_Uist_zu_Uref; Cycle:5; *)
+	xLCRPT1_PAct : LCRPT1; (*low pass filter*) (* OldName: FILTER_PAct; Cycle:5; *)
+	xOpMode : OpMode; (*operation mode*)
+	iShift : INT; (*Shift Counter*)
+	rUAct_Pro_URefOld : REAL; (*Previous Uact*)
+	rP_Min : REAL := 0; (*Minimum Power from Parameter list*)
+	iP_IdxMin : INT; (*Index of Minimum power from parameter list*)
+	iQP_NoOfPoints : INT; (*Number of curve points*)
+	tQP_Points : ARRAY[0..7] OF lcrCurveByPoints_TabEntry_type; (* points value for Q = f(P) *)
+	tQP_Points2 : ARRAY[0..7] OF lcrCurveByPoints_TabEntry_type; (* points value for Q = f(P)  - curve 2*)
+	rQMin : REAL; (*min value Q*)
+	rQMax : REAL; (* max value Q*)
+	rQP_Min : REAL; (* min value Q = f(P)*)
+	rQP_Max : REAL; (* max value Q = f(P)*)
+	rQP_Set : REAL; (* set value Q = f(P) [kVAr] *)
+	tQP_Cur : LCRCurveByPoints; (* points value for Q = f(U) *)
+	tQP_Cur2 : LCRCurveByPoints; (* points value for Q = f(P)  - curve2*)
+	iCnt_QU_PFUSimuMax : INT; (*Maximum Time for QU PFU HMI Test*)
+	bQU_PFU_TestEnable : BOOL := 0; (*Enable HMI QU PFU Test*)
+	iCnt_QU_PFUSimu : INT; (*Counter for QU PFU HMI Test*)
+	rF_LFSM_Act : REAL; (*Actual LFSM frequency*)
+	rF_LFSM_Ref : REAL; (*Reference LFSM frequency*)
+	rDeltaF_LFSM : REAL; (*Delta Frequency for LFSM*)
+	rDeltaF_LFSM_Hyst : REAL; (*Delta Frequency for LFSM during hysteresis mode*)
+	rDeltaF_LFSM_Old : REAL; (*Previous delta frequency LFSM frmo the curve*)
+	bPistHyst : BOOL := 0; (*Power point is following hysteresis mode*)
+	bPistCurve : BOOL := 0; (*Power point is following curve mode*)
+	bOffTest : BOOL := 0; (*Offline Test - avoid filter for testing purposes*)
+	tQLim_Points : ARRAY[0..1] OF lcrCurveByPoints_TabEntry_type; (*Points Curve1 Q Limitation*)
+	tQLim_Points2 : ARRAY[0..1] OF lcrCurveByPoints_TabEntry_type; (*Points Curve 2 Q Limitation*)
+	tQLim_Cur : LCRCurveByPoints; (*Curve 1 Q Limitation*)
+	tQLim_Cur2 : LCRCurveByPoints; (*Curve 2 Q Limitation*)
+	rQLim_Min : REAL; (*Q minimum for curve 1 - Qlim*)
+	rQLim_Max : REAL; (*Q maximum for curve 1 - Qlim*)
+	rQLim_Min2 : REAL; (*Q minimum for curve 2 - Qlim*)
+	rQLim_Max2 : REAL; (*Q maximum for curve 2 - Qlim*)
+	rP_Act_Ref : REAL; (*P act from Customer or MMU1/MMU2*)
+	rP_Act_PFSet : REAL; (*P act for PF Set conversion*)
+	rU_Ctrl_QSet : REAL; (*U control for Q setpoint*)
+	xLCRMovAvgFlt_UCtrl_to_URef : LCRMovAvgFlt;
+	R_TRIG_Start_PFU_QU : R_TRIG;
+	R_TRIG_Stop_PFU_QU : R_TRIG;
+	r : ARRAY[0..10] OF REAL;
+	i : INT := 0;
+	rUAct_to_URef_ProX : ARRAY[0..10] OF REAL; (*URef delayed*)
+	tFSMPoints : ARRAY[0..8] OF lcrCurveByPoints_TabEntry_type; (* points value for FSM *)
+	tLFSMOPoints : ARRAY[0..2] OF lcrCurveByPoints_TabEntry_type; (* points value for LFSM-O *) 
+	tLFSMUPoints : ARRAY[0..2] OF lcrCurveByPoints_TabEntry_type; (* points value for LFSM-U *) 
+	rP_Set_Unred_Freeze_FSM : REAL; (* last unreduzed power setpoint before FSM DB*)
+	rF_LFSM_curve : REAL; (* Frequency used for FSM/LFSM curve *) 
+	rP_Offset_LFSM_Pref : REAL; (* Pref offset for FSM/LFSM curve *) 
+	rP_Offset_FSMLFSM : REAL; (* Offset for FSM/LFSM curve *) 
+	rP_Offset_FSM_Marg : REAL; (* Correction for FSM/LFSM curve *)
+	rP_Offset_LFSMO_Marg : REAL; (* Correction for FSM/LFSM curve *)
+	rP_Offset_LFSMU_Marg : REAL; (* Correction for FSM/LFSM curve *)
+	xTON_LFSMO_GrC_Entry : TON;
+	xTON_LFSMU_GrC_Entry : TON;
+	xTOF_LFSM_GrC_Exit : TOF;
+	rP_LFSM_DeltaOld : REAL;
+	iF_LFSM_Act : INT;
+	iF_LFSM_Ref : INT;
+	iF_LFSM_curve : INT;
+	iFNom_LFSM_Ref : INT;
+	iF_LFSMU_GrC_DB_neg : INT;
+	iF_LFSMO_GrC_DB_pos : INT;
+END_VAR

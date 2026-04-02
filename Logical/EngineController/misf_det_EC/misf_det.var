@@ -1,0 +1,6 @@
+VAR
+	ssPowerAuss1 : INT; (* last actual power in permill nom. *)
+	FILTER_ActPower : FILTER; (* FUB filter actual power T=30 msec. *)
+	bNewAuss : BOOL; (* TRUE= new misfire can be detected *)
+	slHilf1 : DINT; (* max.zul.Steilheit von P_ist KW/sec *)
+END_VAR

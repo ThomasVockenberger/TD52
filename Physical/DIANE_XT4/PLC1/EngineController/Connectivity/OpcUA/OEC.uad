@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="7" ArVersion="H4.90">
+  <Aliases>
+    <ACLAliases>
+      <ACL Id="1">
+        <ACE RoleName="Administrators" Access="0x017F" />
+      </ACL>
+    </ACLAliases>
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView AclId="1">
+    <Module Name="EngineController">
+      <GlobalVariables>
+        <Variable Name="MM2VIS" AutomaticEnable="True">
+          <Variable Name="ulGasFlowN" EnableArrayElements="True" />
+          <Variable Name="rT_EPU_EG" EnableArrayElements="True" />
+          <Variable Name="ParaEC">
+            <Variable Name="mp_a" EnableArrayElements="True" />
+            <Variable Name="mp_b" EnableArrayElements="True" />
+            <Variable Name="mp_c" EnableArrayElements="True" />
+            <Variable Name="rT_T2_Set" EnableArrayElements="True" />
+            <Variable Name="rPr_P2_Dev_Lim" EnableArrayElements="True" />
+            <Variable Name="tLeanox_CDS_Pos" EnableArrayElements="True" />
+            <Variable Name="tLeanox_CDS_Lam" EnableArrayElements="True" />
+            <Variable Name="rP_Ramp_IncGrad_Norm" EnableArrayElements="True" />
+            <Variable Name="rP_Ramp_DecGrad_Norm" EnableArrayElements="True" />
+            <Variable Name="rPos_TV_Opt" EnableArrayElements="True" />
+            <Variable Name="rPos_Gm_Power_Offs" EnableArrayElements="True" />
+            <Variable Name="rPos_Gm_Speed_Offs" EnableArrayElements="True" />
+            <Variable Name="rGm_CR_Speed" EnableArrayElements="True" />
+            <Variable Name="rLam_CR_Speed" EnableArrayElements="True" />
+            <Variable Name="rP_Nom_Gastype" EnableArrayElements="True" />
+            <Variable Name="tgm_zltp_st" EnableArrayElements="True" />
+            <Variable Name="tlam_zltp_st" EnableArrayElements="True" />
+            <Variable Name="tgm_olt_st" EnableArrayElements="True" />
+            <Variable Name="tlam_olt_st" EnableArrayElements="True" />
+            <Variable Name="rPr_Leanox_Offset_Isand" EnableArrayElements="True" />
+            <Variable Name="rCA_Ign_OP_Start" EnableArrayElements="True" />
+            <Variable Name="rCA_Ign_OP_Power" EnableArrayElements="True" />
+            <Variable Name="rCA_Ign_OP_Speed" EnableArrayElements="True" />
+            <Variable Name="rCA_Ign_OP_Min" EnableArrayElements="True" />
+            <Variable Name="rCA_Ign_OP_Max" EnableArrayElements="True" />
+            <Variable Name="rCA_Ign_OP_Delta_KL" EnableArrayElements="True" />
+            <Variable Name="rCA_Ign_OP_Delta_Opt" EnableArrayElements="True" />
+            <Variable Name="rLam_TJ_Power_Offs" EnableArrayElements="True" />
+            <Variable Name="rLam_TJ_Speed_Offs" EnableArrayElements="True" />
+            <Variable Name="rLam_Start_Offs" EnableArrayElements="True" />
+            <Variable Name="rLHV" EnableArrayElements="True" />
+            <Variable Name="rStdGD" EnableArrayElements="True" />
+            <Variable Name="rMinAirReq" EnableArrayElements="True" />
+            <Variable Name="rHCR" EnableArrayElements="True" />
+            <Variable Name="rP_Leanox_Act_SP" EnableArrayElements="True" />
+            <Variable Name="rMin_Air_Ratio" EnableArrayElements="True" />
+            <Variable Name="usHu" EnableArrayElements="True" />
+          </Variable>
+          <Variable Name="bHiContrCyl" EnableArrayElements="True" />
+          <Variable Name="bLimpHomeCyl" EnableArrayElements="True" />
+          <Variable Name="bLimpHomeCylTrip" EnableArrayElements="True" />
+          <Variable Name="bSkipCylAct" EnableArrayElements="True" />
+          <Variable Name="rPr_Knck" EnableArrayElements="True" />
+          <Variable Name="rPr_CPP" EnableArrayElements="True" />
+          <Variable Name="rPr_IMEP" EnableArrayElements="True" />
+          <Variable Name="rCA_MFBvar" EnableArrayElements="True" />
+          <Variable Name="rCA_PI_Dur" EnableArrayElements="True" />
+          <Variable Name="rPr_49bfTDC" EnableArrayElements="True" />
+          <Variable Name="rCQ" EnableArrayElements="True" />
+          <Variable Name="rCQ_Max" EnableArrayElements="True" />
+          <Variable Name="rOpt_Out" EnableArrayElements="True" />
+          <Variable Name="rOpt_Map" EnableArrayElements="True" />
+          <Variable Name="rPr_P49_Map" EnableArrayElements="True" />
+          <Variable Name="rPr_CPP_Targ" EnableArrayElements="True" />
+          <Variable Name="rPr_CPP_Offs" EnableArrayElements="True" />
+          <Variable Name="PFPDR">
+            <Variable Name="Data">
+              <Variable Name="rCA_IP_Act" EnableArrayElements="True" />
+              <Variable Name="rT_EG" EnableArrayElements="True" />
+            </Variable>
+            <Variable Name="rCA_IP_DR" EnableArrayElements="True" />
+            <Variable Name="rCA_IP_EGT" EnableArrayElements="True" />
+            <Variable Name="rCA_IP_Lim" EnableArrayElements="True" />
+            <Variable Name="iColor_Cyl" EnableArrayElements="True" />
+          </Variable>
+          <Variable Name="rCoV100" EnableArrayElements="True" />
+          <Variable Name="bLX2_BPOC_measured" EnableArrayElements="True" />
+          <Variable Name="rPr_LX2_BPOC" EnableArrayElements="True" />
+          <Variable Name="rPr_LX2_BPOC_gas1" EnableArrayElements="True" />
+          <Variable Name="bLX2_BPOC_measured_gas1" EnableArrayElements="True" />
+          <Variable Name="rPr_LX2_BPOC_gas2" EnableArrayElements="True" />
+          <Variable Name="bLX2_BPOC_measured_gas2" EnableArrayElements="True" />
+          <Variable Name="rPr_LX2_BPOC_gas3" EnableArrayElements="True" />
+          <Variable Name="bLX2_BPOC_measured_gas3" EnableArrayElements="True" />
+          <Variable Name="rPr_LX2_BPOC_gas4" EnableArrayElements="True" />
+          <Variable Name="bLX2_BPOC_measured_gas4" EnableArrayElements="True" />
+          <Variable Name="iCnt_PCGV_class1" EnableArrayElements="True" />
+          <Variable Name="iCnt_PCGV_class2" EnableArrayElements="True" />
+          <Variable Name="iCnt_PCGV_class3" EnableArrayElements="True" />
+          <Variable Name="iCnt_PCGV_class4" EnableArrayElements="True" />
+          <Variable Name="bSt_WG_CAN_B_Warn" EnableArrayElements="True" />
+          <Variable Name="bSt_WG_CAN_B_Fail" EnableArrayElements="True" />
+          <Variable Name="bSt_WG_CAN_A_Warn" EnableArrayElements="True" />
+          <Variable Name="bSt_WG_CAN_A_Fail" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="Para" AutomaticEnable="True">
+          <Variable Name="rMin_Air_Ratio" EnableArrayElements="True" />
+          <Variable Name="mp_a" EnableArrayElements="True" />
+          <Variable Name="mp_b" EnableArrayElements="True" />
+          <Variable Name="mp_c" EnableArrayElements="True" />
+          <Variable Name="rT_T2_Set" EnableArrayElements="True" />
+          <Variable Name="usHu" EnableArrayElements="True" />
+          <Variable Name="rPr_P2_Dev_Lim" EnableArrayElements="True" />
+          <Variable Name="rP_Leanox_Act_SP" EnableArrayElements="True" />
+          <Variable Name="tLeanox_CDS" EnableArrayElements="True" />
+          <Variable Name="tLeanox_CDS_TJ" EnableArrayElements="True" />
+          <Variable Name="rP_Ramp_IncGrad_Norm" EnableArrayElements="True" />
+          <Variable Name="rP_Ramp_DecGrad_Norm" EnableArrayElements="True" />
+          <Variable Name="rPos_TV_Opt" EnableArrayElements="True" />
+          <Variable Name="rPos_Gm_Power_Offs" EnableArrayElements="True" />
+          <Variable Name="rPos_Gm_Speed_Offs" EnableArrayElements="True" />
+          <Variable Name="rGm_CR_Speed" EnableArrayElements="True" />
+          <Variable Name="rLam_CR_Speed" EnableArrayElements="True" />
+          <Variable Name="rP_Nom_Gastype" EnableArrayElements="True" />
+          <Variable Name="tgm_zltp_st" EnableArrayElements="True" />
+          <Variable Name="tlam_zltp_st" EnableArrayElements="True" />
+          <Variable Name="tgm_olt_st" EnableArrayElements="True" />
+          <Variable Name="tlam_olt_st" EnableArrayElements="True" />
+          <Variable Name="rPr_Leanox_Offset_Isand" EnableArrayElements="True" />
+          <Variable Name="rCA_Ign_OP_Start" EnableArrayElements="True" />
+          <Variable Name="rCA_Ign_OP_Power" EnableArrayElements="True" />
+          <Variable Name="rCA_Ign_OP_Speed" EnableArrayElements="True" />
+          <Variable Name="rCA_Ign_OP_Min" EnableArrayElements="True" />
+          <Variable Name="rCA_Ign_OP_Max" EnableArrayElements="True" />
+          <Variable Name="rCA_Ign_OP_Delta_KL" EnableArrayElements="True" />
+          <Variable Name="rCA_Ign_OP_Delta_Opt" EnableArrayElements="True" />
+          <Variable Name="rLam_TJ_Power_Offs" EnableArrayElements="True" />
+          <Variable Name="rLam_TJ_Speed_Offs" EnableArrayElements="True" />
+          <Variable Name="rI_GenNom" EnableArrayElements="True" />
+          <Variable Name="rU_Gen_Nom" EnableArrayElements="True" />
+          <Variable Name="rF_Nom" EnableArrayElements="True" />
+          <Variable Name="rLam_Start_Offs" EnableArrayElements="True" />
+          <Variable Name="rLHV" EnableArrayElements="True" />
+          <Variable Name="rStdGD" EnableArrayElements="True" />
+          <Variable Name="rMinAirReq" EnableArrayElements="True" />
+          <Variable Name="rHCR" EnableArrayElements="True" />
+          <Variable Name="rPr_P2s_Set_LX_0kW" EnableArrayElements="True" />
+          <Variable Name="bGrC_Prof_Active" EnableArrayElements="True" />
+          <Variable Name="rU_GrC_Prof_Norm" EnableArrayElements="True" />
+          <Variable Name="ti_GrC_Prof" EnableArrayElements="True" />
+          <Variable Name="rPr_p2s_LLCtr" EnableArrayElements="True" />
+          <Variable Name="usGasDensN" EnableArrayElements="True" />
+          <Variable Name="rGEN2_ITislandLoLoad" EnableArrayElements="True" />
+          <Variable Name="rP_Red_Leanox_Start" EnableArrayElements="True" />
+          <Variable Name="rCA_SCR_IP_Max_Offset" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="VIS2MM" AutomaticEnable="True">
+          <Variable Name="rPr_P49_Set" EnableArrayElements="True" />
+          <Variable Name="bOpt_CPP_Offs_Set" EnableArrayElements="True" />
+          <Variable Name="rPr_CPP_Offs_Set" EnableArrayElements="True" />
+        </Variable>
+      </GlobalVariables>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

@@ -1,0 +1,141 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2025
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V03.99.00.00	06.03.2013	Weitzer		generated for modular software	 
+; V03.99.02.00	29.05.2013	Zengerer	initial dependencies prepared
+; V04.00.00.00	30.01.2014	Denk		new version
+; V04.02.00.00	20.02.2015	Caks,		introduction of CBM module
+; V04.03.00.00	10.11.2015	Caks,		added mandatory statement
+;				13.11.2015	Waldhart,	added place holder tasks
+; V04.04.00.00	20.03.2017	Waldhart,	ATD package implemented 
+; V04.05.00.00	27.11.2017	Waldhart,	newest Version from IMEP based friciton monitoring V0.4.3
+;				14.02.2017	Waldhart,	PBCMem new implemented
+;				26.02.2018	502423184	Statistic package update
+; V04.06.00.00	16.03.2018	502423184,	new ECB, TCB, ErrCnt & Statistic file generation
+; V04.06.01.00	16.11.2018	502423184,	release version, removed clock_ms()
+; V04.07.00.00	22.03.2019	Waldhart,	IMEP based friciton monitoring V0.06.0
+;										ECB, TCB content increased
+; V04.09.00.00	30.08.2019	Waldhart,	Permanent dataobject added
+;				23.01.2020	Schmidt,	GEN2diag: added interface for deactivation when LX2 is switched off
+;				17.04.2020	Waldhart,	declared but unused PV`s deleted
+; V04.10.00.00	22.07.2020	Schmidt,	IMEP based friciton monitoring V0.07.1
+; V04.11.00.00	08.11.2021	Keller, 	Gen2 gas quality offset
+;				01.12.2021	Kafka,		Lambda Controller PBC, increase buffer size
+; V04.12.00.00	10.05.2022	Schmidt, 	GEN2diag: increased delay for first activation to avoid FP detections while in GEN2 lambda minimum (issue #806)
+;				08.09.2022	Andre,		Select the engine speed from the ICxx module also if SEMIC is active
+; 				16.01.2023	Kafka,		Correct conversion factors for ECBMem and TCBMem dataitems
+; V04.13.00.00	19.10.2023	Schmidt, 	GEN2diag: for PBC deactivate monitoring during misfire (issue #1076)
+;               30.10.2023	Kafka,		CBM HMI Handshake added, solve special sign issue 
+;               24.11.2023  Bachler,    Add bGridStat_GridLoss trigger
+;				07.12.2023	Schmidt,	Added combustion anomaly detection information to statistic
+; V04.14.00.00	22.07.2024	Kafka,		Remove G2 signals, increase buffer for KLS and PBC data
+;				19.10.2024	Vigh, 		Added exhaust fast pressure value to TCB_MEM
+;				14.03.2025	Perktold	Clean up, added Ti_Purge_Dur and Ti_Wait4StartTempRel to start statistic
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID: 25187
+"<MODUL>CB</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.14.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"<PARA1 Name='iEng_Motortype' MIN='208' MAX='920' />"
+"<PARA2 />"
+"<PARA3 />"
+"<PARA4 />"
+"<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Statement, if engine operation is also allowed without this module (FALSE) or if this module´s parameter check passing is mandatory (TRUE)
+"<MANDATORYMODULE>TRUE</MANDATORYMODULE>"
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_CB</DATAMODULE>"
+"	<DATAMODULE>Stats_perm</DATAMODULE>"
+"	<DATAMODULE>FDT_perm</DATAMODULE>"
+"	<DATAMODULE>LOM_perm</DATAMODULE>"
+"	<DATAMODULE>FAM_perm</DATAMODULE>"
+"	<DATAMODULE>FAMST_perm</DATAMODULE>"
+"	<DATAMODULE>CBM_perm</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='HA' VERSION='04.07.00.00' />"
+"	<DEPENDENCY MODULE='SA' VERSION='04.11.00.00' />"
+"	<DEPENDENCY MODULE='EC' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='04.06.00.00' />"	;new permanent file info
+"	<DEPENDENCY MODULE='AB' VERSION='04.07.00.00' />"    ; for iMsg array V4.07
+"	<DEPENDENCY MODULE='CU' VERSION='04.00.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='GT' VERSION='04.00.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='GD' VERSION='04.00.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='EG' VERSION='04.00.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='OP' VERSION='04.00.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='CH' VERSION='04.00.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='IC' VERSION='04.00.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='EM' VERSION='04.00.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='IG' VERSION='04.00.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='SY' VERSION='04.00.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='AG' VERSION='04.14.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='KN' VERSION='04.00.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='EX' VERSION='04.00.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='VI' VERSION='04.00.00.00' />"    ; corrected for SW download via HMI
+"   <DEPENDENCY VISVERSION='02.15.00.00' />"			; Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	Please ask the module owner to enter a general module description here. "
+"	</General>	"
+""
+"	<F1 Name='enter name of main function 1 here' LastModified='04.00.00.00'>"
+"	Enter function 1 description for module here.	"
+"	</F1>"
+"	<F3 Name='enter name of main function 2 here' LastModified='04.00.00.00'>"
+"	Enter function 2 description for module here.	"
+"	</F2>"
+"	<F3 Name='enter name of main function 3 here' LastModified='04.00.00.00'>"
+"	Enter function 3 description for module here.	"
+"	</F3>"
+""
+"	<Info>"
+"	Please enter additional module info here.	"
+"	</Info>"
+""
+"	<Customized LastModified='4.0.0.0'>	"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

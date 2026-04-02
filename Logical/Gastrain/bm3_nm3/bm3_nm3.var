@@ -1,0 +1,17 @@
+VAR
+	ANLAUF : BOOL := 0;
+	BTRB_IMP : BOOL := 0;
+	BTRB_M3 : BOOL; (*Bm3 impulse   	CV_GAS_IMP : UINT := 0;	*)
+	IMP_B : REAL;
+	IMP_N : REAL;
+	IMP_S : REAL; (* Impulssumme *)
+	IMP_W : REAL; (* 1000 Impulswertigkeit (Caution: parameter value from V4.07 onward)*)
+	NORM_IMP : BOOL;
+	NORM_M3 : BOOL;
+	T_NORM_M3 : BOOL := 0;  (*	xCTD_FA_GAS_IMP : CTD;  *)
+	xR_TRIG_FA_BTRB_IMP : R_TRIG;
+	xR_TRIG_FA_GAS_IMP_CD : R_TRIG;  (*	xR_TRIG_FA_GAS_IMP_LD : R_TRIG; *)
+	xTOF_FA_BTRB_M3 : TOF;
+	xTOF_FA_NORM_M3 : TOF;
+	xTOF_FA_T_NORM_M3 : TOF;
+END_VAR

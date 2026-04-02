@@ -1,0 +1,63 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: TCB_Buffer
+ * File: TCB_Buffer.var
+ * Author: 502423184
+ * Created: January 18, 2018
+ ********************************************************************
+ * Local variables of program TCB_Buffer
+ ********************************************************************)
+VAR
+	GetTCB_H : TCB_Header;
+	GetTCB : ARRAY[0..iTCB_Max] OF TCB_In;
+	iC : TCB_Cnt;
+	i : UINT;
+	Trace : ARRAY[0..9] OF _Tracer;
+	uiTemp : UINT := 0;
+	iTemp : INT := 0;
+	xR_TRIG : ARRAY[0..9] OF R_TRIG := [10(0)];
+	xTCB_DOW : DatObjWrite;
+	xTCB_DOC : DatObjCreate;
+	xTCB_DOI : DatObjInfo;
+	ModulName : STRING[32];
+	bTemp : BOOL := 0;
+	iAvail : INT;
+	iUsed : INT;
+	rYourRealInputVariable : REAL;
+	bCust_Trig : BOOL := 0;
+	aH : UDINT;
+	Z : USINT;
+	rCnt_OpH : REAL;
+	rCnt_Starts : REAL;
+	iTCB_Status : USINT := 0;
+	iTCB_Trigger : USINT;
+	iCnt_Remain : INT;
+	bTCB_Header : BOOL := 0;
+	strFile : STRING[50];
+	strTemp : STRING[10];
+	iClr1 : INT := 0;
+	iClr2 : INT := 0;
+	iTCB_ErrorStep : USINT;
+	iTCB_Error : UINT;
+	iTCB_HMI : UDINT;
+	iPointer : UDINT := 0;
+	iStrSize : UDINT := 0;
+	strData : STRING[30000];
+	iIdx : UINT;
+	iIdx1 : UINT;
+	iTCB_Trigger_Old : USINT;
+	szData : STRING[5000];
+	aData : UDINT;
+	iCnt : UINT;
+	iCyl : USINT;
+	iLine : UINT;
+	strVersion : STRING[30];
+	rHMI_Delay : REAL;
+	rCnt_Remain : REAL;
+	iCnt_10ms : INT := 0; (*TCB Ring Buffer Counter*)
+	bTCB_Buffering_Ena : BOOL := FALSE; (*TCB Buffering enabled*)
+	tiMax : TIME;
+	tiMin : TIME;
+	bFilled : BOOL;
+END_VAR

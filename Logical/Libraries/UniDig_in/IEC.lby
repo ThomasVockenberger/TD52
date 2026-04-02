@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.0.15.165 SP?>
+<Library Version="0.61.0" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File Description="Exported data types">UniDig_in.typ</File>
+    <File Description="Exported constants">UniDig_in.var</File>
+    <File Description="Exported functions and function blocks">UniDig_in.fun</File>
+    <File Description="Implementation file">UniDig_in.st</File>
+  </Files>
+</Library>

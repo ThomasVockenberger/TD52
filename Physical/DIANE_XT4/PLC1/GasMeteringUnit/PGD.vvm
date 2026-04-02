@@ -1,0 +1,27 @@
+(********************************************************************
+* COPYRIGHT -- INNIO Company
+********************************************************************
+* File: PGD.vvm
+* Author: automatically generated 
+* Created: 07.03.2014
+********************************************************************
+* PV mapping file
+********************************************************************)
+VAR_CONFIG
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#5.GasMeteringUnit::IN_GD.tPB2MM;
+	Cyclic#5.Gastrain::OUT_GT.tGV1_Open AT %Q.Cyclic#5.GasMeteringUnit::IN_GD.tGV1_Open;
+	Cyclic#4.AmmBase::OUT_AB.tAB2GD AT %Q.Cyclic#5.GasMeteringUnit::IN_GD.tAB2GD;
+	Cyclic#5.Gastrain::OUT_GT.tGV2_Open AT %Q.Cyclic#5.GasMeteringUnit::IN_GD.tGV2_Open;
+	Cyclic#2.Opstate::OUT_OP.rP_Act_Norm_Filt AT %Q.Cyclic#2.GasMeteringUnit::IN_GD.rP_Act_Norm_Filt;
+	Cyclic#4.HalIO::OUT_HA.iCANIdent AT %Q.Cyclic#5.GasMeteringUnit::IN_GD.iCANIdent;
+	Cyclic#5.HalIO::OUT_HA.bCANCntReset AT %Q.Cyclic#2.GasMeteringUnit::IN_GD.bCANCntReset;
+	Cyclic#2.Opstate::OUT_OP.iSt_OpMode AT %Q.Cyclic#2.GasMeteringUnit::IN_GD.iSt_OpMode;
+	Cyclic#2.EngineController::OUT_EC.ulGasFlowN AT %Q.Cyclic#2.GasMeteringUnit::IN_GD.ulGasFlowN;
+	Cyclic#5.Gastrain::OUT_GT.iIdx_Gtyp_Dem AT %Q.Cyclic#2.GasMeteringUnit::IN_GD.iIdx_Gtyp_Dem;
+	Cyclic#5.HalIO::OUT_HA.bSimWinMOD_Active AT %Q.Cyclic#5.GasMeteringUnit::IN_GD.bSimWinMOD_Active;
+	Cyclic#5.EngineController::OUT_EC.ulMonGasFlow AT %Q.Cyclic#5.GasMeteringUnit::IN_GD.ulMonGasFlow;
+	Cyclic#2.Gastrain::OUT_GT.bDualTJ AT %Q.Cyclic#2.GasMeteringUnit::IN_GD.bDualTJ_TC2;
+	Cyclic#4.Gastrain::OUT_GT.bDualTJ AT %Q.Cyclic#5.GasMeteringUnit::IN_GD.bDualTJ;
+	Cyclic#2.EngineController::OUT_EC.bLR_GasStop AT %Q.Cyclic#2.GasMeteringUnit::IN_GD.bLR_GasStop;
+	Cyclic#2.EngineController::OUT_EC.usGasDensN AT %Q.Cyclic#2.GasMeteringUnit::IN_GD.usGasDensN;
+END_VAR

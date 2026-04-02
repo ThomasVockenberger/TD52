@@ -1,0 +1,31 @@
+VAR
+	pm_Error : UINT;
+	write_once : BOOL;
+	pm_len : UDINT;
+	ModulName : STRING[35];
+	DatObjInfo_01 : DatObjInfo;
+	pm_id : UDINT;
+	pm_p : UDINT;
+	bCreateDataObj : BOOL;
+	perm_par_vers : UINT;
+	DatObjRead_01 : DatObjRead;
+	DatObjDelete_PermMem : DatObjDelete;
+	DatObjCreate_01 : DatObjCreate;
+	DatObjWrite_01 : DatObjWrite;
+	ulChecksumOld : UDINT;
+	ulPMPointer : UDINT;
+	ulChkValue : UDINT;
+	TON_WritePMEM : TON;
+	ulChecksum : UDINT;
+	bWriteDataObj : BOOL;
+	TON_WarnDelay : TON;
+	TON_BlockMinFileAge : TON; (*waiting time without file write after successful performed write*)
+	bBlock_MinFileAge : BOOL := FALSE; (*pause the perm file write after each sucessful write*)
+	iPM_WriteCnt : UDINT; (* *) (*old VarName: usPMWriteCnt*)
+END_VAR
+VAR CONSTANT
+	ERR_NOERROR : UINT := 0;
+END_VAR
+VAR
+	pmm : Perm_SY_Struct;
+END_VAR

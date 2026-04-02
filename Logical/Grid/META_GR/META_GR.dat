@@ -1,0 +1,137 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2023
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V3.99			06-03-2013	Weitzer,	generated for modular software	 
+; V 			17-07-2013	Zengerer,	Strukturupdate
+;       		04-12.2013  Maxhera,	content update
+; V4.00 		31.01.2014	Weitzer,	versions changed
+; V4.00.03.00	31.01.2014	Waldhart,	update of the ParGR Task
+; V4.00.04.00	10.06.2015	Caks,		updated frequency control
+; V4.02.00.00	10.06.2015	Caks,		versions changed
+; V4.03.00.00	15.03.2016	Perktold,	update for 4.3.0.0
+; V4.04.00.00	13.06.2016	Gwiggner	Hinzufuegen von CustAnaIn[2].Goodqual zu A3385
+; V4.04.00.00	13.04.2017	Gwiggner	operational messages for frequency control
+; V4.04.00.00	27.07.2017	Gwiggner	additional update to frequency control
+; V4.05.00.00	07.12.2017	Farre,		Q func and P func update
+; V4.05.00.00	15.03.2018	Farre,		Modification of LFSM ramp para, after LFSM ramp para and para limitations (VDE Jan'18), correction voltage reference shift
+; V4.06.00.00	06.08.2018	Zuschnig,	added signal loss function for P_Set, P_Lim, COSPHI_Set, Q_Set, Q_Lim and U_Set
+; V4.07.00.00   25.03.2019  Zuschnig,   External signals from EVU, FSM/LFSM figure
+;				09.10.2019	lettenb.	div.by zero bugfix, bu01
+; V4.09.00.00	18.11.2019	lettenb.	AI selection: parameter simplification
+; V4.10.00.00	28.09.2020	Zuschnig,	Changed A2331 logic - NC contact is used, set default value of external power setpoint via digital input
+;				12.11.2020	lettenb.	power ramp rate after connection to grid, selectable PT2 behavior for reactive power ramp(VDE4120)
+; V4.11.00.00	29.11.2021	lettenb.	versions changed
+; V4.12.00.00	03.01.2023	lettenb.	version changed, bugfixes
+; V4.13.00.00	02.08.2023	Farre,		FSM delta P limitation positive and negative via parameters; VIS FSM curves adapted
+;				10.10.2023	Farre,		AOs for MMU shall be independent from PF Controller (issue #1227)
+;				20.11.2023	Farre,		Remote FSM & FSM dead band limit. Replaced Para.rP_Set_Min_Norm by interface coming from OP. (2023-168)
+; 				28.11.2023	Farre,		ILF (local frequency integrator) functionality added
+;				30.11.2023	Goenczi		Add FSM test interfaces via BUS initiation
+;				20.12.2023	Farre,		issue 1350: visu LFSM curve with no static FSM deadband when Pset in FSM margin zone
+;				22.12.2023	Farre,		issue #1332: Wrong power set ramp used when FSM enabled but Op. Point in FSM dead-band
+;				07.03.2024	Farre,		issue #890, #1089: delete scaling analog input signals and shifted to HalIO
+;V4.14.00.00	17.10.2024	Theobald	Alarm2331 priority changed from 2 to 3 [2024-223]
+;				29.11.2024	Farre,		issue 1596: Q Limitation based Q(U) curve needs Voltage reference offset shift
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>GR</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.14.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"<PARA1 Name='rF_Nom[1]' MIN='30' MAX='70' />"
+"<PARA2 Name='rU_Gen_Nom[1]' MIN='65' MAX='65050' />"
+"<PARA3 />"
+"<PARA4 />"
+"<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_GR</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='HA' VERSION='04.10.00.00' />"	
+"	<DEPENDENCY MODULE='OP' VERSION='04.13.00.00' />"
+"	<DEPENDENCY MODULE='CU' VERSION='04.13.00.00' />"	
+"	<DEPENDENCY MODULE='GC' VERSION='04.05.00.00' />"	
+"	<DEPENDENCY MODULE='EC' VERSION='04.04.00.00' />"
+"	<DEPENDENCY MODULE='CU' VERSION='04.13.00.00' />"
+"	<DEPENDENCY MODULE='AB' VERSION='04.06.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='CP' VERSION='04.06.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='PB' VERSION='04.06.00.00' />"    ; corrected for SW download via HMI
+"	<DEPENDENCY MODULE='VI' VERSION='04.04.00.00' />"    ; corrected for SW download via HMI
+"   <DEPENDENCY VISVERSION='02.14.00.00' />"			; Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"   Static Gridcode management"
+"	</General>	"
+""
+"	<F1 Name='Read curves for static GridCode' LastModified='4.00.0.0'>"
+"	Read curves for: cos (phi) = f (P),PFC/RMC, Q =f(U),cos(phi)= f(U)   "
+"	</F1>"
+"	<F2 Name='voltage control' LastModified='4.00.0.0'>"
+"	setpoint for reactive power, calculate cos(phi), reactive power limitation, etc. 	"
+"	</F2>"
+"	<F3 Name=' frequency control' LastModified='4.00.0.0'>"
+"   Power setpoint,power limitation, RMC, PFC  	"
+"	</F3>"
+"	<F4 Name=' alarm management' LastModified='4.00.0.0'>"
+"   Msgs for Gridcode 	"
+"	</F4>"
+"	<F5 Name=' frequency control' LastModified='4.00.4.0'>"
+"   offset related to power setpoint at beginning of event 	"
+"	</F5>"
+"	<F6 Name=' frequency/voltage control' LastModified='4.03.0.0'>"
+"   complete re-check of all functions 	"
+"	</F6>"""
+"	<Info>"
+"	V4.04.00.00 Hinzufügen von CustAnaIn[2].Goodqual zu A3385	"
+"   V4.04.00.00 operational messages for frequency control"
+"   V4.04.00.00 additional update to frequency control "
+"	V4.05.00.00	Q func and P func update "
+"	V4.06.00.00	Signal loss functions added "
+"   V4.07.00.00 External signals from EVU, FSM/LFSM figure "
+"	</Info>"
+""
+"	<Customized LastModified='4.00.0.0'>	"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

@@ -1,0 +1,67 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: Knck_safi_dmr
+ * File: Knck_safi_dmr.var
+ * Author: WaldharM
+ * Created: October 21, 2011
+ ********************************************************************
+ * Local variables of program Knck_safi_dmr
+ ********************************************************************)
+VAR
+	AmmSeqKnockErr : AmmSequence;
+	bAmmSeqClkP : BOOL;
+	bKnock : ARRAY[0..24] OF BOOL;
+	TON_SecondTick : TON;
+	iCnt_Cyl : USINT;
+	ucCylIndex : USINT;
+	rCnt_SensorOK : REAL;
+	xOpMode : OpMode;
+	knCount : ARRAY[0..24] OF UINT;
+	knDetected : ARRAY[0..24] OF BOOL;
+	rknSumValue : ARRAY[0..24] OF REAL;
+	rPr_Knck_Filt : ARRAY[0..24] OF REAL;
+	iNum_EngCycCont : UINT;
+	iNum_PLC_Cycles : INT;
+	iCnt_FiltFreeze : ARRAY[0..24] OF INT;
+END_VAR
+VAR
+	xTOF_SFIKW : ARRAY[0..24] OF TOF;
+	BinaryLogicRKS : USINT; (* decision logic for knock system mode  *)
+	rKnck_PBC : REAL;
+	rInt_Max : REAL;
+	rKnck_IP_Red : REAL;
+	rKnck_P_Red : REAL;
+	rKnck_T2s_Red : REAL;
+	rCA_Knck_Red : ARRAY[0..24] OF REAL;
+	rInt_Knck_Sum : REAL;
+	rInt_Min : REAL;
+	rPr_Knck_PBC : REAL;
+	rPr_Knck : ARRAY[0..24] OF REAL;
+	rInt_MinLim : REAL;
+	rInt_MinLim_Raw : REAL;
+	rKno_Pmax_Red_EnP : REAL;
+	rPmax_Knck_Red : ARRAY[0..24] OF REAL;
+	bPmax_Sum_Corr : ARRAY[0..24] OF BOOL;
+	rPmax_Knck_Red_Sum : REAL;
+	iCnt_Knck_Cyl : USINT;
+	bPmax_Freeze : BOOL;
+	rPmax_Knck_Red_SumCyl : REAL;
+	iCnt_Knck_Cyl_Freeze : USINT;
+	bPmax_Freeze_Reset : ARRAY[0..24] OF BOOL;
+	xTOF_PmaxReturn : TOF;
+	bReset : BOOL;
+	bTest_Knck_Error : ARRAY[0..24] OF BOOL;
+	bHeavyKnck : BOOL;
+	iCnt_Freeze : INT;
+	xRamp_Rel_Knck : ARRAY[0..24] OF RAMPE_R;
+	iNum_Calc_Adaptiv : INT;
+	ssMinIntKlopf : INT;
+	rFilterFactor_DMR : REAL;
+	rKLmin_DMR : REAL;
+	rGainFactor_DMR : REAL;
+	rFactOff_DMR : REAL;
+	rOff_DMR : REAL;
+	rFilt_Pr_Knck : ARRAY[0..24] OF REAL;
+	rKLimitVar_DMR : ARRAY[0..24] OF REAL;
+END_VAR

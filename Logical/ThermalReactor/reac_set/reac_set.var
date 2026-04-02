@@ -1,0 +1,29 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: reac_set
+ * File: reac_set.var
+ * Author: thalerjo
+ * Created: November 18, 2010
+ ********************************************************************
+ * Local variables of program reac_set
+ ********************************************************************)
+VAR
+	TAKT10 : BOOL;
+	TAKT1 : BOOL;
+	No_ScanIntervals : INT;
+	i1 : INT;
+	i : INT;
+	P_old : REAL;
+	a : REAL;
+	Delta_P : REAL;
+	DeltaP_t : REAL;
+	DeltaP : ARRAY[0..99] OF REAL;
+	xR_TRIG_TAKT10 : R_TRIG;
+	xR_TRIG_TAKT1 : R_TRIG;
+	xTOF_TAKT102 : TOF;
+	xTOF_TAKT02 : TOF;
+	xTOF_KL_Pinc : TOF;
+	xTON_TAKT101 : TON;
+	xTON_TAKT01 : TON;
+END_VAR

@@ -1,0 +1,50 @@
+VAR CONSTANT
+	STEP_WAIT : UINT := 0;
+	STEP_CREATESYSINFO : UINT := 1;
+	STEP_GETMODGRPINFO : UINT := 2;
+	STEP_GETMODINFO : UINT := 3;
+	STEP_RELEASEGROUPMEM : UINT := 4;
+	STEP_ERROR : UINT := 5;
+	STEP_GETHWINFO : UINT := 10;
+	STEP_GETHWINFO_00 : UINT := 11;
+	STEP_GETHWINFO_01 : UINT := 12;
+	STEP_GETHWINFO_02 : UINT := 13;
+	STEP_GETHWINFO_03 : UINT := 14;
+	STEP_GETHWINFO_04 : UINT := 15;
+	STEP_GETHWINFO_05 : UINT := 16;
+	STEP_GETHWINFO_06 : UINT := 17;
+	STEP_CREATELOGENTRY : UINT := 20;
+	STEP_CREATELOGENTRY_00 : UINT := 21;
+	STEP_CREATELOGENTRY_01 : UINT := 22;
+END_VAR
+VAR
+	CreateSystemInfo_0 : CreateSystemInfo;
+	stepList : UINT;
+	GetModuleInfo_0 : GetModuleInfo;
+	cmdGetModInfo : BOOL;
+	cmdCreateSysInfo : BOOL;
+	cmdGetModGrpInfo : BOOL;
+	cmdReleaseGroupMem : BOOL;
+	GetModuleGroupInfo_0 : GetModuleGroupInfo;
+	ModGrpNr : UINT;
+	ModNr : UINT;
+	NodeNr : UINT;
+	NewNodeNr : BOOL;
+	Path : STRING[40];
+	cmdGetHWInfo : BOOL;
+	ModGrpNrCnt : UINT;
+	ModNrCnt : UINT;
+	cmdCreateLoggerEntry : BOOL;
+	AsArLogWrite_0 : AsArLogWrite;
+	AsArLogGetInfo_0 : AsArLogGetInfo;
+	nextAdr : UDINT;
+	errorNo : UINT;
+	logErrorNo : UDINT;
+	logErrorString : STRING[200];
+	strLen : UINT;
+	ModPath : STRING[80];
+	AsIOPVInfo_0 : AsIOPVInfo;
+	pModOkPv : UDINT;
+	ModOkPvLen : UDINT;
+	statusPVxgetadr : UINT;
+END_VAR

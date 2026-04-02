@@ -1,0 +1,99 @@
+(*
+T: FUNCTION_BLOCK SF_RemanentData_SAFEDINT
+FW: YES	NO_VARIANT SF_RemanentData_SAFEDINT SKIP_NOTHING	
+CI#: 102
+QSL: 0
+QVE: 14
+QVPC: 14
+QPar: 11
+QFBI: 0
+CIFNUM: 171
+CIFID: 513
+CIFMAJ: 1
+CIFMIN: 1
+CIFSTACK: 500
+*)
+
+Activate	1	VAR_INPUT	@TYP:1
+		     
+
+;
+
+
+S_DataID	2	VAR_INPUT	@TYP:48
+		     
+
+;
+
+
+S_DataIn	3	VAR_INPUT	@TYP:59
+		     
+
+;
+
+
+S_DataInOK	4	VAR_INPUT	@TYP:43
+		     
+
+;
+
+
+S_Store	5	VAR_INPUT	@TYP:43
+		     
+
+;
+
+
+Ready	6	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+
+S_DataOut	7	VAR_OUTPUT	@TYP:59
+		     
+
+;
+
+
+S_DataOutOK	8	VAR_OUTPUT	@TYP:43
+		     
+
+;
+
+
+S_StoreOK	9	VAR_OUTPUT	@TYP:43
+		     
+
+;
+
+
+Error	10	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+
+DiagCode	11	VAR_OUTPUT	@TYP:18
+		     
+
+;
+
+
+StorePending	12	VAR	@TYP:1
+		     
+@TYP:1# 0
+;
+
+
+MultipleWrite	13	VAR	@TYP:1
+		     
+
+;
+
+
+FirstCall	14	VAR	@TYP:4
+		     
+
+;
+

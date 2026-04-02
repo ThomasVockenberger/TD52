@@ -1,0 +1,15 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: general_EC
+ * File: general_EC.var
+ * Author: WaldharM
+ * Created: May 22, 2012
+ ********************************************************************
+ * Local variables of program general_EC
+ ********************************************************************)
+VAR
+	TOF_Act_Release : TOF;
+	TON_Act_Mon_Release : TON;
+	ucInitIndex : USINT;
+END_VAR

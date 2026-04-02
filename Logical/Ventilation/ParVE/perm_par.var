@@ -1,0 +1,121 @@
+VAR
+	tParaIntern : ParaHandler_typ; (*Connector type to perm_par*)
+	tMM2ParaBase_ReadBack : MM2ParaBase_type; (*INTERNAL! V4.06 new readback structure for information from previous tasks*)
+	bWriteDataObj : BOOL; (* TRUE=write data object module *)
+	bDataObjLenErr : BOOL; (*Error occured in permem: data module size missmatch*)
+	bCreateDataObj : BOOL; (* TRUE=create new data object *)
+	bWriteOnce : BOOL; (* write permanent memory once *)
+	DatObjCreate_01 : DatObjCreate; (* data object create *)
+	DatObjInfoBak_02 : DatObjInfo; (* data object info *)
+	DatObjDelete_01 : DatObjDelete; (* data object delete *)
+	DatObjRead_01 : DatObjRead; (* data object read *)
+	DatObjRead_02 : DatObjRead; (* manual initiated data object read *)
+	DatObjWrite_01 : DatObjWrite; (* data object write *)
+	DatObjDelete_02 : DatObjDelete; (* data object delete *)
+	DatObjDelete_11 : DatObjDelete; (*Delete Backup File*)
+	DatObjInfo_01 : DatObjInfo; (* data object info *)
+	DatObjInfo_02 : DatObjInfo; (* data object info *)
+	szModuleName : STRING[35]; (* module name of object *)
+	szModuleNameBackup : STRING[35]; (* module name of posiibly created backup object *)
+	DatObjCopy_01 : DatObjCopy;
+	bCopyDataObj : BOOL;
+	TON_WarnDelay : TON;
+	TON_WritePMEM : TON; (* delay write permanent memory *)
+	ulPMPointer : UDINT; (* adress of actual checksum value *)
+	ulChecksum : UDINT; (* parameter checksum value *)
+	pm_len : UDINT; (* permanent value lenght *)
+	ulChecksumOld : UDINT; (* last vlaue of parameter checksum *)
+	ulChkValue : UDINT; (* actual value of parameter pointer *)
+	pm_id : UDINT; (* permanent value identifier *)
+	pm_p : UDINT; (* permanent value pointer *)
+	DatObjInfo_META : DatObjInfo;
+	DatObjRead_META : DatObjRead;
+	szMetaDataRaw : STRING[2000];
+	szMetaData : ARRAY[0..4] OF STRING[35];
+	szMetaDataVis : ARRAY[0..3] OF STRING[35];
+	ssIndex : INT;
+	ssCount : INT;
+	ucMetaDataRaw : ARRAY[0..2000] OF USINT;
+	ssCount2 : INT;
+	szMetaDataFile : STRING[10];
+	szText1 : STRING[20];
+	pv_adr_IN_XX_tPB2MM : UDINT;
+	pv_lng : UDINT;
+	pv_lng_IN_XX_tPB2MM : UDINT;
+	pv_lng_OUT_XX_tPB2MM : UDINT;
+	szText2 : STRING[20];
+	pv_adr_OUT_XX_tXX2PB : UDINT;
+END_VAR
+VAR CONSTANT
+	ERR_NOERROR : UINT := 0;
+END_VAR
+VAR
+	usPMWriteCnt : UINT;
+	pm_Error : UDINT; (* permanent value error *) (* Deleted: pm : ParaMem_typ; permanent memory tags mathias, 22.8.11*)
+	fun_Error : UDINT := 0; (*state > 0 = function error*)
+	xLocalParaCheck : ParaCheckFUB; (*local function instance to check parameter values*)
+	TON_ParaSetupOk : TON;
+	bParaCheckSystemOk : BOOL;
+	iDebug_ParaOkChecked : UDINT;
+	bRestoreBackupDataObj : BOOL := FALSE;
+	bRestoreDataObjContent : BOOL := FALSE;
+	pm_id_backup : UDINT;
+	pm_p_Backup : UDINT;
+	DatObjCopy_02 : DatObjCopy;
+	bDeleteBackupDataObj : BOOL := FALSE; (*Command to delete backup data module file on purpose*)
+	bDebugPara : ARRAY[0..5] OF BOOL;
+	ssIndex2 : INT;
+	ssIndex3 : INT;
+	ssIndex4 : INT;
+	ssIndexVis : INT;
+	szText : STRING[40];
+	pv_adr_Para : UDINT;
+	szParaSnippet : ARRAY[0..5] OF STRING[150];
+	szParaIndex : STRING[10];
+	slValue : DINT;
+	iModuleDLD_ResetCount : INT;
+	bDownloadDetected : BOOL;
+	bFlagParaStructCopyWorking : BOOL; (*true, if cyclic para copying is active, 1 false cycle at every copy *)
+	bStoreInitParaInDataObj : BOOL := FALSE;
+	bTestflag : BOOL;
+	bReadOutMETA_Once : BOOL;
+	tParaCheck_iPvAdress : ARRAY[0..5] OF UDINT;
+	tParaCheck_iPvLengt : ARRAY[0..5] OF UDINT;
+	tParaCheck_rPvValue : ARRAY[0..5] OF REAL;
+	tParaCheck_rRangeMIN : ARRAY[0..5] OF REAL;
+	tParaCheck_rRangeMAX : ARRAY[0..5] OF REAL;
+	tParaCheck_szPvName : ARRAY[0..5] OF STRING[35];
+	ssFormatDetected : INT;
+	szMetaDataPart : STRING[150];
+	szFullTaskName : STRING[35];
+	szFullMetaModuleName : STRING[35];
+	debugLen : INT;
+	debugSize : INT := 0;
+	strcat_adr1 : UDINT;
+	strcat_adr2 : UDINT;
+	ssIndexTN : INT;
+	bAlternate : BOOL;
+	n : INT;
+	iAlternateChecksum : DINT;
+	iAlternateChecksumOld : DINT;
+	ulDebugChkValue : ARRAY[0..999] OF UDINT;
+	Adr1 : UDINT;
+	Adr2 : UDINT;
+	usPMWriteCntStepsize : UINT := 1; (*different step sizes to help debug*)
+	usPMWriteCntXOR : UINT;
+	usPMWriteCntAltSum : UINT;
+	ulAdrPM : UDINT;
+	usChkValuePM : USINT;
+	ulAdrPara : UDINT;
+	ulPara_len : UDINT;
+	usChkValuePara : USINT;
+	iDebugCountPMDifferences : DINT := 0;
+	bEngineRunDetected : BOOL; (*detection status bit autocommand 100 /101  for engine run state*)
+	ucMetaDataDebugInfoLine : ARRAY[0..24] OF STRING[80];
+	ssIndexMand : INT := 0;
+	szMetaDataMand : STRING[35];
+	iMyErrorInfo_Autoreset : DINT; (*internal autoreset counter*)
+	ssIndex_Version : INT; (*internal*)
+	ssIndex_BU : INT; (*internal*)
+	ssIndex_BU2 : INT; (*internal*)
+END_VAR

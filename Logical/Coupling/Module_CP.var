@@ -1,0 +1,99 @@
+VAR
+	iP_Set_Bus : INT; (*Power setpoint from Bus [%]*)
+	rP_Set_OPC : REAL; (*Power setpoint from OPC [%]*)
+	EMPF1 : BOOL; (*Release receive coupling 1*)
+	EMPF2 : BOOL; (*Release receive coupling 2*)
+	xTON_CLOCK_2 : TON; (*Generate BUSALIVE signal*)
+	xTON_CLOCK_1 : TON; (*Generate BUSALIVE signal*)
+	bOMSS_Scav : BOOL; (*engine operation mode*)
+	bOMSS_Test : BOOL; (*engine operation mode*)
+	bOMSS_MAT : BOOL; (*engine operation mode*)
+	bOMSS_Aut : BOOL; (*engine operation mode*)
+	bOMSS_Man : BOOL; (*engine operation mode*)
+	IN_CP : IN_CP_Struct;
+	OUT_CP : OUT_CP_Struct;
+	MM2VIS : MM2VIS_Struct;
+	VIS2MM : VIS2MM_Struct;
+	Para : PARA_CP_Struct; (*Module Parameter-Interface*)
+	ParaFactoryDefault : PARA_CP_Struct := (0); (*First Init Values*)
+	pm : PARA_CP_Struct; (*Stored parameter structure *)
+	bGnlTrip : BOOL := FALSE;
+	bGnlTrip1 : BOOL := FALSE;
+	bGnlTrip2 : BOOL := FALSE;
+	bGnlTrip3 : BOOL := FALSE;
+	bGnlWarning : BOOL := FALSE;
+	bBus_failure : BOOL; (*old variable: ST_BUS*)
+	OutDataSIM : ARRAY[0..MAX_OUT_DATA_ARRAY] OF INT; (*output data to master for WinMOD simulation*)
+	OutDataSW : ARRAY[0..MAX_OUT_DATA_ARRAY] OF INT; (*Register convention, start with [0]*)
+	OutData : ARRAY[0..MAX_OUT_DATA_ARRAY] OF INT; (*output data to master*)
+	OutData_DPold : ARRAY[0..PROFIBUS_MAX_SEND_ARRAY] OF INT; (*output data for profibus DP old style*)
+	InData1PN : ARRAY[0..MAX_IN_DATA_ARRAY] OF INT; (*input data from master coupling 1 for PROFINET*)
+	InData2PN : ARRAY[0..MAX_IN_DATA_ARRAY] OF INT; (*input data from master coupling 1 for PROFINET*)
+	InData1 : ARRAY[0..MAX_IN_DATA_ARRAY] OF INT; (*input data from master coupling 1*)
+	InData2 : ARRAY[0..MAX_IN_DATA_ARRAY] OF INT; (*input data from master coupling 2*)
+	InData1SIM : ARRAY[0..MAX_IN_DATA_ARRAY] OF INT; (*input data from master coupling for WinMOD simulation*)
+	InData1SW : ARRAY[0..MAX_IN_DATA_ARRAY] OF INT; (*Bus test*)
+	ucTeiler : USINT; (* actual splitter of TK4 *)
+	CP1 : BOOL := 0; (* Koppelprozessor *)
+	CP2 : BOOL := 0; (* Koppelprozessor *)
+	RK1 : BOOL := 0; (* Rechnerkopplung *)
+	RK2 : BOOL := 0; (* Rechnerkopplung *)
+	usStatus_CP1_CP2 : UINT; (* status coupling process *)
+	usStatus_RK1_RK2 : UINT; (* status communication *)
+	bKopl1EmpfFrg : BOOL; (* enable receive data coupling 1 *)
+	bKopl2EmpfFrg : BOOL; (* enable receive data coupling 2 *)
+END_VAR
+VAR CONSTANT
+	comNO_LINK : INT := 0; (* no communication *)
+	comMODBUS_RTU : INT := 2; (* communication modbus RTU *)
+	comMODBUS_TCP : INT := 3; (* communication modbus TCP *)
+	comPROFIBUS_DP : INT := 4; (* communication profibus DP *)
+	comPROFIBUS_DPold : INT := 5; (* communication profibus DP old data register style *)
+	comPROFINET : INT := 6; (* communication profinet *)
+	MAX_OUT_DATA : UINT := 600; (* max data (INT) to send *)
+	MAX_OUT_DATA_ARRAY : UINT := MAX_OUT_DATA - 1; (* max array lenght data (INT) to send *)
+	MAX_IN_DATA_ARRAY_BOOL : UINT := 16 * 16; (* max array lenght data (BOOL) *)
+	MAX_OUT_DATA_ARRAY_BOOL : UINT := 20 * 16; (* max array lenght data (BOOL) *)
+	MAX_IN_DATA : UINT := 32; (* max data (INT) to receive *)
+	MAX_IN_DATA_ARRAY : UINT := MAX_IN_DATA - 1; (* max array lenght data (INT) to receive *)
+	MAX_IN_DATA_ARRAY_BUSTEST : UINT := MAX_IN_DATA; (* max array lenght data (INT) to receive *)
+	MODBUS_RTU_MAX_SEND : UINT := 192; (* max send register modbus RTU *)
+	MODBUS_RTU_MAX_RECV : UINT := MAX_IN_DATA; (* max receive register modubs RTU *)
+	MODBUS_RTU_MAX_ARRAY : UINT := MODBUS_RTU_MAX_SEND + MODBUS_RTU_MAX_RECV - 1; (* max array lenght send and receive register modubs RTU *)
+	MODBUS_TCP_MAX_SEND : UINT := 192; (* max send register modbus TCP *)
+	MODBUS_TCP_MAX_RECV : UINT := MAX_IN_DATA; (* max receive register modubs TCP *)
+	MODBUS_TCP_MAX_ARRAY : UINT := MODBUS_TCP_MAX_SEND + MODBUS_TCP_MAX_RECV + 392 - 1; (* max array lenght send and receive register modubs TCP *)
+	PROFIBUS_MAX_SEND : UINT := 120; (* max send data words profibus *)
+	PROFIBUS_MAX_RECV : UINT := MAX_IN_DATA; (* max receive data words profibus *)
+	PROFIBUS_MAX_SEND_ARRAY : UINT := PROFIBUS_MAX_SEND - 1; (* max array lenght send data words profibus *)
+	PROFINET_MAX_RECV : UINT := MAX_IN_DATA; (* max receive data words profibus *)
+END_VAR
+VAR
+	bNoInitDetected : BOOL := FALSE; (*allways true, except 1cycle on init up*)
+END_VAR
+VAR CONSTANT
+	SLAVE2_COMM_ERR : INT := 4; (* communication profibus DP slave 2*)
+	SLAVE2_COMM_OK : INT := 3; (* communication profibus DP slave 2*)
+	START_SLAVE2_COMM : INT := 2; (* communication profibus DP slave 2*)
+	SET_SLAVE2_ADDR : INT := 1; (* communication profibus DP slave 2*)
+	SLAVE1_COMM_ERR : INT := 4; (* communication profibus DP slave 1*)
+	SLAVE1_COMM_OK : INT := 3; (* communication profibus DP slave 1*)
+	START_SLAVE1_COMM : INT := 2; (* communication profibus DP slave 1*)
+	SET_SLAVE1_ADDR : INT := 1; (* communication profibus DP slave 1*)
+	SLAVE1_PN_COMM_ERR : INT := 4; (* communication profinet slave 1*)
+	SLAVE1_PN_COMM_OK : INT := 3; (* communication profinetslave 1*)
+	START_PN_SLAVE1_COMM : INT := 2; (* communication profinet slave 1*)
+	SET_PN_SLAVE1_ADDR : INT := 1; (* communication profinet slave 1*)
+END_VAR
+VAR
+	MBtcpInitOK : ARRAY[0..1] OF BOOL; (* initialising Modbus TCP O.K. *)
+	fMBTSlave_Var : fMBTSlave; (* FUB Modbus TCP slave server *)
+END_VAR
+VAR CONSTANT
+	MODBUS_RTU_MASTER_MAX_ARRAY : UINT := 400; (*Max data (INT) to send/receive *)
+END_VAR
+VAR
+	MBM_SCR_Register_swapped : ARRAY[0..MODBUS_RTU_MASTER_MAX_ARRAY] OF UINT; (*Data array Modbus RTU Master SCR*)
+	MBM_SCR_Register_swapped73 : ARRAY[0..MODBUS_RTU_MASTER_MAX_ARRAY] OF INT; (*Data array Modbus RTU Master SCR*)
+	MBM_SCR_Register : ARRAY[0..MODBUS_RTU_MASTER_MAX_ARRAY] OF UINT; (*Data array Modbus RTU Master SCR for UINT registers 65 - 72*)
+END_VAR

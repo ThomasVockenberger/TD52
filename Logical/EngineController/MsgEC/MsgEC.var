@@ -1,0 +1,188 @@
+VAR
+	iAdrMM2AmmBase : UDINT;
+	iAdrAmmBase2MM : UDINT;
+	xMsg1080 : Msg;
+	xMsg3217 : Msg;
+	xMsg1044 : Msg;
+	xMsg1049 : Msg;
+	xMsg1153 : Msg;
+	xMsg3542 : Msg;
+	xMsg2061 : Msg;
+	xMsg2062 : Msg;
+	xMsg2063 : Msg;
+	xMsg2064 : Msg;
+	xMsg2065 : Msg;
+	xMsg2066 : Msg;
+	xMsg2067 : Msg;
+	xMsg2068 : Msg;
+	xMsg2069 : Msg;
+	xMsg2070 : Msg;
+	xMsg2071 : Msg;
+	xMsg2072 : Msg;
+	xMsg2073 : Msg;
+	xMsg2074 : Msg;
+	xMsg2075 : Msg;
+	xMsg2076 : Msg;
+	xMsg2077 : Msg;
+	xMsg2078 : Msg;
+	xMsg2079 : Msg;
+	xMsg2080 : Msg;
+	xMsg2339 : Msg;
+	xMsg2365 : Msg;
+	xMsg3408 : Msg;
+	xMsg3409 : Msg;
+	xTON_FG_MSATM : TON;
+	FG_MSATM : BOOL;
+	xMsg1047 : Msg;
+	xMsg3212 : Msg;
+	xMsg3099 : Msg;
+	xMsg2084 : Msg;
+	xMsg1192 : Msg;
+	xMsg2514 : Msg;
+	xMsg2515 : Msg;
+	xMsg2516 : Msg;
+	xMsg2517 : Msg;
+	xMsg2522 : Msg;
+	xMsg2523 : Msg;
+	xMsg3348 : Msg;
+	xMsg3583 : Msg;
+	xMsg3584 : Msg;
+	xMsg3529 : Msg;
+	xMsg3585 : Msg;
+	xMsg3564 : Msg;
+	xMsg3371 : Msg;
+	xMsg3372 : Msg;
+	xMsg3373 : Msg;
+	xMsg3374 : Msg;
+	bRPSA7_624 : BOOL;
+	xTOF_1080_rel : TOF;
+	xMsg3586 : Msg;
+	FG_ABMW : BOOL; (*Freigabe Abweichung Mittelwert*)
+	ton_ABMW : TON;
+	xMsg2294 : Msg;
+	xMsg2283 : Msg;
+	xMsg9216 : Msg;
+	xMsg2287 : Msg;
+	xMsg2290 : Msg;
+	xMsg2262 : Msg;
+	xMsg2282 : Msg;
+	xMsg2274 : Msg;
+	xMsg2588 : Msg;
+	xMsg2577 : Msg;
+	xMsg2583 : Msg;
+	b2880 : BOOL;
+	b2881 : BOOL;
+	i : USINT;
+	iNum_b2880 : USINT;
+	iNum_b2881 : USINT;
+	xMsg3382 : Msg;
+	xMsg2518 : Msg;
+	xMsg2519 : Msg;
+	xMsg2520 : Msg;
+	xMsg2521 : Msg;
+	xMsg2562 : Msg;
+	xMsg3555 : Msg;
+	xMsg3556 : Msg;
+	xMsg3557 : Msg;
+	xMsg3558 : Msg;
+	xMsg2470 : Msg;
+	xMsg2471 : Msg;
+	xMsg2487 : Msg; (*warning for recommend leanox adjustment*)
+	xMsg2488 : Msg; (*warning for mandatory leanox adjustment*)
+	xMsg9246 : Msg;
+	xMsg2328 : Msg;
+	xMsg2329 : Msg;
+	xMsg9247 : Msg;
+	xMsg9248 : Msg;
+	xMsg9253 : Msg; (*warning for Leanox 2 saturation *)
+	xMsg9288 : Msg; (* warning: measuring signal failure, temperature direct air injection *)
+	xMsg9289 : Msg; (* warning: measuring signal failure, pressure before direct air injection shut off valve  *)
+	xMsg9290 : Msg; (* warning: measuring signal failure, pressure before direct air injection control valve bank A *)
+	xMsg9291 : Msg; (* warning: measuring signal failure, pressure before direct air injection control valve bank B *)
+	xMsg9292 : Msg; (* warning: direct air injection shut off valve failure at closing*)
+	xMsg9293 : Msg; (* warning: direct air injection shut off valve failure at opening*)
+	xMsg9294 : Msg; (* warning: direct air injection circuit breaker tripped  *)
+	xMsg9295 : Msg; (* warning: direct air injection tank pressure low*)
+	xMsg9296 : Msg; (* warning: direct air injection control valve bank A failure *)
+	xMsg9297 : Msg; (* warning: direct air injection control valve bank B failure *)
+	xMsg9298 : Msg; (* warning: direct air injection pressure before shut off valve high *)
+	xMsg9299 : Msg; (* warning: direct air injection failure *)
+	xMsg9039 : Msg; (* warning: direct air injection active*)
+	xMsg9040 : Msg; (* warning: direct air injection inactive*)
+	xMsg9312 : Msg; (* Generator frequency too low in mains parallel operation *)
+	xMsg9313 : Msg; (* Generator frequency too high in mains parallel operation *)
+	xMsg9329 : Msg; (* p2 sensor signal for GEN2 controller missing *)
+	xMsg2975 : Msg; (* Fast-Gas-Quality-Change-Function is running *)
+	xMsg9047 : Msg; (* operating message: target load reached *)
+	xMsg9349 : Msg; (* Grid Code FRT functionality contains wrong parameter *)
+	xMsg9053 : Msg; (* operating message: SCR inlet temperature controller active *)
+	xMsg9054 : Msg; (* operating message: SCR inlet temperature controller inactive *)
+	xMsg9055 : Msg; (* operating message: th. reactor start time reduction - operating cycle started *)
+	xMsg9056 : Msg; (* operating message: th. reactor start time reduction - operating cycle completed *)
+	xMsg9065 : Msg; (* operating message: Isolated operation - Grid status detection *)
+	xMsg9095 : Msg; (* operating message: GEN2 lambda offset stopped *)
+	xMsg2765 : Msg; (* warning: PI optimizer opening duration offset in limitation *)
+	xMsg3268 : Msg; (* operating message: PI optimizer opening duration offset in limitation *)
+	xMsg9373 : Msg; (* warning: PI-Optimization not allowed *)
+	xMsg9078 : Msg; (* operating message: PI-Optimization not allowed *)
+	xMsg2768 : Msg; (* gas humidity measuring signal failure *)
+	xMsg2880 : Msg;	(** B2880: Cylinder exhaust gas temperature positive deviation from average value *)
+	xMsg2881 : Msg;	(** B2881: Cylinder exhaust gas temperature negative deviation from average value *)
+	xMsg2970 : Msg;	(** B2970: Exhaust gas temperature inclination maximum at cylinder head *)
+	xMsg1293 : Msg;	(** B1293: Engine map automatically loaded *)
+	xMsg2814 : Msg;	(** B2814: Open durance Port Injection high *)
+	xMsg2874 : Msg;	(** B2874: Safety layer sensor failure *)
+	xMsg2802 : Msg;	(** B2802: Cylinder pressure sensor measuring signal failure *)
+	xMsg2808 : Msg;	(** B2808: Maximum positive deviation of average cylinder peak pressure *)
+	xMsg2825 : Msg;	(** B2825: Cylinder peak pressure high Warning *)
+	xMsg2826 : Msg;	(** B2826: Cylinder peak pressure high *)
+	xMsg2849 : Msg;	(** B2849: Misfiring failure *)
+	xMsg2145 : Msg;	(** B2145: Ignition point reduction PBC *)
+	xMsg2876 : Msg;	(** B2876: Misfire controller shutdown *)
+	xMsg2882 : Msg;	(** B2882: Balancer map deleted *)
+	xMsg2883 : Msg;	(** B2883: Balancer map saved *)
+	xMsg2960 : Msg;	(** B2960: Ignition point reduction by Cylinder Peak Pressure Integrator *)
+	xMsg2141 : Msg;	(** B2141: ignition point optimization *)
+	xMsg3238 : Msg;	(** B3238: Positive deviation of cylinder x from average high *)
+	xMsg3239 : Msg;	(** B3239: Negative deviation of cylinder x from average high *)
+	xMsg3247 : Msg;	(** B3247: TECJET step of gas volume high *)
+	xMsg3248 : Msg;	(** B3248: TECJET fuel gas volume high *)
+	xMsg3285 : Msg;	(** B3285: exh. gas temp. measuring signal failure *)
+	xMsg3295 : Msg;	(** B3295: operation message max. exhaust temperature *)
+	xMsg2831 : Msg;	(** B2831: Low Voltage Ride Through Event  --> bBM_GrC_Event *)
+	xMsg2832 : Msg;	(** B2832: Mains failure + Generator Pole slip -->  bBM_PoleSlip *)
+	xMsg2833 : Msg;	(** B2833: Mains failure + dynamic rotor angle maximum --> bBM_disconnect_dynAng*)
+	xMsg2834 : Msg;	(** B2834: Mains failure + static rotor angle maximum -->  bBM_disconnect_staticAng*)
+	xMsg2835 : Msg;	(** B2835: Mains failure + leading power factor operation -->bBM_disconnect_CapMode*)
+	xMsg2836 : Msg;	(** B2836: Mains failure maintenance request, reserve *)
+	xMsg2837 : Msg;	(** B2837: Mains failure + dynamic rotor angle minimum --> bBM_disconnect_dynAng_Min*)
+	xMsg2838 : Msg;	(** B2838: Mains failure + electric power to low --> bBM_disconnect_Power*)
+	xMsg2839 : Msg;	(** B2839: Mains failure + U(t)< *)
+	xMsg9068 : Msg;	(** B9068: Fault ride trougth event  --> bBM_FRT_Event *)
+	xMsg9071 : Msg;	(** B9071: Low Voltage Ride Through Event simulated --> bBM_GrC_Event_Sim *)
+	xMsg2840 : Msg;	(** B2840: Spare *)
+	xMsg2841 : Msg;	(** B2841: Emergency shutdown on gas valves *)
+	xMsg2846 : Msg;	(** B2846: Fast power reduction due to auto-ignition *)
+	xMsg2852 : Msg;	(** B2852: Turbocharger surge *)
+	xMsg2165 : Msg;	(** B2165: Power limitation by air humidity - low limit *)(* Humidity Package *)
+	xMsg2166 : Msg;	(** B2166: Air humidity charge temperature offset active *)(* Humidity Package *)
+	xMsg2894 : Msg;	(** B2894: Engine map is missing *)
+	xMsg1294 : Msg;	(** B1294: performing WG check *)
+	xMsg1299 : Msg;	(** B1299: optimizer map changed *)
+	xMsg2187 : Msg;	(** B2187: Commissioning mode on *)
+	xMsg2188 : Msg;	(** B2188: Commissioning mode off *)
+	xMsg2897 : Msg;	(** B2897: Boost pressure out of range*)
+	xMsg2929 : Msg;	(** B2929: Cylinder IMEP deviation from average value *)
+	xMsg2930 : Msg;	(** B2930: PI optimization required *)
+	xMsg2937 : Msg;	(* B2937 LEANOX new adjusted *)
+	xMsg2938 : Msg;	(* B2938 Combustion chamber cleaning performed *)
+	xMsg2986 : Msg;	(* B2986 Leanox 2 Active - operator message *)
+	xMsg2987 : Msg;	(* B2987 Leanox 2 Not Active - operator message *)
+	xMsg9388 : Msg; (* warning: combustion anomaly detected *)
+	xMsg9392 : Msg; (*warning: CAN wastegate bank A Actuator Failure *)
+	xMsg9393 : Msg; (*warning: CAN wastegate bank B Actuator Failure *)
+	xMsg9394 : Msg; (*warning: CAN wastegate bank A System Warnings *)
+	xMsg9395 : Msg; (*warning: CAN wastegate bank B System Warnings *)
+	xMsg2380 : Msg; (*alarm: CAN wastegate bank A CAN Communication Error *)
+	xMsg2381 : Msg; (*alarm: CAN wastegate bank B CAN Communication Error *)
+END_VAR

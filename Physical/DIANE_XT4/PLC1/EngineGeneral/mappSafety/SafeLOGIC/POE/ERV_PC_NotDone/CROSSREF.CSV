@@ -1,0 +1,19 @@
+bERV_Lou_PC_CL,POE\ERV_PC_NotDone\Variables.VBB,0,,5,0,,,BOOL,,,VAR_INPUT,NOT USED,,CPU IN: Engine room ventilation - Plausibility check for cl
+bERV_Lou_PC_OP,POE\ERV_PC_NotDone\Variables.VBB,0,,4,0,,,BOOL,,,VAR_INPUT,NOT USED,,CPU IN: Engine room ventilation - Plausibility check for op
+PARA_Cust_Active,POE\ERV_PC_NotDone\Variables.VBB,0,,2,0,,,SAFEBOOL,,,VAR_INPUT,NOT USED,,PARA 15188: Customer room ventilation - Monitoring active
+sbF_TRIG_SS,POE\ERV_PC_NotDone\Variables.VBB,0,,17,0,,,SAFEBOOL,,,VAR,NOT USED,,Falling edge of engine standstill
+sbN_Standstill,POE\ERV_PC_NotDone\Variables.VBB,0,,3,0,,,SAFEBOOL,,,VAR_INPUT,NOT USED,,Actual engine speed <  80rpm
+sbNr_PC_ND_TakeOver,POE\ERV_PC_NotDone\Variables.VBB,0,,8,0,,,SAFEBOOL,,,VAR_INPUT,NOT USED,,Take over number of plausibility checks not performed - Sto
+sbPC_Done,POE\ERV_PC_NotDone\Variables.VBB,0,,18,0,,,SAFEBOOL,,,VAR,NOT USED,,Plausibility check was done
+sbStandstill_1h,POE\ERV_PC_NotDone\Variables.VBB,0,,19,0,,,SAFEBOOL,,,VAR,NOT USED,,Engine standstill longer than one hour
+siNr_PC_NotDone,POE\ERV_PC_NotDone\Variables.VBB,0,,20,0,,,SAFEDINT,,,VAR_OUTPUT,NOT USED,,Number of plausibility checks not performed
+siNr_PC_NotDone_Save,POE\ERV_PC_NotDone\Variables.VBB,0,,6,0,,,SAFEDINT,,,VAR_INPUT,NOT USED,,Number of plausibility checks not performed - Last cycle
+siNr_PC_NotDone_Stored,POE\ERV_PC_NotDone\Variables.VBB,0,,7,0,,,SAFEDINT,,,VAR_INPUT,NOT USED,,Number of plausibility checks not performed - Stored value
+xF_TRIG_CL,POE\ERV_PC_NotDone\Variables.VBB,0,,14,0,,,,,,VAR,NOT USED,,FuB
+xF_TRIG_SS,POE\ERV_PC_NotDone\Variables.VBB,0,,13,0,,,,,,VAR,NOT USED,,FuB
+xR_TRIG_OP,POE\ERV_PC_NotDone\Variables.VBB,0,,12,0,,,,,,VAR,NOT USED,,FuB
+xRS_CL,POE\ERV_PC_NotDone\Variables.VBB,0,,16,0,,,,,,VAR,NOT USED,,FuB
+xRS_OP,POE\ERV_PC_NotDone\Variables.VBB,0,,15,0,,,,,,VAR,NOT USED,,FuB
+xTON_1h,POE\ERV_PC_NotDone\Variables.VBB,0,,9,0,,,,,,VAR,NOT USED,,FuB
+xTON_CL,POE\ERV_PC_NotDone\Variables.VBB,0,,11,0,,,,,,VAR,NOT USED,,FuB
+xTON_OP,POE\ERV_PC_NotDone\Variables.VBB,0,,10,0,,,,,,VAR,NOT USED,,FuB

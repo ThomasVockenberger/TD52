@@ -1,0 +1,127 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: pi_ctr
+ * File: pi_ctr.var
+ * Author: WaldharM
+ * Created: February 13, 2009
+ ********************************************************************
+ * Local variables of program pi_ctr
+ ********************************************************************)
+VAR
+	rQg_set_B : REAL; (*volumetric flow rate bank B*)
+	rQg_set_A : REAL; (*volumetric flow rate bank A*)
+	bAmmSeqClkP : BOOL; (*trigger for AMM_Sequence*)
+	rHub : REAL; (*stroke [dm]*)
+	rSpezGasd : REAL; (*specific gas density*)
+	rEDKappaME : REAL; (*ratio of specific heat*)
+	rKappaDKappaPE : REAL; (*ratio of specific heat*)
+	rKappaDKappaME : REAL; (*ratio of specific heat*)
+	rZDKappa : REAL; (*ratio of specific heat*)
+	rKappaPEDKappa : REAL; (*ratio of specific heat*)
+	rKappaBruch : REAL; (*ratio of specific heat*)
+	rZDKappaPE : REAL; (*ratio of specific heat*)
+	rTventil_B : REAL; (*opening time bank B [sec.]*)
+	rCAv_B : REAL; (*opening time bank B [°CA]*)
+	rTventil_A : REAL; (*opening time bank A [sec.]*)
+	rCAv_A : REAL; (*opening time bank A [°CA] *)
+	rQg_Zaehler_B : REAL; (*numerator bank B  (gas amount per cylinder)*)
+	rQg_Zaehler_A : REAL; (*numerator bank A  (gas amount per cylinder)*)
+	rQm_ventil : REAL; (*mass flow rate per second for the valve*)
+	rZM200 : REAL; (*intermediate memory*)
+	rZM206 : REAL; (*intermediate memory*)
+	rZM205 : REAL; (*intermediate memory*)
+	rZM202 : REAL; (*intermediate memory*)
+	rZM201 : REAL; (*intermediate memory*)
+	rZM204 : REAL; (*intermediate memory*)
+	rQg_Nenner_B : REAL; (*denominator bank B (gas amount per cylinder)*)
+	rQg_Nenner_A : REAL; (*denominator bank A (gas amount per cylinder)*)
+	rBohr : REAL; (*bore diameter [dm]*)
+	ulUnivPos : ARRAY[0..24] OF UDINT;
+	TON_SecondTick : TON;
+	ucSAFINr : USINT;
+	bPIDuration_HIGH : ARRAY[0..24] OF BOOL;
+	RAMPE_Lambda : RAMPE_R;
+	rDurGradLimit : REAL;
+	rCAv_A_LastCycle : REAL;
+	rCAv_B_LastCycle : REAL;
+	rGrid_Offset : REAL;
+	PiDurMapIndex : INT;
+	ucPiDur_X1 : INT;
+	ucPiDur_X2 : INT;
+	rDp_Gasrail : REAL;
+	ucDp_GR_Y1 : INT;
+	ucDp_GR_Y2 : INT;
+	x1y1 : REAL;
+	x1y2 : REAL;
+	x2y1 : REAL;
+	x2y2 : REAL;
+	x1Wert : REAL;
+	x2Wert : REAL;
+	rCorr_PI_Dur : REAL;
+	rCA_PI_Timing : REAL;
+	rHubVolumen : REAL;
+	rQm_set_A : REAL;
+	rQm_set_B : REAL;
+	bPIDurationFix_Act : BOOL;
+	rCA_Dur_L : ARRAY[0..12] OF REAL;
+	rCA_Dur_H : ARRAY[0..12] OF REAL;
+	rCA_Dur_Fix : REAL;
+	LCRCByP_ZWert : LCRCurveByPoints;
+	r_ZWert_scal : REAL;
+	bPortInject_Rel : BOOL;
+	rPr_P2s_limit_LamMisf : REAL;
+	LCRCByP_LambdaRamp : LCRCurveByPoints;
+	tLambdaRampMap : ARRAY[0..9] OF lcrCurveByPoints_TabEntry_type;
+	iCyl : USINT;
+	TP_PI_Block : TP;
+	rTi_PI_Duration : REAL;
+	bLamLim : BOOL;
+	xTOF_LamLim : TOF := (0);
+	bPI_Block : ARRAY[0..24] OF BOOL;
+	xTON_GR_Scav : TON := (0);
+	bGR_Scav : BOOL;
+	xRAMPE_Pr_Signal : RAMPE_R;
+	rDurGradLimitIsland : REAL;
+	iTFilt_p2s_des : UINT := 50;
+	xFILTER_R_p2s_des : FILTER_R;
+	rPr_p2sSet_Limit4Fast_Signals : REAL := 0.2;
+	rPr_p2sSet_LamLimLoadAcc : REAL := 0.2; (* 0.55 *)
+	tiLambdaLoadAcc : TIME := T#1200ms;
+	rPr_p2sSet_LamLimLoadRej : REAL := 10;
+	tiLambdaLoadRej : TIME := T#600ms;
+	xTP_LoadAcc : TP;
+	xTP_LoadRej : TP;
+	xTON_MaxTime : TON := (0);
+	bLamDelta_run : BOOL;
+	tiMaxDuration : TIME := T#1500ms;
+	xTON_DeltaLam_Off : TON := (0);
+	bBlock_LamDelta : BOOL := 0;
+	rN_LimitSS : REAL := 15;
+	tiDelaySS : TIME := T#2s;
+	xTON_N_SS : TON;
+	ParaEC_rHCR_Max1 : REAL;
+	bGR_Scav_H : BOOL; (* activates gas rail scavanging for additional cylinders *)
+	iCA_Dur_Max : UINT; (* defines maximum opening duration of pi 10x°CA *)
+	xDTGetTime : DTGetTime;	(* Timer for engine standstill *)
+	DT_Eng_Stop : DATE_AND_TIME; (* Date and time when engine was stopped *)
+	rCA_GR_Scav : REAL;	(*Gas rail scavanging CA duration*)
+	rLambda_Min : REAL;	(*Lambda minimum*)
+	iNum_Cyl_Plausible : INT; (* amount of plausible cylinders for the Lambda PBC calculation  *)
+	rIHR_Sum : REAL; (* Sum of the integral heat release values for the mean value calculation *)
+	rPr_49bfTDC_Sum : REAL; (* Sum of the P49bfTDC values for the mean value calculation *)
+	rIHR_Mean : REAL; (* mean value of the integral heat release values for the mean value calculation *)
+	rPr_49bfTDC_Mean : REAL; (* mean value of the P49bfTDC values for the mean value calculation *)
+	xRMEDIAN24_P49 : RMEDIAN24; (* Median of the P49bfTDC for the plausibility check for the Lambda PBC calculation *)
+	xRMEDIAN24_IHR : RMEDIAN24; (* Median of the IHR for the plausibility check for the Lambda PBC calculation *)
+	rFAR_Lam_PBC : REAL; (* fuel to air ratio for the lambda PBC calculation*)
+	iIdx_Cyl : USINT; (* cylinder counter *)
+	rIHR_buf : ARRAY[0 .. 24] OF REAL; (* IHR buffer for median calculation *) 
+	iNum_IHR_buf : USINT; (* size of IHR buffer for median calculation *)
+	xLamCtrPBC : fLamCtrPBC; (* lambda controller for port injection *)
+	rLam_PBC_unfilt : REAL; (* unfiltered lambda calculated from in-cylinder data *)
+	xFILTER_Lam_LamCtrPBC : FILTER_R; (* filter for lambda controller PBC *) 
+	bLamCtrPBC_freeze : BOOL; (* freeze lambda controller PBC in case of bad lambda estimation *)
+	ru_LamCtrPBC_freeze : REAL; (* freezed output value for lambda controller PBC *)
+	xTOF_bLamCtrPBC_freeze : TOF; (* delay of lambda freeze bit *) 
+END_VAR

@@ -1,0 +1,39 @@
+VAR
+	bErr_Flow_OilSkid_DE_Lo : BOOL := FALSE; (*Internal WARNING: OilSkid oil flow to DE - low*)
+	bErr_Flow_OilSkid_NDE_Lo : BOOL := FALSE; (*Internal WARNING: OilSkid oil flow to NDE - low*)
+	bErr_OilSkid_NoVoltage : BOOL := FALSE; (*Internal WARNING: OilSkid NO Voltage*)
+	bOilSkid_Fan : BOOL := FALSE; (*Fan*)
+	bOilSkid_Heater : BOOL := FALSE; (*Heater*)
+	bPr_OilSkid_HP_DE_Ok : BOOL := FALSE; (*Oil pressure in high pressure circuit to DE bearing OK*)
+	bPr_OilSkid_HP_NDE_Ok : BOOL := FALSE; (*Oil pressure in high pressure circuit to NDE bearing OK*)
+	bPumpHP_DemEngOp : BOOL := FALSE; (*Demand high pressure pump for engine operation *)
+	bPumpHP_DemEngStop : BOOL := FALSE; (*Demand high pressure pump for engine stop*)
+	bPumpHP_DemService : BOOL := FALSE; (*Demand high pressure pump for service*)
+	bPumpHP_DemN2Ign : BOOL := FALSE; (*Demand high pressure pump for N2 or IgnSelfTest*)
+	bRelMon_Lev_Tank : BOOL := FALSE; (*Release monitoring OilSkid tank level*)
+	bRelMon_Pr_HP_DE : BOOL := FALSE; (*Release monitoring OilSkid oil pressure in high pressure circuit to DE bearing*)
+	bRelMon_Pr_HP_NDE : BOOL := FALSE; (*Release monitoring OilSkid oil pressure in high pressure circuit to NDE bearing*)
+	bRelMon_T_Supply : BOOL := FALSE; (*Release monitoring OilSkid supply temperature*)
+	bRelMon_T_Tank : BOOL := FALSE; (*Release monitoring OilSkid tank temperature*)
+	bRel_OilSkid_Pr : BOOL := FALSE; (*Release by oil pressure*)
+	bT_RelOilSkidPumpC : BOOL := FALSE; (*Release circ.pump by oil temperature*)
+	xGR_MINR_Lev_OilSkid_Tank : GR_MINR := (0);
+	xTOF_AMM_Flow_DE_Ms : TOF := (0);
+	xTOF_AMM_Flow_NDE_Ms : TOF := (0);
+	xTOF_AMM_Lev_Tank_Ms : TOF := (0);
+	xTOF_AMM_T_Supply_Ms : TOF := (0);
+	xTOF_AMM_T_Tank_Ms : TOF := (0);
+	xTOF_NoSpeed_30s : TOF := (0);
+	xTOF_Pr_HP_DE_Ms : TOF := (0);
+	xTOF_Pr_HP_NDE_Ms : TOF := (0);
+	xTOF_PumpHP : TOF := (0);
+	xTOF_PumpHP_Dem : TOF := (0);
+	xTOF_PumpHP_UPS : TOF := (0);
+	xTON_PressOK_2s : TON := (0);
+	xTON_PumpHP_5s : TON := (0);
+	xTON_PumpHP_DemOn : TON := (0);
+	xTON_PumpLP_10s : TON := (0);
+	xTOF_PrelubeDem : TOF;
+	xTON_FS : TON := (0);
+	xTON_PumpHP_Dem_5s : TON := (0);
+END_VAR

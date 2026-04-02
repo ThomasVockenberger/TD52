@@ -1,0 +1,24 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: safi_spd
+ * File: safi_spd.var
+ * Author: 105026877
+ * Created: July 14, 2015
+ ********************************************************************
+ * Local variables of program safi_spd
+ ********************************************************************)
+VAR
+	SafiSpeedSumm : UDINT;
+	ucCylIndex : USINT;
+	ucSpeedAvgCount : USINT;
+	usNoSpeedCount : UINT;
+	SAFISpeed : ARRAY[0..24] OF _tSAFISpeed;
+	LCCounter_0 : LCCounter;
+	slTest1 : DINT;
+	slTest2 : DINT;
+	ssInternalFactor : INT;
+	usHelpA : UINT := 100;
+	TOF_NetpM : TOF;
+	n_lastValOK : UINT;
+END_VAR

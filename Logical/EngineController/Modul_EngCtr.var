@@ -1,0 +1,548 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Package: Opstate_Pkg
+ * File: module_Opstate.typ
+ * Author: Mario Graus
+ * Created: October 19, 2011
+ ********************************************************************
+ * Data types of package Opstate_Pkg
+ ********************************************************************)
+VAR
+	IN_EC : IN_EngCtr_Struct;
+	OUT_EC : OUT_EngCtr_Struct;
+	ParaFactoryDefault : Para_Struct; (*First Init Values*)
+	Para : Para_Struct;
+	pm : Para_Struct;
+	Map : Map_Struct; (* Self learning Data*)
+	Cnt : Cnt_Struct; (* Self learning Data*)
+	Perm : Perm_Struct; (* Permanent Data*)
+	ParaEC : Gtyp_Struct;
+	MM2VIS : MM2VIS_Struct;
+	VIS2MM : VIS2MM_Struct;
+	bEC_Trace_Trigger : BOOL; (* Trigger PV for Traces *)
+	iTFilterTVref : UINT;
+	iSG_PBC_GlowRed : INT;
+	ucGS : USINT; (*Gas Sort (gasart)*)
+	xLX2 : fLX2;
+	xTrStRed : fTrStRed;
+	iCntEC : USINT; (* counter variable reuseable *)
+	bWG_CAN_A_Learn_On_Vis : BOOL := 0;	(*Learn On signal to VISU WG A*)
+	bWG_CAN_B_Learn_On_Vis : BOOL := 0;	(*Learn On signal to VISU WG B*)
+END_VAR
+(* IN_EngCtr *)
+VAR
+	xOpMode : OpMode;
+	xEngType : EngType;
+	rV_EngDis : REAL; (*Engine Displacement [m3]*)
+	rN_Eng : REAL; (*Engine Speed [1/min]*)
+	bNewEngCycle : BOOL; (*TRUE = new engine cycle trigger*)
+	bType6_Update : BOOL; (* Enables type 6 controls update*)
+	bSS_PFPDR : BOOL; (* Steady State for PFPDR *)
+	bSS_Opt : BOOL; (* Steady State for Optimizer*)
+	bSS_LamLim : BOOL; (* Steady State for Lambda Limit*)
+	bSS_WG : BOOL; (* Steady State for wastegate *)
+	rH_Amb : REAL; (* Sealevel [m] *)
+	rPr_Amb : REAL; (* Ambient pressure [bar] *)
+	bWasActivatedGen2Idle : BOOL := FALSE;
+	bIsActiveGen2Idle : BOOL := FALSE;
+	rVE_Eng : REAL; (* Volumetric Efficiency *) (* OldName: rLieferGMotor; Cycle: 2 *)
+	rLam_PI : REAL; (* lambda for port injection opening duration calculation *)
+	xGridStat : fGridStat;
+	rN_Set_Norm : REAL := 1.0; (*Speed setpoint normalized for Engine Controller*)
+END_VAR
+(* misf_ctr *)
+VAR
+	bTrip_Misf : BOOL; (* Trip: A1047 Misfiring failure *) (* OldName: AUSS_A; Cycle: 2 *)
+	bWarn_Misf : BOOL; (* Warning: W3217 Misfiring failure *)
+	bMisfBlink : BOOL;
+	iCnt_Misf : USINT;
+END_VAR
+(* IgnPoint *)
+VAR
+	rCA_IP_Set : REAL; (* actual ignition timing setpoint *) (* OldName: W_ZZP; Cycle: 2 *)
+	bSG_PBC_GlowRed : BOOL; (*Release FPR/SCO through PBC*) (* OldName: bReductionGlow_Pi; *)
+	bPBC_IPRed : BOOL; (*Betriebsmeldung ZZP-Reduktion Gluehzuenden / Pmax*) (* OldName: bZZPRed_DMR; *)
+	iPBC_IPRed : USINT; (*Betriebsmeldung ZZP-Reduktion Gluehzuenden / Pmax*) (* OldName: ucDMRZZPRed; *)
+	iCyl_IP_Act_Min : USINT; (*Nummer vom Zylinder mit kleinsten ZZP*)
+	bTrStRed_Running : BOOL; (* TrStRed function running status *)
+	bTrStRed_hiEGT_dis : BOOL; (* high avg.EGT pw.red. disable / timer extension for high cyl.max.EGT alarm by TrStRed function *)
+	bTrStRed_SteadyState_Loss_LX2 : BOOL; (* Leanox plus steady state loss by TrStRed function *)
+	bMsg_TrStRed_Start : BOOL; (* TrStRed function cycle started - operator message *)
+	bMsg_TrStRed_Complete : BOOL; (* TrStRed function cycle completed - operator message *)
+	rCA_IPOffs_SCRInTemp : REAL;
+END_VAR
+(* dyn_GR *)
+VAR
+	bBM_GrC_Event : BOOL; (* Low Voltage Ride Through Event *)
+	bBM_PoleSlip : BOOL; (* Mains failure + Generator Pole slip *)
+	bBM_Disc_dynAng : BOOL; (* Mains failure + dynamic rotor angle maximum *)
+	bBM_Disc_staticAng : BOOL; (* Mains failure + static rotor angle maximum*)
+	bBM_Disc_CapMode : BOOL; (* Mains failure + leading power factor operation *)
+	bBM_Disc_dynAng_Min : BOOL; (* Mains failure + dynamic rotor angle minimum *)
+	bBM_Disc_Power : BOOL; (* Mains failure + electric power to low *)
+	bBM_FRT_Event : BOOL; (* Fault Ride Through Event in island operation *)
+	bBM_PoleSlip_EPS : BOOL; (* Generator Pole slip in island operation *)
+	bBM_GrC_Event_Sim : BOOL; (* Low Voltage Ride Through Event simulated *)
+	bGC_LeanoxErr_AUS : BOOL := FALSE; (*TRUE = Stoerung A1080 deaktiviert ueber GCEvent*)
+	iMissfCyl_GrC : UDINT; (* 0 *) (* OldName: MissfCyl_GC; Cycle:2; *)
+	bGrC_PowerFIX_HVRT : BOOL; (* TRUE = Leistungsfixierung im eng_ctr aktiv (Zeit laeuft) --> HVRT Event*) (* OldName: bGC_PowerFIX; Cycle:2; *)
+	bGrC_PowerFIX : BOOL; (* TRUE = Leistungsfixierung im eng_ctr aktiv (Zeit laeuft) --> LVRT Event*) (* OldName: bGC_PowerFIX; Cycle:2; *)
+	bGC_maintenance_request : BOOL; (* Mains failure maintenance request *) (* OldName: bGC_maintenance_request ; Cycle:2; *)
+	bGrC_TCPumpAkt : BOOL; (* TRUE=Pumperkennung aus dyn. GC aktiv fuer gas_flow *) (* OldName: bGC_TCPumpAkt; Cycle:2; *)
+	bGrC_LambAdabtAKT : BOOL; (* TURE = Lambdaadaption from dyn. GridCode aktiv *) (* OldName: bGC_LambdaAdabtAKT; Cycle:2; *)
+	bVoltageLow_cust_OP_MSG : BOOL;
+	bGrC_FixActuators : BOOL;
+	rPos_WG_GrC : REAL;
+	rPos_CBV_GrC : REAL;
+	bIgnOffTestMode : BOOL := FALSE; (*TRUE = Zuendung EIN/AUS nach Muster*)
+	bIGTLatePhase2ON : BOOL; (*ZZP auf spaet stellen in Phase 2 JA/NEIN*)
+	bIGTLatePhase2 : BOOL; (*Befehl an ignpoint Task - ZZP auf spaet stellen*)
+	rCA_Ign_Act_late_GC : REAL; (*[deg CA] spaeter ZZP fuer Phase 2 von IGNTestMode (GridCode)*)
+	bFreeze_GEN2 : BOOL;
+	rPos_CBV_Freeze : REAL;
+	rPos_TV_Freeze : REAL;
+	rPos_WG_Freeze : REAL;
+	rGrid_OffsetFactor : REAL; (* PI-Duration offset from dynamic gridcode *)
+	rGasflow_Factor_GrC : REAL; (* Gasflow factor from dynamic gridcode *)
+	bGrC_GCB_DCON_FRT : BOOL; (* Open signal to GCB due to pole slip *)
+	bGrC_GCB_DCON_FRT_EPS : BOOL; (* Open signal to GCB due to pole slip in island operation *)
+	bLeanox_Man_old_FRT : BOOL; (* LEANOX controller status before FRT event *)
+END_VAR
+(* GR_GCB_cust *)
+VAR
+	bF_UnderMp_Lo : BOOL; (* W9312: Generator frequency too low in mains parallel operation *)
+	bF_OverMp_Hi : BOOL; (* W9313: Generator frequency too high in mains parallel operation *)
+	iTFilt_N_GR : UINT := 2000;
+	rN_GR_Filt : REAL; (* Filtered engine speed for LEANOX speed compensation *)
+	rF_GR_Filt : REAL; (* Filtered engine frequency for ITP reduction *)
+END_VAR
+(* GAS FLOW *)
+VAR
+	rP_Rot : REAL; (*Rotationsleistung in [kW]*)
+	rLam_Trans_Corr : REAL; (*transient Lambda correction*)
+	TJ_GASO : BOOL;
+	TJ_GASO_B : BOOL;
+	ucTJ_GASO : USINT;
+	TJ_GASM : BOOL;
+	TJ_GASM_B : BOOL;
+	ucTJ_GASM : USINT;
+	rFlow_TV_x : REAL; (*LIVC actual Volumeflow for TV Controller*)
+	rFlow_TV_w : REAL; (*LIVC setpoint Volumeflow for TV Controller*)
+	rFlow_CBV_x : REAL; (*LIVC actual Volumeflow for CBV Controller*)
+	rFlow_CBV_w : REAL; (*LIVC setpoint Volumeflow for CBV Controller*)
+	bBM2852_PumpPuls : BOOL; (*B2852 - Turbolader Pumpen*)
+	rLam_TJ_Set : REAL; (* Lambda for TecJet *)
+	rPr_P2s_df : REAL; (*P2s Digital gefiltert in [bar]*)
+	rPr_P2s_df_TJ : REAL; (*P2s Digital gefiltert in [bar]*)
+	rCBV_CDS_Speed_D_Offset : REAL; (*T6 GEN1 CBV derivative gain scheduling*)
+	rTV_CDS_Speed_D_Offset : REAL; (*T6 GEN1 TV derivative gain scheduling*)
+END_VAR
+(* LEANOX *)
+VAR
+	rP_Act_l : REAL;
+	rPr_Leanox_Set : REAL; (* Setpoint boost pressure *) (* Oldname: pl_soll; Cycle: 2*)
+	rLam_Leanox_Set : REAL; (* Setpoint lambda *) (* Oldname: OUT_EC.rLam_Eng_LL_Set; Cycle: 2*)
+	RPSW3 : BOOL; (*Warning: LEANOX algorithm failure*)
+	RPSA7 : BOOL;
+	rPr_CH_PFPDR_Calc : REAL; (* Boost pressure offset calculated for PFPDR*)
+	rNum_ConvLamtoP2s : REAL := 2; (* Conversion rate from lambda to boost pressure for PFPDR*)
+	rPr_CH_PFPDR_Offs : REAL; (* Boost pressure offset from PFPDR to Gen2 controller*)
+	rCorr_LX_GR : REAL; (* Speed compensation factor for LEANOX *)
+	rPr_Leanox_Offs_H2 : REAL; (* Boost pressure offset H2 content [bar] *)
+END_VAR
+(* eng_ctr *)
+VAR
+	rPos_TV_u : REAL; (*Regler Ausgang ohne skalierung*)
+	iMisfCyl_OverSpeed : UDINT; (*ACHTUNG hier braucht es noch Klaerung*)
+	bLR_IGN_Retard : BOOL; (*retard ignition timing point to react on a load rejection by the GCB*)
+	pm_stat_var_LR : ARRAY[0..100] OF tStat_VAR_LR := [101(0)]; (*statistic structure to save the speed gradient values at engine shut down with time stamps*)
+	pm_stat_var : ARRAY[0..100] OF tStat_VAR := [101((0))]; (*statistic structure to save the speed gradient values at engine shut down with time stamps*)
+	iCounter_stat_var_LR : INT := 0;
+	iCounter_stat_var : INT := 0; (*counter and index variable for statistic structure for the speed gradient values*)
+	rN_LR_IGN_Retard_HOLD : REAL := 1.1; (*Speed threshold to keep ITP retard during LR [p.u.]*)
+	rTi_LR_GasStop_largeRej : REAL := 0.4; (*Duration of gas-stop for big load rejections [s]*)
+	rTi_LR_GasStop_smallRej : REAL := 0.1; (*Duration of gas-stop for small load rejections [s]*)
+END_VAR
+(* Msg EC *)
+VAR
+	bGnlTrip : BOOL;
+	bGnlTrip1 : BOOL;
+	bGnlTrip2 : BOOL;
+	bGnlTrip3 : BOOL;
+	bGnlWarning : BOOL;
+	AmmSeq_PiPosAbw : AmmSequence; (* Trip: W2470, OM: B2929 *) (* Oldname: AmmSeq_PiPosAbw *)
+END_VAR
+(* gen_EC_T2 *)
+VAR
+	bAct_Mon_Release : BOOL; (*Throttle valve failure monitoring release*)
+	bAct_Mon_Rel_WG : BOOL; (*Release monitoring for wastegate actuator*)
+	tDataRec_EEPROM : ARRAY[0..7] OF BYTE := [8(0)]; (*CAN wastegate read data A - 8 bytes*)
+	tDataRec_EEPROM_Info : ARRAY[0..7] OF BYTE := [8(0)]; (*CAN wastegate read data A - 8 bytes*)
+	tCAN_WG_ADDR_A : BYTE := 0; (*CAN wastegate A source address*)
+	tCAN_WG_ADDR_B : BYTE := 0; (*CAN wastegate B source address*)
+	tNewADDR : BYTE := 0; (*CAN wastegate new address to configure EEPROM*)
+	tWG_CAN_B_ActSrcAdd : BYTE := 0; (*CAN wastegate actuator B source address*)
+	tWG_CAN_A_ActSrcAdd : BYTE := 0; (*CAN wastegate actuator A source address*)
+END_VAR
+(* parEC *)
+VAR
+	bNoInitDetected : BOOL := FALSE; (*allways true, except 1cycle on init up*)
+END_VAR
+(* hum_pac_EC *)
+VAR
+	rpl_soll_Max_filt : REAL;
+	rpl_ist_filt : REAL;
+	AbsHumidity : REAL; (* absolute humidity air intake [g/kg] *)
+	bMsg_Hum_T2sOffs_Act : BOOL;
+	bMsg_Hum_Pred_Lim : BOOL;
+	pbaro : REAL; (* barometric pressure used for humidity control [bar] *)
+	rP2s_Comp_HumOffset : REAL; (* [bar] *)
+	rT_T2_HumOffset : REAL; (*  *)
+	rMassFlow_Gas : REAL; (* gas mass flow [kg_gas/h] *)
+	rMassFlow_AirIn : REAL; (* intake air mass flow [kg_air/h] *)
+	AbsHumidity_Mixture : REAL; (* absolute humidity mixture [kg_H2O/kg_mix] *)
+	rGasFlowN : ARRAY[0..4] OF REAL; (* gas flow [m^3/h] *)
+	bHum_GasIn_Abs_MSF : BOOL; (* measuring signal failure customer signal BUS *)
+	AbsHumidity_AirIn : REAL; (* absolute humidity air intake [g/kg] *)
+	AbsHumidity_Mix : REAL; (* absolute humidity mixture [g/kg] *)
+END_VAR
+(* Exhaust *)
+VAR
+	AN_ABMWN : ARRAY[0..25] OF BOOL; (* Koppelfeld Abweichung neg vom Mitt*)
+	AN_ABMWN_B : BOOL; (* dev. exh. avg. operating message *)
+	AN_ABMWN_W : BOOL; (* negative dev. exh. avg. warning *)
+	AN_ABMWP : ARRAY[0..25] OF BOOL; (* Koppelfeld Abweichung pos vom Mitt*)
+	AN_ABMWP_B : BOOL; (* dev. exh. avg. operating message *)
+	AN_ABMWP_W : BOOL; (* positive dev. exh. avg. warning *)
+	AN_ATMA : BOOL;
+	bZylAusfall : BOOL;
+	bMsg1049_Test : BOOL;
+	MS_AGT : BOOL;
+	MSAGT : ARRAY[0..25] OF BOOL;
+	MSAGT_W : BOOL;
+	t_zyl : ARRAY[0..25] OF INT;
+	bSCO_EGT_DltLim : BOOL; (* - *) (* OldName: AGT_DELTA; *)
+	iNum_Cyl_EGT_Max : USINT; (*Hottest cylinder number*) (* OldName: ucZYL_MAX_Cyl; *)
+	AN_ABMW : BOOL;
+	AN_ATM : ARRAY[0..25] OF BOOL;
+	MSAGT_B : BOOL;
+	AN_ATMA_B : BOOL;
+	rT_EG_MaxLim : REAL; (*exhaust gas temperature maximum limit*)
+	xTExhMon : fTExhMon := (0); (*FuB*)
+	bMsg2339_Set : BOOL; (* A2339: Exhaust gas temperature inclination maximum at cylinder head *)
+	bMsg2970_Set : BOOL; (* B2970: Exhaust gas temperature inclination maximum at cylinder head *)
+	iNum_Msg2970 : USINT;
+	bHoldBackfPrev : BOOL;
+	bMsg9388_Set : BOOL; (*W9388: Combustion anomaly detected*)
+	bMsg9092_Set : BOOL; (*B9092: Combustion anomaly detected*)
+END_VAR
+(* GLOW IGN *)
+VAR
+	bSG_TV : BOOL; (*Enables TV alternation by GlowIgnition Task*)
+	rPos_SG_TV : REAL; (*alternated TV postion*)
+	bSG_CBV : BOOL; (*Enables CBV alternation by GlowIgnition Task*)
+	rPos_SG_CBV : REAL; (*alternated CBV position*)
+	bSG_Rel_Mon : BOOL; (* monitoring release for special gas applikation *) (* Oldname: FG_TS_UW *)
+	bSCO_BLOCK1 : BOOL; (* Blockierung Sicherheitsschliessen *) (* OldName: SS_BLOCK1; *)
+	bSCO_BLOCK2 : BOOL; (* Blockierung Sicherheitsschliessen *) (* OldName: SS_BLOCK2; *)
+	bSG_PBC_GlowIgnFailure : BOOL; (* Glow ignition failure by PBC *) (* OldName: bDMR_A_GLOW; *)
+	rSG_GasLimit : REAL; (* special gas factor for gasflow limit *) (* OldName: ssGasLimit; *)
+	bSG_BackFireDetection : BOOL; (* Trip A2283 *)
+	bSG_TV_FGQC : BOOL; (* Fix TV position *)
+	bSG_CBV_FGQC : BOOL; (* Fix CBV position *)
+	rPos_SG_TV_FGQC : REAL; (* TV position FGCQ *)
+	rPos_SG_CBV_FGQC : REAL; (* CBV position FGCQ *)
+	b2975_Set : BOOL; (* Operation message 2975 *)
+	bFGQC_Active : BOOL; (* Fast gas quality change function active *)
+	bLeanox_Man_oldFGQC : BOOL; (* LEANOX controller status before FGQC event *)
+	bFPR_Active : BOOL; (* Fast power reduction function active *)
+	bLeanox_Man_old_FPR : BOOL; (* LEANOX controller status before FPT event *)
+END_VAR
+(* PFPDR *)
+VAR
+	rLam_PFPDR_Offs : REAL; (* Lambda Offset during PFPDR *)
+	bPFPDR_IPCorr_dis : BOOL; (* disables IP correction during PFPDR *)
+	rCA_IP_PFPDR_Offs : REAL;
+	bPFPDR_CylOpt_dis : BOOL;
+	bPFPDR_CBVOpt_dis : BOOL;
+	bPFPDR_Act : BOOL;
+	bIP_CBVOpt : BOOL; (* CBVOpt aktiv? *)
+	rCA_IP_PFPDR_Prof : ARRAY[0..24] OF REAL;
+	MFB50Ctr : AI50toIT;
+	bTrace_var : BOOL := 0;
+	rCA_MFB50_Filt_type9 : ARRAY[0..24] OF REAL;
+	rCA_MFB50_Filt_type6_Max : REAL;
+	rCA_MFB50_Filt_type6_Min : REAL;
+	rCA_MFB50_Filt_type6_Avg : REAL;
+	rCA_MFB50_Filt_type6 : ARRAY[0..24] OF REAL;
+	rCA_MFB50_Filt_type6_Median : REAL;
+	rCA_MFB50_Filt_type9_Median : REAL;
+	rCA_MFB50_type9_Set : REAL;
+	rCA_MFB50_Filt_type9_Min : REAL;
+	rCA_MFB50_Filt_type9_Max : REAL;
+	rCA_MFB50_Filt_type9_Avg : REAL;
+	rCA_MFB50_type6_Set : REAL;
+	rPr_Leanox_Offset_CoV : REAL;
+	rPos_TB34_SG : REAL;
+	iTB34CtrMode : INT;
+	bTrip_LambdaLimit : BOOL; (*A2294: Lambda limit exceeded*)
+	bMsg_p2soutofRange : BOOL; (*B2897: Boost pressure out of range*)
+	bGEN2_Block_P2_Err : BOOL; (* Block Gen2: no P2 pressure signal available *)
+	xGen2 : Gen2;
+	bGEN2_FDC_active : BOOL; (*Activate Hangs FDC in GEN2 control*)
+	bVerrigelung_EXHT : BOOL;
+	refPoint_Lambda_start : ARRAY[0..9] OF lcrCurveByPoints_TabEntry_type;
+	LCRCByP_Lambda_start : LCRCurveByPoints;
+	refPoint_ITP : ARRAY[0..9] OF lcrCurveByPoints_TabEntry_type;
+	LCRCByP_ITP : LCRCurveByPoints;
+	refPoint_LamLoLim_coldFS_ABS : ARRAY[0..9] OF lcrCurveByPoints_TabEntry_type; (* y = abs lam limit and x = pressure in [bar] *)
+	refPoint_LamLoLim_ABS : ARRAY[0..9] OF lcrCurveByPoints_TabEntry_type; (* y = abs lam limit and x = pressure in [bar] *)
+	refPoint_LamUpLim_ABS : ARRAY[0..9] OF lcrCurveByPoints_TabEntry_type; (* y = abs upper lam limit and x = pressure in [bar] *)
+	rZZPStart_T4_low : REAL;
+	rZZPStart_T4_high : REAL;
+	bITPStTEMP : BOOL;
+	bFirstStepAct : BOOL;
+	bExhTempDep : BOOL;
+	rFirstStepITPOffs : REAL;
+	rSecondStepITPOffs : REAL;
+	rCA_IT_GEN2_FS_rel : REAL;
+	ulGasFlow_M_FDC : UDINT; (*[Nl/s] * 1000*)
+	ulGasFlow_FDC : UDINT; (*[Nl/s] * 1000*)
+	rN_StartITOffs_full : REAL;
+	rN_StartITOffs_zero : REAL;
+	rCA_IP_Set_Raw_GEN2_FS : REAL;
+	rP_IT_FS_LimNorm : REAL;
+	tmaxITP : TIME;
+	rCA_IT_Offs_Start : REAL;
+	rCA_IP_Gen2_Offs : REAL;
+	rCA_IP_Gen2_NetP_Offs : REAL;
+	bGEN2_FS_IP_Set : BOOL := 0;
+	rZZPStart_Tcyl_low : REAL := 0;
+	rZZPStart_Tcyl_high : REAL := 0;
+	rCA_IP_Set_Raw_normal : REAL;
+	rT_EG_H : ARRAY[0..24] OF REAL;
+	TP_10ms_OptiChng : TP_10ms := (0);
+	iCount_steady : INT;
+	iNum_steady_state : INT;
+	bdeltaPr_TV_actuateTV : BOOL;
+	rGainTV_rDeltaPr_TV : REAL;
+	rDeltaPr_TV_integrator_TV : REAL;
+	rDeltaPr_TV_integrate_TV_ON : REAL;
+	rPr_CBV_Release : REAL;
+	rPr_CBV_Lock : REAL;
+	deltaPr_TV_ref_data : ARRAY[0..5] OF lcrCurveByPoints_TabEntry_type;
+	deltaPr_TV_CBV_gain_data : ARRAY[0..5] OF lcrCurveByPoints_TabEntry_type;
+	deltaPr_TV_TV_gain_data : ARRAY[0..5] OF lcrCurveByPoints_TabEntry_type;
+	CBV_lim_byTV_data : ARRAY[0..4] OF lcrCurveByPoints_TabEntry_type;
+	LCRCurve_TV_min_table : ARRAY[0..7] OF lcrCurveByPoints_TabEntry_type;
+	LCRCurve_TV_min_CBV_table : ARRAY[0..2] OF lcrCurveByPoints_TabEntry_type;
+	rP_LR_Trig_ActSat_CBV : REAL;
+	rTi_LR_ActSat_CBV : REAL;
+	xLCRCurve_R_Rot_Correction_data : ARRAY[0..8] OF lcrCurveByPoints_TabEntry_type;
+	rDelta_a_red : REAL := 0.0;
+	bSIMPID_EXT_TV_Act : BOOL := FALSE;
+	bSIMPID_EXTERN_AW_TV : BOOL := FALSE;
+	bSIMPID_EXTERN_AW_CBV : BOOL := FALSE;
+	bSTOPint_cbv_trans : BOOL := FALSE;
+	rP_el_LockTV_Norm : REAL; (*Power trigger value to lock the throttle valve in island mode in upper load range*)
+	rP_el_ReleaseTV_Norm : REAL; (*Power trigger value to release the throttle valve in island mode*)
+	tTimeTrigger : TIME := T#150ms;
+	tTimeTrigger_HiGasDens : TIME := T#60ms;
+	ulGasSprungVol : UDINT; (*[l/s]*1000*)
+	ulGasSprungVol_HiGasDens : UDINT; (*[l/s]*1000*)
+	bstveract : BOOL;
+	bGasSprung : BOOL;
+	ulatvergasvol : UDINT;
+	ulGasSprungMax : UDINT; (*[l/s]*1000*)
+	iGasSprungThresh_HiGasDens : INT; (*[g/Nm3]*)
+	bUseTVIdleControl : BOOL; (*TRUE = Engine uses TV control without skipfire for engine start and idle control*)
+	rKp_Gen2SkipF_Pnom : REAL;
+	rKp_Gen2SkipF_Pskip : REAL;
+	rP_LimitBDCCBV_ff_Active : REAL;
+END_VAR
+(*LeanoxDrift*)
+VAR
+	bWarn_Nox_Meas_recommend : BOOL; (*warning for recommend leanox adjustment*)
+	bWarn_Nox_Meas_mandatory : BOOL; (*warning for mandatory leanox adjustment*)
+	bMsg_B2937 : BOOL; (*B2937: operating message for performed leanox adjustment*)
+	bMsg_B2938 : BOOL; (*B2938: operating message for performed combustion chamber cleaning*)
+	bCBV_closed_Start_SY : BOOL; (*TRUE = CBV closed at engine start until SY*)
+	bParaSetupOk_10s : BOOL; (*Para Setup OK + 10sec*)
+	bFS_Ramp_Rel : BOOL;
+	bTiStart5min_Ena : BOOL;
+	bEngine_was_stopped : BOOL := 0;
+	rF_LEANOX_Err : REAL := 1.0;
+	bGEN2_RAMP_ACTIVE : BOOL := 0;
+	bUseColdFS_LamLim : BOOL := 0; (*Use cold Fast Start low Lambda Limits for GEN2*)
+	bMisfGEN2 : BOOL := TRUE; (*activate misfire computed from GEN2 control*)
+	iMissfCyl_GEN2 : UDINT := 0; (*number of skipped cylinders from GEN2 control*)
+	refPoint_addKpLam_Kp_y : ARRAY[0..5] OF REAL; (*reference add Lambda Kp GEN2 island*)
+	rKeAdaptRL : REAL; (*reference gain for adaption GEN2 island*)
+	rKeAdaptGain : REAL; (*reference rate limit for adaption GEN2 island*)
+	rITCtransDeltaAcc_y : ARRAY[0..4] OF REAL; (*reference for transient ignitioin timing point change of GEN2 to avoid knocking*)
+	refPoint_iLQR_Q0_y : ARRAY[0..5] OF REAL; (*reference Q0 GEN2 island*)
+	refPoint_addKpLam_Ti_y : ARRAY[0..5] OF REAL; (*reference add Lambda Ti GEN2 island*)
+	refPoint_iLQR_Keng_y_pow : ARRAY[0..6] OF REAL; (*reference to reset learning function*)
+	refPoint_iLQR_Keng_y : ARRAY[0..12] OF REAL; (*reference to reset learning function*)
+	bdcCbv_rKp_island_Lup : ARRAY[0..9] OF REAL; (*reference gain scheduling Kp bypass valve for GEN2 BDC island*)
+	bdcTv_rKp_island_Lup : ARRAY[0..9] OF REAL; (*reference gain scheduling Kp throttle valve for GEN2 BDC island*)
+	refPoint_iLQR_R1_y : ARRAY[0..5] OF REAL; (*reference R1 GEN2 island*)
+	bAutoLoad_Island : BOOL; (*Werte fuer GEN2 Inselbetrieb laden in PV-CHECK*)
+END_VAR
+(* ESC *)
+VAR
+	rLamLimOffs_ESC : REAL; (* Lambda lower limit offset ESC *)
+	rP_Ramp_IncGrad_Offs_ESC : REAL; (* Power ramp offset ESC *)
+END_VAR
+(*Leanox 2.0*)
+VAR
+	bLX2_active : BOOL; (*Leanox 2.0 active [true->active]*)
+	bWarn_LX2_inLimit : BOOL; (*Leanox 2 saturation - warning*)
+	bMsg_LX2_Active : BOOL; (*Leanox 2 Active - operator message*)
+	bMsg_LX2_NotActive : BOOL; (*Leanox 2 Not Active - operator message*)
+	bMsg_LX2_MapReset : BOOL; (*Leanox 2 Map Reset Request from HMI - operator message*)
+	rMFIntOutMax : REAL; (*Misfire level used for ESC and LX2*)
+	rPr_LX2_offset : REAL; (* Leanox 2.0 boost pressure offset *)
+	rGain_ss_boost_iLQR : REAL := 0.0;
+	rGain_ss_boost_iLQR_OUT : REAL := 0.0;
+	bDemPermSave : BOOL;
+END_VAR
+(* FastStart *)
+VAR
+	bLoad_reached : BOOL;
+	bTarLoad_reached : BOOL;
+	bTarLoad_blockOM : BOOL;
+	xTP_TarLoad_reached : TP;
+	bFS_Island_Ena : BOOL; (* island fast start enabled *)
+END_VAR
+(* Direct Air Injection *)
+VAR
+	xDAI : fDAI; (* direct air injection FB *)
+	bDAI_MSF : BOOL; (* direct air injection measuring signal failure *)
+	bDAI_V_Close_Fault : BOOL; (* direct air injection shut off valve closing fault *)
+	bDAI_V_Open_Fault : BOOL; (* direct air injection shut off valve opening fault *)
+	bDAI_Pr_In_Hi : BOOL; (* direct air injection pressure before shut off valve high *)
+	TOF_MissfCmd : TOF;
+END_VAR
+(* TC1 SPP *)
+VAR
+	rPr_EGbHP_TC1 : tBank_AB; (* P3 Filt TC1*)
+	rPr_EGbHP_TC1_UF : REAL;
+END_VAR
+(* TC2 SPP_EC *)
+VAR
+	bT_SCR_OXI_TC_valid : BOOL; (*Inlet temperature sensor exist and good quality - SCR in, SCR out, OXIcat In, Turbocharger Out*)
+	rT_SCR_OXI_TC_In_Hi : REAL; (*Inlet temperature maximum - SCR in, SCR out, OXIcat In, Turbocharger Out [degC]*)
+END_VAR
+(* Wastegate *)
+VAR
+	rPos_CBV_Ref_WG : REAL; (*setpoint of position compressor bypass valve for wastegate control*)
+	rPosWG_Factor : REAL := 0.0; (*CAN wastegate read position factor*)
+	tDataSend_WG : ARRAY[0..7] OF BYTE := [8(0)]; (*CAN wastegate data to send - 8 bytes*)
+	iDataSend_WG_Tmp : UINT := 0; (*CAN wastegate set position to be sent - TEMPORARY*)
+	tDataSend_WG_Tmp : ARRAY[0..1] OF BYTE := [2(0)]; (*CAN wastegate actuator command TEMPORARY byte*)
+	iCAN_WG_B_StatID : ARRAY[0..5] OF UDINT := [6(0)]; (*CAN wastegate actuator B - Actuator Status MSG ID*)
+	iCAN_WG_B_ErrID : ARRAY[0..5] OF UDINT := [6(0)]; (*CAN wastegate actuator B - Failures and Warning MSG ID*)
+	iCAN_WG_B_SendID : ARRAY[0..5] OF UDINT := [6(0)]; (*CAN wastegate actuator B - Actuator Command MSG ID*)
+	iCAN_WG_A_StatID : ARRAY[0..5] OF UDINT := [6(0)]; (*CAN wastegate actuator A - Actuator Status MSG ID*)
+	iCAN_WG_A_ErrID : ARRAY[0..5] OF UDINT := [6(0)]; (*CAN wastegate actuator A - Failures and Warning MSG ID*)
+	iCAN_WG_A_SendID : ARRAY[0..5] OF UDINT := [6(0)]; (*CAN wastegate actuator A - Actuator Command MSG ID*)
+	iCAN_WG_A_T2AID : ARRAY[0..5] OF UDINT := [6(0)]; (*CAN wastegate actuator A - Tool to Actuator MSG ID*)
+	iCAN_WG_A_A2TID : ARRAY[0..5] OF UDINT := [6(0)]; (*CAN wastegate actuator A - Actuator to Tool  MSG ID*)
+	iCAN_WG_B_T2AID : ARRAY[0..5] OF UDINT := [6(0)]; (*CAN wastegate actuator B - Tool to Actuator MSG ID*)
+	iCAN_WG_B_A2TID : ARRAY[0..5] OF UDINT := [6(0)]; (*CAN wastegate actuator B - Actuator to Tool  MSG ID*)
+	iCAN_WG_DataLength : ARRAY[0..5] OF USINT := [6(0)]; (*CAN wastegate data length (K_S: 8 bytes)*)
+	xCANread_WG_B_EE : CANread := (0); (*CAN wastegate B read function*)
+	xCANread_WG_A_EE : CANread := (0); (*CAN wastegate A read function*)
+	xCANwrite_WG_B_EE : CANwrite := (0); (*CAN wastegate B write function*)
+	xCANwrite_WG_A_EE : CANwrite := (0); (*CAN wastegate A write function*)
+	xCANreadID_WG : CANread := (0); (*CAN wastegate A/B ID read function*)	
+	xCANwrite_WG_B : CANwrite := (0); (*CAN wastegate B write function*)
+	xCANwrite_WG_A : CANwrite := (0); (*CAN wastegate A write function*)
+	xCANwriteID_WG_B : CANwrite := (0); (*CAN wastegate B write function*)
+	xCANwriteID_WG_A : CANwrite := (0); (*CAN wastegate A write function*)
+	xCANread_WG_B : CANread := (0); (*CAN wastegate B read function*)
+	xCANread_WG_A : CANread := (0); (*CAN wastegate A read function*)
+	iWG_CAN_A_State : USINT := 0; (*CAN wastegate actuator A commanded state*)
+	iWG_CAN_B_State : USINT := 0; (*CAN wastegate actuator B commanded state*)
+	tPos_WG_A : Pos_WG := (0); (*Wastegate position actuator A*)
+	tPos_WG_B : Pos_WG := (0); (*Wastegate position actuator B*)
+	tPos_WG : Pos_WG := (0); (*Wastegate position actuator single*)
+	bActuator_WG_A_Exist : BOOL := FALSE; (*Wastegate actuator A exists*)
+	bActuator_WG_B_Exist : BOOL := FALSE; (*Wastegate actuator B exists*)
+	bActuator_WG_Exist : BOOL := FALSE; (*Wastegate actuator single exists*)
+	bActuator_WG_A_Ok : BOOL := FALSE; (*Wastegate actuator A is OK*)
+	bActuator_WG_B_Ok : BOOL := FALSE; (*Wastegate actuator B is OK*)
+	bActuator_WG_Ok : BOOL := FALSE; (*Wastegate actuator single *)
+	tWG_CAN_A_Warn : ARRAY[0..1] OF BYTE := [2(0)]; (*CAN wastegate A System Warnings*)
+	tWG_CAN_A_Fail : BYTE := 0; (*CAN wastegate A Actuator Failures*)
+	tWG_CAN_B_Warn : ARRAY[0..1] OF BYTE := [2(0)]; (*CAN wastegate B System Warnings*)
+	tWG_CAN_B_Fail : BYTE := 0; (*CAN wastegate B Actuator Failures*)
+	bErr_WG_CANcomm_A : BOOL := 0; (*CAN wastegate A CAN communication A2384 set*)
+	bErr_WG_CANfail_A : BOOL := 0; (*CAN wastegate A CAN failures W2380 set*)
+	bErr_WG_CANwarn_A : BOOL := 0; (*CAN wastegate A CAN warnings W2382 set*)
+	bErr_WG_CANcomm_B : BOOL := 0; (*CAN wastegate B CAN communication A2385 set*)
+	bErr_WG_CANfail_B : BOOL := 0; (*CAN wastegate B CAN failures W2381 set*)
+	bErr_WG_CANwarn_B : BOOL := 0; (*CAN wastegate B CAN warnings W2383 set*)
+END_VAR
+VAR CONSTANT
+	tWG_ActuatorState : WG_ActuatorState := (PosCtrl:=1,SelfCal:=2,Learn:=3,WipeCycl:=5,Override:=6,ElFailSafe:=7,ElFailSafeOv:=8); (*CAN wastegate actuator K&S: available commanded states*)
+END_VAR
+VAR
+	tWG_A_Status : WG_StatusMSG; (*CAN wastegate A CAN Status Information*)
+	tWG_B_Status : WG_StatusMSG; (*CAN wastegate B CAN Status Information*)
+	bCANread_WG_A_Err : BOOL; (*CAN wastegate A CAN read error trigger bit*)
+	bCANread_WG_B_Err : BOOL; (*CAN wastegate B CAN read error trigger bit*)
+END_VAR
+(* PCGV Monitoring *)
+VAR
+	xPCGVmon : fPCGVmon; (*FuB PCGV monitoring*)
+END_VAR
+(* FastSync *)
+VAR
+	xFSyPrM : fFSyPrM; (* FastSync controller for premixed engines *)
+	rPos_TV_FSyOffset : REAL := 0.02; (*TV offset when FastSync controller (premixed) is active*)
+	rLam_FSyPrM_Offset : REAL := 0.0; (*Lambda offset by FastSync controller for premixed engines*)
+	bFSync_StartFrom0rpm : BOOL := FALSE; (* Fast-sync w. PI: release FastSync controller only at first synchronization, engine starting from standstill*)
+	bFSyPrM_StartFrom0rpm : BOOL := FALSE; (* Fast-sync premixed: release FastSync controller only at first synchronization, engine starting from standstill*)
+END_VAR
+(* Gen2_xt *)
+VAR
+	refPoint_rEtaBrakeExt : ARRAY[0..5] OF lcrCurveByPoints_TabEntry_type;
+	refPoint_rGain_iLQR_rR0 : ARRAY[0..1] OF lcrCurveByPoints_TabEntry_type; (* gain for R0 value *)
+	rR0_iLQR : LREAL; (*iLQR spur of R matrix *)
+	rPrR_deltaP_TV_x_2 : REAL;
+	rPrP2s_GEN2GQCOffs_maxLoLoad : REAL; (*[mbar] maximum GEN2 gasquality change boost pressure offset w/o scaling Parameter*)
+	rR_iLQR_0 : REAL := 5.0; (* GEN2 island T6PreM *)
+	rR_iLQR_1 : REAL := 40.0; (* GEN2 island T6PreM *)
+	rR_iLQR_2 : REAL := 1000000000; (* GEN2 island T6PreM *)
+	rR_iLQR_3 : REAL := 1000000000; (* GEN2 island T6PreM *)
+	rQ_iLQR_0 : REAL := 1.0; (* GEN2 island T6PreM *)
+	rQ_iLQR_1 : REAL := 0.1; (* GEN2 island T6PreM *)
+	rQ_iLQR_2 : REAL := 0.0001; (* GEN2 island T6PreM *)
+	rP_1_SkipF_Fact : REAL; (* Factor for 0 cylinder skipping power threshold [%Pnom] *)
+	refPoint_SkipFLevel : ARRAY[0..4] OF lcrCurveByPoints_TabEntry_type; (* scaling of skip fire level over boost pressure *)
+	rQ_KF_3_init : REAL := 0.01;
+	rN_ssTVdpCtrl_0 : REAL := 10.0;
+	rPr_delta_p2s_resetTVdp_0 : REAL := 0.5;
+END_VAR
+(* skip_zde *)
+VAR
+	iSkipF_SCRTCtr : INT; (* skip firing cylinders from SCR inlet temperature controller *)
+	bSCRTCtr_SkipF_active : BOOL; (* skip fire from SCR inlet temperature controller active *)
+	rT_SCRTCtr : REAL; (* SCR inlet temperature controller input *)
+END_VAR
+(* PVCheckNew *)
+VAR
+	bPermFailed : ARRAY[0..24] OF BOOL; (* Bits for Engine Block due to calibration load failure  *)
+	bPermFailedComb : ARRAY[0..24] OF BOOL; (*Bits for Engine Block due to calibration load failure PVCheck and PVCheckNew combined  *)
+	tOM_EngineBlocked : AmmSequence; (*OM: B2894, Engine map is missing*)
+	bTrip_PoleSlip : BOOL := 0; (*Trip due to too many pole slip events*)
+	xLCRCurve_Lam_Adapt_Offs_tab : ARRAY[0..10] OF lcrCurveByPoints_TabEntry_type; (*T6 GEN1 island controller lambda adaption offset map*)
+	bT6_StdbyVersion : BOOL := 0; (*Activation of J6xxJ78x standby version features*)
+END_VAR
+(* gassort_int *)
+VAR
+	rCA_IgnP_Offs_H2 : REAL; (* ITP offset via H2 [deg.CA] *)
+END_VAR

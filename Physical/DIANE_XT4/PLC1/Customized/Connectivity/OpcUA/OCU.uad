@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="7" ArVersion="H4.90">
+  <Aliases>
+    <ACLAliases>
+      <ACL Id="1">
+        <ACE RoleName="Administrators" Access="0x017F" />
+      </ACL>
+    </ACLAliases>
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView AclId="1">
+    <Module Name="Customized">
+      <GlobalVariables>
+        <Variable Name="MM2VIS" AutomaticEnable="True">
+          <Variable Name="bAuxCust" EnableArrayElements="True" />
+          <Variable Name="bCustAlarm_Tripped" EnableArrayElements="True" />
+          <Variable Name="bCustDigIn" EnableArrayElements="True" />
+          <Variable Name="bCustDigOut" EnableArrayElements="True" />
+          <Variable Name="bCustOPC" EnableArrayElements="True" />
+          <Variable Name="bCustVis" EnableArrayElements="True" />
+          <Variable Name="bCustWarn_Tripped" EnableArrayElements="True" />
+          <Variable Name="bUniDig" EnableArrayElements="True" />
+          <Variable Name="rCustAnaIn" EnableArrayElements="True" />
+          <Variable Name="rCustOPC" EnableArrayElements="True" />
+          <Variable Name="rCustVis" EnableArrayElements="True" />
+          <Variable Name="rUniAna" EnableArrayElements="True" />
+          <Variable Name="rCustScalingBlock_X" EnableArrayElements="True" />
+          <Variable Name="rCustScalingBlock_Y" EnableArrayElements="True" />
+          <Variable Name="rCustAnaOut" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="MM2VIS_ThisPlant" AutomaticEnable="True" />
+        <Variable Name="Para" AutomaticEnable="True">
+          <Variable Name="bCustAnaIn_Active" EnableArrayElements="True" />
+          <Variable Name="bCustAnaOut_Active" EnableArrayElements="True" />
+          <Variable Name="bCustDigIn_Active" EnableArrayElements="True" />
+          <Variable Name="bCustDigOut_Active" EnableArrayElements="True" />
+          <Variable Name="iAuxCust_Active" EnableArrayElements="True" />
+          <Variable Name="iCustAnaIn_MinMaxActive" EnableArrayElements="True" />
+          <Variable Name="iCustAnaIn_Typ" EnableArrayElements="True" />
+          <Variable Name="iCustAnaIn_Unit" EnableArrayElements="True" />
+          <Variable Name="iCust_SparePara_OLD" EnableArrayElements="True" />
+          <Variable Name="rCA_IgnP_CylOffset" EnableArrayElements="True" />
+          <Variable Name="rCtr_CustOut_ScalMax" EnableArrayElements="True" />
+          <Variable Name="rCtr_CustOut_ScalMin" EnableArrayElements="True" />
+          <Variable Name="rCustAnaIn_Hy" EnableArrayElements="True" />
+          <Variable Name="rCustAnaIn_LimHi" EnableArrayElements="True" />
+          <Variable Name="rCustAnaIn_LimHiHi" EnableArrayElements="True" />
+          <Variable Name="rCustAnaIn_LimLo" EnableArrayElements="True" />
+          <Variable Name="rCustAnaIn_LimLoLo" EnableArrayElements="True" />
+          <Variable Name="rCustAnaIn_ScalMax" EnableArrayElements="True" />
+          <Variable Name="rCustAnaIn_ScalMin" EnableArrayElements="True" />
+          <Variable Name="rCustAnaOut_ScalMax" EnableArrayElements="True" />
+          <Variable Name="rCustAnaOut_ScalMin" EnableArrayElements="True" />
+          <Variable Name="rCustFactor_IF" EnableArrayElements="True" />
+          <Variable Name="rCust_SparePara" EnableArrayElements="True" />
+          <Variable Name="rF_Nom" EnableArrayElements="True" />
+          <Variable Name="rI_Ctr_CustOut_ScalMax" EnableArrayElements="True" />
+          <Variable Name="rI_Ctr_CustOut_ScalMin" EnableArrayElements="True" />
+          <Variable Name="rI_CustAnaOut_ScalMax" EnableArrayElements="True" />
+          <Variable Name="rI_CustAnaOut_ScalMin" EnableArrayElements="True" />
+          <Variable Name="rT_Ch_T2s_Hi" EnableArrayElements="True" />
+          <Variable Name="rP_Red_Ch_T2s" EnableArrayElements="True" />
+          <Variable Name="rCust_ScalingBlock_X1" EnableArrayElements="True" />
+          <Variable Name="rCust_ScalingBlock_X2" EnableArrayElements="True" />
+          <Variable Name="rCust_ScalingBlock_Y1" EnableArrayElements="True" />
+          <Variable Name="rCust_ScalingBlock_Y2" EnableArrayElements="True" />
+          <Variable Name="iCust_ScalingBlock_Typ" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="Para_ThisPlant" AutomaticEnable="True" />
+        <Variable Name="ParaFactoryDefault" AutomaticEnable="True">
+          <Variable Name="bCustAnaIn_Active" EnableArrayElements="True" />
+          <Variable Name="bCustAnaOut_Active" EnableArrayElements="True" />
+          <Variable Name="bCustDigIn_Active" EnableArrayElements="True" />
+          <Variable Name="bCustDigOut_Active" EnableArrayElements="True" />
+          <Variable Name="iAuxCust_Active" EnableArrayElements="True" />
+          <Variable Name="iCustAnaIn_MinMaxActive" EnableArrayElements="True" />
+          <Variable Name="iCustAnaIn_Typ" EnableArrayElements="True" />
+          <Variable Name="iCustAnaIn_Unit" EnableArrayElements="True" />
+          <Variable Name="iCust_SparePara_OLD" EnableArrayElements="True" />
+          <Variable Name="rCA_IgnP_CylOffset" EnableArrayElements="True" />
+          <Variable Name="rCtr_CustOut_ScalMax" EnableArrayElements="True" />
+          <Variable Name="rCtr_CustOut_ScalMin" EnableArrayElements="True" />
+          <Variable Name="rCustAnaIn_Hy" EnableArrayElements="True" />
+          <Variable Name="rCustAnaIn_LimHi" EnableArrayElements="True" />
+          <Variable Name="rCustAnaIn_LimHiHi" EnableArrayElements="True" />
+          <Variable Name="rCustAnaIn_LimLo" EnableArrayElements="True" />
+          <Variable Name="rCustAnaIn_LimLoLo" EnableArrayElements="True" />
+          <Variable Name="rCustAnaIn_ScalMax" EnableArrayElements="True" />
+          <Variable Name="rCustAnaIn_ScalMin" EnableArrayElements="True" />
+          <Variable Name="rCustAnaOut_ScalMax" EnableArrayElements="True" />
+          <Variable Name="rCustAnaOut_ScalMin" EnableArrayElements="True" />
+          <Variable Name="rCustFactor_IF" EnableArrayElements="True" />
+          <Variable Name="rCust_SparePara" EnableArrayElements="True" />
+          <Variable Name="rI_Ctr_CustOut_ScalMax" EnableArrayElements="True" />
+          <Variable Name="rI_Ctr_CustOut_ScalMin" EnableArrayElements="True" />
+          <Variable Name="rI_CustAnaOut_ScalMax" EnableArrayElements="True" />
+          <Variable Name="rI_CustAnaOut_ScalMin" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="VIS2MM" AutomaticEnable="True">
+          <Variable Name="bCustOPC" EnableArrayElements="True" />
+          <Variable Name="bCustVis" EnableArrayElements="True" />
+          <Variable Name="rCustOPC" EnableArrayElements="True" />
+          <Variable Name="rCustVis" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="VIS2MM_ThisPlant" AutomaticEnable="True" />
+      </GlobalVariables>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

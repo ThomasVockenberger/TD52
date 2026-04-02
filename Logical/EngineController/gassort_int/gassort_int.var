@@ -1,0 +1,20 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: gassort_int
+ * File: gassort_int.var
+ * Author: Caks
+ * Created: Aug 06, 2014
+ ********************************************************************
+ * Local variables of program gassort_int
+ ********************************************************************)
+VAR
+	iIdx_loop : INT;
+	rCA_IgnP_Offs_H2_Prior : REAL; (* ITP offset via H2 content before H2 switching point [degCA] *)
+	rCA_IgnP_Offs_H2_After : REAL; (* ITP offset via H2 content after H2 switching point [degCA] *)
+	rLHV_H2 : REAL := 2.997; (* Lower heating value Hydrogen [kWh/m3] *)
+	rStdGD_H2 : REAL := 0.089; (* Standard gas density Hydrogen [kg/m3] *)
+	rMinAirReq_H2 : REAL := 1.972; (* Minimum air requirement Hydrogen [l/l] *)
+	rHCR_H2_Comp : REAL := 1.405; (* Heat capacity ratio *)
+	rLam_Start_Offset_H2 : REAL; (* Actual calculated start lambda offset depending on H2 content *)
+END_VAR

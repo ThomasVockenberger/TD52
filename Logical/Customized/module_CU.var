@@ -1,0 +1,124 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Package: Customized_Pkg
+ * File: Customized.var
+ * Author: Zengerer
+ * Created: July 01, 2012
+ ********************************************************************
+ * Variables of package Customized_Pkg
+ ********************************************************************)
+VAR CONSTANT
+	iNoOf_AnaOut : INT := 60; (*new constant, V4.13 *)
+END_VAR
+VAR
+	bErr_NoOf_AnaOut : BOOL := FALSE; (*V4.13, temporary error bit*)
+	bMsg2302_Enable : {REDUND_UNREPLICABLE} BOOL := FALSE; (*Activation message W2302*)
+	bMsg2302_Set : BOOL := FALSE; (*Set message W2302*)
+	bMsg2303_Enable : BOOL := FALSE; (*Activation message W2303*)
+	bMsg2303_Set : BOOL := FALSE; (*Set message W2303*)
+	bMsg2415_Enable : BOOL := FALSE; (*Activation message W2415*)
+	bMsg2415_Set : BOOL := FALSE; (*Set message W2415*)
+	bMsg2416_Enable : BOOL := FALSE; (*Activation message W2416*)
+	bMsg2416_Set : BOOL := FALSE; (*Set message W2416*)
+	bMsg2417_Enable : BOOL := FALSE; (*Activation message W2417*)
+	bMsg2417_Set : BOOL := FALSE; (*Set message W2417*)
+	bMsg2418_Enable : BOOL := FALSE; (*Activation message W2418*)
+	bMsg2418_Set : BOOL := FALSE; (*Set message W2418*)
+	bBlockA37 : ARRAY[0..100] OF BOOL := [101(FALSE)]; (*true will intentionally disable a alarm message*)
+	bBlockA89 : ARRAY[0..100] OF BOOL := [101(FALSE)]; (*true will intentionally disable a alarm message*)
+	bBlockW13 : ARRAY[0..100] OF BOOL := [101(FALSE)]; (*true will intentionally disable a alarm message*)
+	bBlockW14 : ARRAY[0..100] OF BOOL := [101(FALSE)]; (*true will intentionally disable a alarm message*)
+	bBlockW38 : ARRAY[0..100] OF BOOL := [101(FALSE)]; (*true will intentionally disable a alarm message*)
+	bBlockW39 : ARRAY[0..100] OF BOOL := [101(FALSE)]; (*true will intentionally disable a alarm message*)
+	bBlockW1500 : BOOL; (*true will intentionally disable a alarm message*)
+	bCustAnaIn_ErrHi : ARRAY[0..120] OF BOOL;
+	bCustAnaIn_ErrHiHi : ARRAY[0..120] OF BOOL;
+	bCustAnaIn_ErrLo : ARRAY[0..120] OF BOOL;
+	bCustAnaIn_ErrLoLo : ARRAY[0..120] OF BOOL;
+	bDoNothing : BOOL;
+	bEng_StaSpdExc : BOOL; (*M_DREHZ*)
+	bGnlTrip : BOOL; (*general alarm trip *)
+	bGnlTrip1 : BOOL; (*general alarm trip priority 1*)
+	bGnlTrip2 : BOOL; (*general alarm trip priority 2*)
+	bGnlTrip3 : BOOL; (*general alarm trip priority 3*)
+	bGnlWarning : BOOL; (*general alarm warning *)
+	bNoInitDetected : BOOL := FALSE;
+	bOMSS_Aut : BOOL;
+	bOMSS_Man : BOOL;
+	bOMSS_MAT : BOOL;
+	bOMSS_Scav : BOOL;
+	bOMSS_Test : BOOL;
+	bOpMode_Island : BOOL;
+	bOpMode_Mains : BOOL;
+	bOpMode_ManAut : BOOL;
+	bOpMode_NoLoad : BOOL;
+	bPowerSetpointLimit : BOOL; (*CONNECT CUSTOMIZED VARIABLE HERE (Varname Old for compatibility)*)
+	bRSS_Aut : BOOL;
+	bRSS_Rem : BOOL;
+	bSet_FC_COf_Bus : BOOL; (*Bus: frequency control set command off*)
+	bSet_FC_COn_Bus : BOOL; (*Bus: frequency control set command on*)
+	cnt : USINT;
+	fmw_zaehler : INT; (*Zähler für Frequenzmittelwertbildung*)
+	FreqIst_ind : ARRAY[0..20] OF REAL; (*Frequenzistwert zur Mittelwertbildung*)
+	InData1 : ARRAY[0..MAX_IN_DATA_ARRAY] OF INT; (*input data from master coupling 1*)
+	InData2 : ARRAY[0..MAX_IN_DATA_ARRAY] OF INT; (*input data from master coupling 2*)
+	IN_CU : IN_Cust_Struct;
+	IN_CU_ThisPlant : IN_Cust_Plant_Struct; (*ADD ELEMENTS FOR USE ON ONLY THIS SPECIFIC PLANT HERE*)
+	iP_FC_RMC_neg_Bus : INT; (*Bus: negative reserve power for frequency control [kW]*)
+	iP_FC_RMC_pos_Bus : INT; (*Bus: positive reserve power for frequency control [kW]*)
+	iP_Set_FC_Bus : INT; (*Bus: generator power setpoint for frequency control*)
+	i_FC_Test_var : INT := 0; (*Testvariante [1-4]*)
+	i_Simu_Counter : INT := 0; (*Interner Zähler*)
+	i_Simu_Counter_Inc : INT := 1; (*Additionswert [+1]*)
+	i_Simu_Counter_Min : INT := 0; (*Interner Zähler in Minuten*)
+	rF_Delta_BB_PT1 : REAL; (* Delta -> busbar minus PT1 *)
+	rF_Summ_DB_PT1 : REAL; (* Summ -> deadband plus PT1 *)
+	rF_Deadband_OUT : REAL; (* Delta frequency after deadband *)
+	xFilter_R_MMD_GR : FILTER_R; (* Output signal of low pass filter *)
+END_VAR
+VAR CONSTANT
+	MAX_IN_DATA : UINT := 32; (* max data (INT) to receiv *)
+	MAX_IN_DATA_ARRAY : UINT := MAX_IN_DATA - 1; (* max array lenght data (INT) to receiv *)
+	MAX_OUT_DATA : UINT := 600; (* max data (INT) to send *)
+	MAX_OUT_DATA_ARRAY : UINT := MAX_OUT_DATA - 1; (* max array lenght data (INT) to send *)
+	iNum_CtrlBatMon : USINT := 4; (*number of control battery monitoring test sets*)
+END_VAR
+VAR
+	MM2VIS : MM2Vis_Struct;
+	MM2VIS_ThisPlant : MM2Vis_Plant_Struct; (*ADD ELEMENTS FOR USE ON ONLY THIS SPECIFIC PLANT HERE*)
+	OutData : ARRAY[0..MAX_OUT_DATA_ARRAY] OF INT; (*output data *)
+	OUT_CU : OUT_Cust_Struct;
+	OUT_CU_ThisPlant : OUT_Cust_Plant_Struct; (*ADD ELEMENTS FOR USE ON ONLY THIS SPECIFIC PLANT HERE*)
+	Para : PARA_Cust_Struct;
+	ParaFactoryDefault : PARA_Cust_Struct;
+	Para_ThisPlant : PARA_Cust_Plant_Struct; (*FEHLT NOCH!*)
+	Perm : PERM_CU_Struct; (*Values permanetly stored in Flash Datamodule*)
+	pm : PARA_Cust_Struct;
+	pm1 : PERM_CU_Struct; (*Flash Datamodule*)
+	rF_Act : REAL; (*Aktuelle Frequenz [Hz]*)
+	rF_Act_FC_Bus : REAL; (*acutal frequency for frequency control*)
+	rF_FC_Delta : REAL; (*frequency devitation for frequency control*)
+	rF_FC_Test_man_fist : REAL; (*man. Test - über Verstellung f_ist [Hz]*)
+	rF_FC_Test_man_fn : REAL; (*man. Test - über Verstellung f_nenn	[Hz]*)
+	rF_MMD_FC : REAL; (*actual frequency calculation for frequency control*)
+	rF_MMD_FC_Avg : REAL; (*actual frequency average for frequency control*)
+	rF_Ref : REAL := 0.0; (*Referenz Frequenz [Hz]*)
+	rF_Set_FC_Bus : REAL; (*Bus: frequency setpoint for frequency control*)
+	rN_Set : REAL;
+	rP_Act_FC_Bus : REAL; (*Bus: generator power with frequency control active*)
+	rP_Act_Filt : REAL;
+	rP_PRLCont_FC_Bus : REAL; (*Bus: frequency control controller output*)
+	rP_Set : REAL;
+	rP_Set_Min : REAL; (*minimal set point value in kW*)
+	sel_PowerSetpointLimit : INT; (*CONNECT CUSTOMIZED VARIABLE HERE (Varname Old for compatibility)*)
+	ssPowerSetpointLimit : INT; (*CONNECT CUSTOMIZED VARIABLE HERE (Varname Old for compatibility)*)
+	tAB2MM : AmmBase2MM;
+	tRealTime : rtctime_typ; (*time structure for realtime clock*)
+	VIS2MM : Vis2MM_Struct;
+	VIS2MM_ThisPlant : Vis2MM_Plant_Struct; (*ADD ELEMENTS FOR USE ON ONLY THIS SPECIFIC PLANT HERE*)
+	xEngType : EngType; (*Instance of FB EngType*)
+	xOpMode : OpMode; (*engine operation mode*)
+	tCust2Eng : Cust2Eng_Struct;
+	tEng2Cust : Eng2Cust_Struct;
+END_VAR

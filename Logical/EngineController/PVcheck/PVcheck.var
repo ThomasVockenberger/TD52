@@ -1,0 +1,48 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: PermINIT
+ * File: PermINIT.var
+ * Author: 502293141
+ * Created: February 24, 2015
+ ********************************************************************
+ * Local variables of program PermINIT
+ ********************************************************************)
+VAR
+	bSKIP_DataLoad : BOOL;
+	bPI_DataLoad : BOOL;
+	bLAMBDA_DataLoad : BOOL;
+	bPSICAL_DataLoad : BOOL;
+	bENGCTR_DataLoad : BOOL;
+	bMFB50_Dataload : BOOL;
+	iIdx : USINT;
+	rp49Zyl : ARRAY[0..24] OF REAL;
+	bLoad_p49_Map : BOOL;
+	ucCylIdx : USINT;
+	ucPwrIdx : USINT;
+	ucTmpIdx : USINT;
+	bOpt_DataLoad : BOOL;
+	bAmmSeqClkP : BOOL;
+	TON_SecondTick : TON;
+	bMapLoaded : ARRAY[0..24] OF BOOL;
+	i : INT;
+	bMapLoad : BOOL;
+	xTON_Reset : TON := (0);
+	bPUSL_DataLoad : BOOL := 0;
+	bFilt_DataLoad : BOOL := 0;
+	bDel_p49_Map : BOOL := 0;
+	bWG_DataLoad : BOOL;
+	bEG_DataLoad : BOOL;
+	bAutoLoad_Ena : BOOL;
+	TON_AutoLoad : TON;
+	bFS_DataLoad : BOOL;
+	bALL_Dataload : BOOL := 0;
+	bRKS_DataLoad : BOOL := 0;
+	bIG_DataLoad : BOOL := 0;
+	bAutoLoad_Ena_TP : BOOL := 0;
+	TP_bAutoLoad : TP := (0);
+	bSync_DataLoad : BOOL := 0;
+	bLX2_DataLoad : BOOL;
+	bDAI_DataLoad : BOOL;
+	iSA_PIValveType_old : INT; (* old PI valve type to detect value change *)
+END_VAR

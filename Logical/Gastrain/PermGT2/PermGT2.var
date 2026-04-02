@@ -1,0 +1,29 @@
+VAR
+	pm_Error : UINT;
+	write_once : BOOL;
+	pm_len : UDINT;
+	ModulName : STRING[35];
+	DatObjInfo_01 : DatObjInfo;
+	pm_id : UDINT;
+	pm_p : UDINT;
+	bCreateDataObj : BOOL;
+	perm_par_vers : UINT;
+	DatObjRead_01 : DatObjRead;
+	usPMWriteCnt : UINT;
+	DatObjDelete_PermMem : DatObjDelete;
+	DatObjCreate_01 : DatObjCreate;
+	DatObjWrite_01 : DatObjWrite;
+	ulChecksumOld : UDINT;
+	ulPMPointer : UDINT;
+	ulChkValue : UDINT;
+	TON_WritePMEM : TON;
+	ulChecksum : UDINT;
+	bWriteDataObj : BOOL;
+	TON_WarnDelay : TON;
+END_VAR
+VAR CONSTANT
+	ERR_NOERROR : UINT := 0;
+END_VAR
+VAR
+	pmm2 : PERM_GT2_struct;
+END_VAR

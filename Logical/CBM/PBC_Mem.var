@@ -1,0 +1,22 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Package: PBC_Mem
+ * File: PBC_Mem.var
+ * Author: 502293141
+ * Created: May 14, 2014
+ ********************************************************************
+ * Variables of package PBC_Mem
+ ********************************************************************)
+VAR
+	iPos : _Buffer_Pos;
+	bWarn_Buffer : BOOL; (* if true adjust sizes of PV's *)
+	iPBC_Trigger : UINT; (*Stores the trigger event*)
+	Buffer : _ECB_Buffer;
+	iCnt_Cycle : INT;
+	DerString : STRING[4500000];
+	bECB_Buffer_Test : BOOL := FALSE;
+	TCB_Buffer : _TCB_Buffer; (*TCB Buffer*)
+	bTCB_Lock : BOOL; (* TCB String lock *)
+	bECB_Lock : BOOL; (* ECB String lock *)
+END_VAR

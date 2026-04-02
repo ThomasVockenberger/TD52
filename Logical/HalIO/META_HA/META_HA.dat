@@ -1,0 +1,220 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2025
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V3.99	  06-03-2013	Weitzer, generated for modular software	 
+; 		  06-06-2013	Zengerer structure prototype according to todays meeting
+; V4.00   31-01-2014	Weitzer, versions changed
+; V4.01   22-07-2014	Weitzer, add new IO channels
+; V4.01.1 10-10-2014	Weitzer, correction of IO channel monitoring
+; V4.03	  14-01-2015	Weitzer, new IOs added for J920
+;								 add engine version information
+; V4.03.1 11.06.2015	Zengerer version + dependencies changed (IF change with array index 0 for compatibility with c-tasks)
+; V4.03.2 03-03-2016	Weitzer, add engine speed at IN_HA for F = 0Hz at engine stop
+; V4.04.0 01.06.2016	Tinello, CM&U Sensor package added
+; V4.05.0 01.06.2016	lettenb. faststart IO added;
+;		  18.07.2017	Messner, Oil circuit fast start V2
+;		  07.08.2017	Messner, Starter battery voltage monitoring
+;		  20.09.2017	Messner, Active Cooling Program added
+;		  27.07.2017	Messner, CAN Diagnosis Picture added
+;		  04.12.2017	Messner, Oxidation catalyst added
+; V4.05.1 14.02.2018	Weitzer, EOP_BWS2 added, correct CAN diagnosis data
+;         22.02.2018	lettenb. AI_PF_CosPCtr_Set removed, dependancies
+; V4.05.2 19.03.2018	Denk, 	 WinMOD simulation ON/OFF logic added
+; V4.05.3 26.03.2018	Farre, 	 Signals removed (PF_CosPCtr_PF1_Ena, PF_CosPCtr_PF2_Ena, PF_CosPCtr_PF3_Ena, PF_CosPCtr_PF4_Ena, PF_CosPCtr_PF5_Ena)
+; V4.06.0 01.03.2018	Perktold, I/Os for (very)fast start added
+;         16.03.2018	502423184 ".Exist" added to HALioBase library for analog inputs
+;	  	  11.10.2018	Schmid,	 module identifiers for coated modules included
+; V4.07.0 12.07.2018	502423184,	added G2  (see details in section Info below, add new info there!) 
+; V4.08.0 07.02.2019	Schmid,  B&R IPC PPC3100 adaptations (PLC address for CAN device changed)
+; V4.08.1 26.11.2019	Denk,  Exception task for cycle time violation TC#1 added
+; V4.08.2 10.12.2019	Schmid,  MMD over- and undervoltage protection: changed monitoring to phase-phase voltages
+; V4.09.0 12.12.2019	Tinello, CAN NOx infos added for HMI
+;		  17.12.2019	Schmid,	 new scaling parameters, IOs, MMU parameter
+; V4.09.1 16.04.2020	Schmid,	 bugfix: spare analog input (CustAnaIn) scaling corrected to allow falling slope
+;         25.06.2020	lettenb. X20CM985-1_fw_upgrade(1.9.0.0 -> 2.2.0.0)
+; V4.10.0 20.07.2020	Schmid,	 new scaling parameters, IOs
+;		  21.10.2020	lettenb. Pr_Oxicat_In/Out Filter 0 -> 1000 (1s), bu
+; V4.10.0 03.11.2020	Schmid,  additional CAN node interfaces for engine and NOx sensor CAN
+;		  12.11.2020	lettenb. DI: Dem_EU_Block2, tDem_EU_Block3 added
+; V4.10.1 27.04.2021	Schmid,  bugfix: corrected Cnt_N_AirStarter memory interference issue (AI_INT32 to AI_INT16)
+; 		  10.05.2021	Weitzer	 System cyclic time viaolation monitoring added
+; V4.10.2 12.05.2021	Schmid	 bugfix: corrected scaling and GoodQual limits for U_SetExt_Norm
+; V4.11.0 17.08.2021	Weitzer	 UR20 IO system added
+;		  29.11.2021	lettenb. IOs for GR added
+; 		  07.12.2021	Schmid	 flexible CAN interface detection
+;		  22.12.2021	Andre,	 caninitHA: avoid potential array index overrun
+; V4.12.0 29.06.2022	lettenb. IOs added
+;		  06.09.2022	Keller	 change mapping OUT_OP.tLSL_out to TC2
+;		  28-10-2022	Weitzer, added auto detect multiplier for bus bar and synch voltages > 30kV
+;		  13-12-2022	Schmidt, switch to separate sync window settings if fast-sync active
+;		  02.12.2022	Weitzer, add IGN2 CAN interface
+; 		  22.01.2023	Zuschnig H2 content added
+; V4.13.0 26.05.2023	Zuschnig Added standardized AI input for gas mixing ratio
+;		  27.09.2023 	Bacci	 Flucon sensor clean-up
+;		  17.10.2023	Andre	 Only perform ARwin warm start if the CAN bus off state cannot be quit
+;		  21.11.2023	Tinello	 Added urea tank level
+;         21.11.2023    Heim Markus add hardware parameters for ctr 9,10,11,12,14,15,16,17,21,22,23,24,25,26,27,30,31,34
+;		  28.11.2023	Maran	 added IOs for thermal reactor auxiliary gas injection monitoring
+;		  30.11.2023	Farre, 	 added ILF (de)activation bits
+;		  22.01.2024	Astner	 OpcUA Pub/Sub Plant Communication added (Dependency SY 4.13)
+;         23.02.2024    Astner   Added Configuration of ModbusTCP ethernet interfaces on X20 CPU	
+;		  05.03.2024	Bacci	 Added hardware bypass digital twin - T3 adaptive cranking time
+;		  07.03.2024	Farre	 issue #890, #1089: re-define settings and scale analog input signals sent to GR and GC
+; V4.14.0 28.03.2024	Soto/Farre,	CAN NOx IF1 shared with Wastegate, interfaces duplicated (2023-174)
+; 		  18.06.2024	Soto	 added CAN interface for Low NOx sensor IF3 (2023-183)
+; 		  07.10.2024	Kafka	 Remove G2 signals, SAFI / KLS21 devices of bank B use 2nd CAN card and the rest use 1st one
+;		  08.11.2024	Bacci	 Added cold country antifreeze arrangements (2020-25)
+;		  18.11.2024	Farre	 send to MMU1 current asymmetry value from a new parameter (2024-234)
+;		  19.11.2024	Farre	 added auto detect multiplier for grid voltage (2024-236)
+;		  21.11.2024	Farre	 additional moisture sensor in air line CEMS (2023-183)
+;		  22.11.2024	Schmidt	 Added IO for pre chamber gas bypass valve
+;		  25.11.2024	Zengerer Multi analog temp input variants issue #1706 - T_HW_Re, T_HW_ReAfEC, T_HW_Su ...
+;		  28.11.2024	Astner	ANSL Plant Communication added (Dependency MSY 4.09)
+;		  29.11.2024	Zengerer new EO_FreshOilPump & EO_WasteOilPump DO
+; 		  26.02.2025	Tinello	 Added SafetyPLC
+;		  07.02.2025	add possibility for customized mains settings for MMD1 and MMD2
+; V4.25.0 26.11.2025	Bacci	 Safety Function - Insufficient Ventilation (2024-202): ERV digital feedback added
+; 		  10.07.2025	Tinello	 SafetyPLC Phase II added
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+; watch out for proper "" and <> </> marks and use := and = on the right places!
+;
+; Outstandings:
+; ------------
+; datamodule syntax checker 
+; (caution: syntax errors here may cause plc runtime errors!)
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>HA</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.25.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Specify order number
+"<ORDER>DT52</ORDER>"  				;<!--PLEASE FILL IN ORDER ID (HAL_IO is allways customized)-->
+;
+; Specify engine type
+"<ENGINE_TYPE>624</ENGINE_TYPE>"	;<!--PLEASE FILL IN ENGINE TYPE-->
+;
+; Specify engine version
+"<ENGINE_VERSION>L3785</ENGINE_VERSION>" ;<!--PLEASE FILL IN ENGINE VERSION-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"	<PARA1 Name='rPr_ECWScalMax' MIN='2.0' MAX='20.0' />"
+"	<PARA2 Name='rPr_EngLubOilScalMax' MIN='5.0' MAX='20.0' />"
+"	<PARA3 Name='rU_Gen_Nom[1]' MIN='70' MAX='65000' />"
+"	<PARA4 Name='rF_Nom[1]' MIN='48.0' MAX='62.0' />"
+"	<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Statement, that this modules parameter check passing is mandatory (HA is allways mandatory, so other statements than TRUE here in this module are not possible)
+"<MANDATORYMODULE>TRUE</MANDATORYMODULE>"
+;
+; Permanent Datamodule Filenames<!-- enter filenames for counter and INTERNAL parameter only; filename without extention-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_HA</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='AB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='AG' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='CU' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='EC' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='EX' VERSION='04.05.00.00' />"
+"	<DEPENDENCY MODULE='GC' VERSION='04.14.00.00' />" 
+"	<DEPENDENCY MODULE='GD' VERSION='04.05.00.00' />" 
+"	<DEPENDENCY MODULE='GM' VERSION='04.01.00.00' />"
+"	<DEPENDENCY MODULE='GR' VERSION='04.13.00.00' />"
+"	<DEPENDENCY MODULE='GT' VERSION='04.10.00.00' />"
+"	<DEPENDENCY MODULE='HC' VERSION='04.14.00.00' />" 
+"	<DEPENDENCY MODULE='IC' VERSION='04.05.00.00' />"
+"	<DEPENDENCY MODULE='IG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='KL' VERSION='04.05.00.00' />"
+"	<DEPENDENCY MODULE='KN' VERSION='04.01.00.00' />"
+"	<DEPENDENCY MODULE='MO' VERSION='04.05.00.00' />" 
+"	<DEPENDENCY MODULE='OP' VERSION='04.04.00.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='SA' VERSION='04.05.00.00' />" 
+"	<DEPENDENCY MODULE='SY' VERSION='04.13.00.00' />"
+"	<DEPENDENCY MODULE='TR' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='VE' VERSION='04.04.00.00' />"
+"	<DEPENDENCY MODULE='EM' VERSION='04.06.00.00' />"
+"	<DEPENDENCY MODULE='EG' VERSION='04.25.00.00' />"    ; corrected for SW download via HMI
+"   <DEPENDENCY VISVERSION='02.15.00.00' />"			; Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	Engine Controller "
+"	</General>	"
+""
+"	<F1 Name='Read & write IOs' LastModified='04.00.0.0'>"
+"	controller for throttle and compressor bypass valve	"
+"	</F1>"
+"	<F2 Name='Scaling of IOs' LastModified='04.00.0.0'>"
+"	 Abstract physical value to the needed raw value of different IO suppliers.	"
+"	</F2>"
+"	<F3 Name='Filter analog signals' LastModified='04.00.0.0'>"
+"	 Filter analog inputs before the were used in the different modules.	"
+"	</F3>"
+"	<F4 Name='Signal qualitiy check' LastModified='04.00.0.0'>"
+"	Check analog input signals if they are in a configured range.	"
+"	</F4>"
+"	<F5 Name='Hardware monitoring' LastModified='04.00.0.0'>"
+"	Check if the hardware configuration maches to the detected IO modules.	"
+"	</F5>"
+"	<F6 Name='Initiate CAN communication' LastModified='04.00.0.0'>"
+"	Initiate CAN interface and start the CAN communication with each CAN device (SAFI, GMU, ...).	"
+"	</F6>"
+"	<F7 Name='Communication to Multi Measure Devices' LastModified='04.00.0.0'>"
+"	Read out asynchron measure data and handle parameter transfer.	"
+"	</F7>"
+""
+"	<Info>"
+"   UPDATE V4.2.0	version + dependencies changed (IF change with array index 0 for compatibility with c-tasks)	"
+"   UPDATE V4.07.0	MMD unbalanced load meter reset function	"
+"		  31.07.2018	Schmid,	 trigger for unbalanced load meter reset added	"
+"		  09.08.2018	Schmid,	 2nd low temperature charge cooling circuit added	"
+"		  20.09.2018	Schmid,	 unused IOs deleted	"	
+"		  28.09.2018	Schmid,	 changed scaling for gearbox oil quality sensors "
+"		  17.12.2018	Schmid,	 added hydraulic ECW pre-heating for type 3+4, separate iIdx_OMSS PVs for TC5 and TC7 "
+"		  24.01.2018	Schmid,	 changes on unbalanced load meter reset "
+"		  22.03.2019	Schmid,	 gearbox oil quality sensor removed "
+"		  29.03.2019	Schmid,	 bugfix: MMD does NOT restart IF powerlink is unplugged+plugged "
+"								 wait for ModuleOk to activate AsIOAccRead/AsIOAccWrite FUBs "
+" 	UPDATE V4.07.1 29.03.2019	Hohensinner,	Added IO: Execute_BS, removed IOs: P_Limit<x>Son_Gh "
+"	UPDATE V4.07.2 15.05.2019	Schmid,	   coding guidelines: changed Para.rTi_Filt_LSL_In (datatype REAL) to Para.tiFilt_LSL_In (datatype TIME)"
+"	UPDATE V4.07.3 01.08.2019	Zengerer,  vvm for gastrain added, META commets moved to XML Info section "
+"	UPDATE V4.12.0 17.10.2022	Zengerer,  L_FreshOilTank, L_WasteOilTank, L_DayOilTank added "
+"	UPDATE V4.14.0 25.11.2024	Zengerer,  Multi analog temp input variants: T_HW_Re, T_HW_ReAfEC, T_HW_Su +4 new type variant para "
+"	</Info>"
+""
+"	<Customized LastModified='04.00.0.1'>	"
+"	- HalIO Module is allways customized according to individual IO setup "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

@@ -1,0 +1,62 @@
+VAR
+	AvgVolt : UINT; (* ignition voltage average *)
+	bGnlTrip_MO : BOOL := FALSE;
+	bGnlTrip1_MO : BOOL := FALSE;
+	bGnlTrip2_MO : BOOL := FALSE;
+	bGnlTrip3_MO : BOOL := FALSE;
+	bGnlWarning_MO : BOOL := FALSE;
+	bInitOK : BOOL;
+	CMSmain_Monic : CMSmain;
+	CMSMonic_Init : CMSinit;
+	DiffVolt : UINT; (* difference voltage monitoring Para_modlMO *)
+	EConfMonic : ARRAY[0..67] OF USINT; (* event monic configuration *)
+	ELimitErr : USINT; (* event monic limit errors *)
+	EMonError : USINT; (* event monic device errors *)
+	EMonStatus : USINT; (* event monic status *)
+	EnabGuard : USINT; (* parameter enable guarding *)
+	EnabLimit : USINT; (* parameter enabel limit monitoring *)
+	EnabMonic : USINT; (* operating mode monic *)
+	FGDRPS : BOOL; (* Freigabe durch RPS *)
+	iECanDevGo : DINT;
+	Ignor : ARRAY[0..24] OF BOOL; (* TRUE= ignor cyl. limit monitoring *)
+	IN_MO : IN_MO_Struct;
+	LimitActiv : USINT; (* ignition voltage start monitoring *)
+	LimitError : UINT; (* status of voltage limit errors *)
+	LimitHyst : USINT; (* hysteresis for start monitoring *)
+	LimitMon : ARRAY[0..4] OF _tMonicLimit; (* parameter voltage limit monitoring *)
+	MaxVolt : UINT; (* maximum ignition voltage *)
+	MinVolt : UINT; (* minimum ignition voltage *)
+	MissfCmd : BOOL; (* command for start misfire *)
+	MM2VIS : MM2VIS_Struct := (0);
+	Mon_Node : USINT; (* node number monic *)
+	MONCAN : BOOL := 0; (* CAN VUS FAHLER *)
+	MONCPU : BOOL := 0; (* MONIC CPU FEHLER *)
+	MONDRA : BOOL := 0; (* MONIC VERDRAHTUNGSFEHLER *)
+	monic_vis : BOOL; (* TRUE= monic is enabled *)
+	MonicError : ARRAY[0..6] OF USINT; (* monic error messages *)
+	MonLimitOn : ARRAY[0..4] OF BOOL; (* type of voltage limit monitoring *)
+	MONOFF : ARRAY[0..24] OF BOOL := [25(0)]; (* MONIC AIC ODDSET FEHLER *)
+	MONPAR : BOOL := 0; (* MONIC PAREMETRIERUNG IM BETRIEB *)
+	MonStatus : ARRAY[0..4] OF USINT; (* monic status message *)
+	MONZ_D : BOOL := 0; (* MONIC ignition voltage difference*)
+	MONZ_H : BOOL := 0; (* MONIC ignition voltage too high*)
+	MONZ_M : BOOL := 0; (* MONIC ignition voltage average*)
+	MONZ_N : BOOL := 0; (* MONIC ignition voltage too low*)
+	OUT_MO : OUT_MO_Struct;
+	Para : PARA_MO_Struct;
+	ParaFactoryDefault : PARA_MO_Struct := (0);
+	pm : PARA_MO_Struct;
+	TrigVolt : USINT; (* tirgger voltage for volt. measure *)
+	ucEAvgVolt : USINT; (* event average cylinder voltage *)
+	ucEDifVolt : USINT; (* event cylinder voltage difference *)
+	ucEMaxVolt : USINT; (* event maximum cylinder voltage *)
+	ucEMinVolt : USINT; (* event minimum cylinder voltage *)
+	ucEV_Zyl : ARRAY[0..24] OF USINT; (* event actual cylinder voltage *)
+	ucMonicCommErrCount : USINT; (* counter comunication error monic *)
+	usV_Zyl : ARRAY[0..24] OF UINT; (* ignition voltage for each cylinder *)
+	xEngtype : EngType; (*FB for Engine type specific values*)
+	ZylZahl : USINT;
+	FireOrder : ARRAY[0..24] OF USINT;
+	bNoInitDetected : BOOL := FALSE; (*allways true, except 1cycle on init up*)
+	ucCountG : USINT;
+END_VAR

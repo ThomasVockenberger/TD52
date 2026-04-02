@@ -1,0 +1,115 @@
+VAR
+	AmmSeqCamSign : AmmSequence;
+	AmmSeqCanErrRate : AmmSequence;
+	AmmSeqConfigErr : AmmSequence;
+	AmmSeqElectrTemp : AmmSequence;
+	AmmSeqFwErr : AmmSequence;
+	AmmSeqHwErr : AmmSequence;
+	AmmSeqMORISErr : AmmSequence;
+	AmmSeqParaErr : AmmSequence;
+	AmmSeqSAFIComErr : AmmSequence;
+	AmmSeqTriggerSign : AmmSequence;
+	AmmSeqWrongVers : AmmSequence;
+	bAmmSeqClkP : BOOL;
+	bCamSign : ARRAY[0..24] OF BOOL;
+	bCanErrRate : ARRAY[0..24] OF BOOL;
+	bConfigErr : ARRAY[0..24] OF BOOL;
+	bElectrTemp : ARRAY[0..24] OF BOOL;
+	bFwError : ARRAY[0..24] OF BOOL;
+	bHwError : ARRAY[0..24] OF BOOL;
+	bIPDeviation : ARRAY[0..24] OF BOOL;
+	bMORISErr : ARRAY[0..24] OF BOOL;
+	bParaErr : ARRAY[0..24] OF BOOL;
+	bToggle : BOOL;
+	bToggle_Old : ARRAY[0..24] OF BOOL;
+	bTriggerSign : ARRAY[0..24] OF BOOL;
+	bVersionMonAct : BOOL;
+	bWrongVers : ARRAY[0..24] OF BOOL;
+	TOF_VersMon : TOF;
+	TON_100msTick : TON;
+	TON_SecondTick : TON;
+	ucCylIndex : USINT;
+	ucNodeCount : USINT;
+	ucNrOfFaults : USINT;
+	ucResetState : USINT;
+	ucTimingCounter : USINT;
+	usCamErrCnt : ARRAY[0..24] OF UINT;
+	usErrZyklOld : UINT;
+	usEventSum : UINT;
+	usTolZZPOld : UINT;
+	usTriggerErrCnt : ARRAY[0..24] OF UINT;
+	bParaSendOK : BOOL;
+	SAFI_tPI_tPIopenH_old : ARRAY[0..12] OF tPIopen;
+	ucSAFIPIParaSend : USINT;
+	SAFI_tPI_tPIopenL_old : ARRAY[0..12] OF tPIopen;
+	usEventSum2 : UINT;
+	bParaSendOK2 : BOOL;
+	ucReDoCount2 : USINT;
+	ucToggle : USINT;
+	TON_50msTick : TON;
+	TON_CANGo : TON;
+	AmmSeqPBCMemBurst : AmmSequence;
+	AmmSeqPBCCPSSat : AmmSequence := (0); (*Amm sequence for CPS saturation*)
+	AmmSeqPBCCompLineCheck : AmmSequence;
+	AmmSeqPBCNegVoltCheck : AmmSequence;
+	AmmSeqPBCNegPresCheck : AmmSequence;
+	AmmSeqPBCPresSlopeCheck : AmmSequence;
+	AmmSeqPBCSlowDriftCheck : AmmSequence;
+	AmmSeqPBCConfNotOK : AmmSequence;
+	AmmSeqPBCInvalidPar : AmmSequence;
+	AmmSeqPBCSensErr : AmmSequence;
+	ssPBCMemBurst : ARRAY[0..24] OF INT;
+	bTEST_BURST : ARRAY[0..24] OF BOOL;
+	bTEST_CPSSat : ARRAY[0..24] OF BOOL := [25(0)]; (*Test flags for the CPS saturation*)
+	bPBCSensErr : ARRAY[0..24] OF BOOL;
+	TON_SensErr : ARRAY[0..24] OF TON;
+	bPBCSensErrTest : ARRAY[0..24] OF BOOL;
+	ssMotorzyklus : INT;
+	ssPBCMemBurstLimit : INT;
+	usCount : UINT;
+	ucCylNum : USINT;
+	usResetCnt : UINT;
+	ssTimingOld : INT;
+	bTrigger_ITPSend : BOOL;
+	SAFI_tPI_Mode_old : ARRAY[0..24] OF UINT;
+	iPICurGradDiff : ARRAY[0..24] OF INT;
+	iCntPIclodet : ARRAY[0..24] OF INT;
+	bTripPIclodet : BOOL;
+	iPICurGradOld : ARRAY[0..24] OF INT;
+	bCloseErr : ARRAY[0..24] OF BOOL;
+	AmmSeqCloseErr : AmmSequence;
+	TON_CloseErrReset : TON;
+	TON_Load_Delay : TON;
+	iCntPInoclodet : ARRAY[0..24] OF USINT;
+	tPIclodet5_old : ARRAY[0..12] OF tPIclosdet5;
+	rP_Red_SAComErr_Norm : REAL; (*Power redution if half or more SAFI have a CAN communication failure*)
+	rP_Red_SARebootErr_Norm : REAL; (*Power reduction if a SAFI rebooted too often*)
+	bTPIN_SAFIReboot : ARRAY[0..12,0..2] OF BOOL; (*Input of timer for max allowed of SAFI reboots rate*)
+	iCnt_SAFIReboot : ARRAY[0..12] OF USINT; (*Counter for timer for max allowed SAFI reboot rate*)
+	xTP_SAFIReboot : ARRAY[0..12,0..2] OF TP;
+	xF_TRIG_SAFIReboot : ARRAY[0..12] OF F_TRIG;
+	xTP_P_Red_SAFIReboot : TP;
+	iCnt_IndexDim2 : USINT;
+	iCnt_FaultsSAFIComErr : USINT;
+	bSAFISendAllPara : BOOL;
+	bSAFISendAllPIParaTC1 : BOOL;
+	ssTiming : ARRAY[0..24] OF INT;
+	ucSAFIModeOld : ARRAY[0..12] OF USINT;
+	ucSAFIParaSend : USINT;
+	bSA_FrozenAltern : ARRAY[0..24] OF BOOL;
+	rT_EG_Cyl_old1 : ARRAY[0..24] OF REAL;
+	rT_EG_Cyl_old2 : ARRAY[0..24] OF REAL;
+	xTON_T_EG_CylFrozen : ARRAY[0..24] OF TON;
+	xTON_T_EG_CylAltern : ARRAY[0..24] OF TON;
+	bSA_T_EGCylFrozen : ARRAY[0..24] OF BOOL; (*Exhaust gas temperature forzen*)
+	bSA_T_EGCylAltern : ARRAY[0..24] OF BOOL; (*Exhaust gas temperature alternating*)
+	AmmSeqSAFIFrozenAltern : AmmSequence;
+	xTON_SAFIFroAltReset : TON;
+	bSA_FrozenAltern_All : BOOL;
+	xTON_SACfgDone : TON; (*Timer to set A3333 if a SAFI is not in operation mode for too long*)
+	iNum_UpCurKlsOld : USINT; (*Curve upload memory allocation - Percentage of KLS data [%] - Old*)
+	bNoKLS21IgnMon : ARRAY[0..24] OF BOOL; (*Para KLS21 ignition monitoring is rue but device is not a KLS21*)
+	AmmSeqNoKLS21IgnMon : AmmSequence;
+	SAFI_tPI_tPIopenH_diff : ARRAY[0..12] OF INT;
+	SAFI_tPI_tPIopenL_diff : ARRAY[0..12] OF INT;
+END_VAR

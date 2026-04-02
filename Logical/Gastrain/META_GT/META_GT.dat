@@ -1,0 +1,183 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2025
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V03.99.00.00	06.03.2013	Weitzer		generated for modular software	 
+; V03.99.02.00	29.05.2013	Zengerer	initial dependencies prepared
+; V04.00.00.00	30.01.2014	Denk		new version
+; V04.00.01.00  24.03.2014	Ze/De	 	VIS OPC Interface change-> VIS dependency added
+; V04.00.02.00	20.06.2014	Denk		new version
+; V04.01.00.00	22.07.2014	Denk		Para task update, gas counter, MSS(CH4,GD,SD)
+; V04.01.01.00 	07.10.2014	Denk		Adicom Pre-chamber gas compressor logic added
+; V04.01.02.00 	14.10.2014	Denk		Bugfix O2 max activation
+; V04.03.00.00 	08.01.2014	Denk		Porting J920 for XT4 and Bugfix 
+; V04.03.01.00	02.11.2015	Zengerer 	MANDATORYMODULE statement, version + dependencies changed (IF change with array index 0 for compatibility with c-tasks)		
+; V04.05.00.00  21.01.2017  Denk		SWAT releases 1,2,3,4. Power reduction gas pressure min.
+; V04.05.01.00	24.10.2017	Zingerle	Reduction with difference pressure minimum, implemented
+; V04.05.02.00	01.03.2018	Denk		Reduction with difference pressure minimum, Spec. change and validation changes
+; V04.05.03.00	23.03.2018	Denk		main gas differential pressure power reduction 1 and 2, limit value: moved to PermGT2
+; V04.05.04.00	29.03.2018	Denk		PermGT2, spare values added
+; V04.06.00.00	20.09.2018	Perktold	interfaces and functions for fast start added
+; V04.07.00.00	30.04.2018	Denk	 	SWAT Rel.5, change A2289 to W2570
+;										SWAT Rel.5, W3445 delay time
+;										SWAT Rel.5, A1095 deleted for type9
+;										SWAT Rel.5, A1085 delay time for type 9 changed to 3s
+;										SWAT Rel.5, deactivation of A3376 when pressure based control is active
+;				04.07.2018	Denk		Bugfix, Anzeige Leistungsreduktion Gasdruck min.
+;				24.09.2018	Denk		Avoid second start of gas safety device (DPFR-20180821-0202)
+;				05.02.2019	Denk		Bugfix, PermGT and PermGT2: ModulName STRING[9] changed to STRING[35]
+;				15.02.2019	Denk		Bugfix, when parameter 11363 is TRUE, AutGas was not active after PLC warmstart. 
+; V04.07.00.00	22.03.2019	Zengerer 	Several new features and TKE customisation variants implemented from Spec Gastrain Requisition 2018
+; V04.09.00.00	5.6.-16.1.2020	Zengerr iGasTrain_Type, tiGT_TestDuration
+; 				27.06.2019	Denk		Additional measurements in natural gas train
+; V04.10.00.00	05.08.2020  Zuschnig	Added control of dome blow off valve
+;				08.12.2020	Denk		Bugfix, xTON_GDMA2() changed to xTON_GDMA2_VISA() 
+;       	    10.12.2020  Zuschnig	Included power reduction for Tecjet differential pressure
+;				21.01.2021  Zuschnig	Bugfix, Power reduction suction pressure (swap X1<->X2)
+;				28.01.2021	Denk		Alarm deactivation when DGS/WinMOD Simulation is active (2261, 3376, 3377, 3444, 3445).
+; V04.11.00.00	22.06.2021	Arnold		J6 data center application
+;				21.10.2021	Zuschnig	Update prechamber gas train power reduction
+;				20.01.2022  Zuschnig	Update gas rail pressure power reduction
+;				28.01.2022	Perktold	included plant controller upgrade
+;				11.02.2022	Zuschnig	Remove engine demand for release of upstream gas valve
+;				02.03.2022	Zuschnig	Include CH4 signal via Bus from customize modul
+;				17.03.2022	Zuschnig	Use standard label from customized modul for gasmixing setpoint
+;               18.03.2022  Zuschnig    Rework of gas counter impulse prescaler	
+;				18.03.2022	Zuschnig	Removed fixed spare parameter and customized analog input			
+; V04.12.00.00	23.08.2022	Zuschnig	Initialize standard value for power redcution gas rail pressure	
+;				07.11.2022	Zuschnig	Include gas pressure min/max from customized module for gas train 1		
+;				22.01.2023	Zuschnig	Include H2 measurement 	
+; V04.13.00.00  20.06.2023  Zuschnig	Added standardized AI input for gas mixing ratio
+;				30.11.2023	Goenczi		puffmini hold gas valve for GCB opening by Customer control
+;				05.12.2023	Zuschnig	Update prechamber gas train power reduction in island mode
+;				06.12.2023	Zuschnig	Replace IN_GT.bSA_PI_Active with Para.bSA_PI_Active
+;				28.02.2024	Zuschnig	Include Para.bGCActive for setting A3326
+; V04.14.00.00  09.07.2024  Schmidt		T6L version during load acceptance: reduce limit difference pressure prechamber minimum
+;				06.11.2024	Kafka		fast gastrain for Gen2 T9
+;				22.11.2024	Schmidt		Added pre chamber gas bypass valve logic (load acceptance improvements)
+;				28.11.2024	Nagy		Modified A1084, A1085, A3003 - 2024-222 GasTrain Desensitization
+;				11.12.2024	Zuschnig	Prechamber gas train power reduction in island mode - W9387 only if reduced power < 1
+;				23.02.2025	Tinello		Gas leakage check moved to SafetyPLC
+; V04.25.00.00	30.12.2025	Tinello		Logic modified because of SafetyPLC
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+; OBEY XML FORMATING RULES!
+;
+; Outstandings:
+; ------------
+;CHECK tiGT_TestDuration' MIN='1' MAX='120' 
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>GT</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.25.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"	<PARA1 Name='rN_EngStart_LimHi' MIN='50.0' MAX='2200.0' />"
+"	<PARA2 Name='iEng_Motortype ' MIN='208' MAX='920' />"
+"	<PARA3 Name='iGasTrain_Type' MIN='1' MAX='4' />"
+"	<PARA4 />"
+"	<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Statement, if engine operation is also allowed without this module (FALSE) or if this module´s parameter check passing is mandatory (TRUE)
+"<MANDATORYMODULE>TRUE</MANDATORYMODULE>"
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_GT</DATAMODULE>"
+"	<DATAMODULE>perm_GT</DATAMODULE>"
+"	<DATAMODULE>perm_GT2</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='AB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='AG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='CU' VERSION='04.07.02.00' />"
+"	<DEPENDENCY MODULE='EC' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='EG' VERSION='04.25.00.00' />"
+"	<DEPENDENCY MODULE='EX' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='HA' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='IG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='OP' VERSION='04.13.00.00' />"
+"	<DEPENDENCY MODULE='SY' VERSION='04.04.00.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='CH' VERSION='04.04.00.00' />"
+"	<DEPENDENCY MODULE='GD' VERSION='04.10.00.00' />"
+"	<DEPENDENCY VISVERSION='02.15.00.00' />" 			;Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	 Control and monitoring Gastrain	"
+"	</General>	"
+""
+"	<F1 Name='Special gas' LastModified='04.00.00.00'>"
+"	 Monitoring and control of special gas engines (messages, power reduction).	"
+"	</F1>"
+"	<F2 Name='Biogas' LastModified='04.00.00.00'>"
+"	 Control and monitoring gas blower/flare.	"
+"	</F2>"
+"	<F3 Name='Gastrain and prechamber gas train' LastModified='04.00.00.00'>"
+"	 Control gastrain and prechamber gastrain regarding pressure limits.  "
+"	</F3>"
+"	<F4 Name='Gas mixing' LastModified='04.00.00.00'>"
+"	 Control gas mixing with flaps/valves or Tecjet.  "
+"	</F4>"
+"	<F5 Name='Data calculation' LastModified='04.00.00.00'>"
+"	 Calculaltion of operation/normal cubic meter and gas volume correction factor.	"
+"	</F5>"
+"	<F6 Name='Gastrain testing' LastModified='04.00.00.00'>"
+"	 Testing Gastrain 1 and 2 (Leak tightness).	"
+"	</F6>"
+"	<F7 Name='Gas valves' LastModified='04.00.00.00'>"
+"	 Control and release gas valves.	"
+"	</F7>"
+"	<F8 Name='Pre-chamber gas compressor' LastModified='04.00.00.00'>"
+"	 Control Pre-chamber gas compressor.	"
+"	</F8>"
+"	<F9 Name='Deflagration protection' LastModified='04.00.00.00'>"
+"	 Deflagration protection for engine type 6 and 9.	"
+"	</F9>"
+""
+"	<Info>"
+"	 V04.01.00	Gas counter parameters added 	"
+"	 V04.03.00	J920 functionalities added 	"
+" 	 V04.05.00	Serienvorbereitung Gasmischung mit tCustAnaIn[1] oder IN_GT.rGT_RatioMix_Set "
+"    V04.05.00	version + dependencies changed (IF change with array index 0 for compatibility with c-tasks)	"
+"    V04.05.00  SWAT Desensitization changes for type9	"
+"    V04.07.00  TKE customisation variants integrated	"
+"    V04.09.00  Additional Measurements in natural gas train, META Gas Valve handling	"
+"	</Info>"
+""
+"	<Customized LastModified='4.07.0.0'>	"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

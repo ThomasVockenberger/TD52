@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="OpcUA" PackageType="OpcUA" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="OPC UA Default View Configuration file">OCU.uad</Object>
+    <Object Type="File">OpcUaMap.uad</Object>
+  </Objects>
+</Package>

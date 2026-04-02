@@ -1,0 +1,7 @@
+VAR
+	xTOF_Bloc_SY_ProtTest : TOF;
+END_VAR
+
+VAR CONSTANT
+
+END_VAR

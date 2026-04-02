@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.14.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="SAFI1 FW 7.19">safi_719.br</Object>
+    <Object Type="File" Description="SAFI2 KLS FW 7.73 proprietary code">K773Prop.br</Object>
+    <Object Type="File" Description="SAFI2 KLS FW 7.73 FPGA">K773Fpga.br</Object>
+    <Object Type="File" Description="SAFI2 KLS FW 7.73">K773Ppc.br</Object>
+    <Object Type="File" Description="SAFI2 DMR FW 7.55 proprietary code">D755Prop.br</Object>
+    <Object Type="File" Description="SAFI2 DMR FW 7.55 FPGA">D755Fpga.br</Object>
+    <Object Type="File" Description="SAFI2 DMR FW 7.55">D755Ppc.br</Object>
+    <Object Type="File" Description="KLS21 FW 20.04">K21F2004.br</Object>
+    <Object Type="File" Description="SAFI3 FW 30.07">SA3F3007.br</Object>
+  </Objects>
+</Package>

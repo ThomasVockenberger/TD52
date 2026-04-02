@@ -1,0 +1,71 @@
+bAMM_Lou_CL,POE\ERV_Lou\ERV_Lou.GB,2,OUT,47,13,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING - Room ventilation failure - Louvre closed signal O
+bAMM_Lou_CL_NV,POE\ERV_Lou\ERV_Lou.GB,2,OUT,51,9,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING - Room ventilation failure - Louvre closed signal n
+bAMM_Lou_OP,POE\ERV_Lou\ERV_Lou.GB,2,OUT,2,13,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING - Room ventilation failure - Louvre opened signal O
+bAMM_Lou_OP_NV,POE\ERV_Lou\ERV_Lou.GB,2,OUT,8,9,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING - Room ventilation failure - Louvre opened signal n
+bAMM_Lou_PC,POE\ERV_Lou\ERV_Lou.GB,5,OUT,160,13,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,WARNING - Room ventilation failure - Louvre plausibility ch
+bOUT_Lou_OK,POE\ERV_Lou\ERV_Lou.GB,11,OUT,32,14,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,CPU OUT: Engine room ventilation - Louvre OK
+bOUT_Lou_OK_PC,POE\ERV_Lou\ERV_Lou.GB,8,OUT,180,10,Write,,BOOL,,,VAR_OUTPUT,LOCAL,,CPU OUT: Engine room ventilation - Louvre plausibility chec
+iOUT_Lou_OK_1m_ET,POE\ERV_Lou\ERV_Lou.GB,2,OUT,75,8,Write,,DINT,,,VAR_OUTPUT,LOCAL,,CPU OUT: Engine room ventilation - Louvre not OK - Elipsed 
+PARA_Lou_Active,POE\ERV_Lou\ERV_Lou.GB,2,IN,56,17,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Lou existing
+PARA_Lou_Active,POE\ERV_Lou\ERV_Lou.GB,2,IN,21,17,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Lou existing
+PARA_Lou_Active,POE\ERV_Lou\ERV_Lou.GB,4,IN,164,8,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Lou existing
+PARA_Lou_Active,POE\ERV_Lou\ERV_Lou.GB,10,IN,146,8,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,PARA: Lou existing
+sbColdMode_Active,POE\ERV_Lou\ERV_Lou.GB,1,IN,103,6,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Cold mode is active
+sbColdMode_Active,POE\ERV_Lou\ERV_Lou.GB,1,IN,110,6,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Cold mode is active
+sbColdMode_Active,POE\ERV_Lou\ERV_Lou.GB,2,IN,76,8,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Cold mode is active
+sbColdMode_Active,POE\ERV_Lou\ERV_Lou.GB,10,IN,120,6,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Cold mode is active
+sbColdMode_Active,POE\ERV_Lou\ERV_Lou.GB,10,IN,135,6,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Cold mode is active
+sbGasValves_Closed,POE\ERV_Lou\ERV_Lou.GB,1,IN,94,6,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Gasvalves - All closed
+sbGasValves_Closed,POE\ERV_Lou\ERV_Lou.GB,1,IN,87,6,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Gasvalves - All closed
+sbGasValves_Closed,POE\ERV_Lou\ERV_Lou.GB,10,IN,154,6,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Gasvalves - All closed
+sbGasValves_Closed,POE\ERV_Lou\ERV_Lou.GB,10,IN,115,6,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Gasvalves - All closed
+sbN_Standstill,POE\ERV_Lou\ERV_Lou.GB,4,IN,166,11,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Actual engine speed <  80rpm
+sbN_Standstill,POE\ERV_Lou\ERV_Lou.GB,7,IN,420,11,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Actual engine speed <  80rpm
+sbR_TRIG_Lou_PC_CL,POE\ERV_Lou\ERV_Lou.GB,1,OUT,296,14,Write,,SAFEBOOL,,,VAR,LOCAL,,R_TRIG: Engine room ventilation - Plausibility check for cl
+sbR_TRIG_Lou_PC_CL,POE\ERV_Lou\ERV_Lou.GB,4,IN,304,5,Read,,SAFEBOOL,,,VAR,LOCAL,,R_TRIG: Engine room ventilation - Plausibility check for cl
+sbR_TRIG_Lou_PC_CL,POE\ERV_Lou\ERV_Lou.GB,4,IN,305,5,Read,,SAFEBOOL,,,VAR,LOCAL,,R_TRIG: Engine room ventilation - Plausibility check for cl
+sbR_TRIG_Lou_PC_OP,POE\ERV_Lou\ERV_Lou.GB,1,OUT,293,13,Write,,SAFEBOOL,,,VAR,LOCAL,,R_TRIG: Engine room ventilation - Plausibility check for op
+sbR_TRIG_Lou_PC_OP,POE\ERV_Lou\ERV_Lou.GB,4,IN,303,4,Read,,SAFEBOOL,,,VAR,LOCAL,,R_TRIG: Engine room ventilation - Plausibility check for op
+sbR_TRIG_Lou_PC_OP,POE\ERV_Lou\ERV_Lou.GB,4,IN,306,4,Read,,SAFEBOOL,,,VAR,LOCAL,,R_TRIG: Engine room ventilation - Plausibility check for op
+sbSafeInputOK_ERV_Lou_CL,POE\ERV_Lou\ERV_Lou.GB,2,IN,53,12,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe input OK - DI Engine room ventilation - Louvre closed
+sbSafeInputOK_ERV_Lou_OP,POE\ERV_Lou\ERV_Lou.GB,2,IN,10,12,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,Safe input OK - DI Engine room ventilation - Louvre opened
+sbSL_OK,POE\ERV_Lou\ERV_Lou.GB,11,OUT,38,19,Write,,SAFEBOOL,,,VAR_OUTPUT,LOCAL,,Safety loop OK
+sbSL_OK_Lou_CL,POE\ERV_Lou\ERV_Lou.GB,2,OUT,71,11,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Louvre closed
+sbSL_OK_Lou_CL,POE\ERV_Lou\ERV_Lou.GB,10,IN,73,9,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Louvre closed
+sbSL_OK_Lou_OP,POE\ERV_Lou\ERV_Lou.GB,2,OUT,28,11,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Louvre opened
+sbSL_OK_Lou_OP,POE\ERV_Lou\ERV_Lou.GB,10,IN,44,9,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Louvre opened
+sbSL_OK_Lou_PC,POE\ERV_Lou\ERV_Lou.GB,5,OUT,162,11,Write,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Louvre plausibility check
+sbSL_OK_Lou_PC,POE\ERV_Lou\ERV_Lou.GB,10,IN,74,9,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Louvre plausibility check
+sbSL_OK_Lou_PC,POE\ERV_Lou\ERV_Lou.GB,11,IN,389,0,Read,,SAFEBOOL,,,VAR,LOCAL,,Safety loop OK - Louvre plausibility check
+sDI_ERV_Lou_CL,POE\ERV_Lou\ERV_Lou.GB,1,IN,111,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Louvre closed
+sDI_ERV_Lou_CL,POE\ERV_Lou\ERV_Lou.GB,4,IN,212,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Louvre closed
+sDI_ERV_Lou_CL,POE\ERV_Lou\ERV_Lou.GB,4,IN,211,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Louvre closed
+sDI_ERV_Lou_CL,POE\ERV_Lou\ERV_Lou.GB,4,IN,336,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Louvre closed
+sDI_ERV_Lou_CL,POE\ERV_Lou\ERV_Lou.GB,7,IN,248,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Louvre closed
+sDI_ERV_Lou_CL,POE\ERV_Lou\ERV_Lou.GB,7,IN,406,47,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Louvre closed
+sDI_ERV_Lou_CL,POE\ERV_Lou\ERV_Lou.GB,7,IN,254,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Louvre closed
+sDI_ERV_Lou_CL,POE\ERV_Lou\ERV_Lou.GB,10,IN,134,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Louvre closed
+sDI_ERV_Lou_CL,POE\ERV_Lou\ERV_Lou.GB,10,IN,116,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Louvre closed
+sDI_ERV_Lou_OP,POE\ERV_Lou\ERV_Lou.GB,1,IN,102,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Louvre opened
+sDI_ERV_Lou_OP,POE\ERV_Lou\ERV_Lou.GB,4,IN,190,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Louvre opened
+sDI_ERV_Lou_OP,POE\ERV_Lou\ERV_Lou.GB,4,IN,165,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Louvre opened
+sDI_ERV_Lou_OP,POE\ERV_Lou\ERV_Lou.GB,4,IN,311,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Louvre opened
+sDI_ERV_Lou_OP,POE\ERV_Lou\ERV_Lou.GB,7,IN,394,47,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Louvre opened
+sDI_ERV_Lou_OP,POE\ERV_Lou\ERV_Lou.GB,7,IN,232,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Louvre opened
+sDI_ERV_Lou_OP,POE\ERV_Lou\ERV_Lou.GB,7,IN,250,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Louvre opened
+sDI_ERV_Lou_OP,POE\ERV_Lou\ERV_Lou.GB,10,IN,125,9,Read,,SAFEBOOL,,,VAR_INPUT,LOCAL,,DI Engine room ventilation - Louvre opened
+xDI_MON_ERV_Lou_CL,POE\ERV_Lou\ERV_Lou.GB,0,,69,43,,,,,,VAR,FB,,FuB
+xDI_MON_ERV_Lou_OP,POE\ERV_Lou\ERV_Lou.GB,0,,20,43,,,,,,VAR,FB,,FuB
+xET_TOF1,POE\ERV_Lou\ERV_Lou.GB,0,,27,55,,,,,,VAR,FB,,FuB
+xET_TOF2,POE\ERV_Lou\ERV_Lou.GB,0,,70,55,,,,,,VAR,FB,,FuB
+xKeepAMM_2s_W1,POE\ERV_Lou\ERV_Lou.GB,3,,448,45,,,,,,VAR,FB,,FuB
+xR_TRIG_1,POE\ERV_Lou\ERV_Lou.GB,0,,291,29,,,,,,VAR,FB,,FuB
+xR_TRIG_2,POE\ERV_Lou\ERV_Lou.GB,0,,301,29,,,,,,VAR,FB,,FuB
+xR_TRIG_3,POE\ERV_Lou\ERV_Lou.GB,6,,424,29,,,,,,VAR,FB,,FuB
+xRS_S_1,POE\ERV_Lou\ERV_Lou.GB,6,,419,3,,,,,,VAR,FB,,FuB
+xRS_S_2,POE\ERV_Lou\ERV_Lou.GB,6,,429,3,,,,,,VAR,FB,,FuB
+xRS_S_3,POE\ERV_Lou\ERV_Lou.GB,6,,189,32,,,,,,VAR,FB,,FuB
+xTON_S_1,POE\ERV_Lou\ERV_Lou.GB,3,,284,65,,,,,,VAR,FB,,FuB
+xTON_S_2,POE\ERV_Lou\ERV_Lou.GB,3,,352,65,,,,,,VAR,FB,,FuB
+xTON_S_3,POE\ERV_Lou\ERV_Lou.GB,6,,241,65,,,,,,VAR,FB,,FuB
+xTON_S_4,POE\ERV_Lou\ERV_Lou.GB,6,,265,65,,,,,,VAR,FB,,FuB

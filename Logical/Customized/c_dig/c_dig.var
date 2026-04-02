@@ -1,0 +1,4 @@
+VAR
+	bConnectYourBitHere : BOOL := FALSE; (*Dummy Bit to be replaced by plant specific variable*)
+	bDigOut_Release_Default : BOOL; (*1=Alle DO sind vordefiniert aktiv, 0= alle DO Parameter werden DISABELED als default*)
+END_VAR

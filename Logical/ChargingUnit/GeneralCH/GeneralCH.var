@@ -1,0 +1,16 @@
+VAR
+	xGR_MAXR_P_Act10 : GR_MAXR := (0); (*FuB*)
+	xGR_MAXR_P_Act50 : GR_MAXR := (0); (*FuB*)
+	xGR_MAXR_P_Act75 : GR_MAXR := (0); (*FuB*)
+	xGR_MAXR_StartSpd : GR_MAXR := (0); (*Engine start speed passed*)
+	xTOF_StartSpd : TOF := (0); (*FuB*)
+	xTON_GCB_On_300 : TON := (0); (*FuB*)
+	xTON_NetP_Island_20 : TON := (0); (*FuB*)
+	xTON_ParaSetupOk : TON := (0); (*FuB*)
+	xTON_P_Act10_60 : TON := (0); (*FuB*)
+	xTON_P_Act10_300 : TON := (0); (*FuB*)
+	xTON_P_Act10_600 : TON := (0); (*FuB*)
+	xTON_P_Act50_30 : TON := (0); (*FuB*)
+	xTON_P_Act75_02 : TON := (0); (*FuB*)
+	xTON_Sys_Run : TON := (0); (*FuB*)
+END_VAR

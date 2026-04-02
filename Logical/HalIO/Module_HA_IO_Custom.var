@@ -1,0 +1,13 @@
+(********************************************************************
+* COPYRIGHT -- INNIO Company
+********************************************************************
+* Package: HAL_IO
+* File: Module_HA_IO_Custom.var
+* Author: Automatically generated code
+* Created: 21.03.2013
+*********************************************************************
+* Additional custom variables of package HAL_IO
+********************************************************************)
+VAR
+	
+END_VAR

@@ -1,0 +1,238 @@
+(* AmmBase *)
+VAR_CONFIG
+	Cyclic#4.AmmBase::OUT_AB.tAB2GT AT %Q.Cyclic#5.Gastrain::IN_GT.tAB2GT; (*V4.05 changed 2-->5*)
+END_VAR
+(* AuxiliariesGeneral *)
+VAR_CONFIG
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bEng_Start AT %Q.Cyclic#2.Gastrain::IN_GT.bEng_Start_TC2; (*V4.05 new*)
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bEng_Start AT %Q.Cyclic#5.Gastrain::IN_GT.bEng_Start;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bMsg1052 AT %Q.Cyclic#5.Gastrain::IN_GT.bMsg1052;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bMsg1053 AT %Q.Cyclic#5.Gastrain::IN_GT.bMsg1053;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bMsg1054 AT %Q.Cyclic#5.Gastrain::IN_GT.bMsg1054;
+END_VAR
+(* ChargingUnit *)
+VAR_CONFIG
+	Cyclic#2.ChargingUnit::OUT_CH.rPr_Ch_P2s_A AT %Q.Cyclic#2.Gastrain::IN_GT.rPr_Ch_P2s_A; (*V04.03.00.00*)
+	Cyclic#2.ChargingUnit::OUT_CH.rPr_Ch_P2s_Avg AT %Q.Cyclic#2.Gastrain::IN_GT.rPr_Ch_P2s_Avg; (*V04.03.00.00*)
+	Cyclic#2.ChargingUnit::OUT_CH.rPr_Ch_P2s_Avg_UF AT %Q.Cyclic#2.Gastrain::IN_GT.rPr_Ch_P2s_Avg_UF; (*V04.03.00.00*)
+	Cyclic#2.ChargingUnit::OUT_CH.rPr_Ch_P2s_B AT %Q.Cyclic#2.Gastrain::IN_GT.rPr_Ch_P2s_B; (*V04.03.00.00*)
+END_VAR
+(* Customized *)
+VAR_CONFIG
+	Cyclic#5.Customized::OUT_CU.bOptGT_RatioMix_Set AT %Q.Cyclic#5.Gastrain::IN_GT.bOptGT_RatioMix_Set; (*V4.5 new	 *)
+	Cyclic#5.Customized::OUT_CU.rCust_SparePara AT %Q.Cyclic#5.Gastrain::IN_GT.rCust_SparePara;
+	Cyclic#5.Customized::OUT_CU.rGT_RatioMix_Set AT %Q.Cyclic#5.Gastrain::IN_GT.rGT_RatioMix_Set; (*V4.5 new	 	 *)
+	Cyclic#5.Customized::OUT_CU.rCH4_Bus AT %Q.Cyclic#5.Gastrain::IN_GT.rCH4_Bus;
+	Cyclic#5.Customized::OUT_CU.tCU2GT AT %Q.Cyclic#5.Gastrain::IN_GT.tCU2GT; (*V4.07 new*)
+	Cyclic#5.Customized::OUT_CU.bCH4_Bus_Active AT %Q.Cyclic#5.Gastrain::IN_GT.bCH4_Bus_Active;
+	Cyclic#5.Customized::OUT_CU.bCV_Bus_Active AT %Q.Cyclic#5.Gastrain::IN_GT.bCV_Bus_Active;
+	Cyclic#5.Customized::OUT_CU.rCV_Bus AT %Q.Cyclic#5.Gastrain::IN_GT.rCV_Bus;
+	Cyclic#5.Customized::OUT_CU.bGT_CalibrateActive_Bus AT %Q.Cyclic#5.Gastrain::IN_GT.bGT_CalibrateActive_Bus;
+	Cyclic#5.Customized::OUT_CU.bRelGasPlant_Bus_Active AT %Q.Cyclic#5.Gastrain::IN_GT.bRelGasPlant_Bus_Active;
+	Cyclic#5.Customized::OUT_CU.bRelGasPlant_Bus AT %Q.Cyclic#5.Gastrain::IN_GT.bRelGasPlant_Bus;
+	Cyclic#5.Customized::OUT_CU.bH2_Bus_Active AT %Q.Cyclic#5.Gastrain::IN_GT.bH2_Bus_Active;
+	Cyclic#5.Customized::OUT_CU.rH2_Bus AT %Q.Cyclic#5.Gastrain::IN_GT.rH2_Bus;
+	Cyclic#5.Customized::OUT_CU.bH2_Bus_MSF AT %Q.Cyclic#5.Gastrain::IN_GT.bH2_Bus_MSF;
+	Cyclic#5.Customized::OUT_CU.bGCB_by_Customer AT %Q.Cyclic#2.Gastrain::IN_GT.bGCB_by_Customer;
+	Cyclic#5.Customized::OUT_CU.bPr_GT1_Max_Cust AT %Q.Cyclic#5.Gastrain::IN_GT.bPr_GT1_Max_Cust;
+	Cyclic#5.Customized::OUT_CU.bPr_GT1_Min_Cust AT %Q.Cyclic#5.Gastrain::IN_GT.bPr_GT1_Min_Cust;
+END_VAR
+(* EngineController *)
+VAR_CONFIG
+	Cyclic#4.EngineController::OUT_EC.bGT_Check4FastStart AT %Q.Cyclic#5.Gastrain::IN_GT.bGT_Check4FastStart;
+	Cyclic#4.EngineController::OUT_EC.bLeanox_Active AT %Q.Cyclic#5.Gastrain::IN_GT.bLeanox_Active; (*V4.05 changed 2-->5*)
+	Cyclic#4.EngineController::OUT_EC.bLeanox_Man AT %Q.Cyclic#5.Gastrain::IN_GT.bLeanox_Man;
+	Cyclic#5.EngineController::OUT_EC.bLR_GasStop AT %Q.Cyclic#5.Gastrain::IN_GT.bLR_GasStop;
+	Cyclic#4.EngineController::OUT_EC.bPBC_Active AT %Q.Cyclic#5.Gastrain::IN_GT.bPBC_Active; (*V4.05*)
+	Cyclic#2.EngineController::OUT_EC.bSCO_Rel_GV1 AT %Q.Cyclic#2.Gastrain::IN_GT.bSCO_Rel_GV1;
+	Cyclic#2.EngineController::OUT_EC.bSCO_Rel_GV2 AT %Q.Cyclic#2.Gastrain::IN_GT.bSCO_Rel_GV2;
+	Cyclic#2.EngineController::OUT_EC.mp_a AT %Q.Cyclic#2.Gastrain::IN_GT.mp_a;
+	Cyclic#2.EngineController::OUT_EC.rP_el_max_red AT %Q.Cyclic#2.Gastrain::IN_GT.rP_el_max_red;
+	Cyclic#2.EngineController::OUT_EC.rPr_Leanox_Set AT %Q.Cyclic#2.Gastrain::IN_GT.rPr_Leanox_Set;
+	Cyclic#5.EngineController::OUT_EC.rPumpQuotient AT %Q.Cyclic#5.Gastrain::IN_GT.rPumpQuotient;
+	Cyclic#2.EngineController::OUT_EC.tGrC_DCon AT %Q.Cyclic#2.Gastrain::IN_GT.tGrC_DCon;
+	Cyclic#2.EngineController::OUT_EC.bGT_GrC_Bloc AT %Q.Cyclic#2.Gastrain::IN_GT.bGT_GrC_Bloc; (*V04.10.00.00*)
+	Cyclic#2.EngineController::OUT_EC.bGen2_Act AT %Q.Cyclic#2.Gastrain::IN_GT.bGen2_Act; (*V04.11.00.00*)
+	Cyclic#2.EngineController::OUT_EC.rP_el_max_red_PCGT AT %Q.Cyclic#2.Gastrain::IN_GT.rP_el_max_red_PCGT;
+	Cyclic#4.EngineController::OUT_EC.bType6L_GEN1_Island AT %Q.Cyclic#5.Gastrain::IN_GT.bType6L_GEN1_Island;
+	Cyclic#2.EngineController::OUT_EC.bLR_Act_DBOV AT %Q.Cyclic#2.Gastrain::IN_GT.bLR_Act_DBOV;
+	Cyclic#2.EngineController::OUT_EC.rFlow_VR_TJ AT %Q.Cyclic#2.Gastrain::IN_GT.rFlow_VR_TJ;
+END_VAR
+(* EngineGeneral *)
+VAR_CONFIG
+	Cyclic#5.EngineGeneral::OUT_EG.bMsg1031 AT %Q.Cyclic#5.Gastrain::IN_GT.bMsg1031;
+	Cyclic#5.EngineGeneral::OUT_EG.rPr_Baro_Internal AT %Q.Cyclic#2.Gastrain::IN_GT.rPr_Baro_Internal; (*V04.03.00.00*)
+	Cyclic#6.EngineGeneral::OUT_EG.bSafetyPLC_Active AT %Q.Cyclic#5.Gastrain::IN_GT.bSafetyPLC_Active; (*V04.14.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.bSafeOUT_GT1_SafeDevOK AT %Q.Cyclic#5.Gastrain::IN_GT.bSafeOUT_GT1_SafeDevOK; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.bSafeOUT_GT2_SafeDevOK AT %Q.Cyclic#5.Gastrain::IN_GT.bSafeOUT_GT2_SafeDevOK; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.bSafeOUT_GT3_SafeDevOK AT %Q.Cyclic#5.Gastrain::IN_GT.bSafeOUT_GT3_SafeDevOK; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.bSafeOUT_GT4_SafeDevOK AT %Q.Cyclic#5.Gastrain::IN_GT.bSafeOUT_GT4_SafeDevOK; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.bSafeOUT_DCGA_SafeDevOK AT %Q.Cyclic#5.Gastrain::IN_GT.bSafeOUT_DCGA_SafeDevOK; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.bSafeOUT_GT1_SD_Dem_PS AT %Q.Cyclic#5.Gastrain::IN_GT.bSafeOUT_GT1_SD_Dem_PS; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.bSafeOUT_GT2_SD_Dem_PS AT %Q.Cyclic#5.Gastrain::IN_GT.bSafeOUT_GT2_SD_Dem_PS; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.bSafeOUT_GT3_SD_Dem_PS AT %Q.Cyclic#5.Gastrain::IN_GT.bSafeOUT_GT3_SD_Dem_PS; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.bSafeOUT_GT4_SD_Dem_PS AT %Q.Cyclic#5.Gastrain::IN_GT.bSafeOUT_GT4_SD_Dem_PS; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.bSafeOUT_DCGA_SD_Dem_PS AT %Q.Cyclic#5.Gastrain::IN_GT.bSafeOUT_DCGA_SD_Dem_PS; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.bSafeOUT_GV_Open AT %Q.Cyclic#5.Gastrain::IN_GT.bSafeOUT_GV_Open; (*V04.25.00.00*) (*SAFETY PLC*)
+END_VAR
+(* Exhaust *)
+VAR_CONFIG
+	Cyclic#5.Exhaust::OUT_EX.bDemScavVa AT %Q.Cyclic#5.Gastrain::IN_GT.bDemScavVa;
+	Cyclic#5.Exhaust::OUT_EX.bRel_ScavN2 AT %Q.Cyclic#5.Gastrain::IN_GT.bRel_ScavN2;
+	Cyclic#5.Exhaust::OUT_EX.tN2_ScavGV_CoOpen AT %Q.Cyclic#5.Gastrain::IN_GT.tN2_ScavGV_CoOpen;
+END_VAR
+(* GasMeteringUnit *)
+VAR_CONFIG
+	Cyclic#4.GasMeteringUnit::Para.iN_GMU_Devices AT %Q.Cyclic#5.Gastrain::IN_GT.iN_GMU_Devices; (*V04.10.00*)
+	Cyclic#4.GasMeteringUnit::OUT_GD.rGMU_Pos_Valve_Prom AT %Q.Cyclic#5.Gastrain::IN_GT.rGMU_Pos_Valve_Prom; (*V04.10.00*)
+END_VAR
+(* HalIO *)
+VAR_CONFIG
+	Cyclic#5.HalIO::tT_GT_NG AT %Q.Cyclic#5.Gastrain::IN_GT.tT_GT_NG; (*V4.09*)
+	Cyclic#5.HalIO::tPr_GT_NG AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_GT_NG; (*V4.09*)
+	Cyclic#5.HalIO::tVol_GT_NG AT %Q.Cyclic#5.Gastrain::IN_GT.tVol_GT_NG; (*V4.09*)
+	Cyclic#5.HalIO::OUT_HA.bSimWinMOD_Active AT %Q.Cyclic#5.Gastrain::IN_GT.bSimWinMOD_Active; (*V04.05.00*)
+	Cyclic#5.HalIO::OUT_HA.bSimWinMOD_FastStart AT %Q.Cyclic#5.Gastrain::IN_GT.bSimWinMOD_FastStart; (*V04.05.00*)
+	Cyclic#2.HalIO::tCnt_GasImp AT %Q.Cyclic#2.Gastrain::IN_GT.tCnt_GasImp; (*V4.07 changed to TC2*)
+	Cyclic#5.HalIO::tCustAnaIn AT %Q.Cyclic#5.Gastrain::IN_GT.tCustAnaIn;
+	Cyclic#5.HalIO::tCustDigIn AT %Q.Cyclic#5.Gastrain::IN_GT.tCustDigIn; (* v4.1.0.0 *)
+	Cyclic#4.HalIO::tDemFlair AT %Q.Cyclic#5.Gastrain::IN_GT.tDemFlair;
+	Cyclic#2.HalIO::tDiffPrct AT %Q.Cyclic#2.Gastrain::IN_GT.tDiffPrct_TC2;
+	Cyclic#5.HalIO::tFastStartReq AT %Q.Cyclic#5.Gastrain::IN_GT.tFastStartReq; (*V4.10*)
+	Cyclic#4.HalIO::tFlairRdy AT %Q.Cyclic#5.Gastrain::IN_GT.tFlairRdy;
+	Cyclic#2.HalIO::tGCB_On AT %Q.Cyclic#2.Gastrain::IN_GT.tGCB_On_TC2;
+	Cyclic#4.HalIO::tGCB_On AT %Q.Cyclic#5.Gastrain::IN_GT.tGCB_On;
+	Cyclic#2.HalIO::tGenPrctTrip AT %Q.Cyclic#2.Gastrain::IN_GT.tGenPrctTrip_TC2;
+	Cyclic#2.HalIO::tGndFailure AT %Q.Cyclic#2.Gastrain::IN_GT.tGndFailure_TC2;
+	Cyclic#2.HalIO::tGT_AirSupply_LoLo AT %Q.Cyclic#2.Gastrain::IN_GT.tGT_AirSupply_LoLo; (*V04.03.00.00*)
+	Cyclic#4.HalIO::tGT_BackFireDev AT %Q.Cyclic#5.Gastrain::IN_GT.tGT_BackFireDev;
+	Cyclic#4.HalIO::tGT_CalibrateActive AT %Q.Cyclic#5.Gastrain::IN_GT.tGT_CalibrateActive;
+	Cyclic#4.HalIO::tGT_CH4 AT %Q.Cyclic#5.Gastrain::IN_GT.tGT_CH4;
+	Cyclic#4.HalIO::tGT_CV AT %Q.Cyclic#5.Gastrain::IN_GT.tGT_CV;
+	Cyclic#4.HalIO::tGT_FlairFail AT %Q.Cyclic#5.Gastrain::IN_GT.tGT_FlairFail;
+	Cyclic#4.HalIO::tGT_Flap1_Closed AT %Q.Cyclic#5.Gastrain::IN_GT.tGT_Flap1_Closed;
+	Cyclic#4.HalIO::tGT_Flap1_Opened AT %Q.Cyclic#5.Gastrain::IN_GT.tGT_Flap1_Opened;
+	Cyclic#4.HalIO::tGT_Flap2_Closed AT %Q.Cyclic#5.Gastrain::IN_GT.tGT_Flap2_Closed;
+	Cyclic#4.HalIO::tGT_Flap2_Opened AT %Q.Cyclic#5.Gastrain::IN_GT.tGT_Flap2_Opened;
+	Cyclic#4.HalIO::tGT_FlareOpMod AT %Q.Cyclic#5.Gastrain::IN_GT.tGT_FlareOpMod;
+	Cyclic#4.HalIO::tGT_GC_Fail AT %Q.Cyclic#5.Gastrain::IN_GT.tGT_GC_Fail;
+	Cyclic#4.HalIO::tGT_O2 AT %Q.Cyclic#5.Gastrain::IN_GT.tGT_O2;
+	Cyclic#4.HalIO::tGT_SelectRatioMix AT %Q.Cyclic#5.Gastrain::IN_GT.tGT_SelectRatioMix;
+	Cyclic#4.HalIO::tGT_TypSwitch AT %Q.Cyclic#5.Gastrain::IN_GT.tGT_TypSwitch;
+	Cyclic#4.HalIO::tGT1_1_BackFireDev AT %Q.Cyclic#5.Gastrain::IN_GT.tGT1_1_BackFireDev; (* v4.03.0.0 *)
+	Cyclic#4.HalIO::tGT1_1_SafeDevOK AT %Q.Cyclic#5.Gastrain::IN_GT.tGT1_1_SafeDevOK;
+	Cyclic#4.HalIO::tGT1_2_BackFireDev AT %Q.Cyclic#5.Gastrain::IN_GT.tGT1_2_BackFireDev; (* v4.03.0.0 *)
+	Cyclic#4.HalIO::tGT1_2_SafeDevOK AT %Q.Cyclic#5.Gastrain::IN_GT.tGT1_2_SafeDevOK;
+	Cyclic#4.HalIO::tGT1_3_BackFireDev AT %Q.Cyclic#5.Gastrain::IN_GT.tGT1_3_BackFireDev; (* v4.2.0.0 *)
+	Cyclic#4.HalIO::tGT1_3_SafeDevOK AT %Q.Cyclic#5.Gastrain::IN_GT.tGT1_3_SafeDevOK;
+	Cyclic#4.HalIO::tGT1_4_BackFireDev AT %Q.Cyclic#5.Gastrain::IN_GT.tGT1_4_BackFireDev; (* v4.2.0.0 *)
+	Cyclic#4.HalIO::tGT1_4_SafeDevOK AT %Q.Cyclic#5.Gastrain::IN_GT.tGT1_4_SafeDevOK;
+	Cyclic#4.HalIO::tGT1_SafeDevOK AT %Q.Cyclic#5.Gastrain::IN_GT.tGT1_SafeDevOK;
+	Cyclic#4.HalIO::tGT2_SafeDevOK AT %Q.Cyclic#5.Gastrain::IN_GT.tGT2_SafeDevOK;
+	Cyclic#5.HalIO::tGV_Upstream_Closed AT %Q.Cyclic#5.Gastrain::IN_GT.tGV_Upstream_Closed; (* V04.07.00	DI Gasvalve position status	 *)
+	Cyclic#5.HalIO::tGV_Upstream_Opened AT %Q.Cyclic#5.Gastrain::IN_GT.tGV_Upstream_Opened; (* V04.07.00	DI Gasvalve position status	 *)
+	Cyclic#5.HalIO::tGV1_Closed AT %Q.Cyclic#5.Gastrain::IN_GT.tGV1_Closed; (* V04.07.00	DI Gasvalve position status	 *)
+	Cyclic#5.HalIO::tGV1_Opened AT %Q.Cyclic#5.Gastrain::IN_GT.tGV1_Opened; (* V04.07.00	DI Gasvalve position status	 *)
+	Cyclic#5.HalIO::tGV2_Closed AT %Q.Cyclic#5.Gastrain::IN_GT.tGV2_Closed; (* V04.07.00	DI Gasvalve position status	 *)
+	Cyclic#5.HalIO::tGV2_Opened AT %Q.Cyclic#5.Gastrain::IN_GT.tGV2_Opened; (* V04.07.00	DI Gasvalve position status	 *)
+	Cyclic#2.HalIO::tMCB_On AT %Q.Cyclic#2.Gastrain::IN_GT.tMCB_On_TC2;
+	Cyclic#4.HalIO::tMCB_On AT %Q.Cyclic#5.Gastrain::IN_GT.tMCB_On;
+	Cyclic#2.HalIO::tMnsOk AT %Q.Cyclic#2.Gastrain::IN_GT.tMnsOk_TC2;
+	Cyclic#2.HalIO::tOlShortCirc AT %Q.Cyclic#2.Gastrain::IN_GT.tOlShortCirc_TC2;
+	Cyclic#4.HalIO::tP_GT_Max_Backfire AT %Q.Cyclic#5.Gastrain::IN_GT.tP_GT_Max_Backfire;
+	Cyclic#5.HalIO::tP_Red_CH4Active AT %Q.Cyclic#5.Gastrain::IN_GT.tP_Red_CH4Active; (*v4.1.0.0*)
+	Cyclic#5.HalIO::tP_Red_GasPrActive AT %Q.Cyclic#5.Gastrain::IN_GT.tP_Red_GasPrActive; (*v4.1.0.0*)
+	Cyclic#5.HalIO::tP_Red_SuctPrActive AT %Q.Cyclic#5.Gastrain::IN_GT.tP_Red_SuctPrActive; (*v4.1.0.0*)
+	Cyclic#4.HalIO::tPCaComp_BackFireDev AT %Q.Cyclic#5.Gastrain::IN_GT.tPCaComp_BackFireDev; (* v4.2.0.0 *)
+	Cyclic#4.HalIO::tPCbComp_BackFireDev AT %Q.Cyclic#5.Gastrain::IN_GT.tPCbComp_BackFireDev; (* v4.2.0.0 *)
+	Cyclic#4.HalIO::tPCG_GC_Fail AT %Q.Cyclic#5.Gastrain::IN_GT.tPCG_GC_Fail;
+	Cyclic#4.HalIO::tPCG_GC_Oil_Min AT %Q.Cyclic#5.Gastrain::IN_GT.tPCG_GC_Oil_Min;
+	Cyclic#5.HalIO::tPCGT_SafeDevOK AT %Q.Cyclic#5.Gastrain::IN_GT.tPCGT_SafeDevOK;
+	Cyclic#2.HalIO::tPr_GR_I AT %Q.Cyclic#2.Gastrain::IN_GT.tPr_GR_I; (*V04.03.00.00*)
+	Cyclic#2.HalIO::tPr_GR_II AT %Q.Cyclic#2.Gastrain::IN_GT.tPr_GR_II; (*V04.03.00.00*)
+	Cyclic#4.HalIO::tPr_GT_Gas AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_GT_Gas;
+	Cyclic#4.HalIO::tPr_GT_MinBefCompr AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_GT_MinBefCompr;
+	Cyclic#4.HalIO::tPr_GT_Suct AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_GT_Suct;
+	Cyclic#4.HalIO::tPr_GT1 AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_GT1;
+	Cyclic#4.HalIO::tPr_GT1_1_Max AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_GT1_1_Max;
+	Cyclic#4.HalIO::tPr_GT1_1_Min AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_GT1_1_Min;
+	Cyclic#4.HalIO::tPr_GT1_2_Max AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_GT1_2_Max;
+	Cyclic#4.HalIO::tPr_GT1_2_Min AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_GT1_2_Min;
+	Cyclic#4.HalIO::tPr_GT1_3_Max AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_GT1_3_Max;
+	Cyclic#4.HalIO::tPr_GT1_3_Min AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_GT1_3_Min;
+	Cyclic#4.HalIO::tPr_GT1_4_Max AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_GT1_4_Max;
+	Cyclic#4.HalIO::tPr_GT1_4_Min AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_GT1_4_Min;
+	Cyclic#4.HalIO::tPr_GT1_Max AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_GT1_Max;
+	Cyclic#4.HalIO::tPr_GT1_Min AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_GT1_Min;
+	Cyclic#4.HalIO::tPr_GT2_Max AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_GT2_Max;
+	Cyclic#4.HalIO::tPr_GT2_Min AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_GT2_Min;
+	Cyclic#2.HalIO::tPr_MGT_a_Filt AT %Q.Cyclic#2.Gastrain::IN_GT.tPr_MGT_a_Filt; (*V04.03.00.00*)
+	Cyclic#4.HalIO::tPr_PC AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_PC;
+	Cyclic#4.HalIO::tPr_PCG AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_PCG;
+	Cyclic#4.HalIO::tPr_PCG_Min AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_PCG_Min;
+	Cyclic#4.HalIO::tPr_PCGBefComp_Lo AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_PCGBefComp_Lo;
+	Cyclic#4.HalIO::tPr_PCGT AT %Q.Cyclic#5.Gastrain::IN_GT.tPr_PCGT;
+	Cyclic#2.HalIO::tPr_PCGT_a_Filt AT %Q.Cyclic#2.Gastrain::IN_GT.tPr_PCGT_a_Filt; (*V04.03.00.00*)
+	Cyclic#2.HalIO::tPr_PCGT_Out AT %Q.Cyclic#2.Gastrain::IN_GT.tPr_PCGT_Out; (*V04.03.00.00*)
+	Cyclic#4.HalIO::tRelGasPlant AT %Q.Cyclic#5.Gastrain::IN_GT.tRelGasPlant;
+	Cyclic#4.HalIO::tRelMainGVext AT %Q.Cyclic#5.Gastrain::IN_GT.tRelMainGVext;
+	Cyclic#4.HalIO::tSafetyLoop_Eng AT %Q.Cyclic#5.Gastrain::IN_GT.tSafetyLoop_Eng;
+	Cyclic#5.HalIO::tSIFA_BOV AT %Q.Cyclic#5.Gastrain::IN_GT.tSIFA_BOV;
+	Cyclic#2.HalIO::tT_GR AT %Q.Cyclic#2.Gastrain::IN_GT.tT_GR; (*V04.03.00.00*)
+	Cyclic#4.HalIO::tT_GT AT %Q.Cyclic#5.Gastrain::IN_GT.tT_GT;
+	Cyclic#4.HalIO::tT_GT_Ok AT %Q.Cyclic#5.Gastrain::IN_GT.tT_GT_Ok;
+	Cyclic#4.HalIO::tT_PCGAfCo AT %Q.Cyclic#5.Gastrain::IN_GT.tT_PCGAfCo;
+	Cyclic#4.HalIO::tT_PCGAfComp_Hi AT %Q.Cyclic#5.Gastrain::IN_GT.tT_PCGAfComp_Hi;
+	Cyclic#4.HalIO::tT_PCGT AT %Q.Cyclic#5.Gastrain::IN_GT.tT_PCGT;
+	Cyclic#4.HalIO::tVol_GT AT %Q.Cyclic#5.Gastrain::IN_GT.tVol_GT;
+	Cyclic#2.HalIO::tGT_H2 AT %Q.Cyclic#2.Gastrain::IN_GT.tGT_H2;
+	Cyclic#5.HalIO::tGT_RatioMix_Set AT %Q.Cyclic#5.Gastrain::IN_GT.tGT_RatioMix_Set;
+	Cyclic#2.HalIO::tP_Act AT %Q.Cyclic#2.Gastrain::IN_GT.tP_Act;
+	Cyclic#2.HalIO::tPr_GT_b_Reg AT %Q.Cyclic#2.Gastrain::IN_GT.tPr_GT_b_Reg;
+	Cyclic#2.HalIO::tPr_GT_a_Reg AT %Q.Cyclic#2.Gastrain::IN_GT.tPr_GT_a_Reg;
+	Cyclic#2.HalIO::tPr_N2_GT AT %Q.Cyclic#2.Gastrain::IN_GT.tPr_N2_GT;
+END_VAR
+(* Ignition *)
+VAR_CONFIG
+	Cyclic#2.Ignition::OUT_IG.rN_EngAct AT %Q.Cyclic#2.Gastrain::IN_GT.rN_EngAct;
+END_VAR
+(* Opstate *)
+VAR_CONFIG
+	Cyclic#4.Opstate::OUT_OP.bEng_Aux_Dem AT %Q.Cyclic#5.Gastrain::IN_GT.bEng_Aux_Dem;
+	Cyclic#4.Opstate::OUT_OP.bEng_Aux_Dem_CDR AT %Q.Cyclic#5.Gastrain::IN_GT.bEng_Aux_Dem_CDR;
+	Cyclic#4.Opstate::OUT_OP.bEng_CDR AT %Q.Cyclic#5.Gastrain::IN_GT.bEng_CDR;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem AT %Q.Cyclic#5.Gastrain::IN_GT.bEng_Dem;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem_Aut AT %Q.Cyclic#5.Gastrain::IN_GT.bEng_Dem_Aut;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem_Bloc AT %Q.Cyclic#5.Gastrain::IN_GT.bEng_Dem_Bloc;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem_EPS AT %Q.Cyclic#5.Gastrain::IN_GT.bEng_Dem_EPS;
+	Cyclic#4.Opstate::OUT_OP.bGasTyp1_Act AT %Q.Cyclic#5.Gastrain::IN_GT.bGasTyp1_Act;
+	Cyclic#4.Opstate::OUT_OP.bGasTyp2_Act AT %Q.Cyclic#5.Gastrain::IN_GT.bGasTyp2_Act;
+	Cyclic#4.Opstate::OUT_OP.bGasTyp3_Act AT %Q.Cyclic#5.Gastrain::IN_GT.bGasTyp3_Act;
+	Cyclic#4.Opstate::OUT_OP.bGasTyp4_Act AT %Q.Cyclic#5.Gastrain::IN_GT.bGasTyp4_Act;
+	Cyclic#4.Opstate::OUT_OP.bGasTypMix1_2_Act AT %Q.Cyclic#5.Gastrain::IN_GT.bGasTypMix1_2_Act;
+	Cyclic#4.Opstate::OUT_OP.bGV_Open_Opstate AT %Q.Cyclic#5.Gastrain::IN_GT.bGV_Open_Opstate;
+	Cyclic#5.Opstate::OUT_OP.iIdx_OMSS AT %Q.Cyclic#5.Gastrain::IN_GT.iIdx_OMSS; (*V4.05 changed 5-->5*)
+	Cyclic#4.Opstate::OUT_OP.iSt_OpMode AT %Q.Cyclic#5.Gastrain::IN_GT.iSt_OpMode;
+	Cyclic#2.Opstate::OUT_OP.rP_Act_Norm_Filt AT %Q.Cyclic#2.Gastrain::IN_GT.rP_Act_Norm_Filt;
+	Cyclic#2.Opstate::OUT_OP.rP_Nom AT %Q.Cyclic#2.Gastrain::IN_GT.rP_Nom;
+	Cyclic#5.Opstate::OUT_OP.tEng_Run AT %Q.Cyclic#5.Gastrain::IN_GT.tEng_Run;
+	Cyclic#4.Opstate::OUT_OP.rP_Set_Min_Norm AT %Q.Cyclic#5.Gastrain::IN_GT.rP_Set_Min_Norm;
+	Cyclic#4.Opstate::OUT_OP.rP_Set_Unred_Norm AT %Q.Cyclic#5.Gastrain::IN_GT.rP_Set_Unred_Norm; (*V04.10.00*)
+	Cyclic#4.Opstate::OUT_OP.rP_Act_Norm AT %Q.Cyclic#5.Gastrain::IN_GT.rP_Act_Norm;
+END_VAR
+(* ParaBase *)
+VAR_CONFIG
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#5.Gastrain::IN_GT.tPB2MM;
+	Cyclic#5.ParaBase::OUT_PB.tSys_Run AT %Q.Cyclic#5.Gastrain::IN_GT.tSys_Run;
+END_VAR
+(* Synchronization *)
+VAR_CONFIG
+	Cyclic#5.Synchronization::OUT_SY.bMnsOk AT %Q.Cyclic#2.Gastrain::IN_GT.bMnsOk; (*V4.05 changed 5-->2*)
+	Cyclic#5.Synchronization::OUT_SY.bRel_Island AT %Q.Cyclic#2.Gastrain::IN_GT.bRel_Island; (*V4.05 changed 5-->2*)
+	Cyclic#2.Synchronization::OUT_SY.bRel_IslandAfMITime AT %Q.Cyclic#2.Gastrain::IN_GT.bRel_IslandAfMITime;
+	Cyclic#2.Synchronization::OUT_SY.bRelEngOpFromSy AT %Q.Cyclic#2.Gastrain::IN_GT.bRelEngOpFromSy;
+	Cyclic#5.Synchronization::OUT_SY.tGCB_COf AT %Q.Cyclic#2.Gastrain::IN_GT.tGCB_COf;
+	Cyclic#5.Synchronization::OUT_SY.tMCB_COf AT %Q.Cyclic#2.Gastrain::IN_GT.tMCB_COf;
+	Cyclic#4.GasMeteringUnit::OUT_GD.rGMU_Pr_DiffGas AT %Q.Cyclic#5.Gastrain::IN_GT.rGMU_Pr_DiffGas;
+	Cyclic#5.Synchronization::OUT_SY.tP_Lo AT %Q.Cyclic#2.Gastrain::IN_GT.tP_Lo;
+END_VAR

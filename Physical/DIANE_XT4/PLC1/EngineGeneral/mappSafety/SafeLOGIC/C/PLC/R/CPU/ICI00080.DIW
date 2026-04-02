@@ -1,0 +1,16 @@
+(*
+QWS: 00013
+*)
+00001	00179	POE\Main\Variables.vbb
+00002	00000	POE\Main\Func00_IO_Para.gb
+00003	00002	POE\Main\Func01_Speed.gb
+00004	00000	POE\Main\Func02_Misfire.gb
+00005	00000	POE\Main\Func03_04_Oil_Pr.gb
+00006	00000	POE\Main\Func05_06_ECW_Pr.gb
+00007	00001	POE\Main\Func07_Grid.gb
+00008	00000	POE\Main\Func08_Overload.gb
+00009	00002	POE\Main\Func10_EmStop.gb
+00010	00000	POE\Main\Func11_SafetyLoop.gb
+00011	00001	POE\Main\Func12_Gas.gb
+00012	00001	POE\Main\PhaseII.gb
+00013	00000	POE\Main\SafetyLoop.gb

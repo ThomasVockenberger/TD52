@@ -1,0 +1,79 @@
+VAR
+	bToggle : BOOL;
+	ssNEf_Old : INT;
+	ssNEg_Old : INT;
+	ucAussInt_Old : USINT;
+	ucCylIndex : USINT;
+	ucFuAU_Old : USINT;
+	ucFuGZ_Old : USINT;
+	ucFuIM_Old : USINT;
+	ucUpCur_Old : ARRAY[0..12] OF USINT;
+	ucFuNAE_Old : USINT;
+	ucFuNE_Old : USINT;
+	ucFuVL_Old : USINT;
+	ucFuWE_Old : USINT;
+	ucKuA_Old : USINT;
+	ucReDoCount : USINT;
+	ucSAFIEmpfCnt : USINT;
+	usAussGW_Old : UINT;
+	usEventSum : UINT;
+	usGluehGW_Old : UINT;
+	usIPEx_Old : UINT;
+	usIPFa_Old : UINT;
+	usIPGr_Old : UINT;
+	usIPIt_Old : UINT;
+	usIPKo_Old : UINT;
+	usKlopfGW_Old : UINT;
+	usMWEr_Old : UINT;
+	usMWNGA_Old : UINT;
+	usMWSt_Old : UINT;
+	usNennDz_Old : UINT;
+	usNETol_Old : UINT;
+	usPolEx_Old : UINT;
+	usthVW_Old : UINT;
+	usVLFa_Old : UINT;
+	usWMA_B_Old : UINT;
+	usWMA_D_Old : UINT;
+	usWMBB_B_Old : UINT;
+	usWMBB_D_Old : UINT;
+	usWMBD_B_Old : UINT;
+	usWMBD_D_Old : UINT;
+	usWMG_B_Old : UINT;
+	usWMG_D_Old : UINT;
+	usWMK_B_Old : UINT;
+	usWMK_D_Old : UINT;
+	usWMNEf_B_Old : UINT;
+	usWMNEf_D_Old : UINT;
+	usWMNEg_B_Old : UINT;
+	usWMNEg_D_Old : UINT;
+	usWMS_B_Old : UINT;
+	usWMS_D_Old : UINT;
+	usWMVL1_B_Old : UINT;
+	usWMVL1_D_Old : UINT;
+	usWMWE_B_Old : UINT;
+	usWMWE_D_Old : UINT;
+	bParaSendOK : BOOL;
+	ssWEf_L_G_Old : INT;
+	ssWEf_H_G_Old : INT;
+	ucCylIndexN : USINT;
+	usStartHP_Old : UINT;
+	usDMRMode_Old : ARRAY[0..24] OF UINT;
+	ucUP_Pos_Old : USINT;
+	ssEmpf_Old : INT;
+	ucCylCount : USINT;
+	TON_N_zero : TON;
+	bSAFISendAllDMRPara : BOOL;
+	ucSAFIDMRParaSend : USINT;
+	ssWEf_L_G : INT;
+	ssWEf_H_G : INT;
+	iPr_SAFI_Pmax : ARRAY[0..24] OF UINT; (*Pmax [10 mbar]*)
+	iPr_SAFI_IMEP : ARRAY[0..24] OF UINT; (*IMEP [10 mbar]*)
+	iPr_SAFI_Pmax_old1 : ARRAY[0..24] OF UINT; (*Pmax old value 1 [10 mbar]*)
+	iPr_SAFI_Pmax_old2 : ARRAY[0..24] OF UINT; (*Pmax old value 2 [10 mbar]*)
+	xTON_PmaxFrozen : ARRAY[0..24] OF TON;
+	xTON_PmaxAltern : ARRAY[0..24] OF TON;
+	iPr_SAFI_IMEP_old1 : ARRAY[0..24] OF UINT; (*IMEP old value 1 [10 mbar]*)
+	iPr_SAFI_IMEP_old2 : ARRAY[0..24] OF UINT; (*IMEP old value 2 [10 mbar]*)
+	xTON_IMEP_Frozen : ARRAY[0..24] OF TON;
+	xTON_IMEP_Altern : ARRAY[0..24] OF TON;
+END_VAR

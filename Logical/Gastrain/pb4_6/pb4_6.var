@@ -1,0 +1,40 @@
+VAR
+	xGR_MAXR_PDIFF_MX : GR_MAXR;
+	xGR_MAXR_VKDR_MX : GR_MAXR;
+	xGR_MINR_PDIFF_MN : GR_MINR;
+	xR_TRIG_FA_FL_PUFF : R_TRIG;
+	xR_TRIG_FA_FL_Z_PUFF_2 : R_TRIG;
+	xR_TRIG_FA_FL_Z_PUFF_1 : R_TRIG;
+	xR_TRIG_FA_FL_Z_PUFF_3 : R_TRIG;
+	xRS_FL_PUFF : RS;
+	xTOF_FA_T_FGPUFF : TOF;
+	xTON_VKDR_MX : TON;
+	xTON_FDIFF_MX : TON;
+	xTON_FA_Z_PUFF : TON;
+	xTON_FA_ZUEND_PUFF : TON;
+	xTON_FDIFF_MN : TON;
+	xTP_R_FA_T_PUFF_3 : TP_R;
+	xTP_R_FA_T_PUFF_2 : TP_R;
+	xTP_R_FA_T_PUFF_1 : TP_R;
+	rLDR_PDIF_P1 : REAL;
+	rLDR_PDIF_P2 : REAL;
+	xSigScal_0 : xSigScal_R;
+	xSigScal_1 : xSigScal_R;
+	rGW_PDIF_MN : REAL; (* GW Vorkammerdifferenzdruck minimum *)
+	rGW_PDIF_MX : REAL; (* GW Vorkammerdifferenzdruck maximum *)
+	rOffset_PCG_BPV_P1 : REAL := -0.08; (* Offset to parameter for maximum pre chamber gas differential  pressure at boost pressure P1 [bar] *)
+	rOffset_PCG_BPV_P2 : REAL := -0.08; (* Offset to parameter for maximum pre chamber gas differential  pressure at boost pressure P2 [bar] *)
+	xSigScal_PCG_BPV : xSigScal_R := (0); (* Boundary line for calculating max allowed pre chamber gas diff  pressure at current p2s *)
+	rThr_PDIF_PCG_BPV_MX : REAL := 0.0; (* Upper allowed pre chamber gas diff  pressure (Island mode with bypass valve) [bar] *)
+	tPT_PCG_BPV : TIME := T#10S; (* Minimum time that the pre chamber gas differential  pressure has to exceed the allowed limit to trigger a warning [s] *)
+	xTON_PCG_BPV_MX : TON := (0); (* TON block to check if pressure exceeds limit for longer than required time *)
+	rThr_PCG_BPV_P_MN : REAL := 0.3; (* Minimum normalized power at which the pre chamber gas bypass valve monitoring function becomes active *)
+	xTOF_bLR_GasStop : TOF;
+	xTP_Pump_Active2 : TP;
+	xTP_Pump_Active : TP;
+	rPr_PC : REAL; (*Pressure prechamber*)
+	tiVKDR_MX : TIME;
+	rP_DiffPC_LimLo_Switch : REAL := 0.05; (* Load step detection threshold to reduce limit difference pressure prechamber minimum [p.u.] *)
+	xTP_DiffPC_LimLo_Switch : TP;
+	rPr_DiffPC_LimLo_Offset : REAL; (* Offset on difference pressure prechamber minimum limit during load steps [bar] *)
+END_VAR

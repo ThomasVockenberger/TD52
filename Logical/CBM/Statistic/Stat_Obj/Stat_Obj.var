@@ -1,0 +1,52 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: PBC_MFile
+ * File: PBC_MFile.var
+ * Author: 502293141
+ * Created: October 23, 2014
+ ********************************************************************
+ * Local variables of program PBC_MFile
+ ********************************************************************)
+VAR
+	bOK : BOOL;
+	strFile : STRING[50];
+	iZeile : UDINT;
+	iOffset : UDINT;
+	iIdx : INT;
+	bWrite : BOOL;
+	szData : STRING[15000];
+	iError : UINT;
+	bStat_Write : BOOL;
+	iStat_Mode : USINT;
+	ModulName : STRING[32];
+	pm_len : UDINT := 0;
+	day_old : USINT;
+	bDaily_Trigger : BOOL := 0;
+	iStep : USINT := 0;
+	DerString_Stat : STRING[200000];
+	iErrorStep : INT;
+	TON_Test : TON;
+	i : UINT;
+	strTemp : STRING[10];
+	lines : UINT;
+	DatObjCreate_01 : DatObjCreate;
+	DatObjWrite_01 : DatObjWrite;
+	DatObjInfo_01 : DatObjInfo;
+	test_cnt : USINT;
+	xTON_HMI_Delay : TON;
+	strVersion : STRING[30];
+	rHMI_Delay : REAL;
+aData : UDINT;
+aTemp : UDINT;
+iStrSize : UDINT;
+iPointer : UDINT;
+END_VAR
+VAR CONSTANT
+	MAN : USINT := 1;
+	AUTO : USINT := 2;
+	ERRCNT : USINT := 3;
+END_VAR
+VAR
+	bTest_Ena : BOOL := 0;
+END_VAR

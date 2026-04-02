@@ -1,0 +1,194 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2023
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V3.99		06-03-2013	Weitzer, generated for modular software	 
+; V4.02.0	11.06.2015	Zengerer version + dependencies changed (IF change with array index 0 for compatibility with c-tasks)
+; V4.03.00	02.11.2015	Zengerer MANDATORYMODULE
+; V4.05.03	09.03.2018	Zengerer header cleared	
+;
+; V4.25.00	28.01.2026	in THIS LINE HERE update ONLY version number and date; state changees below in INFO section;
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; 
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>CU</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.25.00.03</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+
+; Optional: specify order number for limitated module usage
+"<ORDER>DT52</ORDER>" ;<!--(optional, wenn nicht vorhanden dann für alle Aufträge gültig)-->
+;
+; Parameter Check (Name:=aAbcdef; MIN:=xxx; MAX:=yyy;)
+"<PARAMETER_CHK>"
+"	<PARA1 Name='iEng_Motortype' MIN='208' MAX='1920' />"
+"	<PARA2 Name='rN_EngStart_LimHi' MIN='50.0' MAX='2200.0' />"
+"	<PARA3></PARA3>"
+"	<PARA4></PARA4>"
+"	<PARA5></PARA5>"
+"</PARAMETER_CHK>"
+;
+; Statement, if engine operation is also allowed without this module (FALSE) or if this modules parameter check passing is mandatory (TRUE)
+"<MANDATORYMODULE>FALSE</MANDATORYMODULE>"
+;
+; Permanent Datamodule Filenames<!-- state filename only, without extension; use e.g. for counter information storage-->
+"<DATAMODULES>" ;<!-- optional more than 1 lines allowed. Do not state backup storage module p1BAK_CU here -->
+"	<DATAMODULE>perm1_CU</DATAMODULE>"
+"	<DATAMODULE>par_CU</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='AB' VERSION='04.07.01.00' />" 	; Add dependencies for customization here
+"	<DEPENDENCY MODULE='AG' VERSION='04.14.00.00' />"	; for new TC_CoolDownRun alarms 2015-02-23, 
+"	<DEPENDENCY MODULE='CH' VERSION='04.10.00.00' />"	; Add dependencies for customization here
+"	<DEPENDENCY MODULE='CP' VERSION='04.13.00.00' />"	; ...
+"	<DEPENDENCY MODULE='EC' VERSION='04.13.00.00' />"	;FastStart V4.06
+"	<DEPENDENCY MODULE='EG' VERSION='04.04.00.00' />"	; ...
+"	<DEPENDENCY MODULE='EM' VERSION='04.04.00.00' />"
+"	<DEPENDENCY MODULE='EX' VERSION='04.10.00.00' />"
+"	<DEPENDENCY MODULE='GC' VERSION='04.10.00.00' />" 	
+"	<DEPENDENCY MODULE='GD' VERSION='04.04.00.00' />"
+"	<DEPENDENCY MODULE='GM' VERSION='04.04.00.00' />"
+"	<DEPENDENCY MODULE='GR' VERSION='04.13.00.00' />" 
+"	<DEPENDENCY MODULE='GT' VERSION='04.10.01.00' />" 
+"	<DEPENDENCY MODULE='HA' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='HC' VERSION='04.10.00.00' />" 	;rT_ChC_Ctr_Wex_Cust add V4.5 new interface...
+"	<DEPENDENCY MODULE='IC' VERSION='04.04.00.00' />" 
+"	<DEPENDENCY MODULE='IG' VERSION='04.10.00.00' />"	
+"	<DEPENDENCY MODULE='KL' VERSION='04.04.00.00' />" 
+"	<DEPENDENCY MODULE='KN' VERSION='04.10.00.00' />" 
+"	<DEPENDENCY MODULE='MO' VERSION='04.04.00.00' />"
+"	<DEPENDENCY MODULE='OP' VERSION='04.13.00.00' />" 
+"	<DEPENDENCY MODULE='PB' VERSION='04.06.00.00' />" 	;new permanent file info
+"	<DEPENDENCY MODULE='SA' VERSION='04.04.00.00' />"
+"	<DEPENDENCY MODULE='SY' VERSION='04.13.00.00' />" 
+"	<DEPENDENCY MODULE='TR' VERSION='04.10.00.00' />" 
+"	<DEPENDENCY MODULE='VE' VERSION='04.07.00.00' />" 
+"	<DEPENDENCY MODULE='VI' VERSION='04.09.00.00' />" 
+"   <DEPENDENCY VISVERSION='02.15.00.00' />"			; Dependencies Visualization	
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	MM Customized is a collection of prepared spare items for individual adoptions. "
+"	</General>	"
+""
+"	<F1 Name='Analog Inputs and Outputs' LastModified='4.0.0.0'>"
+"	Predefined Channels (CustAnaIn[]) for plant specific purpose, usage defined hardcodede at time of sw generation.	"
+"   Last Update: Separation of unchangeable code parts of tasks ran_def and MsgCU into new tasks in Cust_Internals"
+"	</F1>"
+"	<F2 Name='Digital Inputs and Outputs'  LastModified='4.0.0.0'>"
+"	Predefined Channels (CustDigIn[]) for plant specific purpose, usage defined hardcodede at time of sw generation.	"
+"	</F2>"
+"	<F3 Name='Customizable controllers'  LastModified='4.0.0.0'>"
+"	8 predefined PID- Controllers for plant specific purpose, usage defined hardcodede at time of sw generation.	"
+"	</F3>"
+"	<F4 Name='Customer Inputs and Outputs'  LastModified='4.0.0.0'>"
+"	Prepared channels with highly parameter definable function for changeable Inputs and Outputs (CustomerIO), without hardcodeded purpose at time of sw generation.	"
+"	</F4>"
+"	<F5 Name='Customer Messages'  LastModified='4.2.2.0'>"
+"	Additional 300 Messages prepared for : Alarms 1601-1700, Warnings 1701-1800, Operating messages 3601-3700, IN Interface cleanup	"
+"	</F5>"
+"	<F6 Name='Customer Counters'  LastModified='4.2.2.0'>"
+"	New OUT Interface rCA_PI_Dur_COffset for custom PI duration offset "
+"	10 Customizable Counters, stored in permanent memory file (last change 2015-02-04)	"
+"	</F7>"
+"	<F7 Name='Customizable Scaling Blocks'  LastModified='4.11.0.0'>"
+"	10 predefined linear scaling blocks for plant specific purpose, usage defined hardcodede at time of sw generation.	"
+"	</F7>"
+""
+"	<Info>"
+"	This module is also the prefered place, where tasks to perform plant specific programmed functions are to be implemented.	"
+"	Vis V2.02.x.x: Interface update prepared for reserve analog inputs, but still compatible with previous versions	"
+"   UPDATE V4.2.0 version + dependencies changed (IF change with array index 0 for compatibility with c-tasks)	"
+" 	UPDATE V4.2.2 cleanup, OPC handling part added for OPC DA values from VIS	"
+"   UPDATE V4.3.0 version + dependencies changed (CAUSED BY ARRAY INDEX 0 for compatibility with c-tasks)	"
+"   UPDATE V4.3.1 fix with ParaFactoryDefault for not jet released DO para	"
+"   UPDATE V4.3.2 remove predefined reserve parameter numbers from task anf_nb to avoid unintended task activation  "
+"   UPDATE V4.4.0 version + dependencies changed (CAUSED BY ARRAY SIZE INCREASE)	"
+"   UPDATE V4.4.1 new task c_mns for standardized mains import controller (former task anf_nb retired)	"
+"	UPDATE V4.4.2 task c_red replace IN_CU.tCustAnaIn[1].Ai by a neutral IN_CU.tCustAnaIn[0].Ai default "
+"   UPDATE V4.4.3 module_CUPerm.typ keep length of perm with new iCount11-20"
+"	UPDATE V4.4.4 rPr_Ch_P2s_Avg  IF625	bost pressure UNIT CHANGED to 1/100bar according to IF docu - Poppe Norber "
+"	UPDATE V4.4.5 Connect In Interface to tP_Mns_AnaIn, tDem_Ctr_Mns"
+"   UPDATE V4.4.6 update to frequency control"
+"	UPDATE V4.4.7 30.06.2017	Gwiggner update to frequency control "
+"	UPDATE V4.5.0 OUT_CU.rT_ChC_Ctr_Wex_Cust add new interface, clear bad interface vars "
+"	UPDATE V4.5.0 Zengerer tDem_Ctr_Mns as enable condition for all AI alarms "
+"	UPDATE V4.5.00 07.12.2017  Farre,   added/modified Q functions, Point of control/reference, P(U) "
+"	UPDATE V4.5.00 04.12.2017	Messner	 bMsg1045, bMsg1069, bMsg1161, bMsg1162, bMsg1169, bMsg1170, bMsg1174, bMsg2112 deleted "
+"	UPDATE V4.5.00 25.01.2018	Zengerer bParaSetupOk as enable condition for all AI alarms  "
+"	UPDATE V4.5.01 22.02.2018	lettenb. AI_PF_CosPCtr_Set removed	"
+"	BETA   V4.5.2 optional prepared customizable interface  - BETA PHASE, use only in coordination with TPSS"
+"	UPDATE V4.5.4 Zengerer bParaSetupOk as enable condition for alarm 2302, 8966-, 3701-"
+"	UPDATE V4.5.6 26.03.2018	Farre, Signals removed (PF_CosPCtr_PF1_Ena, PF_CosPCtr_PF2_Ena, PF_CosPCtr_PF3_Ena, PF_CosPCtr_PF4_Ena, PF_CosPCtr_PF5_Ena)"
+"       		  13.04.2018	Zengerer comments for retired msg datapoints, no functional changes"
+"	V4.05.06	  18.06.2018	Gwiggner BU 01: power setpoint for Next-Box hardwire"
+"                 05.09.2018	Zuschnig BU 01: Added activation to use frozen signals for P_Set, P_Lim, COSPHI_Set, Q_Set, Q_Lim and U_Set "
+"	UPDATE V4.7.0 09.08.2018	Schmid, 2nd low temperature charge cooling circuit added, change in tManAuxCtr struct"
+"	V4.07.01.0 Array Size iMsg increased to 9999, for reduced VVM Version in General_CP"
+"				task c_coupl Bugfix Basisupdate 01: counter MOD 32768 calculation IF536 - IF544 "
+"  V4.09.0 BETA	28.11.2019	lettenb. FSM man.test functions with ramp, protection test mapping "
+"				06.12.2019	Denk	 Operation Locking for additional Touch Panels "
+"				03.02.2020	zengerer task c_set	avoid P setpoint switching with 0mA Value and IN_CU.tP_Set_ExtAI_Norm.GoodQual "
+"	BETA   V4.9.0 task c_set 	avoid P setpoint switching with 0mA Value and IN_CU.tP_Set_ExtAI_Norm.GoodQual "
+"	UPDATE V4.10.0	03.12.2020	Zengerer MaintenanceCount reset interlock to IN_CU.iCnt_Starts "
+"   				27.01.2021  Denk, Bus diagnosis arrays enlarged to 512 (send) and 32 (receive) "
+"   				12.03.2021  Zengerer, add file 'CustomizedSpareRegulars' into 'Documents' "
+"	UPDATE V4.10.1	xx.08.2021	Zengerer, Gruber Analog Speed Set korr. #530    "
+" 								DO NOT USE the IN_CU.tCustDigOut declaration of tCustDigOut anymore! This LEGACY DATA POINT is sheduled to be removed"
+"	UPDATE V4.11.0	11.06.2021	Schmid, missing CU vvm mappings for oil supply monitoring added "
+"  					30.08.2021  Keller, frequency droop power setpoint (Bus, AI)"
+"					24.11.2021 	Zengerer, Heim New predefined linear scaling blocks for plant specific purpose, usage defined hardcodede at time of sw generation.	"
+"					17.12.2021 	Schmid, buffer battery check extension"
+"	UPDATE V4.11.1	14.02.2022	Schmid, new TC cooling/lubrication table + control battery check supply monitoring mod"
+"	UPDATE V4.11.2	23.02.2022	Schmid, +M control battery check option removed - covered by buffer battery check (coordinated execution with starter battery check required)"
+"	UPDATE V4.12.0	06.07.2022	Zengerer additional vvm entrys for issue #828 "
+"					26.08.2022	Zengerer IF626 Pos_GM_Set_Norm ChangedScaling from V4.12 on -> issue #810 "
+"					11.11.2022	Zengerer new IF to GT for customized alarm bits on analog gas pressure sensor "
+"					22.12.2022	Zengerer cleanup UniAnaIn, UniDigIn legacy code declarations "
+"	UPDATE V4.13.0	22.08.2023	Zengerer remove outdated IN_CU.tCustDigOut (see UPDATE V4.10.1 also) "
+"					07.12.2023	Zengerer speed setpoint limitin acc. to issue #1106 "
+"					24.08.2023	Zengerer remove ALL IN_CU.bMsgxxxx single bits and replace by array (Issue #1033) "
+"                   16.10.2023  Bachler  add IN_CU.bOtherGeneratorsInLSL for bumpless transition to LSL "
+"					08.11.2023	Tinello	 bus signal for stopping external EO refill pump"
+"					29.11.2023	Goenczi	 New interface variables to other modules"
+"					08.12.2023	Denk	 Customer bus coupling with OPC UA"
+"	UPDATE V4.14.0 	25.11.2024	Zengerer new IF536 to IF544 handling options with Para.iOpt_Compatible_OpHoursFormat "
+"					28.11.2024  Astner   Added IO Mapping to the Plant Communication for customized IOs "
+"					29.11.2024	Zengerer new interface for customized EO_FreshOilPump and EO_WasteOilPump DOs" 
+"					05.03.2025	Denk	 Bugfix, rP_Set_OpcUa wrong datatype #1818 "
+"	</Info>"
+""
+"	<Customized LastModified='4.14.00.0?'>	"
+"	See changelog in file 'aeprot'"
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

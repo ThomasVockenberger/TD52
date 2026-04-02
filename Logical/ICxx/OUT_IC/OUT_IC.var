@@ -1,0 +1,3 @@
+VAR
+	xTON_IgnEngergy_Hi : TON; (*Timer for warning maximum energy exceeded*)
+END_VAR

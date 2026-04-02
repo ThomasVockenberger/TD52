@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.25.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Package">Lib_EG</Object>
+    <Object Type="DataObject" Language="Simple" Description="MODUL META data file">META_EG</Object>
+    <Object Type="File" Description="Module global data types" Private="true">Module_EngineGeneral.typ</Object>
+    <Object Type="File" Description="Module global variables" Private="true">Module_EngineGeneral.var</Object>
+    <Object Type="File" Description="SAFETY PLC data types" Private="true">sPLC.typ</Object>
+    <Object Type="File" Description="SAFETY PLC variables" Private="true">sPLC.var</Object>
+    <Object Type="Program" Language="IEC" Description="general functions">GeneralEG</Object>
+    <Object Type="Program" Language="IEC" Description="Settings default values">DefaultEG</Object>
+    <Object Type="Program" Language="IEC" Description="+ slow down time">slowdownT</Object>
+    <Object Type="Program" Language="IEC" Description="barometric pressure">barometric</Object>
+    <Object Type="Program" Language="IEC" Description="Main bearing temperature monitoring">MainBearing</Object>
+    <Object Type="Program" Language="IEC" Description="conrod bearing temperature monitoring">ConRoMon</Object>
+    <Object Type="Program" Language="IEC" Description="Idle Friction Monitoring">IdleFric</Object>
+    <Object Type="Program" Language="IEC" Description="Alarms generation">MsgEG</Object>
+    <Object Type="Program" Language="IEC" Description="+ save parameters">ParEG</Object>
+    <Object Type="Program" Language="IEC" Description="Vibration monitoring eng &amp; gen">VibMonEG</Object>
+    <Object Type="Program" Language="IEC" Description="Vibration monitoring eng &amp; gen">VibMon2EG</Object>
+    <Object Type="Program" Language="IEC" Description="Vibration monitoring eng &amp; gen">VibMon3EG</Object>
+    <Object Type="Program" Language="IEC" Description="Power-unit scuffing detection">PUscuffDet</Object>
+    <Object Type="Program" Language="IEC" Description="+ Interface signals to/from SAFETY PLC">Safety_PLC</Object>
+  </Objects>
+</Package>

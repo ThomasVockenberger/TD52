@@ -1,0 +1,14 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: BSOD_chk
+ * File: BSOD_chk.var
+ * Author: 105026877
+ * Created: December 18, 2017
+ ********************************************************************
+ * Local variables of program BSOD_chk
+ ********************************************************************)
+VAR
+	TON_EngNotDem : TON := (0);
+	ARwinWindowsInfo_BSOD : ARwinWindowsInfo;
+END_VAR

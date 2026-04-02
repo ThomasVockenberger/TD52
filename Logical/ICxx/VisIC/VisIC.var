@@ -1,0 +1,3 @@
+VAR
+	iNum_CylCnt : USINT;
+END_VAR

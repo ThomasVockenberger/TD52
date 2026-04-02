@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.14.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Package">Lib_EC</Object>
+    <Object Type="DataObject" Language="Simple" Description="Simple data object.">META_EC</Object>
+    <Object Type="File" Description="Package data types" Private="true">Modul_EngCtr.typ</Object>
+    <Object Type="File" Description="Package variables" Private="true">Modul_EngCtr.var</Object>
+    <Object Type="File" Description="Package variables" Private="true">Modul_EngCtr_Type9.var</Object>
+    <Object Type="Program" Language="IEC" Description="+ Engine Controller input task">IN_EngCtr</Object>
+    <Object Type="Program" Language="IEC" Description="+ common tasks @ 10ms">gen_EC_T2</Object>
+    <Object Type="Program" Language="IEC" Description="+ engine controller throttle, compressor bypass">eng_ctr_EC</Object>
+    <Object Type="Program" Language="IEC" Description="+ GEN2 controller">Gen2_xt</Object>
+    <Object Type="Program" Language="IEC" Description="+ interface for WG outputs">WasteGate</Object>
+    <Object Type="Program" Language="IEC" Description="+ calculation gasflow for gas inject valve">gas_flow_EC</Object>
+    <Object Type="Program" Language="IEC" Description="+ name is program">FastStart</Object>
+    <Object Type="Program" Language="IEC" Description="+ Peak Fire Pressure Detection Run">PFPDR</Object>
+    <Object Type="Program" Language="IEC" Description="+ timing point calculation">ignpoint_EC</Object>
+    <Object Type="Program" Language="IEC" Description="+ LEANOX controller">leanox_EC</Object>
+    <Object Type="Program" Language="IEC" Description="+ Direct Air Injection">DirAirInj</Object>
+    <Object Type="Program" Language="IEC" Description="+ misfire monitoring and power reduction">misf_ctr_EC</Object>
+    <Object Type="Program" Language="IEC" Description="+ detection of misfire using actual power">misf_det_EC</Object>
+    <Object Type="Program" Language="IEC" Description="+ Engine Controller Messages">MsgEC</Object>
+    <Object Type="Program" Language="IEC" Description="+ Engine Controller output task TC1">OUT_EC_TC1</Object>
+    <Object Type="Program" Language="IEC" Description="+ Engine Controller output task">OUT_EngCtr</Object>
+    <Object Type="Program" Language="IEC" Description="+ monitoring the exhaust gas temperatures">exhaust_EC</Object>
+    <Object Type="Program" Language="IEC" Description="+ GridCode">dyn_GR</Object>
+    <Object Type="Program" Language="IEC" Description="+ GridCode Custom">GR_GCB_cust</Object>
+    <Object Type="Program" Language="IEC" Description="+ Visualization task">VisEC</Object>
+    <Object Type="Program" Language="IEC" Description="+ Engine Controller Parameter">ParEC</Object>
+    <Object Type="Program" Language="IEC" Description="+ Additional Engine Maps">PermMap</Object>
+    <Object Type="Program" Language="IEC" Description="+ Additional Engine Maps">PermEC2</Object>
+    <Object Type="Program" Language="IEC" Description="+ checks and loads PV's for pre-mixed engines">PVcheckNEW</Object>
+    <Object Type="Program" Language="IEC" Description="+ checks and loads PV's for type 9">PVcheck</Object>
+    <Object Type="Program" Language="IEC" Description="+ common tasks @ 100ms">gen_EC_T5</Object>
+    <Object Type="Program" Language="IEC" Description="+ creating bit pattern to handle a skipfire operation">skip_zde</Object>
+    <Object Type="Program" Language="IEC" Description="+ Humidity Package">hum_pac_EC</Object>
+    <Object Type="Program" Language="IEC" Description="+ power unit safty layer">PUSL</Object>
+    <Object Type="Program" Language="IEC" Description="+ cylinder balancing with port injection">pi_bal_EC</Object>
+    <Object Type="Program" Language="IEC" Description="+ controller for the port injection valve">pi_ctr_EC</Object>
+    <Object Type="Program" Language="IEC" Description="+ calculates stoich. power">psi_cal</Object>
+    <Object Type="Program" Language="IEC" Description="+ provides global IO Data">SPP_TC1</Object>
+    <Object Type="Program" Language="IEC" Description="+ provides global IO Data">SPP_EC</Object>
+    <Object Type="Program" Language="IEC" Description="+ provides data for gassort 0">gassort_int</Object>
+    <Object Type="Program" Language="IEC" Description="+ handle the monitoring part for the pressure based control">PBC</Object>
+    <Object Type="Package" Description="new EC">Sondergas</Object>
+    <Object Type="Program" Language="IEC" Description="+ Emissions Supervisoiry Controller">ESC</Object>
+  </Objects>
+</Package>

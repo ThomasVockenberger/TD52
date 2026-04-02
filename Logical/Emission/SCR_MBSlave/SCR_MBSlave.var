@@ -1,0 +1,10 @@
+VAR
+	bConnectYourVariableHere : BOOL := FALSE; (*Placeholder*)
+	iConnectYourVariableHere : INT := 0; (*Placeholder*)
+	iConnectYourVariableHere1 : USINT := 0; (*Placeholder*)
+	iSCR_SDB_Status : USINT := 0; (*Status of SDB (smart dosing box) *)
+	xTON_AliveBit_1 : TON := (0); (*Generate BUS ALIVE signal*)
+	xTON_AliveBit_2 : TON := (0); (*Generate BUS ALIVE signal*)
+	xTON_AliveCheck_0 : TON := (0); (*Check BUS ALIVE signal*)
+	xTON_AliveCheck_1 : TON := (0); (*Check BUS ALIVE signal*)
+END_VAR

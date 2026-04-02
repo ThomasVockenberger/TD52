@@ -1,0 +1,179 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2023
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V3.99		06-03-2013	Weitzer, generated for modular software	 
+; 	 		17-07-2013	Zengerer, Strukturupdate
+;       	04-12.2013  Maxhera, content update
+; V4.00 	31.01.2014	Weitzer, versions changed
+; V4.03 	09-03-2016	Mari W., adaption after adding SCR CAT
+;						Weitzer, corrections
+; V4.04 	07-11-2016	Weitzer, MM2VIS.rNOx_NOxS_EngOut_mg & MM2VIS.rNOx_NOxS_CatOut_mg added
+; V4.05		17-05-2017	Messner, move SCR to EM module
+;						Tinello, SCR update to Spec version a
+;								 NOx sensor integrated
+; V4.05.03	13-02-2018	Tinello, Mittelwert-Berechnung korrigiert, dosing stop, sample gas pump and emission monitoring changed
+;								 Dependencies angepasst
+; V4.05.04	19-03-2018	Tinello, NOx sensor task angepasst / Para Check erweitert
+; V4.05.05	23-05-2018	Tinello, Bugfix SCR
+; V4.05.06	20-09-2018	Tinello, Bugfix SCR, NOx -> bu
+; V4.06.00	16-03-2018	Hohens., ".Exist" added to HALioBase library for analog inputs --> fixed type casting in SCR_UDC
+; V4.07.00	11-04-2019	Tinello, NOx: bugfix; plausibility check for O2 and NOx, deviation bank A/B, status overview added
+;								 SCR: Length of urea dosing line, new warning for dosing error, Urea pump stop – overpressure, 
+;									  manual mode only 30m, MSS always active
+;								 EM:  Average calculation and monitoring moved from SCR to Emission task
+; V4.07.01	06-11-2019	Tinello, NOx: new lifetime parameter; plausibility check changed; O2-filter for conversion of NOx setpoint added; reduced perm file write interval (bu1)
+; V4.09.00	04-03-2020	Tinello, plausibility and self-diagnosis changed -> Spec. (c)
+; V4.09.02	31.08.2020	Tinello, (=BU2) bugfix -> Message 2455 only active if urea dosing controller is active / CAN read operating hours / CEMS correction
+; V4.10.00	28.01.2021	Tinello, BugFix: Timer & other FuB's / Sum emission error extended / urea supply pump starts earlier
+;			15.06.2021	Tinello, BU02: Operating Hours NOx / unteres O2-Limit von 5% -> 0% / DailyAvg -> perm
+; V4.11.00	29.03.2022	Tinello, Interpolation of load dependent NOx-setpoint / BugFix: NOx plausibility check changed: Skip-mode considered / SCR bugfixes / CAT temp min monitoring
+; 			03.08.2022	Tinello, BU01: NOx sensor activation independent of temperature after 5min/10min of start speed
+; V4.12.00	14.11.2022	Arnold,  H2 based EngOut NOx setpoint for UDC
+;			30.01.2023	Tinello	 SCR Customer added
+; V4.13.00	20.11.2023	Farre,	 Replaced Para.rP_Set_Min_Norm by IN_GR.rP_Set_Min_Norm interface coming from OP. (2023-168)
+; 			21.11.2023	Tinello, Added urea tank level, new warnings and operational messages, release dosing & slip detection adapted / W3456 split (2022-141)
+;								 Temp changed for NOx sensor start (2023-191)
+; V4.14.00	18.06.2024	Soto,	 Low NOx sensor with CAN communication (2023-183)
+;			21.10.2024	Farre,	 CEMS internal modifications (2023-183)
+;			25.11.2024	Bacci,	 T6 Start procedure with purge start (2024-219): effect of elimination of scavenging fan on sensors calibration 
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+; OBEY XML FORMATING RULES!
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>EM</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.14.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"<PARA1 Name='rN_EngStart_LimHi' MIN='50.0' MAX='2200.0' />"
+"<PARA2 Name='iEng_Motortype' MIN='208' MAX='920' />"
+"<PARA3 />"
+"<PARA4 />"
+"<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_EM</DATAMODULE>"
+"	<DATAMODULE>perm_EM</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='AB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='AG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='CH' VERSION='04.05.00.00' />"
+"	<DEPENDENCY MODULE='CP' VERSION='04.05.00.00' />"
+"	<DEPENDENCY MODULE='EC' VERSION='04.12.00.00' />"
+"	<DEPENDENCY MODULE='EG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='EX' VERSION='04.05.00.00' />"
+"	<DEPENDENCY MODULE='HA' VERSION='04.14.00.00' />"
+"	<DEPENDENCY MODULE='IG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='OP' VERSION='04.13.00.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='04.06.00.00' />"
+"   <DEPENDENCY VISVERSION='02.15.00.00' />"				;Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	measure NOx and O2 with NOx sensor "
+"	</General>	"
+""
+"	<F1 Name='measure NOx and O2' LastModified='04.00.00.00'>"
+"	initiate CAN communication, measure NOx and O2 value	"
+"	</F1>"
+"	<F2 Name=' alarm management' LastModified='04.00.00.00'>"
+"   Message for Emission "
+"	</F2>"
+"	<F3 Name=' alarm management' LastModified='04.05.06.00'>"
+"   SCR included / NOx included"
+"	NOx monitoring and availability of signals 180s after sensor start"
+"	SCR Adjustment with ext CEMS"
+"	</F3>"
+"	<F4 Name=' emission monitoring' LastModified='04.07.00.00'>"
+"	NOx sensor self diagnosis, plausibility check, deviation bank A/B and status overview added"
+"	MsErr now also active with operation mode selector switch in OFF mode"
+"	2 DI's for external SCR systems, length of urea dosing line and new warning for dosing error added"
+"	Transformation from mg/Nm3 --> ppm and ppm --> mg/Nm3 added"
+"	Average calculation and monitoring adapted to new spec (Daily average calculation for NOx added. Emission monitoring with limit and tolerance)"
+"	Counter for Duration of emission tolerance exceedance added"	
+"	</F4>"
+"	<F5 Name=' emission monitoring' LastModified='04.07.01.00'>"
+"	reduced perm file write interval to avoid CF card wear down"
+"	new lifetime parameter; plausibility check changed; O2-filter for conversion of NOx setpoint parameter added"	
+"	</F5>"
+"	<F6 Name=' emission monitoring' LastModified='04.09.00.00'>"
+"	plausibility check changed for CAT out sensor / self-diagnosis 900s after engine shutdown, if CAT out sensor is requested"
+"	If during self-diagnosis the result is not available -> try again 3 times before exit self-diagnosis -> Spec. (c)"	
+"	Release of emission average monitoring changed"
+"	</F6>"
+"	<F7 Name='CEMS/NOx reading' LastModified='04.09.02.00 BU2'>"
+"	bugfix -> Message 2455 only active if urea dosing controller is active"
+"	bugfix -> reading operating hours via CAN"
+"	bugfix -> CEMS correction only during active NOx sensor"
+"	</F7>"
+"	<F8 Name='BugFix' LastModified='04.10.00.00'>"
+"	BugFix: Timer & other FuB's / Sum emission error extended / urea supply pump starts earlier"
+"	</F8>"
+"	<F9 Name='BugFix' LastModified='04.10.00.00 BU2'>"
+"	BugFix: Operating Hours NOx / unteres O2-Limit von 5% -> 0% / Save daily average permanent"
+"	</F9>"
+"	<F10 Name='BugFix' LastModified='04.11.00.00'>"
+"	Interpolation of load dependent NOx-setpoint"
+"	3 new parameters"
+"	NOx plausibility check changed: Skip-mode considered"
+"	SCR leakage monitoring extended and time changed from 60s ->300s / urea dosing pump - error corrected"
+"	Monitoring of CAT-temperature minimum added"
+"	BugFix of emission short term average monitoring"
+"	</F10>"
+"	<F11 Name='BugFix' LastModified='04.11.00.00 BU1'>"
+"	Take CO and NOx values from SCR already if limits reached / O2-limit for NOx-Transformation to mg added"
+"	Release NOx average monitoring for SCR latest if 20min minimum power reached"
+"	SCR temperature difference monitoring changed from 100C to 20C"
+"	NOx sensor activation independent of temperature / restart of sensor not before 1s of no connection"
+"	</F11>"
+"	<F12 Name='SCR features' LastModified='04.13.00.00'>"
+"	Added urea tank level, new warnings and operational messages, release dosing & slip detection adapted / W3456 split"
+"	Temp changed for NOx sensor start"
+"	</F12>"
+""
+"	<Info>"
+"	no furhter information	"
+"	</Info>"
+""
+"	<Customized LastModified='04.00.00.00'>	"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

@@ -1,0 +1,1636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ISO15745ProfileContainer xmlns="http://www.ethernet-powerlink.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ethernet-powerlink.org ../Powerlink_Main.xsd">
+	<ISO15745Profile>
+		<ProfileHeader>
+			<ProfileIdentification>EPL_Device_Profile_UR20_4AI_RTD_DIAG</ProfileIdentification>
+			<ProfileRevision>1</ProfileRevision>
+			<ProfileName>Ethernet POWERLINK UR20-4AI-RTD-DIAG device profile</ProfileName>
+			<ProfileSource/>
+			<ProfileClassID>Device</ProfileClassID>
+			<ISO15745Reference>
+				<ISO15745Part>4</ISO15745Part>
+				<ISO15745Edition>1</ISO15745Edition>
+				<ProfileTechnology>Powerlink</ProfileTechnology>
+			</ISO15745Reference>
+		</ProfileHeader>
+		<ProfileBody xsi:type="ProfileBody_Device_Powerlink_Modular_Child" fileName="00000230_UR20_4AI_RTD_DIAG.XDD" fileCreator="Weidmüller" fileCreationDate="2016-08-01" fileCreationTime="15:00:00+01:00" fileModificationDate="2016-08-01" fileModificationTime="16:23:37.341+02:00" fileModifiedBy="Weidmüller" fileVersion="V01.00" supportedLanguages="en de" specificationVersion="1.2.0">
+			<DeviceIdentity>
+				<vendorName>Weidmüller</vendorName>
+				<vendorID>0x00000230</vendorID>
+				<vendorText>
+					<label lang="de">Bei Problemen kontaktieren sie unseren Support: ++49(..</label>
+					<label lang="en">Experiencing problems - contact our support : ++1(..</label>
+				</vendorText>
+				<deviceFamily>
+					<label lang="en">Modular I/O system</label>
+					<label lang="de">Modulares I/O System</label>
+				</deviceFamily>
+				<productName>UR20-4AI-RTD-DIAG / 1315700000</productName>
+				<productID>1315700000</productID>
+				<productText>
+					<label lang="en">IO-MODUL 4 ANALOG IN TEMPERATURE (RTD)</label>
+					<label lang="de">IO-MODUL 4 ANALOG IN TEMPERATURE (RTD)</label>
+				</productText>
+				<orderNumber>1315700000</orderNumber>
+				<buildDate>2016-08-01</buildDate>
+			</DeviceIdentity>
+			<DeviceManager>
+				<moduleManagement>
+					<moduleInterface childID="UR20_4AI_RTD_DIAG" type="UR20" moduleAddressing="position">
+						<label lang="en-us">UR20 interface</label>
+						<fileList>
+							<file URI="00000230_*.xdd"/>
+						</fileList>
+						<moduleTypeList>
+							<moduleType uniqueID="UR20_4AI_RTD_DIAG_out" type="UR20" />
+						</moduleTypeList>
+					</moduleInterface>
+				</moduleManagement>
+			</DeviceManager>
+			<DeviceFunction>
+				<capabilities>
+					<characteristicsList>
+						<characteristic>
+							<characteristicName>
+								<label lang="en">Input/Output</label>
+								<label lang="de">Ein-/Ausgänge</label>
+							</characteristicName>
+							<characteristicContent>
+								<label lang="en">UR20 IO System</label>
+								<label lang="de">UR20 IO System</label>
+							</characteristicContent>
+						</characteristic>
+					</characteristicsList>
+				</capabilities>
+				<picturesList>
+					<picture URI="UR20_4AI_RTD_DIAG.png" type="frontPicture">
+						<label lang="en">FrontFoto</label>
+						<label lang="de">Frontfoto</label>
+					</picture>
+					<picture URI="UR20.ico" type="icon">
+						<label lang="en">Icon</label>
+						<label lang="de">Pictogramm</label>
+					</picture>
+				</picturesList>
+				<connectorList>
+					<connector id="UR20_IF1" connectorType="UR20" interfaceIDRef="UR20_4AI_RTD_DIAG" positioning="localLeft" >
+						<label lang="en-us">Left UR20 interface</label>
+					</connector>
+					<connector id="UR20_IF2" connectorType="UR20" interfaceIDRef="UR20_4AI_RTD_DIAG_out" positioning="localRight" >
+						<label lang="en-us">Right UR20 interface</label>
+					</connector>
+				</connectorList>
+				<classificationList>
+					<classification>IO</classification>
+					<classification>Analog</classification>
+					<classification>Input</classification>
+				</classificationList>
+			</DeviceFunction>
+			<ApplicationProcess>
+				<templateList>
+				<parameterTemplate uniqueID="TID_Par_Unit_Select_Type" access="readWrite">
+						<label lang="en">Temperature unit</label>
+						<label lang="de">Temperatureinheit</label>
+						<STRING/>
+						<defaultValue value="Grad Celsius"/>
+						<allowedValues>
+							<value value="Grad Celsius">
+								<label lang="en">Degree Celsius</label>
+								<label lang="de">Grad Celsius</label>
+							</value>
+							<value value="Grad Fahrenheit">
+								<label lang="en">Degree Fahrenheit</label>
+								<label lang="de">Grad Fahrenheit</label>
+							</value>
+							<value value="Kelvin">
+								<label lang="en">Kelvin</label>
+								<label lang="de">Kelvin</label>
+							</value>
+						</allowedValues>
+				</parameterTemplate>
+				<parameterTemplate uniqueID="TID_Par_Range_Select_Type" access="readWrite">
+						<label lang="en">Measurement range</label>
+						<label lang="de">Messbereich</label>
+						<STRING/>
+						<defaultValue value="deaktiviert"/>
+						<allowedValues>
+							<value value="PT100">
+								<label lang="en">PT100 -200...850 Degree Celsius</label>
+								<label lang="de">PT100 -200...850 Grad Celsius</label>
+							</value>
+							<value value="PT200">
+								<label lang="en">PT200 -200...850 Degree Celsius</label>
+								<label lang="de">PT200 -200...850 Grad Celsius</label>
+							</value>
+							<value value="PT500">
+								<label lang="en">PT500 -200...850 Grad Celsius</label>
+								<label lang="de">PT500 -200...850 Grad Celsius</label>
+							</value>
+							<value value="PT1000">
+								<label lang="en">PT1000 -200...850 Grad Celsius</label>
+								<label lang="de">PT1000 -200...850 Grad Celsius</label>
+							</value>
+							<value value="NI100">
+								<label lang="en">NI100 -60...250 Grad Celsius</label>
+								<label lang="de">NI100 -60...250 Grad Celsius</label>
+							</value>
+							<value value="NI120">
+								<label lang="en">NI120 -80...260 Grad Celsius</label>
+								<label lang="de">NI120 -80...260 Grad Celsius</label>
+							</value>
+							<value value="NI200">
+								<label lang="en">NI200 -60...250 Grad Celsius</label>
+								<label lang="de">NI200 -60...250 Grad Celsius</label>
+							</value>
+							<value value="NI500">
+								<label lang="en">NI500 -60...250 Grad Celsius</label>
+								<label lang="de">NI500 -60...250 Grad Celsius</label>
+							</value>
+							<value value="NI1000">
+								<label lang="en">NI1000 -60...250 Grad Celsius</label>
+								<label lang="de">NI1000 -60...250 Grad Celsius</label>
+							</value>
+							<value value="Cu10">
+								<label lang="en">Cu10 -100...260 Grad Celsius</label>
+								<label lang="de">Cu10 -100...260 Grad Celsius</label>
+							</value>
+							<value value="40Ohm">
+								<label lang="en">Resistance 40 Ohm</label>
+								<label lang="de">Widerstand 40 Ohm</label>
+							</value>
+							<value value="80Ohm">
+								<label lang="en">Resistance 80 Ohm</label>
+								<label lang="de">Widerstand 80 Ohm</label>
+							</value>
+							<value value="150Ohm">
+								<label lang="en">Resistance 150 Ohm</label>
+								<label lang="de">Widerstand 150 Ohm</label>
+							</value>
+							<value value="300Ohm">
+								<label lang="en">Resistance 300 Ohm</label>
+								<label lang="de">Widerstand 300 Ohm</label>
+							</value>
+							<value value="500Ohm">
+								<label lang="en">Resistance 500 Ohm</label>
+								<label lang="de">Widerstand 500 Ohm</label>
+							</value>
+							<value value="1000Ohm">
+								<label lang="en">Resistance 1000 Ohm</label>
+								<label lang="de">Widerstand 1000 Ohm</label>
+							</value>
+							<value value="2000Ohm">
+								<label lang="en">Resistance 2000 Ohm</label>
+								<label lang="de">Widerstand 2000 Ohm</label>
+							</value>
+							<value value="4000Ohm">
+								<label lang="en">Resistance 4000 Ohm</label>
+								<label lang="de">Widerstand 4000 Ohm</label>
+							</value>
+							<value value="deaktiviert">
+								<label lang="en">disabled</label>
+								<label lang="de">deaktiviert</label>
+							</value>
+						</allowedValues>
+				</parameterTemplate>
+				<parameterTemplate uniqueID="TID_Par_Connection_Select_Type" access="readWrite">
+						<label lang="en">Connection type</label>
+						<label lang="de">Anschlussart</label>
+						<STRING/>
+						<defaultValue value="2-Leiter"/>
+						<allowedValues>
+							<value value="2-Leiter">
+								<label lang="en">2-wire</label>
+								<label lang="de">2-Leiter</label>
+							</value>
+							<value value="3-Leiter">
+								<label lang="en">3-wire</label>
+								<label lang="de">3-Leiter</label>
+							</value>
+							<value value="4-Leiter">
+								<label lang="en">4-wire</label>
+								<label lang="de">4-Leiter</label>
+							</value>
+						</allowedValues>
+				</parameterTemplate>
+				<parameterTemplate uniqueID="TID_Par_Conversion_Select_Type" access="readWrite">
+						<label lang="en">Conversion time</label>
+						<label lang="de">Wandlungszeit</label>
+						<STRING/>
+						<defaultValue value="80 ms"/>
+						<allowedValues>
+							<value value="240 ms">
+								<label lang="en">240 ms</label>
+								<label lang="de">240 ms</label>
+							</value>
+							<value value="130 ms">
+								<label lang="en">130 ms</label>
+								<label lang="de">130 ms</label>
+							</value>
+							<value value="80 ms">
+								<label lang="en">80 ms</label>
+								<label lang="de">80 ms</label>
+							</value>
+							<value value="55 ms">
+								<label lang="en">55 ms</label>
+								<label lang="de">55 ms</label>
+							</value>
+							<value value="43 ms">
+								<label lang="en">43 ms</label>
+								<label lang="de">43 ms</label>
+							</value>
+							<value value="36 ms">
+								<label lang="en">36 ms</label>
+								<label lang="de">36 ms</label>
+							</value>
+						</allowedValues>
+				</parameterTemplate>
+				<parameterTemplate uniqueID="TID_Par_ChannelDiag_Select_Type" access="readWrite">
+						<label lang="en">Channel diagnosis</label>
+						<label lang="de">Kanaldiagnose</label>
+						<STRING/>
+						<defaultValue value="deaktiviert"/>
+						<allowedValues>
+							<value value="deaktiviert">
+								<label lang="en">disabled</label>
+								<label lang="de">deaktiviert</label>
+							</value>
+							<value value="aktiviert">
+								<label lang="en">enabled</label>
+								<label lang="de">aktiviert</label>
+							</value>
+						</allowedValues>
+				</parameterTemplate>
+				<parameterTemplate uniqueID="TID_Par_Monitoring_Select_Type" access="readWrite">
+						<label lang="en">Limit value monitoring</label>
+						<label lang="de">Grenzwertüberwachung</label>
+						<STRING/>
+						<defaultValue value="deaktiviert"/>
+						<allowedValues>
+							<value value="deaktiviert">
+								<label lang="en">disabled</label>
+								<label lang="de">deaktiviert</label>
+							</value>
+							<value value="aktiviert">
+								<label lang="en">enabled</label>
+								<label lang="de">aktiviert</label>
+							</value>
+						</allowedValues>
+				</parameterTemplate>
+				<parameterTemplate uniqueID="TID_Par_Unit_Data_Type" access="readWrite">
+						<description lang="en">Data Type</description>
+						<description lang="de">Data Type</description>
+						<DINT/>
+						<allowedValues>
+							<range>
+								<minValue value="0"/>
+								<maxValue value="2"/>
+							</range>
+						</allowedValues>
+				</parameterTemplate>
+				<parameterTemplate uniqueID="TID_Par_Range_Data_Type" access="readWrite">
+						<description lang="en">Data Type</description>
+						<description lang="de">Data Type</description>
+						<DINT/>
+						<allowedValues>
+							<range>
+								<minValue value="0"/>
+								<maxValue value="18"/>
+							</range>
+						</allowedValues>
+				</parameterTemplate>
+				<parameterTemplate uniqueID="TID_Par_Connection_Data_Type" access="readWrite">
+						<description lang="en">Data Type</description>
+						<description lang="de">Data Type</description>
+						<DINT/>
+						<allowedValues>
+							<range>
+								<minValue value="0"/>
+								<maxValue value="2"/>
+							</range>
+						</allowedValues>
+				</parameterTemplate>
+				<parameterTemplate uniqueID="TID_Par_Conversion_Data_Type" access="readWrite">
+						<description lang="en">Data Type</description>
+						<description lang="de">Data Type</description>
+						<DINT/>
+						<allowedValues>
+							<range>
+								<minValue value="0"/>
+								<maxValue value="5"/>
+							</range>
+						</allowedValues>
+				</parameterTemplate>
+				<parameterTemplate uniqueID="TID_Par_ChannelDiag_Data_Type" access="readWrite">
+						<description lang="en">Data Type</description>
+						<description lang="de">Data Type</description>
+						<DINT/>
+						<allowedValues>
+							<range>
+								<minValue value="0"/>
+								<maxValue value="1"/>
+							</range>
+						</allowedValues>
+				</parameterTemplate>
+				<parameterTemplate uniqueID="TID_Par_Monitoring_Data_Type" access="readWrite">
+						<description lang="en">Data Type</description>
+						<description lang="de">Data Type</description>
+						<DINT/>
+						<allowedValues>
+							<range>
+								<minValue value="0"/>
+								<maxValue value="1"/>
+							</range>
+						</allowedValues>
+				</parameterTemplate>
+				<parameterTemplate uniqueID="TID_Par_High_Limit_Data_Type" access="readWrite">
+						<label lang="en">High limit value</label>
+						<label lang="de">Oberer Grenzwert</label>
+						<DINT/>
+						<defaultValue value="0"/>
+						<allowedValues>
+							<range>
+								<minValue value="-32768"/>
+								<maxValue value="32767"/>
+							</range>
+						</allowedValues>
+				</parameterTemplate>
+				<parameterTemplate uniqueID="TID_Par_Low_Limit_Data_Type" access="readWrite">
+						<label lang="en">Low limit value</label>
+						<label lang="de">Unterer Grenzwert</label>
+						<DINT/>
+						<defaultValue value="0"/>
+						<allowedValues>
+							<range>
+								<minValue value="-32768"/>
+								<maxValue value="32767"/>
+							</range>
+						</allowedValues>
+				</parameterTemplate>
+				</templateList>
+				<parameterList>
+					<parameter uniqueID="UID_AnalogInput01" access="read">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<INT/>
+						<property name="pin 11" value="AI-01"/>
+					</parameter>
+					<parameter uniqueID="UID_AnalogInput02" access="read">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<INT/>
+						<property name="pin 21" value="AI-02"/>
+					</parameter>
+					<parameter uniqueID="UID_AnalogInput03" access="read">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<INT/>
+						<property name="pin 12" value="AI-03"/>
+					</parameter>
+					<parameter uniqueID="UID_AnalogInput04" access="read">
+						<description lang="en">24 VDC</description>
+						<description lang="de">24 VDC</description>
+						<INT/>
+						<property name="pin 22" value="AI-04"/>
+					</parameter>
+					<parameter uniqueID="UID_Par_1_Sel" templateIDRef="TID_Par_Unit_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_2_Sel" templateIDRef="TID_Par_Range_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_3_Sel" templateIDRef="TID_Par_Connection_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_4_Sel" templateIDRef="TID_Par_Conversion_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_5_Sel" templateIDRef="TID_Par_ChannelDiag_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_6_Sel" templateIDRef="TID_Par_Monitoring_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_9_Sel" templateIDRef="TID_Par_Range_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_10_Sel" templateIDRef="TID_Par_Connection_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_11_Sel" templateIDRef="TID_Par_Conversion_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_12_Sel" templateIDRef="TID_Par_ChannelDiag_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_13_Sel" templateIDRef="TID_Par_Monitoring_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_16_Sel" templateIDRef="TID_Par_Range_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_17_Sel" templateIDRef="TID_Par_Connection_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_18_Sel" templateIDRef="TID_Par_Conversion_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_19_Sel" templateIDRef="TID_Par_ChannelDiag_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_20_Sel" templateIDRef="TID_Par_Monitoring_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_23_Sel" templateIDRef="TID_Par_Range_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_24_Sel" templateIDRef="TID_Par_Connection_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_25_Sel" templateIDRef="TID_Par_Conversion_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_26_Sel" templateIDRef="TID_Par_ChannelDiag_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					<parameter uniqueID="UID_Par_27_Sel" templateIDRef="TID_Par_Monitoring_Select_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<STRING/>
+					</parameter>
+					
+					<parameter uniqueID="UID_Par_1" templateIDRef="TID_Par_Unit_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_2" templateIDRef="TID_Par_Range_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_3" templateIDRef="TID_Par_Connection_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_4" templateIDRef="TID_Par_Conversion_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_5" templateIDRef="TID_Par_ChannelDiag_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_6" templateIDRef="TID_Par_Monitoring_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_7" templateIDRef="TID_Par_High_Limit_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_8" templateIDRef="TID_Par_Low_Limit_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_9" templateIDRef="TID_Par_Range_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_10" templateIDRef="TID_Par_Connection_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_11" templateIDRef="TID_Par_Conversion_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_12" templateIDRef="TID_Par_ChannelDiag_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_13" templateIDRef="TID_Par_Monitoring_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_14" templateIDRef="TID_Par_High_Limit_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_15" templateIDRef="TID_Par_Low_Limit_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_16" templateIDRef="TID_Par_Range_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_17" templateIDRef="TID_Par_Connection_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_18" templateIDRef="TID_Par_Conversion_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_19" templateIDRef="TID_Par_ChannelDiag_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_20" templateIDRef="TID_Par_Monitoring_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_21" templateIDRef="TID_Par_High_Limit_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_22" templateIDRef="TID_Par_Low_Limit_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_23" templateIDRef="TID_Par_Range_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_24" templateIDRef="TID_Par_Connection_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_25" templateIDRef="TID_Par_Conversion_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_26" templateIDRef="TID_Par_ChannelDiag_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_27" templateIDRef="TID_Par_Monitoring_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_28" templateIDRef="TID_Par_High_Limit_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+					<parameter uniqueID="UID_Par_29" templateIDRef="TID_Par_Low_Limit_Data_Type">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<DINT/>
+					</parameter>
+				</parameterList>
+				<parameterGroupList>
+				<parameterGroup uniqueID="UID_InputImage_Map" bitOffset="0">
+						<label lang="en">OutputImages</label>
+						<label lang="de">OutputImages</label>
+						<parameterRef uniqueIDRef="UID_AnalogInput01" visible="true" bitOffset="0"/>
+						<parameterRef uniqueIDRef="UID_AnalogInput02" visible="true" bitOffset="16"/>
+						<parameterRef uniqueIDRef="UID_AnalogInput03" visible="true" bitOffset="32"/>
+						<parameterRef uniqueIDRef="UID_AnalogInput04" visible="true" bitOffset="48"/>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_PG_General" kindOfAccess="Properties" configParameter="true">
+						<label lang="en">General</label>
+						<label lang="de">Allgemein</label>
+						<parameterRef uniqueIDRef="UID_Par_1_Sel" actualValue="Deaktiviert" visible="true"/>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Channel1_Par" kindOfAccess="Properties" configParameter="true" groupLevelVisible="true">
+						<label lang="en">Channel 01</label>
+						<label lang="de">Kanal 01</label>
+						<parameterRef uniqueIDRef="UID_Par_2_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_3_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_4_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_5_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_6_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_7" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_8" visible="true"/>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Channel2_Par" kindOfAccess="Properties" configParameter="true" groupLevelVisible="true">
+						<label lang="en">Channel 02</label>
+						<label lang="de">Kanal 02</label>
+						<parameterRef uniqueIDRef="UID_Par_9_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_10_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_11_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_12_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_13_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_14" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_15" visible="true"/>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Channel3_Par" kindOfAccess="Properties" configParameter="true" groupLevelVisible="true">
+						<label lang="en">Channel 03</label>
+						<label lang="de">Kanal 03</label>
+						<parameterRef uniqueIDRef="UID_Par_16_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_17_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_18_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_19_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_20_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_21" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_22" visible="true"/>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Channel4_Par" kindOfAccess="Properties" configParameter="true" groupLevelVisible="true">
+						<label lang="en">Channel 04</label>
+						<label lang="de">Kanal 04</label>
+						<parameterRef uniqueIDRef="UID_Par_23_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_24_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_25_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_26_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_27_Sel" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_28" visible="true"/>
+						<parameterRef uniqueIDRef="UID_Par_29" visible="true"/>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_1_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_1_Map1" conditionalUniqueIDRef="UID_Par_1_Sel" conditionalValue="Grad Celsius" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_1" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_1_Map2" conditionalUniqueIDRef="UID_Par_1_Sel" conditionalValue="Grad Fahrenheit" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_1" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_1_Map3" conditionalUniqueIDRef="UID_Par_1_Sel" conditionalValue="Kelvin" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_1" actualValue="2" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_2_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_2_Map1" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="PT100" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_2_Map2" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="PT200" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_2_Map3" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="PT500" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="2" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_2_Map4" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="PT1000" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="3" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_2_Map5" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="NI100" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="4" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_2_Map6" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="NI120" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="5" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_2_Map7" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="NI200" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="6" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_2_Map8" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="NI500" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="7" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_2_Map9" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="NI1000" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="8" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_2_Map10" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="Cu10" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="9" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_2_Map11" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="40Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="10" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_2_Map12" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="80Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="11" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_2_Map13" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="150Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="12" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_2_Map14" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="300Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="13" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_2_Map15" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="500Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="14" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_2_Map16" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="1000Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="15" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_2_Map17" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="2000Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="16" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_2_Map18" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="4000Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="17" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_2_Map19" conditionalUniqueIDRef="UID_Par_2_Sel" conditionalValue="deaktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_2" actualValue="18" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_3_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_3_Map1" conditionalUniqueIDRef="UID_Par_3_Sel" conditionalValue="2-Leiter" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_3" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_3_Map2" conditionalUniqueIDRef="UID_Par_3_Sel" conditionalValue="3-Leiter" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_3" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_3_Map3" conditionalUniqueIDRef="UID_Par_3_Sel" conditionalValue="4-Leiter" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_3" actualValue="2" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_4_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_4_Map1" conditionalUniqueIDRef="UID_Par_4_Sel" conditionalValue="240 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_4" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_4_Map2" conditionalUniqueIDRef="UID_Par_4_Sel" conditionalValue="130 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_4" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_4_Map3" conditionalUniqueIDRef="UID_Par_4_Sel" conditionalValue="80 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_4" actualValue="2" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_4_Map4" conditionalUniqueIDRef="UID_Par_4_Sel" conditionalValue="55 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_4" actualValue="3" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_4_Map5" conditionalUniqueIDRef="UID_Par_4_Sel" conditionalValue="43 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_4" actualValue="4" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_4_Map6" conditionalUniqueIDRef="UID_Par_4_Sel" conditionalValue="36 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_4" actualValue="5" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_5_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_5_Map1" conditionalUniqueIDRef="UID_Par_5_Sel" conditionalValue="deaktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_5" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_5_Map2" conditionalUniqueIDRef="UID_Par_5_Sel" conditionalValue="aktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_5" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_6_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_6_Map1" conditionalUniqueIDRef="UID_Par_6_Sel" conditionalValue="deaktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_6" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_6_Map2" conditionalUniqueIDRef="UID_Par_6_Sel" conditionalValue="aktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_6" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_7_Map" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_7" visible="false" bitOffset="0"/>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_8_Map" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_8" visible="false" bitOffset="0"/>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_9_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_9_Map1" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="PT100" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_9_Map2" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="PT200" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_9_Map3" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="PT500" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="2" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_9_Map4" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="PT1000" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="3" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_9_Map5" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="NI100" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="4" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_9_Map6" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="NI120" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="5" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_9_Map7" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="NI200" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="6" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_9_Map8" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="NI500" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="7" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_9_Map9" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="NI1000" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="8" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_9_Map10" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="Cu10" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="9" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_9_Map11" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="40Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="10" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_9_Map12" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="80Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="11" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_9_Map13" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="150Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="12" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_9_Map14" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="300Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="13" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_9_Map15" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="500Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="14" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_9_Map16" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="1000Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="15" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_9_Map17" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="2000Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="16" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_9_Map18" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="4000Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="17" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_9_Map19" conditionalUniqueIDRef="UID_Par_9_Sel" conditionalValue="deaktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_9" actualValue="18" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_10_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_10_Map1" conditionalUniqueIDRef="UID_Par_10_Sel" conditionalValue="2-Leiter" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_10" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_10_Map2" conditionalUniqueIDRef="UID_Par_10_Sel" conditionalValue="3-Leiter" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_10" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_10_Map3" conditionalUniqueIDRef="UID_Par_10_Sel" conditionalValue="4-Leiter" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_10" actualValue="2" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_11_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_11_Map1" conditionalUniqueIDRef="UID_Par_11_Sel" conditionalValue="240 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_11" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_11_Map2" conditionalUniqueIDRef="UID_Par_11_Sel" conditionalValue="130 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_11" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_11_Map3" conditionalUniqueIDRef="UID_Par_11_Sel" conditionalValue="80 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_11" actualValue="2" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_11_Map4" conditionalUniqueIDRef="UID_Par_11_Sel" conditionalValue="55 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_11" actualValue="3" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_11_Map5" conditionalUniqueIDRef="UID_Par_11_Sel" conditionalValue="43 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_11" actualValue="4" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_11_Map6" conditionalUniqueIDRef="UID_Par_11_Sel" conditionalValue="36 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_11" actualValue="5" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_12_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_12_Map1" conditionalUniqueIDRef="UID_Par_12_Sel" conditionalValue="deaktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_12" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_12_Map2" conditionalUniqueIDRef="UID_Par_12_Sel" conditionalValue="aktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_12" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_13_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_13_Map1" conditionalUniqueIDRef="UID_Par_13_Sel" conditionalValue="deaktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_13" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_13_Map2" conditionalUniqueIDRef="UID_Par_13_Sel" conditionalValue="aktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_13" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_14_Map" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_14" visible="false" bitOffset="0"/>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_15_Map" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_15" visible="false" bitOffset="0"/>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_16_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_16_Map1" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="PT100" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_16_Map2" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="PT200" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_16_Map3" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="PT500" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="2" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_16_Map4" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="PT1000" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="3" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_16_Map5" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="NI100" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="4" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_16_Map6" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="NI120" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="5" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_16_Map7" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="NI200" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="6" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_16_Map8" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="NI500" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="7" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_16_Map9" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="NI1000" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="8" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_16_Map10" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="Cu10" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="9" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_16_Map11" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="40Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="10" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_16_Map12" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="80Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="11" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_16_Map13" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="150Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="12" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_16_Map14" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="300Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="13" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_16_Map15" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="500Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="14" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_16_Map16" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="1000Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="15" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_16_Map17" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="2000Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="16" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_16_Map18" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="4000Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="17" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_16_Map19" conditionalUniqueIDRef="UID_Par_16_Sel" conditionalValue="deaktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_16" actualValue="18" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_17_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_17_Map1" conditionalUniqueIDRef="UID_Par_17_Sel" conditionalValue="2-Leiter" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_17" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_17_Map2" conditionalUniqueIDRef="UID_Par_17_Sel" conditionalValue="3-Leiter" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_17" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_17_Map3" conditionalUniqueIDRef="UID_Par_17_Sel" conditionalValue="4-Leiter" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_17" actualValue="2" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_18_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_18_Map1" conditionalUniqueIDRef="UID_Par_18_Sel" conditionalValue="240 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_18" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_18_Map2" conditionalUniqueIDRef="UID_Par_18_Sel" conditionalValue="130 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_18" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_18_Map3" conditionalUniqueIDRef="UID_Par_18_Sel" conditionalValue="80 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_18" actualValue="2" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_18_Map4" conditionalUniqueIDRef="UID_Par_18_Sel" conditionalValue="55 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_18" actualValue="3" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_18_Map5" conditionalUniqueIDRef="UID_Par_18_Sel" conditionalValue="43 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_18" actualValue="4" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_18_Map6" conditionalUniqueIDRef="UID_Par_18_Sel" conditionalValue="36 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_18" actualValue="5" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_19_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_19_Map1" conditionalUniqueIDRef="UID_Par_19_Sel" conditionalValue="deaktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_19" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_19_Map2" conditionalUniqueIDRef="UID_Par_19_Sel" conditionalValue="aktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_19" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_20_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_20_Map1" conditionalUniqueIDRef="UID_Par_20_Sel" conditionalValue="deaktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_20" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_20_Map2" conditionalUniqueIDRef="UID_Par_20_Sel" conditionalValue="aktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_20" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_21_Map" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_21" visible="false" bitOffset="0"/>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_22_Map" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_22" visible="false" bitOffset="0"/>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_23_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_23_Map1" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="PT100" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_23_Map2" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="PT200" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_23_Map3" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="PT500" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="2" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_23_Map4" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="PT1000" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="3" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_23_Map5" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="NI100" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="4" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_23_Map6" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="NI120" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="5" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_23_Map7" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="NI200" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="6" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_23_Map8" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="NI500" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="7" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_23_Map9" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="NI1000" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="8" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_23_Map10" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="Cu10" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="9" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_23_Map11" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="40Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="10" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_23_Map12" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="80Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="11" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_23_Map13" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="150Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="12" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_23_Map14" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="300Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="13" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_23_Map15" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="500Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="14" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_23_Map16" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="1000Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="15" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_23_Map17" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="2000Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="16" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_23_Map18" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="4000Ohm" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="17" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_23_Map19" conditionalUniqueIDRef="UID_Par_23_Sel" conditionalValue="deaktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_23" actualValue="18" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_24_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_24_Map1" conditionalUniqueIDRef="UID_Par_24_Sel" conditionalValue="2-Leiter" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_24" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_24_Map2" conditionalUniqueIDRef="UID_Par_24_Sel" conditionalValue="3-Leiter" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_24" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_24_Map3" conditionalUniqueIDRef="UID_Par_24_Sel" conditionalValue="4-Leiter" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_24" actualValue="2" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_25_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_25_Map1" conditionalUniqueIDRef="UID_Par_25_Sel" conditionalValue="240 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_25" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_25_Map2" conditionalUniqueIDRef="UID_Par_25_Sel" conditionalValue="130 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_25" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_25_Map3" conditionalUniqueIDRef="UID_Par_25_Sel" conditionalValue="80 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_25" actualValue="2" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_25_Map4" conditionalUniqueIDRef="UID_Par_25_Sel" conditionalValue="55 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_25" actualValue="3" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_25_Map5" conditionalUniqueIDRef="UID_Par_25_Sel" conditionalValue="43 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_25" actualValue="4" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_25_Map6" conditionalUniqueIDRef="UID_Par_25_Sel" conditionalValue="36 ms" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_25" actualValue="5" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_26_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_26_Map1" conditionalUniqueIDRef="UID_Par_26_Sel" conditionalValue="deaktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_26" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_26_Map2" conditionalUniqueIDRef="UID_Par_26_Sel" conditionalValue="aktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_26" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_27_Map" bitOffset="0">
+						<label lang="en">Parameter</label>
+						<label lang="de">Parameter</label>
+						<parameterGroup uniqueID="UID_Par_27_Map1" conditionalUniqueIDRef="UID_Par_27_Sel" conditionalValue="deaktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_27" actualValue="0" visible="false" bitOffset="0"/>
+						</parameterGroup>
+						<parameterGroup uniqueID="UID_Par_27_Map2" conditionalUniqueIDRef="UID_Par_27_Sel" conditionalValue="aktiviert" groupLevelVisible="false" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_27" actualValue="1" visible="false" bitOffset="0"/>
+						</parameterGroup>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_28_Map" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_28" visible="false" bitOffset="0"/>
+				</parameterGroup>
+				<parameterGroup uniqueID="UID_Par_29_Map" bitOffset="0">
+							<label lang="en">Parameter</label>
+							<label lang="de">Parameter</label>
+							<parameterRef uniqueIDRef="UID_Par_29" visible="false" bitOffset="0"/>
+				</parameterGroup>
+				</parameterGroupList>
+			</ApplicationProcess>
+		</ProfileBody>
+	</ISO15745Profile>
+	<ISO15745Profile>
+		<ProfileHeader>
+			<ProfileIdentification>EPL_Device_Profile_UR20_4AI_RTD_DIAG</ProfileIdentification>
+			<ProfileRevision>1</ProfileRevision>
+			<ProfileName>Ethernet POWERLINK UR20-4AI-RTD-DIAG device profile</ProfileName>
+			<ProfileSource/>
+			<ProfileClassID>CommunicationNetwork</ProfileClassID>
+			<ISO15745Reference>
+				<ISO15745Part>4</ISO15745Part>
+				<ISO15745Edition>1</ISO15745Edition>
+				<ProfileTechnology>Powerlink</ProfileTechnology>
+			</ISO15745Reference>
+		</ProfileHeader>
+		<ProfileBody xsi:type="ProfileBody_CommunicationNetwork_Powerlink_Modular_Child" fileName="00000230_UR20_4AI_RTD_DIAG.XDD" fileCreator="Weidmüller" fileCreationDate="2016-08-01" fileCreationTime="15:00:00+01:00" fileModificationDate="2016-08-01" fileModificationTime="16:23:37.341+02:00" fileModifiedBy="Weidmüller" fileVersion="V01.00" supportedLanguages="en de" specificationVersion="1.2.0">
+			<ApplicationLayers>
+				<identity>
+					<vendorID>0x00000230</vendorID>
+					<deviceFamily>
+						<label lang="en">UR20</label>
+						<label lang="de">UR20</label>
+					</deviceFamily>
+					<productID>1315700000</productID>
+				</identity>
+				<ObjectList>
+					<Object index="4600" name="ModuleInputImages" objectType="9" rangeSelector="ModuleInputImages">
+						<SubObject subIndex="00" name="InputImage" objectType="7" dataType="000F" accessType="ro" PDOmapping="TPDO" uniqueIDRef="UID_InputImage_Map"/>
+					</Object>
+					
+					<Object index="3100" name="ModuleParameter1" objectType="9" rangeSelector="ModuleParameter1">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_1_Map"/>
+					</Object>
+					
+					<Object index="3101" name="ModuleParameter2" objectType="9" rangeSelector="ModuleParameter2">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_2_Map"/>
+					</Object>
+					
+					<Object index="3102" name="ModuleParameter3" objectType="9" rangeSelector="ModuleParameter3">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_3_Map"/>
+					</Object>
+					
+					<Object index="3103" name="ModuleParameter4" objectType="9" rangeSelector="ModuleParameter4">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_4_Map"/>
+					</Object>
+					
+					<Object index="3104" name="ModuleParameter5" objectType="9" rangeSelector="ModuleParameter5">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_5_Map"/>
+					</Object>
+					
+					<Object index="3105" name="ModuleParameter6" objectType="9" rangeSelector="ModuleParameter6">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_6_Map"/>
+					</Object>
+					
+					<Object index="3106" name="ModuleParameter7" objectType="9" rangeSelector="ModuleParameter7">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_7_Map"/>
+					</Object>
+					
+					<Object index="3107" name="ModuleParameter8" objectType="9" rangeSelector="ModuleParameter8">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_8_Map"/>
+					</Object>
+					
+					<Object index="3108" name="ModuleParameter9" objectType="9" rangeSelector="ModuleParameter9">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_9_Map"/>
+					</Object>
+					
+					<Object index="3109" name="ModuleParameter10" objectType="9" rangeSelector="ModuleParameter10">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_10_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="1010" name="ModuleParameter11" objectType="9" rangeSelector="ModuleParameter11">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_11_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="1111" name="ModuleParameter12" objectType="9" rangeSelector="ModuleParameter12">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_12_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="1212" name="ModuleParameter13" objectType="9" rangeSelector="ModuleParameter13">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_13_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="1313" name="ModuleParameter14" objectType="9" rangeSelector="ModuleParameter14">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_14_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="1414" name="ModuleParameter15" objectType="9" rangeSelector="ModuleParameter15">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_15_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="1515" name="ModuleParameter16" objectType="9" rangeSelector="ModuleParameter16">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_16_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="1616" name="ModuleParameter17" objectType="9" rangeSelector="ModuleParameter17">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_17_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="1717" name="ModuleParameter18" objectType="9" rangeSelector="ModuleParameter18">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_18_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="1818" name="ModuleParameter19" objectType="9" rangeSelector="ModuleParameter19">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_19_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="1919" name="ModuleParameter20" objectType="9" rangeSelector="ModuleParameter20">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_20_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="2020" name="ModuleParameter21" objectType="9" rangeSelector="ModuleParameter21">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_21_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="2121" name="ModuleParameter22" objectType="9" rangeSelector="ModuleParameter22">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_22_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="2222" name="ModuleParameter23" objectType="9" rangeSelector="ModuleParameter23">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_23_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="2323" name="ModuleParameter24" objectType="9" rangeSelector="ModuleParameter24">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_24_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="2424" name="ModuleParameter25" objectType="9" rangeSelector="ModuleParameter25">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_25_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="2525" name="ModuleParameter26" objectType="9" rangeSelector="ModuleParameter26">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_26_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="2626" name="ModuleParameter27" objectType="9" rangeSelector="ModuleParameter27">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_27_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="2727" name="ModuleParameter28" objectType="9" rangeSelector="ModuleParameter28">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_28_Map"/>
+					</Object>
+					<!--FIXME-->
+					<Object index="2828" name="ModuleParameter29" objectType="9" rangeSelector="ModuleParameter29">
+						<SubObject subIndex="00" name="Parameter" objectType="7" dataType="0004" accessType="rw" uniqueIDRef="UID_Par_29_Map"/>
+					</Object>
+				</ObjectList>
+			</ApplicationLayers>
+			<TransportLayers/>
+		</ProfileBody>
+	</ISO15745Profile>
+</ISO15745ProfileContainer>

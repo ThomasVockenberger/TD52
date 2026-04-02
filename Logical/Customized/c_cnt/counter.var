@@ -1,0 +1,42 @@
+VAR
+	bMinuteTick : BOOL; (* TRUE for 0,1s if one min. is over *)
+	bSecondTick : BOOL; (* TRUE for 0,1s if one sec. is over *)
+	reset : BOOL; (* reset at 00:00 *)
+	resetrpm : BOOL; (* reset RPM *)
+	h_imp : R_TRIG;
+	xImp_Count_1 : R_TRIG; (* R_TRIG structure counter 1 *)
+	xImp_Count_2 : R_TRIG; (* R_TRIG structure counter 2 *)
+	xImp_Count_3 : R_TRIG; (* R_TRIG structure counter 3 *)
+	xImp_Count_4 : R_TRIG; (* R_TRIG structure counter 4 *)
+	xImp_Count_5 : R_TRIG; (* R_TRIG structure counter 5*)
+	xImp_Count_6 : R_TRIG; (* R_TRIG structure counter 6*)
+	xImp_Count_7 : R_TRIG; (* R_TRIG structure counter 7*)
+	xImp_Count_8 : R_TRIG; (* R_TRIG structure counter 8*)
+	xImp_Count_9 : R_TRIG; (* R_TRIG structure counter 9*)
+	xImp_Count_10 : R_TRIG; (* R_TRIG structure counter 10*)
+	xImp_Count_11 : R_TRIG; (* R_TRIG structure counter 11*)
+	xImp_Count_12 : R_TRIG; (* R_TRIG structure counter 12*)
+	xImp_Count_13 : R_TRIG; (* R_TRIG structure counter 13*)
+	xImp_Count_14 : R_TRIG; (* R_TRIG structure counter 14*)
+	xImp_Count_15 : R_TRIG; (* R_TRIG structure counter 15*)
+	xImp_Count_16 : R_TRIG; (* R_TRIG structure counter 16*)
+	xImp_Count_17 : R_TRIG; (* R_TRIG structure counter 17*)
+	xImp_Count_18 : R_TRIG; (* R_TRIG structure counter 18*)
+	xImp_Count_19 : R_TRIG; (* R_TRIG structure counter 19*)
+	xImp_Count_20 : R_TRIG; (* R_TRIG structure counter 20*)
+	tresetrpm : R_TRIG; (* R_TRIG structure time reset RPM *)
+	treset : TP; (* TP structure time reset *)
+	real_old : UINT; (* save old real time second *)
+	ucLastSecond : USINT;
+	ucLastMinute : USINT;
+	DTGetTime_RPS : DTGetTime;
+	bWinFail : BOOL;
+	bConnectYourBitToCountHere1 : BOOL := FALSE; (*replace this placeholder with customized value*)
+	bConnectYourBitToCountHere2 : BOOL := FALSE; (*replace this placeholder with customized value*)
+	bConnectYourBitToCountHere3 : BOOL := FALSE; (*replace this placeholder with customized value*)
+	bConnectYourBitToCountHere4 : BOOL := FALSE; (*replace this placeholder with customized value*)
+	bConnectYourBitToCountHere : BOOL := FALSE; (*replace this placeholder with customized value*)
+	bConnectYourBitToStartTimeHere : BOOL; (*Placeholder for local variable*)
+	WART : BOOL;
+	bOpt_10msTaskClock : BOOL := FALSE; (*SET TO FALSE, if iCount20 is used for customized functions. TRUE activates default function: msec counter*)
+END_VAR

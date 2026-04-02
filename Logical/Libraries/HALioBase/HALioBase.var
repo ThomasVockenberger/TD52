@@ -1,0 +1,124 @@
+(********************************************************************
+ * COPYRIGHT -- Bernecker + Rainer
+ ********************************************************************
+ * Library: HALioBase
+ * File: HALioBase.var
+ * Author: froehlichw
+ * Created: October 03, 2011
+ ********************************************************************
+ * Constants of library HALioBase
+ *
+ * History:
+ * 05.01.2012  V0.00.0 froehlichw
+ *      (new)  created
+ * 17.10.2012  V0.12.0 froehlichw
+ *      (add)  Error numbers:
+ *               halERR_SIGPV_LENGTH_NOT_MATCHING
+ *               halERR_PARPV_LENGTH_NOT_MATCHING
+ ********************************************************************)
+(* Signal types digital in *)
+VAR CONSTANT
+	DI_NORMAL : UINT := 10;
+	DI_NORMAL_INV : UINT := 11;
+	DI_NORMAL_UR20 : UINT := 12;
+	DI_NORMAL_INV_UR20 : UINT := 13;
+END_VAR
+(* Signal types digital out *)
+VAR CONSTANT
+	DO_NORMAL : UINT := 20;
+	DO_NORMAL_UR20 : UINT := 21;
+END_VAR
+(* Signal types analog in *)
+VAR CONSTANT
+	AI_0_20mA_INT16 : UINT := 30;
+	AI_0_10V_INT16 : UINT := 31;
+	AI_10_10V_INT16 : UINT := 32;
+	AI_TEMP_1_10C : UINT := 33;
+	AI_INT8 : UINT := 34;
+	AI_INT16 : UINT := 35;
+	AI_INT32 : UINT := 36;
+	AI_0_20mA_INT16_UR20 : UINT := 37;
+	AI_0_10V_INT16_UR20 : UINT := 38;
+	AI_10_10V_INT16_UR20 : UINT := 39;
+	AI_TEMP_1_10C_UR20 : UINT := 40;
+	AI_INT8_UR20 : UINT := 41;
+	AI_INT16_UR20 : UINT := 42;
+	AI_INT32_UR20 : UINT := 43;
+END_VAR
+(* Signal types analog out *)
+VAR CONSTANT
+	AO_0_20mA_INT16 : UINT := 50;
+	AO_0_10V_INT16 : UINT := 51;
+	AO_10_10V_INT16 : UINT := 52;
+	AO_0_20mA_INT16_UR20 : UINT := 53;
+	AO_0_10V_INT16_UR20 : UINT := 54;
+	AO_10_10V_INT16_UR20 : UINT := 55;
+END_VAR
+(* Error numbers *)
+VAR CONSTANT
+	halERR_NO_ERROR : UINT := 0; (* no error *)
+	halERR_SIGNAL_TYPE_UNKNOWN : UINT := 50000; (* unknown signal type *)
+	halERR_INP_pSIGNAL_NV : UINT := 50001; (* pointer pSignal not valid *)
+	halERR_INP_pPV_NAME_NV : UINT := 50002; (* pointer pPV_Name not valid *)
+	halERR_INP_QUAL_MIN_EQ_MAX_NE_0 : UINT := 50003; (* input Qual_Min = Qual_Max but not 0*)
+	halERR_INP_QUAL_MIN_GT_MAX : UINT := 50004; (* input Qual_Min > Qual_Max *)
+	halERR_INP_pHALIOSIGNAL_NV : UINT := 50005; (* input pHALioSignal not valid or MaxNumIoChannels = 0 *)
+	halERR_INP_SCAL_X1_EQ_X2_NE_0 : UINT := 50006; (* input Scal_X1 = Scal_X2 but not 0 *)
+	halERR_INP_SCAL_Y1_EQ_Y2_NE_0 : UINT := 50007; (* input Scal_Y1 = Scal_Y2 but not 0 *)
+	halERR_INP_FILTER_EQ_0 : UINT := 50008; (* input Filter = 0 *)
+	halERR_CFG_MODULE_NOT_FOUND : UINT := 50020; (* configuration modul not found *)
+	halERR_XML_READER : UINT := 50021; (* error with XML reader *)
+	halERR_TOO_MANY_ATTRIBUTES : UINT := 50022; (* too many attributes defined *)
+	halERR_READ_NODE : UINT := 50023; (* error reading node *)
+	halERR_READ_ATTRIBUTE : UINT := 50024; (* error rerading attribute *)
+	halERR_VERSION_NV : UINT := 50025; (* version of config module not valid *)
+	halERR_PV_NOT_FOUND : UINT := 50026; (* PV not found *)
+	halERR_PV_NAME_TOO_LONG : UINT := 50027; (* PV name too long *)
+	halERR_PARAMETER_VALUE_NV : UINT := 50028; (* parameter value not valid *)
+	halERR_PARAMETER_MISSING : UINT := 50029; (* parameter missing *)
+	halERR_MAX_NUM_IOS_TOO_LOW : UINT := 50030; (* max number of IO Channels lower then needed *)
+	halERR_SIGPV_LENGTH_NOT_MATCHING : UINT := 50031; (* signal PV lenght does not match to defined signal type *)
+	halERR_PARPV_LENGTH_NOT_MATCHING : UINT := 50032; (* external parameter PV lenght of does not match *)
+	halERR_FUB_NOT_ENABLED : UINT := 65534; (* FUB not enabled *)
+	halERR_FUB_BUSY : UINT := 65535; (* FUB busy *)
+END_VAR
+(* node names *)
+VAR CONSTANT
+	halNODE_ROOT : STRING[20] := 'HALioConfiguration'; (* root node name *)
+	halNODE_GROUP : STRING[20] := 'Group'; (* group node name *)
+	halNODE_PARAMETER : STRING[20] := 'Parameter'; (* parameter node name *)
+END_VAR
+(* attribute names *)
+VAR CONSTANT
+	halATTR_VERSION : STRING[20] := 'Version'; (* attribute name Version *)
+	halATTR_VERSION_VAL_1_0_00 : STRING[20] := '1.0.00'; (* attribute value Version 1.0.00 *)
+	halATTR_PV_NAME : STRING[20] := 'PV_Name'; (* attribute name PV_Name *)
+	halATTR_ID : STRING[20] := 'ID'; (* attribute name ID *)
+	halATTR_VALUE : STRING[20] := 'Value'; (* attribute name Value *)
+END_VAR
+(* attribute ID values *)
+VAR CONSTANT
+	halATTR_ID_ACTIVE : STRING[20] := 'Active'; (* attribute ID value Active *)
+	halATTR_ID_TYPE : STRING[20] := 'Type'; (* attribute ID value Type *)
+	halATTR_ID_QUAL_MIN : STRING[20] := 'Qual_Min'; (* attribute ID value Qual_Min *)
+	halATTR_ID_QUAL_MAX : STRING[20] := 'Qual_Max'; (* attribute ID value Qual_Max *)
+	halATTR_ID_MSG_NUM : STRING[20] := 'Msg_Num'; (* attribute ID value Msg_Num *)
+	halATTR_ID_SCAL_X1 : STRING[20] := 'Scal_X1'; (* attribute ID value Scal_X1 *)
+	halATTR_ID_SCAL_X2 : STRING[20] := 'Scal_X2'; (* attribute ID value Scal_X2 *)
+	halATTR_ID_SCAL_Y1 : STRING[20] := 'Scal_Y1'; (* attribute ID value Scal_Y1 *)
+	halATTR_ID_SCAL_Y2 : STRING[20] := 'Scal_Y2'; (* attribute ID value Scal_Y2 *)
+	halATTR_ID_FILTER : STRING[20] := 'Filter'; (* attribute ID value Filter *)
+END_VAR
+(* bit numbers of checked parameters *)
+VAR CONSTANT
+	halPAR_ACTIVE : UINT := 0; (* bit number 0 in pvParChecked *)
+	halPAR_TYPE : UINT := 1; (* bit number 1 in pvParChecked *)
+	halPAR_QUAL_MIN : UINT := 2; (* bit number 2 in pvParChecked *)
+	halPAR_QUAL_MAX : UINT := 3; (* bit number 3 in pvParChecked *)
+	halPAR_MSG_NUM : UINT := 4; (* bit number 4 in pvParChecked *)
+	halPAR_SCAL_X1 : UINT := 5; (* bit number 5 in pvParChecked *)
+	halPAR_SCAL_X2 : UINT := 6; (* bit number 6 in pvParChecked *)
+	halPAR_SCAL_Y1 : UINT := 7; (* bit number 7 in pvParChecked *)
+	halPAR_SCAL_Y2 : UINT := 8; (* bit number 8 in pvParChecked *)
+	halPAR_FILTER : UINT := 9; (* bit number 9 in pvParChecked *)
+END_VAR

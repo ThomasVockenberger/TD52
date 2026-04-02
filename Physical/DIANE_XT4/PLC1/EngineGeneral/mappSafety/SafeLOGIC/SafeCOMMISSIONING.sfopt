@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SafeCommissioning xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="5.24.1" xmlns="http://www.br-automation.com/mappSAFETY/safecommissioning">
+  <OptionsDefinition id="SafeCOMMISSIONING">
+    <Name>SafeCOMMISSIONING</Name>
+    <Description />
+    <CRC>0xeacd32ed</CRC>
+    <ChangedBy>tinelma00</ChangedBy>
+    <LastChanged iso="2025-11-25T15:49:47+01:00" unix="1764082187" />
+    <TypeReference />
+  </OptionsDefinition>
+  <SafeApplication>
+    <CRC var="autoconf">0xc16c2451</CRC>
+    <CRC var="emodata1">0xe981ada3</CRC>
+  </SafeApplication>
+  <Defaults>
+    <DefaultParameters type="SafeOptionBool">
+      <Parameter value="0">Off</Parameter>
+      <Parameter value="1">On</Parameter>
+    </DefaultParameters>
+    <DefaultParameters type="SafeNodeAvailability">
+      <Parameter value="0">Present</Parameter>
+      <Parameter value="1">Startup</Parameter>
+      <Parameter value="2">Optional</Parameter>
+      <Parameter value="3">NotPresent</Parameter>
+    </DefaultParameters>
+  </Defaults>
+  <Groups>
+    <Group id="Group1" visible="true" readonly="false">
+      <Name>SafeOption</Name>
+      <Description />
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT000" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_GT2_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT001" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_GT3_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT002" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_GT4_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT003" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_SysPurge_MonActive</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT004" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_HWcirc_Cust_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT005" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_PS_HW_Lo_MuteAcive</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT006" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_LS_HWHT_Lo_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT007" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_PS1_HWHT_Hi_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT008" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_PS2_HWHT_Hi_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT009" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_PS1_HWHT_Lo_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT010" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_PS2_HWHT_Lo_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT011" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_TS1_HWHT_Hi_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT012" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_TS2_HWHT_Hi_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT013" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_FS_HWHT_Lo_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT014" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_LS_HWLT_Lo_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT015" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_PS1_HWLT_Hi_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT016" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_PS2_HWLT_Hi_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT017" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_PS1_HWLT_Lo_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT018" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_PS2_HWLT_Lo_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT019" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_TS1_HWLT_Hi_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT020" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_TS2_HWLT_Hi_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT021" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_FS_HWLT_Lo_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT022" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_Pr_EG_sMonActive</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT023" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_SafetyLoop_A2_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT024" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_DCGA_Exist</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT025" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_ERV_Cust_Active</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT026" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_ERV_ColdCountry_Active</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionBIT027" visible="true" readonly="false" value="0" elementType="SafeOptionBool">
+        <Name>PARA_ER_Door_MonActive</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT00" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_N_EngNom</Name>
+        <Description />
+        <Range minValue="0" maxValue="2000" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT01" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_N_EngAct_HiHi_Diff</Name>
+        <Description />
+        <Range minValue="0" maxValue="200" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT02" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_N_Pr_EO_LoLo_Lim1</Name>
+        <Description />
+        <Range minValue="0" maxValue="1800" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT03" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_N_Pr_EO_LoLo_Lim2</Name>
+        <Description />
+        <Range minValue="0" maxValue="1800" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT04" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Pr_EO_LoLo_LimN1</Name>
+        <Description />
+        <Range minValue="0" maxValue="10000" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT05" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Pr_EO_LoLo_LimN2</Name>
+        <Description />
+        <Range minValue="0" maxValue="10000" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT06" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Pr_EO_Diff_EngStop</Name>
+        <Description />
+        <Range minValue="0" maxValue="10000" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT07" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Pr_EO_HiHi_EngStop</Name>
+        <Description />
+        <Range minValue="0" maxValue="10000" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT08" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Pr_EO_HiHi_Diff</Name>
+        <Description />
+        <Range minValue="0" maxValue="10000" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT09" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Pr_EO_HiHi_Check</Name>
+        <Description />
+        <Range minValue="0" maxValue="10000" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT10" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Pr_EOaP_HiHi</Name>
+        <Description />
+        <Range minValue="0" maxValue="16000" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT11" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Pr_EOaP_Diff_EngStop</Name>
+        <Description />
+        <Range minValue="0" maxValue="16000" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT12" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Pr_EOaP_HiHi_EngStop</Name>
+        <Description />
+        <Range minValue="0" maxValue="16000" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT13" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Pr_ECW_LoLo</Name>
+        <Description />
+        <Range minValue="0" maxValue="10000" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT14" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Pr_ECW_HiHi_Diff</Name>
+        <Description />
+        <Range minValue="0" maxValue="10000" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT15" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Pr_ECW_HiHi_Check</Name>
+        <Description />
+        <Range minValue="0" maxValue="10000" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT16" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Pr_ECWaP_HiHi</Name>
+        <Description />
+        <Range minValue="0" maxValue="10000" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT17" visible="true" readonly="false" value="208" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Eng_Motortype</Name>
+        <Description />
+        <Range minValue="208" maxValue="920" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT18" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_DPr_ECWP_LoLo</Name>
+        <Description />
+        <Range minValue="0" maxValue="10000" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT19" visible="true" readonly="false" value="50" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Vol_SysPurge_Stroke</Name>
+        <Description />
+        <Range minValue="50" maxValue="3000" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT20" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Vol_SysPurge_MinAir</Name>
+        <Description />
+        <Range minValue="0" maxValue="100000" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT21" visible="true" readonly="false" value="1" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Nr_ERV_INL_Fan</Name>
+        <Description />
+        <Range minValue="1" maxValue="6" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT22" visible="true" readonly="false" value="1" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Nr_ERV_INL_Lou</Name>
+        <Description />
+        <Range minValue="1" maxValue="6" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT23" visible="true" readonly="false" value="1" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_Nr_ERV_OTL_Lou</Name>
+        <Description />
+        <Range minValue="1" maxValue="6" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT24" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_NrMaxErr_ERV_INL_Fan</Name>
+        <Description />
+        <Range minValue="0" maxValue="5" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT25" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_NrMaxErr_ERV_INL_Lou</Name>
+        <Description />
+        <Range minValue="0" maxValue="5" step="1" />
+      </Element>
+      <Element id="SL1.SM1.SafeCommissioningOptionDINT26" visible="true" readonly="false" value="0" type="DINT" elementType="SafeOptionNumber">
+        <Name>PARA_NrMaxErr_ERV_OTL_Lou</Name>
+        <Description />
+        <Range minValue="0" maxValue="5" step="1" />
+      </Element>
+    </Group>
+    <Group id="Group2" visible="true" readonly="false">
+      <Name>SafeNodeAvailability</Name>
+      <Description />
+      <Element id="SL1.SM101" visible="true" readonly="false" value="0" safeNodeId="101" elementType="SafeNodeAvailability">
+        <Name>SL1.SM101</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM102" visible="true" readonly="false" value="0" safeNodeId="102" elementType="SafeNodeAvailability">
+        <Name>SL1.SM102</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM103" visible="true" readonly="false" value="0" safeNodeId="103" elementType="SafeNodeAvailability">
+        <Name>SL1.SM103</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM104" visible="true" readonly="false" value="0" safeNodeId="104" elementType="SafeNodeAvailability">
+        <Name>SL1.SM104</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM105" visible="true" readonly="false" value="0" safeNodeId="105" elementType="SafeNodeAvailability">
+        <Name>SL1.SM105</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM201" visible="true" readonly="false" value="0" safeNodeId="201" elementType="SafeNodeAvailability">
+        <Name>SL1.SM201</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM202" visible="true" readonly="false" value="0" safeNodeId="202" elementType="SafeNodeAvailability">
+        <Name>SL1.SM202</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM203" visible="true" readonly="false" value="0" safeNodeId="203" elementType="SafeNodeAvailability">
+        <Name>SL1.SM203</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM204" visible="true" readonly="false" value="0" safeNodeId="204" elementType="SafeNodeAvailability">
+        <Name>SL1.SM204</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM205" visible="true" readonly="false" value="0" safeNodeId="205" elementType="SafeNodeAvailability">
+        <Name>SL1.SM205</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM206" visible="true" readonly="false" value="0" safeNodeId="206" elementType="SafeNodeAvailability">
+        <Name>SL1.SM206</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM207" visible="true" readonly="false" value="0" safeNodeId="207" elementType="SafeNodeAvailability">
+        <Name>SL1.SM207</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM208" visible="true" readonly="false" value="0" safeNodeId="208" elementType="SafeNodeAvailability">
+        <Name>SL1.SM208</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM209" visible="true" readonly="false" value="0" safeNodeId="209" elementType="SafeNodeAvailability">
+        <Name>SL1.SM209</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM210" visible="true" readonly="false" value="0" safeNodeId="210" elementType="SafeNodeAvailability">
+        <Name>SL1.SM210</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM300" visible="true" readonly="false" value="0" safeNodeId="300" elementType="SafeNodeAvailability">
+        <Name>SL1.SM300</Name>
+        <Description />
+      </Element>
+      <Element id="SL1.SM301" visible="true" readonly="false" value="0" safeNodeId="301" elementType="SafeNodeAvailability">
+        <Name>SL1.SM301</Name>
+        <Description />
+      </Element>
+    </Group>
+  </Groups>
+</SafeCommissioning>

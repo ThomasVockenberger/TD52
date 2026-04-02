@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="7" ArVersion="H4.90">
+  <Aliases>
+    <ACLAliases>
+      <ACL Id="1">
+        <ACE RoleName="Administrators" Access="0x017F" />
+      </ACL>
+    </ACLAliases>
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView AclId="1">
+    <Module Name="HalIO">
+      <GlobalVariables>
+        <Variable Name="MM2VIS" AutomaticEnable="True">
+          <Variable Name="rI_MaxL1" EnableArrayElements="True" />
+          <Variable Name="rI_MaxL2" EnableArrayElements="True" />
+          <Variable Name="rI_MaxL3" EnableArrayElements="True" />
+          <Variable Name="rP_ActMax" EnableArrayElements="True" />
+          <Variable Name="rI_NMax" EnableArrayElements="True" />
+          <Variable Name="rI_GenUnbalanced" EnableArrayElements="True" />
+          <Variable Name="rF_MMD" EnableArrayElements="True" />
+          <Variable Name="rF_MMD_Diff" EnableArrayElements="True" />
+          <Variable Name="rF_MMD_Synch1" EnableArrayElements="True" />
+          <Variable Name="rF_MMD_Synch2" EnableArrayElements="True" />
+          <Variable Name="rF_MMD_BusBar" EnableArrayElements="True" />
+          <Variable Name="rI_L1" EnableArrayElements="True" />
+          <Variable Name="rI_L2" EnableArrayElements="True" />
+          <Variable Name="rI_L3" EnableArrayElements="True" />
+          <Variable Name="rI_Avg" EnableArrayElements="True" />
+          <Variable Name="rI_Dyn" EnableArrayElements="True" />
+          <Variable Name="rI_N" EnableArrayElements="True" />
+          <Variable Name="rP_Act" EnableArrayElements="True" />
+          <Variable Name="rP_ActUnfilt" EnableArrayElements="True" />
+          <Variable Name="rS_Act" EnableArrayElements="True" />
+          <Variable Name="rQ_Act" EnableArrayElements="True" />
+          <Variable Name="rPF_Act" EnableArrayElements="True" />
+          <Variable Name="rU_L1N" EnableArrayElements="True" />
+          <Variable Name="rU_L1L2" EnableArrayElements="True" />
+          <Variable Name="rU_L2N" EnableArrayElements="True" />
+          <Variable Name="rU_L2L3" EnableArrayElements="True" />
+          <Variable Name="rU_L3N" EnableArrayElements="True" />
+          <Variable Name="rU_L3L1" EnableArrayElements="True" />
+          <Variable Name="rU_Avg" EnableArrayElements="True" />
+          <Variable Name="rAng_MMD_Diff" EnableArrayElements="True" />
+          <Variable Name="iIdx_MMD_SynchMode" EnableArrayElements="True" />
+          <Variable Name="rMMD_HW_Version" EnableArrayElements="True" />
+          <Variable Name="rMMD_FW_Version" EnableArrayElements="True" />
+          <Variable Name="rU_MMD_Diff" EnableArrayElements="True" />
+          <Variable Name="rU_MMD_Synch1" EnableArrayElements="True" />
+          <Variable Name="rU_MMD_Synch2" EnableArrayElements="True" />
+          <Variable Name="rU_Bus_L1_2" EnableArrayElements="True" />
+          <Variable Name="rU_Bus_L2_3" EnableArrayElements="True" />
+          <Variable Name="rU_Bus_L3_1" EnableArrayElements="True" />
+          <Variable Name="rU_Bus_L1N" EnableArrayElements="True" />
+          <Variable Name="rU_Bus_L2N" EnableArrayElements="True" />
+          <Variable Name="rU_Bus_L3N" EnableArrayElements="True" />
+          <Variable Name="bMMD_SynchDO" EnableArrayElements="True" />
+          <Variable Name="rUDiffMaxScale" EnableArrayElements="True" />
+          <Variable Name="rF_DiffMaxScale" EnableArrayElements="True" />
+          <Variable Name="rF_DiffMinScale" EnableArrayElements="True" />
+          <Variable Name="iSAFI_ErrEventMax" EnableArrayElements="True" />
+          <Variable Name="iSAFI_ErrMaxCur" EnableArrayElements="True" />
+          <Variable Name="iSAFI_ErrMax" EnableArrayElements="True" />
+          <Variable Name="iSAFI_PhaseCnt" EnableArrayElements="True" />
+          <Variable Name="iSAFI_ErrAvgCnt" EnableArrayElements="True" />
+          <Variable Name="iTecJet_ErrEventMax" EnableArrayElements="True" />
+          <Variable Name="iTecJet_ErrMaxCur" EnableArrayElements="True" />
+          <Variable Name="iTecJet_ErrMax" EnableArrayElements="True" />
+          <Variable Name="iTecJet_PhaseCnt" EnableArrayElements="True" />
+          <Variable Name="iTecJet_ErrAvgCnt" EnableArrayElements="True" />
+          <Variable Name="iKLS98_ErrEventMax" EnableArrayElements="True" />
+          <Variable Name="iKLS98_ErrMaxCur" EnableArrayElements="True" />
+          <Variable Name="iKLS98_ErrMax" EnableArrayElements="True" />
+          <Variable Name="iKLS98_PhaseCnt" EnableArrayElements="True" />
+          <Variable Name="iKLS98_ErrAvgCnt" EnableArrayElements="True" />
+          <Variable Name="rUnbLoadMeter" EnableArrayElements="True" />
+          <Variable Name="sMMD_SerialNumber" EnableArrayElements="True" />
+          <Variable Name="tPlantComm">
+            <Variable Name="rInt" EnableArrayElements="True" />
+            <Variable Name="rExt" EnableArrayElements="True" />
+            <Variable Name="iNum" EnableArrayElements="True" />
+            <Variable Name="iComment" EnableArrayElements="True" />
+            <Variable Name="bMas_Ena" EnableArrayElements="True" />
+            <Variable Name="bEng_Ena" EnableArrayElements="True" />
+          </Variable>
+        </Variable>
+        <Variable Name="Para" AutomaticEnable="True">
+          <Variable Name="bU_Range" EnableArrayElements="True" />
+          <Variable Name="bU_RangeBus" EnableArrayElements="True" />
+          <Variable Name="bU_RangeSync1" EnableArrayElements="True" />
+          <Variable Name="bU_RangeSync2" EnableArrayElements="True" />
+          <Variable Name="bI_CurrRange" EnableArrayElements="True" />
+          <Variable Name="bAron_Act" EnableArrayElements="True" />
+          <Variable Name="bGen3PhaseCircuit_Act" EnableArrayElements="True" />
+          <Variable Name="bBus3PhaseCircuit_Act" EnableArrayElements="True" />
+          <Variable Name="bMMDSynch_Act" EnableArrayElements="True" />
+          <Variable Name="rMul_UL1L3" EnableArrayElements="True" />
+          <Variable Name="rMul_IL1I3" EnableArrayElements="True" />
+          <Variable Name="rU_Gen_Nom" EnableArrayElements="True" />
+          <Variable Name="rV_Over" EnableArrayElements="True" />
+          <Variable Name="rTi_V_Over" EnableArrayElements="True" />
+          <Variable Name="rV_Under" EnableArrayElements="True" />
+          <Variable Name="rTi_V_Under" EnableArrayElements="True" />
+          <Variable Name="rV_Under2" EnableArrayElements="True" />
+          <Variable Name="rTi_V_Under2" EnableArrayElements="True" />
+          <Variable Name="rF_Nom" EnableArrayElements="True" />
+          <Variable Name="rF_Over" EnableArrayElements="True" />
+          <Variable Name="rTi_F_OverDel" EnableArrayElements="True" />
+          <Variable Name="rF_Under" EnableArrayElements="True" />
+          <Variable Name="rTi_F_UnderDel" EnableArrayElements="True" />
+          <Variable Name="rU_Asym" EnableArrayElements="True" />
+          <Variable Name="rTi_U_AsymDel" EnableArrayElements="True" />
+          <Variable Name="rTi_I_AsymDel" EnableArrayElements="True" />
+          <Variable Name="rI_GenNom" EnableArrayElements="True" />
+          <Variable Name="rI_NomMax" EnableArrayElements="True" />
+          <Variable Name="rTi_I_NomMaxDel" EnableArrayElements="True" />
+          <Variable Name="rI_Short" EnableArrayElements="True" />
+          <Variable Name="rTi_I_ShortDel" EnableArrayElements="True" />
+          <Variable Name="rI_Therm" EnableArrayElements="True" />
+          <Variable Name="rInt_ThermOver" EnableArrayElements="True" />
+          <Variable Name="rQ_Min" EnableArrayElements="True" />
+          <Variable Name="rTi_Q_MinDel" EnableArrayElements="True" />
+          <Variable Name="rMul_ImpValue" EnableArrayElements="True" />
+          <Variable Name="rU_SyncNom" EnableArrayElements="True" />
+          <Variable Name="rU_BusNom" EnableArrayElements="True" />
+          <Variable Name="rMul_U_Bus" EnableArrayElements="True" />
+          <Variable Name="rMul_U_Sync1" EnableArrayElements="True" />
+          <Variable Name="rMul_U_Sync2" EnableArrayElements="True" />
+          <Variable Name="rAng_PhiSync1" EnableArrayElements="True" />
+          <Variable Name="rF_DiffMax" EnableArrayElements="True" />
+          <Variable Name="rF_DiffMin" EnableArrayElements="True" />
+          <Variable Name="rU_DiffMax" EnableArrayElements="True" />
+          <Variable Name="rAng_DiffMax" EnableArrayElements="True" />
+          <Variable Name="rTi_SynchImpMin" EnableArrayElements="True" />
+          <Variable Name="rTi_SynchSwitchDel" EnableArrayElements="True" />
+          <Variable Name="rU_DeadBus" EnableArrayElements="True" />
+          <Variable Name="rU_DeadSync" EnableArrayElements="True" />
+          <Variable Name="bCustAnaIn_Set4mA" EnableArrayElements="True" />
+          <Variable Name="rCustAnaIn_ScalMax" EnableArrayElements="True" />
+          <Variable Name="rCustAnaIn_ScalMin" EnableArrayElements="True" />
+          <Variable Name="rCustAnaOut_ScalMin" EnableArrayElements="True" />
+          <Variable Name="rCustAnaOut_ScalMax" EnableArrayElements="True" />
+          <Variable Name="rCtr_CustOut_ScalMin" EnableArrayElements="True" />
+          <Variable Name="rCtr_CustOut_ScalMax" EnableArrayElements="True" />
+          <Variable Name="rI_CustAnaOut_ScalMin" EnableArrayElements="True" />
+          <Variable Name="rI_CustAnaOut_ScalMax" EnableArrayElements="True" />
+          <Variable Name="rI_Ctr_CustOut_ScalMin" EnableArrayElements="True" />
+          <Variable Name="rI_Ctr_CustOut_ScalMax" EnableArrayElements="True" />
+          <Variable Name="iCustAnaIn_Typ" EnableArrayElements="True" />
+          <Variable Name="rV_Over2" EnableArrayElements="True" />
+          <Variable Name="rTi_V_Over2" EnableArrayElements="True" />
+          <Variable Name="iP_ThermOverChar" EnableArrayElements="True" />
+          <Variable Name="bOverUnderVoltMode" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="VIS2MM" AutomaticEnable="True">
+          <Variable Name="rP_WorkAct" EnableArrayElements="True" />
+          <Variable Name="rQ_WorkReac" EnableArrayElements="True" />
+          <Variable Name="rP_WorkActRet" EnableArrayElements="True" />
+          <Variable Name="rQ_WorkReacRet" EnableArrayElements="True" />
+          <Variable Name="tPlantComm">
+            <Variable Name="bFrc" EnableArrayElements="True" />
+            <Variable Name="bFrc_Int" EnableArrayElements="True" />
+            <Variable Name="rFrc_Int" EnableArrayElements="True" />
+          </Variable>
+        </Variable>
+      </GlobalVariables>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

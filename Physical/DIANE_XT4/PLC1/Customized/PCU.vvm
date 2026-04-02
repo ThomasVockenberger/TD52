@@ -1,0 +1,354 @@
+(********************************************************************
+* COPYRIGHT -- INNIO Company
+********************************************************************
+* File: PCU.vvm
+* Author: autmatically generated 
+* Created: 08.10.2012
+********************************************************************
+* PV mapping file 
+********************************************************************)
+VAR_CONFIG
+	Cyclic#6.AuxiliariesGeneral::OUT_AG.tEO_FreshOilPump_Dem.Do AT %Q.Cyclic#6.Customized::IN_CU.bEO_FreshOilPump_Dem; (*Status: fresh oil pump*) (*OldName:new V4.14; Cycle:5*)
+	Cyclic#6.AuxiliariesGeneral::OUT_AG.tEO_WasteOilPump_Dem.Do AT %Q.Cyclic#6.Customized::IN_CU.bEO_WasteOilPump_Dem; (*Status: waste oil pump*) (*OldName:new V4.14; Cycle:5*)
+	Cyclic#6.AuxiliariesGeneral::OUT_AG.bAux_OilValve_IsOpen AT %Q.Cyclic#6.Customized::IN_CU.bAux_OilValve_IsOpen; (*Status: fresh oil valve into oil pan*) (*OldName:new V4.14; Cycle:5*)
+	Cyclic#6.AuxiliariesGeneral::OUT_AG.tFreshOilPump_RTC.Do AT %Q.Cyclic#6.Customized::IN_CU.bFreshOilPump_RTC; (*Status:fresh oil pump run time exceeded signal*) (*OldName:new V4.14; Cycle:5*)
+	Cyclic#6.HalIO::tL_FreshOilTank AT %Q.Cyclic#6.Customized::IN_CU.tL_FreshOilTank; (*Tank Level measurement input*) (*OldName: NewPv V4.14*)
+	Cyclic#6.HalIO::tL_WasteOilTank AT %Q.Cyclic#6.Customized::IN_CU.tL_WasteOilTank; (*Tank Level measurement input*) (*OldName: NewPv V4.14*)
+	Cyclic#6.HalIO::tL_DayOilTank AT %Q.Cyclic#6.Customized::IN_CU.tL_DayOilTank; (*Tank Level measurement input*) (*OldName: NewPv V4.14*)
+	Cyclic#5.HalIO::OUT_HA.bPlantComCfgOk AT %Q.Cyclic#5.Customized::IN_CU.bPlantComCfgOk;
+	Cyclic#5.HalIO::OUT_HA.tPlantCom_M2E_In_Cust100ms AT %Q.Cyclic#5.Customized::IN_CU.tPlantCom_M2E_In_Cust100ms;
+	Cyclic#5.HalIO::OUT_HA.tPlantCom_E2E_In_Cust100ms AT %Q.Cyclic#5.Customized::IN_CU.tPlantCom_E2E_In_Cust100ms;
+	Cyclic#2.HalIO::OUT_HA.tPlantCom_M2E_In_Cust10ms AT %Q.Cyclic#2.Customized::IN_CU.tPlantCom_M2E_In_Cust10ms;
+	Cyclic#2.HalIO::OUT_HA.tPlantCom_E2E_In_Cust10ms AT %Q.Cyclic#2.Customized::IN_CU.tPlantCom_E2E_In_Cust10ms;
+	Cyclic#4.AmmBase::OUT_AB.iMsg AT %Q.Cyclic#5.Customized::IN_CU.iMsg; (*V4.7*)
+	Cyclic#4.AmmBase::OUT_AB.tAB2CU AT %Q.Cyclic#5.Customized::IN_CU.tAB2CU;
+	Cyclic#2.AmmBase::OUT_AB.bMMD_BB_AlarmTestOn AT %Q.Cyclic#2.Customized::IN_CU.bMMD_BB_AlarmTestOn;
+	Cyclic#6.AuxiliariesGeneral::MM2VIS.rEO_Level AT %Q.Cyclic#6.Customized::IN_CU.rEO_Level;
+	Cyclic#6.AuxiliariesGeneral::MM2VIS.rPr_EngLubOil AT %Q.Cyclic#6.Customized::IN_CU.rPr_EngLubOil;
+	Cyclic#6.AuxiliariesGeneral::MM2VIS.rT_EO AT %Q.Cyclic#6.Customized::IN_CU.rT_EO;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bEng_Start AT %Q.Cyclic#5.Customized::IN_CU.bEng_Start;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bTC_CoolDownRun AT %Q.Cyclic#5.Customized::IN_CU.bTC_CoolDownRun; (*(new from V4.2.x on)*)
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.rCustomizedAG AT %Q.Cyclic#5.Customized::IN_CU.rCustomizedAG; (*New customizable interface 2017 - BETA PHASE, use only in coordination with TPSS	*)
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.tEleStarter_Dem AT %Q.Cyclic#5.Customized::IN_CU.tEleStarter_Dem;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.tManAuxCtr AT %Q.Cyclic#5.Customized::IN_CU.tManAuxCtr; (*v4.02.00*)
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.rDPr_OFU_Filt AT %Q.Cyclic#5.Customized::IN_CU.rDPr_OFU_Filt;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bCust_EO_Level_Hi AT %Q.Cyclic#5.Customized::IN_CU.bCust_EO_Level_Hi; (*V04.13.00.00*)
+	Cyclic#2.ChargingUnit::OUT_CH.rPr_Ch_P2s_A AT %Q.Cyclic#2.Customized::IN_CU.rPr_Ch_P2s_A; (*V04.02.00.00*)
+	Cyclic#6.ChargingUnit::OUT_CH.rPr_Ch_P2s_Avg AT %Q.Cyclic#6.Customized::IN_CU.rPr_Ch_P2s_Avg;
+	Cyclic#2.ChargingUnit::OUT_CH.rPr_Ch_P2s_B AT %Q.Cyclic#2.Customized::IN_CU.rPr_Ch_P2s_B; (*V04.02.00.00*)
+	Cyclic#4.ChargingUnit::OUT_CH.rT_Ch_T1LP_Avg AT %Q.Cyclic#6.Customized::IN_CU.rT_Ch_T1LP_Avg; (*V04.04.00.00*)
+	Cyclic#6.ChargingUnit::OUT_CH.rT_Ch_T2s_Avg AT %Q.Cyclic#6.Customized::IN_CU.rT_Ch_T2s_Avg;
+	Cyclic#6.Coupling::OUT_CP.InData1 AT %Q.Cyclic#6.Customized::IN_CU.InData1;
+	Cyclic#6.Coupling::OUT_CP.InData2 AT %Q.Cyclic#6.Customized::IN_CU.InData2;
+	Cyclic#5.Coupling::OUT_CP.rCustomizedCP AT %Q.Cyclic#5.Customized::IN_CU.rCustomizedCP; (*New customizable interface 2017 - BETA PHASE, use only in coordination with TPSS	*)
+	Cyclic#6.Coupling::OUT_CP.rP_Set_ExtBus_Norm AT %Q.Cyclic#6.Customized::IN_CU.rP_Set_ExtBus_Norm;
+	Cyclic#6.EngineController::MM2VIS.rPos_CBV AT %Q.Cyclic#6.Customized::IN_CU.rPos_CBV; (*MD 20.6.2013 hinzu*)
+	Cyclic#6.EngineController::MM2VIS.rPos_GM_Set_Norm AT %Q.Cyclic#6.Customized::IN_CU.rPos_GM_Set_Norm; (*MD 20.6.2013 hinzu*)
+	Cyclic#6.EngineController::MM2VIS.rPos_TV AT %Q.Cyclic#6.Customized::IN_CU.rPos_TV; (*MD 20.6.2013 hinzu*)
+	Cyclic#6.EngineController::MM2VIS.rT_EG_Avg AT %Q.Cyclic#6.Customized::IN_CU.rT_EG_Avg; (*MD 4.7.2013 hinzu*)
+	Cyclic#2.EngineController::OUT_EC.bFastStart_Prep AT %Q.Cyclic#2.Customized::IN_CU.bFastStart_Prep;
+	Cyclic#4.EngineController::OUT_EC.bLR_GasStop AT %Q.Cyclic#5.Customized::IN_CU.bLR_GasStop; (*Ze, 2017: mapping file Zuordnung korrigiert*)
+	Cyclic#2.EngineController::OUT_EC.bReady4FastStart AT %Q.Cyclic#2.Customized::IN_CU.bReady4FastStart;
+	Cyclic#2.EngineController::OUT_EC.bReady4VeryFastStart AT %Q.Cyclic#2.Customized::IN_CU.bReady4VeryFastStart;
+	Cyclic#2.EngineController::OUT_EC.bVeryFastStart_Prep AT %Q.Cyclic#2.Customized::IN_CU.bVeryFastStart_Prep;
+	Cyclic#2.EngineController::OUT_EC.rCA_IgnP_Set AT %Q.Cyclic#2.Customized::IN_CU.rCA_IgnP_Set;
+	Cyclic#5.EngineController::OUT_EC.rLam_Eng_LL_Set AT %Q.Cyclic#5.Customized::IN_CU.rLam_Eng_LL_Set;
+	Cyclic#5.EngineController::OUT_EC.rT_EPU_EG AT %Q.Cyclic#5.Customized::IN_CU.rT_EPU_EG; (*REAL[0..25]	 engine power unit exhaust gas temperatures 	*)
+	Cyclic#4.EngineController::OUT_EC.rPr_Leanox_Dev AT %Q.Cyclic#5.Customized::IN_CU.rPr_Leanox_Dev;
+	Cyclic#4.EngineController::OUT_EC.rMisf_Intgr AT %Q.Cyclic#5.Customized::IN_CU.rMisf_Intgr;
+	Cyclic#4.EngineController::OUT_EC.rP_Power_Dev AT %Q.Cyclic#5.Customized::IN_CU.rP_Power_Dev;
+	Cyclic#4.EngineController::OUT_EC.rN_Speed_Dev AT %Q.Cyclic#5.Customized::IN_CU.rN_Speed_Dev;
+	Cyclic#4.EngineController::OUT_EC.tLL AT %Q.Cyclic#5.Customized::IN_CU.tLL;
+	Cyclic#4.EngineController::OUT_EC.rHum_Mixture_Abs AT %Q.Cyclic#5.Customized::IN_CU.rHum_Mixture_Abs;
+	Cyclic#2.EngineGeneral::OUT_EG.rPr_Baro_Internal AT %Q.Cyclic#2.Customized::IN_CU.rPr_Baro_Internal; (*V04.02.00.00*)
+	Cyclic#6.Exhaust::MM2VIS.rT_EGbCat AT %Q.Cyclic#6.Customized::IN_CU.rT_Cat; (*detour*)
+	Cyclic#6.Exhaust::MM2VIS.rT_EGaCat AT %Q.Cyclic#6.Customized::IN_CU.rT_EGaCat;
+	Cyclic#6.Exhaust::MM2VIS.rT_EGaHE AT %Q.Cyclic#6.Customized::IN_CU.rT_EGaHE;
+	Cyclic#6.Exhaust::MM2VIS.rT_EGaHE1 AT %Q.Cyclic#6.Customized::IN_CU.rT_EGaHE1;
+	Cyclic#6.Exhaust::MM2VIS.rT_EGaHE2 AT %Q.Cyclic#6.Customized::IN_CU.rT_EGaHE2;
+	Cyclic#6.Exhaust::MM2VIS.rT_EGaTC AT %Q.Cyclic#6.Customized::IN_CU.rT_EGaTC;
+	Cyclic#6.Exhaust::MM2VIS.rT_EGbCat AT %Q.Cyclic#6.Customized::IN_CU.rT_EGbCat;
+	Cyclic#6.Exhaust::MM2VIS.rT_EGbTC AT %Q.Cyclic#6.Customized::IN_CU.rT_EGbTC; (*MD 20.6.2013 hinzu*)
+	Cyclic#6.Exhaust::MM2VIS.rT_PlateHE AT %Q.Cyclic#6.Customized::IN_CU.rT_PlateHE;
+	Cyclic#5.Exhaust::OUT_EX.bEG_BoVaOpened AT %Q.Cyclic#5.Customized::IN_CU.bEG_BoVaOpened;
+	Cyclic#5.Exhaust::OUT_EX.bEG_ByVaOpened AT %Q.Cyclic#5.Customized::IN_CU.bEG_ByVaOpened;
+	Cyclic#4.GasMeteringUnit::OUT_GD.rGMU_Pr_DiffGas AT %Q.Cyclic#5.Customized::IN_CU.rGMU_Pr_DiffGas;
+	Cyclic#4.GasMeteringUnit::OUT_GD.rGMU_Pos_Valve_Prom AT %Q.Cyclic#5.Customized::IN_CU.rGMU_Pos_Valve_Prom;
+	Cyclic#4.GasMeteringUnit::OUT_GD.rGMU_Pr_FuelGas AT %Q.Cyclic#5.Customized::IN_CU.rGMU_Pr_FuelGas;
+	Cyclic#4.GasMeteringUnit::OUT_GD.rGMU_T_FuelGas AT %Q.Cyclic#5.Customized::IN_CU.rGMU_T_FuelGas;
+	Cyclic#4.GasMeteringUnit::OUT_GD.rGMU_Q_FuelGas AT %Q.Cyclic#5.Customized::IN_CU.rGMU_Q_FuelGas;
+	Cyclic#6.Gasmixer::MM2VIS.rPos_Act_GM1_Norm AT %Q.Cyclic#6.Customized::IN_CU.rPos_Act_GM1_Norm;
+	Cyclic#6.Gastrain::MM2VIS.rGT_CH4 AT %Q.Cyclic#6.Customized::IN_CU.rGT_CH4;
+	Cyclic#6.Gastrain::MM2VIS.rGT_CV AT %Q.Cyclic#6.Customized::IN_CU.rGT_CV;
+	Cyclic#6.Gastrain::MM2VIS.rGT_O2 AT %Q.Cyclic#6.Customized::IN_CU.rGT_O2;
+	Cyclic#6.Gastrain::MM2VIS.rPr_GT_Gas AT %Q.Cyclic#6.Customized::IN_CU.rPr_GT_Gas;
+	Cyclic#6.Gastrain::MM2VIS.rPr_GT_Suct AT %Q.Cyclic#6.Customized::IN_CU.rPr_GT_Suct;
+	Cyclic#6.Gastrain::MM2VIS.rPr_PC_Diff AT %Q.Cyclic#6.Customized::IN_CU.rPr_PC_Diff;
+	Cyclic#6.Gastrain::MM2VIS.rPr_PCG AT %Q.Cyclic#6.Customized::IN_CU.rPr_PCG;
+	Cyclic#6.Gastrain::MM2VIS.rT_GT AT %Q.Cyclic#6.Customized::IN_CU.rT_GT;
+	Cyclic#6.Gastrain::MM2VIS.rVol_GT AT %Q.Cyclic#6.Customized::IN_CU.rVol_GT;
+	Cyclic#5.Gastrain::OUT_GT.bCnt_Gas_NormM3 AT %Q.Cyclic#5.Customized::IN_CU.bCnt_Gas_NormM3; (*10.07.14 Denk*)
+	Cyclic#5.Gastrain::OUT_GT.bCnt_Gas_OpM3 AT %Q.Cyclic#5.Customized::IN_CU.bCnt_Gas_OpM3; (*10.07.14 Denk*)
+	Cyclic#5.Gastrain::OUT_GT.bSelGasTyp0 AT %Q.Cyclic#5.Customized::IN_CU.bSelGasTyp0;
+	Cyclic#5.Gastrain::OUT_GT.bSelGasTyp1 AT %Q.Cyclic#5.Customized::IN_CU.bSelGasTyp1;
+	Cyclic#5.Gastrain::OUT_GT.bSelGasTyp2 AT %Q.Cyclic#5.Customized::IN_CU.bSelGasTyp2;
+	Cyclic#5.Gastrain::OUT_GT.bSelGasTyp3 AT %Q.Cyclic#5.Customized::IN_CU.bSelGasTyp3;
+	Cyclic#5.Gastrain::OUT_GT.bSelGasTyp4 AT %Q.Cyclic#5.Customized::IN_CU.bSelGasTyp4;
+	Cyclic#5.Gastrain::OUT_GT.bSelGasTypAut AT %Q.Cyclic#5.Customized::IN_CU.bSelGasTypAut;
+	Cyclic#5.Gastrain::OUT_GT.bSelGasTypMix AT %Q.Cyclic#5.Customized::IN_CU.bSelGasTypMix;
+	Cyclic#6.Generator::MM2VIS.rT_Gen_Bear_A_Act AT %Q.Cyclic#6.Customized::IN_CU.rT_Gen_Bear_A_Act;
+	Cyclic#6.Generator::MM2VIS.rT_Gen_Bear_B_Act AT %Q.Cyclic#6.Customized::IN_CU.rT_Gen_Bear_B_Act;
+	Cyclic#6.Generator::MM2VIS.rT_Gen_Wind_Act AT %Q.Cyclic#6.Customized::IN_CU.rT_Gen_Wind_Act;
+	Cyclic#6.Generator::MM2VIS.rT_Gen_Wind_Act_L1 AT %Q.Cyclic#6.Customized::IN_CU.rT_Gen_Wind_Act_L1;
+	Cyclic#6.Generator::MM2VIS.rT_Gen_Wind_Act_L2 AT %Q.Cyclic#6.Customized::IN_CU.rT_Gen_Wind_Act_L2;
+	Cyclic#6.Generator::MM2VIS.rT_Gen_Wind_Act_L3 AT %Q.Cyclic#6.Customized::IN_CU.rT_Gen_Wind_Act_L3;
+	Cyclic#5.Generator::OUT_GC.rU_Gen_Exc AT %Q.Cyclic#5.Customized::IN_CU.rU_Gen_Exc;
+	Cyclic#5.Generator::OUT_GC.rCtr_Q_Set AT %Q.Cyclic#5.Customized::IN_CU.rCtr_Q_Set;
+	Cyclic#5.Generator::OUT_GC.bMsg1038Set AT %Q.Cyclic#2.Customized::IN_CU.bMsg1038Set;
+	Cyclic#5.Generator::OUT_GC.bMsg1109Set AT %Q.Cyclic#2.Customized::IN_CU.bMsg1109Set;
+	Cyclic#5.Generator::OUT_GC.bMsg1110Set AT %Q.Cyclic#2.Customized::IN_CU.bMsg1110Set;
+	Cyclic#5.Generator::OUT_GC.bMsg1111Set AT %Q.Cyclic#2.Customized::IN_CU.bMsg1111Set;
+	Cyclic#5.Generator::OUT_GC.bMsg1112Set AT %Q.Cyclic#2.Customized::IN_CU.bMsg1112Set;
+	Cyclic#5.Generator::OUT_GC.bMsg1126Set AT %Q.Cyclic#2.Customized::IN_CU.bMsg1126Set;
+	Cyclic#5.Generator::OUT_GC.bMsg1127Set AT %Q.Cyclic#2.Customized::IN_CU.bMsg1127Set;
+	Cyclic#5.Generator::OUT_GC.bMsg1143Set AT %Q.Cyclic#2.Customized::IN_CU.bMsg1143Set;
+	Cyclic#5.Generator::OUT_GC.bMsg1144Set AT %Q.Cyclic#2.Customized::IN_CU.bMsg1144Set;
+	Cyclic#5.Generator::OUT_GC.bMsg2277Set AT %Q.Cyclic#2.Customized::IN_CU.bMsg2277Set;
+	Cyclic#5.Generator::OUT_GC.bMsg2316Set AT %Q.Cyclic#2.Customized::IN_CU.bMsg2316Set;
+	Cyclic#5.Grid::OUT_GR.bFC_SOf_Bus AT %Q.Cyclic#5.Customized::IN_CU.bFC_SOf_Bus;
+	Cyclic#5.Grid::OUT_GR.bFC_SOn_Bus AT %Q.Cyclic#5.Customized::IN_CU.bFC_SOn_Bus;
+	Cyclic#5.Grid::OUT_GR.bILF_SOf_Bus AT %Q.Cyclic#5.Customized::IN_CU.bILF_SOf_Bus;
+	Cyclic#5.Grid::OUT_GR.bILF_SOn_Bus AT %Q.Cyclic#5.Customized::IN_CU.bILF_SOn_Bus;
+	Cyclic#5.Grid::OUT_GR.bP_Set_FC_Enable AT %Q.Cyclic#5.Customized::IN_CU.bP_Set_FC_Enable;
+	Cyclic#5.Grid::OUT_GR.rP_FC_ContOutput AT %Q.Cyclic#5.Customized::IN_CU.rP_FC_ContOutput;
+	Cyclic#5.Grid::OUT_GR.rP_Set_FC_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Set_FC_Norm;
+	Cyclic#5.Grid::OUT_GR.rP_Set_Min AT %Q.Cyclic#5.Customized::IN_CU.rP_Set_Min;
+	Cyclic#5.Grid::OUT_GR.rP_Set_PFC_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Set_PFC_Norm;
+	Cyclic#5.Grid::OUT_GR.tEU_RM_BLOCK.Do AT %Q.Cyclic#5.Customized::IN_CU.tEU_RM_BLOCK.Do;
+	Cyclic#5.Grid::OUT_GR.tFC_SOf AT %Q.Cyclic#5.Customized::IN_CU.tFC_SOf;
+	Cyclic#5.Grid::OUT_GR.tFC_SOn AT %Q.Cyclic#5.Customized::IN_CU.tFC_SOn;
+	Cyclic#5.Grid::OUT_GR.tILF_SOf AT %Q.Cyclic#5.Customized::IN_CU.tILF_SOf;
+	Cyclic#5.Grid::OUT_GR.tILF_SOn AT %Q.Cyclic#5.Customized::IN_CU.tILF_SOn;
+	Cyclic#5.Grid::OUT_GR.tP_GenC_Fix0SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tP_GenC_Fix0SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tP_GenC_Fix1SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tP_GenC_Fix1SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tP_GenC_Fix2SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tP_GenC_Fix2SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tP_GenC_Fix3SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tP_GenC_Fix3SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tP_GenC_Fix4SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tP_GenC_Fix4SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tP_GenC_Fix5SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tP_GenC_Fix5SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tP_GenC_SOf.Do AT %Q.Cyclic#5.Customized::IN_CU.tP_GenC_SOf.Do;
+	Cyclic#5.Grid::OUT_GR.tP_GenC_SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tP_GenC_SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tPF_GenC_Fix1SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tPF_GenC_Fix1SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tPF_GenC_Fix2SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tPF_GenC_Fix2SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tPF_GenC_Fix3SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tPF_GenC_Fix3SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tPF_GenC_Fix4SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tPF_GenC_Fix4SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tPF_GenC_Fix5SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tPF_GenC_Fix5SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tPF_GenC_SOf.Do AT %Q.Cyclic#5.Customized::IN_CU.tPF_GenC_SOf.Do;
+	Cyclic#5.Grid::OUT_GR.tPF_GenC_SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tPF_GenC_SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tPFC_SOf.Do AT %Q.Cyclic#5.Customized::IN_CU.tPFC_SOf.Do;
+	Cyclic#5.Grid::OUT_GR.tPFC_SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tPFC_SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tPFUC_GenC_SOf.Do AT %Q.Cyclic#5.Customized::IN_CU.tPFUC_GenC_SOf.Do;
+	Cyclic#5.Grid::OUT_GR.tPFUC_GenC_SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tPFUC_GenC_SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tPLim_GenC_Act.Do AT %Q.Cyclic#5.Customized::IN_CU.tPLim_GenC_Act.Do;
+	Cyclic#5.Grid::OUT_GR.tPLim_GenC_SOf.Do AT %Q.Cyclic#5.Customized::IN_CU.tPLim_GenC_SOf.Do;
+	Cyclic#5.Grid::OUT_GR.tPLim_GenC_SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tPLim_GenC_SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tPU_SOf AT %Q.Cyclic#5.Customized::IN_CU.tPU_SOf;
+	Cyclic#5.Grid::OUT_GR.tPU_SOn AT %Q.Cyclic#5.Customized::IN_CU.tPU_SOn;
+	Cyclic#5.Grid::OUT_GR.tQ_GenC_Fix1SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tQ_GenC_Fix1SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tQ_GenC_Fix2SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tQ_GenC_Fix2SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tQ_GenC_Fix3SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tQ_GenC_Fix3SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tQ_GenC_Fix4SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tQ_GenC_Fix4SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tQ_GenC_Fix5SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tQ_GenC_Fix5SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tQ_GenC_SOf.Do AT %Q.Cyclic#5.Customized::IN_CU.tQ_GenC_SOf.Do;
+	Cyclic#5.Grid::OUT_GR.tQ_GenC_SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tQ_GenC_SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tQLim_GenC_Act.Do AT %Q.Cyclic#5.Customized::IN_CU.tQLim_GenC_Act.Do;
+	Cyclic#5.Grid::OUT_GR.tQLim_GenC_SOf.Do AT %Q.Cyclic#5.Customized::IN_CU.tQLim_GenC_SOf.Do;
+	Cyclic#5.Grid::OUT_GR.tQLim_GenC_SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tQLim_GenC_SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tQP_GenC_SOf.Do AT %Q.Cyclic#5.Customized::IN_CU.tQP_GenC_SOf.Do;
+	Cyclic#5.Grid::OUT_GR.tQP_GenC_SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tQP_GenC_SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tQPC_GenC_SOf.Do AT %Q.Cyclic#5.Customized::IN_CU.tQPC_GenC_SOf.Do;
+	Cyclic#5.Grid::OUT_GR.tQPC_GenC_SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tQPC_GenC_SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tQUC_GenC_SOf.Do AT %Q.Cyclic#5.Customized::IN_CU.tQUC_GenC_SOf.Do;
+	Cyclic#5.Grid::OUT_GR.tQUC_GenC_SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tQUC_GenC_SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tRMC_SOf.Do AT %Q.Cyclic#5.Customized::IN_CU.tRMC_SOf.Do;
+	Cyclic#5.Grid::OUT_GR.tRMC_SOn.Do AT %Q.Cyclic#5.Customized::IN_CU.tRMC_SOn.Do;
+	Cyclic#5.Grid::OUT_GR.tGR2CU AT %Q.Cyclic#5.Customized::IN_CU.tGR2CU;
+	Cyclic#5.Grid::OUT_GR.bPFC_SOf_Bus AT %Q.Cyclic#5.Customized::IN_CU.bPFC_SOf_Bus;
+	Cyclic#5.Grid::OUT_GR.bPFC_SOn_Bus AT %Q.Cyclic#5.Customized::IN_CU.bPFC_SOn_Bus;
+	Cyclic#5.HalIO::OUT_HA.rI_Dyn AT %Q.Cyclic#5.Customized::IN_CU.rI_Dyn;
+	Cyclic#5.HalIO::OUT_HA.rI_GenUnbalanced AT %Q.Cyclic#5.Customized::IN_CU.rI_GenUnbalanced;
+	Cyclic#5.HalIO::OUT_HA.rU_MMD_Diff AT %Q.Cyclic#5.Customized::IN_CU.rU_MMD_Diff;
+	Cyclic#5.HalIO::OUT_HA.iIdx_MMD_SynchMode AT %Q.Cyclic#5.Customized::IN_CU.iIdx_MMD_SynchMode;
+	Cyclic#6.HalIO::MM2VIS.rF_MMD AT %Q.Cyclic#6.Customized::IN_CU.rF_MMD;
+	Cyclic#6.HalIO::MM2VIS.rI_Avg AT %Q.Cyclic#6.Customized::IN_CU.rI_Avg;
+	Cyclic#6.HalIO::MM2VIS.rI_L1 AT %Q.Cyclic#6.Customized::IN_CU.rI_L1;
+	Cyclic#6.HalIO::MM2VIS.rI_L2 AT %Q.Cyclic#6.Customized::IN_CU.rI_L2;
+	Cyclic#6.HalIO::MM2VIS.rI_L3 AT %Q.Cyclic#6.Customized::IN_CU.rI_L3;
+	Cyclic#6.HalIO::MM2VIS.rI_N AT %Q.Cyclic#6.Customized::IN_CU.rI_N; (*MD 19.6.2013 added*)
+	Cyclic#6.HalIO::MM2VIS.rP_Act AT %Q.Cyclic#6.Customized::IN_CU.rP_Act;
+	Cyclic#6.HalIO::MM2VIS.rPF_Act AT %Q.Cyclic#6.Customized::IN_CU.rPF_Act;
+	Cyclic#6.HalIO::MM2VIS.rQ_Act AT %Q.Cyclic#6.Customized::IN_CU.rQ_Act;
+	Cyclic#6.HalIO::MM2VIS.rS_Act AT %Q.Cyclic#6.Customized::IN_CU.rS_Act;
+	Cyclic#6.HalIO::MM2VIS.rU_Avg AT %Q.Cyclic#6.Customized::IN_CU.rU_Avg;
+	Cyclic#6.HalIO::MM2VIS.rU_L1L2 AT %Q.Cyclic#6.Customized::IN_CU.rU_L1L2;
+	Cyclic#6.HalIO::MM2VIS.rU_L1N AT %Q.Cyclic#6.Customized::IN_CU.rU_L1N;
+	Cyclic#6.HalIO::MM2VIS.rU_L2L3 AT %Q.Cyclic#6.Customized::IN_CU.rU_L2L3;
+	Cyclic#6.HalIO::MM2VIS.rU_L2N AT %Q.Cyclic#6.Customized::IN_CU.rU_L2N;
+	Cyclic#6.HalIO::MM2VIS.rU_L3L1 AT %Q.Cyclic#6.Customized::IN_CU.rU_L3L1;
+	Cyclic#6.HalIO::MM2VIS.rU_L3N AT %Q.Cyclic#6.Customized::IN_CU.rU_L3N;
+	Cyclic#5.HalIO::OUT_HA.rCustomizedHA AT %Q.Cyclic#5.Customized::IN_CU.rCustomizedHA; (*New customizable HAL interface 2017 - BETA PHASE, use only in coordination with TPSS	*)
+	Cyclic#6.HalIO::VIS2MM.rP_WorkAct AT %Q.Cyclic#6.Customized::IN_CU.rP_WorkAct; (*MD 19.6.2013 added*)
+	Cyclic#6.HalIO::VIS2MM.rQ_WorkReac AT %Q.Cyclic#6.Customized::IN_CU.rQ_WorkReac; (*MD 19.6.2013 added*)
+	Cyclic#6.HalIO::tGT_RatioMix_Set AT %Q.Cyclic#6.Customized::IN_CU.tGT_RatioMix_Set;
+	Cyclic#6.HeatingCooling::MM2VIS.rP_Heat AT %Q.Cyclic#6.Customized::IN_CU.rP_Heat; (*STM 2*)
+	Cyclic#6.HeatingCooling::MM2VIS.rPr_ECW AT %Q.Cyclic#6.Customized::IN_CU.rPr_ECW;
+	Cyclic#6.HeatingCooling::MM2VIS.rT_AirOutdoor AT %Q.Cyclic#6.Customized::IN_CU.rT_AirOutdoor;
+	Cyclic#6.HeatingCooling::MM2VIS.rT_HW_Re AT %Q.Cyclic#6.Customized::IN_CU.rT_HW_Re;
+	Cyclic#6.HeatingCooling::MM2VIS.rT_HW_ReAfEC AT %Q.Cyclic#6.Customized::IN_CU.rT_HW_ReAfEC;
+	Cyclic#6.HeatingCooling::MM2VIS.rT_HW_Su AT %Q.Cyclic#6.Customized::IN_CU.rT_HW_Su;
+	Cyclic#6.HeatingCooling::MM2VIS.rT_Re_PriCirc AT %Q.Cyclic#6.Customized::IN_CU.rT_Re_PriCirc; (*STM*)
+	Cyclic#6.HeatingCooling::MM2VIS.rT_Re_SecCirc AT %Q.Cyclic#6.Customized::IN_CU.rT_Re_SecCirc; (*STM*)
+	Cyclic#6.HeatingCooling::MM2VIS.rT_Su_PriCirc AT %Q.Cyclic#6.Customized::IN_CU.rT_Su_PriCirc; (*STM*)
+	Cyclic#6.HeatingCooling::MM2VIS.rT_Su_SecCirc AT %Q.Cyclic#6.Customized::IN_CU.rT_Su_SecCirc; (*STM*)
+	Cyclic#5.HeatingCooling::OUT_HC.bPr_ECW_Lo1 AT %Q.Cyclic#5.Customized::IN_CU.bPr_ECW_Lo1; (*prepared status message: pressure engine cooling water limit low 1, OldName AN_KDGW1*)
+	Cyclic#5.HeatingCooling::OUT_HC.rCustomizedHC AT %Q.Cyclic#5.Customized::IN_CU.rCustomizedHC; (*New customizable interface 2017 - BETA PHASE, use only in coordination with TPSS	*)
+	Cyclic#4.Ignition::OUT_IG.rN_EngAct AT %Q.Cyclic#5.Customized::IN_CU.rN_EngAct;
+	Cyclic#4.Ignition::OUT_IG.rU_Ign_Avg AT %Q.Cyclic#5.Customized::IN_CU.rU_Ign_Avg;
+	Cyclic#4.Ignition::OUT_IG.rU_Ign_Max AT %Q.Cyclic#5.Customized::IN_CU.rU_Ign_Max;
+	Cyclic#4.Ignition::OUT_IG.rU_Ign_Min AT %Q.Cyclic#5.Customized::IN_CU.rU_Ign_Min;
+	Cyclic#4.Ignition::OUT_IG.rCA_Ign_Min AT %Q.Cyclic#5.Customized::IN_CU.rCA_Ign_Min;
+	Cyclic#4.Ignition::OUT_IG.rCA_Ign_Max AT %Q.Cyclic#5.Customized::IN_CU.rCA_Ign_Max;
+	Cyclic#4.Ignition::OUT_IG.iIdx_IgnSelfTest AT %Q.Cyclic#5.Customized::IN_CU.iIdx_IgnSelfTest;
+	Cyclic#4.Opstate::OUT_OP.bBlocDelay_ManStart AT %Q.Cyclic#5.Customized::IN_CU.bBlocDelay_ManStart;
+	Cyclic#4.Opstate::OUT_OP.bEng_Aux_Dem AT %Q.Cyclic#5.Customized::IN_CU.bEng_Aux_Dem;
+	Cyclic#5.Opstate::OUT_OP.bEng_Aux_Dem_CDR AT %Q.Cyclic#5.Customized::IN_CU.bEng_Aux_Dem_CDR;
+	Cyclic#4.Opstate::OUT_OP.bEng_Aux_Dem_TOF AT %Q.Cyclic#5.Customized::IN_CU.bEng_Aux_Dem_TOF; (*new V4.05*)
+	Cyclic#4.Opstate::OUT_OP.bEng_Bloc AT %Q.Cyclic#5.Customized::IN_CU.bEng_Bloc;
+	Cyclic#4.Opstate::OUT_OP.bEng_CDR AT %Q.Cyclic#5.Customized::IN_CU.bEng_CDR;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem AT %Q.Cyclic#5.Customized::IN_CU.bEng_Dem;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem_Aut AT %Q.Cyclic#5.Customized::IN_CU.bEng_Dem_Aut;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem_Bloc AT %Q.Cyclic#5.Customized::IN_CU.bEng_Dem_Bloc;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem_EPS AT %Q.Cyclic#5.Customized::IN_CU.bEng_Dem_EPS;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem_Man AT %Q.Cyclic#5.Customized::IN_CU.bEng_Dem_Man;
+	Cyclic#4.Opstate::OUT_OP.bEng_Rdy_Aut AT %Q.Cyclic#5.Customized::IN_CU.bEng_Rdy_Aut;
+	Cyclic#4.Opstate::OUT_OP.bEng_Rdy_Aut_Exc AT %Q.Cyclic#5.Customized::IN_CU.bEng_Rdy_Aut_Exc;
+	Cyclic#4.Opstate::OUT_OP.bEng_Rdy_Man AT %Q.Cyclic#5.Customized::IN_CU.bEng_Rdy_Man;
+	Cyclic#4.Opstate::OUT_OP.bEng_Rel AT %Q.Cyclic#5.Customized::IN_CU.bEng_Rel;
+	Cyclic#4.Opstate::OUT_OP.bEng_Rel_SU AT %Q.Cyclic#5.Customized::IN_CU.bEng_Rel_SU;
+	Cyclic#4.Opstate::OUT_OP.bEng_RPSDem AT %Q.Cyclic#5.Customized::IN_CU.bEng_RPSDem;
+	Cyclic#4.Opstate::OUT_OP.bEng_RSBoc AT %Q.Cyclic#5.Customized::IN_CU.bEng_RSBoc;
+	Cyclic#4.Opstate::OUT_OP.bEng_Stop_Man AT %Q.Cyclic#5.Customized::IN_CU.bEng_Stop_Man;
+	Cyclic#4.Opstate::OUT_OP.bEng_SU_Man AT %Q.Cyclic#5.Customized::IN_CU.bEng_SU_Man;
+	Cyclic#4.Opstate::OUT_OP.bGasTyp1_Act AT %Q.Cyclic#5.Customized::IN_CU.bGasTyp1_Act;
+	Cyclic#4.Opstate::OUT_OP.bGasTyp2_Act AT %Q.Cyclic#5.Customized::IN_CU.bGasTyp2_Act;
+	Cyclic#4.Opstate::OUT_OP.bGasTyp3_Act AT %Q.Cyclic#5.Customized::IN_CU.bGasTyp3_Act;
+	Cyclic#4.Opstate::OUT_OP.bGasTyp4_Act AT %Q.Cyclic#5.Customized::IN_CU.bGasTyp4_Act;
+	Cyclic#4.Opstate::OUT_OP.bGasTypMix1_2_Act AT %Q.Cyclic#5.Customized::IN_CU.bGasTypMix1_2_Act;
+	Cyclic#4.Opstate::OUT_OP.bGV_Open_Opstate AT %Q.Cyclic#5.Customized::IN_CU.bGV_Open_Opstate;
+	Cyclic#4.Opstate::OUT_OP.bGV_Rel AT %Q.Cyclic#5.Customized::IN_CU.bGV_Rel;
+	Cyclic#4.Opstate::OUT_OP.bIgn_Dem AT %Q.Cyclic#5.Customized::IN_CU.bIgn_Dem;
+	Cyclic#4.Opstate::OUT_OP.bImp_Start AT %Q.Cyclic#5.Customized::IN_CU.bImp_Start;
+	Cyclic#4.Opstate::OUT_OP.bP_Red_Active AT %Q.Cyclic#5.Customized::IN_CU.bP_Red_Active;
+	Cyclic#4.Opstate::OUT_OP.bP_Rmp_Frz AT %Q.Cyclic#5.Customized::IN_CU.bP_Rmp_Frz;
+	Cyclic#4.Opstate::OUT_OP.bRel_Sync_Load AT %Q.Cyclic#5.Customized::IN_CU.bRel_Sync_Load;
+	Cyclic#4.Opstate::OUT_OP.iCnt_OpHours AT %Q.Cyclic#5.Customized::IN_CU.iCnt_OpHours;
+	Cyclic#4.Opstate::OUT_OP.iCnt_Starts AT %Q.Cyclic#5.Customized::IN_CU.iCnt_Starts;
+	Cyclic#4.Opstate::OUT_OP.iIdx_OMSS AT %Q.Cyclic#5.Customized::IN_CU.iIdx_OMSS;
+	Cyclic#4.Opstate::OUT_OP.iIdx_RSS AT %Q.Cyclic#5.Customized::IN_CU.iIdx_RSS;
+	Cyclic#4.Opstate::OUT_OP.iSt_OpMode AT %Q.Cyclic#5.Customized::IN_CU.iSt_OpMode;
+	Cyclic#4.Opstate::OUT_OP.rP_Act_Norm_Filt AT %Q.Cyclic#5.Customized::IN_CU.rP_Act_Norm_Filt;
+	Cyclic#4.Opstate::OUT_OP.rP_Nom AT %Q.Cyclic#5.Customized::IN_CU.rP_Nom;
+	Cyclic#4.Opstate::OUT_OP.rP_Red_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Red_Norm;
+	Cyclic#4.Opstate::OUT_OP.rP_Set AT %Q.Cyclic#5.Customized::IN_CU.rP_Set;
+	Cyclic#4.Opstate::OUT_OP.rP_Set_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Set_Norm;
+	Cyclic#6.Opstate::OUT_OP.tEng_Rdy_Rem AT %Q.Cyclic#6.Customized::IN_CU.tEng_Rdy_Rem;
+	Cyclic#5.Opstate::OUT_OP.tEng_Run.Do AT %Q.Cyclic#5.Customized::IN_CU.tEng_Run.Do;
+	Cyclic#5.Opstate::OUT_OP.tImp_OpHour AT %Q.Cyclic#5.Customized::IN_CU.tImp_OpHour;
+	Cyclic#5.Opstate::OUT_OP.tLSL_Out AT %Q.Cyclic#5.Customized::IN_CU.tLSL_Out;
+	Cyclic#5.Opstate::OUT_OP.tP_Red_Active AT %Q.Cyclic#5.Customized::IN_CU.tP_Red_Active;
+	Cyclic#5.Opstate::OUT_OP.tP_Red_Norm AT %Q.Cyclic#5.Customized::IN_CU.tP_Red_Norm;
+	Cyclic#4.Opstate::OUT_OP.rP_Set_Min_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Set_Min_Norm;
+	Cyclic#4.Opstate::OUT_OP.rP_set_vis_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_set_vis_Norm;
+	Cyclic#5.Opstate::OUT_OP.iIdx_Pset_Type AT %Q.Cyclic#5.Customized::IN_CU.iIdx_Pset_Type;
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#5.Customized::IN_CU.tPB2MM;
+	Cyclic#5.SAFI::OUT_SA.iSA_ERZuV AT %Q.Cyclic#5.Customized::IN_CU.iSA_ERZuV;
+	Cyclic#5.SAFI::OUT_SA.iSA_ERDurTol AT %Q.Cyclic#5.Customized::IN_CU.iSA_ERDurTol;
+	Cyclic#5.Synchronization::MM2VIS.bGCB_On AT %Q.Cyclic#5.Customized::IN_CU.bGCB_On; (* hinzugefuegt ins Customized Modul 01.04.2015 (von MM2VIS)*)
+	Cyclic#5.Synchronization::OUT_SY.bGCB_DemSy AT %Q.Cyclic#5.Customized::IN_CU.bGCB_DemSy;
+	Cyclic#5.Synchronization::OUT_SY.bMCB_DemSy AT %Q.Cyclic#5.Customized::IN_CU.bMCB_DemSy;
+	Cyclic#5.Synchronization::OUT_SY.bMCB_On AT %Q.Cyclic#5.Customized::IN_CU.bMCB_On; (* Diese sind hinzugefuegt fuer Coupling OutData ins Customized Modul 21.11.2013*)
+	Cyclic#5.Synchronization::OUT_SY.bGen_DeExc_Rdy AT %Q.Cyclic#5.Customized::IN_CU.bGen_DeExc_Rdy;
+	Cyclic#5.Synchronization::OUT_SY.bMsg1041Set AT %Q.Cyclic#2.Customized::IN_CU.bMsg1041Set;
+	Cyclic#5.Synchronization::OUT_SY.bMsg1042Set AT %Q.Cyclic#2.Customized::IN_CU.bMsg1042Set;
+	Cyclic#5.Synchronization::OUT_SY.bMsg2801Set AT %Q.Cyclic#2.Customized::IN_CU.bMsg2801Set;
+	Cyclic#5.Synchronization::OUT_SY.bMsg2934Set AT %Q.Cyclic#2.Customized::IN_CU.bMsg2934Set;
+	Cyclic#5.ThermalReactor::OUT_TR.tCtrTR_Heater_Out AT %Q.Cyclic#5.Customized::IN_CU.tCtrTR_Heater_Out;
+	Cyclic#5.ThermalReactor::OUT_TR.rP_ThR_EH AT %Q.Cyclic#5.Customized::IN_CU.rP_ThR_EH;
+	Cyclic#6.Ventilation::MM2VIS.rPos_CircLou1 AT %Q.Cyclic#6.Customized::IN_CU.rPos_CircLou1; (*STM*)
+	Cyclic#6.Ventilation::MM2VIS.rPos_CircLou2 AT %Q.Cyclic#6.Customized::IN_CU.rPos_CircLou2; (*STM*)
+	Cyclic#6.Ventilation::MM2VIS.rPos_InlLou1 AT %Q.Cyclic#6.Customized::IN_CU.rPos_InlLou1; (*STM*)
+	Cyclic#6.Ventilation::MM2VIS.rPos_InlLou2 AT %Q.Cyclic#6.Customized::IN_CU.rPos_InlLou2; (*STM*)
+	Cyclic#6.Ventilation::MM2VIS.rPos_OutlLou1 AT %Q.Cyclic#6.Customized::IN_CU.rPos_OutlLou1; (*STM*)
+	Cyclic#6.Ventilation::MM2VIS.rPos_OutlLou2 AT %Q.Cyclic#6.Customized::IN_CU.rPos_OutlLou2; (*STM*)
+	Cyclic#6.Ventilation::MM2VIS.rPrDiff_ER AT %Q.Cyclic#6.Customized::IN_CU.rPrDiff_ER; (*STM 2*)
+	Cyclic#6.Ventilation::MM2VIS.rT_AirER AT %Q.Cyclic#6.Customized::IN_CU.rT_AirER;
+	Cyclic#5.Visu::OUT_VI.iPassLevel AT %Q.Cyclic#5.Customized::IN_CU.iPassLevel;
+	Cyclic#5.Visu::OUT_VI.iPanelSelection AT %Q.Cyclic#5.Customized::IN_CU.iPanelSelection;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.rP_Red_T_Oil_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Red_T_Oil_Norm; (*V4.10 added*)
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.tEOVal_DemOpen AT %Q.Cyclic#5.Customized::IN_CU.tEOVal_DemOpen; (*V4.10 added*)
+	Cyclic#5.ChargingUnit::OUT_CH.rP_Red_Ch_T2HP_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Red_Ch_T2HP_Norm; (*V4.12 added*)
+	Cyclic#5.ChargingUnit::OUT_CH.rP_Red_Ch_T2LP_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Red_Ch_T2LP_Norm; (*V4.12 added*)
+	Cyclic#5.ChargingUnit::OUT_CH.rP_Red_Ch_T2s_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Red_Ch_T2s_Norm; (*V4.10 added*)
+	Cyclic#5.ChargingUnit::OUT_CH.rP_Red_TC_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Red_TC_Norm; (*V4.10 added*)
+	Cyclic#5.Coupling::OUT_CP.bBus_Dem AT %Q.Cyclic#5.Customized::IN_CU.bBus_Dem; (*V4.10 added*)
+	Cyclic#5.Coupling::OUT_CP.bBusPulse AT %Q.Cyclic#5.Customized::IN_CU.bBusPulse; (*V4.10 added*)
+	Cyclic#5.Coupling::OUT_CP.bFastStartReq_Bus AT %Q.Cyclic#5.Customized::IN_CU.bFastStartReq_Bus; (*V4.10 added*)
+	Cyclic#5.Coupling::OUT_CP.bVeryFastStartReq_Bus AT %Q.Cyclic#5.Customized::IN_CU.bVeryFastStartReq_Bus; (*V4.10 added*)
+	Cyclic#5.Coupling::OUT_CP.rP_Red_ExtBus_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Red_ExtBus_Norm; (*V4.10 added*)
+	Cyclic#5.EngineController::OUT_EC.rCA_Ign_Act AT %Q.Cyclic#5.Customized::IN_CU.rCA_Ign_Act; (*V4.10 added*)
+	Cyclic#5.EngineController::OUT_EC.rP_Red_EGT_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Red_EGT_Norm; (*V4.10 added*)
+	Cyclic#5.EngineController::OUT_EC.rP_Red_Leanox_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Red_Leanox_Norm; (*V4.10 added*)
+	Cyclic#5.EngineController::OUT_EC.rP_Red_Misf_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Red_Misf_Norm; (*V4.10 added*)
+	Cyclic#5.Gastrain::OUT_GT.iIdx_Gtyp_Dem AT %Q.Cyclic#5.Customized::IN_CU.iIdx_Gtyp_Dem; (*V4.10 added*)
+	Cyclic#5.Gastrain::OUT_GT.rGT_QualMix_1_2 AT %Q.Cyclic#5.Customized::IN_CU.rGT_QualMix_1_2; (*V4.10 added*)
+	Cyclic#5.Gastrain::OUT_GT.rGT_RatioMix AT %Q.Cyclic#5.Customized::IN_CU.rGT_RatioMix; (*V4.10 added*)
+	Cyclic#5.Gastrain::OUT_GT.rP_Red_Pr_PCGT_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Red_Pr_PCGT_Norm; (*V4.10 added*)
+	Cyclic#5.Gastrain::OUT_GT.tGV1_Open AT %Q.Cyclic#5.Customized::IN_CU.tGV1_Open; (*V4.10 added*)
+	Cyclic#5.Gastrain::OUT_GT.tGV2_Open AT %Q.Cyclic#5.Customized::IN_CU.tGV2_Open; (*V4.10 added*)
+	Cyclic#5.Generator::OUT_GC.bGCB_Off_CNS AT %Q.Cyclic#5.Customized::IN_CU.bGCB_Off_CNS; (*V4.10 added*)
+	Cyclic#5.Generator::OUT_GC.bGCB_Off_RP AT %Q.Cyclic#5.Customized::IN_CU.bGCB_Off_RP; (*V4.10 added*)
+	Cyclic#5.Generator::OUT_GC.rP_Red_CosPCtr_F_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Red_CosPCtr_F_Norm; (*V4.10 added*)
+	Cyclic#5.Generator::OUT_GC.rP_Red_CosPCtr_T_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Red_CosPCtr_T_Norm; (*V4.10 added*)
+	Cyclic#5.Generator::OUT_GC.rP_Red_CosPCtr_U_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Red_CosPCtr_U_Norm; (*V4.10 added*)
+	Cyclic#5.HeatingCooling::OUT_HC.rP_Red_T_ECW_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Red_T_ECW_Norm; (*V4.10 added*)
+	Cyclic#5.Ignition::OUT_IG.rCA_Ign_Avg AT %Q.Cyclic#5.Customized::IN_CU.rCA_Ign_Avg; (*V4.10 added*)
+	Cyclic#5.Ignition::OUT_IG.rU_Ign_Cyl AT %Q.Cyclic#5.Customized::IN_CU.rU_Ign_Cyl; (*V4.10 added*)
+	Cyclic#5.Knocking::OUT_KN.iKls98_KnckValue_Avg AT %Q.Cyclic#5.Customized::IN_CU.iKls98_KnckValue_Avg; (*V4.10 added*)
+	Cyclic#5.Knocking::OUT_KN.iKls98_KnckValue_Max AT %Q.Cyclic#5.Customized::IN_CU.iKls98_KnckValue_Max; (*V4.10 added*)
+	Cyclic#5.Knocking::OUT_KN.iKls98_KnckValue_Min AT %Q.Cyclic#5.Customized::IN_CU.iKls98_KnckValue_Min; (*V4.10 added*)
+	Cyclic#5.Knocking::OUT_KN.iKls98_VNValue_Avg AT %Q.Cyclic#5.Customized::IN_CU.iKls98_VNValue_Avg; (*V4.10 added*)
+	Cyclic#5.Knocking::OUT_KN.iKls98_VNValue_Max AT %Q.Cyclic#5.Customized::IN_CU.iKls98_VNValue_Max; (*V4.10 added*)
+	Cyclic#5.Knocking::OUT_KN.iKls98_VNValue_Min AT %Q.Cyclic#5.Customized::IN_CU.iKls98_VNValue_Min; (*V4.10 added*)
+	Cyclic#5.Knocking::OUT_KN.rKnck_Intgr AT %Q.Cyclic#5.Customized::IN_CU.rKnck_Intgr; (*V4.10 added*)
+	Cyclic#5.Knocking::OUT_KN.rKnck_Intgr_Avg AT %Q.Cyclic#5.Customized::IN_CU.rKnck_Intgr_Avg; (*V4.10 added*)
+	Cyclic#5.Knocking::OUT_KN.rKnck_Intgr_Max AT %Q.Cyclic#5.Customized::IN_CU.rKnck_Intgr_Max; (*V4.10 added*)
+	Cyclic#5.Knocking::OUT_KN.rKnck_Intgr_Min AT %Q.Cyclic#5.Customized::IN_CU.rKnck_Intgr_Min; (*V4.10 added*)
+	Cyclic#5.Knocking::OUT_KN.rKnck_Noise AT %Q.Cyclic#5.Customized::IN_CU.rKnck_Noise; (*V4.10 added*)
+	Cyclic#5.Knocking::OUT_KN.rKno_IP_Red AT %Q.Cyclic#5.Customized::IN_CU.rKno_IP_Red; (*V4.10 added*)
+	Cyclic#5.Knocking::OUT_KN.rKno_T2s_Red AT %Q.Cyclic#5.Customized::IN_CU.rKno_T2s_Red; (*V4.10 added*)
+	Cyclic#5.Knocking::OUT_KN.rP_Red_Knck_Norm AT %Q.Cyclic#5.Customized::IN_CU.rP_Red_Knck_Norm; (*V4.10 added*)
+	Cyclic#5.Knocking::OUT_KN.rVNValue AT %Q.Cyclic#5.Customized::IN_CU.rVNValue; (*V4.10 added*)
+	Cyclic#5.Synchronization::OUT_SY.bSel_DeExc AT %Q.Cyclic#5.Customized::IN_CU.bSel_DeExc; (*V4.10 added*)
+	Cyclic#5.Synchronization::OUT_SY.tGCB_RUC AT %Q.Cyclic#5.Customized::IN_CU.tGCB_RUC; (*V4.10 added*)
+	Cyclic#5.Synchronization::OUT_SY.tN_EngStart AT %Q.Cyclic#5.Customized::IN_CU.tN_EngStart; (*V4.10 added*)
+	Cyclic#5.Synchronization::OUT_SY.tP_Lo AT %Q.Cyclic#5.Customized::IN_CU.tP_Lo; (*V4.10 added*)
+	Cyclic#5.ThermalReactor::OUT_TR.rT_ThR_Chamber AT %Q.Cyclic#5.Customized::IN_CU.rT_ThR_Chamber; (*V4.10 added*)
+	Cyclic#5.ThermalReactor::OUT_TR.rT_ThR_Chamber1_1 AT %Q.Cyclic#5.Customized::IN_CU.rT_ThR_Chamber1_1; (*V4.10 added*)
+	Cyclic#5.ThermalReactor::OUT_TR.rT_ThR_Chamber1_2 AT %Q.Cyclic#5.Customized::IN_CU.rT_ThR_Chamber1_2; (*V4.10 added*)
+	Cyclic#5.ThermalReactor::OUT_TR.rT_ThR_Chamber2_1 AT %Q.Cyclic#5.Customized::IN_CU.rT_ThR_Chamber2_1; (*V4.10 added*)
+	Cyclic#5.ThermalReactor::OUT_TR.rT_ThR_Chamber2_2 AT %Q.Cyclic#5.Customized::IN_CU.rT_ThR_Chamber2_2; (*V4.10 added*)
+	Cyclic#5.ThermalReactor::OUT_TR.rT_ThR_Comp AT %Q.Cyclic#5.Customized::IN_CU.rT_ThR_Comp; (*V4.10 added*)
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.tECW_PreH_Dem AT %Q.Cyclic#5.Customized::IN_CU.tECW_PreH_Dem; (*V4.10 added*)
+	Cyclic#5.Generator::OUT_GC.tCtr_Q_Out AT %Q.Cyclic#5.Customized::IN_CU.tCtr_Q_Out; (*V4.10 added*)
+	Cyclic#4.HalIO::tP_Droop_Set AT %Q.Cyclic#5.Customized::IN_CU.tP_Droop_Set; (*V4.11 added*)
+	Cyclic#5.Coupling::OUT_CP.bBus_failure AT %Q.Cyclic#5.Customized::IN_CU.bBus_failure; (*v4.13 added*)
+END_VAR

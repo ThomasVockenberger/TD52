@@ -1,0 +1,16 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: c_modIF
+ * File: c_modIF.var
+ * Author: ZengereS
+ * Created: May 30, 2012
+ ********************************************************************
+ * Local variables of program c_modIF
+ ********************************************************************)
+VAR
+	xTOF_FA_M_DREHZ : TOF;
+	ZM_DREHZ : BOOL;
+	xFILTER_R_GP : FILTER_R; (*V4.12*)
+	msg : INT; (*internal counter*)
+END_VAR

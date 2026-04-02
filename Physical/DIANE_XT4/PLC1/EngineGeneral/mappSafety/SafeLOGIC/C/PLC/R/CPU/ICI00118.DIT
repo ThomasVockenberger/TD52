@@ -1,0 +1,94 @@
+(*
+T: FUNCTION_BLOCK HW_MIN_MON
+FW: NO
+CI#: 118
+QSL: 14
+QVE: 14
+QVPC: 14
+QPar: 11
+QFBI: 2
+*)
+@V 1 2 0
+sbPara_Switch_Active	1	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 3 0
+sbPara_Mute_Active	2	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 4 0
+sDI_Switch_Lo	3	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 5 0
+sbGCB_On_60s	4	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 6 0
+sbSafeInputOK	5	VAR_INPUT	@TYP:43
+		     
+
+;
+
+@V 1 9 0
+bOUT_Switch_DI	6	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 10 0
+bAlarm	7	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 11 0
+sbSL_OK	8	VAR_OUTPUT	@TYP:43
+		     
+
+;
+
+@V 1 12 0
+bDI_OK	9	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 13 0
+bWarning	10	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 14 0
+iOUT_ET	11	VAR_OUTPUT	@TYP:4
+		     
+
+;
+
+@V 1 7 0
+xET	12	VAR	@FB:95
+		     
+
+;
+
+@V 1 8 0
+xDI_MON	13	VAR	@FB:83
+		     
+
+;
+
+@V 2 14 0
+__HW_MIN_MON@0	14	VAR	@TYP:43
+		     
+
+;
+

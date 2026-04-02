@@ -1,0 +1,25 @@
+VAR
+	xTON_KLST_b : TON := (0);
+	xTON_KLST_a : TON := (0);
+	xTON_CO2KZU : TON := (0);
+	xTON_CO2KAUF : TON := (0);
+	xTON_KLST : TON := (0);
+	xTOF_AFKAUF : TOF := (0);
+	xRS_ANF_CODI : RS := (0);
+	xTON_AFCO2 : TON := (0);
+	xTP_TEILLAST_ENDE : TP := (0);
+	xTP_TEILLAST_START : TP := (0);
+	HM_KLST : BOOL := 0; (* HM *)
+	ZM_KLSTA : BOOL := 0; (* ZM *)
+	TEILLAST_START : BOOL := 0; (*Start Teillastbetrieb*)
+	TEILLAST_ENDE : BOOL := 0; (*Ende Teillastbetrieb*)
+	P_GenC_SetFixEU : ARRAY[0..5] OF BOOL;
+	PLim_GenC_SetEUPFix : ARRAY[0..5] OF BOOL;
+	xR_TRIG_P_GenC_SetFixEU : ARRAY[0..5] OF R_TRIG;
+	xF_TRIG_P_GenC_SetFixEU : ARRAY[0..5] OF R_TRIG;
+	xR_TRIG_PLim_GenC_SetEUPFix : ARRAY[0..5] OF R_TRIG;
+	xF_TRIG_PLim_GenC_SetEUPFix : ARRAY[0..5] OF R_TRIG;
+	bStartPartLoad : BOOL;
+	bStopPartLoad : BOOL;
+	x : INT;
+END_VAR

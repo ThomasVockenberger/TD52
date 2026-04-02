@@ -1,0 +1,87 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: PUSL
+ * File: PUSL.var
+ * Author: 502293141
+ * Created: April 02, 2014
+ ********************************************************************
+ * Local variables of program PUSL
+ ********************************************************************)
+VAR
+	bFadOutCyl_Knock : ARRAY[0..24] OF BOOL;
+	TON_SecondTick : TON;
+	ucCylinderCount : USINT;
+	iCnt_TaskCycles : USINT; (*task cycle counter*)
+	usLimpHomeCount : ARRAY[0..24] OF UINT;
+	usNoLimpHomeCount : ARRAY[0..24] OF UINT;
+	bAmmSeqClkP : BOOL;
+	HiContrCyl : ARRAY[0..24] OF HiContr;
+	bHiCtr_WCCtr_Ena : BOOL;
+	bHiCtr_GICtr_Ena : BOOL;
+	bHiCtr_PmaxLimCtr_Ena : BOOL;
+	ssPmaxLimReachedAnzCyl : INT; (*Anzahl der Zylinder mit PmaxLimReached aus HiContr*)
+	rPowRedCyl_HiContrMaxGlob : REAL; (*Max. Leistungsreduktion aus HiContr über alle Zylinder*)
+	HiGlobEng : HiGlob;
+	bHiGlobEng_EngStopErrAck : BOOL;
+	bNO_Pred_HiContr : BOOL; (*TRUE = keine Leistungsreduktion durch Hierarchycontroller*)
+	TON_Netp : TON;
+	TON_LEANOXON : TON;
+	rFehlerFaktor_HiContr : REAL; (*Fehlerfaktor*)
+	iNum_Cyl_LimpHome : USINT; (*Anzahl der Zylinder im Limp Home Mode*)
+	TON_2287 : TON; (*** modifiziert:*)
+	rHiGlobEng_TSkipCount : REAL;
+	rHiGlobEng_TSkipCount1 : REAL;
+	rHiContrCyl_TGICount : REAL;
+	rPr_CPP_AbsLim_old : REAL;
+	rP_Set_HiCtr_LimRed : REAL;
+	rP_Set_HiCtr_Lim : REAL;
+	bHiContrCyl_FaultMFSign : ARRAY[0..24] OF BOOL;
+	bHiContrCyl_MFB50Freeze : ARRAY[0..24] OF BOOL;
+	bHiContrCyl_OptPIDFreeze : ARRAY[0..24] OF BOOL;
+	bHiContrCyl_PmaxLimReached : ARRAY[0..24] OF BOOL;
+	rKnck_Intgr_Lim_Hi : REAL;
+	rKnck_Intgr_Lim_Lo : REAL;
+	iCnt_Cyl_Misf : UINT;
+	iCnt_Cyl_Misf2 : UINT;
+	iNum_CylPerCycle : USINT; (* execute HiContrCyl for i Cyl per task cycle *)
+END_VAR
+(* Test Bits *)
+VAR
+	bTEST_NO_reset : BOOL; (*TRUE = Kein Reset der Testbits*)
+	bTEST_kompAussetzer : ARRAY[0..24] OF BOOL;
+	bTEST_Aussetzer : ARRAY[0..24] OF BOOL;
+	bTEST_Misf_II : ARRAY[0..24] OF BOOL;
+	bTEST_GluehZuend : ARRAY[0..24] OF BOOL;
+	bTEST_FaultMFSign : ARRAY[0..24] OF BOOL;
+	bTEST_MFB50Freeze : ARRAY[0..24] OF BOOL;
+	bTEST_OptPIDFreeze : ARRAY[0..24] OF BOOL;
+	bTEST_PmaxLimReached : ARRAY[0..24] OF BOOL;
+	bTEST_SkipCyl : ARRAY[0..24] OF BOOL;
+	bLimpHome_TestBit : ARRAY[0..24] OF BOOL;
+END_VAR
+(* Perm Parameters *)
+VAR
+	TON_misf_start : ARRAY[0..24] OF TON;
+	TON_misf_trip : ARRAY[0..24] OF TON;
+	ti_OpTi_MisfCyl_old : TIME;
+	bHiContrACTIVE : BOOL;
+	LCRCByP_TupMFshape : LCRCurveByPoints;
+	rCorrLeanox_Rise : REAL;
+	rCorrLeanox_Sink : REAL;
+	RAMPE_R_LeanoxCorr : RAMPE_R;
+	i : USINT;
+	bTEST_bLimpHome : ARRAY[0..24] OF BOOL;
+	bLimpHomeCylWarn : ARRAY[0..24] OF BOOL;
+	ucNoOfCylFailAll : USINT;
+	LCRCByP_NoOfFailAll : LCRCurveByPoints;
+	bFreezeOptiAll : BOOL;
+	bOM_InfoMisf : ARRAY[0..24] OF BOOL;
+	iCnt_Misfire : ARRAY[0..24] OF UINT;
+	iNum_Cyl_MaxMisf : UINT;
+	iNum_Misf_Cycles : UINT;
+	LCRCByP_P2s_MisfCycles : LCRCurveByPoints;
+	LCRCByP_P2s_MisfMaxCyl : LCRCurveByPoints;
+	LCRCByP_MaxCylSkipBefStop : LCRCurveByPoints;
+	refPoint_MaxCylSkipBefStop : ARRAY[0..1] OF lcrCurveByPoints_TabEntry_type;
+END_VAR

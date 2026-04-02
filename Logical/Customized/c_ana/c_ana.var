@@ -1,0 +1,11 @@
+VAR
+	rReplaceMeWithLocaleVarName : REAL;
+END_VAR
+VAR CONSTANT
+	rConnectYourVariableHere : REAL := 0.0; (*replace this tag with your variable*)
+END_VAR
+VAR
+	iCnt_AnaOut : INT := 0;
+	iNoOf_AnaOut_checked : ARRAY[0..9] OF INT := [10(0)]; (*Check realy declared array sizze*)
+	i : INT := 0;
+END_VAR

@@ -1,0 +1,4 @@
+VAR
+	xGR_MAX_N_EngStart : GR_MAXR;
+	xTOF_N_EngStart : TOF;
+END_VAR

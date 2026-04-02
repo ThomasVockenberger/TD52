@@ -1,0 +1,37 @@
+(*******************************************************************************
+	VisGMU : Update the VIS interfaces variable declaration
+	
+	This code is confidential and proprietary to the INNIO Company.
+	It may not be used in any form, or reproduced in any manner, without the express
+	written permission of the INNIO Company.
+	Copyright, INNIO Company, 2019
+	
+	- calcualtion of different gas inject valve concerning parameters for gas sort 0
+	- send parameter to gas inject valve
+	- handling gas inject valve communication problem
+	- read software version, operating hours, and gas inject valve status
+	- check gas inject valve software version
+	
+	Customized modifications: -
+	------------------------
+	 
+	History:
+	-------
+
+	V3.99.1 28-08-2012  pankajrodey	,  Initial file
+
+	Instructions for use:
+	--------------------
+	
+	
+	Outstandings:
+	------------
+	*******************************************************************************)
+
+VAR
+iIndex : INT;
+END_VAR
+
+VAR CONSTANT
+
+END_VAR

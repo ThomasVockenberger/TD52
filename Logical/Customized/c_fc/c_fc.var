@@ -1,0 +1,9 @@
+
+VAR
+	bSet_FC_Test_1 : BOOL;
+	bSet_FC_Test_3 : BOOL;
+	xTP_Set_FC_Test_1 : TP;
+	xTP_Set_FC_Test_3 : TP;
+	xRAMP_F_Act : RAMPE_R;
+	xRAMP_F_Ref : RAMPE_R;
+END_VAR

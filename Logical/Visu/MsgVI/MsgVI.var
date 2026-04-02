@@ -1,0 +1,35 @@
+VAR
+	xTP_bMsg9007 : TP;
+	xMsg3517 : Msg;
+	xMsg9007 : Msg;
+	iAdrAmmBase2MM : UDINT;
+	iAdrMM2AmmBase : UDINT;
+	tiHourlyMsg : TIME := T#500ms;
+	xGR_MAX_IPC_Temp_CPU : GR_MAXR;
+	xGR_MAX_IPC_Temp_Board : GR_MAXR;
+	xGR_MAX_IPC_Temp_Chipset : GR_MAXR;
+	xGR_MAX_IPC_Temp_PS : GR_MAXR;
+	xGR_MAX_IPC_Temp_CFast : GR_MAXR;
+	xMsg2401 : Msg;
+	xMsg2402 : Msg;
+	xMsg2403 : Msg;
+	xMsg2404 : Msg;
+	xMsg2405 : Msg;
+	xMsg2406 : Msg;
+	xMsg9029 : Msg;
+	xMsg9030 : Msg;
+	xMsg9031 : Msg;
+	xMsg9032 : Msg;
+	xMsg9033 : Msg;
+	xMsg9034 : Msg;
+	xMsg9035 : Msg;
+	xMsg9036 : Msg;
+	xMsg9037 : Msg;
+	TOF_bMsg9030 : TOF;
+	TOF_bMsg9032 : TOF;
+	TOF_bMsg9034 : TOF;
+	TOF_bMsg9035 : TOF;
+	TOF_bMsg9036 : TOF;
+	TOF_bMsg9037 : TOF;
+	tiT_CPU : TIME := T#10S;
+END_VAR

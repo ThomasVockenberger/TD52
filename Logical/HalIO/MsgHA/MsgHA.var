@@ -1,0 +1,12 @@
+VAR
+	iCount : USINT := 0;
+	iAdrAmmBase2MM : UDINT;
+	iAdrMM2AmmBase : UDINT;
+	xMsg3311 : Msg;
+	xMsg2399 : Msg;
+	xMsg2400 : Msg;
+	xMsg9400 : Msg;
+	xMsg9386 : Msg; (*Plant Communication configuration failed*)
+	xMsg9384 : Msg; (*Plant Communication Interrupted*)
+	xMsg9391 : Msg; (*Plant Communication force active*)
+END_VAR

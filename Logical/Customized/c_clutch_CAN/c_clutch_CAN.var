@@ -1,0 +1,14 @@
+VAR
+	AirInFan_CS2_RawData : ARRAY[0..3] OF CS2_Data;
+	AirInFan_CS1_RawData : ARRAY[0..3] OF CS1_Data;
+	DumpRadiator_CS2_RawData : ARRAY[0..3] OF CS2_Data;
+	DumpRadiator_CS1_RawData : ARRAY[0..3] OF CS1_Data;
+	AirInFan_PGN_Message_CS1 : ARRAY[0..3] OF MpJ1939Receive;
+	AirInFan_PGN_Message_CS2 : ARRAY[0..3] OF MpJ1939Receive;
+	DumpRadiator_PGN_Message_CS1 : ARRAY[0..3] OF MpJ1939Receive;
+	DumpRadiator_PGN_Message_CS2 : ARRAY[0..3] OF MpJ1939Receive;
+	TON_10sTick_AirInFan : ARRAY[0..3] OF TON;
+	TON_10sTick_DumpRadiator : ARRAY[0..3] OF TON;
+	TON_1sTick : TON;
+	DeviceNumber : INT := 0;
+END_VAR

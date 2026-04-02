@@ -1,0 +1,205 @@
+VAR
+	ucTeilerLauf : USINT; (* TK4 splitter variable *)
+	ucINIT : ARRAY[0..1] OF USINT; (* initialise all coupling types *)
+	szMode1 : STRING[50]; (* string interface mode 1 *)
+	szInterface05 : STRING[40]; (* string interface 5 *)
+	szInterface04 : STRING[40]; (* string interface 4 *)
+	szInterface03 : STRING[40]; (* string interface 3 *)
+	szInterface02_Comm2 : STRING[40]; (*Profibus communication2, slave2 *)
+	szInterface02_Comm1 : STRING[40]; (*Profibus communication1, slave2 *)
+	szInterface02 : STRING[40]; (* string interface 2 *)
+	szInterface01_Comm2_PN : STRING[40]; (*Profinet communication2, slave1*)
+	szInterface01_Comm2 : STRING[40]; (*Profibus communication2, slave1 *)
+	szInterface01_Comm1_PN : STRING[40]; (*Profinet communication1, slave1 *)
+	szInterface01_Comm1 : STRING[40]; (*Profibus communication1, slave1 *)
+	szInterface01 : STRING[40]; (* string interface 1 *)
+	szHilf1 : STRING[50]; (* help sting 1 *)
+	szDevice1 : STRING[40]; (* string interface position 1 *)
+	StationNumber : STRING[3];
+	StationName1 : STRING[30] := ''; (*Profinet communication 1, station name*)
+	Station : UDINT;
+	Start_PN_Slave1 : USINT; (*Index variable*)
+	Start_PB_Slave2 : USINT; (*Index variable*)
+	Start_PB_Slave1 : USINT; (*Index variable*)
+	siComm2_type : INT; (* couple type 2 old *)
+	siComm2_Stopbit : INT; (* stop bits old Modbus *)
+	siComm2_SlaveID : INT; (* ident for Modbus connection *)
+	siComm2_Parity : INT; (* parity old Modbus *)
+	siComm2_Interface : INT; (* position interface coupling 2 *)
+	siComm2_Baud : INT; (* baudrate old Modbus *)
+	siComm1_type : INT; (* couple type 1 old *)
+	siComm1_Stopbit : INT; (* stop bits old Modbus *)
+	siComm1_SlaveID : INT; (* ident for Modbus connection *)
+	siComm1_Parity : INT; (* parity old Modbus *)
+	siComm1_Interface : INT; (* position interface coupling 1 *)
+	siComm1_Baud : INT; (* baudrate old Modbus *)
+	nxpnsStartBusComm_01 : nxpnsStartBusComm;
+	nxpnsSetName_01 : nxpnsSetName;
+	nxdpsStartBusComm_02 : nxdpsStartBusComm;
+	nxdpsStartBusComm_01 : nxdpsStartBusComm;
+	nxdpsSetAdr_02 : nxdpsSetAdr;
+	nxdpsSetAdr_01 : nxdpsSetAdr;
+	MBT_4_2 : ARRAY[0..MODBUS_TCP_MAX_ARRAY] OF UINT := [MODBUS_TCP_MAX_ARRAY+1(0)]; (* data array Modbus TCP Coupling 2*)
+	MBT_4_1 : ARRAY[0..MODBUS_TCP_MAX_ARRAY] OF UINT := [MODBUS_TCP_MAX_ARRAY+1(0)]; (* data array Modbus TCP Coupling 1*)
+	MBSOpen_Var : ARRAY[0..1] OF MBSOpen; (* FUB Modbus open *)
+	MBSlave_Var : ARRAY[0..1] OF MBSlave; (* FUB Modbus slave *)
+	MBSClose_Var : ARRAY[0..1] OF MBSClose; (* FUB Modbus close *)
+	MBR_4_2 : ARRAY[0..MODBUS_RTU_MAX_ARRAY] OF UINT := [MODBUS_RTU_MAX_ARRAY+1(0)]; (* data array Modbus RTU coupling 2 *)
+	MBR_4_1 : ARRAY[0..MODBUS_RTU_MAX_ARRAY] OF UINT := [MODBUS_RTU_MAX_ARRAY+1(0)]; (* data array Modbus RTU coupling 1 *)
+	MBinitOK : ARRAY[0..1] OF BOOL; (* initialising Modbus O.K. *)
+	logErrorStringPN : STRING[100] := 'Error PROFINET communication slave 1';
+	logErrorString2 : STRING[100] := 'Error PROFIBUS communication slave 2';
+	logErrorStringModTCP : STRING[100] := 'Error MODBUS TCP set IP adress / Subnet mask slave';
+	logErrorString1 : STRING[100] := 'Error PROFIBUS communication slave 1';
+END_VAR
+VAR CONSTANT
+	IF4_IDLE : UINT := 0; (*Set IP adress and subnet mask IF4.ETH*)
+	IP_IF4_SET : UINT := 1; (*Set IP adress IF4.ETH*)
+	SUBMASK_IF4_SET : UINT := 2; (*Set Subnet mask IF4.ETH*)
+	IF4_OK : UINT := 3; (*Set IP adress and subnet mask IF4.ETH OK*)
+	OPEN_MODTCP : UINT := 4; (*Open Modbus TCP Communication*)
+	IF4_ERR : UINT := 5; (*Set IP adress IF4.ETH Error*)
+	PROFIBUS_MAX_RECV_2SLAVES : UINT := 16; (* max send data words profibus *)
+	PROFIBUS_MAX_SEND_2SLAVES : UINT := 192; (* max send data words profibus *)
+END_VAR
+VAR
+	iInterface02_Comm1 : UDINT; (*Adress Profibus Interface1, communication1, slave2*)
+	iInterface01_Comm1_PN : UDINT; (*Adress Profinet Interface1, communication1, slave1*)
+	iInterface01_Comm1 : UDINT; (*Adress Profibus Interface1, communication1, slave1 *)
+	idx : INT;
+	iComm1_PN_SlaveID1_old : INT; (*Profinet communication1, slave1 old adress*)
+	iComm2_PN_SlaveID1_old : INT; (*Profinet communication1, slave1 old adress*)
+	iComm1_PB_SlaveID1_old : INT; (*Profibus communication1, slave1 old adress*)
+	iComm1_PB_SlaveID2_old : INT; (*Profibus communication1, slave2 old adress*)
+	iComm2_PB_SlaveID1_old : INT; (*Profibus communication1, slave1 old adress*)
+	iComm2_PB_SlaveID2_old : INT; (*Profibus communication1, slave2 old adress*)
+	iComm_PB_SlaveID1 : INT; (*Profibus communication1, slave1 old adress*)
+	iComm_PB_SlaveID2 : INT; (*Profibus communication1, slave1 old adress*)
+	iComm_PN_SlaveID1 : INT; (*Profibus communication1, slave1 old adress*)
+	AsArLogWrite_PN_01 : AsArLogWrite;
+	AsArLogWrite_PB_02 : AsArLogWrite;
+	AsArLogWrite_TCP : AsArLogWrite;
+	AsArLogWrite_PB_01 : AsArLogWrite;
+	AsArLogGetInfo_PN_01 : AsArLogGetInfo;
+	AsArLogGetInfo_PB_02 : AsArLogGetInfo;
+	AsArLogGetInfo_TCP : AsArLogGetInfo;
+	AsArLogGetInfo_PB_01 : AsArLogGetInfo;
+	InDataSwap : ARRAY[0..MAX_IN_DATA_ARRAY] OF INT;
+	OutDataSwap : ARRAY[0..MAX_OUT_DATA_ARRAY] OF INT;
+	OutDataOldSwap : ARRAY[0..MAX_OUT_DATA_ARRAY] OF INT;
+	ArrayCntIn : INT;
+	ArrayCntOut : INT;
+	iStartRecvReg : INT;
+	iStartRecvReg_old : INT;
+	iStartSendReg : INT;
+	iStartSendReg_old : INT;
+	iIdx_Comm1_type_old : INT; (*Type of coupling 1 old, for detection of parameter change*)
+	iIdx_Comm2_type_old : INT; (*Type of coupling 2 old, for detection of parameter change*)
+	iBC_Test_Recv_Reg_old : ARRAY[0..MAX_IN_DATA_ARRAY_BUSTEST] OF INT;
+	bBC_Test_Recv_Reg_old : ARRAY[0..MAX_IN_DATA_ARRAY_BOOL] OF BOOL;
+	idx1 : INT;
+	srcAdr : UDINT;
+	dstAdr : UDINT;
+	idxMin : INT;
+	idxMax : INT;
+	pScrData : REFERENCE TO ARRAY[0..15] OF BOOL;
+	pDstData : REFERENCE TO UINT;
+	pScrData1 : REFERENCE TO UINT;
+	pDstData1 : REFERENCE TO ARRAY[0..15] OF BOOL;
+	RegOffset_Send : INT;
+	RegOffset_Recv : INT;
+	xTON_BC_Test_Force_Active : TON;
+	bBC_Test_Recv_Reg_Forced : ARRAY[0..MAX_IN_DATA_ARRAY] OF BOOL;
+	bBC_Test_Send_Reg_Forced : ARRAY[0..MAX_OUT_DATA_ARRAY] OF BOOL;
+	iBC_Test_Recv_Start_Reg_old : INT;
+	iBC_Test_Send_Start_Reg_old : INT;
+	bBC_Test_Recv_Reg_Forced_old : ARRAY[0..20] OF BOOL;
+	bBC_Test_Send_Reg_Forced_old : ARRAY[0..20] OF BOOL;
+	bBC_Test_Recv_Reg_AllForced : BOOL;
+	bBC_Test_Send_Reg_AllForced : BOOL;
+	bBC_Test_Recv_Reg_AllUnforced : BOOL;
+	bBC_Test_Send_Reg_AllUnforced : BOOL;
+	bBC_Test_Send_DW : BOOL; (*Dataword convention for send (Profibus, Profinet)*)
+	iBC_Test_Send_DW : INT; (*Dataword convention for send (Profibus, Profinet)*)
+	bBC_Test_Recv_DW : BOOL; (*Dataword convention for receive (Profibus, Profinet)*)
+	iBC_Test_Recv_DW : INT; (*Dataword convention for receive (Profibus, Profinet)*)
+	r : INT;
+	i : INT;
+	k : INT;
+	t : INT;
+	m : INT;
+	n : INT;
+	p : INT;
+	v : INT;
+	w : INT;
+	x : INT;
+	b : INT;
+	iBC_Test_Send_Reg_old : ARRAY[0..MAX_OUT_DATA_ARRAY] OF INT;
+	bBC_Test_Send_Reg_old : ARRAY[0..MAX_OUT_DATA_ARRAY_BOOL] OF BOOL;
+	xTON_AutoToggle1 : TON;
+	xTON_AutoToggle2 : TON;
+	xTON_CustomToggle1 : TON;
+	xTON_CustomToggle2 : TON;
+	y : INT;
+END_VAR
+(* Modbus TCP General *)
+VAR
+	szComm_Device_TCP : STRING[20]; (*Device adress Modbus TCP slave (IF4.ETH)*)
+	szComm_Device2_TCP : STRING[20]; (*Device adress Modbus TCP slave (IF4.ETH)*)
+	szComm_Device3_TCP : STRING[20]; (*Device adress Modbus TCP slave (IF4.ETH)*)
+	IP_ModTCP : UINT; (*Set IP adress IF4.ETH*)
+END_VAR
+(* Modbus TCP Coupling 1 *)
+VAR
+	iComm_Device_TCP : UDINT; (*Device adress Modbus TCP slave (IF4.ETH)*)
+	iComm_SubMask_TCP : UDINT; (*Subnet mask Modbus TCP slave *)
+	iComm_IPaddr_TCP : UDINT; (*IP adress Modbus TCP slave *)
+	szComm_IPaddr_TCP_temp : STRING[20]; (*IP adress Modbus TCP slave *)
+	szComm_IPaddr_TCP : STRING[20]; (*IP adress Modbus TCP slave *)
+	szIPAddr1 : STRING[3]; (*temp for setting Modbus TCP IP adress*)
+	szIPAddr2 : STRING[3]; (*temp for setting Modbus TCP IP adress*)
+	szIPAddr3 : STRING[3]; (*temp for setting Modbus TCP IP adress*)
+	szIPAddr4 : STRING[3]; (*temp for setting Modbus TCP IP adress*)
+	szComm_SubMask_TCP_temp : STRING[20]; (*Subnet mask Modbus TCP slave *)
+	szComm_SubMask_TCP : STRING[20]; (*Subnet mask Modbus TCP slave *)
+	szSubMask3 : STRING[3]; (*temp for setting Modbus TCP Subnet mask*)
+	szSubMask4 : STRING[3]; (*temp for setting Modbus TCP Subnet mask*)
+	szSubMask1 : STRING[3]; (*temp for setting Modbus TCP Subnet mask*)
+	szSubMask2 : STRING[3]; (*temp for setting Modbus TCP Subnet mask*)
+	siComm_PortID_TCP : INT; (* ident for Modbus TCP connection *)
+	siComm_SlaveID_TCP : INT; (* ident for Modbus TCP connection *)
+	ucINIT_IP_addr_TCP : USINT;
+	fMBTSOpen_Var : fMBTSOpen; (* FUB Modbus TCP slave open *)
+	fMBTSClose_Var : fMBTSClose; (* FUB Modbus TCP slave close *)
+	CfgSetSubnetMask_01 : CfgSetSubnetMask; (*FUB Subnet Mask Config*)
+	CfgSetIPAddr_01 : CfgSetIPAddr; (*FUB IP Config*)
+	bMBtcpinit : ARRAY[0..1] OF BOOL; (* initialise Modbus TCP *)
+	bMBinit : ARRAY[0..1] OF BOOL; (* initialise Modbus *)
+END_VAR
+(* Modbus TCP Coupling 2*)
+VAR
+	iComm2_Device_TCP : UDINT; (*Device adress Modbus TCP slave (IF4.ETH)*)
+	iComm2_SubMask_TCP : UDINT; (*Subnet mask Modbus TCP slave *)
+	iComm2_IPaddr_TCP : UDINT; (*IP adress Modbus TCP slave *)
+	szComm2_IPaddr_TCP_temp : STRING[20]; (*IP adress Modbus TCP slave *)
+	szComm2_IPaddr_TCP : STRING[20]; (*IP adress Modbus TCP slave *)
+	szComm2_IPAddr1 : STRING[3]; (*temp for setting Modbus TCP IP adress*)
+	szComm2_IPAddr2 : STRING[3]; (*temp for setting Modbus TCP IP adress*)
+	szComm2_IPAddr3 : STRING[3]; (*temp for setting Modbus TCP IP adress*)
+	szComm2_IPAddr4 : STRING[3]; (*temp for setting Modbus TCP IP adress*)
+	szComm2_SubMask_TCP_temp : STRING[20]; (*Subnet mask Modbus TCP slave *)
+	szComm2_SubMask_TCP : STRING[20]; (*Subnet mask Modbus TCP slave *)
+	szComm2_SubMask3 : STRING[3]; (*temp for setting Modbus TCP Subnet mask*)
+	szComm2_SubMask4 : STRING[3]; (*temp for setting Modbus TCP Subnet mask*)
+	szComm2_SubMask1 : STRING[3]; (*temp for setting Modbus TCP Subnet mask*)
+	szComm2_SubMask2 : STRING[3]; (*temp for setting Modbus TCP Subnet mask*)
+	siComm2_PortID_TCP : INT; (* ident for Modbus TCP connection *)
+	siComm2_SlaveID_TCP : INT; (* ident for Modbus TCP connection *)
+	ucINIT_IP_addr_TCP2 : USINT;
+	IP_ModTCP2 : UINT;
+	fMBTSOpen2_Var : fMBTSOpen; (*FUB Modbus TCP Slave Open*)
+	fMBTSClose2_Var : fMBTSClose; (*FUB Modbus TCP Slave Close*)
+	fMBTSlave2_Var : fMBTSlave; (*FUB Modbus TCP Slave*)
+	CfgSetSubnetMask_02 : CfgSetSubnetMask; (*FUB Subnet Mask Config*)
+	CfgSetIPAddr_02 : CfgSetIPAddr; (*FUB IP Config*)
+END_VAR

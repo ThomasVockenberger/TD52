@@ -1,0 +1,151 @@
+VAR_CONFIG
+	Cyclic#4.AmmBase::OUT_AB.tAB2SY AT %Q.Cyclic#5.Synchronization::IN_SY.tAB2SY;
+	Cyclic#4.AmmBase::OUT_AB.bMMD_GenAlarmTestOn AT %Q.Cyclic#5.Synchronization::IN_SY.bMMD_GenAlarmTestOn;
+	Cyclic#4.AmmBase::OUT_AB.bMMD_BB_AlarmTestOn AT %Q.Cyclic#5.Synchronization::IN_SY.bMMD_BB_AlarmTestOn;
+	Cyclic#4.AmmBase::OUT_AB.bServiceMode AT %Q.Cyclic#5.Synchronization::IN_SY.bServiceMode;
+	Cyclic#5.Customized::OUT_CU.bRelSy_Customized AT %Q.Cyclic#5.Synchronization::IN_SY.bRelSy_Customized;
+	Cyclic#5.Customized::OUT_CU.rP_MainsImport AT %Q.Cyclic#5.Synchronization::IN_SY.rP_MainsImport;
+	Cyclic#5.Customized::OUT_CU.bDem_I_Bus AT %Q.Cyclic#5.Synchronization::IN_SY.bDem_I_Bus;
+	Cyclic#5.Customized::OUT_CU.bRel_I_Bus AT %Q.Cyclic#5.Synchronization::IN_SY.bRel_I_Bus;
+	Cyclic#5.Customized::OUT_CU.bDem_Sy_Bus AT %Q.Cyclic#5.Synchronization::IN_SY.bDem_Sy_Bus;
+	Cyclic#5.Customized::OUT_CU.bDem_RSy_Bus AT %Q.Cyclic#5.Synchronization::IN_SY.bDem_RSy_Bus;
+	Cyclic#5.Customized::OUT_CU.bDem_BS_GCBOn_Bus AT %Q.Cyclic#5.Synchronization::IN_SY.bDem_BS_GCBOn_Bus;
+	Cyclic#5.Customized::OUT_CU.bDem_BS_DeExc_Bus AT %Q.Cyclic#5.Synchronization::IN_SY.bDem_BS_DeExc_Bus;
+	Cyclic#5.Customized::OUT_CU.bGCB_by_Customer AT %Q.Cyclic#5.Synchronization::IN_SY.bGCB_by_Customer;
+	Cyclic#5.Customized::OUT_CU.rCust_SparePara AT %Q.Cyclic#5.Synchronization::IN_SY.rCust_SparePara;
+	Cyclic#5.Customized::OUT_CU.bCust_Dem_Sy AT %Q.Cyclic#5.Synchronization::IN_SY.bCust_Dem_Sy;
+	Cyclic#5.Customized::OUT_CU.bCust_Dem_RSy AT %Q.Cyclic#5.Synchronization::IN_SY.bCust_Dem_RSy;
+	Cyclic#5.Customized::OUT_CU.bCust_RelI_BB AT %Q.Cyclic#5.Synchronization::IN_SY.bCust_RelI_BB; (*new 4.13*)
+	Cyclic#5.Customized::OUT_CU.bCust_Dem_EPS_Sy AT %Q.Cyclic#5.Synchronization::IN_SY.bCust_Dem_EPS_Sy; (*new 4.13*)
+	Cyclic#5.Customized::OUT_CU.bCust_Rel_I AT %Q.Cyclic#5.Synchronization::IN_SY.bCust_Rel_I; (*new 4.13*)
+	Cyclic#5.Customized::OUT_CU.bSmoothDischarge_CU AT %Q.Cyclic#5.Synchronization::IN_SY.bSmoothDischarge_CU; (*new 4.13*)
+	Cyclic#5.Customized::OUT_CU.bGCB_OGP_Bus AT %Q.Cyclic#5.Synchronization::IN_SY.bGCB_OGP_Bus; (*new 4.13*)
+	Cyclic#5.Customized::OUT_CU.bSetIslandMode AT %Q.Cyclic#5.Synchronization::IN_SY.bSetIslandMode; (*new 4.13*)
+	Cyclic#5.Customized::OUT_CU.bSetFixedPwrMode AT %Q.Cyclic#5.Synchronization::IN_SY.bSetFixedPwrMode; (*new 4.13*)
+	Cyclic#5.Customized::OUT_CU.bSetGCB2Close AT %Q.Cyclic#5.Synchronization::IN_SY.bSetGCB2Close; (*new 4.13*)
+	Cyclic#5.Customized::OUT_CU.bSetGCB2Open AT %Q.Cyclic#5.Synchronization::IN_SY.bSetGCB2Open; (*new 4.13*)
+	Cyclic#5.Customized::OUT_CU.bSetManControlMode AT %Q.Cyclic#5.Synchronization::IN_SY.bSetManControlMode; (*new 4.13*)
+	Cyclic#5.Customized::OUT_CU.bSetAutControlMode AT %Q.Cyclic#5.Synchronization::IN_SY.bSetAutControlMode; (*new 4.13*)
+	Cyclic#5.Customized::OUT_CU.bOM_Bus AT %Q.Cyclic#5.Synchronization::IN_SY.bOM_Bus; (*new 4.13*)
+	Cyclic#5.Customized::OUT_CU.bBus_Active AT %Q.Cyclic#5.Synchronization::IN_SY.bBus_Active; (*new 4.13*)
+	Cyclic#5.Customized::OUT_CU.bBypassMCB_deadBB AT %Q.Cyclic#5.Synchronization::IN_SY.bBypassMCB_deadBB;
+	Cyclic#5.Customized::OUT_CU.bBypassMCB_SoftStart AT %Q.Cyclic#5.Synchronization::IN_SY.bBypassMCB_SoftStart;
+	Cyclic#5.Customized::OUT_CU.bBypassMCB_LoadShed AT %Q.Cyclic#5.Synchronization::IN_SY.bBypassMCB_LoadShed;
+	Cyclic#5.Customized::OUT_CU.bSoftEnergDem AT %Q.Cyclic#5.Synchronization::IN_SY.bSoftEnergDem;
+	Cyclic#5.Customized::OUT_CU.bReq_PowMod AT %Q.Cyclic#5.Synchronization::IN_SY.bReq_PowMod;
+	Cyclic#5.EngineController::OUT_EC.tGrC_DCon AT %Q.Cyclic#5.Synchronization::IN_SY.tGrC_DCon;
+	Cyclic#4.EngineController::OUT_EC.bBDC_Emergency_OFF AT %Q.Cyclic#5.Synchronization::IN_SY.bBDC_Emergency_OFF;
+	Cyclic#4.EngineController::OUT_EC.bTP_GrC_Event AT %Q.Cyclic#5.Synchronization::IN_SY.bTP_GrC_Event;
+	Cyclic#4.EngineController::OUT_EC.bType6_Update_Rel AT %Q.Cyclic#5.Synchronization::IN_SY.bType6_Update_Rel;
+	Cyclic#4.EngineController::OUT_EC.bGridCode_ON AT %Q.Cyclic#5.Synchronization::IN_SY.bGridCode_ON;
+	Cyclic#4.EngineController::OUT_EC.bGen2_Act AT %Q.Cyclic#5.Synchronization::IN_SY.bGen2_Act;
+	Cyclic#4.EngineController::OUT_EC.bGCB_DCon_EC AT %Q.Cyclic#5.Synchronization::IN_SY.bGCB_DCon_EC;
+	Cyclic#4.EngineController::OUT_EC.bSCO_Active AT %Q.Cyclic#5.Synchronization::IN_SY.bSCO_Active;
+	Cyclic#5.EngineGeneral::OUT_EG.bMsg1026 AT %Q.Cyclic#5.Synchronization::IN_SY.bMsg1026;
+	Cyclic#5.EngineGeneral::OUT_EG.bMsg1026_Test AT %Q.Cyclic#5.Synchronization::IN_SY.bMsg1026_Test;
+	Cyclic#5.Gastrain::OUT_GT.bGV_On AT %Q.Cyclic#5.Synchronization::IN_SY.bGV_On;
+	Cyclic#5.Generator::OUT_GC.bGCB_Off_CNS AT %Q.Cyclic#5.Synchronization::IN_SY.bGCB_Off_CNS;
+	Cyclic#5.Generator::OUT_GC.bGCB_Off_RP AT %Q.Cyclic#5.Synchronization::IN_SY.bGCB_Off_RP;
+	Cyclic#5.Generator::OUT_GC.bMsg1134 AT %Q.Cyclic#5.Synchronization::IN_SY.bMsg1134;
+	Cyclic#5.Generator::OUT_GC.bMsg1036 AT %Q.Cyclic#5.Synchronization::IN_SY.bMsg1036;
+	Cyclic#5.Generator::OUT_GC.bMsg1038 AT %Q.Cyclic#5.Synchronization::IN_SY.bMsg1038;
+	Cyclic#5.Generator::OUT_GC.bMsg1073 AT %Q.Cyclic#5.Synchronization::IN_SY.bMsg1073;
+	Cyclic#5.Generator::OUT_GC.bMsg1132 AT %Q.Cyclic#5.Synchronization::IN_SY.bMsg1132;
+	Cyclic#5.Generator::OUT_GC.bMsg3319 AT %Q.Cyclic#5.Synchronization::IN_SY.bMsg3319;
+	Cyclic#5.Generator::OUT_GC.bPact_Rev AT %Q.Cyclic#5.Synchronization::IN_SY.bPact_Rev;
+	Cyclic#5.Grid::OUT_GR.tMCB_Rel_Sync_SOn AT %Q.Cyclic#5.Synchronization::IN_SY.tMCB_Rel_Sync_SOn;
+	Cyclic#5.HalIO::OUT_HA.rI_MaxL1 AT %Q.Cyclic#5.Synchronization::IN_SY.rI_MaxL1;
+	Cyclic#5.HalIO::OUT_HA.rI_MaxL2 AT %Q.Cyclic#5.Synchronization::IN_SY.rI_MaxL2;
+	Cyclic#5.HalIO::OUT_HA.rI_MaxL3 AT %Q.Cyclic#5.Synchronization::IN_SY.rI_MaxL3;
+	Cyclic#4.HalIO::tTBMode AT %Q.Cyclic#5.Synchronization::IN_SY.tTBMode;
+	Cyclic#4.HalIO::tBB_Alive AT %Q.Cyclic#5.Synchronization::IN_SY.tBB_Alive;
+	Cyclic#4.HalIO::tBB_Dead_MMD AT %Q.Cyclic#5.Synchronization::IN_SY.tBB_Dead_MMD;
+	Cyclic#4.HalIO::tC_CB_EDC AT %Q.Cyclic#5.Synchronization::IN_SY.tC_CB_EDC;
+	Cyclic#4.HalIO::tC_CB_ESL AT %Q.Cyclic#5.Synchronization::IN_SY.tC_CB_ESL;
+	Cyclic#4.HalIO::tC_CB_Off AT %Q.Cyclic#5.Synchronization::IN_SY.tC_CB_Off;
+	Cyclic#4.HalIO::tC_CB_On AT %Q.Cyclic#5.Synchronization::IN_SY.tC_CB_On;
+	Cyclic#4.HalIO::tReq_PowMod AT %Q.Cyclic#5.Synchronization::IN_SY.tReq_PowMod;
+	Cyclic#4.HalIO::tEngDemIsland AT %Q.Cyclic#5.Synchronization::IN_SY.tEngDemIsland;
+	Cyclic#4.HalIO::tGCB_AGO AT %Q.Cyclic#5.Synchronization::IN_SY.tGCB_AGO;
+	Cyclic#4.HalIO::tGCB_DSY AT %Q.Cyclic#5.Synchronization::IN_SY.tGCB_DSY;
+	Cyclic#4.HalIO::tGCB_DVM AT %Q.Cyclic#5.Synchronization::IN_SY.tGCB_DVM;
+	Cyclic#4.HalIO::tGCB_MDL AT %Q.Cyclic#5.Synchronization::IN_SY.tGCB_MDL;
+	Cyclic#4.HalIO::tGCB_MRC AT %Q.Cyclic#5.Synchronization::IN_SY.tGCB_MRC;
+	Cyclic#4.HalIO::tGCB_OGP AT %Q.Cyclic#5.Synchronization::IN_SY.tGCB_OGP;
+	Cyclic#4.HalIO::tGCB_On AT %Q.Cyclic#5.Synchronization::IN_SY.tGCB_On;
+	Cyclic#4.HalIO::tGCB_Rac AT %Q.Cyclic#5.Synchronization::IN_SY.tGCB_Rac;
+	Cyclic#4.HalIO::tGCB_Rdy AT %Q.Cyclic#5.Synchronization::IN_SY.tGCB_Rdy;
+	Cyclic#4.HalIO::tGCB_RI AT %Q.Cyclic#5.Synchronization::IN_SY.tGCB_RI;
+	Cyclic#4.HalIO::tGCB_SM1 AT %Q.Cyclic#5.Synchronization::IN_SY.tGCB_SM1;
+	Cyclic#4.HalIO::tGCB_SM2 AT %Q.Cyclic#5.Synchronization::IN_SY.tGCB_SM2;
+	Cyclic#4.HalIO::tGCB_Off AT %Q.Cyclic#5.Synchronization::IN_SY.tGCB_Off;
+	Cyclic#4.HalIO::tGCB_Earth AT %Q.Cyclic#5.Synchronization::IN_SY.tGCB_Earth;
+	Cyclic#4.HalIO::tMCB_OL AT %Q.Cyclic#5.Synchronization::IN_SY.tMCB_OL;
+	Cyclic#4.HalIO::tMCB_On AT %Q.Cyclic#5.Synchronization::IN_SY.tMCB_On;
+	Cyclic#4.HalIO::tMCB_Off AT %Q.Cyclic#5.Synchronization::IN_SY.tMCB_Off;
+	Cyclic#4.HalIO::tMCB_Rac AT %Q.Cyclic#5.Synchronization::IN_SY.tMCB_Rac;
+	Cyclic#4.HalIO::tMCB_Rdy AT %Q.Cyclic#5.Synchronization::IN_SY.tMCB_Rdy;
+	Cyclic#4.HalIO::tMCB_Rem AT %Q.Cyclic#5.Synchronization::IN_SY.tMCB_Rem;
+	Cyclic#4.HalIO::tMCB_SM AT %Q.Cyclic#5.Synchronization::IN_SY.tMCB_SM;
+	Cyclic#4.HalIO::tMns_MDF AT %Q.Cyclic#5.Synchronization::IN_SY.tMns_MDF;
+	Cyclic#4.HalIO::tMnsOk AT %Q.Cyclic#5.Synchronization::IN_SY.tMnsOk;
+	Cyclic#4.HalIO::tOnly_Island AT %Q.Cyclic#5.Synchronization::IN_SY.tOnly_Island;
+	Cyclic#4.HalIO::tRel_BS AT %Q.Cyclic#5.Synchronization::IN_SY.tRel_BS;
+	Cyclic#4.HalIO::tRel_I AT %Q.Cyclic#5.Synchronization::IN_SY.tRel_I;
+	Cyclic#4.HalIO::tRel_LS AT %Q.Cyclic#5.Synchronization::IN_SY.tRel_LS;
+	Cyclic#4.HalIO::tGCB_DRM AT %Q.Cyclic#5.Synchronization::IN_SY.tGCB_DRM;
+	Cyclic#4.HalIO::tGen_RVM AT %Q.Cyclic#5.Synchronization::IN_SY.tGen_RVM;
+	Cyclic#4.HalIO::tSy_N_Up AT %Q.Cyclic#5.Synchronization::IN_SY.tSy_N_Up;
+	Cyclic#4.HalIO::tSy_N_Down AT %Q.Cyclic#5.Synchronization::IN_SY.tSy_N_Down;
+	Cyclic#4.HalIO::tLineCB_On AT %Q.Cyclic#5.Synchronization::IN_SY.tLineCB_On;
+	Cyclic#4.HalIO::tU_Avg AT %Q.Cyclic#5.Synchronization::IN_SY.tU_Avg;
+	Cyclic#4.HalIO::tRelEngOpFromGSy AT %Q.Cyclic#5.Synchronization::IN_SY.tRelEngOpFromGSy;
+	Cyclic#4.HalIO::tEarthCB_Off AT %Q.Cyclic#5.Synchronization::IN_SY.tEarthCB_Off;
+	Cyclic#4.HalIO::tIsoCB_Off AT %Q.Cyclic#5.Synchronization::IN_SY.tIsoCB_Off;
+	Cyclic#4.HalIO::tMnsOk_GTE AT %Q.Cyclic#5.Synchronization::IN_SY.tMnsOk_GTE;
+	Cyclic#4.HalIO::tMnsOk_TGS AT %Q.Cyclic#5.Synchronization::IN_SY.tMnsOk_TGS;
+	Cyclic#4.HalIO::tMnsOk_C13100 AT %Q.Cyclic#5.Synchronization::IN_SY.tMnsOk_C13100;
+	Cyclic#4.HalIO::tCustAnaIn AT %Q.Cyclic#5.Synchronization::IN_SY.tCustAnaIn;
+	Cyclic#4.HalIO::tCustDigIn AT %Q.Cyclic#5.Synchronization::IN_SY.tCustDigIn;
+	Cyclic#4.HalIO::tPr_Ch_P2s AT %Q.Cyclic#5.Synchronization::IN_SY.tPr_Ch_P2s;
+	Cyclic#4.HalIO::tPr_Ch_P2s_A AT %Q.Cyclic#5.Synchronization::IN_SY.tPr_Ch_P2s_A;
+	Cyclic#4.HalIO::tPr_Ch_P2s_B AT %Q.Cyclic#5.Synchronization::IN_SY.tPr_Ch_P2s_B;
+	Cyclic#4.HalIO::tMnsOk_ClosCond_Ok AT %Q.Cyclic#5.Synchronization::IN_SY.tMnsOk_ClosCond_Ok;
+	Cyclic#4.HalIO::tU_MMD_Synch2 AT %Q.Cyclic#5.Synchronization::IN_SY.tU_MMD_Synch2;
+	Cyclic#2.HalIO::tF_MMD_BusBar AT %Q.Cyclic#2.Synchronization::IN_SY.tF_MMD_BusBar;
+	Cyclic#4.HalIO::tMCB_OpF_Ext AT %Q.Cyclic#5.Synchronization::IN_SY.tMCB_OpF_Ext;
+	Cyclic#4.HalIO::tGCB_OpF_Ext AT %Q.Cyclic#5.Synchronization::IN_SY.tGCB_OpF_Ext;
+	Cyclic#4.HalIO::tTempMax_GenCB AT %Q.Cyclic#5.Synchronization::IN_SY.tTempMax_GenCB;
+	Cyclic#4.HalIO::tU_Bus_L1_2 AT %Q.Cyclic#5.Synchronization::IN_SY.tU_Bus_L1_2;
+	Cyclic#4.HalIO::tU_Bus_L2_3 AT %Q.Cyclic#5.Synchronization::IN_SY.tU_Bus_L2_3;
+	Cyclic#4.HalIO::tU_Bus_L3_1 AT %Q.Cyclic#5.Synchronization::IN_SY.tU_Bus_L3_1;
+	Cyclic#4.HalIO::tAfMnsF_ClosCond_Ok AT %Q.Cyclic#5.Synchronization::IN_SY.tAfMnsF_ClosCond_Ok;
+	Cyclic#4.HalIO::tMnsOk_ClosCond_Skip AT %Q.Cyclic#5.Synchronization::IN_SY.tMnsOk_ClosCond_Skip;
+	Cyclic#4.HalIO::tAfMnsF_ClosCond_Skip AT %Q.Cyclic#5.Synchronization::IN_SY.tAfMnsF_ClosCond_Skip;
+	Cyclic#5.HalIO::OUT_HA.tHW_Switches AT %Q.Cyclic#5.Synchronization::IN_SY.tHW_Switches;
+	Cyclic#5.HalIO::tMidVoltCB_Failure AT %Q.Cyclic#5.Synchronization::IN_SY.tMidVoltCB_Failure;
+	Cyclic#5.HalIO::tAuxV_Supply_Ok AT %Q.Cyclic#5.Synchronization::IN_SY.tAuxV_Supply_Ok;
+	Cyclic#4.HalIO::bMMD_SynchDO AT %Q.Cyclic#5.Synchronization::IN_SY.bMMD_SynchDO;
+	Cyclic#1.HalIO::bMMD_SynchDO AT %Q.Cyclic#1.Synchronization::IN_SY.bMMD_SynchDO_TC1;
+	Cyclic#1.HalIO::tI_L1 AT %Q.Cyclic#1.Synchronization::IN_SY.tI_L1_TC1;
+	Cyclic#1.HalIO::tI_L2 AT %Q.Cyclic#1.Synchronization::IN_SY.tI_L2_TC1;
+	Cyclic#1.HalIO::tI_L3 AT %Q.Cyclic#1.Synchronization::IN_SY.tI_L3_TC1;
+	Cyclic#4.HalIO::tGndFault_BB AT %Q.Cyclic#5.Synchronization::IN_SY.tGndFault_BB;
+	Cyclic#4.HalIO::tDemGenExcOff AT %Q.Cyclic#5.Synchronization::IN_SY.tDemGenExcOff;
+	Cyclic#5.HeatingCooling::OUT_HC.bT_ECW_Lo AT %Q.Cyclic#5.Synchronization::IN_SY.bT_ECW_Lo;
+	Cyclic#4.Ignition::OUT_IG.rN_EngAct AT %Q.Cyclic#5.Synchronization::IN_SY.rN_EngAct;
+	Cyclic#4.Opstate::OUT_OP.iSt_OpMode AT %Q.Cyclic#5.Synchronization::IN_SY.iSt_OpMode;
+	Cyclic#5.Opstate::OUT_OP.iIdx_OMSS AT %Q.Cyclic#5.Synchronization::IN_SY.iIdx_OMSS;
+	Cyclic#4.Opstate::OUT_OP.bEng_RPSDem AT %Q.Cyclic#5.Synchronization::IN_SY.bEng_RPSDem;
+	Cyclic#4.Opstate::OUT_OP.bEng_Rdy_Aut_Exc AT %Q.Cyclic#5.Synchronization::IN_SY.bEng_Rdy_Aut_Exc;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem AT %Q.Cyclic#5.Synchronization::IN_SY.bEng_Dem;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem_EPS AT %Q.Cyclic#5.Synchronization::IN_SY.bEng_Dem_EPS;
+	Cyclic#4.Opstate::OUT_OP.rP_Nom AT %Q.Cyclic#5.Synchronization::IN_SY.rP_Nom;
+	Cyclic#4.Opstate::OUT_OP.rP_Act_Norm AT %Q.Cyclic#5.Synchronization::IN_SY.rP_Act_Norm;
+	Cyclic#4.Opstate::OUT_OP.rP_Act_Norm_Filt AT %Q.Cyclic#5.Synchronization::IN_SY.rP_Act_Norm_Filt;
+	Cyclic#4.Opstate::OUT_OP.bP_Red_Active AT %Q.Cyclic#5.Synchronization::IN_SY.bP_Red_Active;
+	Cyclic#5.Opstate::OUT_OP.tEng_Run AT %Q.Cyclic#5.Synchronization::IN_SY.tEng_Run;
+	Cyclic#5.Opstate::OUT_OP.tRel_Sync_Load AT %Q.Cyclic#5.Synchronization::IN_SY.tRel_Sync_Load;
+	Cyclic#4.Opstate::OUT_OP.bEng_Bloc AT %Q.Cyclic#5.Synchronization::IN_SY.bEng_Bloc;
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#5.Synchronization::IN_SY.tPB2MM;
+END_VAR

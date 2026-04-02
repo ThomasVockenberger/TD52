@@ -1,0 +1,6 @@
+VAR
+	xGR_MAXR_N_EngStart : GR_MAXR;
+	xTOF_N_EngStart : TOF;
+	xTON_SyOMSS_Man : TON;
+	xTON_SyOMSS_Aut : TON;
+END_VAR

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="7" ArVersion="H4.90">
+  <Aliases>
+    <ACLAliases>
+      <ACL Id="1">
+        <ACE RoleName="Administrators" Access="0x017F" />
+      </ACL>
+    </ACLAliases>
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView AclId="1">
+    <Module Name="CBM">
+      <GlobalVariables>
+        <Variable Name="ACE2MM" AutomaticEnable="True" />
+        <Variable Name="MM2ACE" AutomaticEnable="True" />
+        <Variable Name="MM2VIS" AutomaticEnable="True">
+          <Variable Name="rTi_Prep" EnableArrayElements="True" />
+          <Variable Name="rTi_Speedup" EnableArrayElements="True" />
+          <Variable Name="rTi_Load" EnableArrayElements="True" />
+          <Variable Name="rTi_Start" EnableArrayElements="True" />
+          <Variable Name="rTi_Sync" EnableArrayElements="True" />
+          <Variable Name="iIdx_CylColor" EnableArrayElements="True" />
+          <Variable Name="iCnt_Knock_Int" EnableArrayElements="True" />
+          <Variable Name="iCnt_Knock_Lim" EnableArrayElements="True" />
+          <Variable Name="iCnt_Knock_Lim_Filt" EnableArrayElements="True" />
+          <Variable Name="iCnt_Misf_I" EnableArrayElements="True" />
+          <Variable Name="iCnt_Misf_II" EnableArrayElements="True" />
+          <Variable Name="iCnt_GlowIgn" EnableArrayElements="True" />
+          <Variable Name="iCnt_SensErr" EnableArrayElements="True" />
+          <Variable Name="iCnt_SensFailure" EnableArrayElements="True" />
+          <Variable Name="iCnt_MemBurst" EnableArrayElements="True" />
+          <Variable Name="iCnt_CompLineCheck" EnableArrayElements="True" />
+          <Variable Name="iCnt_NegPresCheck" EnableArrayElements="True" />
+          <Variable Name="iCnt_PresSlopeCheck" EnableArrayElements="True" />
+          <Variable Name="iCnt_SlowDriftCheck" EnableArrayElements="True" />
+          <Variable Name="iCnt_PmaxLimReached" EnableArrayElements="True" />
+          <Variable Name="iCnt_NegVoltCheck" EnableArrayElements="True" />
+          <Variable Name="iCnt_ConfNotOK" EnableArrayElements="True" />
+          <Variable Name="iCnt_InvalidPar" EnableArrayElements="True" />
+          <Variable Name="iCnt_LimpHome" EnableArrayElements="True" />
+          <Variable Name="iCnt_OptiFreeze" EnableArrayElements="True" />
+          <Variable Name="iCnt_CPSSat" EnableArrayElements="True" />
+          <Variable Name="rCA_MFB10" EnableArrayElements="True" />
+          <Variable Name="rCA_MFB90" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="Para" AutomaticEnable="True">
+          <Variable Name="mp_a" EnableArrayElements="True" />
+          <Variable Name="mp_b" EnableArrayElements="True" />
+          <Variable Name="rCA_Ign_OP_Start" EnableArrayElements="True" />
+          <Variable Name="rCA_Ign_OP_Power" EnableArrayElements="True" />
+          <Variable Name="rCA_Ign_OP_Speed" EnableArrayElements="True" />
+          <Variable Name="rP_Nom_Gastype" EnableArrayElements="True" />
+          <Variable Name="rF_Nom" EnableArrayElements="True" />
+          <Variable Name="rI_GenNom" EnableArrayElements="True" />
+          <Variable Name="rU_Gen_Nom" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="VIS2MM" AutomaticEnable="True" />
+      </GlobalVariables>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

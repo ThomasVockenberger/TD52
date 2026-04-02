@@ -1,0 +1,55 @@
+(*Configuration Step Variables*)
+VAR
+	iSTEP : USINT := 0;
+END_VAR
+VAR CONSTANT
+	DATAOBJ_ERROR : USINT := 0;
+	ANSL_ERROR : USINT := 1;
+	GET_MODULE_NR : USINT := 2;
+	PREP_DATAOBJ : USINT := 3;
+	PREP_CHECK_DATAOBJ_STATUS : USINT := 4;
+	CHECK_DATAOBJ_STATUS : USINT := 5;
+	DELETE_DATAOBJ : USINT := 6;
+	CREATE_DATAOBJ : USINT := 7;
+	START_ANSL_COM : USINT := 8;
+	STOP_ANSL_COM : USINT := 9;
+	PREP_ANSL_DIAGNOSTICS : USINT := 10;
+	ANSL_DIAGNOSTICS : USINT := 11;
+END_VAR
+VAR
+	bPlantCommStopInProgress : BOOL := FALSE;
+END_VAR
+(*ANSL Config Variables*)
+VAR
+	strAnsl_Com_Pw : STRING[64] := ''; (*Password Hash for the encrypted ANSL Communication*)
+	iThisEngineNr : USINT := 0; (*Engine number of this Engine*)
+	strThisEngineNr : STRING[16] := ''; (*Engine number of this Engine*)
+	iMastersSUB : ARRAY[0..4] OF USINT; (*Subnet Part of the IP of each master*)
+	iMastersIP : ARRAY[0..4] OF USINT; (*Host Part of the IP of each master*)
+	iEnginesSUB : ARRAY[0..32] OF USINT; (*Subnet Part of the IP of each engine*)
+	iEnginesIP : ARRAY[0..32] OF USINT; (*Host Part of the IP of each engine*)
+	idx : USINT := 0; (*loop iterator used to iterate over signals*)
+	x : USINT := 0; (*loop iterator used to iterate over the communication participants*)
+END_VAR
+VAR CONSTANT
+	iANSL_config_length_max : UINT := 60000; (*max dataobject length*)
+END_VAR
+VAR
+	strANSL_config : STRING[iANSL_config_length_max] := ''; (*Ansl configuration string*)
+	pANSL_config : UDINT := 0; (*Pointer to the Ansl configuration string*)
+	strCurrentAssetNum : STRING[16] := ''; (*Strings of the dynamic values that are used to build the ansl dataoject*)
+	strCurrentAssetSub : STRING[16] := ''; (*Strings of the dynamic values that are used to build the ansl dataoject*)
+	strCurrentAssetIP : STRING[16] := ''; (*Strings of the dynamic values that are used to build the ansl dataoject*)
+END_VAR
+(*ANSL Dataobject Variables*)
+VAR
+	xDatObjInfo_Ansl_Cfg : DatObjInfo := (0);
+	xDatObjDelete_Ansl_Cfg : DatObjDelete := (0);
+	xDatObjCreate_Ansl_Cfg : DatObjCreate := (0);
+	strAnslDataObjName : STRING[32] := '';
+END_VAR
+(*ANSL Communication FUBs*)
+VAR
+	xANSLClientStart : AsANSLClientStart := (0);
+	xANSLClientStop : AsANSLClientStop := (0);
+END_VAR

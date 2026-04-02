@@ -1,0 +1,49 @@
+VAR
+	rValvePos : REAL; (*valve position*)
+	muell : BOOL := FALSE;
+	K_Var : INT; (*emergency cooler variant(Para.iEC_OpMode)*)
+	K_Anz : USINT; (*emergency cooler *)
+	K_nmp : BOOL; (*1.stage only with pump*)
+	K_reg : USINT; 
+	ST_5 : BOOL;
+	ST_4 : BOOL;
+	ST_7 : BOOL;
+	ST_6 : BOOL;
+	ST_3 : BOOL;
+	REG_INVERT : BOOL;
+	ST_1 : BOOL;
+	minus : BOOL := 0;
+	plus : BOOL := 0;
+	ST_8 : BOOL;
+	ST_15 : BOOL;
+	ST_14 : BOOL;
+	ST_2 : BOOL;
+	ST_16 : BOOL;
+	ST_13 : BOOL;
+	ST_9 : BOOL;
+	ST_10 : BOOL;
+	ST_11 : BOOL;
+	ST_12 : BOOL;
+	anfhbt : ARRAY[0..16] OF BOOL;
+	xGRMax_Ventpos4 : GR_MAXR;
+	xGRMax_Ventpos5 : GR_MAXR;
+	xGRMin_Ventpos2 : GR_MINR;
+	xR_TRIG_MINUS : R_TRIG;
+	xR_TRIG_PLUS : R_TRIG;
+	xTOF_MINUS : TOF;
+	xTOF_PLUS : TOF;
+	xTOF_K_AUS : TOF;
+	zw : UDINT;
+	Anz_st : USINT;
+	summe : USINT;
+	summe_old : USINT := 0;
+	schritt : USINT := 0;
+	i : USINT;
+	F_SPSR : USINT;
+	Anz_vent : USINT;
+	KST : ARRAY[0..16] OF USINT;
+	FA_INIT_0 : WDtoBIT;
+	FA_INIT_1 : WDtoBIT;
+	FA_INIT_2 : WDtoBIT;
+	FA_INIT_3 : WDtoBIT;
+END_VAR

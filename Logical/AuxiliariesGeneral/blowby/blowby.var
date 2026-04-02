@@ -1,0 +1,35 @@
+VAR
+	bRelMon_Pr_CC : BOOL := FALSE; (*Release monitoring crank case pressure*)
+	bRelMon_Pr_a_BbFilt : BOOL := FALSE; (*Release monitoring pressure after blow by filter *)
+	bRelMon_Pr_f_BbFilt : BOOL := FALSE; (*Release monitoring pressure before blow by filter *)
+	bRelMon_Pr_a_BbFilt_A : BOOL := FALSE; (*Release monitoring pressure after blow by filter Bank A*)
+	bRelMon_Pr_a_BbFilt_B : BOOL := FALSE; (*Release monitoring pressure after blow by filter Bank B*)
+	bRelMon_Pr_f_BbFilt_A : BOOL := FALSE; (*Release monitoring pressure before blow by filter Bank A*)
+	bRelMon_Pr_f_BbFilt_B : BOOL := FALSE; (*Release monitoring pressure before blow by filter Bank B*)
+
+	rPc_BbBlower_Save : REAL := 0; (*Saved controller output before error [%]*)
+	rP_Act_Norm_Save : REAL := 0.0; (*SAVE actual power related to rP_Nom [% Pnom] filtered T=1s*)
+	xSigScal_R_DPrHi : xSigScal_R := (0);
+	xSigScal_R_DPrLo : xSigScal_R := (0);
+
+	xTOF_AMM_Pr_CC_MsMs : TOF := (0);
+	xTOF_AMM_Pr_a_BbFilt_Ms : TOF := (0);
+	xTOF_AMM_Pr_a_BbFilt_A_Ms : TOF := (0);
+	xTOF_AMM_Pr_a_BbFilt_B_Ms : TOF := (0);
+	xTOF_AMM_Pr_f_BbFilt_Ms : TOF := (0);
+	xTOF_AMM_Pr_f_BbFilt_A_Ms : TOF := (0);
+	xTOF_AMM_Pr_f_BbFilt_B_Ms : TOF := (0);
+
+	xTON_Pr_CC_Hi : TON := (0);
+	xTON_Pr_CC_HiHi : TON := (0);
+	xTON_Pr_CC_OK : TON := (0);
+	xTOF_BlocTrip_Pr_CC_HiHi : TOF;
+
+	xTOF_EOP : TOF := (0);
+	
+	xGR_MAXR_P_Act_Norm_Filt : GR_MAXR;
+	xGR_MINR_Pr_CC : GR_MINR;
+	xGR_MAXR_P_Set_Norm : GR_MAXR;
+	xTON_BbBlower_SS : TON;
+	bBbBlower_Off : BOOL;
+END_VAR

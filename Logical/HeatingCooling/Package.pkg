@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.25.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="DataObject" Language="Simple" Description="Simple data object.">META_HC</Object>
+    <Object Type="File" Description="Package data types" Private="true">module_HC.typ</Object>
+    <Object Type="File" Description="Local data types" Private="true">module_HCPara.typ</Object>
+    <Object Type="File" Description="Package variables" Private="true">module_HC.var</Object>
+    <Object Type="Program" Language="IEC" Description="values">default_HC</Object>
+    <Object Type="Program" Language="IEC" Description="functions">general_HC</Object>
+    <Object Type="Program" Language="IEC" Description="boiler house ventilation">BHV</Object>
+    <Object Type="Program" Language="IEC" Description="pressure engine cooling water">Pr_ECW</Object>
+    <Object Type="Program" Language="IEC" Description="temperature condensor circuit">T_CD</Object>
+    <Object Type="Program" Language="IEC" Description="temperature engine cooling water">T_ECW</Object>
+    <Object Type="Program" Language="IEC" Description="temperature engine oil">T_EO</Object>
+    <Object Type="Program" Language="IEC" Description="temperature heat water">T_HW</Object>
+    <Object Type="Program" Language="IEC" Description="temperature air outdoor">T_AirOutdoor</Object>
+    <Object Type="Program" Language="IEC" Description="temperature charge air/mixture">T_Ch</Object>
+    <Object Type="Program" Language="IEC" Description="emergency cooler sequence">EC_Seq</Object>
+    <Object Type="Program" Language="IEC" Description="emergency cooler">EC</Object>
+    <Object Type="Program" Language="IEC" Description="charge cooler">ChC</Object>
+    <Object Type="Program" Language="IEC" Description="charge cooler sequence">ChC_Seq</Object>
+    <Object Type="Program" Language="IEC" Description="counter heat power">Cnt_P_Heat</Object>
+    <Object Type="Program" Language="IEC" Description="controller condensor circuit supply temperature">Ctr_CDSu</Object>
+    <Object Type="Program" Language="IEC" Description="controller charge temperature">Ctr_ChC</Object>
+    <Object Type="Program" Language="IEC" Description="controller charge temperature before high-pressure turbo charger (T1-HP)">Ctr_ChC_T1HP</Object>
+    <Object Type="Program" Language="IEC" Description="controller charge temperature cooler ventilation">Ctr_ChCV</Object>
+    <Object Type="Program" Language="IEC" Description="controller charge temperature high pressure ">Ctr_ChCHP</Object>
+    <Object Type="Program" Language="IEC" Description="controller heat water return temperature">Ctr_HWRe</Object>
+    <Object Type="Program" Language="IEC" Description="controller heat water return temperature after emergency cooler">Ctr_EC</Object>
+    <Object Type="Program" Language="IEC" Description="controller heat water supply temperature">Ctr_HWSu</Object>
+    <Object Type="Program" Language="IEC" Description="messages">MsgHC</Object>
+    <Object Type="Program" Language="IEC" Description="visualization">vis_HC</Object>
+    <Object Type="Program" Language="IEC" Description="+ parameter handling">ParHC</Object>
+    <Object Type="Program" Language="IEC" Description="+ PermanentMemory">PermHC</Object>
+  </Objects>
+</Package>

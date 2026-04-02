@@ -1,0 +1,50 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: GMU
+ * File: GMU.var
+ * Author: WaldharM
+ * Created: October 29, 2012
+ ********************************************************************
+ * Local variables of program GMU
+ ********************************************************************)
+VAR
+	TON_Monitoring1 : TON;
+	TON_Monitoring2 : TON;
+	bMonitoring : ARRAY[0..4] OF BOOL;
+	TJ_GasN : ARRAY[0..4] OF BOOL; (* TJ gas flow not reached error *)
+	ucErrNr : USINT; (* counter error status value *)
+	TJ_GasT : ARRAY[0..4] OF BOOL; (* TJ gas temperature error *)
+	TJ_Int : ARRAY[0..4] OF BOOL; (* TJ internal error *)
+	TJ_Mech : ARRAY[0..4] OF BOOL; (* TJ malfunction *)
+	TJ_GasD : ARRAY[0..4] OF BOOL; (* TJ inlet pressure error *)
+	xOpMode : OpMode;
+	ucMeas : USINT; (* counter for TecJet meassure value *)
+	tTecErrorOld : ARRAY[0..4] OF _TecJetError; (* last error status gas inject valve *)
+	ucMonNr : USINT;
+	ssGP_ZD : INT; (* gas inject valve pressure change *)
+	ssGPold : ARRAY[0..4] OF INT; (* last gas inject valve pressure *)
+	ssGrenz : INT; (* turbo suction monitoring limit *)
+	xTOF_bLR_GasStop : TOF; (*load rejection function: gas stop active*)
+	T_3096_OFF : TIME := T#7s; (*delay for 3096 re-activation*)
+	b_3096_OFF_LR : BOOL := TRUE; (*enable switch off 3096 during load rejection*)
+	tDelTime_GVOpen : TIME := T#7s;
+	ucTecNr : USINT;
+	bValS_GMU_Ok : ARRAY[0..4] OF BOOL; (* Overall status ok *)
+	bMech_GMU_Err : ARRAY[0..4] OF BOOL; (* Valve malfunction *)
+	bInt_GMU_Err : ARRAY[0..4] OF BOOL; (* Valve internal failure *)
+	bFlow_GMU_SetErr : ARRAY[0..4] OF BOOL; (* flow demand failued *)
+	bFlow_GMU_Min : ARRAY[0..4] OF BOOL; (* flow not reached *)
+	bFlow_GMU_Down : ARRAY[0..4] OF BOOL; (* zero flow detected *)
+	bPr_Diff_GMU_Down : ARRAY[0..4] OF BOOL; (* zero pressure detected *)
+	bPos_GMU_Err : ARRAY[0..4] OF BOOL; (* Valve position failure *)
+	bT_EU_GMU_HiHi : ARRAY[0..4] OF BOOL; (* Electronic temperature high *)
+	bU_GMU_LoLo : ARRAY[0..4] OF BOOL; (* Input voltage low limit *)
+	bT_GMU_LoLo : ARRAY[0..4] OF BOOL; (* 'Fuel gas temperature low limit *)
+	bPr_Diff_GMU_LoLo : ARRAY[0..4] OF BOOL; (* Delta pressure low limit *)
+	bPr_GMU_LoLo : ARRAY[0..4] OF BOOL; (* Fuel gas pressure low limit *)
+	bU_GMU_HiHi : ARRAY[0..4] OF BOOL; (* Input voltage high limit *)
+	bT_GMU_HiHi : ARRAY[0..4] OF BOOL; (* 'Fuel gas temperature high limit *)
+	bPr_Diff_GMU_HiHi : ARRAY[0..4] OF BOOL; (* Delta pressure high limit *)
+	bPr_GMU_HiHi : ARRAY[0..4] OF BOOL; (* Fuel gas pressure high limit *)
+END_VAR

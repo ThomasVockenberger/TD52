@@ -1,0 +1,135 @@
+(********************************************************************
+* COPYRIGHT -- INNIO Company
+********************************************************************
+* File: PHC.vvm
+* Author: automatically generated 
+* Created: 07.03.2014
+********************************************************************
+* PV mapping file
+********************************************************************)
+VAR_CONFIG
+	Cyclic#4.AmmBase::OUT_AB.tAB2HC AT %Q.Cyclic#5.HeatingCooling::IN_HC.tAB2HC;
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPB2MM;
+	Cyclic#5.Customized::OUT_CU.tCtr_Cust1_Out AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCtr_Cust1_Out;
+	Cyclic#5.Customized::OUT_CU.tCtr_Cust2_Out AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCtr_Cust2_Out;
+	Cyclic#5.Customized::OUT_CU.tCtr_Cust3_Out AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCtr_Cust3_Out;
+	Cyclic#5.Customized::OUT_CU.tCtr_Cust4_Out AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCtr_Cust4_Out;
+	Cyclic#5.Customized::OUT_CU.tCtr_Cust5_Out AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCtr_Cust5_Out;
+	Cyclic#5.Customized::OUT_CU.tCtr_Cust6_Out AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCtr_Cust6_Out;
+	Cyclic#5.Customized::OUT_CU.tCtr_Cust7_Out AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCtr_Cust7_Out;
+	Cyclic#5.Customized::OUT_CU.tCtr_Cust8_Out AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCtr_Cust8_Out;
+	Cyclic#5.Customized::OUT_CU.tCtr_Cust1_In AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCtr_Cust1_In;
+	Cyclic#5.Customized::OUT_CU.tCtr_Cust2_In AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCtr_Cust2_In;
+	Cyclic#5.Customized::OUT_CU.tCtr_Cust3_In AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCtr_Cust3_In;
+	Cyclic#5.Customized::OUT_CU.tCtr_Cust4_In AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCtr_Cust4_In;
+	Cyclic#5.Customized::OUT_CU.tCtr_Cust5_In AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCtr_Cust5_In;
+	Cyclic#5.Customized::OUT_CU.tCtr_Cust6_In AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCtr_Cust6_In;
+	Cyclic#5.Customized::OUT_CU.tCtr_Cust7_In AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCtr_Cust7_In;
+	Cyclic#5.Customized::OUT_CU.tCtr_Cust8_In AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCtr_Cust8_In;
+	Cyclic#5.Customized::OUT_CU.rCust_SparePara AT %Q.Cyclic#5.HeatingCooling::IN_HC.rCust_SparePara;
+	Cyclic#4.ChargingUnit::OUT_CH.rT_Ch_T2s_Avg AT %Q.Cyclic#5.HeatingCooling::IN_HC.rT_Ch_T2s_Avg;
+	Cyclic#4.ChargingUnit::OUT_CH.rT_Ch_T1HP_Avg AT %Q.Cyclic#5.HeatingCooling::IN_HC.rT_Ch_T1HP_Avg;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.tECWP1Dem AT %Q.Cyclic#5.HeatingCooling::IN_HC.tECWP1Dem;
+	Cyclic#5.Opstate::OUT_OP.tEng_Run AT %Q.Cyclic#5.HeatingCooling::IN_HC.tEng_Run;
+	Cyclic#4.Opstate::OUT_OP.iSt_OpMode AT %Q.Cyclic#5.HeatingCooling::IN_HC.iSt_OpMode;
+	Cyclic#4.Ignition::OUT_IG.rN_EngAct AT %Q.Cyclic#5.HeatingCooling::IN_HC.rN_EngAct;
+	Cyclic#4.EngineController::OUT_EC.rT_ChC_Ctr_Wex AT %Q.Cyclic#5.HeatingCooling::IN_HC.rT_ChC_Ctr_Wex;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem_EPS AT %Q.Cyclic#5.HeatingCooling::IN_HC.bEng_Dem_EPS;
+	Cyclic#4.Opstate::OUT_OP.bEng_Aux_Dem_CDR AT %Q.Cyclic#5.HeatingCooling::IN_HC.bEng_Aux_Dem_CDR;
+	Cyclic#4.Opstate::OUT_OP.bEng_Aux_Dem AT %Q.Cyclic#5.HeatingCooling::IN_HC.bEng_Aux_Dem;
+	Cyclic#5.Opstate::OUT_OP.iIdx_OMSS AT %Q.Cyclic#5.HeatingCooling::IN_HC.iIdx_OMSS;
+	Cyclic#4.Opstate::OUT_OP.rP_Act_Norm_Filt AT %Q.Cyclic#5.HeatingCooling::IN_HC.rP_Act_Norm_Filt;
+	Cyclic#5.Customized::OUT_CU.bEC_Rel AT %Q.Cyclic#5.HeatingCooling::IN_HC.bEC_Rel;
+	Cyclic#5.Customized::OUT_CU.bChC_Rel AT %Q.Cyclic#5.HeatingCooling::IN_HC.bChC_Rel;
+	Cyclic#5.Customized::OUT_CU.bChC2_Rel AT %Q.Cyclic#5.HeatingCooling::IN_HC.bChC2_Rel;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.tCDP_Dem AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCDP_Dem;
+	Cyclic#5.EngineGeneral::OUT_EG.bMsg1031 AT %Q.Cyclic#5.HeatingCooling::IN_HC.bMsg1031;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bMsg1053 AT %Q.Cyclic#5.HeatingCooling::IN_HC.bMsg1053;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bMsg1054 AT %Q.Cyclic#5.HeatingCooling::IN_HC.bMsg1054;
+	Cyclic#4.AmmBase::OUT_AB.bMsg3003 AT %Q.Cyclic#5.HeatingCooling::IN_HC.bMsg3003;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.tManAuxCtr AT %Q.Cyclic#5.HeatingCooling::IN_HC.tManAuxCtr;
+	Cyclic#4.HalIO::tCustAnaIn AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCustAnaIn;
+	Cyclic#4.HalIO::tCustDigIn AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCustDigIn;
+	Cyclic#4.HalIO::tT_ECW_Ext_Hi AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_ECW_Ext_Hi;
+	Cyclic#4.HalIO::tEC_Failure AT %Q.Cyclic#5.HeatingCooling::IN_HC.tEC_Failure;
+	Cyclic#4.HalIO::tChC_Failure AT %Q.Cyclic#5.HeatingCooling::IN_HC.tChC_Failure;
+	Cyclic#4.HalIO::tPr_CCircuit_Lo AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPr_CCircuit_Lo;
+	Cyclic#4.HalIO::tPr_HW_Lo AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPr_HW_Lo;
+	Cyclic#4.HalIO::tPr_ChC_Lo AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPr_ChC_Lo;
+	Cyclic#4.HalIO::tGCB_On AT %Q.Cyclic#5.HeatingCooling::IN_HC.tGCB_On;
+	Cyclic#4.HalIO::tT_AirOutdoor AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_AirOutdoor;
+	Cyclic#4.HalIO::tPr_ECW AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPr_ECW;
+	Cyclic#4.HalIO::tPr_ECWaEng AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPr_ECWaEng;
+	Cyclic#4.HalIO::tT_ECW AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_ECW;
+	Cyclic#4.HalIO::tT_HW_ReBeEng AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_HW_ReBeEng;
+	Cyclic#4.HalIO::tT_HW_ReAfEC AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_HW_ReAfEC;
+	Cyclic#4.HalIO::tT_HW_Re AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_HW_Re;
+	Cyclic#4.HalIO::tT_HW_Su AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_HW_Su;
+	Cyclic#4.HalIO::tT_Su_PriCirc AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_Su_PriCirc;
+	Cyclic#4.HalIO::tT_Re_PriCirc AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_Re_PriCirc;
+	Cyclic#4.HalIO::tT_Su_SecCirc AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_Su_SecCirc;
+	Cyclic#4.HalIO::tT_Re_SecCirc AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_Re_SecCirc;
+	Cyclic#4.HalIO::tP_Heat AT %Q.Cyclic#5.HeatingCooling::IN_HC.tP_Heat;
+	Cyclic#4.HalIO::tP_Heat_Imp AT %Q.Cyclic#5.HeatingCooling::IN_HC.tP_Heat_Imp;
+	Cyclic#4.HalIO::tT_EO AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_EO;
+	Cyclic#4.HalIO::tPr_HW_Hi1 AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPr_HW_Hi1;
+	Cyclic#4.HalIO::tPr_HW_Hi AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPr_HW_Hi;
+	Cyclic#4.HalIO::tT_HW_Hi1 AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_HW_Hi1;
+	Cyclic#4.HalIO::tT_HW_Hi AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_HW_Hi;
+	Cyclic#4.HalIO::tFlow_HW_Lo AT %Q.Cyclic#5.HeatingCooling::IN_HC.tFlow_HW_Lo;
+	Cyclic#4.HalIO::tT_ChCW_Hi AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_ChCW_Hi;
+	Cyclic#4.HalIO::tT_HW_Su_LT AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_HW_Su_LT;
+	Cyclic#4.HalIO::tT_ECW_AfEng AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_ECW_AfEng;
+	Cyclic#4.HalIO::tT_HW_Re_LT AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_HW_Re_LT;
+	Cyclic#4.HalIO::tAuxV_ModIf_ok AT %Q.Cyclic#5.HeatingCooling::IN_HC.tAuxV_ModIf_ok;
+	Cyclic#4.HalIO::tAuxV_Aux_ok AT %Q.Cyclic#5.HeatingCooling::IN_HC.tAuxV_Aux_ok;
+	Cyclic#4.HalIO::tAuxV_Supply_Ok AT %Q.Cyclic#5.HeatingCooling::IN_HC.tAuxV_Supply_Ok;
+	Cyclic#4.HalIO::tChC_FanRdy AT %Q.Cyclic#5.HeatingCooling::IN_HC.tChC_FanRdy;
+	Cyclic#4.HalIO::tPr_HW_Su_LT AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPr_HW_Su_LT;
+	Cyclic#4.HalIO::tPr_HW_Su_HT AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPr_HW_Su_HT;
+	Cyclic#4.HalIO::tT_ECWbEng AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_ECWbEng;
+	Cyclic#4.HalIO::tPr_HW_Re_LT AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPr_HW_Re_LT;
+	Cyclic#4.HalIO::tPr_HW_Re_HT AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPr_HW_Re_HT;
+	Cyclic#4.HalIO::tPr_HW_Re_PreH_ECW AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPr_HW_Re_PreH_ECW;
+	Cyclic#4.HalIO::tPr_HW_Re_PreH_EO AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPr_HW_Re_PreH_EO;
+	Cyclic#4.HalIO::tPr_EO_Mod_Out AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPr_EO_Mod_Out;
+	Cyclic#4.HalIO::tT_ECW_Mod_In AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_ECW_Mod_In;
+	Cyclic#4.HalIO::tT_ECW_Mod_Out AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_ECW_Mod_Out;
+	Cyclic#4.HalIO::tT_EO_Mod_In AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_EO_Mod_In;
+	Cyclic#4.HalIO::tT_EO_Mod_Out AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_EO_Mod_Out;
+	Cyclic#4.HalIO::tT_HW_Su_PreH_ECW AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_HW_Su_PreH_ECW;
+	Cyclic#4.HalIO::tT_HW_Re_PreH_ECW AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_HW_Re_PreH_ECW;
+	Cyclic#4.HalIO::tT_HW_Su_PreH_EO AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_HW_Su_PreH_EO;
+	Cyclic#4.HalIO::tT_HW_Re_PreH_EO AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_HW_Re_PreH_EO;
+	Cyclic#4.HalIO::tHWF_Fail AT %Q.Cyclic#5.HeatingCooling::IN_HC.tHWF_Fail;
+	Cyclic#4.HalIO::tCDP_Op AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCDP_Op;
+	Cyclic#4.HalIO::tT_HW_HC_Re AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_HW_HC_Re;
+	Cyclic#4.HalIO::tT_CD_Su AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_CD_Su;
+	Cyclic#4.HalIO::tT_CD_Re AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_CD_Re;
+	Cyclic#4.HalIO::tPos_HW_ReValve AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPos_HW_ReValve;
+	Cyclic#4.HalIO::tPos_HW_EC_ReValve AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPos_HW_EC_ReValve;
+	Cyclic#4.HalIO::tPos_ChC_Valve AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPos_ChC_Valve;
+	Cyclic#4.HalIO::tBHV_Op AT %Q.Cyclic#5.HeatingCooling::IN_HC.tBHV_Op;
+	Cyclic#4.HalIO::tDemnd_BHV AT %Q.Cyclic#5.HeatingCooling::IN_HC.tDemnd_BHV;
+	Cyclic#4.HalIO::tT_ECW_bChC_HT AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_ECW_bChC_HT;
+	Cyclic#4.HalIO::tT_ECW_bOilC AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_ECW_bOilC;
+	Cyclic#4.HalIO::tT_ECW_bECWC AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_ECW_bECWC;
+	Cyclic#4.HalIO::tT_HW_EGHE_Hi AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_HW_EGHE_Hi;
+	Cyclic#4.HalIO::tT_HW_EGCD_Hi AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_HW_EGCD_Hi;
+	Cyclic#4.HalIO::tCust_HW_Ext_Trip AT %Q.Cyclic#5.HeatingCooling::IN_HC.tCust_HW_Ext_Trip;
+	Cyclic#4.ChargingUnit::OUT_CH.bAMM_T_Ch_T2s_Avg AT %Q.Cyclic#5.HeatingCooling::IN_HC.bAMM_T_Ch_T2s_Avg;
+	Cyclic#4.ChargingUnit::OUT_CH.bAMM_T_Ch_T1HP_Avg AT %Q.Cyclic#5.HeatingCooling::IN_HC.bAMM_T_Ch_T1HP_Avg;
+	Cyclic#5.Customized::OUT_CU.bT_ChC_Ctr_Wex_Enable_Cust AT %Q.Cyclic#5.HeatingCooling::IN_HC.bT_ChC_Ctr_Wex_Enable_Cust; (*V04.05 new interface for optional usage*)
+	Cyclic#5.Customized::OUT_CU.rT_ChC_Ctr_Wex_Cust AT %Q.Cyclic#5.HeatingCooling::IN_HC.rT_ChC_Ctr_Wex_Cust; (*V04.05 new interface for optional usage*)
+	Cyclic#5.Customized::OUT_CU.rCustomizedHC AT %Q.Cyclic#5.HeatingCooling::IN_HC.rCustomizedHC; (*New customizable interface 2017 - BETA PHASE, use only in coordination with TPSS	*)
+	Cyclic#4.HalIO::tPos_ChC2_Valve AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPos_ChC2_Valve;
+	Cyclic#4.HalIO::tPr_ChC2_Lo AT %Q.Cyclic#5.HeatingCooling::IN_HC.tPr_ChC2_Lo;
+	Cyclic#4.HalIO::tChC2_FanRdy AT %Q.Cyclic#5.HeatingCooling::IN_HC.tChC2_FanRdy;
+	Cyclic#4.HalIO::tChC2_Failure AT %Q.Cyclic#5.HeatingCooling::IN_HC.tChC2_Failure;
+	Cyclic#4.HalIO::tT_ChC2_Su_LT AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_ChC2_Su_LT;
+	Cyclic#4.HalIO::tT_ChC2_Re_LT AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_ChC2_Re_LT;
+	Cyclic#4.HalIO::tT_ChC2W_Hi AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_ChC2W_Hi;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bECWP_MechDriven AT %Q.Cyclic#5.HeatingCooling::IN_HC.bECWP_MechDriven;
+	Cyclic#4.HalIO::tECWP_Op AT %Q.Cyclic#5.HeatingCooling::IN_HC.tECWP_Op;
+	Cyclic#4.HalIO::tT_HW_Su_Unit AT %Q.Cyclic#5.HeatingCooling::IN_HC.tT_HW_Su_Unit; (*V04.25.00.00*) (*SAFETY PLC*)
+END_VAR

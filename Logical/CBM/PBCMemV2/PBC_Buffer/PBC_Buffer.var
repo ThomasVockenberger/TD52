@@ -1,0 +1,42 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: PBC_Input
+ * File: PBC_Input.var
+ * Author: 502293141
+ * Created: March 11, 2015
+ ********************************************************************
+ * Local variables of program PBC_Input
+ ********************************************************************)
+VAR
+	GetTC : ARRAY[0..iTC_Max] OF PBC_Lim; (*Task Cycle Class BlackBox*)
+	GetEC : ARRAY[0..iEC_Max] OF PBC_In; (*Engine Cycle Class BlackBox*)
+	GetSC : ARRAY[0..iSC_Max] OF PBC_In; (*Slow Cycle Class BlackBox*)
+	tSkipFire : UDINT;
+	szTemp : STRING[5] := '';
+	i : INT;
+	iCnt : INT;
+	iCnt_GetTC : INT;
+	iCnt_GetEC : INT;
+	iCnt_GetSC : INT;
+	ucData : USINT;
+	tLimpHome : UDINT;
+	tLimpHomeRKS : UDINT;
+	tCompLine : UDINT;
+	tNegVolt : UDINT;
+	tNegPres : UDINT;
+	tPresSlope : UDINT;
+	tSlowDrift : UDINT;
+	tMemBurst : UDINT;
+	tSensErr : UDINT;
+	tGlowIgn : UDINT;
+	tMisf_I : UDINT;
+	tMisf_II : UDINT;
+	ucData1 : USINT;
+	rPr_CPP_Filt_Max : ARRAY[0..24] OF REAL;
+	bNOxS_CatOut_Exist : BOOL := 0;
+	bNOxS_EngOut_Exist : BOOL := 0;
+	bNOxS_EngOut_A_Exist : BOOL := 0;
+	bNOxS_EngOut_B_Exist : BOOL := 0;
+	tCPSSat : UDINT;
+END_VAR

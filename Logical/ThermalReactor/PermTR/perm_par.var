@@ -1,0 +1,30 @@
+VAR
+	pm_Error : UINT; (* permanent value error *) (* Deleted: pm : ParaMem_typ; permanent memory tags mathias, 22.8.11*)
+	write_once : BOOL; (* write permanent memory once *)
+	pm_len : UDINT; (* permanent value lenght *)
+	ModuleName : STRING[35]; (* module name of object *)
+	DatObjInfo_01 : DatObjInfo; (* data object info *)
+	pm_id : UDINT; (* permanent value identifier *)
+	pm_p : UDINT; (* permanent value pointer *)
+	bCreateDataObj : BOOL; (* TRUE=create new data object *)
+	perm_par_vers : UINT;
+	DatObjRead_01 : DatObjRead; (* data object read *)
+	usPMWriteCnt : UINT;
+	DatObjDelete_PermMem : DatObjDelete;
+	DatObjCreate_01 : DatObjCreate; (* data object create *)
+	DatObjWrite_01 : DatObjWrite; (* data object write *)
+	ulPMPointer : UDINT; (* adress of actual checksum value *)
+	TON_WritePMEM : TON; (* delay write permanent memory *)
+	ulChkValue : UDINT; (* actual value of parameter pointer *)
+	bWriteDataObj : BOOL; (* TRUE=write data object module *)
+	ulChecksum : UDINT; (* parameter checksum value *)
+	ulChecksumOld : UDINT; (* last vlaue of parameter checksum *)
+	TON_WarnDelay : TON;
+END_VAR
+VAR CONSTANT
+	ERR_NOERROR : UINT := 0;
+END_VAR
+VAR
+	tParaIntern : ParaHandler_typ; (*Connector type to perm_par*)
+	xLocalParaCheck : ParaCheckFUB; (*local function instance to check parameter values*)
+END_VAR

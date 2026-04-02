@@ -1,0 +1,32 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: pb5
+ * File: pb5.var
+ * Author: 105051626
+ * Created: April 19, 2012
+ ********************************************************************
+ * Local variables of program pb5
+ ********************************************************************)
+VAR
+	T87 : BOOL; (*Gas train 1 check*)
+	T89 : BOOL; (*Gas train 2 check*)
+	T94 : BOOL; (*Quiscent current loop OK*)
+	xTON_FA_T94 : TON;
+	xTON_FA_T88 : TON;
+	xTON_FA_T90 : TON;
+	xTP_FA_T89 : TP;
+	xTP_TP_vorStart : TP;
+	xTP_TP_vorStart2 : TP;
+	xTP_FA_87 : TP;
+	xSR_GT_SafetyDevice2ndStartBlock : SR;
+	xTOF_SafetyCheck_Run : TOF := (0);
+	bDelayForGascheck : BOOL := 0;
+	xTON_GC_T100 : TON;
+	xTOF_RESET : TOF;
+	xTOF_Shutdown : TOF;
+	RS_GK : RS;
+	bDem_SafeDevice1 : BOOL := FALSE; (*internal*)
+	bDem_SafeDevice2 : BOOL := FALSE; (*internal*)
+	bDem_SafeDevice3 : BOOL := FALSE; (*internal*)
+END_VAR

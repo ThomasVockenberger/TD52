@@ -1,0 +1,19 @@
+VAR
+	xTON_BB_Dead : TON;
+	tof_mns_ok : TOF;
+	ton_sy_line_of : TON;
+	ton_sy_line_on : TON;
+	ton_p_mns_ok : TON;
+	tp_p_mns_ok : TP;
+	trig_sss_man : R_TRIG;
+	trig_mcb_on : R_TRIG;
+	ton_mns_ok : TON;
+	bU_BB_ClosCond : BOOL; (* Closing condition buabar voltage *)
+	bBB_ClosCond_Ok : BOOL; (* Delay time enabling *)
+	xTON_ClosCond : TON; (* Timer for closing conditions delay time *)
+	xTON_AfMnsF_ClosCond : TON; (* Timer for closing conditions delay time *)
+	xTON_MCB_COf_GCB_OpF : TON;
+	bU_BB_AfMnsF_ClosCond : BOOL;
+	bBB_AfMnsF_ClosCond_Ok : BOOL;
+	trig_plc_on : R_TRIG;
+END_VAR

@@ -1,0 +1,21 @@
+VAR
+	TON_SecondTick : TON; (* CAN VUS FAHLER *)
+	ucCylIndex : USINT;
+	ucMonDiffCnt : USINT;
+	ucMonMinCnt : ARRAY[0..24] OF USINT;
+	ucMonMaxCnt : ARRAY[0..24] OF USINT;
+	ucMonAvgCnt : USINT;
+	AmmSeqIgnVoltMax : AmmSequence;
+	AmmSeqIgnVoltMin : AmmSequence;
+	bAmmSeqClkP : BOOL;
+	bOffsetErr : ARRAY[0..24] OF BOOL;
+	AmmSeqOffsetErr : AmmSequence;
+	rAvgVoltSum : REAL;
+	rU_Cyl : ARRAY[0..24] OF REAL;
+	bIgnVoltMin : ARRAY[0..24] OF BOOL;
+	bIgnVoltMax : ARRAY[0..24] OF BOOL;
+	rU_Cyl_old1 : ARRAY[0..24] OF REAL;
+	rU_Cyl_old2 : ARRAY[0..24] OF REAL;
+	xTON_U_CylFrozen : ARRAY[0..24] OF TON;
+	xTON_U_CylAltern : ARRAY[0..24] OF TON;
+END_VAR

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.80.31 SP01?>
+<Library Version="2.00.0" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>lAI50toIT.fun</File>
+    <File>lAI50toIT.typ</File>
+    <File>lAI50toIT.var</File>
+    <File>AI50toIT_mdl.h</File>
+    <File>AI50toIT_mdl_private.h</File>
+    <File>AI50toIT_mdl_types.h</File>
+    <File>rtwtypes.h</File>
+    <File>AI50toIT.c</File>
+    <File>AI50toIT_mdl.c</File>
+    <File>lib_properties.txt</File>
+  </Files>
+</Library>

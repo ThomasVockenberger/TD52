@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="7" ArVersion="H4.90">
+  <Aliases>
+    <ACLAliases>
+      <ACL Id="1">
+        <ACE RoleName="Administrators" Access="0x017F" />
+      </ACL>
+    </ACLAliases>
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView AclId="1">
+    <Module Name="Generator">
+      <GlobalVariables>
+        <Variable Name="MM2VIS" AutomaticEnable="True">
+          <Variable Name="tU_Stat">
+            <Variable Name="tLn_Nom">
+              <Variable Name="x" EnableArrayElements="True" />
+              <Variable Name="y" EnableArrayElements="True" />
+            </Variable>
+            <Variable Name="tLn_Set">
+              <Variable Name="x" EnableArrayElements="True" />
+              <Variable Name="y" EnableArrayElements="True" />
+            </Variable>
+            <Variable Name="tWin">
+              <Variable Name="x" EnableArrayElements="True" />
+              <Variable Name="y" EnableArrayElements="True" />
+            </Variable>
+          </Variable>
+        </Variable>
+        <Variable Name="Para" AutomaticEnable="True">
+          <Variable Name="rF_Nom" EnableArrayElements="True" />
+          <Variable Name="rPF_CosPCtr_h" EnableArrayElements="True" />
+          <Variable Name="rPF_CosPCtr_m" EnableArrayElements="True" />
+          <Variable Name="rPF_CosPCtr_Tme_Set" EnableArrayElements="True" />
+          <Variable Name="rU_Gen_Nom" EnableArrayElements="True" />
+          <Variable Name="rU_SyncNom" EnableArrayElements="True" />
+          <Variable Name="rTi_Q_MinDel" EnableArrayElements="True" />
+          <Variable Name="rV_Over2" EnableArrayElements="True" />
+          <Variable Name="rTi_V_Over2" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="VIS2MM" AutomaticEnable="True" />
+      </GlobalVariables>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

@@ -1,0 +1,58 @@
+VAR
+	bU_SyD_Inc : BOOL;
+	bU_SyD_Dec : BOOL;
+	rU_Gen_Diff_Match_p : REAL := 0.0; (*U offset leistungsabhängig*)
+	rU_Gen_Diff_Match_sy : REAL := 0.0; (*U offset während SY*)
+	rU_SY_diff : REAL; (*Voltage difference at SY*)
+	rU_SY_span : REAL; (*Dead band voltage controller*)
+	u_minus : BOOL; (*Voltage matching decreasing*)
+	u_offset : REAL; (*U offset gesamt*)
+	u_offset_f : REAL; (*U offset frequenzabhängig*)
+	u_plus : BOOL; (*Voltage matching increasing*)
+	U_TAKT : BOOL; (*Takt for voltage adjustment*)
+	xRAMPE_rU_Gen_Diff_Match_p : RAMPE_R;
+	xRAMPE_rU_Gen_Diff_Match_sy : RAMPE_R;
+	xRAMPE_u_offset_f : RAMPE_R;
+	xSigScal_u_offset_mA : xSigScal_R;
+	xSigScal_u_offset_V : xSigScal_R;
+	xSigScal_uoffset_f : xSigScal_R;
+	xSigScal_uoffset_p : xSigScal_R;
+	xTOF_Synch : TOF;
+	xTON_U_TAKT : TON;
+	xTON_U_TAKT_P : TON;
+	xTP_U_DOWN : TP;
+	xTP_U_UP : TP;
+	xR_TRIG_u_plus : R_TRIG;
+	xR_TRIG_u_minus : R_TRIG;
+	rF_Act_norm : REAL;
+	rU_diff_percent : REAL;
+	tiPuls : TIME;
+	x_Win : ARRAY[0..1] OF REAL; (* window on HMI: max & min values for x&y *)
+	rQ_Nom : REAL; (* max reactive power [kVAr] *)
+	xLCRScal_U_WPt : LCRScal; (* reactive power x [kVAr], voltage setpoint y [%Unom] *)
+	xLCRRamp_U_Set_Norm : LCRRamp; (* Ramp to fade in [%Unom] *)
+	iSrc_U_OffsSet : INT := 0; (*Voltage offset set point in island mode: 0= no setpoint, 1= Droop, 2= External *)
+	rP_Nom_PF08 : REAL := 0.0;
+	rQ_Offs_Input : REAL := 0.0;
+	rU_Droop_Offs : REAL := 0.0;
+	rQ_Droop_Offs : REAL := 0.0;
+	rBuffer_U_SetExt : ARRAY[0..10] OF REAL;
+	z_U_SetExt : INT;
+	x_U_SetExt : INT;
+	xTON_GoodQual_U_SetExt : TON;
+	rLCRLimScal_U_SetExt_old : REAL;
+	bBuffer_U_SetExt : BOOL := 0;
+	rU_setExt : REAL; (* Skalierter Wert AI:U Sollwert von extern [V] *)
+	rUset_Isl : REAL;
+	bUset_Isl : BOOL;
+	rBuffer_Q_Droop_Set : ARRAY[0..10] OF REAL;
+	z_Q_Droop_Set : INT;
+	x_Q_Droop_Set : INT;
+	xTON_GoodQual_Q_Droop_Set : TON;
+	rLCRLimScal_Q_Droop_Set_old : REAL;
+	bBuffer_Q_Droop_Set : BOOL := 0;
+	rQ_Droop_SetExt : REAL; (* Skalierter Wert AI:U Sollwert von extern [V] *)
+	rQset_Droop : REAL;
+	bQset_Droop : BOOL;
+	rQ_Win : REAL;
+END_VAR

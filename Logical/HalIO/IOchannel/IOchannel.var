@@ -1,0 +1,27 @@
+(********************************************************************
+ * COPYRIGHT -- Bernecker + Rainer
+ ********************************************************************
+ * Program: TestHALio
+ * File: TestHALio.var
+ * Author: froehlichw
+ * Created: December 02, 2011
+ ********************************************************************
+ * Local variables of program TestHALio
+ ********************************************************************)
+VAR
+	callHALioCfg : BOOL;
+	xHALioCfg : HALioCfg;
+	adrHALioSignal : UDINT;
+	cfgModName : STRING[15];
+	appModName : STRING[15];
+	statusHALioCfg : UINT;
+	idx : UINT;
+	ErrInfo1 : REFERENCE TO STRING[99];
+	ErrInfo2 : REFERENCE TO STRING[99];
+	ErrInfo3 : REFERENCE TO STRING[99];
+	ucCount : USINT;
+	curTaskClass : UDINT;
+	xOpMode : OpMode;
+	xFILTER_R_LSL_In : FILTER_R;
+	xTOF_HwBypassDigitalTwin : TOF; (*Hardware bypass digital twin - T3 adaptive cranking time*)
+END_VAR

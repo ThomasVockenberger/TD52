@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.4.123 SP?>
+<Library Version="0.70.0" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File Description="Exported data types">GeACtrLib.typ</File>
+    <File Description="Exported constants">GeACtrLib.var</File>
+    <File Description="Exported functions and function blocks">GeACtrLib.fun</File>
+    <File>GeACtr.st</File>
+    <File Description="Functions of the library">GeACtrFunc.st</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="LoopConR" />
+    <Dependency ObjectName="standard" />
+  </Dependencies>
+</Library>

@@ -1,0 +1,34 @@
+(*
+T: FUNCTION_BLOCK MAX_S_BR
+FW: YES	NO_VARIANT MAX_S_BR SKIP_NOTHING	
+CI#: 120
+QSL: 0
+QVE: 4
+QVPC: 4
+QPar: 3
+QFBI: 1
+*)
+
+S_In1	1	VAR_INPUT	@TYP:59
+		     
+
+;
+
+
+S_In2	2	VAR_INPUT	@TYP:59
+		     
+
+;
+
+
+S_Out	3	VAR_OUTPUT	@TYP:59
+		     
+
+;
+
+
+MathBib_CALC_9	4	VAR	@FB:108
+		     
+
+;
+

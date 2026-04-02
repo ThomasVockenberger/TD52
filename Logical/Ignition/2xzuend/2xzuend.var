@@ -1,0 +1,4 @@
+VAR
+	xTONIgn1FaultDelay : TON; (*Ignition1 fault delay *)
+	xTONIgn2FaultDelay : TON; (*Ignition 2 fault delay *)
+END_VAR

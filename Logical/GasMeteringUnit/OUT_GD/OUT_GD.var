@@ -1,0 +1,19 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: OUT_GMU
+ * File: OUT_GMU.var
+ * Author: 320003156
+ * Created: February 17, 2012
+ ********************************************************************
+ * Local variables of program OUT_GMU
+ ********************************************************************)
+VAR
+	I : USINT;
+	iRev_HWP : ARRAY[0..4] OF UDINT;
+	sRev_HWP : ARRAY[0..4] OF STRING[10];
+	iNum_HWP : ARRAY[0..4] OF UDINT;
+	sNum_HWP : ARRAY[0..4] OF STRING[10];
+	sGMU_Num_HWP_tmp : ARRAY[0..4] OF STRING[10];
+	sGMU_Num_HWP : ARRAY[0..4] OF STRING[10];
+END_VAR

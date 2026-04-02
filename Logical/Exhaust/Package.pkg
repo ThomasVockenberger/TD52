@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.25.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="DataObject" Language="Simple" Description="MODUL META data file">META_EX</Object>
+    <Object Type="File" Private="true">module_EX.typ</Object>
+    <Object Type="File" Private="true">module_EXPara.typ</Object>
+    <Object Type="File" Private="true">module_EX.var</Object>
+    <Object Type="Program" Language="IEC" Description="default">default_EX</Object>
+    <Object Type="Program" Language="IEC" Description="general">general_EX</Object>
+    <Object Type="Program" Language="IEC" Description="exhaust gas scavenging">EG_Scav</Object>
+    <Object Type="Program" Language="IEC" Description="exhaust gas valve control">EG_VaCo</Object>
+    <Object Type="Program" Language="IEC" Description="fast exhaust gas pressure sensor">Pr_EG_TC1</Object>
+    <Object Type="Program" Language="IEC" Description="Codinox">codinox</Object>
+    <Object Type="Program" Language="IEC" Description="messages">MsgEX</Object>
+    <Object Type="Program" Language="IEC" Description="visualization">vis_EX</Object>
+    <Object Type="Program" Language="IEC" Description="+ parameter handling">ParEX</Object>
+    <Object Type="Program" Language="IEC" Description="+ PermanentMemory">PermEX</Object>
+  </Objects>
+</Package>

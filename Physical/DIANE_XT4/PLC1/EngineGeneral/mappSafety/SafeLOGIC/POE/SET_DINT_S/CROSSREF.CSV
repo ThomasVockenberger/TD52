@@ -1,0 +1,3 @@
+sbStoreValue,POE\SET_DINT_S\Variables.VBB,0,,2,0,,,SAFEBOOL,,,VAR_INPUT,NOT USED,,Value is stored if TRUE
+siValue,POE\SET_DINT_S\Variables.VBB,0,,3,0,,,SAFEDINT,,,VAR_INPUT,NOT USED,,Value to store
+siValue_Stored,POE\SET_DINT_S\Variables.VBB,0,,4,0,,,SAFEDINT,,,VAR_OUTPUT,NOT USED,,Stored value

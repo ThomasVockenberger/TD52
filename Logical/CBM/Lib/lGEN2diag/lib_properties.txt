@@ -1,0 +1,9 @@
+For manual assignment to hardware configuration please
+add the following additional include directories:
+
+\Logical\MATLAB_includes\R2012b\
+
+
+And the following additional build options:
+
+-lm -D MODEL=G2Fdiag -D NUMST=1 -D NCSTATES=0 -D HAVESTDIO -D ONESTEPFCN=1 -D TERMFCN=1 -D MAT_FILE=0 -D MULTI_INSTANCE_CODE=0 -D INTEGER_CODE=0 -D MT=0 -D CLASSIC_INTERFACE=0 -D TID01EQ=0 

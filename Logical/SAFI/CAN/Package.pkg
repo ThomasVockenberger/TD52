@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.4.123 SP?>
+<Package Version="4.12.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Package" Description="CAN device update">Updater</Object>
+    <Object Type="Program" Language="IEC" Description="+ SAFI CAN communication main">canmaiSA</Object>
+    <Object Type="Program" Language="IEC" Description="+ SAFI CAN communication init">caniniSA</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL DMR - 24 cylinders">sadmr24</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL general - 24 cylinders">sagen24</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL ignition - 24 cylinders">saign24</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL KLS - 24 cylinders">sakls24</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL port injection - 24 cylinders">sapi24</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL DMR - cylinders 1 to 12">sadmr1_12</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL general - cylinders 1 to 12">sagen1_12</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL ignition - cylinders 1 to 12">saign1_12</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL KLS - cylinders 1 to 12">sakls1_12</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL port injection - cylinders 1 to 12">sapi1_12</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL DMR - cylinders 13 to 24">sadmr13_24</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL general - cylinders 13 to 24">sagen13_24</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL ignition - cylinders 13 to 24">saign13_24</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL KLS - cylinders 13 to 24">sakls13_24</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL port injection - cylinders 13 to 24">sapi13_24</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL DMR - cylinders 1 to 10">sadmr1_10</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL general - cylinders 1 to 10">sagen1_10</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL ignition - cylinders 1 to 10">saign1_10</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL KLS - cylinders 1 to 10">sakls1_10</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL port injection - cylinders 1 to 10">sapi1_10</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL DMR - cylinders 11 to 20">sadmr11_20</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL general - cylinders 11 to 20">sagen11_20</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL ignition - cylinders 11 to 20">saign11_20</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL KLS - cylinders 11 to 20">sakls11_20</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL port injection - cylinders 11 to 20">sapi11_20</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL DMR - cylinders 1 to 8">sadmr1_8</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL general - cylinders 1 to 8">sagen1_8</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL ignition - cylinders 1 to 8">saign1_8</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL KLS - cylinders 1 to 8">sakls1_8</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL port injection - cylinders 1 to 8">sapi1_8</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL DMR - cylinders 9 to 16">sadmr9_16</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL general - cylinders 9 to 16">sagen9_16</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL ignition - cylinders 9 to 16">saign9_16</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL KLS - cylinders 9 to 16">sakls9_16</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL port injection - cylinders 9 to 16">sapi9_16</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL DMR - cylinders 1 to 6">sadmr1_6</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL general - cylinders 1 to 6">sagen1_6</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL ignition - cylinders 1 to 6">saign1_6</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL KLS - cylinders 1 to 6">sakls1_6</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL port injection - cylinders 1 to 6">sapi1_6</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL DMR - cylinders 7 to 12">sadmr7_12</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL general - cylinders 7 to 12">sagen7_12</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL ignition - cylinders 7 to 12">saign7_12</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL KLS - cylinders 7 to 12">sakls7_12</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ SAFI CAL port injection - cylinders 7 to 12">sapi7_12</Object>
+  </Objects>
+</Package>

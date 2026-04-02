@@ -1,0 +1,19 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Programm: c_red
+ * Datei: c_red.var
+ * Autor: ZengereS
+ * Erstellt: 20. Februar 2013
+ ********************************************************************
+ * Lokale Variablen des Programms c_red
+ ********************************************************************)
+VAR
+	rP_Set_ExtAI_Norm : REAL;
+	rN_Set_ExtAI_Norm : REAL;
+	ucCylinderCount : USINT;
+	TOF_N_Set_ExtAI_Norm_GoodQual : TOF := (0);
+	rP_Droop_Set_Bus_old_Norm : REAL := 0.0; (*Droop Fallback mode 1: freezed setpoint value BUS [-]*)
+	rP_Droop_Set_AI_old_Norm : REAL := 0.0; (*Droop Fallback mode 1: freezed setpoint value [-] AI*)
+	rN_Set_ExtAI_Limit : REAL := 50; (*External speed offset limit in rpm (+-)*)
+END_VAR

@@ -1,0 +1,29 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: delta_signal
+ * File: delta_signal.var
+ * Author: 502650054
+ * Created: August 26, 2016
+ ********************************************************************
+ * Local variables of program delta_signal
+ ********************************************************************)
+VAR
+	rSignal_A : REAL;
+	filt_Sig_A : FILTER_R;
+	rSignal_A_UF : REAL;
+	LCRLimScal_A_Delta : LCRLimScal;
+	iSampling : INT;
+	rDelta_A_MAX_50 : REAL;
+	rDelta_A_MAX_100 : REAL;
+	bMon_A_Active : BOOL;
+	rDelta_A_Max_P_Act : REAL;
+	bDiff_max_A : BOOL;
+	bufferA : ARRAY[0..59] OF REAL;
+	Var_x : INT;
+	Var_i : INT;
+	Var_z : INT;
+	rDelta_A : REAL;
+	rDelta_A_1s : REAL;
+	rDelta_A_MAX1s : REAL;
+END_VAR

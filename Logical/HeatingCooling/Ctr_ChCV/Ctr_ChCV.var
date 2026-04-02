@@ -1,0 +1,3 @@
+VAR
+	rChCV_Wex_factor : REAL := 1.0; (*charge cooler ventilation ctr Wex factor []*)
+END_VAR

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.4.123 SP?>
+<Library Version="4.10.0" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File Description="Exported functions and function blocks">J_IO_LIB.fun</File>
+    <File>OutExist.st</File>
+  </Files>
+</Library>

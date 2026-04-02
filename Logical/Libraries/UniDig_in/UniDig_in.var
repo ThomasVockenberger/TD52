@@ -1,0 +1,15 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Library: AnalogIn
+ * File: AnalogIn.var
+ * Author: ZengereS
+ * Created: December 04, 2007
+ ********************************************************************
+ * Constants of library AnalogIn
+ ********************************************************************)
+VAR CONSTANT
+	tiDefaultWarnDelayTime : TIME := T#2s; (*Vorgabewert Verzögerung bis Warning (vor Programmierung)*)
+	tiDefaultTONTime : TIME := T#2s; (*Vorgabewert Verzögerung Signal Ein (vor Programmierung)*)
+	tiDefaultTOFTime : TIME := T#10ms; (*Vorgabewert Verzögerung Signal Aus (vor Programmierung)*)
+END_VAR

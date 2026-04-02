@@ -1,0 +1,35 @@
+VAR
+	srcAdr : UDINT;
+	dstAdr : UDINT;
+	idx : INT;
+	idxMin : INT;
+	idxMax : INT;
+	bData : ARRAY[0..15] OF BOOL;
+	pScrData : REFERENCE TO ARRAY[0..15] OF BOOL;
+	pDstData : REFERENCE TO UINT;
+	value : INT;
+	iPr_EngLubOilScalMax : INT; (*Oil pressure scale maximum local var with 2 decimal places*)
+	iPr_ECWScalMax : INT; (*Pressure engine cooling water scale maximum local var with 2 decimal places*)
+	iT_Gen_Wind_Act_L2 : INT; (*Generator winding temperature signal winding phase 3 local var*)
+	iT_Gen_Wind_Act_L1 : INT; (*Generator winding temperature signal winding phase 1 local var*)
+	iT_Gen_Wind_Act_L3 : INT; (*Generator winding temperature signal winding phase 2 local var*)
+	iT_Gen_Wind_Act : INT; (*Generator winding temperature signal local var*)
+	iPos_GM_Set_Norm : INT; (* Set point for the gasmixer local var*)
+	iLam_Eng_LL_Set : INT; (* Leanox Lambda set point local var*)
+	xTON_CLOCK_2 : TON; (*Generate BUSALIVE signal*)
+	xTON_CLOCK_1 : TON; (*Generate BUSALIVE signal*)
+	xWDtoBIT_InData1 : WDtoBIT;
+	xWDtoBIT_InData2 : WDtoBIT;
+	bConnectYourVariableHere : BOOL; (*Placeholder*)
+	iConnectYourVariableHere : INT; (*Placeholder*)
+	rConnectYourVariableHere : REAL; (*Placeholder*)
+	bOpt_Compatible_OpHoursFormat : BOOL := 0; (*OLD - do not use any more, legacy data item*)
+	iP_WorkAct_H : UINT := 0;
+	iP_WorkAct_L : UINT := 0;
+	iQ_WorkReac_H : UINT := 0;
+	iQ_WorkReac_L : UINT := 0;
+	iCnt_OpHours_H : UINT := 0;
+	iCnt_OpHours_L : UINT := 0;
+	iCnt_Starts_H : UINT := 0;
+	iCnt_Starts_L : UINT := 0;
+END_VAR

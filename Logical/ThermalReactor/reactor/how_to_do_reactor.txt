@@ -1,0 +1,73 @@
+---------------------------------------------------------------------------------------------- 
+how to do the settings of "reactor"
+V3.20.0 21-12-2010  Thaler (Update --)
+---------------------------------------------------------------------------------------------- 
+
+Select the type of temperature compensation for the thermocouples by "Compensation_AI_TK":
+    up to V2.5x.x: in ReactorVarV2xxx.var
+    from V2.60.0 upwards: in task "settings"
+
+
+0 = internal (= Default):
+if the compensating cables for thermocouples are installed till the input card AT6402 !
+--> Compensation_AI_TK: value = 0
+--> AT6402 / Open I/O Configuration: Function model 'internal compensation temperature'
+
+
+1 = external universal:
+if the compensating cables for thermocouples end in the terminal box of the reactor !
+--> Compensation_AI_TK: value = 1
+--> AT6402 / Open I/O Configuration: Function model 'external compensation temperature'
+--> Open I/O Mapping, connect AI_Tvgl if applicable
+--> if AI_Tvgl is type Pt100 or signal 20 mA: 
+    parameter Exhaust\Thermal reactor\Adjustment of the reference junction temperature = 20°C
+
+
+2 = external type Pt100, 20 mA:
+if the compensating cables for thermocouples end in the terminal box of the reactor, and
+if the reference junction temperature measuring (AI_Tvgl) is done by Pt100 or signal 20 mA !
+--> Compensation_AI_TK: value = 2
+--> AT6402 / Open I/O Configuration: Function model 'external compensation temperature'
+--> Open I/O Mapping, connect AI_Tvgl
+
+---------------------------------------------------------------------------------------------- 
+
+Select the type of position switches for the 4-way-flap by "UM_E_NEU" in task "reac_set":
+    
+
+value = 0: --> 4 limit switch positions = old version, used till 04.03.2010
+           assigned inputs: DI_E_EIN_A, DI_E_EIN_E, DI_E_AUS_A, DI_E_AUS_E.
+
+VALUE = 1: --> 3 limit switch positions (5 switches) = Default
+           assigned Inputs: DI_KL_EIN1, DI_KL_EIN2, DI_E_MITT, DI_KL_AUS1, DI_KL_AUS2.
+
+---------------------------------------------------------------------------------------------- 
+
+Parameters:
+Import the file "EXPORT_REAKTOR$$$.PAR" into the parameter file for the engine:
+    EXPORT_REAKTOR V2.3x bis V2.6x yyy.PAR, resp.
+    EXPORT_REAKTOR ab V3.1x.PAR
+
+
+After the test bench / Before commissioning set the parameter
+"Engine data\Thermal reactor" = 1 (User for write = 45)
+
+---------------------------------------------------------------------------------------------- 
+---------------------------------------------------------------------------------------------- 
+
+for the version "without gas injection" apply additionally:
+
+Task “reac_set”
+    sel_woGas := TRUE;
+    (* --> check/choose Reserve Parameter No. plant specific ! *)
+
+Parameters:
+Import additionally the following file into the parameter file for the engine:
+    EXPORT_woGas V2.0 bis V2.6.PAR, resp.
+    EXPORT_woGas ab V3.1.PAR
+    (* --> check/choose Reserve Parameter No. plant specific ! *)
+
+    from XT V3.1x.x upwards: 
+    use "ParaText.mdb" for the text of the reserve parameters
+
+---------------------------------------------------------------------------------------------- 

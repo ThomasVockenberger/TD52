@@ -1,0 +1,11 @@
+(*Helper Variables*)
+VAR CONSTANT
+	anaOffset : SINT := -40;
+	digOffset : SINT := -80;
+END_VAR
+VAR
+	x : USINT := 0;
+	bPlaceHolderCustomSignal : ARRAY[0..32] OF BOOL := [33(FALSE)];
+	rPlaceHolderCustomSignal : ARRAY[0..32] OF REAL := [33(0.0)];
+	bPlaceHolderCustomSignalGoodQual : ARRAY[0..32] OF BOOL := [33(FALSE)];
+END_VAR

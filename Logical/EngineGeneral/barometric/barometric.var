@@ -1,0 +1,12 @@
+VAR
+	bRelMon_Pr_Baro : BOOL := FALSE; (*Release monitoring barometric pressure*)
+END_VAR
+VAR CONSTANT
+	TASK_TIME_100MS : UINT := 100; (*Taskklassen Zeit 100ms *)
+END_VAR
+VAR
+	xGR_MAXR_Baro : GR_MAXR := (0); (*FuB*)
+	xGR_MINR_Baro : GR_MINR := (0); (*FuB*)
+	xRAMPE_R_Pr_Baro : RAMPE_R := (0); (*FuB*)
+	xTOF_AMM_Pr_Baro : TOF := (0); (*FuB*)
+END_VAR

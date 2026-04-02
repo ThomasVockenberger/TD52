@@ -1,0 +1,17 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: gasum_st
+ * File: gasum_st.var
+ * Author: 105051626
+ * Created: April 19, 2012
+ ********************************************************************
+ * Local variables of program gasum_st
+ ********************************************************************)
+VAR
+	ZM : BOOL := 0; (* Zwischenmerker*)
+	ST6 : BOOL;
+	AF_GASUM : BOOL; (* Anforderung Gasumschaltung *)
+	xTON_FA_T6 : TON;
+	AT6 : BOOL;
+END_VAR

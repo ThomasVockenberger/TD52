@@ -1,0 +1,28 @@
+(********************************************************************
+* COPYRIGHT -- INNIO Company
+********************************************************************
+* File: PIC.vvm
+* Author: automatically generated 
+* Created: 07.03.2014
+********************************************************************
+* PV mapping file
+********************************************************************)
+VAR_CONFIG
+	Cyclic#4.AmmBase::OUT_AB.tAB2IC AT %Q.Cyclic#5.ICxx::IN_IC.tAB2IC; (*V4.05 changed 2-->5*)
+	Cyclic#2.AmmBase::OUT_AB.tAB2IC AT %Q.Cyclic#2.ICxx::IN_IC.tAB2IC_TC2; (*V4.12*)
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#5.ICxx::IN_IC.tPB2MM;
+	Cyclic#5.Ignition::OUT_IG.bIgn_SelfTest AT %Q.Cyclic#5.ICxx::IN_IC.bIgn_SelfTest;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem AT %Q.Cyclic#5.ICxx::IN_IC.bEng_Dem;
+	Cyclic#4.HalIO::OUT_HA.iCANIdent AT %Q.Cyclic#5.ICxx::IN_IC.iCANIdent; (*V4.05 changed 2-->5*)
+	Cyclic#2.HalIO::OUT_HA.iCANIdent AT %Q.Cyclic#8.ICxx::IN_IC.iCANIdent_TC8; (*V4.12*)
+	Cyclic#2.Opstate::OUT_OP.iSt_OpMode AT %Q.Cyclic#2.ICxx::IN_IC.iSt_OpMode; (*V4.05 changed 2-->2*)
+	Cyclic#5.Opstate::OUT_OP.iIdx_OMSS AT %Q.Cyclic#5.ICxx::IN_IC.iIdx_OMSS; (*V4.05 changed 5-->5*)
+	Cyclic#4.EngineController::OUT_EC.rCA_IgnP_Set AT %Q.Cyclic#5.ICxx::IN_IC.rCA_IgnP_Set; (*V4.05 changed 2-->5*)
+	Cyclic#2.EngineController::OUT_EC.rCA_IgnP_Set AT %Q.Cyclic#2.ICxx::IN_IC.rCA_IgnP_Set_TC2; (*V4.12*)
+	Cyclic#4.EngineController::OUT_EC.rCA_Ign_Act AT %Q.Cyclic#5.ICxx::IN_IC.rCA_Ign_Act;
+	Cyclic#2.EngineController::OUT_EC.rCA_Ign_Act AT %Q.Cyclic#2.ICxx::IN_IC.rCA_Ign_Act_TC2; (*V4.12*)
+	Cyclic#2.Opstate::OUT_OP.bIgn_Dem AT %Q.Cyclic#2.ICxx::IN_IC.bIgn_Dem;
+	Cyclic#1.EngineController::OUT_EC.iMisfCyl AT %Q.Cyclic#1.ICxx::IN_IC.iMisfCyl;
+	Cyclic#5.HalIO::OUT_HA.bSimWinMOD_Active AT %Q.Cyclic#5.ICxx::IN_IC.bSimWinMOD_Active;
+	Cyclic#4.Opstate::OUT_OP.rP_Act_Norm_Filt AT %Q.Cyclic#5.ICxx::IN_IC.rP_Act_Norm_Filt; (*V4.12*)
+END_VAR

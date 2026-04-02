@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.25.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="DataObject" Language="Simple" Description="HalIO META data module">META_HA</Object>
+    <Object Type="File" Description="HalIO Package data types" Private="true">Module_HA.typ</Object>
+    <Object Type="File" Description="HalIO Parameter data type" Private="true">Module_HAPara.typ</Object>
+    <Object Type="File" Description="HalIO Custom IO variables" Private="true">Module_HA_IO_Custom.var</Object>
+    <Object Type="File" Description="HalIO IO variables" Private="true">Module_HA_IO.var</Object>
+    <Object Type="File" Description="HalIO Package variables" Private="true">Module_HA.var</Object>
+    <Object Type="Program" Language="IEC" Description="HalIO Custom IO">IO_Custom</Object>
+    <Object Type="Program" Language="IEC" Description="HalIO read &amp; write IO channel">IOchannel</Object>
+    <Object Type="Program" Language="IEC" Description="HalIO read &amp; write IO channel">IOchannelEval</Object>
+    <Object Type="Program" Language="IEC">IOchannelPara</Object>
+    <Object Type="Program" Language="IEC" Description="+ HalIO Read META file data">RdMeta</Object>
+    <Object Type="Program" Language="IEC" Description="+ HalIO Multi measure device 1">MMUsync1</Object>
+    <Object Type="Program" Language="IEC" Description="+ HalIO Multi measure device 2">MMUsync2</Object>
+    <Object Type="Program" Language="IEC" Description="+ HalIO Check IO modules">mod_chk</Object>
+    <Object Type="Program" Language="IEC" Description="+ HalIO List IO modules">mod_list</Object>
+    <Object Type="Program" Language="IEC" Description="+ HalIO pt100 filter ">modFilt</Object>
+    <Object Type="Program" Language="IEC" Description="+ HalIO Control of gasmixer with X20SM1426">gm_X20SM_HA</Object>
+    <Object Type="Program" Language="IEC" Description="+ detection of Windows BSOD">BSOD_chk</Object>
+    <Object Type="Program" Language="IEC" Description="+ HalIO Input to HalIO from other modules">IN_HA</Object>
+    <Object Type="Program" Language="IEC" Description="HalIO Output from HalIO to other modules">OUT_HA</Object>
+    <Object Type="Program" Language="IEC" Description="+ HalIO Messages">MsgHA</Object>
+    <Object Type="Program" Language="IEC" Description="+ HalIO Parameter">ParHA</Object>
+    <Object Type="Package" Description="CAN">CAN</Object>
+    <Object Type="DataObject" Language="Simple" Description="HalIO IO configuration">IOcfg</Object>
+    <Object Type="DataObject" Language="Simple" Description="HalIO All IO configurations">IOcfgAll</Object>
+    <Object Type="DataObject" Language="Simple" Description="HalIO All IO configurations">IOcfgAll_UR20</Object>
+    <Object Type="Package">PlantCommunication</Object>
+  </Objects>
+</Package>

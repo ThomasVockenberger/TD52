@@ -1,0 +1,11 @@
+VAR
+	xGRMAX_T_InAirER_LimHi_Lou : GR_MAXR;
+	xGRMAX_T_InAirER_LimHi_Fan : GR_MAXR;
+	rT_Pred_InAirER_Start1 : REAL;
+	rT_Pred_InAirER_Rate1 : REAL;
+	rT_Pred_InAirER_Start2 : REAL;
+	rT_Pred_InAirER_Rate2 : REAL;
+	rP_Red_T_InAirER_Lim1 : REAL;
+	rP_Red_T_InAirER_Lim2 : REAL;
+	rP_Red_T_InAirER_Lim : REAL;
+END_VAR

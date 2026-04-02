@@ -1,0 +1,6 @@
+VAR
+	xTON_PRF : TON;
+	xR_TRIG_PRF : R_TRIG;
+	xTON_NP : TON;
+	xTOF_PRF : TOF;
+END_VAR

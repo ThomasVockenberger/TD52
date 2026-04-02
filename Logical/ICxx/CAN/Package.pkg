@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.13.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Program" Language="IEC" Description="+ IC CAN communication init">caniniIc</Object>
+    <Object Type="DataObject" Language="Simple" Description="+ IC CAL ignition">cmsign</Object>
+    <Object Type="Program" Language="IEC" Description="+ IC CAN updater">IC_Updater</Object>
+    <Object Type="File" Description="SEMIC firmware 201.25 (SEM version 3.13.9319)">SEMIC_25.br</Object>
+  </Objects>
+</Package>

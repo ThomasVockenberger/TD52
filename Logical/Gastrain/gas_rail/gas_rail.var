@@ -1,0 +1,22 @@
+VAR
+	bRelMon_Pr_GR_I : BOOL := FALSE; (*Release monitoring gas sensor 1*)
+	bRelMon_Pr_GR_II : BOOL := FALSE; (*Release monitoring gas sensor 2*)
+	bRelMon_T_GR : BOOL := FALSE; (*Release monitoring gas rail temperature*)
+	LCRMAF_PGR_Deviation : LCRMovAvgFlt;
+	xGR_MAX_AGRPR : GR_MAXR := (0); (*FuB*)
+	xGR_MAX_AGRTP : GR_MAXR := (0); (*FuB*)
+	xGR_MAX_APDPR : GR_MAXR := (0); (*FuB*)
+	xGR_MAX_WGRTP : GR_MAXR := (0); (*FuB*)
+	xGR_MIN_APDPR : GR_MINR := (0); (*FuB*)
+	xGR_MIN_WGRTP : GR_MINR := (0); (*FuB*)
+	xTOF_AMM_Pr_GR_II_MS : TOF := (0); (*FuB*)
+	xTOF_AMM_Pr_GR_I_MS : TOF := (0); (*FuB*)
+	xTOF_AMM_T_GR_MS : TOF := (0); (*FuB*)
+	xGR_MAX_Deviation : GR_MAXR;
+	rP_norm_red_1 : REAL; (*power reduction boost pressure of the limited power of nominal power  *)
+	rP_norm_red_2 : REAL; (*power reduction derating curve for the engine of nominal power  *)
+	xGR_MIN_Red1_DP : GR_MINR; (* GR_MIN for power reduction GR *)
+	rHy_GR_MIN : REAL := 0.25; (* Gas train diff pressure for power reduction hysteresis *)
+	rPr_GR_Threshold : REAL := 0.05; (* Threshold for difference between main gas pressure after filter and gas rail pressure [bar] *) 
+	xTP_Pr_MGT_a_Filt_Min : TP; (* TP for difference between main gas pressure after filter and gas rail pressure minimum *)
+END_VAR

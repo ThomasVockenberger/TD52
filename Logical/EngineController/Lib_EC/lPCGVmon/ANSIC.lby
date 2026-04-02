@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.0.0.0?><Library xmlns="http://br-automation.co.at/AS/Library" SubType="ANSIC" Version="1.00.0">
+   <Files>
+      <File>PCGVmon.c</File>
+      <File>PCGVmon.h</File>
+      <File>PCGVmon_private.h</File>
+      <File>PCGVmon_types.h</File>
+      <File>fPCGVmon.c</File>
+      <File>lPCGVmon.fun</File>
+      <File>lPCGVmon.typ</File>
+      <File>lPCGVmon.var</File>
+      <File>lib_properties.txt</File>
+      <File>rt_defines.h</File>
+      <File>rtwtypes.h</File>
+   </Files>
+</Library>

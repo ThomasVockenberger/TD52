@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Library xmlns="http://br-automation.co.at/AS/Library" Version="1.00.0">
+   <Objects>
+      <Object Type="File">AC_SS_Cust.c</Object>
+      <Object Type="File">AC_SS_Cust.h</Object>
+      <Object Type="File">AC_SS_Cust_private.h</Object>
+      <Object Type="File">AC_SS_Cust_types.h</Object>
+      <Object Type="File">SS_Cust.c</Object>
+      <Object Type="File">lSS.fun</Object>
+      <Object Type="File">lSS.typ</Object>
+      <Object Type="File">lSS.var</Object>
+      <Object Type="File">lib_properties.txt</Object>
+      <Object Type="File">rtwtypes.h</Object>
+      <Object Type="File">AC_SS.c</Object>
+      <Object Type="File">AC_SS.h</Object>
+      <Object Type="File">AC_SS_data.c</Object>
+      <Object Type="File">AC_SS_private.h</Object>
+      <Object Type="File">AC_SS_types.h</Object>
+      <Object Type="File">SS.c</Object>
+   </Objects>
+</Library><?AutomationStudio Version=?>

@@ -1,0 +1,37 @@
+(********************************************************************
+* COPYRIGHT -- INNIO Company
+********************************************************************
+* File: PCP.vvm
+* Author: autmatically generated 
+* Created: 12.09.2013
+********************************************************************
+* PV mapping file
+********************************************************************)
+VAR_CONFIG
+	Cyclic#4.AmmBase::OUT_AB.iMsg AT %Q.Cyclic#5.Coupling::IN_CP.iMsg; (*V4.7*)
+	Cyclic#4.AmmBase::OUT_AB.tAB2CP AT %Q.Cyclic#5.Coupling::IN_CP.tAB2CP; (*V4.05 changed 2-->5*)
+	Cyclic#5.Customized::OUT_CU.rCustomizedCP AT %Q.Cyclic#5.Coupling::IN_CP.rCustomizedCP; (*New customizable interface 2017 - BETA PHASE, use only in coordination with TPSS	*)
+	Cyclic#6.Customized::OUT_CU.tCU2CP_OutData AT %Q.Cyclic#6.Coupling::IN_CP.tCU2CP_OutData;
+	Cyclic#5.Emission::OUT_EM.iModbus_SCR AT %Q.Cyclic#5.Coupling::IN_CP.iModbus_SCR; (*SCR Modbus RTU Master*)
+	Cyclic#5.HalIO::OUT_HA.bSimWinMOD_Active AT %Q.Cyclic#5.Coupling::IN_CP.bSimWinMOD_Active; (*WinMOD*)
+	Cyclic#5.HalIO::OUT_HA.bSimWinMOD_withoutBus_Active AT %Q.Cyclic#5.Coupling::IN_CP.bSimWinMOD_withoutBus_Active; (*WinMOD*)
+	Cyclic#4.HalIO::OUT_HA.szMBRTU_DeviceName AT %Q.Cyclic#5.Coupling::IN_CP.szMBRTU_DeviceName; (*V4.05 changed 8-->5*)
+	Cyclic#5.HalIO::OUT_HA.szMBTCP1_DeviceName AT %Q.Cyclic#5.Coupling::IN_CP.szMBTCP1_DeviceName;
+	Cyclic#4.HalIO::OUT_HA.szMBTCP_DeviceName AT %Q.Cyclic#5.Coupling::IN_CP.szMBTCP_DeviceName; (*V4.05 changed 8-->5*)
+	Cyclic#4.HalIO::OUT_HA.szPB1_DeviceName AT %Q.Cyclic#5.Coupling::IN_CP.szPB1_DeviceName; (*V4.05 changed 8-->5*)
+	Cyclic#4.HalIO::OUT_HA.szPB2_DeviceName AT %Q.Cyclic#5.Coupling::IN_CP.szPB2_DeviceName; (*V4.05 changed 8-->5*)
+	Cyclic#4.HalIO::OUT_HA.szPN_DeviceName AT %Q.Cyclic#5.Coupling::IN_CP.szPN_DeviceName; (*V4.05 changed 8-->5*)
+	Cyclic#5.HalIO::tGCB_On AT %Q.Cyclic#5.Coupling::IN_CP.tGCB_On;
+	Cyclic#5.HalIO::tMCB_On AT %Q.Cyclic#5.Coupling::IN_CP.tMCB_On;
+	Cyclic#5.Opstate::OUT_OP.iIdx_OMSS AT %Q.Cyclic#5.Coupling::IN_CP.iIdx_OMSS; (*V4.05 changed 5-->5*)
+	Cyclic#5.Opstate::OUT_OP.iIdx_RSS AT %Q.Cyclic#5.Coupling::IN_CP.iIdx_RSS; (*V4.05 changed 5-->5*)
+	Cyclic#6.Opstate::OUT_OP.tEng_Rdy_Rem AT %Q.Cyclic#6.Coupling::IN_CP.tEng_Rdy_Rem;
+	Cyclic#5.Opstate::OUT_OP.tEng_Run AT %Q.Cyclic#5.Coupling::IN_CP.tEng_Run;
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#5.Coupling::IN_CP.tPB2MM;
+	Cyclic#5.Customized::OUT_CU.rCust_SparePara AT %Q.Cyclic#5.Coupling::IN_CP.rCust_SparePara; (*V4.10 added*)
+	Cyclic#4.HalIO::OUT_HA.szMBTCP2_DeviceName AT %Q.Cyclic#5.Coupling::IN_CP.szMBTCP2_DeviceName; (*V4.12 added*)
+	Cyclic#4.HalIO::OUT_HA.szMBTCP3_DeviceName AT %Q.Cyclic#5.Coupling::IN_CP.szMBTCP3_DeviceName; (*V4.12 added*)
+	Cyclic#5.Customized::OUT_CU.bBus_Dem_OpcUa AT %Q.Cyclic#5.Coupling::IN_CP.bBus_Dem_OpcUa;
+	Cyclic#5.Customized::OUT_CU.bBusPulse_OpcUa AT %Q.Cyclic#5.Coupling::IN_CP.bBusPulse_OpcUa;
+	Cyclic#5.Customized::OUT_CU.rP_Set_OpcUa AT %Q.Cyclic#5.Coupling::IN_CP.rP_Set_OpcUa;
+END_VAR

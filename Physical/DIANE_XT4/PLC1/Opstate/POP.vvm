@@ -1,0 +1,354 @@
+(* AmmBase *)
+VAR_CONFIG
+	Cyclic#2.AmmBase::OUT_AB.tAB2OP AT %Q.Cyclic#2.Opstate::IN_OP.tAB2OP;
+	Cyclic#2.AmmBase::OUT_AB.bServiceMode AT %Q.Cyclic#2.Opstate::IN_OP.bServiceMode;
+END_VAR
+(* AuxiliariesGeneral *)
+VAR_CONFIG
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bEng_Start AT %Q.Cyclic#2.Opstate::IN_OP.bEng_Start;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bGV_Start_ScaveBlock AT %Q.Cyclic#2.Opstate::IN_OP.bGV_Start_ScaveBlock;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bJmpPLTime AT %Q.Cyclic#2.Opstate::IN_OP.bJmpPLTime;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bLockAckStarter AT %Q.Cyclic#2.Opstate::IN_OP.bLockAckStarter;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bMaxPreLubeTime AT %Q.Cyclic#2.Opstate::IN_OP.bMaxPreLubeTime;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bRel_IgnOn AT %Q.Cyclic#2.Opstate::IN_OP.bRel_IgnOn;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bRelEngOp_Aux AT %Q.Cyclic#2.Opstate::IN_OP.bRelEngOp_Aux;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bT_EOP_RelLoad AT %Q.Cyclic#2.Opstate::IN_OP.bT_EOP_RelLoad;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.rP_Red_Pr_CC_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_Pr_CC_Norm;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.rP_Red_T_Oil_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_T_Oil_Norm;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.rP_Red_TransformerWarning_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_TransformerWarning_Norm;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bP_Red_TransformerWarning_Sel AT %Q.Cyclic#2.Opstate::IN_OP.bP_Red_TransformerWarning_Sel;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.iStartCount AT %Q.Cyclic#2.Opstate::IN_OP.iStartCount;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bMsg9214 AT %Q.Cyclic#2.Opstate::IN_OP.bMsg9214; (*SWAT920/5*)
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bMsg2524 AT %Q.Cyclic#2.Opstate::IN_OP.bMsg2524;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bMsg1054 AT %Q.Cyclic#5.Opstate::IN_OP.bMsg1054; (*V04.10.00.00*)
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bSt_RelAuxOff_STT_op AT %Q.Cyclic#2.Opstate::IN_OP.bSt_RelAuxOff_STT_op; (*V04.14.00.00*)
+END_VAR
+(* ChargingUnit *)
+VAR_CONFIG
+	Cyclic#2.ChargingUnit::OUT_CH.bRelEngStart_Ch_T2 AT %Q.Cyclic#2.Opstate::IN_OP.bRelEngStart_Ch_T2; (*V04.12.00.00*)
+	Cyclic#2.ChargingUnit::OUT_CH.rP_Red_Ch_T2HP_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_Ch_T2HP_Norm; (*V04.12.00.00*)
+	Cyclic#2.ChargingUnit::OUT_CH.rP_Red_Ch_T2LP_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_Ch_T2LP_Norm; (*V04.12.00.00*)
+	Cyclic#2.ChargingUnit::OUT_CH.rP_Red_Ch_T2s_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_Ch_T2s_Norm;
+	Cyclic#4.ChargingUnit::OUT_CH.rP_Red_Ch_T2s_Norm AT %Q.Cyclic#5.Opstate::IN_OP.rP_Red_Ch_T2s_Norm_TC5;
+	Cyclic#5.ChargingUnit::OUT_CH.rP_Red_TC_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_TC_Norm;
+END_VAR
+(* Coupling *)
+VAR_CONFIG
+	Cyclic#5.Coupling::OUT_CP.bBus_Dem AT %Q.Cyclic#2.Opstate::IN_OP.bBus_Dem;
+	Cyclic#5.Coupling::OUT_CP.bN_Set_ExtBus_Enable AT %Q.Cyclic#2.Opstate::IN_OP.bN_Set_ExtBus_Enable;
+	Cyclic#5.Coupling::OUT_CP.bP_Set_ExtBus_Enable AT %Q.Cyclic#2.Opstate::IN_OP.bP_Set_ExtBus_Enable;
+	Cyclic#5.Coupling::OUT_CP.rN_Set_ExtBus_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rN_Set_ExtBus_Norm;
+	Cyclic#5.Coupling::OUT_CP.rP_Red_ExtBus_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_ExtBus_Norm;
+	Cyclic#5.Coupling::OUT_CP.rP_Set_ExtBus_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Set_ExtBus_Norm;
+END_VAR
+(* Customized *)
+VAR_CONFIG
+	Cyclic#5.Customized::OUT_CU.bEng_Block_Customized AT %Q.Cyclic#2.Opstate::IN_OP.bEng_Block_Customized;
+	Cyclic#5.Customized::OUT_CU.bEng_Block_EVU AT %Q.Cyclic#2.Opstate::IN_OP.bEng_Block_EVU;
+	Cyclic#5.Customized::OUT_CU.bEngDSS_Mains AT %Q.Cyclic#2.Opstate::IN_OP.bEngDSS_Mains;
+	Cyclic#5.Customized::OUT_CU.bN_Set_ExtAI_Enable AT %Q.Cyclic#2.Opstate::IN_OP.bN_Set_ExtAI_Enable;
+	Cyclic#5.Customized::OUT_CU.bP_Red_Sp_Lim1Act AT %Q.Cyclic#2.Opstate::IN_OP.bP_Red_Sp_Lim1Act;
+	Cyclic#5.Customized::OUT_CU.bP_Red_Sp_Lim2Act AT %Q.Cyclic#2.Opstate::IN_OP.bP_Red_Sp_Lim2Act;
+	Cyclic#5.Customized::OUT_CU.bP_Red_Sp_Lim3Act AT %Q.Cyclic#2.Opstate::IN_OP.bP_Red_Sp_Lim3Act;
+	Cyclic#5.Customized::OUT_CU.bP_Set_ExtAI_Enable AT %Q.Cyclic#2.Opstate::IN_OP.bP_Set_ExtAI_Enable;
+	Cyclic#5.Customized::OUT_CU.bP_Set_ExtDI_Enable AT %Q.Cyclic#2.Opstate::IN_OP.bP_Set_ExtDI_Enable;
+	Cyclic#5.Customized::OUT_CU.rCust_SparePara AT %Q.Cyclic#2.Opstate::IN_OP.rCust_SparePara;
+	Cyclic#5.Customized::OUT_CU.rN_Set_ExtAI_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rN_Set_ExtAI_Norm;
+	Cyclic#5.Customized::OUT_CU.rP_Set_ExtDI_Cust_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Set_ExtDI_Cust_Norm; (*V4.03.00.00 added; functional replacement for outdated Opstate::IN_OP.rP_Set_ExtDI_Norm*)
+	Cyclic#5.Customized::OUT_CU.rP_Set_Ctr_Mns_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Set_Ctr_Mns_Norm; (* ! new V4.5 2017 !  (Prepared)	 *)
+	Cyclic#5.Customized::OUT_CU.bP_Set_Ctr_Mns_Enable AT %Q.Cyclic#2.Opstate::IN_OP.bP_Set_Ctr_Mns_Enable; (* ! new V4.5 2017 ! *)
+	Cyclic#5.Customized::OUT_CU.rP_Red_AI_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_AI_Norm;
+	Cyclic#5.Customized::OUT_CU.rP_Red_EVU_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_EVU_Norm;
+	Cyclic#5.Customized::OUT_CU.rP_Red_Sp_Lim1_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_Sp_Lim1_Norm;
+	Cyclic#5.Customized::OUT_CU.rP_Red_Sp_Lim2_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_Sp_Lim2_Norm;
+	Cyclic#5.Customized::OUT_CU.rP_Red_Sp_Lim3_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_Sp_Lim3_Norm;
+	Cyclic#5.Customized::OUT_CU.rP_Set_ExtAI_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Set_ExtAI_Norm;
+	Cyclic#5.Customized::OUT_CU.bP_Droop_Set_Bus AT %Q.Cyclic#2.Opstate::IN_OP.bP_Droop_Set_Bus;
+	Cyclic#5.Customized::OUT_CU.rP_Droop_Set_Bus_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Droop_Set_Bus_Norm;
+	Cyclic#5.Customized::OUT_CU.rN_Offs_Cust AT %Q.Cyclic#2.Opstate::IN_OP.rN_Offs_Cust;
+	Cyclic#5.Customized::OUT_CU.bCust_Dem AT %Q.Cyclic#2.Opstate::IN_OP.bCust_Dem;
+	Cyclic#5.Customized::OUT_CU.bRelSy_Customized AT %Q.Cyclic#2.Opstate::IN_OP.bRelSy_Customized;
+	Cyclic#2.Customized::OUT_CU.bBloc_SY_ProtTest AT %Q.Cyclic#2.Opstate::IN_OP.bBloc_SY_ProtTest;
+	Cyclic#5.Customized::OUT_CU.bBloc_SY_Rel_Cust AT %Q.Cyclic#2.Opstate::IN_OP.bBloc_SY_Rel_Cust; (*V4.10 added*)
+	Cyclic#5.Customized::OUT_CU.bRel_P_Red_I_Bus AT %Q.Cyclic#2.Opstate::IN_OP.bRel_P_Red_I_Bus; (*V4.10 added*)
+	Cyclic#5.Customized::OUT_CU.bReq_PowMod AT %Q.Cyclic#2.Opstate::IN_OP.bReq_PowMod;
+	Cyclic#5.Customized::OUT_CU.bReq_PowMod_Ext AT %Q.Cyclic#2.Opstate::IN_OP.bReq_PowMod_Ext; (*V4.10 added*)
+	Cyclic#5.Customized::OUT_CU.bP_Droop_Set_AI AT %Q.Cyclic#2.Opstate::IN_OP.bP_Droop_Set_AI; (*V4.11 added*)
+	Cyclic#5.Customized::OUT_CU.rP_Droop_Set_AI_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Droop_Set_AI_Norm; (*V4.11 added Droop Offset Setpoint via AI [%Pnom] *)
+	Cyclic#5.Customized::OUT_CU.iSource_F_N_OffsSet AT %Q.Cyclic#2.Opstate::IN_OP.iSource_F_N_OffsSet; (* F/N Setpoint: 0= no setpoint, 1= Droop, 2= External, 3= LSL *)
+	Cyclic#5.Customized::OUT_CU.bUseEventBased_P_Set AT %Q.Cyclic#2.Opstate::IN_OP.bUseEventBased_P_Set; (*v4.13*)
+	Cyclic#5.Customized::OUT_CU.rP_Set_Norm_EventBased AT %Q.Cyclic#2.Opstate::IN_OP.rP_Set_Norm_EventBased; (*v4.13*)
+	Cyclic#5.Customized::OUT_CU.bOM_Bus AT %Q.Cyclic#2.Opstate::IN_OP.bOM_Bus; (*v4.13*)
+	Cyclic#5.Customized::OUT_CU.rSetPointPW AT %Q.Cyclic#2.Opstate::IN_OP.rSetPointPW; (*v4.13*)
+	Cyclic#5.Customized::OUT_CU.bEvent_Change AT %Q.Cyclic#2.Opstate::IN_OP.bEvent_Change; (*v4.13*)
+	Cyclic#5.Customized::OUT_CU.bGCB_OGP_Bus AT %Q.Cyclic#2.Opstate::IN_OP.bGCB_OGP_Bus; (*v4.13*)
+	Cyclic#5.Customized::OUT_CU.bEng_Dem_EPS_Bus AT %Q.Cyclic#2.Opstate::IN_OP.bEng_Dem_EPS_Bus; (*v4.13*)
+	Cyclic#5.Customized::OUT_CU.bOtherGeneratorsInLSL AT %Q.Cyclic#2.Opstate::IN_OP.bOtherGeneratorsInLSL; (* True if other generators are participating in LSL *)
+	Cyclic#5.Customized::OUT_CU.bExtendedOpRangeRel AT %Q.Cyclic#2.Opstate::IN_OP.bExtendedOpRangeRel;
+	Cyclic#5.Customized::OUT_CU.rP_Set_Min_Norm_Ext AT %Q.Cyclic#2.Opstate::IN_OP.rP_Set_Min_Norm_Ext;
+END_VAR
+(* EngineController *)
+VAR_CONFIG
+	Cyclic#2.EngineController::OUT_EC.bLeanox_Active AT %Q.Cyclic#2.Opstate::IN_OP.bLeanox_Active;
+	Cyclic#2.EngineController::OUT_EC.bLeanox_Man AT %Q.Cyclic#2.Opstate::IN_OP.bLeanox_Man;
+	Cyclic#2.EngineController::OUT_EC.bMsg3583 AT %Q.Cyclic#2.Opstate::IN_OP.bMsg3583;
+	Cyclic#2.EngineController::OUT_EC.bMsg3584 AT %Q.Cyclic#2.Opstate::IN_OP.bMsg3584;
+	Cyclic#2.EngineController::OUT_EC.bSG_Eng_Block_EGT AT %Q.Cyclic#2.Opstate::IN_OP.bSG_Eng_Block_EGT;
+	Cyclic#2.EngineController::OUT_EC.bSG_FPR AT %Q.Cyclic#2.Opstate::IN_OP.bSG_FPR;
+	Cyclic#2.EngineController::OUT_EC.rP_Red_EGT_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_EGT_Norm;
+	Cyclic#2.EngineController::OUT_EC.rP_Red_HiCtr_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_HiCtr_Norm;
+	Cyclic#2.EngineController::OUT_EC.rP_Red_Hum_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_Hum_Norm;
+	Cyclic#2.EngineController::OUT_EC.rP_Red_Knck_Opti_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_Knck_Opti_Norm;
+	Cyclic#2.EngineController::OUT_EC.rP_Red_Leanox_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_Leanox_Norm;
+	Cyclic#2.EngineController::OUT_EC.rP_Red_Misf_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_Misf_Norm;
+	Cyclic#2.EngineController::OUT_EC.rP_Red_PBC_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_PBC_Norm;
+	Cyclic#2.EngineController::OUT_EC.rP_Red_SG_Norm_Pred AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_SG_Norm_Pred;
+	Cyclic#2.EngineController::OUT_EC.rP_Red_SG_Norm_FPR AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_SG_Norm_FPR;
+	Cyclic#2.EngineController::OUT_EC.rPos_CBV AT %Q.Cyclic#2.Opstate::IN_OP.rPos_CBV;
+	Cyclic#2.EngineController::OUT_EC.bEng_Bloc_EC AT %Q.Cyclic#2.Opstate::IN_OP.bEng_Bloc_EC;
+	Cyclic#2.EngineController::OUT_EC.ti_MisfShutDown AT %Q.Cyclic#2.Opstate::IN_OP.ti_MisfShutDown;
+	Cyclic#2.EngineController::OUT_EC.bGen2_Act AT %Q.Cyclic#2.Opstate::IN_OP.bGen2_Act;
+	Cyclic#2.EngineController::OUT_EC.rP_GEN2_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_GEN2_Norm;
+	Cyclic#2.EngineController::OUT_EC.bFastRamp_Rel AT %Q.Cyclic#2.Opstate::IN_OP.bFastRamp_Rel;
+	Cyclic#2.EngineController::OUT_EC.rP_Ramp_FS_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Ramp_FS_Norm;
+	Cyclic#2.EngineController::OUT_EC.bsy_lfg_SG AT %Q.Cyclic#2.Opstate::IN_OP.bsy_lfg_SG;
+	Cyclic#2.EngineController::OUT_EC.bFS_Act AT %Q.Cyclic#2.Opstate::IN_OP.bFS_Act; (*Insert your comment here...*)
+	Cyclic#2.EngineController::OUT_EC.bPBC_Active AT %Q.Cyclic#2.Opstate::IN_OP.bPBC_Active;
+	Cyclic#2.EngineController::OUT_EC.bBloc_SY_FS AT %Q.Cyclic#2.Opstate::IN_OP.bBloc_SY_FS;
+	Cyclic#2.EngineController::OUT_EC.bReady4VeryFastStart AT %Q.Cyclic#2.Opstate::IN_OP.bReady4VeryFastStart;
+	Cyclic#2.EngineController::OUT_EC.bReady4FastStart AT %Q.Cyclic#2.Opstate::IN_OP.bReady4FastStart;
+	Cyclic#2.EngineController::OUT_EC.bVeryFastStart_Prep AT %Q.Cyclic#2.Opstate::IN_OP.bVeryFastStart_Prep;
+	Cyclic#2.EngineController::OUT_EC.bFastStart_Prep AT %Q.Cyclic#2.Opstate::IN_OP.bFastStart_Prep;
+	Cyclic#2.EngineController::OUT_EC.rP_Red_CppInt_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_CppInt_Norm;
+	Cyclic#2.EngineController::OUT_EC.iFastStart AT %Q.Cyclic#2.Opstate::IN_OP.iFastStart;
+	Cyclic#2.EngineController::OUT_EC.bFastChange AT %Q.Cyclic#2.Opstate::IN_OP.bFastChange;
+	Cyclic#2.EngineController::OUT_EC.bFastStart_ready_running AT %Q.Cyclic#2.Opstate::IN_OP.bFastStart_ready_running;
+	Cyclic#2.EngineController::OUT_EC.bBlock_WG_CAN_Conf AT %Q.Cyclic#2.Opstate::IN_OP.bBlock_WG_CAN_Conf;
+END_VAR
+(* EngineGeneral *)
+VAR_CONFIG
+	Cyclic#5.EngineGeneral::OUT_EG.bMsg1026 AT %Q.Cyclic#2.Opstate::IN_OP.bMsg1026;
+	Cyclic#5.EngineGeneral::OUT_EG.bMsg1031 AT %Q.Cyclic#2.Opstate::IN_OP.bMsg1031;
+END_VAR
+(* Exhaust *)
+VAR_CONFIG
+	Cyclic#5.Exhaust::OUT_EX.bDemScavVa AT %Q.Cyclic#2.Opstate::IN_OP.bDemScavVa;
+	Cyclic#5.Exhaust::OUT_EX.bEGScav_Rdy AT %Q.Cyclic#2.Opstate::IN_OP.bEGScav_Rdy;
+	Cyclic#5.Exhaust::OUT_EX.bN2_ScavCoStarterOn AT %Q.Cyclic#2.Opstate::IN_OP.bN2_ScavCoStarterOn;
+	Cyclic#5.Exhaust::OUT_EX.bPr_N2_LoTon AT %Q.Cyclic#2.Opstate::IN_OP.bPr_N2_LoTon;
+	Cyclic#5.Exhaust::OUT_EX.bRel_ScavN2 AT %Q.Cyclic#2.Opstate::IN_OP.bRel_ScavN2;
+	Cyclic#5.Exhaust::OUT_EX.bScavFinished AT %Q.Cyclic#2.Opstate::IN_OP.bScavFinished;
+	Cyclic#5.Exhaust::OUT_EX.bMsg1165 AT %Q.Cyclic#2.Opstate::IN_OP.bMsg1165; (*SWAT920/5*)
+	Cyclic#5.Exhaust::OUT_EX.bMsg9249 AT %Q.Cyclic#2.Opstate::IN_OP.bMsg9249;
+	Cyclic#5.Exhaust::OUT_EX.bEngBloc_EX AT %Q.Cyclic#2.Opstate::IN_OP.bEngBloc_EX;
+END_VAR
+(* Gasmixer *)
+VAR_CONFIG
+	Cyclic#5.Gasmixer::OUT_GM.bEng_Bloc_SGM AT %Q.Cyclic#2.Opstate::IN_OP.bEng_Bloc_SGM;
+END_VAR
+(* Gastrain *)
+VAR_CONFIG
+	Cyclic#5.Gastrain::OUT_GT.bDeflagrationPrct AT %Q.Cyclic#2.Opstate::IN_OP.bDeflagrationPrct;
+	Cyclic#2.Gastrain::OUT_GT.bGasMixingActive AT %Q.Cyclic#2.Opstate::IN_OP.bGasMixingActive;
+	Cyclic#5.Gastrain::OUT_GT.bGasSupplyOk AT %Q.Cyclic#2.Opstate::IN_OP.bGasSupplyOk;
+	Cyclic#5.Gastrain::OUT_GT.bGT_DemRelGasTypSwh AT %Q.Cyclic#2.Opstate::IN_OP.bGT_DemRelGasTypSwh;
+	Cyclic#5.Gastrain::OUT_GT.bGT_Ipol12Active AT %Q.Cyclic#2.Opstate::IN_OP.bGT_Ipol12Active;
+	Cyclic#5.Gastrain::OUT_GT.bGT_SelGas1 AT %Q.Cyclic#2.Opstate::IN_OP.bGT_SelGas1;
+	Cyclic#5.Gastrain::OUT_GT.bGT_SelGas2 AT %Q.Cyclic#2.Opstate::IN_OP.bGT_SelGas2;
+	Cyclic#5.Gastrain::OUT_GT.bGT_SelGas3 AT %Q.Cyclic#2.Opstate::IN_OP.bGT_SelGas3;
+	Cyclic#5.Gastrain::OUT_GT.bGT_SelGas4 AT %Q.Cyclic#2.Opstate::IN_OP.bGT_SelGas4;
+	Cyclic#5.Gastrain::OUT_GT.bGT_TypSwhActive AT %Q.Cyclic#2.Opstate::IN_OP.bGT_TypSwhActive;
+	Cyclic#5.Gastrain::OUT_GT.bGT_TypSwhActiveHalt AT %Q.Cyclic#2.Opstate::IN_OP.bGT_TypSwhActiveHalt;
+	Cyclic#5.Gastrain::OUT_GT.bGT2_Select AT %Q.Cyclic#2.Opstate::IN_OP.bGT2_Select;
+	Cyclic#5.Gastrain::OUT_GT.bGV_On AT %Q.Cyclic#2.Opstate::IN_OP.bGV_On;
+	Cyclic#5.Gastrain::OUT_GT.bIgnDeflPrct_Off AT %Q.Cyclic#2.Opstate::IN_OP.bIgnDeflPrct_Off;
+	Cyclic#5.Gastrain::OUT_GT.bSelGasTyp0 AT %Q.Cyclic#2.Opstate::IN_OP.bSelGasTyp0;
+	Cyclic#5.Gastrain::OUT_GT.bSelGasTyp1 AT %Q.Cyclic#2.Opstate::IN_OP.bSelGasTyp1;
+	Cyclic#5.Gastrain::OUT_GT.bSelGasTyp2 AT %Q.Cyclic#2.Opstate::IN_OP.bSelGasTyp2;
+	Cyclic#5.Gastrain::OUT_GT.bSelGasTyp3 AT %Q.Cyclic#2.Opstate::IN_OP.bSelGasTyp3;
+	Cyclic#5.Gastrain::OUT_GT.bSelGasTyp4 AT %Q.Cyclic#2.Opstate::IN_OP.bSelGasTyp4;
+	Cyclic#5.Gastrain::OUT_GT.bSelGasTypAut AT %Q.Cyclic#2.Opstate::IN_OP.bSelGasTypAut;
+	Cyclic#5.Gastrain::OUT_GT.iIdx_Gtyp_Dem AT %Q.Cyclic#2.Opstate::IN_OP.iIdx_Gtyp_Dem;
+	Cyclic#2.Gastrain::OUT_GT.rGT_QualMix_1_2 AT %Q.Cyclic#2.Opstate::IN_OP.rGT_QualMix_1_2;
+	Cyclic#2.Gastrain::OUT_GT.rGT_RatioMix AT %Q.Cyclic#2.Opstate::IN_OP.rGT_RatioMix;
+	Cyclic#5.Gastrain::OUT_GT.rP_Red_CH4_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_CH4_Norm;
+	Cyclic#5.Gastrain::OUT_GT.rP_Red_GasPr_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_GasPr_Norm;
+	Cyclic#5.Gastrain::OUT_GT.rP_Red_Pr_PCGT_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_Pr_PCGT_Norm;
+	Cyclic#5.Gastrain::OUT_GT.rP_Red_SuctPr_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_SuctPr_Norm;
+	Cyclic#2.Gastrain::OUT_GT.tGV_Rel AT %Q.Cyclic#2.Opstate::IN_OP.tGV_Rel;
+	Cyclic#5.Gastrain::OUT_GT.bAMM_Pr_MGT_a_Filt_BlockStart AT %Q.Cyclic#5.Opstate::IN_OP.bAMM_Pr_MGT_a_Filt_BlockStart; (*V4.05*)
+	Cyclic#5.Gastrain::OUT_GT.rP_Red_Pr_GR_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_Pr_GR_Norm; (*V4.05*)
+	Cyclic#5.Gastrain::OUT_GT.bAMM_Pr_PCGT_a_Filt_BlockStart AT %Q.Cyclic#5.Opstate::IN_OP.bAMM_Pr_PCGT_a_Filt_BlockStart; (*V4.05*)
+	Cyclic#5.Gastrain::OUT_GT.rP_Red_CV_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_CV_Norm;
+	Cyclic#5.Gastrain::OUT_GT.rP_Red_TJDiffPr_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_TJDiffPr_Norm;
+	Cyclic#5.Gastrain::OUT_GT.rP_Red_H2_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_H2_Norm;
+END_VAR
+(* Generator *)
+VAR_CONFIG
+	Cyclic#5.Generator::OUT_GC.bP_Red_CosPCtr_F_Hi AT %Q.Cyclic#2.Opstate::IN_OP.bP_Red_CosPCtr_F_Hi;
+	Cyclic#5.Generator::OUT_GC.bP_Red_CosPCtr_F_Lo AT %Q.Cyclic#2.Opstate::IN_OP.bP_Red_CosPCtr_F_Lo;
+	Cyclic#5.Generator::OUT_GC.bP_Red_CosPCtr_U_Hi AT %Q.Cyclic#2.Opstate::IN_OP.bP_Red_CosPCtr_U_Hi;
+	Cyclic#5.Generator::OUT_GC.bP_Red_CosPCtr_U_Lo AT %Q.Cyclic#2.Opstate::IN_OP.bP_Red_CosPCtr_U_Lo;
+	Cyclic#5.Generator::OUT_GC.rP_Red_CosPCtr_F_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_CosPCtr_F_Norm;
+	Cyclic#5.Generator::OUT_GC.rP_Red_CosPCtr_T_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_CosPCtr_T_Norm;
+	Cyclic#5.Generator::OUT_GC.rP_Red_CosPCtr_U_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_CosPCtr_U_Norm;
+	Cyclic#5.Generator::OUT_GC.rP_Red_T_GenAirIn_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_T_GenAirIn_Norm;
+	Cyclic#5.Generator::OUT_GC.bRelEngStart_OilSkid AT %Q.Cyclic#2.Opstate::IN_OP.bRelEngStart_OilSkid;
+	Cyclic#5.Generator::OUT_GC.bAMM_OilSkid_PumpLP_CB AT %Q.Cyclic#2.Opstate::IN_OP.bAMM_OilSkid_PumpLP_CB;
+	Cyclic#5.Generator::OUT_GC.bAMM_OilSkid_PumpHP_CB AT %Q.Cyclic#2.Opstate::IN_OP.bAMM_OilSkid_PumpHP_CB;
+	Cyclic#5.Generator::OUT_GC.bAMM_OilSkid_MCB AT %Q.Cyclic#2.Opstate::IN_OP.bAMM_OilSkid_MCB;
+	Cyclic#5.Generator::OUT_GC.rP_Red_Eta_Gen_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_Eta_Gen_Norm;
+END_VAR
+(* Grid *)
+VAR_CONFIG
+	Cyclic#5.Grid::OUT_GR.bOpMsg_Plim_ERDF_ABF_SOnOf AT %Q.Cyclic#2.Opstate::IN_OP.bOpMsg_Plim_ERDF_ABF_SOnOf;
+	Cyclic#5.Grid::OUT_GR.bP_Ramp_DecGrad_GR_Enable AT %Q.Cyclic#2.Opstate::IN_OP.bP_Ramp_DecGrad_GR_Enable;
+	Cyclic#5.Grid::OUT_GR.bP_Ramp_IncGrad_GR_Enable AT %Q.Cyclic#2.Opstate::IN_OP.bP_Ramp_IncGrad_GR_Enable;
+	Cyclic#5.Grid::OUT_GR.bP_Red_EU_Enable AT %Q.Cyclic#2.Opstate::IN_OP.bP_Red_EU_Enable;
+	Cyclic#5.Grid::OUT_GR.bP_Red_PFC_Enable AT %Q.Cyclic#2.Opstate::IN_OP.bP_Red_PFC_Enable;
+	Cyclic#5.Grid::OUT_GR.bP_Red_RMC_Enable AT %Q.Cyclic#2.Opstate::IN_OP.bP_Red_RMC_Enable;
+	Cyclic#5.Grid::OUT_GR.bP_Set_EU_Enable AT %Q.Cyclic#2.Opstate::IN_OP.bP_Set_EU_Enable;
+	Cyclic#5.Grid::OUT_GR.bP_Set_PFC_Enable AT %Q.Cyclic#2.Opstate::IN_OP.bP_Set_PFC_Enable;
+	Cyclic#5.Grid::OUT_GR.rP_Ramp_DecGrad_GR_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Ramp_DecGrad_GR_Norm;
+	Cyclic#5.Grid::OUT_GR.rP_Ramp_IncGrad_GR_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Ramp_IncGrad_GR_Norm;
+	Cyclic#5.Grid::OUT_GR.rP_Red_EU_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_EU_Norm;
+	Cyclic#5.Grid::OUT_GR.rP_Red_PFC_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_PFC_Norm;
+	Cyclic#5.Grid::OUT_GR.rP_Red_RMC_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_RMC_Norm;
+	Cyclic#5.Grid::OUT_GR.rP_RedDI_EU_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_RedDI_EU_Norm; (*V04.01.00.00  added*)
+	Cyclic#5.Grid::OUT_GR.rP_Set_EU_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Set_EU_Norm;
+	Cyclic#5.Grid::OUT_GR.rP_Set_ExtDI_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Set_ExtDI_Norm; (*OUTDATED INTERFACE! DO NOT USE ANYMORE*)
+	Cyclic#5.Grid::OUT_GR.rP_Set_PFC_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Set_PFC_Norm;
+	Cyclic#5.Grid::OUT_GR.tERDF_BLOCK AT %Q.Cyclic#2.Opstate::IN_OP.tERDF_BLOCK;
+	Cyclic#5.Grid::OUT_GR.tP_GenC_Bloc AT %Q.Cyclic#2.Opstate::IN_OP.tP_GenC_Bloc; (*V4.1.0.0*)
+	Cyclic#5.Grid::OUT_GR.rP_Set_FC_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Set_FC_Norm;
+	Cyclic#5.Grid::OUT_GR.bP_Set_FC_Enable AT %Q.Cyclic#2.Opstate::IN_OP.bP_Set_FC_Enable;
+	Cyclic#5.Grid::OUT_GR.bP_Set_PU_Enable AT %Q.Cyclic#2.Opstate::IN_OP.bP_Set_PU_Enable;
+	Cyclic#5.Grid::OUT_GR.rP_Set_PU_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Set_PU_Norm;
+	Cyclic#5.Grid::OUT_GR.bEng_Bloc_GR AT %Q.Cyclic#2.Opstate::IN_OP.bEng_Bloc_GR;
+END_VAR
+(* HalIO *)
+VAR_CONFIG
+	Cyclic#5.HalIO::tCustAnaIn AT %Q.Cyclic#2.Opstate::IN_OP.tCustAnaIn; (*V4.1.0.0*)
+	Cyclic#2.HalIO::tCustDigIn AT %Q.Cyclic#2.Opstate::IN_OP.tCustDigIn;
+	Cyclic#2.HalIO::tDemEngOpExt AT %Q.Cyclic#2.Opstate::IN_OP.tDemEngOpExt;
+	Cyclic#5.HalIO::tDI_Dem_EU_Block AT %Q.Cyclic#2.Opstate::IN_OP.tDI_Dem_EU_Block; (*V4.1.0.0*)
+	Cyclic#2.HalIO::tEng_Dem_EPS_Ext AT %Q.Cyclic#2.Opstate::IN_OP.tEng_Dem_EPS_Ext;
+	Cyclic#2.HalIO::tEng_SUExc_Rel AT %Q.Cyclic#2.Opstate::IN_OP.tEng_SUExc_Rel;
+	Cyclic#2.HalIO::tEVU_PowerSet3Dem AT %Q.Cyclic#2.Opstate::IN_OP.tEVU_PowerSet3Dem;
+	Cyclic#2.HalIO::tF_MMD_Synch1 AT %Q.Cyclic#2.Opstate::IN_OP.tF_MMD_Synch1;
+	Cyclic#2.HalIO::tF_MMD_Synch2 AT %Q.Cyclic#2.Opstate::IN_OP.tF_MMD_Synch2;
+	Cyclic#2.HalIO::tF_N_DI_Dec AT %Q.Cyclic#2.Opstate::IN_OP.tF_N_DI_Dec;
+	Cyclic#2.HalIO::tF_N_DI_Inc AT %Q.Cyclic#2.Opstate::IN_OP.tF_N_DI_Inc;
+	Cyclic#2.HalIO::tGCB_On AT %Q.Cyclic#2.Opstate::IN_OP.tGCB_On;
+	Cyclic#2.HalIO::tLSL_In AT %Q.Cyclic#2.Opstate::IN_OP.tLSL_In;
+	Cyclic#2.HalIO::tMCB_On AT %Q.Cyclic#2.Opstate::IN_OP.tMCB_On;
+	Cyclic#2.HalIO::tMnsOk AT %Q.Cyclic#2.Opstate::IN_OP.tMnsOk;
+	Cyclic#2.HalIO::tN2_GV1_Closed AT %Q.Cyclic#2.Opstate::IN_OP.tN2_GV1_Closed;
+	Cyclic#2.HalIO::tN2_GV2_Closed AT %Q.Cyclic#2.Opstate::IN_OP.tN2_GV2_Closed;
+	Cyclic#2.HalIO::tP_Act AT %Q.Cyclic#2.Opstate::IN_OP.tP_Act;
+	Cyclic#2.HalIO::tRel_ER_PurgeCycle AT %Q.Cyclic#2.Opstate::IN_OP.tRel_ER_PurgeCycle;
+	Cyclic#2.HalIO::tRel_MasCtr AT %Q.Cyclic#2.Opstate::IN_OP.tRel_MasCtr;
+	Cyclic#2.HalIO::tReq_PeakLoad AT %Q.Cyclic#2.Opstate::IN_OP.tReq_PeakLoad;
+	Cyclic#2.HalIO::tReq_PowMod AT %Q.Cyclic#2.Opstate::IN_OP.tReq_PowMod;
+	Cyclic#2.HalIO::tReq_Test AT %Q.Cyclic#2.Opstate::IN_OP.tReq_Test;
+	Cyclic#2.HalIO::tScavVaClosed AT %Q.Cyclic#2.Opstate::IN_OP.tScavVaClosed;
+	Cyclic#2.HalIO::tSelGasTyp AT %Q.Cyclic#2.Opstate::IN_OP.tSelGasTyp;
+	Cyclic#2.HalIO::tSelGasTyp2 AT %Q.Cyclic#2.Opstate::IN_OP.tSelGasTyp2;
+	Cyclic#2.HalIO::tSelGasTyp3 AT %Q.Cyclic#2.Opstate::IN_OP.tSelGasTyp3;
+	Cyclic#2.HalIO::tSelGasTyp4 AT %Q.Cyclic#2.Opstate::IN_OP.tSelGasTyp4;
+	Cyclic#2.HalIO::tT_ECW AT %Q.Cyclic#2.Opstate::IN_OP.tT_ECW;
+	Cyclic#2.HalIO::tTCOP_UPS_CB_On AT %Q.Cyclic#2.Opstate::IN_OP.tTCOP_UPS_CB_On;
+	Cyclic#2.HalIO::tUPS_Ok AT %Q.Cyclic#2.Opstate::IN_OP.tUPS_Ok;
+	Cyclic#2.HalIO::tGCB_OGP AT %Q.Cyclic#2.Opstate::IN_OP.tGCB_OGP;
+	Cyclic#5.HalIO::OUT_HA.bSimWinMOD_Active AT %Q.Cyclic#5.Opstate::IN_OP.bSimWinMOD_Active;
+	Cyclic#5.HalIO::OUT_HA.bSimWinMOD_FastStart AT %Q.Cyclic#5.Opstate::IN_OP.bSimWinMOD_FastStart;
+	Cyclic#2.HalIO::tECWP_FC_Rdy AT %Q.Cyclic#2.Opstate::IN_OP.tECWP_FC_Rdy;
+	Cyclic#2.HalIO::tEOP_FC_Rdy AT %Q.Cyclic#2.Opstate::IN_OP.tEOP_FC_Rdy;
+	Cyclic#2.HalIO::tBbBlower_FC_Rdy AT %Q.Cyclic#2.Opstate::IN_OP.tBbBlower_FC_Rdy;
+	Cyclic#2.HalIO::tScavFanFC_Rdy AT %Q.Cyclic#2.Opstate::IN_OP.tScavFanFC_Rdy;
+	Cyclic#5.HalIO::OUT_HA.tHW_Switches AT %Q.Cyclic#2.Opstate::IN_OP.tHW_Switches;
+	Cyclic#2.HalIO::tF_MMD_BusBar AT %Q.Cyclic#2.Opstate::IN_OP.tF_MMD_BusBar;
+	Cyclic#2.HalIO::tAuxV_Aux_ok AT %Q.Cyclic#2.Opstate::IN_OP.tAuxV_Aux_ok;
+	Cyclic#2.HalIO::tAuxV_Eng_ok AT %Q.Cyclic#2.Opstate::IN_OP.tAuxV_Eng_ok;
+	Cyclic#2.HalIO::tAuxV_ModIf_ok AT %Q.Cyclic#2.Opstate::IN_OP.tAuxV_ModIf_ok;
+	Cyclic#2.HalIO::tAuxV_Supply_Ok AT %Q.Cyclic#2.Opstate::IN_OP.tAuxV_Supply_Ok;
+	Cyclic#2.HalIO::tPF_Act AT %Q.Cyclic#2.Opstate::IN_OP.tPF_Act;
+	Cyclic#2.HalIO::tP_Droop_Set AT %Q.Cyclic#2.Opstate::IN_OP.tP_Droop_Set;
+	Cyclic#2.HalIO::tEngBlock_PlantCtr AT %Q.Cyclic#2.Opstate::IN_OP.tEngBlock_PlantCtr;
+	Cyclic#2.HalIO::tScavFanCB_trip AT %Q.Cyclic#2.Opstate::IN_OP.tScavFanCB_trip;
+	Cyclic#2.HalIO::tGenIF_CB_On AT %Q.Cyclic#2.Opstate::IN_OP.tGenIF_CB_On;
+	Cyclic#2.HalIO::tECWP_CB_On AT %Q.Cyclic#2.Opstate::IN_OP.tECWP_CB_On;
+	Cyclic#2.HalIO::tLineCB_On AT %Q.Cyclic#2.Opstate::IN_OP.tLineCB_On;
+END_VAR
+(* HeatingCooling *)
+VAR_CONFIG
+	Cyclic#5.HeatingCooling::OUT_HC.bT_ECW_Hi AT %Q.Cyclic#2.Opstate::IN_OP.bT_ECW_Hi;
+	Cyclic#5.HeatingCooling::OUT_HC.bT_ECW_RelLoad AT %Q.Cyclic#2.Opstate::IN_OP.bT_ECW_RelLoad;
+	Cyclic#5.HeatingCooling::OUT_HC.rP_Red_T_ECW_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_T_ECW_Norm;
+	Cyclic#5.HeatingCooling::OUT_HC.rP_Red_T_HWR_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_T_HWR_Norm;
+END_VAR
+(*ICxx*)
+VAR_CONFIG
+	Cyclic#5.ICxx::OUT_IC.bIC_OperationState AT %Q.Cyclic#2.Opstate::IN_OP.bIC_OperationState;
+END_VAR
+(* Ignition *)
+VAR_CONFIG
+	Cyclic#5.Ignition::OUT_IG.b_ST_DemIgn AT %Q.Cyclic#2.Opstate::IN_OP.b_ST_DemIgn;
+	Cyclic#2.Ignition::OUT_IG.bIgn_Run AT %Q.Cyclic#2.Opstate::IN_OP.bIgn_Run;
+	Cyclic#2.Ignition::OUT_IG.bIgn2_Sel AT %Q.Cyclic#2.Opstate::IN_OP.bIgn2_Sel;
+	Cyclic#5.Ignition::OUT_IG.bMsg1022 AT %Q.Cyclic#2.Opstate::IN_OP.bMsg1022;
+	Cyclic#2.Ignition::OUT_IG.bN_EngStartDrop AT %Q.Cyclic#2.Opstate::IN_OP.bN_EngStartDrop;
+	Cyclic#5.Ignition::OUT_IG.bSelfTestRunning AT %Q.Cyclic#2.Opstate::IN_OP.bSelfTestRunning;
+	Cyclic#2.Ignition::OUT_IG.rN_EngAct AT %Q.Cyclic#2.Opstate::IN_OP.rN_EngAct;
+END_VAR
+(* Knocking *)
+VAR_CONFIG
+	Cyclic#4.Knocking::OUT_KN.rP_Red_Knck_Norm AT %Q.Cyclic#5.Opstate::IN_OP.rP_Red_Knck_Norm;
+	Cyclic#2.Knocking::OUT_KN.rP_Red_Knck_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_Knck_Norm_TC2;
+END_VAR
+(* ParaBase *)
+VAR_CONFIG
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#2.Opstate::IN_OP.tPB2MM;
+	Cyclic#5.ParaBase::OUT_PB.bMsg1995 AT %Q.Cyclic#2.Opstate::IN_OP.bMsg1995; (*new V4.06 (conditional)*)
+	Cyclic#5.ParaBase::OUT_PB.iCnt_OpHours_Set AT %Q.Cyclic#2.Opstate::IN_OP.iCnt_OpHours_Set; (*new V4.13*)
+	Cyclic#5.ParaBase::OUT_PB.iCnt_UnitOpHours_Set AT %Q.Cyclic#2.Opstate::IN_OP.iCnt_UnitOpHours_Set; (*new V4.13*)
+	Cyclic#5.ParaBase::OUT_PB.iCnt_Starts_Set AT %Q.Cyclic#2.Opstate::IN_OP.iCnt_Starts_Set; (*new V4.13*)
+	Cyclic#5.ParaBase::OUT_PB.iCnt_FastStarts_Set AT %Q.Cyclic#2.Opstate::IN_OP.iCnt_FastStarts_Set; (*new V4.13*)
+END_VAR
+(* SAFI *)
+VAR_CONFIG
+	Cyclic#2.SAFI::OUT_SA.bSAFIPBCConfNotOK AT %Q.Cyclic#2.Opstate::IN_OP.bSAFIPBCConfNotOK;
+	Cyclic#2.SAFI::OUT_SA.rP_Red_SAErr_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_SAErr_Norm;
+	Cyclic#5.SAFI::OUT_SA.bSA_CfgDone AT %Q.Cyclic#2.Opstate::IN_OP.bSA_CfgDone;
+END_VAR
+(* Synchronization *)
+VAR_CONFIG
+	Cyclic#5.Synchronization::OUT_SY.bBB_dead AT %Q.Cyclic#2.Opstate::IN_OP.bBB_dead;
+	Cyclic#5.Synchronization::OUT_SY.bDSyLine AT %Q.Cyclic#2.Opstate::IN_OP.bDSyLine;
+	Cyclic#5.Synchronization::OUT_SY.bEng_Dem_EPS_Sy AT %Q.Cyclic#2.Opstate::IN_OP.bEng_Dem_EPS_Sy;
+	Cyclic#5.Synchronization::OUT_SY.bGCB_DemSy AT %Q.Cyclic#2.Opstate::IN_OP.bGCB_DemSy;
+	Cyclic#5.Synchronization::OUT_SY.bMainsReturn AT %Q.Cyclic#2.Opstate::IN_OP.bMainsReturn;
+	Cyclic#5.Synchronization::OUT_SY.bMCB_DemSy AT %Q.Cyclic#2.Opstate::IN_OP.bMCB_DemSy;
+	Cyclic#5.Synchronization::OUT_SY.bMsg1218 AT %Q.Cyclic#2.Opstate::IN_OP.bMsg1218;
+	Cyclic#5.Synchronization::OUT_SY.bOnly_Island AT %Q.Cyclic#2.Opstate::IN_OP.bOnly_Island;
+	Cyclic#5.Synchronization::OUT_SY.bOtherGenParallel AT %Q.Cyclic#2.Opstate::IN_OP.bOtherGenParallel;
+	Cyclic#5.Synchronization::OUT_SY.bRel_Island AT %Q.Cyclic#2.Opstate::IN_OP.bRel_Island;
+	Cyclic#5.Synchronization::OUT_SY.bRel_IslandAfMITime AT %Q.Cyclic#2.Opstate::IN_OP.bRel_IslandAfMITime;
+	Cyclic#5.Synchronization::OUT_SY.bRelEngOpFromSy AT %Q.Cyclic#2.Opstate::IN_OP.bRelEngOpFromSy;
+	Cyclic#5.Synchronization::OUT_SY.bSmoothDischarge AT %Q.Cyclic#2.Opstate::IN_OP.bSmoothDischarge;
+	Cyclic#5.Synchronization::OUT_SY.bSynchDem AT %Q.Cyclic#2.Opstate::IN_OP.bSynchDem;
+	Cyclic#5.Synchronization::OUT_SY.bTestBenchModeIsland AT %Q.Cyclic#2.Opstate::IN_OP.bTestBenchModeIsland;
+	Cyclic#5.Synchronization::OUT_SY.iIdx_SyOMSS AT %Q.Cyclic#2.Opstate::IN_OP.iIdx_SyOMSS;
+	Cyclic#5.Synchronization::OUT_SY.bRelMainsConnect AT %Q.Cyclic#2.Opstate::IN_OP.bRelMainsConnect;
+	Cyclic#5.Synchronization::OUT_SY.rP_Red_TempMax_GenCB_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_TempMax_GenCB_Norm;
+	Cyclic#5.Synchronization::OUT_SY.bP_Red_TempMax_GenCB_Sel AT %Q.Cyclic#2.Opstate::IN_OP.bP_Red_TempMax_GenCB_Sel;
+	Cyclic#5.Synchronization::OUT_SY.bSel_DeExc AT %Q.Cyclic#2.Opstate::IN_OP.bSel_DeExc;
+	Cyclic#5.Synchronization::OUT_SY.bSyncSlipMode AT %Q.Cyclic#2.Opstate::IN_OP.bSyncSlipMode;
+	Cyclic#5.Synchronization::OUT_SY.bGCB_psf_EngStop AT %Q.Cyclic#2.Opstate::IN_OP.bGCB_psf_EngStop;
+END_VAR
+(* Ventilation *)
+VAR_CONFIG
+	Cyclic#5.Ventilation::OUT_VE.bPurgeER_Rdy AT %Q.Cyclic#2.Opstate::IN_OP.bPurgeER_Rdy;
+	Cyclic#5.Ventilation::OUT_VE.rP_Red_T_InAirER_Norm AT %Q.Cyclic#2.Opstate::IN_OP.rP_Red_T_InAirER_Norm;
+	Cyclic#5.Ventilation::OUT_VE.bERV_NotRdy AT %Q.Cyclic#2.Opstate::IN_OP.bERV_NotRdy;
+END_VAR

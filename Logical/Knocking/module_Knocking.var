@@ -1,0 +1,146 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Package: Knocking
+ * File: module_Knocking.var
+ * Author: WaldharM
+ * Created: October 03, 2011
+ ********************************************************************
+ * Variables of package Knocking
+ ********************************************************************)
+VAR
+	usFreig_n : UINT;
+	ucKlopfMxZyl : USINT;
+	ssMinKlZZP : ARRAY[0..4] OF INT;
+	ssKlRegdZZP : ARRAY[0..25] OF INT;
+	PN_GASART : INT;
+	Para : Para_Struct;
+	ParaFactoryDefault : Para_Struct := (0); (*First Init Values*)
+	pm : Para_Struct;
+	p_ist : INT;
+	OUT_KN : OUT_KN_Struct;
+	KLSVEN : ARRAY[0..25] OF BOOL;
+	klreg_dz : INT;
+	klreg_dt2 : INT;
+	klreg_dp : INT;
+	Klopflimit : INT;
+	klopf_akt : INT;
+	KLOPF : ARRAY[0..24] OF BOOL;
+	kl_dz_li : INT;
+	kl_dz_k : INT;
+	kl_dz_e : INT;
+	kl_dt2_li : INT;
+	kl_dt2_k : INT;
+	kl_dt2_e : INT;
+	kl_dp_li : INT;
+	kl_dp_k : INT;
+	kl_dp_e : INT;
+	IntKlopfMx : INT;
+	IntKlopfMn : INT;
+	IntKlopf : ARRAY[0..25] OF INT;
+	IN_KN : IN_KN_Struct;
+	iIdx_Err_Valve : USINT;
+	iIdx_Err_KnockSig : USINT;
+	iIdx_Err_Knock : USINT;
+	Fenst4 : ARRAY[0..24] OF UINT; (*cylinder values of KLS98 window 4*)
+	Fenst3 : ARRAY[0..24] OF UINT; (*cylinder values of KLS98 window 3*)
+	Fenst2Min : UINT;
+	Fenst2Max : UINT;
+	Fenst2LiMx : UINT;
+	Fenst2Avg : UINT;
+	Fenst2 : ARRAY[0..24] OF UINT; (*cylinder values of KLS98 window 2*)
+	Fenst1Min : UINT;
+	Fenst1Max : UINT;
+	Fenst1Avg : UINT;
+	Fenst1 : ARRAY[0..24] OF UINT; (*cylinder values of KLS98 window 1*)
+	bWKnockSigErr : BOOL;
+	bMsg3541 : BOOL; (* Warning: Knock sensor measuring sensor failure *)
+	bMsg3341 : BOOL; (* Trip: Valve noise high *)
+	bMsg3339 : BOOL; (* Trip: Knocking failure *)
+	bMsg3282 : BOOL; (* OP Message: Knock sensor measuring signal failure *)
+	bMsg3281 : BOOL; (* OP Message: Valve noise high *)
+	bMsg3279 : BOOL; (* OP Message: Knocking failure *)
+	bMsg3092 : BOOL; (* Trip: KLS98 knocking failure cylinder 20 *)
+	bMsg3091 : BOOL; (* Trip: KLS98 knocking failure cylinder 19 *)
+	bMsg3090 : BOOL; (* Trip: KLS98 knocking failure cylinder 18 *)
+	bMsg3089 : BOOL; (* Trip: KLS98 knocking failure cylinder 17 *)
+	bMsg3088 : BOOL; (* Trip: KLS98 knocking failure cylinder 16 *)
+	bMsg3087 : BOOL; (* Trip: KLS98 knocking failure cylinder 15 *)
+	bMsg3086 : BOOL; (* Trip: KLS98 knocking failure cylinder 14 *)
+	bMsg3085 : BOOL; (* Trip: KLS98 knocking failure cylinder 13 *)
+	bMsg3084 : BOOL; (* Trip: KLS98 knocking failure cylinder 12 *)
+	bMsg3083 : BOOL; (* Trip: KLS98 knocking failure cylinder 11 *)
+	bMsg3082 : BOOL; (* Trip: KLS98 knocking failure cylinder 10 *)
+	bMsg3081 : BOOL; (* Trip: KLS98 knocking failure cylinder 9 *)
+	bMsg3080 : BOOL; (* Trip: KLS98 knocking failure cylinder 8 *)
+	bMsg3079 : BOOL; (* Trip: KLS98 knocking failure cylinder 7 *)
+	bMsg3078 : BOOL; (* Trip: KLS98 knocking failure cylinder 6 *)
+	bMsg3077 : BOOL; (* Trip: KLS98 knocking failure cylinder 5 *)
+	bMsg3076 : BOOL; (* Trip: KLS98 knocking failure cylinder 4 *)
+	bMsg3075 : BOOL; (* Trip: KLS98 knocking failure cylinder 3 *)
+	bMsg3074 : BOOL; (* Trip: KLS98 knocking failure cylinder 2 *)
+	bMsg3073 : BOOL; (* Trip: KLS98 knocking failure cylinder 1 *)
+	bMsg3072 : BOOL; (* Trip: KLS valve noise cylinder 20 *)
+	bMsg3071 : BOOL; (* Trip: KLS valve noise cylinder 19 *)
+	bMsg3070 : BOOL; (* Trip: KLS valve noise cylinder 18 *)
+	bMsg3069 : BOOL; (* Trip: KLS valve noise cylinder 17 *)
+	bMsg3068 : BOOL; (* Trip: KLS valve noise cylinder 16 *)
+	bMsg3067 : BOOL; (* Trip: KLS valve noise cylinder 15 *)
+	bMsg3066 : BOOL; (* Trip: KLS valve noise cylinder 14 *)
+	bMsg3065 : BOOL; (* Trip: KLS valve noise cylinder 13 *)
+	bMsg3064 : BOOL; (* Trip: KLS valve noise cylinder 12 *)
+	bMsg3063 : BOOL; (* Trip: KLS valve noise cylinder 11 *)
+	bMsg3062 : BOOL; (* Trip: KLS valve noise cylinder 10 *)
+	bMsg3061 : BOOL; (* Trip: KLS valve noise cylinder 9 *)
+	bMsg3060 : BOOL; (* Trip: KLS valve noise cylinder 8 *)
+	bMsg3059 : BOOL; (* Trip: KLS valve noise cylinder 7 *)
+	bMsg3058 : BOOL; (* Trip: KLS valve noise cylinder 6 *)
+	bMsg3057 : BOOL; (* Trip: KLS valve noise cylinder 5 *)
+	bMsg3056 : BOOL; (* Trip: KLS valve noise cylinder 4 *)
+	bMsg3055 : BOOL; (* Trip: KLS valve noise cylinder 3 *)
+	bMsg3054 : BOOL; (* Trip: KLS valve noise cylinder 2 *)
+	bMsg3053 : BOOL; (* Trip: KLS valve noise cylinder 1 *)
+	bKlopfregAkt : BOOL;
+	bGnlWarning_modlKN : BOOL;
+	bGnlTrip3_modlKN : BOOL;
+	bGnlTrip2_modlKN : BOOL;
+	bGnlTrip1_modlKN : BOOL;
+	bBValveErr : BOOL;
+	bBKnockSigErr : BOOL;
+	bBKnockErr : BOOL;
+	bAValveErr : BOOL;
+	bAKnockSigErr : BOOL;
+	bAKnockErr : BOOL;
+	ssKLS_Signal1 : INT;
+	ssKLS_Signal2 : INT;
+	bKLS_Signal2_OK : BOOL; (*KN Sens 2 - Quality Signal*)
+	int_down : INT;
+	int_up : INT;
+	RPSW6 : BOOL;
+	Fenst2LiMn : UINT;
+	MM2VIS : MM2VIS_Struct;
+	xEngType : EngType;
+	iMsg3279 : INT; (* ACM: Knocking failure *)
+	iMsg3281 : INT; (* ACM: Vavle noise high *)
+	iMsg3282 : INT; (* ACM: Knock sensor measuring signal failure *)
+	bNoInitDetected : BOOL := FALSE; (*allways true, except 1cycle on init up*)
+	bMsg1081 : BOOL;
+	bMsg2111 : BOOL;
+	RPSW_6 : BOOL;
+	AN_KLOPF : BOOL;
+	bMsg1048 : BOOL;
+	RPSA_8 : BOOL;
+	IntKlopfAv : INT;
+	bMsg3342 : BOOL;
+	bADMRSErr : BOOL; (* Trip: A3339 Knocking failure *)
+	bMsg3339_Reset : BOOL := FALSE;
+	KlopfLimitDMR : UINT; (* Para *)
+	bBDMRSErr : BOOL;
+	bKLSAFIFault : ARRAY[0..24] OF BOOL; (*oldname: bKLS98Fault*)
+	ucZZPArt : USINT;
+	tRealTime : rtctime_typ;
+	xMeNoiAL : fMeNoiAL := (0); (*FuB*)
+	bKnockSig : ARRAY[0..24] OF BOOL;
+	rInt_Knck : ARRAY[0..24] OF REAL; (* knock integrator for PBC *)
+	iState_RKS_old : ARRAY[0 .. 24] OF USINT; (* old state of RKS for every cylinder, 1 = PBC, 2 = RKS, 3= FTC*)
+END_VAR

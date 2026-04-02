@@ -1,0 +1,19 @@
+(*Selection Constants*)
+VAR CONSTANT
+	NO_SELECTION : USINT := 0;
+	FROM_MASTER : USINT := 1;
+	TO_MASTER : USINT := 3;
+	FROM_ENGINE : USINT := 2;
+	TO_ENGINE : USINT := 4;
+	PlantComm_DI : USINT := 2;
+	PlantComm_AI : USINT := 1;
+	PlantComm_DO : USINT := 4;
+	PlantComm_AO : USINT := 3;
+END_VAR
+(*Variables for the HMI Logic*)
+VAR
+	tHmiDiag : tHmiDiagnosticVariables := (0);
+	x : USINT := 0;
+	iNum_Datapoints : USINT := 0;
+	iAssetNum : USINT := 0;
+END_VAR

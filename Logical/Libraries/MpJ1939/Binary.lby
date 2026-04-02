@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Library Version="5.24.2" SubType="Binary" Description="SAE J1939" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>MpJ1939.var</File>
+    <File>MpJ1939.typ</File>
+    <File>MpJ1939Error.typ</File>
+    <File>MpJ1939.fun</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="MpBase" FromVersion="5.24.1" ToVersion="5.24.8" />
+  </Dependencies>
+</Library>

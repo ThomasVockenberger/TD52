@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.0.20.56 SP?>
+<Library xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>lSim6CTR.fun</File>
+    <File>lSim6CTR.typ</File>
+    <File>lSim6CTR.var</File>
+    <File>Sim6CTR.h</File>
+    <File>Sim6CTR_private.h</File>
+    <File>Sim6CTR_types.h</File>
+    <File>rtwtypes.h</File>
+    <File>Sim6CTR.c</File>
+    <File>main.c</File>
+    <File>lib_properties.txt</File>
+  </Files>
+</Library>

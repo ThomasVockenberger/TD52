@@ -1,0 +1,9 @@
+VAR
+	ModGrpNr : UINT;
+	ModNr : UINT;
+	tmpModOK : BOOL;
+	dModulOK : REFERENCE TO BOOL;
+	StatusWaitPT : UINT;
+	cycleTime : UINT;
+	RTInfo_0 : RTInfo;
+END_VAR

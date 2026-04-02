@@ -1,0 +1,1255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<osdd xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ethernet-powerlink.org/osdd osdd.xsd" xmlns:xlink="http://www.w3.org/1999/xlink" Version="1.6" xmlns="http://www.ethernet-powerlink.org/osdd">
+  <Topology SafetyDomain="1">
+    <GeneratorDescription Name="AutomationStudio" Version="4.10.5.38" LanguageID="1">
+      <Info Name="ARVersion" Value="49008" />
+      <Info Name="SafetyRelease" Value="5.24.1" />
+      <Info Name="Communication" Value="/IF=tcpip /LOPO=11159 /SA=2 /COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=192.168.122.11 /REPO=11159 /ANSL=1 /PT=11169 /PORT=50000" />
+      <Info Name="mappSafetyPath" Value="C:\Program Files\BrAutomation\AS410\AS\TechnologyPackages\mappSafety\5.24.1" />
+    </GeneratorDescription>
+    <SafetyConfigurationManager TransportSAddr="1">
+      <DeviceDescription Module="X20SL81XX_110.SCM" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SL8100\2.6.0.0\OSDD\X20SL81XX_SCM_2_6_0_0.xosdd]]></DeviceDescription>
+      <NodeDescription />
+    </SafetyConfigurationManager>
+    <SafetyNode SAddr="1">
+      <DeviceDescription Module="X20SL8100_110.MainSN" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SL8100\2.6.0.0\OSDD\\X20SL8100_2_6_0_0.xosdd]]></DeviceDescription>
+      <DesignConfiguration>
+        <ModuleSettings>
+          <SettingsGroup id="DataFromAs">
+            <Setting id="SafeDesigner" Value="" />
+          </SettingsGroup>
+        </ModuleSettings>
+      </DesignConfiguration>
+      <NodeDescription>
+        <Classification Type="PLC" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Info Name="Interface" Value="IF3.ST1" />
+        <Info Name="HWC_Revision" Value="2.6.0.0" />
+        <Info Name="HWC_LastEdit" Value="20.10.2022 15:01:48" />
+        <Info Name="AS_Name" Value="X20SL8100_S01_00" />
+        <Info Name="FirstPublishedSafetyRelease" Value="1.0" />
+        <Info Name="ProjectSL" Value="1" />
+        <Info Name="ExtendedSourceSL" Value="1" />
+        <Info Name="Description-de" Value="X20 SafeLOGIC, POWERLINK V2, 24V, univ." />
+        <Info Name="Description-en" Value="X20 SafeLOGIC, POWERLINK V2, 24V, univ." />
+        <Info Name="AsVariable" Value="UINT0013,Cyclic#6.EngineGeneral::iParaRead_sPLC[12]" />
+        <Info Name="AsVariable" Value="UINT0002,Cyclic#6.EngineGeneral::iParaRead_sPLC[1]" />
+        <Info Name="AsVariable" Value="UINT0009,Cyclic#6.EngineGeneral::iParaRead_sPLC[8]" />
+        <Info Name="AsVariable" Value="DINT0040,Cyclic#6.EngineGeneral::iSafeOUT_F09_INL1_Fan_OK_1m_ET" />
+        <Info Name="AsVariable" Value="UINT0021,Cyclic#6.EngineGeneral::iParaRead_sPLC[20]" />
+        <Info Name="AsVariable" Value="DINT0046,Cyclic#6.EngineGeneral::iSafeOUT_F09_INL1_Lou_OK_1m_ET" />
+        <Info Name="AsVariable" Value="BOOL00133,Cyclic#6.EngineGeneral::bAMM_9565" />
+        <Info Name="AsVariable" Value="BOOL10007,Cyclic#6.EngineGeneral::bSafeIN_ERV_Lou_PC_CL" />
+        <Info Name="AsVariable" Value="BOOL10006,Cyclic#6.EngineGeneral::bSafeIN_ERV_Lou_PC_OP" />
+        <Info Name="AsVariable" Value="BOOL10005,Cyclic#5.Opstate::OUT_OP.bEng_Aux_Dem_CDR" />
+        <Info Name="AsVariable" Value="BOOL10004,Cyclic#6.EngineGeneral::bSafeIN_ECW_PumpsOFF" />
+        <Info Name="AsVariable" Value="BOOL10003,Cyclic#6.EngineGeneral::bSafeIN_EO_PumpsOFF" />
+        <Info Name="AsVariable" Value="BOOL10002,Cyclic#5.AuxiliariesGeneral::OUT_AG.bEng_Start" />
+        <Info Name="AsVariable" Value="BOOL10001,Cyclic#6.EngineGeneral::bSafeIN_Reset_sPLC" />
+        <Info Name="AsVariable" Value="BOOL00344,Cyclic#6.EngineGeneral::bAMM_9677" />
+        <Info Name="AsVariable" Value="DINT0049,Cyclic#6.EngineGeneral::iSafeOUT_F09_INL4_Lou_OK_1m_ET" />
+        <Info Name="AsVariable" Value="BOOL00101,Cyclic#6.EngineGeneral::bAMM_9515" />
+        <Info Name="AsVariable" Value="DINT0022,Cyclic#6.EngineGeneral::iSafeOUT_F09_Cust_OK_15s_ET" />
+        <Info Name="AsVariable" Value="BOOL10008,Cyclic#6.EngineGeneral::bSafeIN_ERV_ColdCountry" />
+        <Info Name="AsVariable" Value="DINT0030,Cyclic#6.EngineGeneral::iSafeOUT_F17_Vol_PurgeAir" />
+        <Info Name="AsVariable" Value="BOOL00313,Cyclic#6.EngineGeneral::bAMM_9646" />
+        <Info Name="AsVariable" Value="DINT0056,Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL5_Lou_OK_1m_ET" />
+        <Info Name="AsVariable" Value="BOOL00116,Cyclic#6.EngineGeneral::bAMM_9530" />
+        <Info Name="AsVariable" Value="INT1001,Cyclic#6.EngineGeneral::iSafeIN_N_EngAct" />
+        <Info Name="AsVariable" Value="DINT0023,Cyclic#6.EngineGeneral::iSafeOUT_F09_Cust_PC_ET" />
+        <Info Name="AsVariable" Value="BOOL00126,Cyclic#6.EngineGeneral::bAMM_9540" />
+        <Info Name="AsVariable" Value="BOOL00127,Cyclic#6.EngineGeneral::bAMM_9541" />
+        <Info Name="AsVariable" Value="BOOL00006,Cyclic#6.EngineGeneral::bSafeOUT_F02_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00007,Cyclic#6.EngineGeneral::bSafeOUT_F03_OK" />
+        <Info Name="AsVariable" Value="BOOL00004,Cyclic#6.EngineGeneral::bSafeOUT_F01_N_Nom90" />
+        <Info Name="AsVariable" Value="BOOL00005,Cyclic#6.EngineGeneral::bSafeOUT_F02_OK" />
+        <Info Name="AsVariable" Value="BOOL00002,Cyclic#6.EngineGeneral::bSafeOUT_F01_OK" />
+        <Info Name="AsVariable" Value="BOOL00003,Cyclic#6.EngineGeneral::bSafeOUT_F01_N_DiffOK" />
+        <Info Name="AsVariable" Value="BOOL00001,Cyclic#6.EngineGeneral::bSafeOUT_F99_SafetyLoop_Eng" />
+        <Info Name="AsVariable" Value="BOOL00279,Cyclic#6.EngineGeneral::bSafeOUT_F12_DI_GT2_SafeDevOK" />
+        <Info Name="AsVariable" Value="BOOL00128,Cyclic#6.EngineGeneral::bAMM_9542" />
+        <Info Name="AsVariable" Value="BOOL00129,Cyclic#6.EngineGeneral::bAMM_9543" />
+        <Info Name="AsVariable" Value="BOOL00008,Cyclic#6.EngineGeneral::bSafeOUT_F03_Pr_EO_DiffOK" />
+        <Info Name="AsVariable" Value="BOOL00009,Cyclic#6.EngineGeneral::bSafeOUT_F04_OK" />
+        <Info Name="AsVariable" Value="BOOL00017,Cyclic#6.EngineGeneral::bSafeOUT_F07_GCB_RUC_PS" />
+        <Info Name="AsVariable" Value="BOOL00014,Cyclic#6.EngineGeneral::bSafeOUT_F07_Rel_Sync_Load" />
+        <Info Name="AsVariable" Value="BOOL00015,Cyclic#6.EngineGeneral::bSafeOUT_F07_Rel_Sync_Load_PS" />
+        <Info Name="AsVariable" Value="BOOL00012,Cyclic#6.EngineGeneral::bSafeOUT_F06_OK" />
+        <Info Name="AsVariable" Value="BOOL00013,Cyclic#6.EngineGeneral::bSafeOUT_F07_OK" />
+        <Info Name="AsVariable" Value="BOOL00010,Cyclic#6.EngineGeneral::bSafeOUT_F05_OK" />
+        <Info Name="AsVariable" Value="BOOL00011,Cyclic#6.EngineGeneral::bSafeOUT_F05_Pr_ECW_DiffOK" />
+        <Info Name="AsVariable" Value="BOOL00156,Cyclic#6.EngineGeneral::bAMM_9593" />
+        <Info Name="AsVariable" Value="BOOL00123,Cyclic#6.EngineGeneral::bAMM_9537" />
+        <Info Name="AsVariable" Value="BOOL00138,Cyclic#6.EngineGeneral::bAMM_9570" />
+        <Info Name="AsVariable" Value="BOOL00106,Cyclic#6.EngineGeneral::bAMM_9520" />
+        <Info Name="AsVariable" Value="BOOL00018,Cyclic#6.EngineGeneral::bSafeOUT_F08_OlShortCirc_OK" />
+        <Info Name="AsVariable" Value="BOOL00019,Cyclic#6.EngineGeneral::bSafeOUT_F08_GenPrctTrip_OK" />
+        <Info Name="AsVariable" Value="BOOL00067,Cyclic#6.EngineGeneral::bAMM_2390" />
+        <Info Name="AsVariable" Value="BOOL00064,Cyclic#6.EngineGeneral::bAMM_2387" />
+        <Info Name="AsVariable" Value="BOOL00065,Cyclic#6.EngineGeneral::bAMM_2388" />
+        <Info Name="AsVariable" Value="BOOL00062,Cyclic#6.EngineGeneral::bAMM_2385" />
+        <Info Name="AsVariable" Value="BOOL00063,Cyclic#6.EngineGeneral::bAMM_2386" />
+        <Info Name="AsVariable" Value="BOOL00060,Cyclic#6.EngineGeneral::bAMM_2383" />
+        <Info Name="AsVariable" Value="BOOL00061,Cyclic#6.EngineGeneral::bAMM_2384" />
+        <Info Name="AsVariable" Value="DINT0025,Cyclic#6.EngineGeneral::iSafeOUT_F12_GT1_LC_130s_ET" />
+        <Info Name="AsVariable" Value="BOOL00108,Cyclic#6.EngineGeneral::bAMM_9522" />
+        <Info Name="AsVariable" Value="BOOL00109,Cyclic#6.EngineGeneral::bAMM_9523" />
+        <Info Name="AsVariable" Value="BOOL00068,Cyclic#6.EngineGeneral::bAMM_2391" />
+        <Info Name="AsVariable" Value="BOOL00069,Cyclic#6.EngineGeneral::bAMM_2392" />
+        <Info Name="AsVariable" Value="BOOL00077,Cyclic#6.EngineGeneral::bAMM_9409" />
+        <Info Name="AsVariable" Value="BOOL00074,Cyclic#6.EngineGeneral::bAMM_2397" />
+        <Info Name="AsVariable" Value="BOOL00075,Cyclic#6.EngineGeneral::bAMM_2398" />
+        <Info Name="AsVariable" Value="BOOL00072,Cyclic#6.EngineGeneral::bAMM_2395" />
+        <Info Name="AsVariable" Value="BOOL00073,Cyclic#6.EngineGeneral::bAMM_2396" />
+        <Info Name="AsVariable" Value="BOOL00070,Cyclic#6.EngineGeneral::bAMM_2393" />
+        <Info Name="AsVariable" Value="BOOL00071,Cyclic#6.EngineGeneral::bAMM_2394" />
+        <Info Name="AsVariable" Value="DINT0041,Cyclic#6.EngineGeneral::iSafeOUT_F09_INL2_Fan_OK_1m_ET" />
+        <Info Name="AsVariable" Value="BOOL00118,Cyclic#6.EngineGeneral::bAMM_9532" />
+        <Info Name="AsVariable" Value="BOOL00119,Cyclic#6.EngineGeneral::bAMM_9533" />
+        <Info Name="AsVariable" Value="BOOL00078,Cyclic#6.EngineGeneral::bAMM_9410" />
+        <Info Name="AsVariable" Value="BOOL00046,Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV3b_PS" />
+        <Info Name="AsVariable" Value="BOOL00047,Cyclic#6.EngineGeneral::bSafeOUT_F12_GT3_SD_Dem" />
+        <Info Name="AsVariable" Value="BOOL00044,Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV3" />
+        <Info Name="AsVariable" Value="BOOL00045,Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV3a_PS" />
+        <Info Name="AsVariable" Value="BOOL00042,Cyclic#6.EngineGeneral::bSafeOUT_F12_GT2_SD_Dem" />
+        <Info Name="AsVariable" Value="BOOL00043,Cyclic#6.EngineGeneral::bSafeOUT_F12_GT2_SD_Dem_PS" />
+        <Info Name="AsVariable" Value="BOOL00040,Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV2a_PS" />
+        <Info Name="AsVariable" Value="BOOL00041,Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV2b_PS" />
+        <Info Name="AsVariable" Value="BOOL00168,Cyclic#6.EngineGeneral::bAMM_9447" />
+        <Info Name="AsVariable" Value="BOOL00169,Cyclic#6.EngineGeneral::bAMM_9448" />
+        <Info Name="AsVariable" Value="BOOL00048,Cyclic#6.EngineGeneral::bSafeOUT_F12_GT3_SD_Dem_PS" />
+        <Info Name="AsVariable" Value="BOOL00049,Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV4" />
+        <Info Name="AsVariable" Value="BOOL00057,Cyclic#6.EngineGeneral::bSafeOUT_F09_DI_ERV_Cust" />
+        <Info Name="AsVariable" Value="BOOL00054,Cyclic#6.EngineGeneral::bSafeOUT_F99_Rel_SF_OK" />
+        <Info Name="AsVariable" Value="BOOL00055,Cyclic#6.EngineGeneral::bSafeOUT_F99_Rel_SF_OK_A_PS" />
+        <Info Name="AsVariable" Value="BOOL00052,Cyclic#6.EngineGeneral::bSafeOUT_F12_GT4_SD_Dem" />
+        <Info Name="AsVariable" Value="BOOL00053,Cyclic#6.EngineGeneral::bSafeOUT_F12_GT4_SD_Dem_PS" />
+        <Info Name="AsVariable" Value="BOOL00050,Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV4a_PS" />
+        <Info Name="AsVariable" Value="BOOL00051,Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV4b_PS" />
+        <Info Name="AsVariable" Value="UINT0017,Cyclic#6.EngineGeneral::iParaRead_sPLC[16]" />
+        <Info Name="AsVariable" Value="UINT0022,Cyclic#6.EngineGeneral::iParaRead_sPLC[21]" />
+        <Info Name="AsVariable" Value="BOOL00058,Cyclic#6.EngineGeneral::bSafeOUT_F09_ERV_PC_Forced" />
+        <Info Name="AsVariable" Value="BOOL00284,Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV_DCGA" />
+        <Info Name="AsVariable" Value="UINT0004,Cyclic#6.EngineGeneral::iParaRead_sPLC[3]" />
+        <Info Name="AsVariable" Value="BOOL00016,Cyclic#6.EngineGeneral::bSafeOUT_F07_GCB_RUC" />
+        <Info Name="AsVariable" Value="BOOL00117,Cyclic#6.EngineGeneral::bAMM_9531" />
+        <Info Name="AsVariable" Value="UINT0012,Cyclic#6.EngineGeneral::iParaRead_sPLC[11]" />
+        <Info Name="AsVariable" Value="BOOL00296,Cyclic#6.EngineGeneral::bAMM_9629" />
+        <Info Name="AsVariable" Value="BOOL00165,Cyclic#6.EngineGeneral::bAMM_9444" />
+        <Info Name="AsVariable" Value="UINT0005,Cyclic#6.EngineGeneral::iParaRead_sPLC[4]" />
+        <Info Name="AsVariable" Value="DINT0048,Cyclic#6.EngineGeneral::iSafeOUT_F09_INL3_Lou_OK_1m_ET" />
+        <Info Name="AsVariable" Value="INT0001,Cyclic#6.EngineGeneral::iSafeOUT_F09_Nr_PC_NotDone" />
+        <Info Name="AsVariable" Value="BOOL00299,Cyclic#6.EngineGeneral::bAMM_9632" />
+        <Info Name="AsVariable" Value="DINT0035,Cyclic#6.EngineGeneral::iSafeOUT_F20_PS1_HWLT_Lo_OK_ET" />
+        <Info Name="AsVariable" Value="BOOL00086,Cyclic#6.EngineGeneral::bAMM_9418" />
+        <Info Name="AsVariable" Value="BOOL00087,Cyclic#6.EngineGeneral::bAMM_9419" />
+        <Info Name="AsVariable" Value="BOOL00084,Cyclic#6.EngineGeneral::bAMM_9416" />
+        <Info Name="AsVariable" Value="BOOL00085,Cyclic#6.EngineGeneral::bAMM_9417" />
+        <Info Name="AsVariable" Value="BOOL00082,Cyclic#6.EngineGeneral::bAMM_9414" />
+        <Info Name="AsVariable" Value="BOOL00083,Cyclic#6.EngineGeneral::bAMM_9415" />
+        <Info Name="AsVariable" Value="BOOL00080,Cyclic#6.EngineGeneral::bAMM_9412" />
+        <Info Name="AsVariable" Value="BOOL00081,Cyclic#6.EngineGeneral::bAMM_9413" />
+        <Info Name="AsVariable" Value="BOOL00107,Cyclic#6.EngineGeneral::bAMM_9521" />
+        <Info Name="AsVariable" Value="BOOL00276,Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL6_Lou_OK" />
+        <Info Name="AsVariable" Value="DINT0024,Cyclic#6.EngineGeneral::iSafeOUT_F12_GV_Open_60s_ET" />
+        <Info Name="AsVariable" Value="BOOL00088,Cyclic#6.EngineGeneral::bAMM_9420" />
+        <Info Name="AsVariable" Value="BOOL00089,Cyclic#6.EngineGeneral::bAMM_9421" />
+        <Info Name="AsVariable" Value="BOOL00097,Cyclic#6.EngineGeneral::bAMM_9429" />
+        <Info Name="AsVariable" Value="BOOL00094,Cyclic#6.EngineGeneral::bAMM_9426" />
+        <Info Name="AsVariable" Value="BOOL00095,Cyclic#6.EngineGeneral::bAMM_9427" />
+        <Info Name="AsVariable" Value="BOOL00092,Cyclic#6.EngineGeneral::bAMM_9424" />
+        <Info Name="AsVariable" Value="BOOL00093,Cyclic#6.EngineGeneral::bAMM_9425" />
+        <Info Name="AsVariable" Value="BOOL00090,Cyclic#6.EngineGeneral::bAMM_9422" />
+        <Info Name="AsVariable" Value="BOOL00091,Cyclic#6.EngineGeneral::bAMM_9423" />
+        <Info Name="AsVariable" Value="BOOL00352,Cyclic#6.EngineGeneral::bAMM_9685" />
+        <Info Name="AsVariable" Value="BOOL00098,Cyclic#6.EngineGeneral::bAMM_9433" />
+        <Info Name="AsVariable" Value="BOOL00099,Cyclic#6.EngineGeneral::bAMM_9434" />
+        <Info Name="AsVariable" Value="BOOL00161,Cyclic#6.EngineGeneral::bAMM_9438" />
+        <Info Name="AsVariable" Value="DINT0026,Cyclic#6.EngineGeneral::iSafeOUT_F12_GT2_LC_130s_ET" />
+        <Info Name="AsVariable" Value="BOOL00150,Cyclic#6.EngineGeneral::bAMM_9582" />
+        <Info Name="AsVariable" Value="BOOL00196,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_PS1_HWHT_Lo_Exist" />
+        <Info Name="AsVariable" Value="UINT0019,Cyclic#6.EngineGeneral::iParaRead_sPLC[18]" />
+        <Info Name="AsVariable" Value="BOOL00130,Cyclic#6.EngineGeneral::bAMM_9562" />
+        <Info Name="AsVariable" Value="BOOL00317,Cyclic#6.EngineGeneral::bAMM_9650" />
+        <Info Name="AsVariable" Value="BOOL00308,Cyclic#6.EngineGeneral::bAMM_9641" />
+        <Info Name="AsVariable" Value="UINT0007,Cyclic#6.EngineGeneral::iParaRead_sPLC[6]" />
+        <Info Name="AsVariable" Value="BOOL00178,Cyclic#6.EngineGeneral::bAMM_9457" />
+        <Info Name="AsVariable" Value="BOOL00162,Cyclic#6.EngineGeneral::bAMM_9441" />
+        <Info Name="AsVariable" Value="BOOL00226,Cyclic#6.EngineGeneral::bSafeOUT_F20_FS_HWHT_Lo_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00227,Cyclic#6.EngineGeneral::bSafeOUT_F20_FS_HWHT_Lo_DI" />
+        <Info Name="AsVariable" Value="BOOL00224,Cyclic#6.EngineGeneral::bSafeOUT_F20_TS2_HWHT_Hi_OK" />
+        <Info Name="AsVariable" Value="BOOL00225,Cyclic#6.EngineGeneral::bSafeOUT_F20_FS_HWHT_Lo_OK" />
+        <Info Name="AsVariable" Value="BOOL00222,Cyclic#6.EngineGeneral::bSafeOUT_F20_PS2_HWHT_Lo_DI" />
+        <Info Name="AsVariable" Value="BOOL00223,Cyclic#6.EngineGeneral::bSafeOUT_F20_TS1_HWHT_Hi_OK" />
+        <Info Name="AsVariable" Value="BOOL00220,Cyclic#6.EngineGeneral::bSafeOUT_F20_PS1_HWHT_Lo_DI" />
+        <Info Name="AsVariable" Value="BOOL00221,Cyclic#6.EngineGeneral::bSafeOUT_F20_PS2_HWHT_Lo_OK" />
+        <Info Name="AsVariable" Value="DINT0008,Cyclic#6.EngineGeneral::iSafeOUT_F03_Pr_EO_Diff" />
+        <Info Name="AsVariable" Value="BOOL00113,Cyclic#6.EngineGeneral::bAMM_9527" />
+        <Info Name="AsVariable" Value="BOOL00228,Cyclic#6.EngineGeneral::bSafeOUT_F20_LS_HWLT_Lo_OK" />
+        <Info Name="AsVariable" Value="BOOL00229,Cyclic#6.EngineGeneral::bSafeOUT_F20_PS1_HWLT_Hi_OK" />
+        <Info Name="AsVariable" Value="BOOL00237,Cyclic#6.EngineGeneral::bSafeOUT_F20_FS_HWLT_Lo_OK" />
+        <Info Name="AsVariable" Value="BOOL00234,Cyclic#6.EngineGeneral::bSafeOUT_F20_PS2_HWLT_Lo_DI" />
+        <Info Name="AsVariable" Value="BOOL00235,Cyclic#6.EngineGeneral::bSafeOUT_F20_TS1_HWLT_Hi_OK" />
+        <Info Name="AsVariable" Value="BOOL00232,Cyclic#6.EngineGeneral::bSafeOUT_F20_PS1_HWLT_Lo_DI" />
+        <Info Name="AsVariable" Value="BOOL00233,Cyclic#6.EngineGeneral::bSafeOUT_F20_PS2_HWLT_Lo_OK" />
+        <Info Name="AsVariable" Value="BOOL00230,Cyclic#6.EngineGeneral::bSafeOUT_F20_PS2_HWLT_Hi_OK" />
+        <Info Name="AsVariable" Value="BOOL00231,Cyclic#6.EngineGeneral::bSafeOUT_F20_PS1_HWLT_Lo_OK" />
+        <Info Name="AsVariable" Value="DINT0009,Cyclic#6.EngineGeneral::iSafeOUT_F03_Pr_EO_Fr_1m_ET" />
+        <Info Name="AsVariable" Value="UINT0023,Cyclic#6.EngineGeneral::iParaRead_sPLC[22]" />
+        <Info Name="AsVariable" Value="DINT0028,Cyclic#6.EngineGeneral::iSafeOUT_F12_GT4_LC_130s_ET" />
+        <Info Name="AsVariable" Value="DINT0052,Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL1_Lou_OK_1m_ET" />
+        <Info Name="AsVariable" Value="BOOL00238,Cyclic#6.EngineGeneral::bSafeOUT_F20_FS_HWLT_Lo_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00206,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_TS1_HWLT_Hi_Exist" />
+        <Info Name="AsVariable" Value="BOOL00207,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_TS2_HWLT_Hi_Exist" />
+        <Info Name="AsVariable" Value="BOOL00204,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_PS1_HWLT_Lo_Exist" />
+        <Info Name="AsVariable" Value="BOOL00205,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_PS2_HWLT_Lo_Exist" />
+        <Info Name="AsVariable" Value="BOOL00202,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_PS1_HWLT_Hi_Exist" />
+        <Info Name="AsVariable" Value="BOOL00203,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_PS2_HWLT_Hi_Exist" />
+        <Info Name="AsVariable" Value="BOOL00200,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_FS_HWHT_Lo_Exist" />
+        <Info Name="AsVariable" Value="BOOL00201,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_LS_HWLT_Lo_Exist" />
+        <Info Name="AsVariable" Value="BOOL00208,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_FS_HWLT_Lo_Exist" />
+        <Info Name="AsVariable" Value="BOOL00104,Cyclic#6.EngineGeneral::bAMM_9518" />
+        <Info Name="AsVariable" Value="BOOL00217,Cyclic#6.EngineGeneral::bSafeOUT_F20_PS1_HWHT_Hi_OK" />
+        <Info Name="AsVariable" Value="BOOL00214,Cyclic#6.EngineGeneral::bSafeOUT_F17_Purge_OK" />
+        <Info Name="AsVariable" Value="BOOL00215,Cyclic#6.EngineGeneral::bSafeOUT_F20_HWcirc_Cust_OK" />
+        <Info Name="AsVariable" Value="BOOL00212,Cyclic#6.EngineGeneral::bSafeOUT_F16_DI_ScavFlapClosed" />
+        <Info Name="AsVariable" Value="BOOL00213,Cyclic#6.EngineGeneral::bSafeOUT_F16_TS_ScavFlap_OK" />
+        <Info Name="AsVariable" Value="BOOL00210,Cyclic#6.EngineGeneral::bSafeOUT_F16_ScavFlapPos_OK" />
+        <Info Name="AsVariable" Value="BOOL00211,Cyclic#6.EngineGeneral::bSafeOUT_F16_ScavFlapPos_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00316,Cyclic#6.EngineGeneral::bAMM_9649" />
+        <Info Name="AsVariable" Value="BOOL00136,Cyclic#6.EngineGeneral::bAMM_9568" />
+        <Info Name="AsVariable" Value="BOOL00218,Cyclic#6.EngineGeneral::bSafeOUT_F20_PS2_HWHT_Hi_OK" />
+        <Info Name="AsVariable" Value="BOOL00219,Cyclic#6.EngineGeneral::bSafeOUT_F20_PS1_HWHT_Lo_OK" />
+        <Info Name="AsVariable" Value="BOOL00267,Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL1_Lou_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00264,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL6_Lou_OK" />
+        <Info Name="AsVariable" Value="BOOL00265,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL6_Lou_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00262,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL5_Lou_OK" />
+        <Info Name="AsVariable" Value="BOOL00263,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL5_Lou_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00260,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL4_Lou_OK" />
+        <Info Name="AsVariable" Value="BOOL00120,Cyclic#6.EngineGeneral::bAMM_9534" />
+        <Info Name="AsVariable" Value="BOOL00139,Cyclic#6.EngineGeneral::bAMM_9571" />
+        <Info Name="AsVariable" Value="DINT0012,Cyclic#6.EngineGeneral::iSafeOUT_F04_Pr_EOaP_Fr_1m_ET" />
+        <Info Name="AsVariable" Value="DINT0045,Cyclic#6.EngineGeneral::iSafeOUT_F09_INL6_Fan_OK_1m_ET" />
+        <Info Name="AsVariable" Value="BOOL00268,Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL2_Lou_OK" />
+        <Info Name="AsVariable" Value="BOOL00269,Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL2_Lou_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00277,Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL6_Lou_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00274,Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL5_Lou_OK" />
+        <Info Name="AsVariable" Value="BOOL00275,Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL5_Lou_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00272,Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL4_Lou_OK" />
+        <Info Name="AsVariable" Value="BOOL00273,Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL4_Lou_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00270,Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL3_Lou_OK" />
+        <Info Name="AsVariable" Value="BOOL00271,Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL3_Lou_OK_PC" />
+        <Info Name="AsVariable" Value="DINT0013,Cyclic#6.EngineGeneral::iSafeOUT_F04_EO_PumpsOff_2m_ET" />
+        <Info Name="AsVariable" Value="BOOL00306,Cyclic#6.EngineGeneral::bAMM_9639" />
+        <Info Name="AsVariable" Value="BOOL00278,Cyclic#6.EngineGeneral::bSafeOUT_F12_DI_GT1_SafeDevOK" />
+        <Info Name="AsVariable" Value="BOOL00246,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL3_Fan_OK" />
+        <Info Name="AsVariable" Value="BOOL00247,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL3_Fan_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00244,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL2_Fan_OK" />
+        <Info Name="AsVariable" Value="BOOL00245,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL2_Fan_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00242,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL1_Fan_OK" />
+        <Info Name="AsVariable" Value="BOOL00243,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL1_Fan_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00240,Cyclic#6.EngineGeneral::bSafeOUT_F21_Pr_EG_Hi_OK" />
+        <Info Name="AsVariable" Value="BOOL00241,Cyclic#6.EngineGeneral::bSafeOUT_F09_Door_OK" />
+        <Info Name="AsVariable" Value="BOOL00179,Cyclic#6.EngineGeneral::bAMM_9458" />
+        <Info Name="AsVariable" Value="BOOL00163,Cyclic#6.EngineGeneral::bAMM_9442" />
+        <Info Name="AsVariable" Value="BOOL00248,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL4_Fan_OK" />
+        <Info Name="AsVariable" Value="BOOL00249,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL4_Fan_OK_PC" />
+        <Info Name="AsVariable" Value="INT1003,Cyclic#6.EngineGeneral::iSafeIN_Eng_Motortype" />
+        <Info Name="AsVariable" Value="DINT0018,Cyclic#6.EngineGeneral::iSafeOUT_F06_Pr_ECWaP_Fr_1m_ET" />
+        <Info Name="AsVariable" Value="BOOL00115,Cyclic#6.EngineGeneral::bAMM_9529" />
+        <Info Name="AsVariable" Value="DINT0011,Cyclic#6.EngineGeneral::iSafeOUT_F04_Pr_EOaP_Standstill" />
+        <Info Name="AsVariable" Value="DINT0027,Cyclic#6.EngineGeneral::iSafeOUT_F12_GT3_LC_130s_ET" />
+        <Info Name="AsVariable" Value="BOOL00261,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL4_Lou_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00236,Cyclic#6.EngineGeneral::bSafeOUT_F20_TS2_HWLT_Hi_OK" />
+        <Info Name="AsVariable" Value="BOOL00303,Cyclic#6.EngineGeneral::bAMM_9636" />
+        <Info Name="AsVariable" Value="DINT0016,Cyclic#6.EngineGeneral::iSafeOUT_F05_Pr_ECW_Fr_1m_ET" />
+        <Info Name="AsVariable" Value="BOOL00366,Cyclic#6.EngineGeneral::bAMM_9699" />
+        <Info Name="AsVariable" Value="UINT0015,Cyclic#6.EngineGeneral::iParaRead_sPLC[14]" />
+        <Info Name="AsVariable" Value="BOOL00176,Cyclic#6.EngineGeneral::bAMM_9455" />
+        <Info Name="AsVariable" Value="BOOL00177,Cyclic#6.EngineGeneral::bAMM_9456" />
+        <Info Name="AsVariable" Value="BOOL00174,Cyclic#6.EngineGeneral::bAMM_9453" />
+        <Info Name="AsVariable" Value="BOOL00175,Cyclic#6.EngineGeneral::bAMM_9454" />
+        <Info Name="AsVariable" Value="BOOL00172,Cyclic#6.EngineGeneral::bAMM_9451" />
+        <Info Name="AsVariable" Value="BOOL00173,Cyclic#6.EngineGeneral::bAMM_9452" />
+        <Info Name="AsVariable" Value="BOOL00170,Cyclic#6.EngineGeneral::bAMM_9449" />
+        <Info Name="AsVariable" Value="BOOL00171,Cyclic#6.EngineGeneral::bAMM_9450" />
+        <Info Name="AsVariable" Value="BOOL00365,Cyclic#6.EngineGeneral::bAMM_9698" />
+        <Info Name="AsVariable" Value="DINT0017,Cyclic#6.EngineGeneral::iSafeOUT_F06_Pr_ECWaP" />
+        <Info Name="AsVariable" Value="DINT0034,Cyclic#6.EngineGeneral::iSafeOUT_F20_FS_HWHT_Lo_PC_ET" />
+        <Info Name="AsVariable" Value="BOOL00096,Cyclic#6.EngineGeneral::bAMM_9428" />
+        <Info Name="AsVariable" Value="BOOL00146,Cyclic#6.EngineGeneral::bAMM_9578" />
+        <Info Name="AsVariable" Value="BOOL00147,Cyclic#6.EngineGeneral::bAMM_9579" />
+        <Info Name="AsVariable" Value="BOOL00144,Cyclic#6.EngineGeneral::bAMM_9576" />
+        <Info Name="AsVariable" Value="BOOL00145,Cyclic#6.EngineGeneral::bAMM_9577" />
+        <Info Name="AsVariable" Value="BOOL00142,Cyclic#6.EngineGeneral::bAMM_9574" />
+        <Info Name="AsVariable" Value="BOOL00143,Cyclic#6.EngineGeneral::bAMM_9575" />
+        <Info Name="AsVariable" Value="BOOL00140,Cyclic#6.EngineGeneral::bAMM_9572" />
+        <Info Name="AsVariable" Value="BOOL00141,Cyclic#6.EngineGeneral::bAMM_9573" />
+        <Info Name="AsVariable" Value="BOOL00137,Cyclic#6.EngineGeneral::bAMM_9569" />
+        <Info Name="AsVariable" Value="BOOL00148,Cyclic#6.EngineGeneral::bAMM_9580" />
+        <Info Name="AsVariable" Value="BOOL00149,Cyclic#6.EngineGeneral::bAMM_9581" />
+        <Info Name="AsVariable" Value="BOOL00114,Cyclic#6.EngineGeneral::bAMM_9528" />
+        <Info Name="AsVariable" Value="BOOL00154,Cyclic#6.EngineGeneral::bAMM_9586" />
+        <Info Name="AsVariable" Value="BOOL00155,Cyclic#6.EngineGeneral::bAMM_9587" />
+        <Info Name="AsVariable" Value="BOOL00152,Cyclic#6.EngineGeneral::bAMM_9584" />
+        <Info Name="AsVariable" Value="BOOL00153,Cyclic#6.EngineGeneral::bAMM_9585" />
+        <Info Name="AsVariable" Value="BOOL00056,Cyclic#6.EngineGeneral::bSafeOUT_F99_Rel_SF_OK_M_PS" />
+        <Info Name="AsVariable" Value="BOOL00151,Cyclic#6.EngineGeneral::bAMM_9583" />
+        <Info Name="AsVariable" Value="UINT0016,Cyclic#6.EngineGeneral::iParaRead_sPLC[15]" />
+        <Info Name="AsVariable" Value="DINT0055,Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL4_Lou_OK_1m_ET" />
+        <Info Name="AsVariable" Value="DINT0015,Cyclic#6.EngineGeneral::iSafeOUT_F05_Pr_ECW_Diff" />
+        <Info Name="AsVariable" Value="DINT0037,Cyclic#6.EngineGeneral::iSafeOUT_F20_FS_HWLT_Lo_OK_ET" />
+        <Info Name="AsVariable" Value="UINT0006,Cyclic#6.EngineGeneral::iParaRead_sPLC[5]" />
+        <Info Name="AsVariable" Value="DINT0036,Cyclic#6.EngineGeneral::iSafeOUT_F20_PS2_HWLT_Lo_OK_ET" />
+        <Info Name="AsVariable" Value="BOOL00307,Cyclic#6.EngineGeneral::bAMM_9640" />
+        <Info Name="AsVariable" Value="BOOL00131,Cyclic#6.EngineGeneral::bAMM_9563" />
+        <Info Name="AsVariable" Value="BOOL00309,Cyclic#6.EngineGeneral::bAMM_9642" />
+        <Info Name="AsVariable" Value="DINT0038,Cyclic#6.EngineGeneral::iSafeOUT_F20_FS_HWLT_Lo_PC_ET" />
+        <Info Name="AsVariable" Value="DINT0039,Cyclic#6.EngineGeneral::iSafeOUT_F09_Door_OK_15s_ET" />
+        <Info Name="AsVariable" Value="BOOL00216,Cyclic#6.EngineGeneral::bSafeOUT_F20_LS_HWHT_Lo_OK" />
+        <Info Name="AsVariable" Value="BOOL00036,Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV1b_PS" />
+        <Info Name="AsVariable" Value="BOOL00160,Cyclic#6.EngineGeneral::bAMM_9437" />
+        <Info Name="AsVariable" Value="BOOL00186,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_GT2_Exist" />
+        <Info Name="AsVariable" Value="BOOL00187,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_GT3_Exist" />
+        <Info Name="AsVariable" Value="BOOL00184,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_ERV_ColdCountry_Active" />
+        <Info Name="AsVariable" Value="BOOL00185,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_ER_Door_MonActive" />
+        <Info Name="AsVariable" Value="BOOL00182,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_SafetyLoop_A2_Exist" />
+        <Info Name="AsVariable" Value="BOOL00183,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_ERV_Cust_Active" />
+        <Info Name="AsVariable" Value="BOOL00180,Cyclic#6.EngineGeneral::bAMM_9459" />
+        <Info Name="AsVariable" Value="BOOL00112,Cyclic#6.EngineGeneral::bAMM_9526" />
+        <Info Name="AsVariable" Value="BOOL00076,Cyclic#6.EngineGeneral::bAMM_9408" />
+        <Info Name="AsVariable" Value="BOOL00331,Cyclic#6.EngineGeneral::bAMM_9664" />
+        <Info Name="AsVariable" Value="BOOL00188,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_GT4_Exist" />
+        <Info Name="AsVariable" Value="BOOL00189,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_DCGA_Exist" />
+        <Info Name="AsVariable" Value="BOOL00197,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_PS2_HWHT_Lo_Exist" />
+        <Info Name="AsVariable" Value="BOOL00194,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_PS1_HWHT_Hi_Exist" />
+        <Info Name="AsVariable" Value="BOOL00195,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_PS2_HWHT_Hi_Exist" />
+        <Info Name="AsVariable" Value="BOOL00192,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_PS_HW_Lo_MuteActive" />
+        <Info Name="AsVariable" Value="BOOL00193,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_LS_HWHT_Lo_Exist" />
+        <Info Name="AsVariable" Value="BOOL00190,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_SysPurge_MonActive" />
+        <Info Name="AsVariable" Value="BOOL00191,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_HWcirc_Cust_Exist" />
+        <Info Name="AsVariable" Value="DINT0044,Cyclic#6.EngineGeneral::iSafeOUT_F09_INL5_Fan_OK_1m_ET" />
+        <Info Name="AsVariable" Value="BOOL00198,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_TS1_HWHT_Hi_Exist" />
+        <Info Name="AsVariable" Value="BOOL00199,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_TS2_HWHT_Hi_Exist" />
+        <Info Name="AsVariable" Value="UINT0027,Cyclic#6.EngineGeneral::iParaRead_sPLC[26]" />
+        <Info Name="AsVariable" Value="UINT0008,Cyclic#6.EngineGeneral::iParaRead_sPLC[7]" />
+        <Info Name="AsVariable" Value="UDINT0001,Cyclic#6.EngineGeneral::iSafeOUT_F09_CRC" />
+        <Info Name="AsVariable" Value="UINT0001,Cyclic#6.EngineGeneral::iParaRead_sPLC[0]" />
+        <Info Name="AsVariable" Value="BOOL00102,Cyclic#6.EngineGeneral::bAMM_9516" />
+        <Info Name="AsVariable" Value="BOOL00359,Cyclic#6.EngineGeneral::bAMM_9692" />
+        <Info Name="AsVariable" Value="DINT0051,Cyclic#6.EngineGeneral::iSafeOUT_F09_INL6_Lou_OK_1m_ET" />
+        <Info Name="AsVariable" Value="BOOL00314,Cyclic#6.EngineGeneral::bAMM_9647" />
+        <Info Name="AsVariable" Value="BOOL00134,Cyclic#6.EngineGeneral::bAMM_9566" />
+        <Info Name="AsVariable" Value="BOOL00166,Cyclic#6.EngineGeneral::bAMM_9445" />
+        <Info Name="AsVariable" Value="BOOL00121,Cyclic#6.EngineGeneral::bAMM_9535" />
+        <Info Name="AsVariable" Value="BOOL00167,Cyclic#6.EngineGeneral::bAMM_9446" />
+        <Info Name="AsVariable" Value="DINT0043,Cyclic#6.EngineGeneral::iSafeOUT_F09_INL4_Fan_OK_1m_ET" />
+        <Info Name="AsVariable" Value="BOOL00326,Cyclic#6.EngineGeneral::bAMM_9659" />
+        <Info Name="AsVariable" Value="BOOL00327,Cyclic#6.EngineGeneral::bAMM_9660" />
+        <Info Name="AsVariable" Value="BOOL00324,Cyclic#6.EngineGeneral::bAMM_9657" />
+        <Info Name="AsVariable" Value="BOOL00325,Cyclic#6.EngineGeneral::bAMM_9658" />
+        <Info Name="AsVariable" Value="BOOL00322,Cyclic#6.EngineGeneral::bAMM_9655" />
+        <Info Name="AsVariable" Value="BOOL00323,Cyclic#6.EngineGeneral::bAMM_9656" />
+        <Info Name="AsVariable" Value="BOOL00320,Cyclic#6.EngineGeneral::bAMM_9653" />
+        <Info Name="AsVariable" Value="BOOL00258,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL3_Lou_OK" />
+        <Info Name="AsVariable" Value="DINT0042,Cyclic#6.EngineGeneral::iSafeOUT_F09_INL3_Fan_OK_1m_ET" />
+        <Info Name="AsVariable" Value="DINT0031,Cyclic#6.EngineGeneral::iSafeOUT_F20_PS1_HWHT_Lo_OK_ET" />
+        <Info Name="AsVariable" Value="DINT0032,Cyclic#6.EngineGeneral::iSafeOUT_F20_PS2_HWHT_Lo_OK_ET" />
+        <Info Name="AsVariable" Value="DINT0058,Cyclic#6.EngineGeneral::iSafeOUT_F12_DCGA_LC_130s_ET" />
+        <Info Name="AsVariable" Value="BOOL00328,Cyclic#6.EngineGeneral::bAMM_9661" />
+        <Info Name="AsVariable" Value="BOOL00329,Cyclic#6.EngineGeneral::bAMM_9662" />
+        <Info Name="AsVariable" Value="BOOL00337,Cyclic#6.EngineGeneral::bAMM_9670" />
+        <Info Name="AsVariable" Value="BOOL00304,Cyclic#6.EngineGeneral::bAMM_9637" />
+        <Info Name="AsVariable" Value="BOOL00321,Cyclic#6.EngineGeneral::bAMM_9654" />
+        <Info Name="AsVariable" Value="BOOL00332,Cyclic#6.EngineGeneral::bAMM_9665" />
+        <Info Name="AsVariable" Value="BOOL00333,Cyclic#6.EngineGeneral::bAMM_9666" />
+        <Info Name="AsVariable" Value="BOOL00330,Cyclic#6.EngineGeneral::bAMM_9663" />
+        <Info Name="AsVariable" Value="BOOL00124,Cyclic#6.EngineGeneral::bAMM_9538" />
+        <Info Name="AsVariable" Value="DINT0047,Cyclic#6.EngineGeneral::iSafeOUT_F09_INL2_Lou_OK_1m_ET" />
+        <Info Name="AsVariable" Value="DINT0005,Cyclic#6.EngineGeneral::iSafeOUT_F01_N_Nom90_10s_ET" />
+        <Info Name="AsVariable" Value="DINT0033,Cyclic#6.EngineGeneral::iSafeOUT_F20_FS_HWHT_Lo_OK_ET" />
+        <Info Name="AsVariable" Value="BOOL00026,Cyclic#6.EngineGeneral::bSafeOUT_F10_DO_EmStop_PS" />
+        <Info Name="AsVariable" Value="BOOL00027,Cyclic#6.EngineGeneral::bSafeOUT_F11_SafetyLoop_A1_OK" />
+        <Info Name="AsVariable" Value="BOOL00024,Cyclic#6.EngineGeneral::bSafeOUT_F10_SafetyLoop_EmStop" />
+        <Info Name="AsVariable" Value="BOOL00025,Cyclic#6.EngineGeneral::bSafeOUT_F10_DO_EmStop" />
+        <Info Name="AsVariable" Value="BOOL00022,Cyclic#6.EngineGeneral::bSafeOUT_F10_EmStop_M_OK" />
+        <Info Name="AsVariable" Value="BOOL00023,Cyclic#6.EngineGeneral::bSafeOUT_F10_EmStop_OK" />
+        <Info Name="AsVariable" Value="BOOL00020,Cyclic#6.EngineGeneral::bSafeOUT_F09_Cust_OK" />
+        <Info Name="AsVariable" Value="BOOL00021,Cyclic#6.EngineGeneral::bSafeOUT_F09_Cust_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00300,Cyclic#6.EngineGeneral::bAMM_9633" />
+        <Info Name="AsVariable" Value="BOOL00301,Cyclic#6.EngineGeneral::bAMM_9634" />
+        <Info Name="AsVariable" Value="BOOL00356,Cyclic#6.EngineGeneral::bAMM_9689" />
+        <Info Name="AsVariable" Value="BOOL00339,Cyclic#6.EngineGeneral::bAMM_9672" />
+        <Info Name="AsVariable" Value="BOOL00028,Cyclic#6.EngineGeneral::bSafeOUT_F11_SafetyLoop_A2_OK" />
+        <Info Name="AsVariable" Value="BOOL00029,Cyclic#6.EngineGeneral::bSafeOUT_F11_SafetyLoop_M_OK" />
+        <Info Name="AsVariable" Value="BOOL00037,Cyclic#6.EngineGeneral::bSafeOUT_F12_GT1_SD_Dem" />
+        <Info Name="AsVariable" Value="BOOL00034,Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV1" />
+        <Info Name="AsVariable" Value="BOOL00035,Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV1a_PS" />
+        <Info Name="AsVariable" Value="BOOL00032,Cyclic#6.EngineGeneral::bSafeOUT_F12_GT3_OK" />
+        <Info Name="AsVariable" Value="BOOL00033,Cyclic#6.EngineGeneral::bSafeOUT_F12_GT4_OK" />
+        <Info Name="AsVariable" Value="BOOL00030,Cyclic#6.EngineGeneral::bSafeOUT_F12_GT1_OK" />
+        <Info Name="AsVariable" Value="BOOL00031,Cyclic#6.EngineGeneral::bSafeOUT_F12_GT2_OK" />
+        <Info Name="AsVariable" Value="BOOL00310,Cyclic#6.EngineGeneral::bAMM_9643" />
+        <Info Name="AsVariable" Value="BOOL00311,Cyclic#6.EngineGeneral::bAMM_9644" />
+        <Info Name="AsVariable" Value="DINT0021,Cyclic#6.EngineGeneral::iSafeOUT_F07_GCB_On_60s_ET" />
+        <Info Name="AsVariable" Value="BOOL00038,Cyclic#6.EngineGeneral::bSafeOUT_F12_GT1_SD_Dem_PS" />
+        <Info Name="AsVariable" Value="BOOL00039,Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV2" />
+        <Info Name="AsVariable" Value="BOOL00318,Cyclic#6.EngineGeneral::bAMM_9651" />
+        <Info Name="AsVariable" Value="BOOL00319,Cyclic#6.EngineGeneral::bAMM_9652" />
+        <Info Name="AsVariable" Value="BOOL00367,Cyclic#6.EngineGeneral::bAMM_9700" />
+        <Info Name="AsVariable" Value="BOOL00364,Cyclic#6.EngineGeneral::bAMM_9697" />
+        <Info Name="AsVariable" Value="BOOL00336,Cyclic#6.EngineGeneral::bAMM_9669" />
+        <Info Name="AsVariable" Value="BOOL00362,Cyclic#6.EngineGeneral::bAMM_9695" />
+        <Info Name="AsVariable" Value="BOOL00363,Cyclic#6.EngineGeneral::bAMM_9696" />
+        <Info Name="AsVariable" Value="BOOL00360,Cyclic#6.EngineGeneral::bAMM_9693" />
+        <Info Name="AsVariable" Value="BOOL00361,Cyclic#6.EngineGeneral::bAMM_9694" />
+        <Info Name="AsVariable" Value="BOOL00122,Cyclic#6.EngineGeneral::bAMM_9536" />
+        <Info Name="AsVariable" Value="DINT0002,Cyclic#6.EngineGeneral::iSafeOUT_F01_N_EngAct_Diff" />
+        <Info Name="AsVariable" Value="BOOL00368,Cyclic#6.EngineGeneral::bAMM_9701" />
+        <Info Name="AsVariable" Value="BOOL00369,Cyclic#6.EngineGeneral::bAMM_9702" />
+        <Info Name="AsVariable" Value="UINT0011,Cyclic#6.EngineGeneral::iParaRead_sPLC[10]" />
+        <Info Name="AsVariable" Value="BOOL00256,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL2_Lou_OK" />
+        <Info Name="AsVariable" Value="BOOL00103,Cyclic#6.EngineGeneral::bAMM_9517" />
+        <Info Name="AsVariable" Value="BOOL00254,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL1_Lou_OK" />
+        <Info Name="AsVariable" Value="BOOL00255,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL1_Lou_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00252,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL6_Fan_OK" />
+        <Info Name="AsVariable" Value="BOOL00253,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL6_Fan_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00250,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL5_Fan_OK" />
+        <Info Name="AsVariable" Value="BOOL00251,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL5_Fan_OK_PC" />
+        <Info Name="AsVariable" Value="DINT0003,Cyclic#6.EngineGeneral::iSafeOUT_F01_SDC_30s_ET" />
+        <Info Name="AsVariable" Value="BOOL00315,Cyclic#6.EngineGeneral::bAMM_9648" />
+        <Info Name="AsVariable" Value="UINT0025,Cyclic#6.EngineGeneral::iParaRead_sPLC[24]" />
+        <Info Name="AsVariable" Value="BOOL00346,Cyclic#6.EngineGeneral::bAMM_9679" />
+        <Info Name="AsVariable" Value="BOOL00135,Cyclic#6.EngineGeneral::bAMM_9567" />
+        <Info Name="AsVariable" Value="BOOL00259,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL3_Lou_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00345,Cyclic#6.EngineGeneral::bAMM_9678" />
+        <Info Name="AsVariable" Value="BOOL00342,Cyclic#6.EngineGeneral::bAMM_9675" />
+        <Info Name="AsVariable" Value="BOOL00343,Cyclic#6.EngineGeneral::bAMM_9676" />
+        <Info Name="AsVariable" Value="BOOL00340,Cyclic#6.EngineGeneral::bAMM_9673" />
+        <Info Name="AsVariable" Value="BOOL00341,Cyclic#6.EngineGeneral::bAMM_9674" />
+        <Info Name="AsVariable" Value="BOOL00266,Cyclic#6.EngineGeneral::bSafeOUT_F09_OTL1_Lou_OK" />
+        <Info Name="AsVariable" Value="BOOL00348,Cyclic#6.EngineGeneral::bAMM_9681" />
+        <Info Name="AsVariable" Value="BOOL00349,Cyclic#6.EngineGeneral::bAMM_9682" />
+        <Info Name="AsVariable" Value="BOOL00357,Cyclic#6.EngineGeneral::bAMM_9690" />
+        <Info Name="AsVariable" Value="BOOL00354,Cyclic#6.EngineGeneral::bAMM_9687" />
+        <Info Name="AsVariable" Value="BOOL00355,Cyclic#6.EngineGeneral::bAMM_9688" />
+        <Info Name="AsVariable" Value="INT1002,Cyclic#6.EngineGeneral::iSafeIN_N_EngNom" />
+        <Info Name="AsVariable" Value="BOOL00353,Cyclic#6.EngineGeneral::bAMM_9686" />
+        <Info Name="AsVariable" Value="BOOL00350,Cyclic#6.EngineGeneral::bAMM_9683" />
+        <Info Name="AsVariable" Value="BOOL00351,Cyclic#6.EngineGeneral::bAMM_9684" />
+        <Info Name="AsVariable" Value="DINT0001,Cyclic#6.EngineGeneral::iSafeOUT_F01_N_EngAct" />
+        <Info Name="AsVariable" Value="BOOL00358,Cyclic#6.EngineGeneral::bAMM_9691" />
+        <Info Name="AsVariable" Value="BOOL00305,Cyclic#6.EngineGeneral::bAMM_9638" />
+        <Info Name="AsVariable" Value="UINT0014,Cyclic#6.EngineGeneral::iParaRead_sPLC[13]" />
+        <Info Name="AsVariable" Value="BOOL00286,Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GVb_DCGA_PS" />
+        <Info Name="AsVariable" Value="BOOL00287,Cyclic#6.EngineGeneral::bSafeOUT_F12_DCGA_SD_Dem" />
+        <Info Name="AsVariable" Value="BOOL00125,Cyclic#6.EngineGeneral::bAMM_9539" />
+        <Info Name="AsVariable" Value="BOOL00285,Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GVa_DCGA_PS" />
+        <Info Name="AsVariable" Value="BOOL00282,Cyclic#6.EngineGeneral::bSafeOUT_F12_DI_DCGA_SafeDevOK" />
+        <Info Name="AsVariable" Value="BOOL00283,Cyclic#6.EngineGeneral::bSafeOUT_F12_DCGA_OK" />
+        <Info Name="AsVariable" Value="BOOL00280,Cyclic#6.EngineGeneral::bSafeOUT_F12_DI_GT3_SafeDevOK" />
+        <Info Name="AsVariable" Value="BOOL00281,Cyclic#6.EngineGeneral::bSafeOUT_F12_DI_GT4_SafeDevOK" />
+        <Info Name="AsVariable" Value="DINT0006,Cyclic#6.EngineGeneral::iSafeOUT_F03_Pr_EO" />
+        <Info Name="AsVariable" Value="BOOL00288,Cyclic#6.EngineGeneral::bSafeOUT_F12_DCGA_SD_Dem_PS" />
+        <Info Name="AsVariable" Value="BOOL00289,Cyclic#6.EngineGeneral::bAMM_9480" />
+        <Info Name="AsVariable" Value="BOOL00297,Cyclic#6.EngineGeneral::bAMM_9630" />
+        <Info Name="AsVariable" Value="BOOL00294,Cyclic#6.EngineGeneral::bAMM_9627" />
+        <Info Name="AsVariable" Value="BOOL00295,Cyclic#6.EngineGeneral::bAMM_9628" />
+        <Info Name="AsVariable" Value="BOOL00292,Cyclic#6.EngineGeneral::bAMM_9483" />
+        <Info Name="AsVariable" Value="BOOL00293,Cyclic#6.EngineGeneral::bAMM_9484" />
+        <Info Name="AsVariable" Value="BOOL00290,Cyclic#6.EngineGeneral::bAMM_9481" />
+        <Info Name="AsVariable" Value="BOOL00291,Cyclic#6.EngineGeneral::bAMM_9482" />
+        <Info Name="AsVariable" Value="DINT0007,Cyclic#6.EngineGeneral::iSafeOUT_F03_Pr_EO_Standstill" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[1].ModuleOK[0]" />
+        <Info Name="AsVariable" Value="BOOL00110,Cyclic#6.EngineGeneral::bAMM_9524" />
+        <Info Name="AsVariable" Value="BOOL00298,Cyclic#6.EngineGeneral::bAMM_9631" />
+        <Info Name="AsVariable" Value="BOOL00209,Cyclic#6.EngineGeneral::MM2VIS_sPLC.bParaSafe_Pr_EG_sMonActive" />
+        <Info Name="AsVariable" Value="BOOL00338,Cyclic#6.EngineGeneral::bAMM_9671" />
+        <Info Name="AsVariable" Value="BOOL00079,Cyclic#6.EngineGeneral::bAMM_9411" />
+        <Info Name="AsVariable" Value="DINT0004,Cyclic#6.EngineGeneral::iSafeOUT_F01_Standstill_1m_ET" />
+        <Info Name="AsVariable" Value="DINT0054,Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL3_Lou_OK_1m_ET" />
+        <Info Name="AsVariable" Value="DINT0053,Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL2_Lou_OK_1m_ET" />
+        <Info Name="AsVariable" Value="UINT0024,Cyclic#6.EngineGeneral::iParaRead_sPLC[23]" />
+        <Info Name="AsVariable" Value="BOOL00105,Cyclic#6.EngineGeneral::bAMM_9519" />
+        <Info Name="AsVariable" Value="BOOL00347,Cyclic#6.EngineGeneral::bAMM_9680" />
+        <Info Name="AsVariable" Value="DINT0010,Cyclic#6.EngineGeneral::iSafeOUT_F04_Pr_EOaP" />
+        <Info Name="AsVariable" Value="BOOL00066,Cyclic#6.EngineGeneral::bAMM_2389" />
+        <Info Name="AsVariable" Value="BOOL00100,Cyclic#6.EngineGeneral::bAMM_9514" />
+        <Info Name="AsVariable" Value="UINT0018,Cyclic#6.EngineGeneral::iParaRead_sPLC[17]" />
+        <Info Name="AsVariable" Value="BOOL00239,Cyclic#6.EngineGeneral::bSafeOUT_F20_FS_HWLT_Lo_DI" />
+        <Info Name="AsVariable" Value="DINT0020,Cyclic#6.EngineGeneral::iSafeOUT_F07_GCB_On_10s_ET" />
+        <Info Name="AsVariable" Value="BOOL00312,Cyclic#6.EngineGeneral::bAMM_9645" />
+        <Info Name="AsVariable" Value="BOOL00132,Cyclic#6.EngineGeneral::bAMM_9564" />
+        <Info Name="AsVariable" Value="UDINT0002,Cyclic#6.EngineGeneral::iSafeOUT_F20_CRC" />
+        <Info Name="AsVariable" Value="UINT0020,Cyclic#6.EngineGeneral::iParaRead_sPLC[19]" />
+        <Info Name="AsVariable" Value="BOOL00164,Cyclic#6.EngineGeneral::bAMM_9443" />
+        <Info Name="AsVariable" Value="DINT0014,Cyclic#6.EngineGeneral::iSafeOUT_F05_Pr_ECW" />
+        <Info Name="AsVariable" Value="BOOL00370,Cyclic#6.EngineGeneral::bAMM_9703" />
+        <Info Name="AsVariable" Value="DINT0029,Cyclic#6.EngineGeneral::iSafeOUT_F16_ScavFlapPos_PC_ET" />
+        <Info Name="AsVariable" Value="DINT0057,Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL6_Lou_OK_1m_ET" />
+        <Info Name="AsVariable" Value="BOOL00335,Cyclic#6.EngineGeneral::bAMM_9668" />
+        <Info Name="AsVariable" Value="BOOL00302,Cyclic#6.EngineGeneral::bAMM_9635" />
+        <Info Name="AsVariable" Value="UINT0003,Cyclic#6.EngineGeneral::iParaRead_sPLC[2]" />
+        <Info Name="AsVariable" Value="DINT0050,Cyclic#6.EngineGeneral::iSafeOUT_F09_INL5_Lou_OK_1m_ET" />
+        <Info Name="AsVariable" Value="FirmwareVersion,Cyclic#6.EngineGeneral::iSafeOUT_FwVers_sPLC" />
+        <Info Name="AsVariable" Value="UINT0026,Cyclic#6.EngineGeneral::iParaRead_sPLC[25]" />
+        <Info Name="AsVariable" Value="BOOL00334,Cyclic#6.EngineGeneral::bAMM_9667" />
+        <Info Name="AsVariable" Value="DINT0019,Cyclic#6.EngineGeneral::iSafeOUT_F06_ECW_PumpsOff_2m_ET" />
+        <Info Name="AsVariable" Value="UINT0010,Cyclic#6.EngineGeneral::iParaRead_sPLC[9]" />
+        <Info Name="AsVariable" Value="BOOL00257,Cyclic#6.EngineGeneral::bSafeOUT_F09_INL2_Lou_OK_PC" />
+        <Info Name="AsVariable" Value="BOOL00371,Cyclic#6.EngineGeneral::bAMM_9704" />
+        <Info Name="AsVariable" Value="BOOL00111,Cyclic#6.EngineGeneral::bAMM_9525" />
+      </NodeDescription>
+      <ChannelConfiguration>
+        <DataTransport>
+          <GenericTransport Name="DataExFromCpu" Direction="Input" OctetSize="516" IsSafe="false" />
+          <GenericTransport Name="DataExToCpu" Direction="Output" OctetSize="516" IsSafe="false" />
+        </DataTransport>
+        <ChannelGroup id="ToCPU_BOOL">
+          <Channel id="BOOL0">
+            <DataValue Type="Boolean">
+              <Transport Name="DataExToCpu" Index="0x00" />
+              <SODPosition Index="0x0" SubIndex="0x00" />
+            </DataValue>
+            <Repetition RangeMax="384" NrOfDigits="4" />
+          </Channel>
+        </ChannelGroup>
+        <ChannelGroup id="ToCPU_INT">
+          <Channel id="INT0">
+            <DataValue Type="Int16">
+              <Transport Name="DataExToCpu" Index="0x00" />
+              <SODPosition Index="0x0" SubIndex="0x00" />
+            </DataValue>
+            <Repetition RangeMax="8" NrOfDigits="3" />
+          </Channel>
+        </ChannelGroup>
+        <ChannelGroup id="ToCPU_UINT">
+          <Channel id="UINT0">
+            <DataValue Type="UInt16">
+              <Transport Name="DataExToCpu" Index="0x00" />
+              <SODPosition Index="0x0" SubIndex="0x00" />
+            </DataValue>
+            <Repetition RangeMax="30" NrOfDigits="3" />
+          </Channel>
+        </ChannelGroup>
+        <ChannelGroup id="ToCPU_UDINT">
+          <Channel id="UDINT0">
+            <DataValue Type="UInt32">
+              <Transport Name="DataExToCpu" Index="0x00" />
+              <SODPosition Index="0x0" SubIndex="0x00" />
+            </DataValue>
+            <Repetition RangeMax="2" NrOfDigits="3" />
+          </Channel>
+        </ChannelGroup>
+        <ChannelGroup id="ToCPU_DINT">
+          <Channel id="DINT0">
+            <DataValue Type="Int32">
+              <Transport Name="DataExToCpu" Index="0x00" />
+              <SODPosition Index="0x0" SubIndex="0x00" />
+            </DataValue>
+            <Repetition RangeMax="64" NrOfDigits="3" />
+          </Channel>
+        </ChannelGroup>
+        <ChannelGroup id="FromCPU_BOOL">
+          <Channel id="BOOL1">
+            <DataValue Type="Boolean">
+              <Transport Name="DataExFromCpu" Index="0x00" />
+              <SODPosition Index="0x0" SubIndex="0x00" />
+            </DataValue>
+            <Repetition RangeMax="24" NrOfDigits="4" />
+          </Channel>
+        </ChannelGroup>
+        <ChannelGroup id="FromCPU_INT">
+          <Channel id="INT1">
+            <DataValue Type="Int16">
+              <Transport Name="DataExFromCpu" Index="0x00" />
+              <SODPosition Index="0x0" SubIndex="0x00" />
+            </DataValue>
+            <Repetition RangeMax="4" NrOfDigits="3" />
+          </Channel>
+        </ChannelGroup>
+      </ChannelConfiguration>
+    </SafetyNode>
+    <SafetyNode SAddr="101">
+      <DeviceDescription Module="X20SI8110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SI8110\2.6.0.0\OSDD\\X20SI8110_2_6_0_0.xosdd]]></DeviceDescription>
+      <NodeDescription>
+        <Classification Type="Digital" />
+        <Classification Type="Input" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Classification Type="VendorSpecific">IO</Classification>
+        <Info Name="Interface" Value="IF3.ST16.IF1.ST17" />
+        <Info Name="HWC_Revision" Value="2.6.0.0" />
+        <Info Name="HWC_LastEdit" Value="10.01.2024 09:47:00" />
+        <Info Name="AS_Name" Value="X20SI8110_P10_17" />
+        <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
+        <Info Name="Description-de" Value="X20 Safe Digital In, 8xE, 24V" />
+        <Info Name="Description-en" Value="X20 Safe Digital In, 8xI, 24V" />
+        <Info Name="AsVariable" Value="SafeDigitalInput03,Cyclic#1.HalIO::GenPrctTrip" />
+        <Info Name="AsVariable" Value="SafeDigitalInput06,Cyclic#1.HalIO::GCB_On" />
+        <Info Name="AsVariable" Value="SafeDigitalInput07,Cyclic#1.HalIO::GCB_Off" />
+        <Info Name="AsVariable" Value="SafeDigitalInput02,Cyclic#1.HalIO::OlShortCirc" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[10].ModuleOK[17]" />
+        <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_101" />
+      </NodeDescription>
+      <ChannelConfiguration />
+    </SafetyNode>
+    <SafetyNode SAddr="102">
+      <DeviceDescription Module="X20SO4110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SO4110\2.3.0.1\OSDD\\X20SO4110_2_3_0_1.xosdd]]></DeviceDescription>
+      <NodeDescription>
+        <Classification Type="Digital" />
+        <Classification Type="Output" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Classification Type="VendorSpecific">IO</Classification>
+        <Info Name="Interface" Value="IF3.ST16.IF1.ST18" />
+        <Info Name="HWC_Revision" Value="2.3.0.1" />
+        <Info Name="HWC_LastEdit" Value="08.03.2024 10:06:16" />
+        <Info Name="AS_Name" Value="X20SO4110_P10_18" />
+        <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
+        <Info Name="Description-de" Value="X20 Safe Digital Out, 4xA, 24 V, 0.5 A" />
+        <Info Name="Description-en" Value="X20 Safe Digital Out, 4xO, 24 V, 0.5 A" />
+        <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_102" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[10].ModuleOK[18]" />
+        <Info Name="AsVariable" Value="DigitalOutput01,Cyclic#1.HalIO::Rel_Sync_Load" />
+        <Info Name="AsVariable" Value="DigitalOutput02,Cyclic#1.HalIO::GCB_RUC" />
+      </NodeDescription>
+      <ChannelConfiguration>
+        <DataTransport>
+          <GenericTransport Name="PDOo" Direction="Output" OctetSize="1" IsSafe="false" />
+          <GenericTransport Name="PDOi" Direction="Input" OctetSize="1" IsSafe="false" />
+        </DataTransport>
+        <ChannelGroup id="Output 01-04">
+          <Channel id="PhysicalStateOutput01">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="PhysicalStateOutput02">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="PhysicalStateOutput03">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="PhysicalStateOutput04">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK01">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK02">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK03">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK04">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+        </ChannelGroup>
+      </ChannelConfiguration>
+    </SafetyNode>
+    <SafetyNode SAddr="103">
+      <DeviceDescription Module="X20SI8110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SI8110\2.6.0.0\OSDD\\X20SI8110_2_6_0_0.xosdd]]></DeviceDescription>
+      <NodeDescription>
+        <Classification Type="Digital" />
+        <Classification Type="Input" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Classification Type="VendorSpecific">IO</Classification>
+        <Info Name="Interface" Value="IF3.ST16.IF1.ST19" />
+        <Info Name="HWC_Revision" Value="2.6.0.0" />
+        <Info Name="HWC_LastEdit" Value="10.01.2024 09:47:00" />
+        <Info Name="AS_Name" Value="X20SI8110_P10_19" />
+        <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
+        <Info Name="Description-de" Value="X20 Safe Digital In, 8xE, 24V" />
+        <Info Name="Description-en" Value="X20 Safe Digital In, 8xI, 24V" />
+        <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_103" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[10].ModuleOK[19]" />
+      </NodeDescription>
+      <ChannelConfiguration />
+    </SafetyNode>
+    <SafetyNode SAddr="104" Disabled="true">
+      <DeviceDescription Module="X20SI8110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SI8110\2.6.0.0\OSDD\\X20SI8110_2_6_0_0.xosdd]]></DeviceDescription>
+      <NodeDescription>
+        <Classification Type="Digital" />
+        <Classification Type="Input" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Classification Type="VendorSpecific">IO</Classification>
+        <Info Name="Interface" Value="IF3.ST16.IF1.ST21" />
+        <Info Name="HWC_Revision" Value="2.6.0.0" />
+        <Info Name="HWC_LastEdit" Value="10.01.2024 09:47:00" />
+        <Info Name="AS_Name" Value="X20SI8110_P10_21" />
+        <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
+        <Info Name="Description-de" Value="X20 Safe Digital In, 8xE, 24V" />
+        <Info Name="Description-en" Value="X20 Safe Digital In, 8xI, 24V" />
+        <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_104" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[10].ModuleOK[21]" />
+      </NodeDescription>
+      <ChannelConfiguration />
+    </SafetyNode>
+    <SafetyNode SAddr="105" Disabled="true">
+      <DeviceDescription Module="X20SI8110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SI8110\2.6.0.0\OSDD\\X20SI8110_2_6_0_0.xosdd]]></DeviceDescription>
+      <NodeDescription>
+        <Classification Type="Digital" />
+        <Classification Type="Input" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Classification Type="VendorSpecific">IO</Classification>
+        <Info Name="Interface" Value="IF3.ST16.IF1.ST22" />
+        <Info Name="HWC_Revision" Value="2.6.0.0" />
+        <Info Name="HWC_LastEdit" Value="10.01.2024 09:47:00" />
+        <Info Name="AS_Name" Value="X20SI8110_P10_22" />
+        <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
+        <Info Name="Description-de" Value="X20 Safe Digital In, 8xE, 24V" />
+        <Info Name="Description-en" Value="X20 Safe Digital In, 8xI, 24V" />
+        <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_105" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[10].ModuleOK[22]" />
+      </NodeDescription>
+      <ChannelConfiguration />
+    </SafetyNode>
+    <SafetyNode SAddr="201">
+      <DeviceDescription Module="X20SD1207_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SD1207\2.5.1.2\OSDD\\X20SD1207_2_5_1_2.xosdd]]></DeviceDescription>
+      <NodeDescription>
+        <Classification Type="Counter" />
+        <Classification Type="Digital" />
+        <Classification Type="Input" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Classification Type="VendorSpecific">IO</Classification>
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST9" />
+        <Info Name="HWC_Revision" Value="2.5.1.2" />
+        <Info Name="HWC_LastEdit" Value="20.03.2024 12:56:48" />
+        <Info Name="AS_Name" Value="X20SD1207_P20_09" />
+        <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
+        <Info Name="Description-de" Value="X20 Safe Zähler, 4xE, 24V, 7kHz" />
+        <Info Name="Description-en" Value="X20 Safe Counter, 4xI, 24V, 7kHz" />
+        <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_201" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[9]" />
+      </NodeDescription>
+      <ChannelConfiguration>
+        <DataTransport>
+          <GenericTransport Name="PDOo" Direction="Output" OctetSize="2" IsSafe="false" />
+          <GenericTransport Name="PDOi" Direction="Input" OctetSize="8" IsSafe="false" />
+        </DataTransport>
+      </ChannelConfiguration>
+    </SafetyNode>
+    <SafetyNode SAddr="202">
+      <DeviceDescription Module="X20SA4430_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SA4430\2.5.0.0\OSDD\\X20SA4430_2_5_0_0.xosdd]]></DeviceDescription>
+      <NodeDescription>
+        <Classification Type="Analog" />
+        <Classification Type="Input" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Classification Type="VendorSpecific">IO</Classification>
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST10" />
+        <Info Name="HWC_Revision" Value="2.5.0.0" />
+        <Info Name="HWC_LastEdit" Value="15.07.2021 16:38:02" />
+        <Info Name="AS_Name" Value="X20SA4430_P20_10" />
+        <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
+        <Info Name="Description-de" Value="X20 Safe Analog In, 4 bis 20 mA" />
+        <Info Name="Description-en" Value="X20 Safe Analog In, 4 to 20 mA" />
+        <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_202" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[10]" />
+        <Info Name="AsVariable" Value="SafeCurrent0102,Cyclic#1.HalIO::Pr_EngLubOil" />
+        <Info Name="AsVariable" Value="SafeCurrent0304,Cyclic#1.HalIO::Pr_EOaP" />
+      </NodeDescription>
+      <ChannelConfiguration>
+        <DataTransport>
+          <GenericTransport Name="PDOi" Direction="Input" OctetSize="5" IsSafe="false" />
+        </DataTransport>
+        <ChannelGroup id="Current 01-04">
+          <Channel id="Current02">
+            <DataValue Type="Int16">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="Current04">
+            <DataValue Type="Int16">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+        </ChannelGroup>
+      </ChannelConfiguration>
+    </SafetyNode>
+    <SafetyNode SAddr="203">
+      <DeviceDescription Module="X20SA4430_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SA4430\2.5.0.0\OSDD\\X20SA4430_2_5_0_0.xosdd]]></DeviceDescription>
+      <NodeDescription>
+        <Classification Type="Analog" />
+        <Classification Type="Input" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Classification Type="VendorSpecific">IO</Classification>
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST11" />
+        <Info Name="HWC_Revision" Value="2.5.0.0" />
+        <Info Name="HWC_LastEdit" Value="15.07.2021 16:38:02" />
+        <Info Name="AS_Name" Value="X20SA4430_P20_11" />
+        <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
+        <Info Name="Description-de" Value="X20 Safe Analog In, 4 bis 20 mA" />
+        <Info Name="Description-en" Value="X20 Safe Analog In, 4 to 20 mA" />
+        <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_203" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[11]" />
+        <Info Name="AsVariable" Value="SafeCurrent0102,Cyclic#1.HalIO::Pr_ECW" />
+        <Info Name="AsVariable" Value="SafeCurrent0304,Cyclic#1.HalIO::Pr_ECWaP1" />
+      </NodeDescription>
+      <ChannelConfiguration>
+        <DataTransport>
+          <GenericTransport Name="PDOi" Direction="Input" OctetSize="5" IsSafe="false" />
+        </DataTransport>
+        <ChannelGroup id="Current 01-04">
+          <Channel id="Current02">
+            <DataValue Type="Int16">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="Current04">
+            <DataValue Type="Int16">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+        </ChannelGroup>
+      </ChannelConfiguration>
+    </SafetyNode>
+    <SafetyNode SAddr="204">
+      <DeviceDescription Module="X20SI8110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SI8110\2.6.0.0\OSDD\\X20SI8110_2_6_0_0.xosdd]]></DeviceDescription>
+      <NodeDescription>
+        <Classification Type="Digital" />
+        <Classification Type="Input" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Classification Type="VendorSpecific">IO</Classification>
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST12" />
+        <Info Name="HWC_Revision" Value="2.6.0.0" />
+        <Info Name="HWC_LastEdit" Value="10.01.2024 09:47:00" />
+        <Info Name="AS_Name" Value="X20SI8110_P20_12" />
+        <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
+        <Info Name="Description-de" Value="X20 Safe Digital In, 8xE, 24V" />
+        <Info Name="Description-en" Value="X20 Safe Digital In, 8xI, 24V" />
+        <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_204" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[12]" />
+        <Info Name="AsVariable" Value="SafeDigitalInput02,Cyclic#1.HalIO::Ign_Run_Hal" />
+        <Info Name="AsVariable" Value="SafeDigitalInput06,Cyclic#1.HalIO::Pr_EG_Hi" />
+      </NodeDescription>
+      <ChannelConfiguration />
+    </SafetyNode>
+    <SafetyNode SAddr="205">
+      <DeviceDescription Module="X20SO4110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SO4110\2.3.0.1\OSDD\\X20SO4110_2_3_0_1.xosdd]]></DeviceDescription>
+      <NodeDescription>
+        <Classification Type="Digital" />
+        <Classification Type="Output" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Classification Type="VendorSpecific">IO</Classification>
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST13" />
+        <Info Name="HWC_Revision" Value="2.3.0.1" />
+        <Info Name="HWC_LastEdit" Value="08.03.2024 10:06:16" />
+        <Info Name="AS_Name" Value="X20SO4110_P20_13" />
+        <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
+        <Info Name="Description-de" Value="X20 Safe Digital Out, 4xA, 24 V, 0.5 A" />
+        <Info Name="Description-en" Value="X20 Safe Digital Out, 4xO, 24 V, 0.5 A" />
+        <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_205" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[13]" />
+        <Info Name="AsVariable" Value="DigitalOutput01,Cyclic#1.HalIO::GT1_GV1_Open" />
+        <Info Name="AsVariable" Value="DigitalOutput02,Cyclic#1.HalIO::GT1_GV2_Open" />
+      </NodeDescription>
+      <ChannelConfiguration>
+        <DataTransport>
+          <GenericTransport Name="PDOo" Direction="Output" OctetSize="1" IsSafe="false" />
+          <GenericTransport Name="PDOi" Direction="Input" OctetSize="1" IsSafe="false" />
+        </DataTransport>
+        <ChannelGroup id="Output 01-04">
+          <Channel id="PhysicalStateOutput01">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="PhysicalStateOutput02">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="PhysicalStateOutput03">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="PhysicalStateOutput04">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK01">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK02">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK03">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK04">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+        </ChannelGroup>
+      </ChannelConfiguration>
+    </SafetyNode>
+    <SafetyNode SAddr="206">
+      <DeviceDescription Module="X20SO4110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SO4110\2.3.0.1\OSDD\\X20SO4110_2_3_0_1.xosdd]]></DeviceDescription>
+      <NodeDescription>
+        <Classification Type="Digital" />
+        <Classification Type="Output" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Classification Type="VendorSpecific">IO</Classification>
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST14" />
+        <Info Name="HWC_Revision" Value="2.3.0.1" />
+        <Info Name="HWC_LastEdit" Value="08.03.2024 10:06:16" />
+        <Info Name="AS_Name" Value="X20SO4110_P20_14" />
+        <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
+        <Info Name="Description-de" Value="X20 Safe Digital Out, 4xA, 24 V, 0.5 A" />
+        <Info Name="Description-en" Value="X20 Safe Digital Out, 4xO, 24 V, 0.5 A" />
+        <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_206" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[14]" />
+        <Info Name="AsVariable" Value="DigitalOutput01,Cyclic#1.HalIO::GT2_GV1_Open" />
+        <Info Name="AsVariable" Value="DigitalOutput02,Cyclic#1.HalIO::GT2_GV2_Open" />
+      </NodeDescription>
+      <ChannelConfiguration>
+        <DataTransport>
+          <GenericTransport Name="PDOo" Direction="Output" OctetSize="1" IsSafe="false" />
+          <GenericTransport Name="PDOi" Direction="Input" OctetSize="1" IsSafe="false" />
+        </DataTransport>
+        <ChannelGroup id="Output 01-04">
+          <Channel id="PhysicalStateOutput01">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="PhysicalStateOutput02">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="PhysicalStateOutput03">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="PhysicalStateOutput04">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK01">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK02">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK03">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK04">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+        </ChannelGroup>
+      </ChannelConfiguration>
+    </SafetyNode>
+    <SafetyNode SAddr="207" Disabled="true">
+      <DeviceDescription Module="X20SO4110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SO4110\2.3.0.1\OSDD\\X20SO4110_2_3_0_1.xosdd]]></DeviceDescription>
+      <NodeDescription>
+        <Classification Type="Digital" />
+        <Classification Type="Output" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Classification Type="VendorSpecific">IO</Classification>
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST18" />
+        <Info Name="HWC_Revision" Value="2.3.0.1" />
+        <Info Name="HWC_LastEdit" Value="08.03.2024 10:06:16" />
+        <Info Name="AS_Name" Value="X20SO4110_P20_18" />
+        <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
+        <Info Name="Description-de" Value="X20 Safe Digital Out, 4xA, 24 V, 0.5 A" />
+        <Info Name="Description-en" Value="X20 Safe Digital Out, 4xO, 24 V, 0.5 A" />
+        <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_207" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[18]" />
+      </NodeDescription>
+      <ChannelConfiguration>
+        <DataTransport>
+          <GenericTransport Name="PDOo" Direction="Output" OctetSize="1" IsSafe="false" />
+          <GenericTransport Name="PDOi" Direction="Input" OctetSize="1" IsSafe="false" />
+        </DataTransport>
+        <ChannelGroup id="Output 01-04">
+          <Channel id="PhysicalStateOutput01">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="PhysicalStateOutput02">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="PhysicalStateOutput03">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="PhysicalStateOutput04">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK01">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK02">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK03">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK04">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+        </ChannelGroup>
+      </ChannelConfiguration>
+    </SafetyNode>
+    <SafetyNode SAddr="208" Disabled="true">
+      <DeviceDescription Module="X20SI8110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SI8110\2.6.0.0\OSDD\\X20SI8110_2_6_0_0.xosdd]]></DeviceDescription>
+      <NodeDescription>
+        <Classification Type="Digital" />
+        <Classification Type="Input" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Classification Type="VendorSpecific">IO</Classification>
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST16" />
+        <Info Name="HWC_Revision" Value="2.6.0.0" />
+        <Info Name="HWC_LastEdit" Value="10.01.2024 09:47:00" />
+        <Info Name="AS_Name" Value="X20SI8110_P20_16" />
+        <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
+        <Info Name="Description-de" Value="X20 Safe Digital In, 8xE, 24V" />
+        <Info Name="Description-en" Value="X20 Safe Digital In, 8xI, 24V" />
+        <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_208" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[16]" />
+      </NodeDescription>
+      <ChannelConfiguration />
+    </SafetyNode>
+    <SafetyNode SAddr="209" Disabled="true">
+      <DeviceDescription Module="X20SO4110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SO4110\2.3.0.1\OSDD\\X20SO4110_2_3_0_1.xosdd]]></DeviceDescription>
+      <NodeDescription>
+        <Classification Type="Digital" />
+        <Classification Type="Output" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Classification Type="VendorSpecific">IO</Classification>
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST17" />
+        <Info Name="HWC_Revision" Value="2.3.0.1" />
+        <Info Name="HWC_LastEdit" Value="08.03.2024 10:06:16" />
+        <Info Name="AS_Name" Value="X20SO4110_P20_17" />
+        <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
+        <Info Name="Description-de" Value="X20 Safe Digital Out, 4xA, 24 V, 0.5 A" />
+        <Info Name="Description-en" Value="X20 Safe Digital Out, 4xO, 24 V, 0.5 A" />
+        <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_209" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[17]" />
+      </NodeDescription>
+      <ChannelConfiguration>
+        <DataTransport>
+          <GenericTransport Name="PDOo" Direction="Output" OctetSize="1" IsSafe="false" />
+          <GenericTransport Name="PDOi" Direction="Input" OctetSize="1" IsSafe="false" />
+        </DataTransport>
+        <ChannelGroup id="Output 01-04">
+          <Channel id="PhysicalStateOutput01">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="PhysicalStateOutput02">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="PhysicalStateOutput03">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="PhysicalStateOutput04">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK01">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK02">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK03">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK04">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+        </ChannelGroup>
+      </ChannelConfiguration>
+    </SafetyNode>
+    <SafetyNode SAddr="210">
+      <DeviceDescription Module="X20SO4110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SO4110\2.3.0.1\OSDD\\X20SO4110_2_3_0_1.xosdd]]></DeviceDescription>
+      <NodeDescription>
+        <Classification Type="Digital" />
+        <Classification Type="Output" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Classification Type="VendorSpecific">IO</Classification>
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST15" />
+        <Info Name="HWC_Revision" Value="2.3.0.1" />
+        <Info Name="HWC_LastEdit" Value="08.03.2024 10:06:16" />
+        <Info Name="AS_Name" Value="X20SO4110_P20_15" />
+        <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
+        <Info Name="Description-de" Value="X20 Safe Digital Out, 4xA, 24 V, 0.5 A" />
+        <Info Name="Description-en" Value="X20 Safe Digital Out, 4xO, 24 V, 0.5 A" />
+        <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_210" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[15]" />
+        <Info Name="AsVariable" Value="DigitalOutput01,Cyclic#1.HalIO::DCGA_GV1_Open" />
+        <Info Name="AsVariable" Value="DigitalOutput02,Cyclic#1.HalIO::DCGA_GV2_Open" />
+      </NodeDescription>
+      <ChannelConfiguration>
+        <DataTransport>
+          <GenericTransport Name="PDOo" Direction="Output" OctetSize="1" IsSafe="false" />
+          <GenericTransport Name="PDOi" Direction="Input" OctetSize="1" IsSafe="false" />
+        </DataTransport>
+        <ChannelGroup id="Output 01-04">
+          <Channel id="PhysicalStateOutput01">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="PhysicalStateOutput02">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="PhysicalStateOutput03">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="PhysicalStateOutput04">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK01">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK02">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK03">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+          <Channel id="CurrentOK04">
+            <DataValue Type="Boolean">
+              <Transport Name="PDOi" Index="0x00" />
+            </DataValue>
+          </Channel>
+        </ChannelGroup>
+      </ChannelConfiguration>
+    </SafetyNode>
+    <SafetyNode SAddr="300">
+      <DeviceDescription Module="X20SI9100_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SI9100\2.3.1.0\OSDD\\X20SI9100_2_3_1_0.xosdd]]></DeviceDescription>
+      <NodeDescription>
+        <Classification Type="Digital" />
+        <Classification Type="Input" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Classification Type="VendorSpecific">IO</Classification>
+        <Info Name="Interface" Value="IF3.ST16.IF1.ST20" />
+        <Info Name="HWC_Revision" Value="2.3.1.0" />
+        <Info Name="HWC_LastEdit" Value="11.03.2021 13:18:48" />
+        <Info Name="AS_Name" Value="X20SI9100_P10_20" />
+        <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
+        <Info Name="Description-de" Value="X20 Safe Digital In, 20xE, 24V" />
+        <Info Name="Description-en" Value="X20 Safe Digital In, 20xI, 24V" />
+        <Info Name="AsVariable" Value="SafeDigitalInput06,Cyclic#1.HalIO::ERV_INL2_Fan_Run" />
+        <Info Name="AsVariable" Value="SafeDigitalInput11,Cyclic#1.HalIO::ERV_INL3_Fan_Run" />
+        <Info Name="AsVariable" Value="SafeDigitalInput19,Cyclic#1.HalIO::ERV_OTL4_Lou_OP" />
+        <Info Name="AsVariable" Value="SafeDigitalInput09,Cyclic#1.HalIO::ERV_OTL2_Lou_OP" />
+        <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_300" />
+        <Info Name="AsVariable" Value="SafeDigitalInput01,Cyclic#1.HalIO::ERV_INL1_Fan_Run" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[10].ModuleOK[20]" />
+        <Info Name="AsVariable" Value="SafeDigitalInput15,Cyclic#1.HalIO::ERV_OTL3_Lou_CL" />
+        <Info Name="AsVariable" Value="SafeDigitalInput16,Cyclic#1.HalIO::ERV_INL4_Fan_Run" />
+        <Info Name="AsVariable" Value="SafeDigitalInput08,Cyclic#1.HalIO::ERV_INL2_Lou_CL" />
+        <Info Name="AsVariable" Value="SafeDigitalInput18,Cyclic#1.HalIO::ERV_INL4_Lou_CL" />
+        <Info Name="AsVariable" Value="SafeDigitalInput20,Cyclic#1.HalIO::ERV_OTL4_Lou_CL" />
+        <Info Name="AsVariable" Value="SafeDigitalInput04,Cyclic#1.HalIO::ERV_OTL1_Lou_OP" />
+        <Info Name="AsVariable" Value="SafeDigitalInput14,Cyclic#1.HalIO::ERV_OTL3_Lou_OP" />
+        <Info Name="AsVariable" Value="SafeDigitalInput05,Cyclic#1.HalIO::ERV_OTL1_Lou_CL" />
+        <Info Name="AsVariable" Value="SafeDigitalInput17,Cyclic#1.HalIO::ERV_INL4_Lou_OP" />
+        <Info Name="AsVariable" Value="SafeDigitalInput03,Cyclic#1.HalIO::ERV_INL1_Lou_CL" />
+        <Info Name="AsVariable" Value="SafeDigitalInput07,Cyclic#1.HalIO::ERV_INL2_Lou_OP" />
+        <Info Name="AsVariable" Value="SafeDigitalInput13,Cyclic#1.HalIO::ERV_INL3_Lou_CL" />
+        <Info Name="AsVariable" Value="SafeDigitalInput10,Cyclic#1.HalIO::ERV_OTL2_Lou_CL" />
+        <Info Name="AsVariable" Value="SafeDigitalInput12,Cyclic#1.HalIO::ERV_INL3_Lou_OP" />
+        <Info Name="AsVariable" Value="SafeDigitalInput02,Cyclic#1.HalIO::ERV_INL1_Lou_OP" />
+      </NodeDescription>
+      <ChannelConfiguration />
+    </SafetyNode>
+    <SafetyNode SAddr="301" Disabled="true">
+      <DeviceDescription Module="X20SI9100_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SI9100\2.3.1.0\OSDD\\X20SI9100_2_3_1_0.xosdd]]></DeviceDescription>
+      <NodeDescription>
+        <Classification Type="Digital" />
+        <Classification Type="Input" />
+        <Classification Type="VendorSpecific">Safe</Classification>
+        <Classification Type="VendorSpecific">IO</Classification>
+        <Info Name="Interface" Value="IF3.ST16.IF1.ST23" />
+        <Info Name="HWC_Revision" Value="2.3.1.0" />
+        <Info Name="HWC_LastEdit" Value="11.03.2021 13:18:48" />
+        <Info Name="AS_Name" Value="X20SI9100_P10_23" />
+        <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
+        <Info Name="Description-de" Value="X20 Safe Digital In, 20xE, 24V" />
+        <Info Name="Description-en" Value="X20 Safe Digital In, 20xI, 24V" />
+        <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_301" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[10].ModuleOK[23]" />
+      </NodeDescription>
+      <ChannelConfiguration />
+    </SafetyNode>
+  </Topology>
+</osdd>

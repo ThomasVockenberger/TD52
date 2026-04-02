@@ -1,0 +1,46 @@
+VAR
+	WMF4_D_Old : UINT;
+	WMF4_B_Old : UINT;
+	WMF3_D_Old : UINT;
+	WMF3_B_Old : UINT;
+	WMF2_D_Old : UINT;
+	WMF2_B_Old : UINT;
+	WMF1_D_Old : UINT;
+	WMF1_B_Old : UINT;
+	WMF_AD_Old : UINT;
+	WMF_AB_Old : UINT;
+	usMW_KLS3_Old : UINT;
+	usMW_KLS2_Old : UINT;
+	usMW_KLS1_Old : UINT;
+	usEventSum : UINT;
+	ucReDoCount : USINT;
+	ucKLSMode_Old : ARRAY[0..12] OF USINT;
+	ucCylIndex : USINT;
+	ucCylinderCount : USINT;
+	KLSGW4_Old : UINT;
+	KLSGW3_Old : UINT;
+	KLSGW2_Old : UINT;
+	KLSGW1_Old : UINT;
+	FenstF4_Old : USINT;
+	FenstF3_Old : USINT;
+	FenstF2_Old : USINT;
+	FenstF1_Old : USINT;
+	bToggle : BOOL;
+	bParaSendOK : BOOL;
+	AussSchwel_Old : UINT;
+	TON_N_zero : TON;
+	bSAFISendAllKLSPara : BOOL;
+	ucSAFIKLSParaSend : USINT;
+	iU_SAFI_Win1_old1 : ARRAY[0..24] OF INT;
+	iU_SAFI_Win1_old2 : ARRAY[0..24] OF INT;
+	xTON_Win1Frozen : ARRAY[0..24] OF TON;
+	xTON_Win1Altern : ARRAY[0..24] OF TON;
+	usMW_KLS4_Old : UINT; (*Average #kls__mdatas1 MUX 6/7 [cycles] - Old*)
+	WMF5_B_Old : UINT; (* Start of window 5 [degCA] - Old*)
+	WMF5_D_Old : UINT := 1; (* Duration of window  [degCA] - Old*)
+	WMF6_B_Old : UINT; (* Start of window 6 [degCA] - Old*)
+	WMF6_D_Old : UINT := 1; (* Duration of window 6 [degCA] - Old*)
+	FenstF5_Old : USINT; (*Filter of KLS window 5 - Old*)
+	FenstF6_Old : USINT; (*Filter of KLS window 6 - Old*)
+	iNum_UpCurKlsSet_Old : USINT; (*KLS up curve settings - Old*)
+END_VAR

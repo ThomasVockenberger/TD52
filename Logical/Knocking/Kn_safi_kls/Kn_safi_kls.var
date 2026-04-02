@@ -1,0 +1,47 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: Knck_safi_kls
+ * File: Knck_safi_kls.var
+ * Author: WaldharM
+ * Created: October 10, 2011
+ ********************************************************************
+ * Local variables of program Knck_safi_kls
+ ********************************************************************)
+VAR
+	ZMInKlopf : INT;
+	usKLmin : UINT;
+	usFenst1 : UINT;
+	ulFenst2Avg : UDINT;
+	ulFenst1Avg : UDINT;
+	ucNrOfFaultKLSAFI : USINT;
+	ucKLSMScount : ARRAY[0..24] OF USINT;
+	ucKlopfSensorCount : USINT;
+	ucFenst2LimitCount : ARRAY[0..24] OF USINT;
+	ucFenst2Cnt : USINT;
+	ucCylinderCount : USINT;
+	TP_LowKnockLimit : TP;
+	TON_SecondTick : TON;
+	xTON_OffsKl : TON;
+	ssRestIntUp : ARRAY[0..24] OF DINT;
+	ssRestIntDown : ARRAY[0..24] OF DINT;
+	ssMinIntKlopf : INT;
+	ssMinIntKl : INT;
+	slFenst2LiMx : DINT;
+	lIntKlopfAvg : DINT;
+	KLimitVar : ARRAY[0..24] OF UINT;
+	IntKlopfMxOff : INT;
+	bValve : ARRAY[0..24] OF BOOL;
+	bReleaseOffsKl : BOOL;
+	bKnock : ARRAY[0..24] OF BOOL;
+	bAmmSeqClkP : BOOL;
+	AmmSeqValveErr : AmmSequence;
+	AmmSeqKnockSigErr : AmmSequence;
+	AmmSeqKnockErr : AmmSequence;
+	xOpMode : OpMode;
+	rOff : REAL; (* individual knock limit offset *)
+	rFilt_Fenst1 : ARRAY[0..24] OF REAL; (* used for individual knock limit *)
+	rGainFactor : REAL; (* individual knock limit gain factor *)
+	rFilterFactor : REAL; (* time constant knock signal filter *)
+	iGain_Knck_Intgr_Down : INT := 10;(* scale of knock integrator down for PBC->KLS *)
+END_VAR

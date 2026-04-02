@@ -1,0 +1,23 @@
+VAR
+	xGeACtr_Mns : GeACtr;
+	rP_Mains_Set : REAL; (* Sollwert Netzbezugsregler *)
+	p_ein : REAL; (* Anforderungsleistung *)
+	p_aus : REAL; (* Abwahlleistung *)
+	rP_Consumption : REAL; (* Verbraucherleistung *)
+	rP_DemGenerate : REAL; (* Geforderte Generatorleistung *)
+	rP_MainsImport_max : REAL; (* max. erlaubte Netzbezugsleistung absolut [KW]*)
+	rP_MainsImport : REAL; (* Netzbezugsleistung absolut [KW]*)
+	rP_DemGenerate_Lim_Off : REAL; (*Ausschaltlimit in % Pn*)
+	rP_DemGenerate_Lim_On : REAL; (*Einschaltlimit in % Pn*)
+	rP_Nom : REAL;
+	EIN : BOOL; (*release engine start*)
+	AUS : BOOL; (*release engine stop*)
+	TON_R_MnsDemandOn : TON_R := (0);
+	TON_R_MnsDemandOff : TON_R := (0); (*V4.5 prepared*)
+	bDem_Ctr_Mns : BOOL := 0;
+	bDisplayTimerHelper : BOOL; (*Visu helper bit for TON_R_MnsDemandOn display*)
+	rY_min : REAL; (*temporary limiting y*)
+	rY_max : REAL; (*temporary limiting y*)
+	bOptParaChangeAllowed : BOOL := FALSE; (*TRUE will allow programmable changes of Y_Min and Y_Max parameter values*)
+	ShadowPara_tCtr_Mns : _tGeACtrPara; (*TASK INTERNAL working copy with adopted limit values *)
+END_VAR

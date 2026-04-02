@@ -1,0 +1,6 @@
+VAR
+	xTON_T_CD_Su_Hi : TON;
+	xGRMAX_T_CD_Su_Hi : GR_MAXR;
+	xGRMAX_T_CD_Re_Hi : GR_MAXR;
+	xTON_T_CD_Re_Hi : TON;
+END_VAR

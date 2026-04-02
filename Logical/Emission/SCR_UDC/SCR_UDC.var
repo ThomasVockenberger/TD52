@@ -1,0 +1,9 @@
+VAR
+	bNOx_SCR_CatOut_Ok : BOOL := FALSE; (*NOx value after catalyst is ok and ready to use*)
+	rCF_UreaFlow_H2 : REAL; (*Urea flow correction factor based on hydrogen*)
+	rNOx_SCR_CatOut_act : REAL := 0; (*Actual NOx value after catalyst [ppm]*)
+	xRamp_NOx_H2 : RAMPE_R; (*FuB*)
+	xSigScal_NOx_H2 : xSigScal_R; (*Scaling of EngOut NOx setpoint based on H2*)
+	xSigScal_NOx_P : xSigScal_R; (*Scaling of EngOut NOx setpoint based on power*)
+	xTON_UreaFillUp : TON := (0); (*FuB*)
+END_VAR

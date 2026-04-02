@@ -1,0 +1,72 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: skip_zde
+ * File: skip_zde.var
+ * Author: Waldharm
+ * Created: May 18, 2010
+ ********************************************************************
+ * Local variables of program skip_zde
+ ********************************************************************)
+VAR
+	bSkipDrehz_O : BOOL; (*interlock bit for overspeed*)
+	bSkipDrehz_U : BOOL; (*interlock bit for underspeed*)
+	rN_DrehzLeerOben : REAL; (*inner speed level threshold*)
+	rN_DrehzLeerUnten : REAL; (*inner speed level threshold*)
+	TON_SkipOffset : TON; (*time interval for the misfire rotation*)
+	iNum_SkipCyl_Calc_old : USINT; (*store pv for the misfire pattern*)
+	rN_InnerThres : REAL; (*inner threshold*)
+	iSkip_StartRot : SINT; (*start rotation point*)
+	xSigScal_P_Skipfire : xSigScal; (*linear scaling function block*)
+	bOnceWM : BOOL; (*rising edge bit*)
+	bOnceWM_II : BOOL; (*rising edge bit*)
+	usSkipCounter : UINT;
+	usCounterLimit : UINT;
+	rDivisor_P_Skipfire : REAL;
+	xSigScal_FF_Misf : xSigScal;
+	xSigScal_FF_Misf2 : xSigScal;
+	rN_DownsetSkipfireStart : REAL;
+	iNum_SkipCyl_I : SINT;
+	iNum_SkipCyl_P : SINT;
+	LCCurveByPoints_PMap_Skipfire : LCCurveByPoints;
+	refPoint_PMap_Skipfire : ARRAY[0..12] OF lcCurveByPoints_TabEntry_type;
+	TOF_SkipState : TOF;
+	ucMainOffset : USINT;
+	rN_Nom_NReg : REAL;
+	rN_NRegOffset : REAL; (*Offset für Leerlaufregler x rpm über Netzfrequenz*)
+	FILTER_rSynchFreq : FILTER_R;
+	usFreqFiltConst : USINT; (*Filterzeitkonstante [SW-Zyklen] für die Nezufrequenz zur Drehzahlsollwertberechnung*)
+	iCnt_NoSkip_HiCtr : SINT;
+	iSkip_CylOffs_HiCtr : SINT; (*Hierachie Offset*)
+	iCnt_Skip_Cyl : SINT;
+	tSkipMisfTOF : TIME;
+	rN_Nom_NReg_old : REAL;
+	scSkipSyncAdd : SINT; (*frueher global, kommt eventuel irgendwann*)
+	i : USINT; (*for statement index*)
+	bSkipCyl : ARRAY[0..24] OF BOOL; (*combined Skip pattern*)
+	iNum_SkipCyl : SINT; (*additional skipping cylinders to hierachie skipping pattern*)
+	iCnt_Rot : USINT; (*Rotation counter*)
+	bExCtr_SkipCyl : ARRAY[0..24] OF BOOL;
+	bSkipChange : BOOL;
+	bSum_SkipCyl : ARRAY[0..24] OF BOOL;
+	bSum_SkipCyl_old : ARRAY[0..24] OF BOOL;
+	iNum_SkipCylSum : SINT;
+	iNum_SkipCylExT : USINT;
+	bChangePattern : BOOL;
+	iNum_SkipCyl_Calc_old_II : USINT;
+	bExCtr_SkipCyl_II : ARRAY[0..24] OF BOOL;
+	iNum_SkipCyl_Calc_II : USINT;
+	xFSync : fFSync;
+	LCRCurveByPoints_SCRTCtr_SkipF : LCRCurveByPoints; (* skip limit for SCR inlet temperature controller over normed power *)
+	rSkipF_SCRTCtr : REAL; (* output of SCR inlet temperature controller *)
+	rSkipF_SCRTCtr_limited : REAL; (* output of SCR inlet temperature controller limited *)
+	bSkipCylActNEW : ARRAY[0..24] OF BOOL;
+	xTON_SkipChange : ARRAY[0..24] OF TON; (*Baustein für das verzögerte Abschalten von Zylindern wenn Anzahl der geskippten Zylindern gleich bleibt *) (* Statistic *)
+	tiDelaySkipChange : TIME;
+	bDelaySkipOFF : BOOL := TRUE; (*Abschalten von Zylindern verzögern wenn Anzahl der geskippten Zylindern gleich bleibt*)
+	bSkipCylActOLD : ARRAY[0..24] OF BOOL;
+	iNoOfCylExtraCold : INT := 3;
+	iNoOfCylExtraWarm : INT := 1;
+	rPlim_CylExtra : REAL := 100;
+	xF_TRIG_FSyncEnabled : F_TRIG;
+END_VAR

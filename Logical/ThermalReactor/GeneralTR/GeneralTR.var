@@ -1,0 +1,33 @@
+VAR
+	xGR_MAXR_P_TRACT : GR_MAXR;
+	xBH_OpHour_GasInj : BH;
+	xR_TRIG_OpHour_GasInj : R_TRIG;
+	OpHour_GasInj : bh_typ;
+	xBH_OpHour_Reactor : BH;
+	xR_TRIG_OpHour_Reactor : R_TRIG;
+	OpHour_Reactor : bh_typ;
+	xBH_OpHour_Heater : BH;
+	xR_TRIG_OpHour_Heater : R_TRIG;
+	OpHour_Heater : bh_typ;
+	rPr_ThR_AuxGas_thres_ComprRun : REAL := 140; (* Thermal reactor - auxiliary gas pressure threshold for compressor running status display [mbar] *)
+	rPr_ThR_AuxGas_thres_ComprRunHy : REAL := 10; (* Thermal reactor - hysteresis for auxiliary gas pressure for compressor running status [mbar] *)
+	xTON_ThR_AuxGasCompr_Fault : TON; (* TON delay for Th.Reactor warning - auxiliary gas compressor fault *)
+	tiTON_ThR_AuxGasCompr_Fault : TIME := T#20s; (* Auxiliary timer variable *)
+	xTON_ThR_AuxGasPr_PcheckFail : TON; (* TON delay for Th.Reactor warning - implausible auxiliary gas pressure before/after control valve *)
+	tiTON_ThR_AuxGasPr_PcheckFail : TIME := T#10s; (* Auxiliary timer variable *)
+	rDPr_ThR2_thres_Hi : REAL := 25.0; (* Thermal reactor maximum differential pressure threshold [mbar] *)
+	xTON_ThR2_DPr_Hi : TON; (* TON delay for Th.Reactor warning - differential pressure maximum - ThR2 *)
+	tiTON_ThR2_DPr_Hi : TIME := T#10s; (* Auxiliary timer variable *)
+	rPr_ThR2_AuxGasValve_mon_ref : REAL; (* Thermal reactor - auxiliary gas solenoid valve monitoring - pressure verification reference [mbar] *)
+	rPr_ThR2_AuxGasValve_mon_BefCV : REAL; (* Thermal reactor - auxiliary gas solenoid valve monitoring - pressure reference before control valve [mbar] *)
+	rPr_ThR2_AuxGasValve_mon_inc : REAL := 30; (* Thermal reactor - auxiliary gas solenoid valve monitoring - expected pressure increase after CV at valve closing [mbar] *)
+	rPr_ThR2_AuxGasValve_mon_delta : REAL := 10; (* Thermal reactor - auxiliary gas solenoid valve monitoring - tolerance value for pressure verification [mbar] *)
+	bThR2_AuxGasValve_mon_valid : BOOL; (* Thermal reactor - auxiliary gas solenoid valve monitoring valid *)
+	rPos_ThR2_AuxGasValve_mon_valid : REAL := 0.20; (* Thermal reactor - auxiliary gas solenoid valve monitoring - minimum CV position for pressure verification validity [%] *)
+	xTON_Thr2_AuxGasValve_fault : TON; (* TON delay for Th.Reactor warning - auxiliary gas solenoid valve fault *)
+	xTOF_Thr2_AuxGasValve_mon_valid : TOF; (* TOF timer for Th.Reactor - auxiliary gas solenoid valve monitoring valid *)
+	tiTON_Thr2_AuxGasValve_fault : TIME := T#3s; (* Auxiliary timer variable *)
+	rDPr_ThR2_SCR_thres_Hi : REAL := 30.0; (* Exhaust aftertreatment - Thermal reactor outlet/SCR inlet maximum differential pressure threshold [mbar] *)
+	xTON_ThR2out_SCRin_DPr_Hi : TON; (* TON delay for Exhaust aftertreatment warning - Thermal reactor outlet/SCR inlet high differential pressure *)
+	tiTON_ThR2out_SCRin_DPr_Hi : TIME := T#10s; (* Auxiliary timer variable *)
+END_VAR

@@ -1,0 +1,8 @@
+VAR
+	iAdrAmmBase2MM : UDINT;
+	iAdrMM2AmmBase : UDINT;
+	xMsg1151 : Msg;
+	xMsg1150 : Msg;
+	xMsg1099 : Msg;
+	xMsg1147 : Msg;
+END_VAR

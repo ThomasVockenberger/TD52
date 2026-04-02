@@ -1,0 +1,94 @@
+(* SAFI *)
+VAR_CONFIG
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC0 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC0;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC1 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC1;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC2 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC2;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC3 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC3;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC4 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC4;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC5 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC5;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC6 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC6;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC7 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC7;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC8 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC8;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC9 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC9;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC10 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC10;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC11 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC11;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC12 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC12;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC13 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC13;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC14 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC14;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC15 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC15;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC16 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC16;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC17 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC17;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC18 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC18;
+	Cyclic#2.SAFI::OUT_SA.tMS_PBC19 AT %Q.Cyclic#2.Knocking::IN_KN.tMS_PBC19;
+	Cyclic#2.SAFI::OUT_SA.iU_SAFI_Win1 AT %Q.Cyclic#2.Knocking::IN_KN.iU_SAFI_Win1;
+	Cyclic#2.SAFI::OUT_SA.iU_SAFI_Win2 AT %Q.Cyclic#2.Knocking::IN_KN.iU_SAFI_Win2;
+	Cyclic#2.SAFI::OUT_SA.iU_SAFI_Win3 AT %Q.Cyclic#2.Knocking::IN_KN.iU_SAFI_Win3;
+	Cyclic#2.SAFI::OUT_SA.iU_SAFI_Win4 AT %Q.Cyclic#2.Knocking::IN_KN.iU_SAFI_Win4;
+	Cyclic#2.SAFI::OUT_SA.bPBCSlowDriftCheck AT %Q.Cyclic#2.Knocking::IN_KN.bPBCSlowDriftCheck;
+	Cyclic#2.SAFI::OUT_SA.bPBCSensErr AT %Q.Cyclic#2.Knocking::IN_KN.bPBCSensErr;
+	Cyclic#2.SAFI::OUT_SA.bPBCCompLineCheck AT %Q.Cyclic#2.Knocking::IN_KN.bPBCCompLineCheck;
+	Cyclic#2.SAFI::OUT_SA.bPBCNegVoltCheck AT %Q.Cyclic#2.Knocking::IN_KN.bPBCNegVoltCheck;
+	Cyclic#2.SAFI::OUT_SA.bPBCNegPresCheck AT %Q.Cyclic#2.Knocking::IN_KN.bPBCNegPresCheck;
+	Cyclic#2.SAFI::OUT_SA.bPBCPresSlopeCheck AT %Q.Cyclic#2.Knocking::IN_KN.bPBCPresSlopeCheck;
+	Cyclic#5.SAFI::MM2VIS.bSA_VCD_Active AT %Q.Cyclic#2.Knocking::IN_KN.bSA_VCD_Active;
+	Cyclic#2.SAFI::OUT_SA.bSA_Win1FrozenAltern AT %Q.Cyclic#2.Knocking::IN_KN.bSA_Win1FrozenAltern;
+END_VAR
+(* Opstate *)
+VAR_CONFIG
+	Cyclic#2.Opstate::OUT_OP.rP_Act_Norm_Filt AT %Q.Cyclic#2.Knocking::IN_KN.rP_Act_Norm_Filt;
+	Cyclic#2.Opstate::OUT_OP.iSt_OpMode AT %Q.Cyclic#2.Knocking::IN_KN.iSt_OpMode;
+	Cyclic#2.Opstate::OUT_OP.rP_Nom AT %Q.Cyclic#2.Knocking::IN_KN.rP_Nom;
+	Cyclic#2.Opstate::OUT_OP.tEng_Run AT %Q.Cyclic#2.Knocking::IN_KN.tEng_Run;
+	Cyclic#5.Opstate::OUT_OP.iIdx_OMSS AT %Q.Cyclic#2.Knocking::IN_KN.iIdx_OMSS;
+	Cyclic#2.Opstate::OUT_OP.bGasTyp1_Act AT %Q.Cyclic#2.Knocking::IN_KN.bGasTyp1_Act;
+	Cyclic#2.Opstate::OUT_OP.bGasTyp2_Act AT %Q.Cyclic#2.Knocking::IN_KN.bGasTyp2_Act;
+	Cyclic#2.Opstate::OUT_OP.bGasTyp3_Act AT %Q.Cyclic#2.Knocking::IN_KN.bGasTyp3_Act;
+	Cyclic#2.Opstate::OUT_OP.bGasTyp4_Act AT %Q.Cyclic#2.Knocking::IN_KN.bGasTyp4_Act;
+	Cyclic#2.Opstate::OUT_OP.bGasTypMix1_2_Act AT %Q.Cyclic#2.Knocking::IN_KN.bGasTypMix1_2_Act;
+	Cyclic#2.Gastrain::OUT_GT.rGT_RatioMix AT %Q.Cyclic#2.Knocking::IN_KN.rGT_RatioMix;
+	Cyclic#5.Gastrain::OUT_GT.rGT_QualMix_1_2 AT %Q.Cyclic#2.Knocking::IN_KN.rGT_QualMix_1_2;
+END_VAR
+(* AmmBase *)
+VAR_CONFIG
+	Cyclic#2.AmmBase::OUT_AB.tAB2KN AT %Q.Cyclic#2.Knocking::IN_KN.tAB2KN;
+END_VAR
+(* Ignition *)
+VAR_CONFIG
+	Cyclic#2.Ignition::OUT_IG.rN_EngAct AT %Q.Cyclic#2.Knocking::IN_KN.rN_EngAct;
+END_VAR
+(* KLS98 *)
+VAR_CONFIG
+	Cyclic#5.KLS98::OUT_KL.rKLS98_X_Window1 AT %Q.Cyclic#2.Knocking::IN_KN.rKLS98_X_Window1;
+	Cyclic#5.KLS98::OUT_KL.rKLS98_X_Window2 AT %Q.Cyclic#2.Knocking::IN_KN.rKLS98_X_Window2;
+	Cyclic#5.KLS98::OUT_KL.rKLS98_X_Window3 AT %Q.Cyclic#2.Knocking::IN_KN.rKLS98_X_Window3;
+	Cyclic#5.KLS98::OUT_KL.rKLS98_X_Window4 AT %Q.Cyclic#2.Knocking::IN_KN.rKLS98_X_Window4;
+	Cyclic#5.KLS98::OUT_KL.bKLS98_Fault AT %Q.Cyclic#2.Knocking::IN_KN.bKLS98_Fault;
+	Cyclic#5.KLS98::OUT_KL.bKLS98_Signal AT %Q.Cyclic#2.Knocking::IN_KN.bKLS98_Signal;
+END_VAR
+(* ParaBase *)
+VAR_CONFIG
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#2.Knocking::IN_KN.tPB2MM;
+END_VAR
+(* Visu *)
+VAR_CONFIG
+	Cyclic#5.Visu::OUT_VI.iPassLevel AT %Q.Cyclic#2.Knocking::IN_KN.iPassLevel;
+END_VAR
+(* HalIO *)
+VAR_CONFIG
+	Cyclic#2.HalIO::tP_Act AT %Q.Cyclic#2.Knocking::IN_KN.tP_Act;
+	Cyclic#2.HalIO::tGCB_On AT %Q.Cyclic#2.Knocking::IN_KN.tGCB_On_TC2;
+	Cyclic#2.HalIO::tKLS90_1 AT %Q.Cyclic#2.Knocking::IN_KN.tKLS90_1;
+	Cyclic#2.HalIO::tKLS90_2 AT %Q.Cyclic#2.Knocking::IN_KN.tKLS90_2;
+	Cyclic#5.HalIO::OUT_HA.bSimWinMOD_Active AT %Q.Cyclic#5.Knocking::IN_KN.bSimWinMOD_Active;
+END_VAR
+(* EngineController *)
+VAR_CONFIG
+	Cyclic#2.EngineController::OUT_EC.bSCO_Active AT %Q.Cyclic#2.Knocking::IN_KN.bSCO_Active;
+	Cyclic#2.EngineController::OUT_EC.bIPC_MSF AT %Q.Cyclic#2.Knocking::IN_KN.bIPC_MSF;
+	Cyclic#2.EngineController::OUT_EC.iNum_KnckFiltEngCyc AT %Q.Cyclic#2.Knocking::IN_KN.iNum_KnckFiltEngCyc;
+	Cyclic#2.EngineController::OUT_EC.bPFPDR_Act AT %Q.Cyclic#2.Knocking::IN_KN.bPFPDR_Act;
+	Cyclic#2.EngineController::OUT_EC.bPFPDR_Knck_Slow AT %Q.Cyclic#2.Knocking::IN_KN.bPFPDR_Knck_Slow;
+	Cyclic#2.EngineController::OUT_EC.tiSFIKW_OffDelay AT %Q.Cyclic#2.Knocking::IN_KN.tiSFIKW_OffDelay;
+	Cyclic#2.EngineController::Perm.RKS AT %Q.Cyclic#2.Knocking::IN_KN.PermRKS;	
+	Cyclic#2.EngineController::OUT_EC.bLimpHomeCylRKS AT %Q.Cyclic#2.Knocking::IN_KN.bLimpHomeCylRKS;
+END_VAR

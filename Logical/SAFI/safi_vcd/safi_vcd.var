@@ -1,0 +1,59 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO
+ ********************************************************************
+ * Program: safi_vcd
+ * File: safi_vcd.var
+ * Author: 212567725
+ * Created: December 18, 2018
+ ********************************************************************
+ * Local variables of program safi_vcd
+ ********************************************************************)
+VAR
+	ucCylinderCount : USINT;
+	ucCylIndex : USINT;
+	SAFI_EVCD : ARRAY[0..24] OF fSAFI_VCD; (*Function processing the EVC timing*)
+	rNum_VCD_StdLim : REAL;
+	SAFI_IVCD : ARRAY[0..24] OF fSAFI_VCD; (*Function processing the IVC timing*)
+	bWin3High : ARRAY[0..24] OF BOOL; (*Error bit: EVC noise too high*)
+	bWin4High : ARRAY[0..24] OF BOOL; (*Error bit: IVC noise too high*)
+	iCA_Win3Avg : UINT; (*EVC timing average of all cylinders*)
+	iCA_Win3AvgSum : UDINT;
+	iCA_Win3Max : UINT; (*EVC timing maximum of all cylinders*)
+	iCA_Win3Min : UINT; (*EVC timing minimum of all cylinders*)
+	iCA_Win3_timing : ARRAY[0..24] OF UINT; (*EVC timing signal from SAFI*)
+	iCA_Win4Avg : UINT; (*IVC timing average of all cylinders*)
+	iCA_Win4AvgSum : UDINT;
+	iCA_Win4Max : UINT; (*IVC timing maximum of all cylinders*)
+	iCA_Win4Min : UINT; (*IVC timing minimum of all cylinders*)
+	iCA_Win4_timing : ARRAY[0..24] OF UINT; (*IVC timing signal from SAFI*)
+	iCnt_Win3 : USINT;
+	iCnt_Win3LimitCount : ARRAY[0..24] OF USINT;
+	iCnt_Win4 : USINT;
+	iCnt_Win4LimitCount : ARRAY[0..24] OF USINT;
+	iU_Win3Avg : UINT; (*EVC noise average of all cylinders*)
+	iU_Win3AvgSum : UDINT;
+	iU_Win3Max : UINT; (*EVC noise maximum of all cylinders*)
+	iU_Win3Min : UINT; (*EVC noise minimum of all cylinders*)
+	iU_Win3_noise : ARRAY[0..24] OF UINT; (*EVC noise signal from SAFI*)
+	iU_Win4Avg : UINT; (*IVC noise average of all cylinders*)
+	iU_Win4AvgSum : UDINT;
+	iU_Win4Max : UINT; (*IVC noise maximum of all cylinders*)
+	iU_Win4Min : UINT; (*IVC noise minimum of all cylinders*)
+	iU_Win4_noise : ARRAY[0..24] OF UINT; (*IVC noise signal from SAFI*)
+	bAmmSeqClkP : BOOL;
+	AmmSeqInValveErr : AmmSequence;
+	AmmSeqExValveErr : AmmSequence;
+	TON_SecondTick : TON;
+	xTON_ValveLashSet : ARRAY[0..24] OF TON; (*2 minutes delay to reset the "Valve lash adjusted" tick boxes*)
+	xTON_ValveLashSetAll : TON; (*2 minutes delay to reset the "Valve lash adjusted" tick boxes*)
+	iNum_PeakPercLim : UINT; (*Limit in pecentage of occurences of the 2nd highest peak*)
+	AmmSeqExValveUnb : AmmSequence;
+	AmmSeqInValveUnb : AmmSequence;
+	b_EVC_Unb : ARRAY[0..24] OF BOOL; (*Valve unbalance detected - Exhaust*)
+	b_IVC_Unb : ARRAY[0..24] OF BOOL; (*Valve unbalance detected - Intake*)
+	iU_EVCNoiseLimit : UINT; (*EVC noise maximum limit*)
+	iU_IVCNoiseLimit : UINT; (*IVC noise maximum limit*)
+	xTP_DelayStart : TP; (*Timer TRUE for 20 minutes after engine start*)
+	iCnt_CAWin3 : USINT;
+	iCnt_CAWin4 : USINT;
+END_VAR

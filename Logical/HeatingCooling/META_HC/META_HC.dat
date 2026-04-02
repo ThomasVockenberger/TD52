@@ -1,0 +1,130 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2025
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V03.99.00.00	06.03.2013	Weitzer, 	generated for modular software	 
+;				02.10.2013	lettenb.	descriptions setted
+;				04.12.2013				dependencies added
+; V04.00.00.00	31.01.2014	lettenb.	version + dependencies changed
+; V04.00.02.00	22.07.2014	lettenb.	para_task update		
+; V04.03.00.00	02.03.2015	lettenb.	version + dependencies changed (920)
+; V04.03.00.00	11.06.2015	Zengerer 	version + dependencies changed (IF change with array index 0 for compatibility with c-tasks)
+;				15.06.2015  lettenb.	PARAMETER_CHK expanded		
+; V04.04.00.00	10.05.2016	lettenb.	perm_HC added, version + dependencies changed (920), 
+;               20.03.2017	lettenb.	meas.signal.plaus.check.acc.functional safety EN13849
+; V04.05.00.00	13.06.2017	lettenb.	power limitation for warm up operatioin added, SWAT920/3 
+; V04.07.00.00	09.08.2018	Schmid		2nd low temperature charge cooling circuit added
+;				05.10.2018	Schmid		parameter for set point W_ext in Ctr_ChC_T1HP changed
+;				08.01.2019	Schmid		redundant pump control for charge and emergency cooler circuits added
+;				03.10.2019	lettenb.	perm data writing to CF 10s -> 10m, bu01
+; V04.10.00.00	20.07.2020	Schmid		additional heating water circuit monitoring (safety loop)
+; V04.11.00.00	29.11.2021	Schmid		new Pr_ECW plausibility check logic
+;				28.01.2022	Perktold	included plant controller upgrade
+; V04.11.01.00	24.02.2022	Schmid		bAuxCust array size adjusted
+; V04.12.00.00	14.12.2022	Perktold	Ctr_HWRe, Ctr_CHc: retrigger caused by X >= WMin just once per controller activation
+;				28.03.2023	Perktold	Pr_ECW plausibility check for mech pump improved
+; V04.13.00.00	05.12.2023	Bencze		A1019: changed risc class to 10 (from 4), no remote reset possible
+; V04.14.00.00	08.11.2024	Bacci		Added cold country antifreeze arrangements (2020-25)
+;				10.12.2024	Nagy		Added additional Prio2 alarms (2024-225)
+; V04.25.00.00	10.07.2025	Tinello		SafetyPLC: Added monitoring for heating water supply temperature unit W9588, W9589
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>HC</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.25.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"<PARA1 Name='iEng_Motortype' MIN='208' MAX='920' />"
+"<PARA2 Name='rN_EngStart_LimHi' MIN='50.0' MAX='2200.0' />"
+"<PARA3 />"
+"<PARA4 />"
+"<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_HC</DATAMODULE>"
+"	<DATAMODULE>perm_HC</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='AB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='AG' VERSION='04.11.00.00' />"
+"	<DEPENDENCY MODULE='CH' VERSION='04.07.00.00' />"
+"	<DEPENDENCY MODULE='CU' VERSION='04.05.00.00' />"
+"	<DEPENDENCY MODULE='EC' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='EG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='HA' VERSION='04.25.00.00' />"
+"	<DEPENDENCY MODULE='IG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='OP' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='04.00.00.00' />"
+"   <DEPENDENCY VISVERSION='02.16.00.00' />"			; Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	Engine heating cooling equipment. "
+"	</General>	"
+""
+"	<F1 Name='Engine emergency cooler' LastModified='4.03.00.00'>"
+"	Engine emergency cooler control, sequencing, regulation and monitoring.	"
+"	</F1>"
+"	<F2 Name='Engine charge cooler' LastModified='4.03.00.00'>"
+"	Engine charge cooler control, sequencing, regulation and monitoring.	"
+"	</F2>"
+"	<F3 Name='Engine charge cooler ventilation' LastModified='3.99.00.00'>"
+"	Engine charge cooler ventilation controller and monitoring.	"
+"	</F3>"
+"	<F4 Name='Engine charge cooler high pressure' LastModified='3.99.00.00'>"
+"	Engine charge cooler high pressure controller and monitoring.	"
+"	</F4>"
+"	<F5 Name='Engine heat water return' LastModified='3.99.00.00'>"
+"	Engine heat water return controller and monitoring.	"
+"	</F5>"
+"	<F6 Name='Engine heat water supply' LastModified='3.99.00.00'>"
+"	Engine heat water supply controller and monitoring.	"
+"	</F6>"
+""
+"	<Info>"
+"   UPDATE V4.3.0	version + dependencies changed (IF change with array index 0 for compatibility with c-tasks)	"
+"   UPDATE V4.5.0	rT_ChC_Ctr_Wex_Cust new interface "
+"	UPDATE V4.7.0	2nd low temperature charge cooling circuit added "
+"	</Info>"
+""
+"	<Customized LastModified='3.99.00.00'>"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

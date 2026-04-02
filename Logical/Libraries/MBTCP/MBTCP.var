@@ -1,0 +1,49 @@
+(********************************************************************
+ * COPYRIGHT -- Bernecker + Rainer
+ ********************************************************************
+ * Library: MBTCP
+ * File: MBTCP.var
+ * Author: B&R
+ * Created: September 04, 2008
+ ********************************************************************
+ * Constants of library MBTCP <header> Error numbers below 50000 are from automation studio libraries and these are described in the automation studio help. </header>
+ ********************************************************************)
+VAR CONSTANT
+	mbtERR_ILLEGAL_FUNCTION : UINT := 50001; (*Modbus function not implemented/non-existent *)
+	mbtERR_DATA_ADDRESS : UINT := 50002; (*Address not available in coil or register *)
+	mbtERR_IP_ADRESS : UINT := 50004; (*Wrong IP address passed to Master *)
+	mbtERR_NBR_UNITS : UINT := 50005; (*Requested unit does not exist *)
+	mbtERR_NULL_POINTER : UINT := 50006; (*Null pointer passed to function block *)
+	mbtERR_MAX_CLIENT : UINT := 51001; (*Maximal amount of client is already connected *)
+	mbtERR_NOT_CONNECTED : UINT := 51002; (*Half-open connection*)
+	mbtERR_WR_ERROR_SOCKET : UINT := 51003; (*TCPServer socket error *)
+	mbtERR_FATAL_ERROR : UINT := 51004; (*Fatal Error*)
+	mbtERR_TIMEOUT : UINT := 51005; (*Modbus TCP timeout *)
+	mbtERR_OPEN_RETRIES_IOC : UINT := 51006; (*Retried open port at the TCP IOControl *)
+	mbtERR_OPEN_RETRIES_WR : UINT := 51007; (*Retried open port again at the TCPServer *)
+	mbtERR_REQUEST_LEN_ZERO : UINT := 51008; (*The Server received a request with zero bytes *)
+	mbtERR_MIN_FRAME_LEN : UINT := 51009; (*The Server received a request with a too short frame*)
+	mbtERR_REQUEST_UNIT : UINT := 51010; (*Unit ID too high or low*)
+	mbtERR_PROTOCOL_ID : UINT := 51011; (*Protocol ID != 0. Modbus Protocol ID must be 0 *)
+	mbtERR_FCODE_ZERO : UINT := 51012; (*Function code is zero*)
+	mbtERR_REQUEST : UINT := 51013; (*Request from client is wrong *)
+	mbtERR_RESPONSE : UINT := 51014; (*Response from server is wrong *)
+	mbtERR_MAX_NBR_COILS : UINT := 51015; (*Maximal number of coils is exceeded (2000) *)
+	mbtERR_MAX_NBR_REGISTER : UINT := 51016; (*Maximal number of register is exceeded (127) *)
+	mbtEVENT_OPEN_PORT : UINT := 52001; (*Opened new TCP Port *)
+	mbtEVENT_ADD_CLIENT : UINT := 52002; (*Added new Client to the MBTCP Server*)
+	mbtEVENT_IPADRESS_IDENT : UINT := 52003; (*Deploy ID with IP-adress. The ID is written in binary data at the logger*)
+	mbtEVENT_CLOSE_CLIENT : UINT := 52004; (*Closed the Client connection *)
+	mbtEVENT_CLOSE_PORT : UINT := 52005; (*Closed the Port*)
+	MBT_READ_COILS : USINT := 1; (*Modbus function code: Read coils*)
+	MBT_READ_DISCRETE_INPUTS : USINT := 2; (*Modbus function code: Read discrete inputs*)
+	MBT_READ_HOLDING_REGISTERS : USINT := 3; (*Modbus function code: Read holding registers*)
+	MBT_READ_INPUT_REGISTERS : USINT := 4; (*Modbus function code: Read input registers*)
+	MBT_WRITE_SINGLE_COIL : USINT := 5; (*Modbus function code: Write single coil*)
+	MBT_WRITE_SINGLE_REGISTER : USINT := 6; (*Modbus function code: Write single register (holding register)*)
+	MBT_WRITE_MULTIPLE_COILS : USINT := 15; (*Modbus function code: Write multiple coils*)
+	MBT_WRITE_MULTIPLE_REGISTERS : USINT := 16; (*Modbus function code: Write multiple registers (holding register)*)
+	MBT_READ_WRITE_MULTIPLE_REGISTER : USINT := 23; (*Modbus function code: Read and write multiple registers*)
+	BR_MBT_WRITE_DISCRETE_INPUTS : USINT := 65; (*User defined modbus function code: Write discrete inputs*)
+	BR_MBT_WRITE_INPUT_REGISTERS : USINT := 66; (*User defined modbus function code: Write input register*)
+END_VAR

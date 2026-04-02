@@ -1,0 +1,193 @@
+VAR
+	xEngType : EngType;
+	IN_OP : IN_Opstate_Struct;
+	OUT_OP : OUT_Opstate_Struct;
+	Para : Para_Opstate_Struct;
+	ParaFactoryDefault : Para_Opstate_Struct := (0);
+	MM2VIS : MM2VIS_Opstate_Struct;
+	VIS2MM : VIS2MM_Opstate_Struct;
+	rP_Island_Split_ramp : REAL;
+	xOpMode : OpMode;
+	iIdx_Eng_State : INT; (* state of engine *)
+	RedPower_Norm : REAL; (* Reduced Power related to rP_nom*)
+	RPSW_1 : BOOL;
+	bPRed_Active : BOOL; (* Power reduction active, Oldname: RPSW_7 *)
+	AT27 : BOOL; (* ALM 1188 *)
+	bStart : BOOL; (* START (Button) of VISU *)
+	bStop : BOOL; (* STOP (Button) of VISU  *)
+	M_ANF : BOOL; (* VISU *)
+	pm : Para_Opstate_Struct;
+	bMsg2125 : BOOL; (*P reduction by knocking (diagn.msg RPS) *)
+	bMsg2126 : BOOL; (*P reduction by mixture temp. (diagn.msg RPS)*)
+	bMsg2127 : BOOL; (*P reduction by misfiring (diagn.msg RPS) *)
+	bMsg2128 : BOOL; (*P reduction by external(analoge) (diagn.msg RPS) *)
+	bMsg2129 : BOOL; (*P reduction by external(bus) (diagn.msg RPS) *)
+	bMsg2130 : BOOL; (*P reduction by frequency low (diagn.msg RPS) *)
+	bMsg2131 : BOOL; (*maximum output limit *)
+	bMsg2132 : BOOL; (*P reduction by cyl.temp. (diagn.msg RPS) *)
+	bMsg2143 : BOOL; (*P reduction by air intake temp. (diagn.msg RPS) *)
+	bMsg2144 : BOOL; (*P reduction by turbo charger speed high (diagn.msg RPS) *)
+	bMsg2146 : BOOL; (*P reduction by pressure based control (PBC)*)
+	bMsg2147 : BOOL; (*P reduction by leanox ctrl.deviation high (diagn.msg RPS) *)
+	bMsg2148 : BOOL; (* diagn.msg RPS 28 *)
+	bMsg2149 : BOOL; (* diagn.msg RPS 29 *)
+	bMsg2150 : BOOL; (* diagn.msg RPS 30 *)
+	bMsg2152 : BOOL; (* P reduction by voltage low  (diagn.msg RPS) *)
+	bMsg2153 : BOOL; (* P reduction by voltage high (diagn.msg RPS) *)
+	bMsg2154 : BOOL; (* P reduction by frequency high (diagn.msg RPS) *)
+	bMsg2155 : BOOL; (* P reduction by gen.winding temp. (diagn.msg RPS) *)
+	bMsg2158 : BOOL; (* P reduction by jacket water temperature (diagn.msg RPS) *)
+	bMsg2159 : BOOL; (* P reduction by oil temperature (diagn.msg RPS) *)
+	bMsg2160 : BOOL; (* P reduction by heating water return temperature (diagn.msg RPS) *)
+	bMsg2161 : BOOL; (* P reduction by pressure pre chamber gas train (diagn.msg RPS) *)
+	bMsg2163 : BOOL; (* Power reduction by utility *)
+	bMsg2164 : BOOL; (* Power limitation by air humidity*)
+	bMsg2170 : BOOL; (* Power redutcion by  hierarchy controller*)
+	bMsg2169 : BOOL; (* Power redutcion by  timing point optimizing*)
+	bMsg2803 : BOOL; (* Power reduction by charge temperature before TC -> NOT USED >= v4.12*)
+	bMsg2936 : BOOL; (* power reduction by differential pressure gas train min*)
+	bMsg3229 : BOOL; (* P reduction by CH4 content  (diagn.msg RPS) *)
+	bMsg3230 : BOOL; (* P reduction by gas pressure (diagn.msg RPS) *)
+	bMsg3231 : BOOL; (* P reduction by suction pressure (diagn.msg RPS) *)
+	bMsg2140 : BOOL; (* demand for island operation *)
+	bMsg3506 : BOOL; (* Power reduction in isolated operation *)
+	bMsg2082 : BOOL; (* RPS-Warnung 2: PARAMETER FEHLEN *)
+	bMsg1188 : BOOL; (* Freigabe aus Station fehlt *)
+	bMsg2097 : BOOL; (* Freigabe aus Station fehlt *)
+	bMsg1108 : BOOL; (* Freigabe aus Station fehlt *)
+	xMsg3506 : Msg; (* Msg FUB: Power reduction in isolated operation *)
+	xMsg2082 : Msg; (* Msg FUB: RPS-Warnung 2: PARAMETER FEHLEN *)
+	xMsg1188 : Msg; (* Msg FUB: Freigabe aus Station fehlt *)
+	xMsg2097 : Msg; (* Msg FUB: Freigabe aus Station fehlt *)
+	xMsg1108 : Msg; (* Msg FUB: Freigabe aus Station fehlt *)
+	bMsg1225 : BOOL; (* B1225 service seletion switch off *)
+	bMsg1226 : BOOL; (* B1226 service seletion switch manual *)
+	bMsg1227 : BOOL; (* B1227 service seletion switch automatic *)
+	bMsg1228 : BOOL; (* B1228 service seletion switch test *)
+	bMsg1229 : BOOL; (* B1229 engine ready for automatic on  *)
+	bMsg1230 : BOOL; (* B1230 engine ready for automatic off *)
+	bMsg1231 : BOOL; (* B1231 engine demand on  *)
+	bMsg1232 : BOOL; (* B1232 engine demand off *)
+	bMsg1233 : BOOL; (* B1233 engine operation on  *)
+	bMsg1234 : BOOL; (* B1234 eng//ine operation off *)
+	bMsg1237 : BOOL; (* B1237 demand for island operation on  *)
+	bMsg1238 : BOOL; (* B1238 demand for island operation off *)
+	bMsg1241 : BOOL; (* B1241 selection gas type 1  *)
+	bMsg1242 : BOOL; (* B1242 selection gas type 2  *)
+	bMsg1243 : BOOL; (* B1243 selection gas type 3  *)
+	bMsg1244 : BOOL; (* B1244 selection gas type 4  *)
+	bMsg1245 : BOOL; (* B1244 selection gas type 4  *)
+	bMsg1246 : BOOL; (* B1244 selection gas type 4  *)
+	bMsg1247 : BOOL; (* B1244 selection gas type 4  *)
+	bMsg1248 : BOOL; (* B1244 selection gas type 4  *)
+	bMsg2122 : BOOL; (* B2122 *)
+	bMsg2123 : BOOL; (* B2123 *)
+	bMsg2124 : BOOL; (* B2124 *)
+	bMsg2133 : BOOL; (* B2133 *)
+	bMsg2134 : BOOL; (* B2134 *)
+	bMsg2135 : BOOL; (* B2135 *)
+	bMsg2136 : BOOL; (* B2136 *)
+	bMsg2137 : BOOL; (* B2137 *)
+	bMsg2138 : BOOL; (* B2138 *)
+	bMsg2813 : BOOL; (* B2813 - message power setpoint by digital input *)
+	bMsg2972 : BOOL; (* B2972 - Power Mode on *)
+	bMsg2973 : BOOL; (* B2973 - Power Mode off *)
+	bEng_StaSpdExc : BOOL; (* M_DREHZ - Engine Startspeed exceeded *)
+	iSt_OpMode_Main : INT; (* engine operation - main mode *)
+	iSt_OpMode_Sub : INT; (* engine operation - sub mode *)
+	iSt_OpMode_Deg : INT; (* engine operation - degradation mode *)
+	bGnlWarning : BOOL;
+	bGnlTrip3 : BOOL;
+	bGnlTrip1 : BOOL;
+	bGnlTrip2 : BOOL;
+	bGnlTrip : BOOL;
+	UnitOpHour_Imp : bh_typ; (*Unit operation hours counter*)
+	OpHour_Imp : bh_typ; (*Engine operation hours counter*)
+	bP_Lo : BOOL; (*power low - open gcb, power signal missing*)
+	bP_DevHi : BOOL;
+	AN_PDIFF : BOOL;
+	T99 : BOOL;
+	UW_PDIFF_A : BOOL; (* P-differential trip activated *)
+	pm1 : PERM_OP_Struct;
+	bNoInitDetected : BOOL := FALSE; (*allways true, except 1cycle on init up*)
+	bOMSS_OFF : BOOL;
+	bOMSS_MAN : BOOL;
+	bOMSS_AUTO : BOOL;
+	bOMSS_TEST : BOOL;
+	bOMSS_SCAV : BOOL;
+	bWarmUpOperation : BOOL;
+	bIsland_Speed : BOOL; (* B9024 - Isolated operation - Speed / Isochronous Mode *)
+	bIsland_Droop : BOOL; (* B9025 - Isolated operation - Droop Mode *)
+	bIsland_LSL : BOOL; (* B9026 - Isolated operation - Load sharing line *)
+	bPset_Droop_Bus : BOOL;(* B... - message power setpoint by Bus input Droop *)
+	bPset_Droop_AI : BOOL; (* B... - message power setpoint by analog input Droop *)
+	bPset_Droop_Man : BOOL;(* B... - message power setpoint by internal HMI value Droop *)
+	bIsland_NoffsCust : BOOL; (* B... - Isolated operation - external speed reference offset *)
+	bEng_Block_PlantCtr : BOOL; (* Wxxxx - Module blocked by plant control *)
+	TOF_LimitSon_Gh : ARRAY[0..4] OF TOF;
+	bParaSetupOk_2s : BOOL; (* Para Setup OK + 2 sec *)
+	tiDelay_LSL : TIME := T#300ms;
+	xTON_Island : TON;
+	bMsg9051 : BOOL;
+	bMsg9052 : BOOL;
+	bNoMon4BlackStart : BOOL;
+END_VAR
+VAR CONSTANT
+	_PRED_MAX : UINT := 51;
+	_Knck : INT := 1; (* Knocking *)
+	_TMix : INT := 2; (* T2s *)
+	_Misf : INT := 3; (* Misfire *)
+	_AI : INT := 4; (* Analog Input *)
+	_EBus : INT := 5; (* External BUS *)
+	_F_Lo : INT := 6; (* Frequency low *)
+	_PMax : INT := 7; (* Power maximum *)
+	_PMin : INT := 8; (* Power minimum *)
+	_EGT : INT := 9; (* Exhaust gas temperature *)
+	_T1LP : INT := 10; (* Air intake temperature *)
+	_CH4 : INT := 11; (* CH4 *)
+	_GasPr : INT := 12; (* Gas pressure *)
+	_Suct : INT := 13; (* suction pressure *)
+	_LX : INT := 14; (* Leanox *)
+	_SP1 : INT := 15; (*  *)
+	_SP2 : INT := 16; (*  *)
+	_SP3 : INT := 17; (*  *)
+	_N_TC : INT := 18; (* turbo charger speed *)
+	_PBC : INT := 19; (* pressure based control *)
+	_U_Lo : INT := 20; (* voltage low *)
+	_U_Hi : INT := 21; (* voltage high *)
+	_F_Hi : INT := 22; (* frequency high *)
+	_GWT : INT := 23; (* generator winding temperature *)
+	_T1HP : INT := 24; (* T1HP --> NOT USED >= v4.12*)
+	_EVU : INT := 25; (* evu *)
+	_JWT : INT := 26; (* jacket water temperature *)
+	_OILT : INT := 27; (* oil temperature *)
+	_RWT : INT := 28; (* return water temperature *)
+	_PCGT : INT := 29; (* prechamber gas train pressure *)
+	_Hum : INT := 30; (* humidity package *)
+	_EU : INT := 31; (* EU *)
+	_PFC : INT := 32; (* PFC *)
+	_RMC : INT := 33; (* RMC *)
+	_IPOpt : INT := 34; (* ignition point optimizer *)
+	_HiCtr : INT := 35; (* hi ctr *)
+	_Glow : INT := 36; (* glow ignition *)
+	_CC : INT := 37; (* crank case pressure *)
+	_Trafo : INT := 38; (* transformator warning temperature max *)
+	_GenCB : INT := 39; (* generator circuit breaker temperature max *)
+	_LHE : INT := 40; (* limp home extented *) (* --> not used >= V4.14 *)
+	_GIAT : INT := 41; (* generator air intake temparature *)
+	_PrGR : INT := 43; (* Gas differential pressure *)
+	_CPP : INT := 44; (* Cylinder peak pressure integrator *)
+	_CV : INT := 45; (* Calorific Value *)
+	_GPF : INT := 46; (* Generator Power Factor *)
+	_SAErr : INT := 47; (*CAN communication failure for half or more SAFI or too many SAFI reboots*)
+	_TJDP : INT := 48; (* Tecjet differential pressure *)
+	_H2 : INT := 49; (* H2 content *)
+	_T2HP : INT := 50; (* T2HP - Charge temperature after turbocharger*)
+	_T2LP : INT := 51; (* T2LP - Charge temperature after low-pressure turbocharger*)
+END_VAR
+VAR
+	xPRed : ARRAY[0.._PRED_MAX] OF PRed;
+	bReq_Remote : BOOL := 0; (*Engine Demand via remote (HMI or myPlant)*)
+	bRequest_Bloc : BOOL;
+	bRSS_REM : BOOL;
+END_VAR

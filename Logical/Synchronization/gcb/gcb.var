@@ -1,0 +1,22 @@
+VAR
+	bSM1TestOk : BOOL;
+	bSM2TestOk : BOOL;
+	tof_gcb_man_off : TOF;
+	tof_gcb_dmnd_sy : TOF;
+	ton_gcb_rel_trip : TON;
+	ton_EINPF_1 : TON;
+	ton_EINPF_2 : TON;
+	tof_gcb_command_on : TOF;
+	bP_Lo_Hold : BOOL := FALSE;
+	sy_lfg : BOOL;
+	SY_LFG_THJ : BOOL;
+	NWK_RS : BOOL; (*mains back for reswitch to mains for customer*)
+	bRS2Mains : BOOL; (*reswitch to mains*)
+	bMnsConnection : BOOL; (*mains connection ok*)
+	xTP_GnlTrip1 : TP;
+	xGR_MAXR_P_HiNoManOff : GR_MAXR;
+	gcb_dmnd_IN1 : BOOL := 0; (*GCB demand auto*)
+	gcb_dmnd_IN2 : BOOL := 0; (*GCB demand auto via bus coupling*)
+	gcb_dmnd_IN3 : BOOL := 0; (*GCB demand manual*)
+	gcb_dmnd_IN4 : BOOL := 0; (*GCB demand manual via bus coupling*)
+END_VAR

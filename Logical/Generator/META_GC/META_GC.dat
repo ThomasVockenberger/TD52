@@ -1,0 +1,146 @@
+; *******************************************************************************
+; Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2023
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V3.99.00.00	06.03.2013	Weitzer,	generated for modular software	 
+; V3.99.02.00	29.05.2013	Zengerer,	initial dependencies prepared
+; V4.00.00.00	31.01.2014	Weitzer,	versions changed
+; V4.01.00.00	22.07.2014	lettenb.	Para.bSyActive added
+; V4.03.00.00	22.07.2014	Tinello		OilSkid added
+;				15.06.2015  lettenb.	PARAMETER_CHK expanded		
+; V4.04.00.00	10.05.2016	lettenb.	version changed
+; V4.04.00.00	12.07.2016	Zengerer 	version + dependencies changed (customer array size)
+;               20.03.2017	lettenb.	DIG142: power reduct.acc.gen.air inlet temp. added-
+;                                       tQ_AVR_Set_U.Ao: Q-vorgabe AVR added
+; V4.04.01.00	10.07.2017	Waldhart	A2202 and A2203 disabled due to SWAT 920 # 3 
+; V4.05.00.00	30.11.2017	lettenb.	Q-management(GR redesign, PF control -> Q control)
+; V4.05.01.00	22.02.2018	lettenb.	AI_PF_CosPCtr_Set removed
+; V4.05.02.00	26.03.2018	Farre, 	 	Signals removed (PF_CosPCtr_PF1_Ena, PF_CosPCtr_PF2_Ena, PF_CosPCtr_PF3_Ena, PF_CosPCtr_PF4_Ena, PF_CosPCtr_PF5_Ena)
+; V4.05.03.00	04.04.2018	lettenb.	oilskid interface: bRelEngStart_OilSkid prepared for series
+; V4.05.04.00	09.04.2018	lettenb.	1036 bParaSetupOk added to avoid alarm at plc startup, bugfix
+; V4.05.05.00	26.04.2018	lettenb.	SWAT920/5 added
+; V4.05.06.00	10.10.2018	lettenb.	v_ctr: puls duration for voltage matching
+; V4.07.00.00	11.10.2018	lettenb.	Di: tU_Gen_Inc/Dec added for diagnosis
+;				24.01.2019	Schmid		A1038: IN_GC.tP_GenRev_Ext.Di / A1144: IN_GC.tI_GenAsy_Ext.Di - DIs act directly on alarms without delay
+;				30.07.2019	lettenb.	LOS_Dem.Do: 1054,1031 added(safety request, doujak andreas) bu01
+;										error condition for OilSkid: 1031 added, corr.for iCnt_OilSkid_HP_PrErr(safety request, doujak andreas) bu01
+;				03.10.2019	lettenb.	perm data writing to CF 10s -> 10m, bu01
+; V4.09.00.00	06.08.2019	lettenb.	GCB closing time measurement, Ctr_Q freeze
+;				02.12.2019	lettenb.	generator protection(thaler)
+; V4.10.00.00	22.05.2020	lettenb.	Eng_Bloc signales for op_state prepared
+;				14.12.2020	lettenb.	TON,TOF reset added to avoid time overrun, cleanup
+; V4.11.00.00	29.09.2021	lettenb.	release voltage control by customer bit added
+;				25.01.2022	lettenb.	voltage droop control added(MayerR)
+;				28.01.2022	Perktold	included plant controller upgrade
+; V4.12.00.00	21.11.2022	lettenb.	version + dependencies
+;				19.12.2022	Perktold	added comments for sr-code (EN 13849-1 / 4.6.3) for A1038
+; V4.13.00.00	12.06.2023  Rimal		2371 and 2372 added, oilskid
+;				04.07.2023	Perktold	A2373 and W9372 added, Earth fault protection via MMD signals
+;				20.11.2023	Farre,		added IN_SY.bBypassMCB_CosPhi and request power mode interfaces from CU needed for Microgrid (2023-168)
+;				07.03.2024	Farre,		issue #890, #1089: delete scaling analog input signals and shifted to HalIO
+; V4.14.00.00	17.10.2024	Theobald	Alarm1112,1121,1122,1123,1124,1125,1143,1144 priority changed from 2 to 3 [2024-223]
+;               25.10.2024	Farre,		Reverse power status OUT_GC.bPact_Rev to SY (2024-241)
+;				18.11.2024	Farre,		enable "unbalance current monitoring A1144" based on Para.bCAsym_Ena (2024-234)
+;				29.11.2024	Farre,		calculation of power reduction due to CosPhi <1, from OP to GC (issue #1700)
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+; OBEY XML FORMATING RULES!
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>GC</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.14.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"<PARA1 Name='iEng_Motortype ' MIN='208' MAX='920' />"	; see general_GC for diagnosis
+"<PARA2 Name='rN_EngStart_LimHi' MIN='50.0' MAX='2200.0' />"
+"<PARA3 Name='rF_Nom[1] ' MIN='49' MAX='61' />"
+"<PARA4 />"
+"<PARA5 />"
+"<PARA6 />"
+"</PARAMETER_CHK>"
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_GC</DATAMODULE>"
+"	<DATAMODULE>perm_GC</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='AB' VERSION='4.03.00.00' />" 
+"	<DEPENDENCY MODULE='AG' VERSION='4.11.00.00' />"
+"	<DEPENDENCY MODULE='CH' VERSION='4.05.00.00' />" 
+"	<DEPENDENCY MODULE='CU' VERSION='4.13.00.00' />"
+"	<DEPENDENCY MODULE='EC' VERSION='4.00.00.00' />"
+"	<DEPENDENCY MODULE='EG' VERSION='4.05.00.00' />"
+"	<DEPENDENCY MODULE='EX' VERSION='4.03.00.00' />"
+"	<DEPENDENCY MODULE='GR' VERSION='4.05.00.00' />"
+"	<DEPENDENCY MODULE='GT' VERSION='4.00.00.00' />"
+"	<DEPENDENCY MODULE='HA' VERSION='4.12.00.00' />" 
+"	<DEPENDENCY MODULE='IG' VERSION='4.00.00.00' />"
+"	<DEPENDENCY MODULE='OP' VERSION='4.10.00.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='4.00.00.00' />"
+"	<DEPENDENCY MODULE='SY' VERSION='4.00.00.00' />"
+"   <DEPENDENCY VISVERSION='02.15.00.00' />"			; Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	Generator bearing temperature, Q control, power reductions handled here. "
+"	</General>	"
+""
+"	<F1 Name='Q-Management, AVR set point' LastModified='4.05.00.00'>"
+"	Process the setpoint for the generator AVR "
+"	</F1>"
+"	<F2 Name='Bearing temperature monitoring and power reduction' LastModified='4.00.00.00'>"
+"	Monitoring & power reduction.	"
+"	</F2>"
+"	<F3 Name='Generator winding temperature' LastModified='4.00.00.00'>"
+"	Monitoring and power reduction.	"
+"	</F3>"
+"	<F4 Name='OilSkid' LastModified='4.03.00.00'>"
+"	Generator bearing lubrification control	"
+"	</F4>"
+"	<F5 Name='OilSkid' LastModified='4.07.00.00'>"
+"	Generator voltage matching.	"
+"	</F5>"
+""
+"	<Info>"
+"	Please enter additional module info here.	"
+"	</Info>"
+""
+"	<Customized LastModified='4.00.00.00'>	"
+"	- nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

@@ -1,0 +1,19 @@
+VAR
+	ssKLS1_Old : INT; (* signal last duration KLS90 sensor1 *)
+	ssKLS2_Old : INT; (* signal last duration KLS90 sensor2 *)
+	ssKLS_Signal : INT; (* scaled signal KLS90 sensor max *)
+	ssIntSignal : INT; (* knocking integration signal *)
+	fIntSignal : REAL; (* integrator of the KLS90 signal *)
+	bSensor1OK : BOOL; (* signal KLS90 sensor 1 is ok *)
+	bSensor2OK : BOOL; (* signal KLS90 sensor 2 is ok *)
+	bKlopf1 : BOOL; (* knocking detection KLS90 sensor 1 *)
+	bKlopf2 : BOOL; (* knocking detection KLS90 sensor 2 *)
+	FILTER_KLS2 : FILTER; (* LP-filter signal KLS90 sensor 2 *)
+	FILTER_KLS1 : FILTER; (* LP-filter signal KLS90 sensor 1 *)
+	TP_KnockLow : TP; (* timer for low knock sensitivity *)
+	TON_GETsignal : TON; (* time delay for GET signal failure *)
+	ssMinIntKlopf : INT;
+	ssMinIntKl : INT;
+	TON_Nocksignal : TON; (* knock signal failure after 24h *)
+	xOpMode : OpMode;
+END_VAR

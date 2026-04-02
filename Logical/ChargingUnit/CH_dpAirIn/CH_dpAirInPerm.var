@@ -1,0 +1,32 @@
+VAR
+	bCreateDataObj : BOOL; (*TRUE=create new data object *)
+	bErrPermAirF : BOOL := FALSE; (*ERROR permanent memory*)
+	bWriteDataObj : BOOL; (*TRUE=write data object module *)
+	DatObjCreate_01 : DatObjCreate; (*data object create *)
+	DatObjDelete_PermMem : DatObjDelete; (*data object delete *)
+	DatObjInfo_01 : DatObjInfo; (*data object info *)
+	DatObjRead_01 : DatObjRead; (*data object read *)
+	DatObjWrite_01 : DatObjWrite; (*data object write *)
+END_VAR
+VAR CONSTANT
+	ERR_NOERROR : UINT := 0; (* status for no error *)
+END_VAR
+VAR
+	ModulName : STRING[35]; (*module name of object *)
+	perm_AirF_vers : UINT; (*version*)
+	pmAirF : PermAirF_typ; (*permanent memory tags *)
+	pm_Error : UINT; (*permanent value error *)
+	pm_id : UDINT; (*permanent value identifier *)
+	pm_len : UDINT; (*permanent value lenght *)
+	pm_p : UDINT; (*permanent value pointer *)
+	TON_WarnDelay : TON := (0); (*TON function block for warning*)
+	TON_WritePMEM : TON := (0); (*delay write permanent memory *)
+	ulChecksum : UDINT; (*parameter checksum value *)
+	ulChecksumOld : UDINT; (*last vlaue of parameter checksum *)
+	ulChkValue : UDINT; (*actual value of parameter pointer *)
+	ulPMPointer : UDINT; (*adress of actual checksum value *)
+	write_once : BOOL; (*write permanent memory once *)
+	TON_BlockMinFileAge : TON; (*waiting time without file write after successful performed write*)
+	bBlock_MinFileAge : BOOL := FALSE; (*pause the perm file write after each sucessful write*)
+	iPM_WriteCnt : UDINT; (* *) (*old VarName: usPMWriteCnt*)
+END_VAR

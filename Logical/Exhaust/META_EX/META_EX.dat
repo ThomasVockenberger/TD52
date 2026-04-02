@@ -1,0 +1,138 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2025
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V03.99.00.00	06.03.2013	Weitzer 	generated for modular software	 
+;				02.10.2013	lettenb.	descriptions setted
+;				04.10.2013	lettenb.	dependencies added
+; V04.00.00.00	31.01.2014	lettenb.	version + dependencies changed
+; V04.00.01.00	10.04.2014	lettenb.	new version	  			
+; V04.01.00.00	22.07.2014	lettenb.	para_task update, EG_VaCo, EG_Scav	  			
+; V04.03.00.00	02.03.2015	lettenb.	version + dependencies changed (920,SCR)
+; V04.03.00.00	11.06.2015	Zengerer 	version + dependencies changed (IF change with array index 0 for compatibility with c-tasks)
+;				15.06.2015  lettenb.	PARAMETER_CHK expanded	
+; V04.04.00.00	12.07.2016	Zengerer 	version + dependencies changed (custom array size)
+;               20.03.2017	lettenb.	FC monitoring added
+; V04.05.00.00	12.07.2017	Messner		Scavenging valve temperatur sensor added
+;				04.12.2017	Messner		Oxidation catalyst added, CAT disabled
+;				01.12.2017	Tinello		SCR deleted
+; V04.05.01.00	16.03.2018	lettenb.	EGScav: FS only for BR9
+; V04.06.00.00	04.07.2018	Perktold	EGScav: FS also for BR6 (but no reduced time - just demand), don't start EGScav. for fast start prep. if W3417 is present
+; V04.07.00.00  26.04.2018	lettenb.	SWAT920/5 added
+;				09.08.2018	Schmid		change in tManAuxCtr struct (2nd low temperature charge cooling circuit)
+;				14.01.2019	Schmid		"exhaust gas pressure fast" fully replaces "OXIcat inlet pressure fast"
+;										TASK RENAMED: New name: Pr_EG_TC1 - Fast exhaust gas pressure sensor operations
+;													 (Old name: CAT - Oxidation Catalyst sensor operations)
+;				03.10.2019	lettenb.	OXIcat monitoring, bu01
+;				03.10.2019	lettenb.	perm data writing to CF 10s -> 10m, bu01
+; V04.09.00.00  02.08.2019	lettenb.	temperature exhaust gas pressure relief valve 1/2 added
+;				13.07.2020	lettenb.	2496 time delay 60s added, bu
+; V04.10.00.00	14.12.2020	lettenb.	TON,TOF reset added to avoid time overrun
+; V04.11.00.00	06.07.2021	lettenb.	9347,9348 added, exhaust gas valve monitoring
+; V04.11.01.00	24.02.2022	Schmid		bAuxCust array size adjusted
+; V04.12.00.00	19.12.2022	Perktold	added comments for sr-code (EN 13849-1 / 4.6.3) for A1092,A2315 & W3528
+;				12.01.2023	lettenb.	versioning, exhaust scavenging autostart preparation
+; V04.13.00.00  19.10.2023  Heim Markus add 2374, BurstingDisk1_Ok and BurstingDisk2_Ok (2023-179)
+;				05.12.2023	Bacci		Added ventilation demand and release before starting the exhaust scavenging (2023-190)
+; V04.14.00.00  15.10.2024	Vigh Marton	Deflagration detection update, added minimum peak, CBM module interface
+; V04.14.00.00	06.11.2024	Theobald	At alarm 1092 only temperature sensor cause trip while the engine is running and at alarm 3366 there is no trip during engine operation.
+;				25.11.2024	Bacci		T6 Start procedure with purge start (2024-219): scavenging fan removal
+; V04.25.00.00 	10.07.2025	Tinello	 	SafetyPLC: Disabled W3528 in case of Safety gas backpressure monitoring active
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>EX</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>04.25.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Parameter Check <PARAn Name='aAbcdef' MIN='xxx' MAX='yyy' />  (watch for correct spacings and apostrophs!)
+"<PARAMETER_CHK>"
+"<PARA1 Name='iEng_Motortype' MIN='208' MAX='920' />"
+"<PARA2 Name='rN_EngStart_LimHi' MIN='50.0' MAX='2200.0' />"
+"<PARA3 />"
+"<PARA4 />"
+"<PARA5 />"
+"</PARAMETER_CHK>"
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>par_EX</DATAMODULE>"
+"	<DATAMODULE>perm_EX</DATAMODULE>"
+"</DATAMODULES>"
+;
+; Dependencies Modules (MMxx.yy.zz.cc)
+"<DEPENDENCIES>"
+"	<DEPENDENCY MODULE='AB' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='AG' VERSION='04.10.00.00' />"
+"	<DEPENDENCY MODULE='CH' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='CU' VERSION='04.07.00.00' />"
+"	<DEPENDENCY MODULE='EC' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='EG' VERSION='04.25.00.00' />"
+"	<DEPENDENCY MODULE='EM' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='GC' VERSION='04.03.00.00' />"
+"	<DEPENDENCY MODULE='GT' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='HA' VERSION='04.10.00.00' />"
+"	<DEPENDENCY MODULE='HC' VERSION='04.07.00.00' />"
+"	<DEPENDENCY MODULE='IG' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='OP' VERSION='04.11.00.00' />"
+"	<DEPENDENCY MODULE='PB' VERSION='04.00.00.00' />"
+"	<DEPENDENCY MODULE='VE' VERSION='04.13.00.00' />"
+"   <DEPENDENCY VISVERSION='02.15.00.00' />"			; Dependencies Visualization
+"</DEPENDENCIES>"
+;
+; Module function description  
+"<MODULEFUNCTION>" ;<!-- short overview documentation of module function; add reference to detailed information, if available-->
+"	<General>	"
+"	Control exhaust gas line. "
+"	</General>	"
+""
+"	<F1 Name='Exhaust gas scavenging' LastModified='4.03.00.00'>"
+"	Exhaust gas scavenging control and monitoring.	"
+"	N2 gas scavenging control and monitoring.	"
+"	</F1>"
+"	<F2 Name='Exhaust gas valves' LastModified='4.00.02.00'>"
+"	Exhaust gas valves control (boiler valve, bypass valve).	"
+"	</F2>"
+"	<F3 Name='Codinox' LastModified='4.03.00.00'>"
+"	Codinox control.	"
+"	</F3>"
+""
+"	<Info>"
+"   UPDATE V4.2.0	version + dependencies changed (IF change with array index 0 for compatibility with c-tasks)	"
+"   UPDATE V4.5.0	SCR moved to Emission module, CAT removed, OXIcat added	"
+"   UPDATE V4.7.0	change in tManAuxCtr struct	"
+"	</Info>"
+""
+"	<Customized LastModified='4.02.01.00'>"
+"	- Nothing "
+"	</Customized>	"	
+""							
+"</MODULEFUNCTION>"
+;
+"</META>"

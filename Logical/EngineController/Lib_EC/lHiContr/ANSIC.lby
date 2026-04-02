@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.0.17.85 SP?>
+<Library xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>lHiContr.fun</File>
+    <File>lHiContr.typ</File>
+    <File>lHiContr.var</File>
+    <File>HiContr.h</File>
+    <File>HiContr_private.h</File>
+    <File>HiContr_types.h</File>
+    <File>rtwtypes.h</File>
+    <File>HiContr.c</File>
+    <File>main.c</File>
+    <File>lib_properties.txt</File>
+  </Files>
+</Library>

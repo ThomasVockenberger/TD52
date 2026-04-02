@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.0.15.165 SP?>
+<Library Version="1.10.1" Description="The ModDiag Library can be used for checking " xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>ModDiag.typ</File>
+    <File>ModDiag.var</File>
+    <File>ModDiag.fun</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="AsIO" FromVersion="3.00.0" />
+    <Dependency ObjectName="AsIODiag" FromVersion="3.00.0" />
+    <Dependency ObjectName="brsystem" FromVersion="1.11.5" />
+    <Dependency ObjectName="runtime" FromVersion="1.09.0" />
+    <Dependency ObjectName="standard" FromVersion="1.35.0" />
+    <Dependency ObjectName="asstring" FromVersion="1.01.2" />
+    <Dependency ObjectName="sys_lib" FromVersion="1.40.4" />
+    <Dependency ObjectName="asieccon" FromVersion="0.00.0" />
+  </Dependencies>
+</Library>

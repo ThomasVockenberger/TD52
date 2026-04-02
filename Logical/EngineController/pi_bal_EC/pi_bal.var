@@ -1,0 +1,175 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: pi_bal
+ * File: pi_bal.var
+ * Author: WaldharM
+ * Created: December 11, 2009
+ ********************************************************************
+ * Local variables of program pi_bal
+ ********************************************************************)
+VAR
+	RFILTER_Pmax : ARRAY[0..24] OF FILTER_R;
+	RMEDIAN24_Pmax : RMEDIAN24;
+	ucBalAvgCounter : USINT;
+	LCRPIDpara_Bal : ARRAY[0..24] OF LCRPIDpara;
+	LCRPID_Bal : ARRAY[0..24] OF LCRPID;
+	rDeadbandBalancing : REAL;
+	ucSampleRate : USINT;
+	usCycleTime : UINT;
+	bMapSave : BOOL;
+	rDur_Sum_Avg : REAL;
+	rDur_Map : ARRAY[0..24] OF REAL;
+	TON_BalSafetyStop : TON;
+	LIndex : USINT;
+	x1y1 : REAL;
+	x2y1 : REAL;
+	x2y2 : REAL;
+	x1y2 : REAL;
+	x1Wert : REAL;
+	x2Wert : REAL;
+	rLoQuanti_P_Dev : REAL;
+	rUpQuanti_P_Dev : REAL;
+	rLoQuanti_T_Dev : REAL;
+	rUpQuanti_T_Dev : REAL;
+	bExitExit : BOOL;
+	rZM : REAL;
+	bKennfelderauslesen : BOOL;
+	bManual_Bal : BOOL;
+	bBal_TimeOut : BOOL;
+	xLCRCbyP_KpMap_PID1 : LCRCurveByPoints;
+	xLCRCbyP_KpMap_PID2 : LCRCurveByPoints;
+	RFILTER_Pmax_PID2 : ARRAY[0..24] OF FILTER_R;
+	LCRLimScal_BalCritOn : LCRLimScal;
+	LCRLimScal_BalCritOff : LCRLimScal;
+	TON_SS_P2s : TON;
+	rP2s_Ref : REAL;
+	TON_SS_T2s : TON;
+	rT2s_Ref : REAL;
+	TON_Kennfeldauslesen : TON;
+	TON_SS_Pel : TON;
+	rPel_Ref : REAL;
+	rLimpHomeDownset : REAL;
+	rPMaxOffset_raw : ARRAY[0..24] OF REAL;
+	rPMaxOffset_raw_2 : ARRAY[0..24] OF REAL;
+	x1y1_P49 : REAL;
+	x1y2_P49 : REAL;
+	x2y1_P49 : REAL;
+	x2y2_P49 : REAL;
+	x1Wert_P49 : REAL;
+	x2Wert_P49 : REAL;
+	rP_D_p49_Map : ARRAY[0..24] OF REAL;
+	rP_D_p49_Measure : ARRAY[0..24] OF REAL;
+	rZM_DP49 : ARRAY[0..24] OF REAL;
+	rPMaxOffset_raw_3 : ARRAY[0..24] OF REAL;
+	rPMaxOffset_limit : ARRAY[0..24] OF REAL;
+	rSumCor_rPMaxOffset : REAL;
+	RMEDIAN24_p49 : RMEDIAN24;
+	RMEDIAN24_IHR : RMEDIAN24;
+	RFILTER_P49 : ARRAY[0..24] OF FILTER_R;
+	RFILTER_IHR	: ARRAY[0..24] OF FILTER_R;
+	rPMaxOffset_bar : ARRAY[0..24] OF REAL;
+	bBalRequired_Arr : ARRAY[0..24] OF BOOL;
+	bPID_Init : BOOL;
+	ucBal_State_Old : USINT;
+	rDur_Sum : REAL;
+	bReleaseBalancing : BOOL;
+	ucBal_State : USINT;
+	bBalRequired : BOOL;
+	rPmax_Filter : ARRAY[0..24] OF REAL;
+	rPmax_Filter_Avg : REAL;
+	rNNet_NPoint_Quanti : REAL;
+	rPMaxOffset : ARRAY[0..24] OF REAL;
+	iIdx_T2s_ReC : USINT;
+	iIdx_P2s_Loop : USINT;
+	iIdx_T2s_Loop : USINT;
+	iIdx_T2s_Loop_Inv : USINT;
+	iIdx_T2s_MapSize : USINT;
+	iIdx_T2s : USINT;
+	iIdx_P2s_MapSize : USINT;
+	iIdx_P2s : USINT;
+	iIdx_P2s_ReC : USINT;
+	iIdx_Cyl : USINT; (*Zylinder Zähler*)
+	rCA_Dur_Lim_Lo : REAL;
+	rCA_Dur_Lim_Hi : REAL;
+	bMapSave_p49 : BOOL; (*Alt: bSW6*)
+	iIdx_Pr : USINT;
+	iIdx_T : USINT;
+	iCycle : USINT;
+	fub_RTInfo : RTInfo;
+	bTrigger : BOOL;
+	TP_MapSave : TP;
+	bOptRel : BOOL;
+	rPr_P49_Avg : REAL;
+	rPr_PMax_SumCor : REAL;
+	rP49_Filter : ARRAY[0..24] OF REAL;
+	RFILTER_P49_PID2 : ARRAY[0..24] OF FILTER_R;
+	bDur_Lim_PID2 : ARRAY[0..24] OF BOOL;
+	bDur_Lim_PID2_Warn : ARRAY[0..24] OF BOOL;
+	rCA_PI_Dur_SOffset_raw : ARRAY[0..24] OF REAL;
+	TON_SecondTick : TON;
+	bAmmSeqClkP : BOOL;
+	bMapSave_Ena : BOOL;
+	rPmaxOffset_UL : REAL;
+	rPmaxOffset_LL : REAL;
+	rPmax_Offset_Coef_a : REAL;
+	rPmax_Offset_Coef_b : REAL;
+	rLim_PID2_Hi : REAL;
+	rLim_PID2_Lo : REAL;
+	xTP_ResetMap : TP;
+	xTP_CommModeOn : TP;
+	xTP_CommModeOff : TP;
+	xTP_SaveToMap : TP;
+	bP49_Source : BOOL;
+	bTEST_NEW_SS : BOOL;
+	rPmax_Offset_Coef_d : REAL;
+	xLCRCByP_d_P2s : LCRCurveByPoints;
+	rPmax_Offset_Coef_e : REAL;
+	rPID_e : REAL;
+	rPID_e_cyl : REAL;
+	xMEDIAN_MFBvar : RMEDIAN24;
+	xFILTER_MFBvar : ARRAY[0..24] OF FILTER_R;
+	rCA_MFBvar_dlt_Filt : ARRAY[0..24] OF REAL;
+	rPmax_Offset_Coef_b_IP : REAL;
+	xFILTER_IP : ARRAY[0..24] OF FILTER_R;
+	rPMaxOffset_raw_1 : ARRAY[0..24] OF REAL;
+	xLCRCByP_c_P2s : LCRCurveByPoints;
+	xLCRCByP_e_P2s : LCRCurveByPoints;
+	rPmax_Offset_d_lim : ARRAY[0..24] OF REAL;
+	rPmax_Offset_c : ARRAY[0..24] OF REAL;
+	rPmax_Offset_d : ARRAY[0..24] OF REAL;
+	rPmax_Offset_Coef_c : REAL;
+	bLockCommissioning : BOOL; (*Lock commissioning and map saving if in G2 mode*)
+	bLockCommissioning_FAR : BOOL; (*Lock commissioning and map saving if FAR out of bound*)
+	bFAR_lim_lock_Comm : ARRAY[0..24] OF BOOL; (*Lock commissioning because FAR is out of bound *)
+	xTOF_FAR_lim_comm_blocked : ARRAY[0..24] OF TOF; (*TOF for comissioning blocked because FAR is out of bound *)
+	bFAR_lim_comm_blocked : ARRAY[0..24] OF BOOL; (*comissioning blocked because FAR is out of bound *)
+	TON_OptiCyl_Lim : ARRAY[0..24] OF TON;
+	x1 : REAL := 0.0;
+	x2 : REAL := 0.0;
+	y1 : REAL := 0.0;
+	y2 : REAL := 0.0;
+	xTOF_bLimpHomeCyl : ARRAY[0..24] OF TOF;
+	tiDel_TOF_LimpHome : TIME := T#10s;
+	rDownSetTOF_LH : REAL := -2;
+	bDur_Opt_Lim : ARRAY[0..24] OF BOOL;
+	bDur_Opt_Lim_Warn : ARRAY[0..24] OF BOOL;
+	xTON_Opt_Dur_Lim : ARRAY[0..24] OF TON; 
+	tiLim_Dur_Off : TIME; (* Time delay before Duration Offset Limitation Warning is triggered *)
+	rCA_Lim_Dur_Margin : REAL; (* Margin to limit to trigger offset duration limitation Warning *) 
+	rQuantifier_Opt_Gauss : REAL; (* Quantifier for gauss distriburtion *)
+	rSigma_Opt_p2s : REAL; (* sigma for gauss distribution in charge pressure direction *)
+	rSigma_Opt_T2s : REAL; (* sigma for gauss distribution in charge temperature direction *)
+	xGR_MAXR_Opt_Req_CL : GR_MAXR := (0); (*hysterisis for PID ouput to request automatic balancing *)
+	xTON_Opt_Req_CL : TON; (* delay for request automatic balancing *)
+	xTON_Opt_Done : TON; (* delay for request automatic balancing *)
+	bOpt_Req_CL : BOOL; (* request automatic balancing *)
+	rDur_Off_CL_max : REAL; (* maximum of all PID outputs for cylinder balancing *)
+	rIHR_set : ARRAY[0..24] OF REAL;
+	rFAR_set : ARRAY[0..24] OF REAL;
+	rFAR_act : ARRAY[0..24] OF REAL;
+	bFAR_up_lim : ARRAY[0..24] OF BOOL;
+	bFAR_low_lim : ARRAY[0..24] OF BOOL;
+	rK_Opt_a_fact : REAL; (* k factor for linear interpolation of a-Factor on IHR *)
+	rD_Opt_a_fact : REAL; (* d offset for linear interpolation of a-Factor on IHR *)
+END_VAR

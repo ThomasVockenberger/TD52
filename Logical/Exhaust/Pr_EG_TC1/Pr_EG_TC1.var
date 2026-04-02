@@ -1,0 +1,5 @@
+VAR
+	xR_TRIG_Pr_EG_Deflag_Fast : R_TRIG;	(* Rising edge - Trigger on exhaust gas pressure fast *) (*OldName:xR_TRIG_Pr_OXIcat_In_Fast; Cycle:1*)
+	xTOF_Pr_EG_Deflag_Fast_VisReset : TOF;
+END_VAR
+

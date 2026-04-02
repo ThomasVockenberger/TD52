@@ -1,0 +1,49 @@
+VAR CONSTANT
+	AxisArrayMaxIndex : UINT := 8191;
+END_VAR
+VAR
+	bStartBufferUpload : BOOL := TRUE; (* in order to start the buffer upload, set to TRUE *)
+	xCM4810 : vbioCtrlCM4810; (* FUB to read buffers of a CM4810 module *)
+	stpCM4810 : stpCM4810_Enum; (* step of state machine *)
+	rData_x_Axis : ARRAY[0..AxisArrayMaxIndex] OF REAL; (* array of x-axis values (time values [s] or frequency values [Hz]) *)
+	rData_y_Axis : ARRAY[0..AxisArrayMaxIndex] OF REAL; (* array of y-axis values (vibration [mg] of [mm/s] values *)
+	bWrite : BOOL;
+	szWriteConfig : STRING[50];
+	bRead : BOOL;
+	szReadConfig : STRING[50];
+	xAsIOAccWrite1 : AsIOAccWrite;
+	xAsIOAccRead1 : AsIOAccRead;
+	rSensitivitySensor : ARRAY[0..4] OF REAL;
+	bGetFrequencyMax : BOOL;
+	usCount : UINT;
+	tiCM4810_ReadBuffer : TIME;
+	xTON_ReadCycle : TON;
+	iNum_VibSens : INT;
+	rVel_VibSens_Band : ARRAY[0..32] OF REAL := [33(0)];
+	rVel_VibSens : ARRAY[0..4] OF REAL := [5(0)];
+	usMaxIndex : UINT;
+	rVel_y_Axis_Max : REAL;
+	bVibSens_Overflow : ARRAY[0..4] OF BOOL := [5(0)];
+	bVibSens_BrokenWire : ARRAY[0..4] OF BOOL := [5(0)];
+	ucWriteBandCnt : USINT := 0;
+	rCenterBandOld1 : REAL := 0.0;
+	rCenterBandOld2 : REAL := 0.0;
+	rCenterBandOld3 : REAL := 0.0;
+	rCenterBandOld4 : REAL := 0.0;
+	rCenterBandOld5 : REAL := 0.0;
+	rCenterBandOld6 : REAL := 0.0;
+	rCenterBandOld7 : REAL := 0.0;
+	rCenterBandOld8 : REAL := 0.0;
+	rIdx_VibSens_BandWidtOld : REAL := 0.0;
+END_VAR
+VAR
+	xDiagCreateInfo_CM4810 : DiagCreateInfo; (*Get number of configured modules*)
+	xDiagGetStrInfo_CM4810 : DiagGetStrInfo; (*Get name of configured modules*)
+	xDiagDisposeInfo_CM4810 : DiagDisposeInfo; (*Free ressources of AsIODiag*)
+	sLabelInfo : STRING[50]; (*Includes label of configured module*)
+	sAddrInfo : STRING[50]; (*Includes address of configured module*)
+	iIndex : UDINT; (*Index of actual read module*)
+	iIdent : UDINT; (*Ident from xDiagCreateInfo_CM4810*)
+	iNrEntries : UDINT; (*Number of configured modules from xDiagCreateInfo_CM4810*)
+	sCM4810Addr : STRING[50]; (*CM4810 IF PLC address string*)
+END_VAR

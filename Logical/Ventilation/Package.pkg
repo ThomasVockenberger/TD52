@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.25.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="DataObject" Language="Simple" Description="MODUL META data file">META_VE</Object>
+    <Object Type="File" Private="true">module_VE.typ</Object>
+    <Object Type="File" Private="true">module_VEPara.typ</Object>
+    <Object Type="File" Private="true">module_VE.var</Object>
+    <Object Type="Program" Language="IEC" Description="values">default_VE</Object>
+    <Object Type="Program" Language="IEC" Description="functions">general_VE</Object>
+    <Object Type="Program" Language="IEC" Description="ventilation engine room">Vent_ER</Object>
+    <Object Type="Program" Language="IEC" Description="engine room air inlet temperature ">T_InAirER</Object>
+    <Object Type="Program" Language="IEC" Description="engine room air temperature">T_AirER</Object>
+    <Object Type="Program" Language="IEC" Description="controller engine room temp. with inlet louver(s)">Ctr_InlLou</Object>
+    <Object Type="Program" Language="IEC" Description="controller engine intake air temp. with circulation louver(s) ">Ctr_CircLou</Object>
+    <Object Type="Program" Language="IEC" Description="controller engine room temp. with outlet louver(s)">Ctr_OutLRT</Object>
+    <Object Type="Program" Language="IEC" Description="controller engine room differential pressure with outlet louver(s)">Ctr_OutLRDP</Object>
+    <Object Type="Program" Language="IEC" Description="controller engine room temperature with outlet ventilation fan(s)">Ctr_OutVRT</Object>
+    <Object Type="Program" Language="IEC" Description="controller engine room differential pressure with outlet ventilation fan(s)">Ctr_OutVRDP</Object>
+    <Object Type="Program" Language="IEC" Description="controller engine room temperature">Ctr_ER</Object>
+    <Object Type="Program" Language="IEC" Description="visualization">vis_VE</Object>
+    <Object Type="Program" Language="IEC" Description="messages">MsgVE</Object>
+    <Object Type="Program" Language="IEC" Description="+ parameter handling">ParVE</Object>
+  </Objects>
+</Package>

@@ -1,0 +1,14 @@
+VAR
+	ucCylinderCount : USINT;
+	rU_IgnSAFI_Cyl : ARRAY[0..24] OF REAL; (*ignition voltage SAFI system for each cylinder local variable*)
+	rU_IgnMon_Cyl : ARRAY[0..24] OF REAL; (*ignition voltage IC system for each cylinder local variable*)
+	xGR_MAXR_EngSpeed : GR_MAXR; (*Limit max for Engine speed*)
+	xGR_MAXR_EngineStartSpeed : GR_MAXR;
+	ucCylIndex : USINT;
+	rU_Ign_Avg_Sum : REAL; (*Average ignition voltage Temporary*)
+	TON_SecondTick1 : TON; (* CAN BUS FAHLER *)
+	TON_SecondTick : TON; (* CAN BUS FAHLER *)
+	rU_Ign_Calc : ARRAY[0..24] OF REAL; (*ignition for each cylinder local variable*)
+	rZZPAvg : REAL;
+	bIgn_SelfTest : BOOL;
+END_VAR

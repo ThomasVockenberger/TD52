@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.0.0.0?><Library xmlns="http://br-automation.co.at/AS/Library" SubType="ANSIC" Version="1.00.0">
+   <Files>
+      <File>SAFI_VCD.c</File>
+      <File>SAFI_VCD.h</File>
+      <File>SAFI_VCD_private.h</File>
+      <File>SAFI_VCD_types.h</File>
+      <File>fSAFI_VCD.c</File>
+      <File>lSAFI_VCD.fun</File>
+      <File>lSAFI_VCD.typ</File>
+      <File>lSAFI_VCD.var</File>
+      <File>lib_properties.txt</File>
+      <File>rt_defines.h</File>
+      <File>rtwtypes.h</File>
+   </Files>
+</Library>

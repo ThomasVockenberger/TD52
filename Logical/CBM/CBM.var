@@ -1,0 +1,219 @@
+VAR
+	ACE2MM : ACE2MM_Struct;
+	bPBC_Write : BOOL;
+	bPBC_Mem_Ena : BOOL;
+	bPBC_NewData : BOOL;
+	bNewEngCycle : BOOL;
+	bPBC_Record : BOOL;
+	bMsg9007_Set : BOOL; (*Module global variable for creation of hourly message *)
+	bGnlTrip3 : BOOL; (*general trip*)
+	bGnlTrip2 : BOOL; (*general trip*)
+END_VAR
+(* FAM *)
+VAR
+	bFAM_CmdOn : BOOL := FALSE; (*True = FAM will be executed*)
+	bNoInitDetected : BOOL := FALSE; (*allways true, except 1cycle on init up*)
+	bGnlTrip : BOOL; (*general trip*)
+	bGnlWarning : BOOL; (*general warning*)
+	bGEN2diag_Ext_dist : BOOL := 0;
+	bATD_adInfo : BOOL := 0; (*additional information form ATD available*)
+	bLGM_Event : BOOL := 0; (*Lambda gradient monitoring event*)
+	bLamMon_DiagActive : BOOL := 0;
+	bLGM_Event_Ramp : BOOL := 0;
+END_VAR
+(* FDT *)
+VAR
+	bFDT_CmdOn : BOOL := FALSE; (*True = FDT will be executed*)
+	bTEST : BOOL := FALSE; (*Alarm bypass*)
+	bMsg3517Set : BOOL; (*Temp variable for setting alarm bMsg3517*)
+	bGnlTrip1 : BOOL; (*general trip*)
+	bPBC_Write_RStop : BOOL; (* actual action number *)
+	bFMEP_Fault_Dtct_Save : BOOL;
+	bFMEP_Fault_Detection : BOOL := 0;
+	FDT_Diag_23 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_24 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_25 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_3 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*YCable*)
+	FDT_Diag_21 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*Sensor*)
+END_VAR
+(* general *)
+VAR
+	FDT_Diag_22 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_29 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_4 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*ToRich*)
+	FDT_Diag_30 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_26 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_27 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_28 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_12 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*Moris*)
+	FDT_Diag_13 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*Leaker*)
+	FDT_Diag_14 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*GasAir*)
+	FDT_Diag_1 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*Sensor*)
+	FDT_Diag_2 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_11 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*PIFlow*)
+	FDT_Diag_18 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*Spare*)
+	FDT_Diag_19 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*Spare*)
+	FDT_Diag_20 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*Spare*)
+	FDT_Diag_15 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*BrCaFo*)
+	FDT_Diag_16 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*Spare*)
+	FDT_Diag_17 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*Spare*)
+	FDT_Diag_31 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_53 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_52 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_55 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_54 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_58 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*Spare*)
+	FDT_Diag_6 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*PreCha*)
+	FDT_Diag_49 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_51 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_50 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_9 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*Vbreak*)
+	FDT_Diag_8 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*Knock*)
+	FAM_pu_idx : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*power unit idex*)
+	FDT_Diag_10 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*Spark*)
+	FDT_Diag_60 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*Spare*)
+	FDT_Diag_57 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_56 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_7 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*TrPick*)
+	FDT_Diag_59 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*Spare*)
+	FDT_Diag_39 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_38 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_5 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*CRBSen*)
+	FDT_Diag_41 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_40 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_37 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_33 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_32 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_34 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_36 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_35 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_47 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_48 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_42 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_45 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_44 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_46 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+	FDT_Diag_43 : ARRAY[0..20] OF BOOL := [21(FALSE)]; (*SenCon*)
+END_VAR
+(* HMI *)
+VAR
+	bATDCyl : ARRAY[0..24] OF BOOL;
+	bGCB_ON_data : ARRAY[0..199] OF BOOL;
+	iCnt_OpHours : DINT := 0;
+	xEngType : EngType;
+	shiftVec : ARRAY[0..39] OF INT;
+	splitVec : ARRAY[0..59] OF INT;
+	logicMatrix_1 : ARRAY[0..1799] OF INT;
+	logicMatrix_2 : ARRAY[0..1799] OF INT;
+	IN_CB : IN_CB_Struct;
+	MM2ACE : MM2ACE_Struct;
+	MM2VIS : MM2VIS_Struct;
+	xOpMode : OpMode;
+	OUT_CB : OUT_CB_Struct;
+	Para : PARA_CB_Struct;
+	ParaFactoryDefault : PARA_CB_Struct;
+	pm : PARA_CB_Struct;
+	Perm : Perm_CBM_Struct; (* Permanent Data*)
+	rN_Eng : REAL;
+	eta_gen : REAL; (*generator characteristics for the efficiencies [p.u.]*)
+	eta_vol : REAL; (*delivery degree characteristics [p.u.]*)
+	eta_mot : REAL; (*engine characteristics for the efficiencies [p.u.]*)
+	rCA_MFB10 : ARRAY[0..24] OF REAL; (* 10% of fuel mass burned *) (* OldName: usUmstzpkt10P; Cycle: 2 *)
+	rN_SAFI : ARRAY[0..24] OF REAL;
+	rCA_MFB90 : ARRAY[0..24] OF REAL; (* 90% of fuel mass burned *) (* OldName: usUmstzpkt90P; Cycle: 2 *)
+	rP_Act_Max_data : ARRAY[0..199] OF REAL;
+	rP_Act_Min_data : ARRAY[0..199] OF REAL;
+	rPr_P2s_B_Max_data : ARRAY[0..199] OF REAL;
+	rP_Set_Min_data : ARRAY[0..199] OF REAL;
+	rPr_GR_Act_Max_data : ARRAY[0..199] OF REAL;
+	rPr_GR_Act_Min_data : ARRAY[0..199] OF REAL;
+	rP_Set_Max_data : ARRAY[0..199] OF REAL;
+	rLambda_Set_Min_data : ARRAY[0..199] OF REAL;
+	rN_Eng_Max_data : ARRAY[0..199] OF REAL;
+	rN_Eng_Min_data : ARRAY[0..199] OF REAL;
+	rLambda_Set_Max_data : ARRAY[0..199] OF REAL;
+	rPr_P2s_B_Min_data : ARRAY[0..199] OF REAL;
+	rPr_P2s_A_Max_data : ARRAY[0..199] OF REAL;
+	rPr_P2s_A_Min_data : ARRAY[0..199] OF REAL;
+	rPr_GR_Set_Min_data : ARRAY[0..199] OF REAL;
+	rU_L3L1_Max_data : ARRAY[0..199] OF REAL;
+	rI_L1_Min_data : ARRAY[0..199] OF REAL;
+	rU_L3L1_Min_data : ARRAY[0..199] OF REAL;
+	rU_L2L3_Min_data : ARRAY[0..199] OF REAL;
+	rU_L2L3_Max_data : ARRAY[0..199] OF REAL;
+	rI_L3_Min_data : ARRAY[0..199] OF REAL;
+	rI_L3_Max_data : ARRAY[0..199] OF REAL;
+	rI_L2_Max_data : ARRAY[0..199] OF REAL;
+	rI_L1_Max_data : ARRAY[0..199] OF REAL;
+	rI_L2_Min_data : ARRAY[0..199] OF REAL;
+	rU_L1L2_Max_data : ARRAY[0..199] OF REAL;
+	rPos_CBV_Act_A1_Min_data : ARRAY[0..199] OF REAL;
+	rPos_CBV_Act_A1_Max_data : ARRAY[0..199] OF REAL;
+	rPr_Crank_Case_Max_data : ARRAY[0..199] OF REAL;
+	rPos_CBV_Set_Max_data : ARRAY[0..199] OF REAL;
+	rPos_CBV_Set_Min_data : ARRAY[0..199] OF REAL;
+	rPr_Leanox_Set_Max_data : ARRAY[0..199] OF REAL;
+	rU_L1L2_Min_data : ARRAY[0..199] OF REAL;
+	rPr_Leanox_Set_Min_data : ARRAY[0..199] OF REAL;
+	rPos_CBV_Act_B1_Min_data : ARRAY[0..199] OF REAL;
+	rPos_CBV_Act_B1_Max_data : ARRAY[0..199] OF REAL;
+	rN_TCHP_B_Min_data : ARRAY[0..199] OF REAL;
+	rN_TCHP_A_Max_data : ARRAY[0..199] OF REAL;
+	rN_TCHP_B_Max_data : ARRAY[0..199] OF REAL;
+	rN_TCLP_A_Max_data : ARRAY[0..199] OF REAL;
+	rN_TCLP_A_Min_data : ARRAY[0..199] OF REAL;
+	rN_TCHP_A_Min_data : ARRAY[0..199] OF REAL;
+	rPr_PC_Act_Min_data : ARRAY[0..199] OF REAL;
+	rPr_GR_Set_Max_data : ARRAY[0..199] OF REAL;
+	rPr_PC_Act_Max_data : ARRAY[0..199] OF REAL;
+	rPr_PC_Set_Max_data : ARRAY[0..199] OF REAL;
+	rPr_PC_Set_Min_data : ARRAY[0..199] OF REAL;
+	rCosPhi_Min_data : ARRAY[0..199] OF REAL;
+	rQ_Act_Min_data : ARRAY[0..199] OF REAL;
+	rFrequency_Max_data : ARRAY[0..199] OF REAL;
+	rQ_Act_Max_data : ARRAY[0..199] OF REAL;
+	rFrequency_Min_data : ARRAY[0..199] OF REAL;
+	rN_TCLP_B_Max_data : ARRAY[0..199] OF REAL;
+	rN_TCLP_B_Min_data : ARRAY[0..199] OF REAL;
+	rPr_Crank_Case_Min_data : ARRAY[0..199] OF REAL;
+	rCosPhi_Max_data : ARRAY[0..199] OF REAL;
+	rT_T2s_data : ARRAY[0..199] OF REAL;
+	rT_MBearing_data : ARRAY[0..2199] OF REAL;
+	rPr_49afTDC_data : ARRAY[0..3999] OF REAL;
+	rPr_Knock_data : ARRAY[0..3999] OF REAL;
+	rT_CBearing_data : ARRAY[0..3999] OF REAL;
+	rPr_49bfTDC_data : ARRAY[0..3999] OF REAL;
+	rPr_IMEP_data : ARRAY[0..3999] OF REAL;
+	rT_EG_Cyl_data : ARRAY[0..3999] OF REAL;
+	rPr_Peak_data : ARRAY[0..3999] OF REAL;
+	rMFBvar_data : ARRAY[0..3999] OF REAL;
+	rIgn_Timing_data : ARRAY[0..3999] OF REAL;
+	rPI_PID_Offs_data : ARRAY[0..3999] OF REAL;
+	rU_Ign_data : ARRAY[0..3999] OF REAL;
+	rPI_Map_Offs_data : ARRAY[0..3999] OF REAL;
+	rPI_Duration_data : ARRAY[0..3999] OF REAL;
+	tRealTime : rtctime_typ;
+	strLine : STRING[100];
+	strGEProp : STRING[400];
+	tiStamp : TIME := T#0ms; (* replaces clock_ms(), Range is limited from T#1ms to T#24h *)
+	tiHMI_Delay : TIME := T#30s;
+	tTimeStamp : tTimeStamp_typ := (0);
+	Version_FAM : UDINT; (*Version of the FAM algorithm*)
+	Info_FAM : UDINT; (*Model information*)
+	ulPBCSensError_data : ARRAY[0..199] OF UDINT;
+	ulPBCMemBurst_data : ARRAY[0..199] OF UDINT;
+	ulSkipFire_data : ARRAY[0..199] OF UDINT;
+	ulGlowIgn_data : ARRAY[0..199] OF UDINT;
+	ulLimpHome_data : ARRAY[0..199] OF UDINT;
+	ulMisfire_I_data : ARRAY[0..199] OF UDINT;
+	ulPBCCompLineCheck_data : ARRAY[0..199] OF UDINT;
+	ulMisfire_II_data : ARRAY[0..199] OF UDINT;
+	ulPBCNegPresCheck_data : ARRAY[0..199] OF UDINT;
+	ulPBCPresSlopeCheck_data : ARRAY[0..199] OF UDINT;
+	ulPBCNegVoltCheck_data : ARRAY[0..199] OF UDINT;
+	ulPBCSlowDriftCheck_data : ARRAY[0..199] OF UDINT;
+	FAM_ACN : USINT; (*Action catalogue number*)
+	iOpHours_Min : USINT := 0;
+	FAM_status : USINT; (*FAM status information *)
+	VIS2MM : VIS2MM_Struct;
+END_VAR

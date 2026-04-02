@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package Version="4.14.0" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="DataObject" Language="Simple" Description="General task">META_CP</Object>
+    <Object Type="File" Description="Module global data types" Private="true">Module_CP.typ</Object>
+    <Object Type="File" Description="Modul global variables" Private="true">Module_CP.var</Object>
+    <Object Type="Program" Language="IEC" Description="General task">GeneralCP</Object>
+    <Object Type="Program" Language="IEC" Description="External setpoints">ExtSelect</Object>
+    <Object Type="Program" Language="IEC" Description="IN data buffer">inData</Object>
+    <Object Type="Program" Language="IEC" Description="OUT data buffer">outData</Object>
+    <Object Type="Program" Language="IEC" Description="coupling settings ">couplctrl</Object>
+    <Object Type="Program" Language="IEC" Description="Couple INNIO Jenbacher datas to customer PLS">coupling</Object>
+    <Object Type="Program" Language="IEC" Description="Modbus RTU Master">MBRMaster</Object>
+    <Object Type="DataObject" Language="Simple">cfg_mbus</Object>
+    <Object Type="Program" Language="IEC" Description="+ Parameter handling">ParCP</Object>
+    <Object Type="Program" Language="IEC" Description="+ Messages">MsgCP</Object>
+  </Objects>
+</Package>

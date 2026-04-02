@@ -1,0 +1,22 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: caniniSa
+ * File: caniniSa.var
+ * Author: weitzert
+ * Created: March 21, 2012
+ ********************************************************************
+ * Local variables of program caniniSa
+ ********************************************************************)
+VAR
+	CMSinit_SAFI_PI : CMSinit;
+	CMSinit_SAFI_Gen : CMSinit;
+	CMSinit_SAFI_Ign : CMSinit;
+	CMSinit_SAFI_KLS : CMSinit;
+	CMSinit_SAFI_DMR : CMSinit;
+	CMSinit_SAFI_Gen_2 : CMSinit;
+	CMSinit_SAFI_Ign_2 : CMSinit;
+	CMSinit_SAFI_KLS_2 : CMSinit;
+	CMSinit_SAFI_DMR_2 : CMSinit;
+	CMSinit_SAFI_PI_2 : CMSinit;
+END_VAR

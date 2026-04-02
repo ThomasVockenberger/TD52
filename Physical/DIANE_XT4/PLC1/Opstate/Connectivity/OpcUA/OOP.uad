@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="7" ArVersion="H4.90">
+  <Aliases>
+    <ACLAliases>
+      <ACL Id="1">
+        <ACE RoleName="Administrators" Access="0x017F" />
+      </ACL>
+    </ACLAliases>
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView AclId="1">
+    <Module Name="Opstate">
+      <GlobalVariables>
+        <Variable Name="MM2VIS" AutomaticEnable="True">
+          <Variable Name="bEng_Bloc" EnableArrayElements="True" />
+          <Variable Name="bSync_Rel" EnableArrayElements="True" />
+          <Variable Name="bEng_SU" EnableArrayElements="True" />
+          <Variable Name="bGV_Open" EnableArrayElements="True" />
+          <Variable Name="bReq_Dem" EnableArrayElements="True" />
+          <Variable Name="bReq_Bloc" EnableArrayElements="True" />
+          <Variable Name="bReq_A" EnableArrayElements="True" />
+          <Variable Name="bEng_Dem_A" EnableArrayElements="True" />
+          <Variable Name="bIgn_Dem" EnableArrayElements="True" />
+          <Variable Name="tF_Stat">
+            <Variable Name="tLn_Nom">
+              <Variable Name="x" EnableArrayElements="True" />
+              <Variable Name="y" EnableArrayElements="True" />
+            </Variable>
+            <Variable Name="tLn_Set">
+              <Variable Name="x" EnableArrayElements="True" />
+              <Variable Name="y" EnableArrayElements="True" />
+            </Variable>
+            <Variable Name="tWin">
+              <Variable Name="x" EnableArrayElements="True" />
+              <Variable Name="y" EnableArrayElements="True" />
+            </Variable>
+          </Variable>
+        </Variable>
+        <Variable Name="Para" AutomaticEnable="True">
+          <Variable Name="rP_Nom_Gastype" EnableArrayElements="True" />
+          <Variable Name="rP_Island_Split_IncGrad_Norm" EnableArrayElements="True" />
+          <Variable Name="rP_Island_Split_DecGrad_Norm" EnableArrayElements="True" />
+          <Variable Name="rP_Ramp_IncGrad_Norm" EnableArrayElements="True" />
+          <Variable Name="rP_Ramp_DecGrad_Norm" EnableArrayElements="True" />
+          <Variable Name="rF_Nom" EnableArrayElements="True" />
+          <Variable Name="rP_GhStep_Lim_Norm" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="VIS2MM" AutomaticEnable="True" />
+      </GlobalVariables>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

@@ -1,0 +1,12 @@
+.meta
+.svn
+*.log
+*.upd
+Binaries
+Diagnosis
+Temp/*
+!Temp/VSoftworker
+/*.set
+!LastUser.set
+*.isopen
+*.bak

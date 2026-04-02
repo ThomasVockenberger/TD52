@@ -1,0 +1,362 @@
+(********************************************************************
+* COPYRIGHT -- INNIO Company
+********************************************************************
+* File: PAG.vvm
+* Author: automatically generated 
+* Created: 10.11.2015
+********************************************************************
+* PV mapping file
+********************************************************************)
+VAR_CONFIG
+	Cyclic#6.EngineGeneral::OUT_EG.bSafetyPLC_Active AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bSafetyPLC_Active; (*V04.14.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.rVol_PurgeAir_SafeOUT AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.rVol_PurgeAir_SafeOUT; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.bSafeOUT_Purge_OK AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bSafeOUT_Purge_OK; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#4.HalIO::tGasSysErr AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tGasSysErr; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#4.HalIO::tFireSysErr AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tFireSysErr; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.bRel_HWP_Dem AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bRel_HWP_Dem; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.bSafeOUT_GT1_SafeDevOK AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bSafeOUT_GT1_SafeDevOK; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.bSafeOUT_GT2_SafeDevOK AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bSafeOUT_GT2_SafeDevOK; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.bSafeOUT_GT3_SafeDevOK AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bSafeOUT_GT3_SafeDevOK; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.bSafeOUT_GT4_SafeDevOK AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bSafeOUT_GT4_SafeDevOK; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#6.EngineGeneral::OUT_EG.bSafeOUT_DCGA_SafeDevOK AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bSafeOUT_DCGA_SafeDevOK; (*V04.25.00.00*) (*SAFETY PLC*)
+	Cyclic#5.Customized::OUT_CU.bCust_Dem_FreshOilPump AT %Q.Cyclic#6.AuxiliariesGeneral::IN_AG.bCust_Dem_FreshOilPump; (*V4.14*) (*OldName: NewPv V4.14*)
+	Cyclic#5.Customized::OUT_CU.bCust_Dem_WasteOilPump AT %Q.Cyclic#6.AuxiliariesGeneral::IN_AG.bCust_Dem_WasteOilPump; (*V4.14*) (*OldName: NewPv V4.14*)
+	Cyclic#5.Customized::OUT_CU.bCust_Dem_OilFillValve AT %Q.Cyclic#6.AuxiliariesGeneral::IN_AG.bCust_Dem_OilFillValve; (*V4.14*) (*OldName: NewPv V4.14*)
+	Cyclic#5.HalIO::tL_FreshOilTank AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_FreshOilTank; (*V4.12 Spec 2022-112*)
+	Cyclic#5.HalIO::tL_WasteOilTank AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_WasteOilTank; (*V4.12 Spec 2022-112*)
+	Cyclic#5.HalIO::tL_DayOilTank AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_DayOilTank; (*V4.12 Spec 2022-112*)
+	Cyclic#5.HalIO::tMnsOk AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tMnsOk; (*V4.12*)
+	Cyclic#5.Ventilation::OUT_VE.Pos_OutlLou2_OK AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.Pos_OutlLou2_OK;
+	Cyclic#5.Ventilation::OUT_VE.Pos_OutlLou1_OK AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.Pos_OutlLou1_OK;
+	Cyclic#5.Ventilation::OUT_VE.Pos_InlLou2_OK AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.Pos_InlLou2_OK;
+	Cyclic#5.Ventilation::OUT_VE.Pos_InlLou1_OK AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.Pos_InlLou1_OK;
+	Cyclic#5.HalIO::OUT_HA.bSimWinMOD_Active AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bSimWinMOD_Active; (*WinMOD*)
+	Cyclic#5.Opstate::OUT_OP.bStart AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bStart;
+	Cyclic#5.Opstate::OUT_OP.bStop AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bStop;
+	Cyclic#4.HalIO::tCnt_N_AirStarter AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCnt_N_AirStarter;
+	Cyclic#4.AmmBase::OUT_AB.tAB2AG AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tAB2AG;
+	Cyclic#5.ParaBase::OUT_PB.tPB2MM AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPB2MM;
+	Cyclic#5.Opstate::OUT_OP.iIdx_OMSS AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.iIdx_OMSS;
+	Cyclic#4.Ignition::OUT_IG.bIgn_Run AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bIgn_Run;
+	Cyclic#5.Exhaust::OUT_EX.bDemScavVa AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bDemScavVa;
+	Cyclic#5.Ignition::OUT_IG.b_ST_DemIgn AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.b_ST_DemIgn;
+	Cyclic#4.Opstate::OUT_OP.bBlocDelay_ManStart AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bBlocDelay_ManStart;
+	Cyclic#5.Customized::OUT_CU.bECW_PreH_Dem_Customized AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bECW_PreH_Dem_Customized;
+	Cyclic#4.Opstate::OUT_OP.bEng_Aux_Dem_TOF AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEng_Aux_Dem_TOF;
+	Cyclic#5.Exhaust::OUT_EX.bEG_BoVaOpened AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEG_BoVaOpened;
+	Cyclic#5.Exhaust::OUT_EX.bEG_ByVaOpened AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEG_ByVaOpened;
+	Cyclic#5.Ignition::OUT_IG.bEO_PrelubeDemIgn AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEO_PrelubeDemIgn;
+	Cyclic#5.Gastrain::OUT_GT.bGT_Rel AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bGT_Rel;
+	Cyclic#5.Gastrain::OUT_GT.bGT_TypSwhActive AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bGT_TypSwhActive;
+	Cyclic#5.Gastrain::OUT_GT.bGT1_Check AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bGT1_Check;
+	Cyclic#5.Gastrain::OUT_GT.bGT1_CheckOK AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bGT1_CheckOK;
+	Cyclic#5.Gastrain::OUT_GT.bGT2_Check AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bGT2_Check;
+	Cyclic#5.Gastrain::OUT_GT.bGT2_CheckOK AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bGT2_CheckOK;
+	Cyclic#4.Opstate::OUT_OP.bEng_Aux_Dem AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEng_Aux_Dem;
+	Cyclic#4.Opstate::OUT_OP.bEng_Aux_Dem_CDR AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEng_Aux_Dem_CDR;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEng_Dem;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem_Aut_SUpF AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEng_Dem_Aut_SUpF;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem_Man_SUpF AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEng_Dem_Man_SUpF;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem_EPS AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEng_Dem_EPS;
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem_Man AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEng_Dem_Man;
+	Cyclic#4.Opstate::OUT_OP.bEng_Rel AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEng_Rel;
+	Cyclic#4.Opstate::OUT_OP.bEng_RPSDem AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEng_RPSDem;
+	Cyclic#5.Opstate::OUT_OP.tEng_Run AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEng_Run;
+	Cyclic#4.Opstate::OUT_OP.bEng_SU_Man AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEng_SU_Man;
+	Cyclic#4.Opstate::OUT_OP.bEng_SU_Aut AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEng_SU_Aut;
+	Cyclic#5.Gastrain::OUT_GT.bGV_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bGV_On;
+	Cyclic#5.Synchronization::OUT_SY.bMainsReturn AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bMainsReturn;
+	Cyclic#5.HeatingCooling::OUT_HC.bMsg1019 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bMsg1019;
+	Cyclic#5.HeatingCooling::OUT_HC.bMsg2101 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bMsg2101; (*V04.13.00.00*)
+	Cyclic#5.Gastrain::OUT_GT.bMsg1027 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bMsg1027;
+	Cyclic#5.Gastrain::OUT_GT.bMsg1029 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bMsg1029;
+	Cyclic#5.EngineGeneral::OUT_EG.bMsg1031 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bMsg1031;
+	Cyclic#5.Exhaust::OUT_EX.bN2_ScavCoPrelubeOn AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bN2_ScavCoPrelubeOn;
+	Cyclic#5.Exhaust::OUT_EX.bN2_ScavCoStarterOn AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bN2_ScavCoStarterOn;
+	Cyclic#5.Synchronization::OUT_SY.bOnly_Island AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bOnly_Island;
+	Cyclic#5.Synchronization::OUT_SY.bOtherGenParallel AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bOtherGenParallel;
+	Cyclic#4.Opstate::OUT_OP.bP_Red_Active AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bP_Red_Active;
+	Cyclic#5.Exhaust::OUT_EX.bRel_ScavN2 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bRel_ScavN2;
+	Cyclic#5.Generator::OUT_GC.bRelEngOp_OilSkid AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bRelEngOp_OilSkid;
+	Cyclic#5.Generator::OUT_GC.bRelEngTurn_OilSkid AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bRelEngTurn_OilSkid;
+	Cyclic#5.Exhaust::OUT_EX.bScavFinished AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bScavFinished;
+	Cyclic#4.Ignition::OUT_IG.rN_EngAct AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.rN_EngAct;
+	Cyclic#4.Opstate::OUT_OP.rP_Act_Norm_Filt AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.rP_Act_Norm_Filt;
+	Cyclic#5.Gastrain::OUT_GT.tGV1_Open AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tGV1_Open;
+	Cyclic#5.Gastrain::OUT_GT.tGV2_Open AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tGV2_Open; (*V04.14.00.00*) (* SAFETY PLC *)
+	Cyclic#5.Gastrain::OUT_GT.tGV3_Open AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tGV3_Open; (*V04.25.00.00*) (* SAFETY PLC *)
+	Cyclic#5.Gastrain::OUT_GT.tGV4_Open AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tGV4_Open; (*V04.25.00.00*) (* SAFETY PLC *)
+	Cyclic#5.Gastrain::OUT_GT.tDCGA_GV_Open AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tDCGA_GV_Open; (*V04.25.00.00*) (* SAFETY PLC *)
+	Cyclic#2.Opstate::OUT_OP.iCnt_OpHours AT %Q.Cyclic#2.AuxiliariesGeneral::IN_AG.iCnt_OpHours;
+	Cyclic#2.Opstate::OUT_OP.rP_Nom AT %Q.Cyclic#2.AuxiliariesGeneral::IN_AG.rP_Nom;
+	Cyclic#4.AmmBase::OUT_AB.bMsg3003 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bMsg3003;
+	Cyclic#5.Gastrain::OUT_GT.bMsg3361 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bMsg3361;
+	Cyclic#5.Gastrain::OUT_GT.bMsg3360 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bMsg3360;
+	Cyclic#5.Gastrain::OUT_GT.bMsg3359 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bMsg3359;
+	Cyclic#5.Opstate::OUT_OP.tImp_OpHour AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tImp_OpHour;
+	Cyclic#4.Opstate::OUT_OP.iCnt_Starts AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.iCnt_Starts;
+	Cyclic#4.Opstate::OUT_OP.bImp_Start AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bImp_Start;
+	Cyclic#5.Visu::OUT_VI.iPassLevel AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.iPassLevel;
+	Cyclic#4.EngineController::OUT_EC.bGrC_HBErr_AUS AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bGrC_HBErr_AUS;
+	Cyclic#5.Customized::OUT_CU.rCust_SparePara AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.rCust_SparePara;
+	Cyclic#4.Gasmixer::OUT_GM.bEng_Bloc_SGM AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEng_Bloc_SGM;
+	Cyclic#5.Gastrain::OUT_GT.bGT1_SafeDevOK AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bGT1_SafeDevOK;
+	Cyclic#5.EngineGeneral::OUT_EG.bMsg1056 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bMsg1056;
+	Cyclic#5.HeatingCooling::OUT_HC.bMsg3404 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bMsg3404;
+	Cyclic#5.HeatingCooling::OUT_HC.bMsg1130 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bMsg1130;
+	Cyclic#5.HeatingCooling::OUT_HC.bMsg2117 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bMsg2117;
+	Cyclic#5.HeatingCooling::OUT_HC.bMsg9226 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bMsg9226;
+	Cyclic#5.HeatingCooling::OUT_HC.bMsg2684 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bMsg2684;
+	Cyclic#5.HeatingCooling::OUT_HC.bMsg1050 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bMsg1050;
+	Cyclic#5.HeatingCooling::OUT_HC.bCCWP_Dem AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bCCWP_Dem;
+	Cyclic#5.HeatingCooling::OUT_HC.bCC2WP_Dem AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bCC2WP_Dem;
+	Cyclic#5.HeatingCooling::OUT_HC.bEmCWP_Dem AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEmCWP_Dem;
+	Cyclic#4.HalIO::tCDP_Op AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCDP_Op;
+	Cyclic#4.HalIO::tFOP_Op AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tFOP_Op;
+	Cyclic#4.HalIO::tL_DayOilSump_Hi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_DayOilSump_Hi;
+	Cyclic#4.HalIO::tDayOilTank_Leck AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tDayOilTank_Leck;
+	Cyclic#4.HalIO::tL_DayOilTank_Hi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_DayOilTank_Hi;
+	Cyclic#4.HalIO::tAuxV_Aux_ok AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tAuxV_Aux_ok;
+	Cyclic#4.HalIO::tAuxV_ModIf_ok AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tAuxV_ModIf_ok;
+	Cyclic#4.HalIO::tGCB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tGCB_On;
+	Cyclic#4.HalIO::tMCB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tMCB_On;
+	Cyclic#4.HalIO::tScavVaClosed AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tScavVaClosed;
+	Cyclic#4.HalIO::tAuxV_Eng_ok AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tAuxV_Eng_ok;
+	Cyclic#4.HalIO::tCCWP_Op AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCCWP_Op;
+	Cyclic#4.HalIO::tECWPrehV_Opened AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tECWPrehV_Opened;
+	Cyclic#4.HalIO::tECWP_FC_Rdy AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tECWP_FC_Rdy;
+	Cyclic#4.HalIO::tECWP_Op AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tECWP_Op;
+	Cyclic#4.HalIO::tEngTurn AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEngTurn;
+	Cyclic#4.HalIO::tEngTurn2 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEngTurn2;
+	Cyclic#4.HalIO::tEO_Level_Hi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEO_Level_Hi;
+	Cyclic#4.HalIO::tEO_Level_Lo AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEO_Level_Lo;
+	Cyclic#2.HalIO::tEO_Level_Lo AT %Q.Cyclic#2.AuxiliariesGeneral::IN_AG.tEO_Level_Lo_TC2;
+	Cyclic#4.HalIO::tEO_Refill AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEO_Refill;
+	Cyclic#4.HalIO::tEOP_DemExt AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEOP_DemExt;
+	Cyclic#4.HalIO::tEOP_Op AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEOP_Op;
+	Cyclic#4.HalIO::tEOP1AC_CB_trip AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEOP1AC_CB_trip;
+	Cyclic#4.HalIO::tFireAlarm AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tFireAlarm;
+	Cyclic#4.HalIO::tFS_ECW AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tFS_ECW;
+	Cyclic#4.HalIO::tGasAlarm AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tGasAlarm;
+	Cyclic#4.HalIO::tGasPreAlarm AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tGasPreAlarm;
+	Cyclic#4.HalIO::tGF_OilSystem AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tGF_OilSystem;
+	Cyclic#4.HalIO::tGT1_SafeDevOK AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tGT1_SafeDevOK;
+	Cyclic#4.HalIO::tGT2_SafeDevOK AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tGT2_SafeDevOK;
+	Cyclic#4.HalIO::tHWP_Op AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tHWP_Op;
+	Cyclic#4.HalIO::tL_FreshOilTank_Hi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_FreshOilTank_Hi;
+	Cyclic#4.HalIO::tLeak_FreshOilPump AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tLeak_FreshOilPump;
+	Cyclic#4.HalIO::tLeak_FreshOilTank AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tLeak_FreshOilTank;
+	Cyclic#4.HalIO::tLeak_WasteOilPump AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tLeak_WasteOilPump;
+	Cyclic#4.HalIO::tLeak_WasteOilTank AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tLeak_WasteOilTank;
+	Cyclic#4.HalIO::tMainsStartDevFail AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tMainsStartDevFail;
+	Cyclic#4.HalIO::tMainsStartDevOk AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tMainsStartDevOk;
+	Cyclic#4.HalIO::tN2_GV1_Closed AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tN2_GV1_Closed;
+	Cyclic#4.HalIO::tN2_GV2_Closed AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tN2_GV2_Closed;
+	Cyclic#5.Ventilation::OUT_VE.tInAirER_Lou1Opened AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tInAirER_Lou1Opened;
+	Cyclic#5.Ventilation::OUT_VE.tInAirER_Lou2Opened AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tInAirER_Lou2Opened;
+	Cyclic#4.HalIO::tOF_FreshOilTank AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tOF_FreshOilTank;
+	Cyclic#4.HalIO::tOF_WasteOilTank AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tOF_WasteOilTank;
+	Cyclic#5.Ventilation::OUT_VE.tOutAirER_LouOpened AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tOutAirER_LouOpened;
+	Cyclic#4.HalIO::tP_Heat_Imp AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tP_Heat_Imp;
+	Cyclic#4.HalIO::tPr_CC AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_CC;
+	Cyclic#4.HalIO::tPr_EngLubOil AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_EngLubOil;
+	Cyclic#4.HalIO::tRelAux AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tRelAux;
+	Cyclic#4.HalIO::tRelAuxNoMon AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tRelAuxNoMon;
+	Cyclic#4.HalIO::tRelMainGVext AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tRelMainGVext;
+	Cyclic#4.HalIO::tT_ECW AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tT_ECW;
+	Cyclic#4.HalIO::tT_ECW_Mod_In AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tT_ECW_Mod_In;
+	Cyclic#4.HalIO::tT_ECW_PreH_Hi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tT_ECW_PreH_Hi;
+	Cyclic#4.HalIO::tT_ECW_PreH_HiHi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tT_ECW_PreH_HiHi;
+	Cyclic#4.HalIO::tTCOP_Op AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tTCOP_Op;
+	Cyclic#4.HalIO::tU_StarterBat_Lo AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tU_StarterBat_Lo;
+	Cyclic#4.HalIO::tU_Starter_engage1 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tU_Starter_engage1;
+	Cyclic#4.HalIO::tU_Starter_engage2 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tU_Starter_engage2;
+	Cyclic#4.HalIO::tU_Starter_engage3 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tU_Starter_engage3;
+	Cyclic#4.HalIO::tAuxFail AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tAuxFail;
+	Cyclic#4.HalIO::tECW_PreHV_Closed AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tECW_PreHV_Closed;
+	Cyclic#4.HalIO::tECW_PreHV_Opened AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tECW_PreHV_Opened;
+	Cyclic#4.HalIO::tL_ECW_Lo AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_ECW_Lo;
+	Cyclic#4.HalIO::tL_ECW_LoLo AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_ECW_LoLo;
+	Cyclic#4.HalIO::tEngStartFailure AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEngStartFailure;
+	Cyclic#4.HalIO::tTransformerWarning AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tTransformerWarning;
+	Cyclic#4.HalIO::tTransformerTrip AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tTransformerTrip;
+	Cyclic#4.HalIO::tCP_CBTrip AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCP_CBTrip;
+	Cyclic#4.HalIO::tIFCP_CBTrip AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tIFCP_CBTrip;
+	Cyclic#4.HalIO::tMCP_CBTrip AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tMCP_CBTrip;
+	Cyclic#4.HalIO::tSafetyLoop_Gas AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tSafetyLoop_Gas;
+	Cyclic#4.HalIO::tL_FreshOilTank_Lo AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_FreshOilTank_Lo;
+	Cyclic#4.HalIO::tL_WasteOilTank_Hi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_WasteOilTank_Hi;
+	Cyclic#4.HalIO::tAuxOverVoltProt_Ok AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tAuxOverVoltProt_Ok;
+	Cyclic#4.HalIO::tUPS_Ok AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tUPS_Ok;
+	Cyclic#4.HalIO::tSafetyLoop_Eng AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tSafetyLoop_Eng;
+	Cyclic#4.HalIO::tSafetyLoop_EmStop AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tSafetyLoop_EmStop;
+	Cyclic#4.HalIO::tSafetyLoop_HWC AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tSafetyLoop_HWC;
+	Cyclic#4.HalIO::tPr_HW_Lo AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_HW_Lo;
+	Cyclic#4.HalIO::tPr_HW_Hi1 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_HW_Hi1;
+	Cyclic#4.HalIO::tPr_HW_Hi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_HW_Hi;
+	Cyclic#4.HalIO::tT_HW_Hi1 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tT_HW_Hi1;
+	Cyclic#4.HalIO::tT_HW_Hi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tT_HW_Hi;
+	Cyclic#4.HalIO::tT_AirIFCP_Hi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tT_AirIFCP_Hi;
+	Cyclic#4.HalIO::tPr_TC_EOF_After AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_TC_EOF_After;
+	Cyclic#4.HalIO::tEOF_DiffMax AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEOF_DiffMax;
+	Cyclic#4.HalIO::tPr_TCOF_EOF_DiffMax AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_TCOF_EOF_DiffMax;
+	Cyclic#4.HalIO::tPr_EO_Gear_Min AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_EO_Gear_Min;
+	Cyclic#4.HalIO::tT_EO_Gear_Max AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tT_EO_Gear_Max;
+	Cyclic#4.HalIO::tEO_Supply_Fail AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEO_Supply_Fail;
+	Cyclic#4.HalIO::tPr_EOF_DiffMon AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_EOF_DiffMon;
+	Cyclic#4.HalIO::tPr_EOF_After AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_EOF_After;
+	Cyclic#4.HalIO::tEO_Quality AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEO_Quality;
+	Cyclic#4.HalIO::tPr_TC_EOF_Before AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_TC_EOF_Before;
+	Cyclic#4.HalIO::tEO_Level AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEO_Level;
+	Cyclic#4.HalIO::tT_EO AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tT_EO;
+	Cyclic#4.HalIO::tT_EO_Mod_Out AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tT_EO_Mod_Out;
+	Cyclic#2.HalIO::tCnt_Oil_NC150 AT %Q.Cyclic#2.AuxiliariesGeneral::IN_AG.tCnt_Oil_NC150;
+	Cyclic#2.HalIO::tCnt_Oil_DC2395 AT %Q.Cyclic#2.AuxiliariesGeneral::IN_AG.tCnt_Oil_DC2395;
+	Cyclic#4.HalIO::tT_EO_Preheating AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tT_EO_Preheating;
+	Cyclic#4.HalIO::tT_EO_Pan AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tT_EO_Pan;
+	Cyclic#4.HalIO::tT_EO_PreH_Hi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tT_EO_PreH_Hi;
+	Cyclic#4.HalIO::tT_EO_PreH_HiHi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tT_EO_PreH_HiHi;
+	Cyclic#4.HalIO::tT_EOP_After AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tT_EOP_After;
+	Cyclic#2.HalIO::tCnt_OilPulse AT %Q.Cyclic#2.AuxiliariesGeneral::IN_AG.tCnt_OilPulse;
+	Cyclic#4.HalIO::tEOP_FC_Rdy AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEOP_FC_Rdy;
+	Cyclic#4.HalIO::tL_OilSumpHi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_OilSumpHi;
+	Cyclic#4.HalIO::tL_OilSump2Hi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_OilSump2Hi;
+	Cyclic#4.HalIO::tL_OilSump3Hi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_OilSump3Hi;
+	Cyclic#4.HalIO::tCO_Alarm AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCO_Alarm;
+	Cyclic#4.HalIO::tCO_PreAlarm AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCO_PreAlarm;
+	Cyclic#4.HalIO::tAuxErrWarn AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tAuxErrWarn;
+	Cyclic#4.HalIO::tActFiltAlarm AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tActFiltAlarm;
+	Cyclic#4.HalIO::tActFiltWarn AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tActFiltWarn;
+	Cyclic#4.HalIO::tL_InMa_NotHi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_InMa_NotHi;
+	Cyclic#4.HalIO::tL_InMa_Hi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_InMa_Hi;
+	Cyclic#4.HalIO::tCustAnaIn AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCustAnaIn;
+	Cyclic#4.HalIO::tCustDigIn AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCustDigIn;
+	Cyclic#4.HalIO::tTCOP_Grid AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tTCOP_Grid;
+	Cyclic#4.HalIO::tPr_Oil_LPTC_In_A AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_Oil_LPTC_In_A;
+	Cyclic#4.HalIO::tPr_Oil_LPTC_In_B AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_Oil_LPTC_In_B;
+	Cyclic#4.HalIO::tBbBlower_FC_Rdy AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tBbBlower_FC_Rdy;
+	Cyclic#4.HalIO::tPr_f_BbFilt AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_f_BbFilt;
+	Cyclic#4.HalIO::tPr_f_BbFilt_A AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_f_BbFilt_A;
+	Cyclic#4.HalIO::tPr_f_BbFilt_B AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_f_BbFilt_B;
+	Cyclic#4.HalIO::tPr_a_BbFilt AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_a_BbFilt;
+	Cyclic#4.HalIO::tPr_a_BbFilt_A AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_a_BbFilt_A;
+	Cyclic#4.HalIO::tPr_a_BbFilt_B AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_a_BbFilt_B;
+	Cyclic#4.HalIO::tCV_Eng_Low AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCV_Eng_Low;
+	Cyclic#4.HalIO::tCV_TCA_Low AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCV_TCA_Low;
+	Cyclic#4.HalIO::tCV_MCP_Low AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCV_MCP_Low;
+	Cyclic#4.HalIO::tPr_AirStarter_Tank AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_AirStarter_Tank;
+	Cyclic#4.HalIO::tTCOP_CB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tTCOP_CB_On;
+	Cyclic#4.HalIO::tPr_AirStarter_Supply AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_AirStarter_Supply;
+	Cyclic#4.HalIO::tTCOP_UPS_CB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tTCOP_UPS_CB_On;
+	Cyclic#4.HalIO::tECWP_PreH_CB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tECWP_PreH_CB_On;
+	Cyclic#4.HalIO::tChUnit1_CB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tChUnit1_CB_On;
+	Cyclic#4.HalIO::tChUnit2_CB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tChUnit2_CB_On;
+	Cyclic#4.HalIO::tChUnit3_CB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tChUnit3_CB_On;
+	Cyclic#4.HalIO::tChUnit4_CB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tChUnit4_CB_On;
+	Cyclic#4.HalIO::tENGIA_CB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tENGIA_CB_On;
+	Cyclic#4.HalIO::tECWP_Service_CB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tECWP_Service_CB_On;
+	Cyclic#4.HalIO::tPS400V_ENGIA_CB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPS400V_ENGIA_CB_On;
+	Cyclic#4.HalIO::tUPS_CB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tUPS_CB_On;
+	Cyclic#4.HalIO::tENGIA_UPS_CB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tENGIA_UPS_CB_On;
+	Cyclic#4.HalIO::tECWP_Service_COn AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tECWP_Service_COn;
+	Cyclic#4.HalIO::tECWV_Fail AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tECWV_Fail;
+	Cyclic#4.HalIO::tPS_EI_CB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPS_EI_CB_On;
+	Cyclic#4.HalIO::tSTT_CB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tSTT_CB_On;
+	Cyclic#4.HalIO::tEG_ByVaOpened AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEG_ByVaOpened;
+	Cyclic#4.HalIO::tEG_ByVaClosed AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEG_ByVaClosed;
+	Cyclic#4.HalIO::tEG_BoVaOpened AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEG_BoVaOpened;
+	Cyclic#4.HalIO::tEG_BoVaClosed AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEG_BoVaClosed;
+	Cyclic#4.HalIO::tCV_GENI_Ok AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCV_GENI_Ok;
+	Cyclic#4.HalIO::tCV_ENGIB_Ok AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCV_ENGIB_Ok;
+	Cyclic#4.HalIO::tCV_TCMI_Ok AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCV_TCMI_Ok;
+	Cyclic#4.HalIO::tCV_TCUS_Ok AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCV_TCUS_Ok;
+	Cyclic#4.HalIO::tCV_JWMI_Ok AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCV_JWMI_Ok;
+	Cyclic#4.HalIO::tCV_OILMI_Ok AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCV_OILMI_Ok;
+	Cyclic#4.HalIO::tCV_M_Ok AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCV_M_Ok;
+	Cyclic#4.HalIO::tCV_A_Ok AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCV_A_Ok;
+	Cyclic#4.HalIO::tCV_AUX_Ok AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCV_AUX_Ok;
+	Cyclic#4.HalIO::tPr_EOaP AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_EOaP;
+	Cyclic#4.HalIO::tPS_EOaP_HiHi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPS_EOaP_HiHi;
+	Cyclic#4.HalIO::tPr_OFUbFilt AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_OFUbFilt;
+	Cyclic#4.HalIO::tPr_OFUaFilt AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_OFUaFilt;
+	Cyclic#4.HalIO::tPr_OFUbCentrifuge AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_OFUbCentrifuge;
+	Cyclic#4.HalIO::tOFUP_Filter_CB AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tOFUP_Filter_CB;
+	Cyclic#4.HalIO::tOFUP_Centrifuge_CB AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tOFUP_Centrifuge_CB;
+	Cyclic#4.HalIO::tU_StarterBat AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tU_StarterBat;
+	Cyclic#4.HalIO::tEOP_BWS AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEOP_BWS;
+	Cyclic#4.HalIO::tEOP_BWS2 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEOP_BWS2;
+	Cyclic#4.HalIO::tCC2WP_Op AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCC2WP_Op;
+	Cyclic#4.HalIO::tT_HW_Su_PreH_ECW AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tT_HW_Su_PreH_ECW;
+	Cyclic#4.HalIO::tHWP1_Op AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tHWP1_Op;
+	Cyclic#4.HalIO::tHWP2_Op AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tHWP2_Op;
+	Cyclic#4.HalIO::tCCWP1_Op AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCCWP1_Op;
+	Cyclic#4.HalIO::tCCWP2_Op AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCCWP2_Op;
+	Cyclic#4.HalIO::tCC2WP1_Op AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCC2WP1_Op;
+	Cyclic#4.HalIO::tCC2WP2_Op AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCC2WP2_Op;
+	Cyclic#4.HalIO::tEmCWP_Op AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEmCWP_Op;
+	Cyclic#4.HalIO::tEmCWP1_Op AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEmCWP1_Op;
+	Cyclic#4.HalIO::tEmCWP2_Op AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tEmCWP2_Op;
+	Cyclic#4.HalIO::tBoilerFailure AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tBoilerFailure;
+	Cyclic#4.HalIO::tSeismicAlarm AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tSeismicAlarm;
+	Cyclic#4.EngineController::OUT_EC.bGridCode_ON AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bGridCode_ON;
+	Cyclic#4.AmmBase::OUT_AB.bServiceMode AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bServiceMode;
+	Cyclic#4.HalIO::tPr_TCO AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_TCO;
+	Cyclic#4.EngineController::OUT_EC.bPermPreLube_Dem AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bPermPreLube_Dem;
+	Cyclic#4.EngineController::OUT_EC.bFS_Act AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bFS_Act;
+	Cyclic#4.Opstate::OUT_OP.bEng_MonOff AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEng_MonOff;
+	Cyclic#5.Customized::OUT_CU.rCustomizedAG AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.rCustomizedAG; (*New customizable interface V4.5 - BETA PHASE, use only in coordination with TPSS	*)
+	Cyclic#2.Opstate::OUT_OP.rP_Act_Norm_Filt AT %Q.Cyclic#2.AuxiliariesGeneral::IN_AG.rP_Act_Norm_Filt_TC2;
+	Cyclic#4.HalIO::tInAirER_Lou1Closed AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tInAirER_Lou1Closed;
+	Cyclic#4.HalIO::tInAirER_Lou2Closed AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tInAirER_Lou2Closed;
+	Cyclic#4.HalIO::tOutAirER_LouClosed AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tOutAirER_LouClosed;
+	Cyclic#4.HalIO::tFireProtFlap1_InlAir_Closed AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tFireProtFlap1_InlAir_Closed;
+	Cyclic#4.HalIO::tFireProtFlap2_InlAir_Closed AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tFireProtFlap2_InlAir_Closed;
+	Cyclic#4.HalIO::tFireProtFlap1_InlAir_Opened AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tFireProtFlap1_InlAir_Opened;
+	Cyclic#4.HalIO::tFireProtFlap2_InlAir_Opened AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tFireProtFlap2_InlAir_Opened;
+	Cyclic#4.HalIO::tFireProtFlap1_OutlAir_Closed AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tFireProtFlap1_OutlAir_Closed;
+	Cyclic#4.HalIO::tFireProtFlap2_OutlAir_Closed AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tFireProtFlap2_OutlAir_Closed;
+	Cyclic#4.HalIO::tFireProtFlap1_OutlAir_Opened AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tFireProtFlap1_OutlAir_Opened;
+	Cyclic#4.HalIO::tFireProtFlap2_OutlAir_Opened AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tFireProtFlap2_OutlAir_Opened;
+	Cyclic#4.HalIO::tPr_AirST_Engage AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_AirST_Engage;
+	Cyclic#4.HalIO::tPr_ECW AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_ECW;
+	Cyclic#4.HalIO::tPr_ECWaP1 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_ECWaP1;
+	Cyclic#4.HalIO::tPr_ECWaP2 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPr_ECWaP2;
+	Cyclic#4.HalIO::tT_HW_EGHE_Hi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tT_HW_EGHE_Hi;
+	Cyclic#4.HalIO::tT_HW_EGCD_Hi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tT_HW_EGCD_Hi;
+	Cyclic#4.HalIO::tCust_HW_Ext_Trip AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCust_HW_Ext_Trip;
+	Cyclic#4.Opstate::OUT_OP.bEng_Bloc AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEng_Bloc;
+	Cyclic#4.HalIO::tECWP_CB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tECWP_CB_On;
+	Cyclic#4.HalIO::tL_FreshOilTank_LoLo AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_FreshOilTank_LoLo;
+	Cyclic#4.HalIO::tL_DayOilTank_Lo AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_DayOilTank_Lo;
+	Cyclic#4.HalIO::tL_DayOilTank_LoLo AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_DayOilTank_LoLo;
+	Cyclic#4.HalIO::tOF_DayOilTank AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tOF_DayOilTank;
+	Cyclic#4.HalIO::tL_WasteOilDayTank_Hi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tL_WasteOilDayTank_Hi;
+	Cyclic#4.HalIO::tOF_WasteOilDayTank AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tOF_WasteOilDayTank;
+	Cyclic#4.HalIO::tPS_FreshOilPump_Hi AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tPS_FreshOilPump_Hi;
+	Cyclic#4.HalIO::tMCP_AuxPS_CB_Trip AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tMCP_AuxPS_CB_Trip;
+	Cyclic#4.HalIO::tMCP_AuxPS_CB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tMCP_AuxPS_CB_On;
+	Cyclic#4.HalIO::tMCP_AuxPS_GndFault AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tMCP_AuxPS_GndFault;
+	Cyclic#4.HalIO::tMCP_FC_GndFault AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tMCP_FC_GndFault;
+	Cyclic#4.HalIO::tMIP_FC_GndFault AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tMIP_FC_GndFault;
+	Cyclic#4.HalIO::tAuxCP_FC_GndFault AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tAuxCP_FC_GndFault;
+	Cyclic#4.HalIO::tAuxCP_AuxPS_GndFault AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tAuxCP_AuxPS_GndFault;
+	Cyclic#4.HalIO::tAuxCP_AuxPS_CB_Trip AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tAuxCP_AuxPS_CB_Trip;
+	Cyclic#4.HalIO::tAuxCP_AuxPS_CB_On AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tAuxCP_AuxPS_CB_On;
+	Cyclic#4.Opstate::OUT_OP.rP_Set_Norm AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.rP_Set_Norm;
+	Cyclic#4.HalIO::tU_BufferBat1 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tU_BufferBat1;
+	Cyclic#4.HalIO::tU_BufferBat2 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tU_BufferBat2;
+	Cyclic#4.HalIO::tBatChargeDev_Ok AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tBatChargeDev_Ok;
+	Cyclic#4.HalIO::tLeak_OilExtensionTank1 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tLeak_OilExtensionTank1;
+	Cyclic#4.HalIO::tLeak_OilExtensionTank2 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tLeak_OilExtensionTank2;
+	Cyclic#4.HalIO::tLeak_OilExtensionTank3 AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tLeak_OilExtensionTank3;
+	Cyclic#4.HalIO::tU_CtrlBat AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tU_CtrlBat;
+	Cyclic#4.HalIO::tCtrlBat_ChargeDev_Ok AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.tCtrlBat_ChargeDev_Ok;
+	Cyclic#5.Customized::OUT_CU.sLocIdent_CtrlBatMon AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.sLocIdent_CtrlBatMon;
+	Cyclic#5.Customized::OUT_CU.bAuxV_ok_CtrlBatMon AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bAuxV_ok_CtrlBatMon;
+	Cyclic#4.HalIO::OUT_HA.iCAN_OQS_OC_us_ident AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.iCAN_OQS_OC_us_ident;
+	Cyclic#4.EngineController::OUT_EC.bLR_ActSat_CBV AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bLR_ActSat_CBV;
+	Cyclic#4.Ignition::OUT_IG.bIgn_Run_CAN AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bIgn_Run_CAN; (*V04.13.00.00*)
+	Cyclic#4.HalIO::OUT_HA.bTOF_HwBypassDigitalTwin AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bTOF_HwBypassDigitalTwin; (*V04.13.00.00*)
+	Cyclic#4.Opstate::OUT_OP.bEng_Dem_Aut AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bEng_Dem_Aut; (*V04.14.00.00*)
+	Cyclic#5.Ventilation::OUT_VE.bInLouRelVE AT %Q.Cyclic#5.AuxiliariesGeneral::IN_AG.bInLouRelVE; (*V04.14.00.00*)
+END_VAR

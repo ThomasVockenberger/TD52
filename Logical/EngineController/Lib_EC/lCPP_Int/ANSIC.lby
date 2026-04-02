@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.1.12.57 SP?>
+<Library Type="AnsiC" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>lCPP_Int.fun</File>
+    <File>lCPP_Int.typ</File>
+    <File>lCPP_Int.var</File>
+    <File>CPP_Int.h</File>
+    <File>CPP_Int_private.h</File>
+    <File>CPP_Int_types.h</File>
+    <File>rtwtypes.h</File>
+    <File>CPP_Int.c</File>
+    <File>fCPP_Int.c</File>
+    <File>lib_properties.txt</File>
+  </Files>
+</Library>

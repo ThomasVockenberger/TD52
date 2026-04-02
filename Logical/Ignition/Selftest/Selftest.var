@@ -1,0 +1,11 @@
+VAR
+	xTON_SelftestPrelubCancel : TON;
+	xTON_SelftestStarterWait : TON;
+	xTON_SelftestStarter : TON;
+	xTON_SelftestWait : TON;
+	xTON_SelftestText : TON;
+	bIgn_SelfTestBack : BOOL; (* switch ignition system to selftest, feedback ON signal from ignition systems*)
+	xTON_SelftestBack : TON;
+	tiSelftestBack : TIME := T#2s;
+	xTON_SelfTest_Duration : TON;
+END_VAR

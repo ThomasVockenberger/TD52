@@ -1,0 +1,49 @@
+(********************************************************************
+ * COPYRIGHT -- INNIO Company
+ ********************************************************************
+ * Program: PermINIT
+ * File: PermINIT.var
+ * Author: 502293141
+ * Created: February 24, 2015
+ ********************************************************************
+ * Local variables of program PermINIT
+ ********************************************************************)
+VAR
+	bSKIP_DataLoad : BOOL;
+	bLAMBDA_DataLoad : BOOL;
+	bGEN2_DataLoad : BOOL;
+	bPSICAL_DataLoad : BOOL;
+	bENGCTR_DataLoad : BOOL;
+	TON_FGDRPS_MAP : TON;
+	bSafety_DataLoad : BOOL;
+	bMFB50_Dataload : BOOL;
+	bOpt_DataLoad : BOOL;
+	bAmmSeqClkP : BOOL;
+	TON_SecondTick : TON;
+	bMapLoaded : ARRAY[0..24] OF BOOL;
+	i : INT;
+	bMapLoad : BOOL;
+	xTON_Reset : TON := (0);
+	bPUSL_DataLoad : BOOL := 0;
+	bFilt_DataLoad : BOOL := 0;
+	bWG_DataLoad : BOOL;
+	bEG_DataLoad : BOOL;
+	bAutoLoad_Ena : BOOL;
+	TON_AutoLoad : TON;
+	bPermFailedNew : ARRAY[0..24] OF BOOL;
+	bFS_DataLoad : BOOL;
+	bALL_Dataload : BOOL := 0;
+	bIG_DataLoad : BOOL := 0;
+	bAutoLoad_Ena_TP : BOOL := 0;
+	TP_bAutoLoad : TP := (0);
+	bSync_DataLoad : BOOL := 0;
+	TON_ParaSetupOk_10s : TON;
+	iNimmCBV_old : INT;
+	bLX2_DataLoad : BOOL;
+	bTrStRed_DataLoad : BOOL;
+	bVE_CYS	:	BOOL;
+	rLCRCurve_DK_min_Lup_y5 : REAL := 0.65; (*containment GEN2 TVmin GridP*)
+	rLCRCurve_DK_min_Lup_y6 : REAL := 0.8; (*containment GEN2 TVmin GridP*)
+	bGen2_LQR_DataLoad : BOOL; 
+	bParaLoaded_Gen2_LQR_T9 : BOOL; (* Parameter were loaded for Gen2 LQR T9 *) 
+END_VAR

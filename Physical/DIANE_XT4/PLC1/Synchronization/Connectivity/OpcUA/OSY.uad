@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="7" ArVersion="H4.90">
+  <Aliases>
+    <ACLAliases>
+      <ACL Id="1">
+        <ACE RoleName="Administrators" Access="0x017F" />
+      </ACL>
+    </ACLAliases>
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView AclId="1">
+    <Module Name="Synchronization">
+      <GlobalVariables>
+        <Variable Name="MM2VIS" AutomaticEnable="True">
+          <Variable Name="tGCB" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="Para" AutomaticEnable="True">
+          <Variable Name="rU_Gen_Nom" EnableArrayElements="True" />
+          <Variable Name="rI_GenNom" EnableArrayElements="True" />
+          <Variable Name="rU_BusNom" EnableArrayElements="True" />
+          <Variable Name="bMMDSynch_Act" EnableArrayElements="True" />
+          <Variable Name="rTi_SynchImpMin" EnableArrayElements="True" />
+          <Variable Name="rTi_SynchSwitchDel" EnableArrayElements="True" />
+        </Variable>
+        <Variable Name="VIS2MM" AutomaticEnable="True">
+          <Variable Name="tGCB" EnableArrayElements="True" />
+        </Variable>
+      </GlobalVariables>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

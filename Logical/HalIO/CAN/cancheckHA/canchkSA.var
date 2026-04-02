@@ -1,0 +1,34 @@
+VAR
+	xTOF_CANReset : TOF;
+	xTON_SAFIPhase : ARRAY[0..12] OF TON;
+	xTON_TecJetSlowPhase : TON;
+	xTON_TecJetFastPhase : ARRAY[0..4] OF TON;
+	xTON_KLS98Phase : ARRAY[0..24] OF TON;
+	xTON_IC900Phase : TON;
+	xTON_MonicPhase : TON;
+	bSAFIPhaseDetected : ARRAY[0..12] OF BOOL;
+	usSAFIComErrCnt_Old : ARRAY[0..12] OF UINT; (* counter for SAFI comm. problem *)
+	bTecJetSlowPhaseDetected : BOOL;
+	bTecJetFastPhaseDetected : ARRAY[0..4] OF BOOL;
+	usTecJetCommErrAvgMaxCnt : UINT;
+	usTecErrCnt_Old : ARRAY[0..4] OF UINT;
+	ucTecJetCommErrCount_Old : USINT; (* counter for KLS98 comm. problem *)
+	usTecJetCommErrSlowAvgCnt : USINT;
+	usTecJetCommErrFastAvgCnt : ARRAY[0..4] OF UINT;
+	bKLS98PhaseDetected : ARRAY[0..24] OF BOOL;
+	ucKLS98CommErrCountDelayed : ARRAY[0..24] OF USINT;
+	usKLS98CommErrAvgCnt : ARRAY[0..24] OF UINT;
+	usKLS98CommErrAvgMaxCnt : UINT;
+	ucKLS98CommErrCount_Old : ARRAY[0..24] OF USINT;
+	ucKLS98EventOld : ARRAY[0..24] OF USINT;
+	bMonicPhaseDetected : BOOL;
+	usMonicCommErrAvgCnt : UINT;
+	ucMonicCommErrCount_Old : USINT; (* counter for Monic comm. problem *)
+	bIC900PhaseDetected : BOOL;
+	usIC900CommErrAvgCnt : UINT;
+	ucIC900CommErrCount_Old : USINT; (* counter for KLS98 comm. problem *)
+	ucCanErrLevSlowHi : USINT;
+	ucCanErrLevSlowLo : USINT;
+	ucCanErrLevFastHi : USINT;
+	ucCanErrLevFastLo : USINT;
+END_VAR
