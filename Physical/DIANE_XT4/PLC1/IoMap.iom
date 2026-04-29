@@ -1677,9 +1677,6 @@ VAR_CONFIG
 	Cyclic#1.HalIO::N_TCLP_B AT %IW."SimDevice".P90_04_AI3; (* Messung: Drehzahlsensor Abgasturbolader Niederdruck B *)
 	Cyclic#1.HalIO::N_TCHP_A AT %IW."SimDevice".P90_05_AI0; (* Messung: Drehzahlsensor Abgasturbolader Hochdruck A *)
 	Cyclic#1.HalIO::N_TCHP_B AT %IW."SimDevice".P90_05_AI1; (* Messung: Drehzahlsensor Abgasturbolader Hochdruck B *)
-	Cyclic#1.HalIO::CustAnaIn[8] AT %IW."SimDevice".P90_05_AI2; (* Messung: Druck Abgasklappe Eintritt *)
-	Cyclic#1.HalIO::CustAnaIn[9] AT %IW."SimDevice".P90_05_AI3; (* Messung: Druck Abgasklappe Austritt *)
-	Cyclic#1.HalIO::CustAnaIn[31] AT %IW."SimDevice".P90_06_AI0; (* Messung: Heizwasserdruck Vorlauf  *)
 	Cyclic#1.HalIO::Pr_EOF_DiffMon AT %IW."SimDevice".P90_06_AI1; (* Messung: Motoröldruck - vor Motorölfilter *)
 	Cyclic#1.HalIO::Pr_TC_EOF_After AT %IW."SimDevice".P90_06_AI2; (* Messung: Öldruck Abgasturbolader [Eintritt] *)
 	Cyclic#1.HalIO::Pr_ECWaP2 AT %IW."SimDevice".P90_06_AI3; (* Messung: Kühlwasserdruck Austritt Motorkühlwasserpumpe 2 *)
@@ -1699,26 +1696,16 @@ VAR_CONFIG
 	Cyclic#1.HalIO::Pr_Ch_P2HP AT %IW."SimDevice".P90_10_AI1; (* Messung: Druck nach Abgasturbolader [vor Gemischkühler] *)
 	Cyclic#1.HalIO::Pr_f_BbFilt AT %IW."SimDevice".P90_10_AI2; (* Messung: Druck vor Blow-by-Filter *)
 	Cyclic#1.HalIO::Pr_a_BbFilt AT %IW."SimDevice".P90_10_AI3; (* Messung: Druck nach Blow-by-Filter *)
-	Cyclic#1.HalIO::CustAnaIn[15] AT %IW."SimDevice".P90_11_AI0; (* Messung: Öldruck Getriebe *)
 	Cyclic#1.HalIO::Pr_CC AT %IW."SimDevice".P90_11_AI1; (* Messung: Kurbelgehäusedruck *)
 	Cyclic#1.HalIO::U_Gen_Exc AT %IW."SimDevice".P90_11_AI2; (* Messung: Generator Erregerspannung *)
 	Cyclic#1.HalIO::T_DCGA AT %IW."SimDevice".P90_12_RTD0; (* Messung - Gastemperatur {{DCGA}} *)
-	Cyclic#1.HalIO::CustAnaIn[10] AT %IW."SimDevice".P90_12_RTD1; (* Messung: Temperatur Abgasklappe Austritt *)
 	Cyclic#1.HalIO::T_EO AT %IW."SimDevice".P90_12_RTD2; (* Messung: Öltemperatur *)
 	Cyclic#1.HalIO::T_ECWbEng AT %IW."SimDevice".P90_12_RTD3; (* Messung: Temperatur Motorkühlwasser Eintritt *)
 	Cyclic#1.HalIO::T_Ch_T1LP AT %IW."SimDevice".P90_13_RTD0; (* Messung: Ladekühlkreis Temperatur Turbolader Niederdruck - Eintritt [Ansauglufttemperatur] *)
 	Cyclic#1.HalIO::T_HW_ReBeEng AT %IW."SimDevice".P90_13_RTD1; (* Messung: Rücklauftemperatur [vor Motor] *)
-	Cyclic#1.HalIO::CustAnaIn[12] AT %IW."SimDevice".P90_13_RTD2; (* Messung: Temperatur nach HDHT Gemischkuehler *)
-	Cyclic#1.HalIO::CustAnaIn[13] AT %IW."SimDevice".P90_13_RTD3; (* Messung: Temperatur nach NDHT Gemischkuehler *)
-	Cyclic#1.HalIO::CustAnaIn[14] AT %IW."SimDevice".P90_14_RTD0; (* Messung: Temperatur nach Motorkühlwasser Wämetauscher *)
-	Cyclic#1.HalIO::CustAnaIn[20] AT %IW."SimDevice".P90_14_RTD1; (* Messung: Temperatur vor Motorkühlwasser Wämetauscher *)
 	Cyclic#1.HalIO::T_HW_Re_LT AT %IW."SimDevice".P90_14_RTD3; (* Messung: Rücklauftemperatur [Niedertemperaturkreis] *)
-	Cyclic#1.HalIO::CustAnaIn[17] AT %IW."SimDevice".P90_15_RTD0; (* Messung: Vorlauftemperatur [Niedertemperaturkreis] *)
-	Cyclic#1.HalIO::CustAnaIn[18] AT %IW."SimDevice".P90_15_RTD1; (* Messung: Temperatur nach HDNT / vor NDNT  *)
 	Cyclic#1.HalIO::T_Ch_T2s AT %IW."SimDevice".P90_15_RTD2; (* Messung: Ladetemperatur *)
-	Cyclic#1.HalIO::CustAnaIn[19] AT %IW."SimDevice".P90_15_RTD3; (* Messung. Ladetemperatur nach Niederdruck Turbolader *)
 	Cyclic#1.HalIO::T_Ch_T1HP_B AT %IW."SimDevice".P90_16_RTD0; (* Messung. Ladetemperatur Turbolader Eintritt - Hochdruck {{B}} *)
-	Cyclic#1.HalIO::CustAnaIn[16] AT %IW."SimDevice".P90_16_RTD1; (* Messung: Öltemperatur Getriebe *)
 	Cyclic#1.HalIO::T_Gen_Wind_Act_L1 AT %IW."SimDevice".P90_16_RTD2; (* Messung: Wicklungstemperatur Phase U *)
 	Cyclic#1.HalIO::T_Gen_Wind_Act_L2 AT %IW."SimDevice".P90_16_RTD3; (* Messung: Wicklungstemperatur Phase V *)
 	Cyclic#1.HalIO::T_Gen_Wind_Act_L3 AT %IW."SimDevice".P90_17_RTD0; (* Messung: Wicklungstemperatur Phase W *)
@@ -1747,7 +1734,6 @@ VAR_CONFIG
 	Cyclic#1.HalIO::Pr_DCGA_max AT %IX."SimDevice".P90_21_DI9; (* Status: Gasdruck max DCGA Gasstrecke *)
 	Cyclic#1.HalIO::Actuator_Ok_WG_A AT %IX."SimDevice".P90_21_DI10; (* Störung: Wastegate A *)
 	Cyclic#1.HalIO::Actuator_Ok_WG_B AT %IX."SimDevice".P90_21_DI11; (* Störung: Wastegate B *)
-	Cyclic#1.HalIO::CustDigIn[8] AT %IX."SimDevice".P90_22_DI0; (* Temperatur Abgas Lüfter max. *)
 	Cyclic#1.HalIO::Pr_TCOF_EOF_DiffMax AT %IX."SimDevice".P90_22_DI1; (* Messung: Öldifferenzdruck max. Turbolader *)
 	Cyclic#1.HalIO::EO_Level_Lo AT %IX."SimDevice".P90_22_DI2; (* Messung: Ölstand min Abstellung *)
 	Cyclic#1.HalIO::EO_Refill AT %IX."SimDevice".P90_22_DI3; (* Status. Öl nachfüllen *)
@@ -1977,4 +1963,85 @@ VAR_CONFIG
 	Cyclic#1.HalIO::Ign_Dem AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput07; (*Anforderung Zündung*)
 	Cyclic#1.HalIO::ECWP1Dem AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput09; (*Anforderung: Motorkühlwasserpumpe 1*)
 	Cyclic#1.HalIO::CustAnaIn[2] AT %IW."UR20-4AI-UI-12_P90_03".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Druck nach Filter*)
+	Cyclic#1.HalIO::StationIO[160].ModuleOK[0] AT %IX."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleOk;
+	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S01[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S01;
+	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S02[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S02;
+	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S03[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S03;
+	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S04[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S04;
+	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S05[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S05;
+	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S06[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S06;
+	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S07[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S07;
+	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S08[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S08;
+	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S09[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S09;
+	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S0A[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S0A;
+	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S0B[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S0B;
+	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S0C[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S0C;
+	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S0D[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S0D;
+	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S0E[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S0E;
+	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S0F[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S0F;
+	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S10[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S10;
+	Cyclic#1.HalIO::CustAnaIn[40] AT %IW."UR20-4AI-UI-12_PA0_02".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Motoröldruck nach Wärmetauscher (M.03-PI-801)*)
+	Cyclic#1.HalIO::CustAnaIn[41] AT %IW."UR20-4AI-UI-12_PA0_02".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Motoröldruck nach Regelventil (M.03-PI-802)*)
+	Cyclic#1.HalIO::CustAnaIn[42] AT %IW."UR20-4AI-UI-12_PA0_02".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Motorkühlwasserdruck vor Wärmetauscher (M.04-PI-803)*)
+	Cyclic#1.HalIO::CustAnaIn[43] AT %IW."UR20-4AI-UI-12_PA0_02".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Motorkühlwasserdruck nach Wärmetauscher (M.04-PI-804)*)
+	Cyclic#1.HalIO::CustAnaIn[44] AT %IW."UR20-4AI-UI-12_PA0_03".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Motorkühlwasserdruck vor Regelventil (M.04-PI-806)*)
+	Cyclic#1.HalIO::CustAnaIn[45] AT %IW."UR20-4AI-UI-12_PA0_03".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Kühlwasserdruck Eintritt Motorkühlwasserpumpe (M.04-PI-810)*)
+	Cyclic#1.HalIO::CustAnaIn[46] AT %IW."UR20-4AI-UI-12_PA0_03".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Eingangsdruck Hochtemperaturkreis 1 (M.06-PI-801)*)
+	Cyclic#1.HalIO::CustAnaIn[47] AT %IW."UR20-4AI-UI-12_PA0_03".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Ausgangsdruck Hochtemperaturkreis 1 (M.06-PI-802)*)
+	Cyclic#1.HalIO::CustAnaIn[48] AT %IW."UR20-4AI-UI-12_PA0_04".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Eingangsdruck Hochtemperaturkreis 2 (M.06-PI-803)*)
+	Cyclic#1.HalIO::CustAnaIn[49] AT %IW."UR20-4AI-UI-12_PA0_04".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Ausgangsdruck Hochtemperaturkreis 2 (M.06-PI-804)*)
+	Cyclic#1.HalIO::CustAnaIn[50] AT %IW."UR20-4AI-UI-12_PA0_04".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Druck Kühlwasserkreis 2-Kreis System Vorlauf (M.06-PI-814)*)
+	Cyclic#1.HalIO::CustAnaIn[51] AT %IW."UR20-4AI-UI-12_PA0_04".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Ausgangsdruck Kühlwasserkreis (M.06-PI-812)*)
+	Cyclic#1.HalIO::CustAnaIn[52] AT %IW."UR20-4AI-UI-12_PA0_05".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Eingangsdruck Kühlwasserkreis (M.06-PI-811)*)
+	Cyclic#1.HalIO::CustAnaIn[53] AT %IW."UR20-4AI-UI-12_PA0_05".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Druck Kühlwasserkreis 2-Kreis System Rücklauf (M.06-PI-001)*)
+	Cyclic#1.HalIO::CustAnaIn[54] AT %IW."UR20-4AI-UI-12_PA0_05".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Druck Kühlwasserkreis Rücklauf (M.06-PI-821)*)
+	Cyclic#1.HalIO::CustAnaIn[55] AT %IW."UR20-4AI-UI-12_PA0_05".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Druck Kühlwasserkreis Vorlauf (M.06-PI-822)*)
+	Cyclic#1.HalIO::CustAnaIn[56] AT %IW."UR20-4AI-UI-12_PA0_06".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Druck Rücklauf HT (M.06-PI-002)*)
+	Cyclic#1.HalIO::CustAnaIn[57] AT %IW."UR20-4AI-UI-12_PA0_06".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Druck Vorlauf HT (M.06-PI-003)*)
+	Cyclic#1.HalIO::CustAnaIn[58] AT %IW."UR20-4AI-UI-12_PA0_06".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Eingangsdruck HP LT Niedertemperaturkreis 1 (M.07-PI-801)*)
+	Cyclic#1.HalIO::CustAnaIn[59] AT %IW."UR20-4AI-UI-12_PA0_06".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Eingangsdruck LP LT Niedertemperaturkreis 2 (M.07-PI-802)*)
+	Cyclic#1.HalIO::CustAnaIn[60] AT %IW."UR20-4AI-UI-12_PA0_07".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Ausgangsdruck HP LT Niedertemperaturkreis 1 (M.07-PI-803)*)
+	Cyclic#1.HalIO::CustAnaIn[61] AT %IW."UR20-4AI-UI-12_PA0_07".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Ausgangsdruck LP LT Niedertemperaturkreis 2 (M.07-PI-804)*)
+	Cyclic#1.HalIO::CustAnaIn[62] AT %IW."UR20-4AI-UI-12_PA0_07".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Durchfluss HT Kreis 1 (M.06-FI-801)*)
+	Cyclic#1.HalIO::CustAnaIn[63] AT %IW."UR20-4AI-UI-12_PA0_07".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Durchfluss HT Kreis 2 (M.06-FI-802)*)
+	Cyclic#1.HalIO::CustAnaIn[64] AT %IW."UR20-4AI-UI-12_PA0_08".InputImage_I4600_S00_UID_AnalogInput01;
+	Cyclic#1.HalIO::CustAnaIn[65] AT %IW."UR20-4AI-UI-12_PA0_08".InputImage_I4600_S00_UID_AnalogInput02;
+	Cyclic#1.HalIO::CustAnaIn[66] AT %IW."UR20-4AI-UI-12_PA0_08".InputImage_I4600_S00_UID_AnalogInput03;
+	Cyclic#1.HalIO::CustAnaIn[67] AT %IW."UR20-4AI-UI-12_PA0_08".InputImage_I4600_S00_UID_AnalogInput04;
+	Cyclic#1.HalIO::CustAnaIn[68] AT %IW."UR20-4AI-UI-12_PA0_09".InputImage_I4600_S00_UID_AnalogInput01;
+	Cyclic#1.HalIO::CustAnaIn[69] AT %IW."UR20-4AI-UI-12_PA0_09".InputImage_I4600_S00_UID_AnalogInput02;
+	Cyclic#1.HalIO::CustAnaIn[70] AT %IW."UR20-4AI-UI-12_PA0_09".InputImage_I4600_S00_UID_AnalogInput03;
+	Cyclic#1.HalIO::CustAnaIn[71] AT %IW."UR20-4AI-UI-12_PA0_09".InputImage_I4600_S00_UID_AnalogInput04;
+	Cyclic#1.HalIO::CustAnaIn[80] AT %IW."UR20-4AI-RTD-DIAG_PA0_11".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Öltemperatur nach Pumpe (M.03-TI-801)*)
+	Cyclic#1.HalIO::CustAnaIn[81] AT %IW."UR20-4AI-RTD-DIAG_PA0_11".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Öltemperatur nach Wärmetauscher (M.03-TI-802)*)
+	Cyclic#1.HalIO::CustAnaIn[82] AT %IW."UR20-4AI-RTD-DIAG_PA0_11".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Motorkühlwassertemperatur Austritt Pumpe (M.04-TI-801)*)
+	Cyclic#1.HalIO::CustAnaIn[83] AT %IW."UR20-4AI-RTD-DIAG_PA0_11".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Motorkühlwassertemperatur A (M.04-TI-802)*)
+	Cyclic#1.HalIO::CustAnaIn[84] AT %IW."UR20-4AI-RTD-DIAG_PA0_12".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Motorkühlwassertemperatur B (M.04-TI-803)*)
+	Cyclic#1.HalIO::CustAnaIn[85] AT %IW."UR20-4AI-RTD-DIAG_PA0_12".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Motorkühlwassertemperatur vor Wärmetauscher (M.04-TI-804)*)
+	Cyclic#1.HalIO::CustAnaIn[86] AT %IW."UR20-4AI-RTD-DIAG_PA0_12".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Motorkühlwassertemperatur nach Wärmetauscher (M.04-TI-805)*)
+	Cyclic#1.HalIO::CustAnaIn[87] AT %IW."UR20-4AI-RTD-DIAG_PA0_12".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Motorkühlwassertemperatur Eintritt Pumpe (M.04-TI-806)*)
+	Cyclic#1.HalIO::CustAnaIn[88] AT %IW."UR20-4AI-RTD-DIAG_PA0_13".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Motorkühlwassertemperatur nach Vorwärmung (M.04-TI-807)*)
+	Cyclic#1.HalIO::CustAnaIn[89] AT %IW."UR20-4AI-RTD-DIAG_PA0_13".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Motorkühlwassertemperatur vor Vorwärmung (M.04-TI-808)*)
+	Cyclic#1.HalIO::CustAnaIn[90] AT %IW."UR20-4AI-RTD-DIAG_PA0_13".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Rücklauftemperatur Hochtemperaturkreis 1 (M.06-TI-801)*)
+	Cyclic#1.HalIO::CustAnaIn[91] AT %IW."UR20-4AI-RTD-DIAG_PA0_13".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Rücklauftemperatur Hochtemperaturkreis 2 (M.06-TI-802)*)
+	Cyclic#1.HalIO::CustAnaIn[92] AT %IW."UR20-4AI-RTD-DIAG_PA0_14".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Vorlauftemperatur Hochtemperaturkreis 2 (M.06-TI-015)*)
+	Cyclic#1.HalIO::CustAnaIn[93] AT %IW."UR20-4AI-RTD-DIAG_PA0_14".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Vorlauftemperatur Hochtemperaturkreis 1 (M.06-TI-016)*)
+	Cyclic#1.HalIO::CustAnaIn[94] AT %IW."UR20-4AI-RTD-DIAG_PA0_14".InputImage_I4600_S00_UID_AnalogInput03; (*Messung - Rücklauftemperatur Kühlwasserkreis (M.06-TI-811)*)
+	Cyclic#1.HalIO::CustAnaIn[95] AT %IW."UR20-4AI-RTD-DIAG_PA0_14".InputImage_I4600_S00_UID_AnalogInput04; (*Messung - Vorlauftemperatur Kühlwasserkreis (M.06-TI-812)*)
+	Cyclic#1.HalIO::CustAnaIn[96] AT %IW."UR20-4AI-RTD-DIAG_PA0_15".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Rücklauftemperatur 2-Kreissystem Kühlwasserkreis (M.06-TI-021)*)
+	Cyclic#1.HalIO::CustAnaIn[97] AT %IW."UR20-4AI-RTD-DIAG_PA0_15".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Vorlauftemperatur 2-Kreissystem Kühlwasserkreis (M.06-TI-014)*)
+	Cyclic#1.HalIO::CustAnaIn[98] AT %IW."UR20-4AI-RTD-DIAG_PA0_15".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Rücklauftemperatur HT Kühlwasserkreis (M.06-TI-821)*)
+	Cyclic#1.HalIO::CustAnaIn[99] AT %IW."UR20-4AI-RTD-DIAG_PA0_15".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Vorlauftemperatur HT Kühlwasserkreis (M.06-TI-822)*)
+	Cyclic#1.HalIO::CustAnaIn[100] AT %IW."UR20-4AI-RTD-DIAG_PA0_16".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Vorlauftemperatur (Niedertemperaturkreis) (M.07-TI-803)*)
+	Cyclic#1.HalIO::CustAnaIn[101] AT %IW."UR20-4AI-RTD-DIAG_PA0_16".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Vorlauftemperatur (Niedertemperaturkreis 2) (M.07-TI-804)*)
+	Cyclic#1.HalIO::T_Ch_T2LP_A AT %IW."UR20-4AI-RTD-DIAG_PA0_16".InputImage_I4600_S00_UID_AnalogInput03; (*Ladelufttemperatur nach Abgasturbolader Niederdruck Verdichter A (M.08-TI-004)*)
+	Cyclic#1.HalIO::T_Ch_T1HP_A AT %IW."UR20-4AI-RTD-DIAG_PA0_16".InputImage_I4600_S00_UID_AnalogInput04; (*Ladelufttemperatur vor Abgasturbolader Hochdruck Verdichter A (M.08-TI-005)*)
+	Cyclic#1.HalIO::T_Ch_T2HP_A AT %IW."UR20-4AI-RTD-DIAG_PA0_17".InputImage_I4600_S00_UID_AnalogInput01; (*Ladelufttemperatur nach Abgasturbolader Hochdruck Verdichter A (M.08-TI-009)*)
+	Cyclic#1.HalIO::CustAnaIn[105] AT %IW."UR20-4AI-RTD-DIAG_PA0_17".InputImage_I4600_S00_UID_AnalogInput02;
+	Cyclic#1.HalIO::CustAnaIn[106] AT %IW."UR20-4AI-RTD-DIAG_PA0_17".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Rücklauftemperatur Turbolader Kühlung (M.04-TI-809)*)
+	Cyclic#1.HalIO::CustAnaIn[107] AT %IW."UR20-4AI-RTD-DIAG_PA0_17".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Vorlauftemperatur Turbolader Kühlung (M.04-TI-810)*)
+	Cyclic#1.HalIO::CustAnaIn[108] AT %IW."UR20-4AI-RTD-DIAG_PA0_18".InputImage_I4600_S00_UID_AnalogInput01;
+	Cyclic#1.HalIO::CustAnaIn[109] AT %IW."UR20-4AI-RTD-DIAG_PA0_18".InputImage_I4600_S00_UID_AnalogInput02;
+	Cyclic#1.HalIO::CustAnaIn[110] AT %IW."UR20-4AI-RTD-DIAG_PA0_18".InputImage_I4600_S00_UID_AnalogInput03;
+	Cyclic#1.HalIO::CustAnaIn[111] AT %IW."UR20-4AI-RTD-DIAG_PA0_18".InputImage_I4600_S00_UID_AnalogInput04;
 END_VAR

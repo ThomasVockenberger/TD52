@@ -25,13 +25,13 @@
       <Parameter ID="SubnetMask" Value="255.255.255.254" />
     </Connector>
   </Module>
-  <Module Name="+A1_P10_X20IF1082-2_MODBUSTCPSL2" Type="X20IF1082-2" Version="1.11.1.0" Disabled="true">
+  <Module Name="+A1_P10_X20IF1082-2_MODBUSTCPSL2" Type="X20IF1082-2" Version="1.11.1.0">
     <Connection Connector="SS" TargetModule="PLC1" TargetConnector="SS2" />
-    <Connector Name="IF1" Disabled="true">
+    <Connector Name="IF1">
       <Parameter ID="Operation" Value="EthOnly" />
       <Parameter ID="EthernetMode" Value="Manual" />
-      <Parameter ID="InternetAddress" Value="192.168.125.1" />
-      <Parameter ID="SubnetMask" Value="255.255.255.254" />
+      <Parameter ID="InternetAddress" Value="192.168.75.200" />
+      <Parameter ID="SubnetMask" Value="255.255.255.0" />
     </Connector>
   </Module>
   <Module Name="+A1_P11_MODUL_CONTROL_EXTENSION" Type="X20BB80" Version="1.1.0.0" Disabled="true">
@@ -114,14 +114,13 @@
       <Parameter ID="AsyncPayload" Value="120" />
     </Connector>
   </Module>
-  <Module Name="+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20" Type="FBE.00000230_UR20_FBC_PL" Version="1.0" Disabled="true" OrderNumber="UR20-FBC-PL">
+  <Module Name="+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20" Type="FBE.00000230_UR20_FBC_PL" Version="1.0" OrderNumber="UR20-FBC-PL">
     <Connection Connector="PLK1" TargetModule="+AUX4_PA3_AUXILIARIES_CONTROL_4_UR20" TargetConnector="PLK2" NodeNumber="160">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Connection Connector="PLK2" TargetModule="X20BC8083_P14_00" TargetConnector="PLK1" NodeNumber="160">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
-    <Connector Name="IF1" Disabled="true" />
     <Parameter ID="Supervision" Value="off" />
     <Parameter ID="p2003_direction" Value="ro" />
     <Parameter ID="p2009s01_direction" Value="ro" />
@@ -1035,6 +1034,10 @@
     <Connection Connector="NET1" TargetModule="UR20-16DI-P_P90_23" TargetConnector="NET2" />
     <Parameter ID="UID_DigitalInputsPacked" Value="off" />
   </Module>
+  <Module Name="UR20-16DI-P_PA0_20" Type="FBE.00000230_UR20_16DI_P" Version="1.0" OrderNumber="UR20-16DI-P / 1315200000">
+    <Connection Connector="NET1" TargetModule="UR20-4AO-UI-16_PA0_19" TargetConnector="NET2" />
+    <Parameter ID="UID_DigitalInputsPacked" Value="off" />
+  </Module>
   <Module Name="UR20-16DO-P_P90_25" Type="FBE.00000230_UR20_16DO_P" Version="1.0" OrderNumber="UR20-16DO-P / 1315250000">
     <Connection Connector="NET1" TargetModule="UR20-16DI-P_P90_24" TargetConnector="NET2" />
     <Parameter ID="UID_DigitalOutputsPacked" Value="off" />
@@ -1049,6 +1052,10 @@
   </Module>
   <Module Name="UR20-16DO-P_P90_28" Type="FBE.00000230_UR20_16DO_P" Version="1.0" OrderNumber="UR20-16DO-P / 1315250000">
     <Connection Connector="NET1" TargetModule="UR20-16DO-P_P90_27" TargetConnector="NET2" />
+    <Parameter ID="UID_DigitalOutputsPacked" Value="off" />
+  </Module>
+  <Module Name="UR20-16DO-P_PA0_21" Type="FBE.00000230_UR20_16DO_P" Version="1.0" OrderNumber="UR20-16DO-P / 1315250000">
+    <Connection Connector="NET1" TargetModule="UR20-16DI-P_PA0_20" TargetConnector="NET2" />
     <Parameter ID="UID_DigitalOutputsPacked" Value="off" />
   </Module>
   <Module Name="UR20-4AI-RTD-DIAG_P90_12" Type="FBE.00000230_UR20_4AI_RTD_DIAG" Version="1.0" OrderNumber="UR20-4AI-RTD-DIAG / 1315700000">
@@ -1211,6 +1218,262 @@
     <Parameter ID="UID_Par_28" Value="0" />
     <Parameter ID="UID_Par_29" Value="0" />
   </Module>
+  <Module Name="UR20-4AI-RTD-DIAG_PA0_11" Type="FBE.00000230_UR20_4AI_RTD_DIAG" Version="1.0" OrderNumber="UR20-4AI-RTD-DIAG / 1315700000">
+    <Connection Connector="NET1" TargetModule="UR20-4AI-UI-12_PA0_10" TargetConnector="NET2" />
+    <Parameter ID="UID_Par_1_Sel" Value="Grad Celsius" />
+    <Parameter ID="UID_Par_2_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_3_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_4_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_5_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_6_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_7" Value="0" />
+    <Parameter ID="UID_Par_8" Value="0" />
+    <Parameter ID="UID_Par_9_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_10_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_11_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_12_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_13_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_14" Value="0" />
+    <Parameter ID="UID_Par_15" Value="0" />
+    <Parameter ID="UID_Par_16_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_17_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_18_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_19_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_20_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_21" Value="0" />
+    <Parameter ID="UID_Par_22" Value="0" />
+    <Parameter ID="UID_Par_23_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_24_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_25_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_26_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_27_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_28" Value="0" />
+    <Parameter ID="UID_Par_29" Value="0" />
+  </Module>
+  <Module Name="UR20-4AI-RTD-DIAG_PA0_12" Type="FBE.00000230_UR20_4AI_RTD_DIAG" Version="1.0" OrderNumber="UR20-4AI-RTD-DIAG / 1315700000">
+    <Connection Connector="NET1" TargetModule="UR20-4AI-RTD-DIAG_PA0_11" TargetConnector="NET2" />
+    <Parameter ID="UID_Par_1_Sel" Value="Grad Celsius" />
+    <Parameter ID="UID_Par_2_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_3_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_4_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_5_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_6_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_7" Value="0" />
+    <Parameter ID="UID_Par_8" Value="0" />
+    <Parameter ID="UID_Par_9_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_10_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_11_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_12_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_13_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_14" Value="0" />
+    <Parameter ID="UID_Par_15" Value="0" />
+    <Parameter ID="UID_Par_16_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_17_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_18_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_19_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_20_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_21" Value="0" />
+    <Parameter ID="UID_Par_22" Value="0" />
+    <Parameter ID="UID_Par_23_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_24_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_25_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_26_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_27_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_28" Value="0" />
+    <Parameter ID="UID_Par_29" Value="0" />
+  </Module>
+  <Module Name="UR20-4AI-RTD-DIAG_PA0_13" Type="FBE.00000230_UR20_4AI_RTD_DIAG" Version="1.0" OrderNumber="UR20-4AI-RTD-DIAG / 1315700000">
+    <Connection Connector="NET1" TargetModule="UR20-4AI-RTD-DIAG_PA0_12" TargetConnector="NET2" />
+    <Parameter ID="UID_Par_1_Sel" Value="Grad Celsius" />
+    <Parameter ID="UID_Par_2_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_3_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_4_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_5_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_6_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_7" Value="0" />
+    <Parameter ID="UID_Par_8" Value="0" />
+    <Parameter ID="UID_Par_9_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_10_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_11_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_12_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_13_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_14" Value="0" />
+    <Parameter ID="UID_Par_15" Value="0" />
+    <Parameter ID="UID_Par_16_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_17_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_18_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_19_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_20_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_21" Value="0" />
+    <Parameter ID="UID_Par_22" Value="0" />
+    <Parameter ID="UID_Par_23_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_24_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_25_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_26_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_27_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_28" Value="0" />
+    <Parameter ID="UID_Par_29" Value="0" />
+  </Module>
+  <Module Name="UR20-4AI-RTD-DIAG_PA0_14" Type="FBE.00000230_UR20_4AI_RTD_DIAG" Version="1.0" OrderNumber="UR20-4AI-RTD-DIAG / 1315700000">
+    <Connection Connector="NET1" TargetModule="UR20-4AI-RTD-DIAG_PA0_13" TargetConnector="NET2" />
+    <Parameter ID="UID_Par_1_Sel" Value="Grad Celsius" />
+    <Parameter ID="UID_Par_2_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_3_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_4_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_5_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_6_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_7" Value="0" />
+    <Parameter ID="UID_Par_8" Value="0" />
+    <Parameter ID="UID_Par_9_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_10_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_11_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_12_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_13_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_14" Value="0" />
+    <Parameter ID="UID_Par_15" Value="0" />
+    <Parameter ID="UID_Par_16_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_17_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_18_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_19_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_20_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_21" Value="0" />
+    <Parameter ID="UID_Par_22" Value="0" />
+    <Parameter ID="UID_Par_23_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_24_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_25_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_26_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_27_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_28" Value="0" />
+    <Parameter ID="UID_Par_29" Value="0" />
+  </Module>
+  <Module Name="UR20-4AI-RTD-DIAG_PA0_15" Type="FBE.00000230_UR20_4AI_RTD_DIAG" Version="1.0" OrderNumber="UR20-4AI-RTD-DIAG / 1315700000">
+    <Connection Connector="NET1" TargetModule="UR20-4AI-RTD-DIAG_PA0_14" TargetConnector="NET2" />
+    <Parameter ID="UID_Par_1_Sel" Value="Grad Celsius" />
+    <Parameter ID="UID_Par_2_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_3_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_4_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_5_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_6_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_7" Value="0" />
+    <Parameter ID="UID_Par_8" Value="0" />
+    <Parameter ID="UID_Par_9_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_10_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_11_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_12_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_13_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_14" Value="0" />
+    <Parameter ID="UID_Par_15" Value="0" />
+    <Parameter ID="UID_Par_16_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_17_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_18_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_19_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_20_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_21" Value="0" />
+    <Parameter ID="UID_Par_22" Value="0" />
+    <Parameter ID="UID_Par_23_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_24_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_25_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_26_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_27_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_28" Value="0" />
+    <Parameter ID="UID_Par_29" Value="0" />
+  </Module>
+  <Module Name="UR20-4AI-RTD-DIAG_PA0_16" Type="FBE.00000230_UR20_4AI_RTD_DIAG" Version="1.0" OrderNumber="UR20-4AI-RTD-DIAG / 1315700000">
+    <Connection Connector="NET1" TargetModule="UR20-4AI-RTD-DIAG_PA0_15" TargetConnector="NET2" />
+    <Parameter ID="UID_Par_1_Sel" Value="Grad Celsius" />
+    <Parameter ID="UID_Par_2_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_3_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_4_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_5_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_6_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_7" Value="0" />
+    <Parameter ID="UID_Par_8" Value="0" />
+    <Parameter ID="UID_Par_9_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_10_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_11_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_12_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_13_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_14" Value="0" />
+    <Parameter ID="UID_Par_15" Value="0" />
+    <Parameter ID="UID_Par_16_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_17_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_18_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_19_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_20_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_21" Value="0" />
+    <Parameter ID="UID_Par_22" Value="0" />
+    <Parameter ID="UID_Par_23_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_24_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_25_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_26_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_27_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_28" Value="0" />
+    <Parameter ID="UID_Par_29" Value="0" />
+  </Module>
+  <Module Name="UR20-4AI-RTD-DIAG_PA0_17" Type="FBE.00000230_UR20_4AI_RTD_DIAG" Version="1.0" OrderNumber="UR20-4AI-RTD-DIAG / 1315700000">
+    <Connection Connector="NET1" TargetModule="UR20-4AI-RTD-DIAG_PA0_16" TargetConnector="NET2" />
+    <Parameter ID="UID_Par_1_Sel" Value="Grad Celsius" />
+    <Parameter ID="UID_Par_2_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_3_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_4_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_5_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_6_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_7" Value="0" />
+    <Parameter ID="UID_Par_8" Value="0" />
+    <Parameter ID="UID_Par_9_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_10_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_11_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_12_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_13_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_14" Value="0" />
+    <Parameter ID="UID_Par_15" Value="0" />
+    <Parameter ID="UID_Par_16_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_17_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_18_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_19_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_20_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_21" Value="0" />
+    <Parameter ID="UID_Par_22" Value="0" />
+    <Parameter ID="UID_Par_23_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_24_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_25_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_26_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_27_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_28" Value="0" />
+    <Parameter ID="UID_Par_29" Value="0" />
+  </Module>
+  <Module Name="UR20-4AI-RTD-DIAG_PA0_18" Type="FBE.00000230_UR20_4AI_RTD_DIAG" Version="1.0" OrderNumber="UR20-4AI-RTD-DIAG / 1315700000">
+    <Connection Connector="NET1" TargetModule="UR20-4AI-RTD-DIAG_PA0_17" TargetConnector="NET2" />
+    <Parameter ID="UID_Par_1_Sel" Value="Grad Celsius" />
+    <Parameter ID="UID_Par_2_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_3_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_4_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_5_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_6_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_7" Value="0" />
+    <Parameter ID="UID_Par_8" Value="0" />
+    <Parameter ID="UID_Par_9_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_10_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_11_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_12_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_13_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_14" Value="0" />
+    <Parameter ID="UID_Par_15" Value="0" />
+    <Parameter ID="UID_Par_16_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_17_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_18_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_19_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_20_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_21" Value="0" />
+    <Parameter ID="UID_Par_22" Value="0" />
+    <Parameter ID="UID_Par_23_Sel" Value="PT100" />
+    <Parameter ID="UID_Par_24_Sel" Value="3-Leiter" />
+    <Parameter ID="UID_Par_25_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_26_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_27_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_28" Value="0" />
+    <Parameter ID="UID_Par_29" Value="0" />
+  </Module>
   <Module Name="UR20-4AI-TC-DIAG_P90_01" Type="FBE.00000230_UR20_4AI_TC_DIAG" Version="1.0" OrderNumber="UR20-4AI-TC-DIAG / 1315710000">
     <Connection Connector="NET1" TargetModule="+M1_P90_ENGINE_INTERFACE_UR20" TargetConnector="IF1" />
     <Parameter ID="UID_Par_1_Sel" Value="Grad Celsius" />
@@ -1268,6 +1531,38 @@
     <Parameter ID="UID_Par_21" Value="0" />
     <Parameter ID="UID_Par_22" Value="0" />
     <Parameter ID="UID_Par_23_Sel" Value="K" />
+    <Parameter ID="UID_Par_24_Sel" Value="intern" />
+    <Parameter ID="UID_Par_25_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_26_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_27_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_28" Value="0" />
+    <Parameter ID="UID_Par_29" Value="0" />
+  </Module>
+  <Module Name="UR20-4AI-TC-DIAG_PA0_01" Type="FBE.00000230_UR20_4AI_TC_DIAG" Version="1.0" OrderNumber="UR20-4AI-TC-DIAG / 1315710000">
+    <Connection Connector="NET1" TargetModule="+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20" TargetConnector="IF1" />
+    <Parameter ID="UID_Par_1_Sel" Value="Grad Celsius" />
+    <Parameter ID="UID_Par_2_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_3_Sel" Value="intern" />
+    <Parameter ID="UID_Par_4_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_5_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_6_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_7" Value="0" />
+    <Parameter ID="UID_Par_8" Value="0" />
+    <Parameter ID="UID_Par_9_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_10_Sel" Value="intern" />
+    <Parameter ID="UID_Par_11_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_12_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_13_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_14" Value="0" />
+    <Parameter ID="UID_Par_15" Value="0" />
+    <Parameter ID="UID_Par_16_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_17_Sel" Value="intern" />
+    <Parameter ID="UID_Par_18_Sel" Value="80 ms" />
+    <Parameter ID="UID_Par_19_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_20_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_21" Value="0" />
+    <Parameter ID="UID_Par_22" Value="0" />
+    <Parameter ID="UID_Par_23_Sel" Value="deaktiviert" />
     <Parameter ID="UID_Par_24_Sel" Value="intern" />
     <Parameter ID="UID_Par_25_Sel" Value="80 ms" />
     <Parameter ID="UID_Par_26_Sel" Value="deaktiviert" />
@@ -1383,6 +1678,114 @@
     <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_9_Sel" Value="Deaktiviert" />
   </Module>
+  <Module Name="UR20-4AI-UI-12_PA0_02" Type="FBE.00000230_UR20_4AI_UI_12" Version="1.0" OrderNumber="UR20-4AI-UI-12 / 1394390000">
+    <Connection Connector="NET1" TargetModule="UR20-4AI-TC-DIAG_PA0_01" TargetConnector="NET2" />
+    <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
+    <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
+  </Module>
+  <Module Name="UR20-4AI-UI-12_PA0_03" Type="FBE.00000230_UR20_4AI_UI_12" Version="1.0" OrderNumber="UR20-4AI-UI-12 / 1394390000">
+    <Connection Connector="NET1" TargetModule="UR20-4AI-UI-12_PA0_02" TargetConnector="NET2" />
+    <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
+    <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
+  </Module>
+  <Module Name="UR20-4AI-UI-12_PA0_04" Type="FBE.00000230_UR20_4AI_UI_12" Version="1.0" OrderNumber="UR20-4AI-UI-12 / 1394390000">
+    <Connection Connector="NET1" TargetModule="UR20-4AI-UI-12_PA0_03" TargetConnector="NET2" />
+    <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
+    <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
+  </Module>
+  <Module Name="UR20-4AI-UI-12_PA0_05" Type="FBE.00000230_UR20_4AI_UI_12" Version="1.0" OrderNumber="UR20-4AI-UI-12 / 1394390000">
+    <Connection Connector="NET1" TargetModule="UR20-4AI-UI-12_PA0_04" TargetConnector="NET2" />
+    <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
+    <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
+  </Module>
+  <Module Name="UR20-4AI-UI-12_PA0_06" Type="FBE.00000230_UR20_4AI_UI_12" Version="1.0" OrderNumber="UR20-4AI-UI-12 / 1394390000">
+    <Connection Connector="NET1" TargetModule="UR20-4AI-UI-12_PA0_05" TargetConnector="NET2" />
+    <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
+    <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
+  </Module>
+  <Module Name="UR20-4AI-UI-12_PA0_07" Type="FBE.00000230_UR20_4AI_UI_12" Version="1.0" OrderNumber="UR20-4AI-UI-12 / 1394390000">
+    <Connection Connector="NET1" TargetModule="UR20-4AI-UI-12_PA0_06" TargetConnector="NET2" />
+    <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
+    <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
+  </Module>
+  <Module Name="UR20-4AI-UI-12_PA0_08" Type="FBE.00000230_UR20_4AI_UI_12" Version="1.0" OrderNumber="UR20-4AI-UI-12 / 1394390000">
+    <Connection Connector="NET1" TargetModule="UR20-4AI-UI-12_PA0_07" TargetConnector="NET2" />
+    <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
+    <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
+  </Module>
+  <Module Name="UR20-4AI-UI-12_PA0_09" Type="FBE.00000230_UR20_4AI_UI_12" Version="1.0" OrderNumber="UR20-4AI-UI-12 / 1394390000">
+    <Connection Connector="NET1" TargetModule="UR20-4AI-UI-12_PA0_08" TargetConnector="NET2" />
+    <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
+    <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
+  </Module>
+  <Module Name="UR20-4AI-UI-12_PA0_10" Type="FBE.00000230_UR20_4AI_UI_12" Version="1.0" OrderNumber="UR20-4AI-UI-12 / 1394390000">
+    <Connection Connector="NET1" TargetModule="UR20-4AI-UI-12_PA0_09" TargetConnector="NET2" />
+    <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
+    <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
+  </Module>
   <Module Name="UR20-4AO-UI-16_P90_17" Type="FBE.00000230_UR20_4AO_UI_16" Version="1.0" OrderNumber="UR20-4AO-UI-16 / 1315680000">
     <Connection Connector="NET1" TargetModule="UR20-4AI-RTD-DIAG_P90_16" TargetConnector="NET2" />
     <Parameter ID="UID_Par_1_Sel" Value="S7 Datenformat" />
@@ -1415,6 +1818,21 @@
   </Module>
   <Module Name="UR20-4AO-UI-16_P90_19" Type="FBE.00000230_UR20_4AO_UI_16" Version="1.0" OrderNumber="UR20-4AO-UI-16 / 1315680000">
     <Connection Connector="NET1" TargetModule="UR20-4AO-UI-16_P90_18" TargetConnector="NET2" />
+    <Parameter ID="UID_Par_1_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_2_Sel" Value="0...20 mA" />
+    <Parameter ID="UID_Par_3" Value="0" />
+    <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_5_Sel" Value="-10...10 V" />
+    <Parameter ID="UID_Par_6" Value="0" />
+    <Parameter ID="UID_Par_7_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_8_Sel" Value="-10...10 V" />
+    <Parameter ID="UID_Par_9" Value="0" />
+    <Parameter ID="UID_Par_10_Sel" Value="S7 Datenformat" />
+    <Parameter ID="UID_Par_11_Sel" Value="-10...10 V" />
+    <Parameter ID="UID_Par_12" Value="0" />
+  </Module>
+  <Module Name="UR20-4AO-UI-16_PA0_19" Type="FBE.00000230_UR20_4AO_UI_16" Version="1.0" OrderNumber="UR20-4AO-UI-16 / 1315680000">
+    <Connection Connector="NET1" TargetModule="UR20-4AI-RTD-DIAG_PA0_18" TargetConnector="NET2" />
     <Parameter ID="UID_Par_1_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_2_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_3" Value="0" />

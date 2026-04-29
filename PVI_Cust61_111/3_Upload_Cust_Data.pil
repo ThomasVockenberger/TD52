@@ -1,0 +1,9 @@
+Title "Upload engine data"
+MessageBox "Info", "Engine data will be uploaded TO target.\r\nProceed?", "", "OK_CANCEL"
+Include "Objects\Upload_PermDI.pil"
+Include "Objects\Upload_OPdata.pil"
+Include "Objects\Upload_OilCnt.pil"
+Include "Objects\Upload_OilCWMngt.pil"
+MessageBox "Info", "Upload finished", "","OK"
+
+

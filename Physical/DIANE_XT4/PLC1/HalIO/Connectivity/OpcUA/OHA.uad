@@ -166,6 +166,25 @@
             <Variable Name="rFrc_Int" EnableArrayElements="True" />
           </Variable>
         </Variable>
+        <Variable Name="tPr_TCOF_EOF_DiffMax">
+          <Variable Name="Di" />
+          <Variable Name="GoodQual" />
+          <Variable Name="Exist" />
+        </Variable>
+        <Variable Name="tFS_ECW">
+          <Variable Name="Di" />
+          <Variable Name="GoodQual" />
+          <Variable Name="Exist" />
+        </Variable>
+        <Variable Name="tEOVal_DemOpen">
+          <Variable Name="Do" />
+          <Variable Name="GoodQual" />
+        </Variable>
+        <Variable Name="tCnt_OilPulse">
+          <Variable Name="Di" />
+          <Variable Name="GoodQual" />
+          <Variable Name="Exist" />
+        </Variable>
       </GlobalVariables>
     </Module>
   </DefaultView>

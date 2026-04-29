@@ -1,0 +1,3 @@
+Include "Connection_Cust.pil"
+WriteVariableListToPLC "Cust_Para.txt"
+

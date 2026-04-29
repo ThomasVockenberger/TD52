@@ -1,0 +1,2 @@
+Connection "/IF=tcpip /LOPO=11159 /SA=106", "/RT=1000 /SP=D:\PVI /AM=* /CKDA=0 /DAIP=192.168.122.11 /REPO=11159 /ANSL=1", "WT=30"
+

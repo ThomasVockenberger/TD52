@@ -1,0 +1,3 @@
+Include "Connection_Cust.pil"
+VariableListFile "Cust_Read_Para.tpl", "Cust_Para.txt"
+

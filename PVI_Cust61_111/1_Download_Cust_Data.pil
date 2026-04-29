@@ -1,0 +1,7 @@
+Title "Download engine data"
+MessageBox "Info", "Engine data will be downloaded FROM target.\r\nProceed?", "", "OK_CANCEL"
+Include "Objects\Download_CustPara.pil"
+MessageBox "Info", "Download finished", "","OK"
+
+
+

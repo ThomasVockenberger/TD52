@@ -1,0 +1,344 @@
+PROCESS STARTED: 23-04-2026, 07:37:52
+1: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Download_CustPara.pil"
+2: @START@ "Connection_Cust.pil"
+3: Connection "/IF=tcpip /LOPO=11159 /SA=106", "/RT=1000 /SP=D:\PVI /AM=* /CKDA=0 /DAIP=192.168.122.11 /REPO=11159 /ANSL=1", "WT=30"
+PVI Error # 11020: Unable to establish ANSL communication 
+		connection
+PROCESS ABORTED: 23-04-2026, 07:38:23
+PROCESS STARTED: 23-04-2026, 07:45:03
+1: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Download_CustPara.pil"
+2: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Connection_Cust.pil"
+3: Connection "/IF=tcpip /LOPO=11159 /SA=106", "/RT=1000 /SP=D:\PVI /AM=* /CKDA=0 /DAIP=192.168.122.11 /REPO=11159 /ANSL=1", "WT=30"
+PVI Error # 11020: Unable to establish ANSL communication 
+		connection
+PROCESS ABORTED: 23-04-2026, 07:45:36
+PROCESS STARTED: 23-04-2026, 07:51:45
+1: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Download_CustPara.pil"
+2: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Connection_Cust.pil"
+3: Connection "/IF=TCPIP", "/IP=192.168.122.11 /COMT=350 /PT=11159", "WT=30"
+PVI Error # 11020: Unable to establish ANSL communication 
+		connection
+PROCESS ABORTED: 23-04-2026, 07:52:16
+PROCESS STARTED: 23-04-2026, 07:53:09
+1: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Download_CustPara.pil"
+2: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Connection_Cust.pil"
+3: Connection "/IF=TCPIP", "/IP=192.168.122.11 /COMT=350 /PT=11159 /ANSL=1", "WT=30"
+PVI Error # 11020: Unable to establish ANSL communication 
+		connection
+PROCESS ABORTED: 23-04-2026, 07:53:40
+PROCESS STARTED: 23-04-2026, 07:56:20
+1: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Download_CustPara.pil"
+2: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Connection_Cust.pil"
+3: Connection "/IF=TCPIP /LOPO=11159 /SA=106", "/IP=192.168.122.11 /COMT=350 /PT=11159 /ANSL=1 /RT=1000", "WT=30"
+PVI Error # 11020: Unable to establish ANSL communication 
+		connection
+PROCESS ABORTED: 23-04-2026, 07:56:52
+PROCESS STARTED: 23-04-2026, 08:04:40
+1: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Download_CustPara.pil"
+2: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Connection_Cust.pil"
+3: Connection "/IF=TCPIP /LOPO=11159 /SA=1", " /RT=1000 /IP=192.168.122.11 /CKDA=0 /REPO=11159 /ANSL=1", "WT=30"
+PVI Error # 11020: Unable to establish ANSL communication 
+		connection
+PROCESS ABORTED: 23-04-2026, 08:05:11
+PROCESS STARTED: 23-04-2026, 08:05:53
+1: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Download_CustPara.pil"
+2: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Connection_Cust.pil"
+3: Connection "/IF=TCPIP /LOPO=11160 /SA=1", " /RT=1000 /IP=192.168.122.11 /CKDA=0 /REPO=11159 /ANSL=1", "WT=30"
+PVI Error # 11020: Unable to establish ANSL communication 
+		connection
+PROCESS ABORTED: 23-04-2026, 08:06:25
+PROCESS STARTED: 23-04-2026, 08:33:53
+1: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Download_CustPara.pil"
+2: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Connection_Cust.pil"
+3: Connection "/IF=tcpip /LOPO=11159 /SA=106", "/RT=1000 /SP=D:\PVI /AM=* /CKDA=0 /DAIP=192.168.122.11 /REPO=11159 /ANSL=1", "WT=30"
+Connection "/IF=tcpip /LOPO=11159 /SA=106", "/RT=1000 /SP=D:\PVI /AM=* /CKDA=0 /DAIP=192.168.122.11 /REPO=11159 /ANSL=1", "WT=30" SUCCESSFUL
+4: @END@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Connection_Cust.pil"
+5: VariableListFile "Cust_Read_Para.tpl", "Cust_Para.txt"
+[Customized::Global Variables]
+Para.bCustAnaIn_Active[61], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[63], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[64], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[65], GLOBAL, BOOL, 1, 1
+VariableListFile "Cust_Read_Para.tpl", "Cust_Para.txt" SUCCESSFUL
+6: @END@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Download_CustPara.pil"
+PROCESS FINISHED (SUCCESS): 23-04-2026, 08:33:59
+PROCESS STARTED: 23-04-2026, 08:46:30
+1: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Download_CustPara.pil"
+2: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Connection_Cust.pil"
+3: Connection "/IF=tcpip /LOPO=11159 /SA=106", "/RT=1000 /SP=D:\PVI /AM=* /CKDA=0 /DAIP=192.168.122.11 /REPO=11159 /ANSL=1", "WT=30"
+Connection "/IF=tcpip /LOPO=11159 /SA=106", "/RT=1000 /SP=D:\PVI /AM=* /CKDA=0 /DAIP=192.168.122.11 /REPO=11159 /ANSL=1", "WT=30" SUCCESSFUL
+4: @END@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Connection_Cust.pil"
+5: VariableListFile "Cust_Read_Para.tpl", "Cust_Para.txt"
+[Customized::Global Variables]
+Para.bCustAnaIn_Active[61], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[62], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[63], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[64], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[65], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[66], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[67], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[68], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[69], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[70], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[71], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[80], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[81], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[82], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[83], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[84], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[85], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[86], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[87], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[88], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[89], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[90], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[91], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[92], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[93], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[94], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[95], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[96], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[97], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[98], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[99], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[100], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[101], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[102], GLOBAL, BOOL, 1, 0
+Para.bCustAnaIn_Active[103], GLOBAL, BOOL, 1, 0
+Para.bCustAnaIn_Active[104], GLOBAL, BOOL, 1, 0
+Para.bCustAnaIn_Active[105], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[106], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[107], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[108], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[109], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[110], GLOBAL, BOOL, 1, 1
+Para.bCustAnaIn_Active[111], GLOBAL, BOOL, 1, 1
+Para.iCustAnaIn_Typ[61], GLOBAL, INT, 2, 2
+Para.iCustAnaIn_Typ[62], GLOBAL, INT, 2, 2
+Para.iCustAnaIn_Typ[63], GLOBAL, INT, 2, 2
+Para.iCustAnaIn_Typ[64], GLOBAL, INT, 2, 2
+Para.iCustAnaIn_Typ[65], GLOBAL, INT, 2, 2
+Para.iCustAnaIn_Typ[66], GLOBAL, INT, 2, 2
+Para.iCustAnaIn_Typ[67], GLOBAL, INT, 2, 2
+Para.iCustAnaIn_Typ[68], GLOBAL, INT, 2, 2
+Para.iCustAnaIn_Typ[69], GLOBAL, INT, 2, 2
+Para.iCustAnaIn_Typ[70], GLOBAL, INT, 2, 2
+Para.iCustAnaIn_Typ[71], GLOBAL, INT, 2, 2
+Para.iCustAnaIn_Typ[80], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[81], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[82], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[83], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[84], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[85], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[86], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[87], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[88], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[89], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[90], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[91], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[92], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[93], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[94], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[95], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[96], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[97], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[98], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[99], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[100], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[101], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[102], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[103], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[104], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[105], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[106], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[107], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[108], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[109], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[110], GLOBAL, INT, 2, 5
+Para.iCustAnaIn_Typ[111], GLOBAL, INT, 2, 5
+Para.rCustAnaIn_ScalMax[61], GLOBAL, REAL, 4, 10.0000000
+Para.rCustAnaIn_ScalMax[62], GLOBAL, REAL, 4, 10.0000000
+Para.rCustAnaIn_ScalMax[63], GLOBAL, REAL, 4, 10.0000000
+Para.rCustAnaIn_ScalMax[64], GLOBAL, REAL, 4, 10.0000000
+Para.rCustAnaIn_ScalMax[65], GLOBAL, REAL, 4, 10.0000000
+Para.rCustAnaIn_ScalMax[66], GLOBAL, REAL, 4, 10.0000000
+Para.rCustAnaIn_ScalMax[67], GLOBAL, REAL, 4, 10.0000000
+Para.rCustAnaIn_ScalMax[68], GLOBAL, REAL, 4, 10.0000000
+Para.rCustAnaIn_ScalMax[69], GLOBAL, REAL, 4, 10.0000000
+Para.rCustAnaIn_ScalMax[70], GLOBAL, REAL, 4, 10.0000000
+Para.rCustAnaIn_ScalMax[71], GLOBAL, REAL, 4, 10.0000000
+Para.rCustAnaIn_ScalMax[80], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[81], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[82], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[83], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[84], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[85], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[86], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[87], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[88], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[89], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[90], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[91], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[92], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[93], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[94], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[95], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[96], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[97], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[98], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[99], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[100], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[101], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[102], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[103], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[104], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[105], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[106], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[107], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[108], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[109], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[110], GLOBAL, REAL, 4, 0.0000000
+Para.rCustAnaIn_ScalMax[111], GLOBAL, REAL, 4, 0.0000000
+VariableListFile "Cust_Read_Para.tpl", "Cust_Para.txt" SUCCESSFUL
+6: @END@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Download_CustPara.pil"
+PROCESS FINISHED (SUCCESS): 23-04-2026, 08:46:41
+PROCESS STARTED: 23-04-2026, 09:49:28
+1: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Upload_CustPara.pil"
+2: @START@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Connection_Cust.pil"
+3: Connection "/IF=tcpip /LOPO=11159 /SA=106", "/RT=1000 /SP=D:\PVI /AM=* /CKDA=0 /DAIP=192.168.122.11 /REPO=11159 /ANSL=1", "WT=30"
+Connection "/IF=tcpip /LOPO=11159 /SA=106", "/RT=1000 /SP=D:\PVI /AM=* /CKDA=0 /DAIP=192.168.122.11 /REPO=11159 /ANSL=1", "WT=30" SUCCESSFUL
+4: @END@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Connection_Cust.pil"
+5: WriteVariableListToPLC "Cust_Para.txt"
+[Customized::Global Variables]
+Para.bCustAnaIn_Active[61], GLOBAL, BOOL, 1, 0   OK
+Para.bCustAnaIn_Active[62], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[63], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[64], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[65], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[66], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[67], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[68], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[69], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[70], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[71], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[80], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[81], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[82], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[83], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[84], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[85], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[86], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[87], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[88], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[89], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[90], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[91], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[92], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[93], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[94], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[95], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[96], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[97], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[98], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[99], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[100], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[101], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[102], GLOBAL, BOOL, 1, 0   OK
+Para.bCustAnaIn_Active[103], GLOBAL, BOOL, 1, 0   OK
+Para.bCustAnaIn_Active[104], GLOBAL, BOOL, 1, 0   OK
+Para.bCustAnaIn_Active[105], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[106], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[107], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[108], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[109], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[110], GLOBAL, BOOL, 1, 1   OK
+Para.bCustAnaIn_Active[111], GLOBAL, BOOL, 1, 1   OK
+Para.iCustAnaIn_Typ[61], GLOBAL, INT, 2, 2   OK
+Para.iCustAnaIn_Typ[62], GLOBAL, INT, 2, 2   OK
+Para.iCustAnaIn_Typ[63], GLOBAL, INT, 2, 2   OK
+Para.iCustAnaIn_Typ[64], GLOBAL, INT, 2, 2   OK
+Para.iCustAnaIn_Typ[65], GLOBAL, INT, 2, 2   OK
+Para.iCustAnaIn_Typ[66], GLOBAL, INT, 2, 2   OK
+Para.iCustAnaIn_Typ[67], GLOBAL, INT, 2, 2   OK
+Para.iCustAnaIn_Typ[68], GLOBAL, INT, 2, 2   OK
+Para.iCustAnaIn_Typ[69], GLOBAL, INT, 2, 2   OK
+Para.iCustAnaIn_Typ[70], GLOBAL, INT, 2, 2   OK
+Para.iCustAnaIn_Typ[71], GLOBAL, INT, 2, 2   OK
+Para.iCustAnaIn_Typ[80], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[81], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[82], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[83], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[84], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[85], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[86], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[87], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[88], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[89], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[90], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[91], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[92], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[93], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[94], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[95], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[96], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[97], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[98], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[99], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[100], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[101], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[102], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[103], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[104], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[105], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[106], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[107], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[108], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[109], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[110], GLOBAL, INT, 2, 5   OK
+Para.iCustAnaIn_Typ[111], GLOBAL, INT, 2, 5   OK
+Para.rCustAnaIn_ScalMax[61], GLOBAL, REAL, 4, 10.0000000   OK
+Para.rCustAnaIn_ScalMax[62], GLOBAL, REAL, 4, 10.0000000   OK
+Para.rCustAnaIn_ScalMax[63], GLOBAL, REAL, 4, 10.0000000   OK
+Para.rCustAnaIn_ScalMax[64], GLOBAL, REAL, 4, 10.0000000   OK
+Para.rCustAnaIn_ScalMax[65], GLOBAL, REAL, 4, 10.0000000   OK
+Para.rCustAnaIn_ScalMax[66], GLOBAL, REAL, 4, 10.0000000   OK
+Para.rCustAnaIn_ScalMax[67], GLOBAL, REAL, 4, 10.0000000   OK
+Para.rCustAnaIn_ScalMax[68], GLOBAL, REAL, 4, 10.0000000   OK
+Para.rCustAnaIn_ScalMax[69], GLOBAL, REAL, 4, 10.0000000   OK
+Para.rCustAnaIn_ScalMax[70], GLOBAL, REAL, 4, 10.0000000   OK
+Para.rCustAnaIn_ScalMax[71], GLOBAL, REAL, 4, 10.0000000   OK
+Para.rCustAnaIn_ScalMax[80], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[81], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[82], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[83], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[84], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[85], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[86], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[87], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[88], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[89], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[90], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[91], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[92], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[93], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[94], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[95], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[96], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[97], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[98], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[99], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[100], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[101], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[102], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[103], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[104], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[105], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[106], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[107], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[108], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[109], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[110], GLOBAL, REAL, 4, 0.0000000   OK
+Para.rCustAnaIn_ScalMax[111], GLOBAL, REAL, 4, 0.0000000   OK
+WriteVariableListToPLC "Cust_Para.txt" SUCCESSFUL
+6: @END@ "E:\Testbench\HMI_P15\Asoto\PVI_Cust61_111\Objects\Upload_CustPara.pil"
+PROCESS FINISHED (SUCCESS): 23-04-2026, 09:49:37
