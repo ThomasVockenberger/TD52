@@ -16,7 +16,7 @@
   </TaskClass>
   <TaskClass Name="Cyclic#7" />
   <TaskClass Name="Cyclic#8">
-    <Task Name="IF_HMI_CP" Source="Visu.IF_HMI_CP.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
+    <Task Name="IF_HMI_CP" Source="Visu.IF_HMI_CP.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <DataObjects>
     <DataObject Name="META_VI" Source="Visu.META_VI.dob" Memory="UserROM" Language="Simple" />
