@@ -384,7 +384,7 @@
     <Parameter ID="p2009s0F_direction" Value="ro" />
     <Parameter ID="p2009s10_direction" Value="ro" />
   </Module>
-  <Module Name="PLC1" Type="X20CP3686X" Version="1.4.0.0">
+  <Module Name="PLC1" Type="X20CP3687X" Version="1.4.0.0">
     <Connector Name="IF2">
       <Parameter ID="ActivateDevice" Value="1" />
       <Parameter ID="Mode" Value="NodeNumber" />
@@ -1139,7 +1139,7 @@
     <Parameter ID="UID_Par_13_Sel" Value="deaktiviert" />
     <Parameter ID="UID_Par_14" Value="0" />
     <Parameter ID="UID_Par_15" Value="0" />
-    <Parameter ID="UID_Par_16_Sel" Value="deaktiviert" />
+    <Parameter ID="UID_Par_16_Sel" Value="PT100" />
     <Parameter ID="UID_Par_17_Sel" Value="3-Leiter" />
     <Parameter ID="UID_Par_18_Sel" Value="80 ms" />
     <Parameter ID="UID_Par_19_Sel" Value="deaktiviert" />
@@ -1574,11 +1574,11 @@
     <Connection Connector="NET1" TargetModule="UR20-4AI-TC-DIAG_P90_02" TargetConnector="NET2" />
     <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
     <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_3_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_7_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
   </Module>
@@ -1674,19 +1674,19 @@
     <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_7_Sel" Value="-10...10 V" />
+    <Parameter ID="UID_Par_7_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_9_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
   </Module>
   <Module Name="UR20-4AI-UI-12_PA0_02" Type="FBE.00000230_UR20_4AI_UI_12" Version="1.0" OrderNumber="UR20-4AI-UI-12 / 1394390000">
     <Connection Connector="NET1" TargetModule="UR20-4AI-TC-DIAG_PA0_01" TargetConnector="NET2" />
     <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
     <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_3_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_7_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
   </Module>
@@ -1694,11 +1694,11 @@
     <Connection Connector="NET1" TargetModule="UR20-4AI-UI-12_PA0_02" TargetConnector="NET2" />
     <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
     <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_3_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_7_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
   </Module>
@@ -1706,11 +1706,11 @@
     <Connection Connector="NET1" TargetModule="UR20-4AI-UI-12_PA0_03" TargetConnector="NET2" />
     <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
     <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_3_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_7_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
   </Module>
@@ -1718,11 +1718,11 @@
     <Connection Connector="NET1" TargetModule="UR20-4AI-UI-12_PA0_04" TargetConnector="NET2" />
     <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
     <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_3_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_7_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
   </Module>
@@ -1730,11 +1730,11 @@
     <Connection Connector="NET1" TargetModule="UR20-4AI-UI-12_PA0_05" TargetConnector="NET2" />
     <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
     <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_3_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_7_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
   </Module>
@@ -1742,11 +1742,11 @@
     <Connection Connector="NET1" TargetModule="UR20-4AI-UI-12_PA0_06" TargetConnector="NET2" />
     <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
     <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_3_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_7_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
   </Module>
@@ -1754,11 +1754,11 @@
     <Connection Connector="NET1" TargetModule="UR20-4AI-UI-12_PA0_07" TargetConnector="NET2" />
     <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
     <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_3_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_7_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
   </Module>
@@ -1766,11 +1766,11 @@
     <Connection Connector="NET1" TargetModule="UR20-4AI-UI-12_PA0_08" TargetConnector="NET2" />
     <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
     <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_3_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_7_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
   </Module>
@@ -1778,11 +1778,11 @@
     <Connection Connector="NET1" TargetModule="UR20-4AI-UI-12_PA0_09" TargetConnector="NET2" />
     <Parameter ID="UID_Par_1_Sel" Value="Deaktiviert" />
     <Parameter ID="UID_Par_2_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_3_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_3_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_7_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_7_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
   </Module>
@@ -1846,7 +1846,7 @@
     <Parameter ID="UID_Par_11_Sel" Value="-10...10 V" />
     <Parameter ID="UID_Par_12" Value="0" />
   </Module>
-  <Module Name="X20AI4622_P20_05" Type="X20AI4622" Version="1.2.0.0">
+  <Module Name="X20AI4622_P20_06" Type="X20AI4622" Version="1.2.0.0">
     <Connection Connector="SS1" TargetModule="X20TB12" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM11" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
@@ -1856,7 +1856,7 @@
     <Parameter ID="ChannelType04" Value="0 to 20mA" />
     <Parameter ID="SimSlave" Value="SimDevice" />
   </Module>
-  <Module Name="X20AI4622_P20_06" Type="X20AI4622" Version="1.2.0.0">
+  <Module Name="X20AI4622_P20_07" Type="X20AI4622" Version="1.2.0.0">
     <Connection Connector="SS1" TargetModule="X20TB12a" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM11a" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
@@ -1956,7 +1956,7 @@
     <Parameter ID="ChannelType04" Value="0 to 20mA" />
     <Parameter ID="SimSlave" Value="SimDevice" />
   </Module>
-  <Module Name="X20AO4622_P20_08" Type="X20AO4622" Version="1.3.0.0">
+  <Module Name="X20AO4622_P20_09" Type="X20AO4622" Version="1.3.0.0">
     <Connection Connector="SS1" TargetModule="X20TB12c" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM11c" TargetConnector="SL1" />
     <Parameter ID="FunctionModel" Value="Standard" />
@@ -2054,7 +2054,7 @@
     <Parameter ID="ChannelType04" Value="0 to 20mA" />
     <Parameter ID="SimSlave" Value="SimDevice" />
   </Module>
-  <Module Name="X20AT4222_P20_07" Type="X20AT4222" Version="1.4.0.0">
+  <Module Name="X20AT4222_P20_08" Type="X20AT4222" Version="1.4.0.0">
     <Connection Connector="SS1" TargetModule="X20TB12b" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM11b" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
@@ -2389,7 +2389,7 @@
     <Connection Connector="X2X1" TargetModule="+M1_P20_ENGINE_INTERFACE" TargetConnector="IF1" />
   </Module>
   <Module Name="X20BM11_P20_03_NOX1" Type="X20BM11" Version="1.1.0.0">
-    <Connection Connector="X2X1" TargetModule="X20BM11_P20_02_IGN1" TargetConnector="X2X2" />
+    <Connection Connector="X2X1" TargetModule="X20BM11d" TargetConnector="X2X2" />
   </Module>
   <Module Name="X20BM11_P20_04_OQS" Type="X20BM11" Version="1.1.0.0">
     <Connection Connector="X2X1" TargetModule="X20BM11_P20_03_NOX1" TargetConnector="X2X2" />
@@ -2525,6 +2525,9 @@
   </Module>
   <Module Name="X20BM11c" Type="X20BM11" Version="1.1.0.0">
     <Connection Connector="X2X1" TargetModule="X20BM11b" TargetConnector="X2X2" />
+  </Module>
+  <Module Name="X20BM11d" Type="X20BM11" Version="1.1.0.0">
+    <Connection Connector="X2X1" TargetModule="X20BM11_P20_02_IGN1" TargetConnector="X2X2" />
   </Module>
   <Module Name="X20BM13_P10_17" Type="X20BM13" Version="1.0.0.6">
     <Connection Connector="X2X1" TargetModule="X20BM11_P10_16" TargetConnector="X2X2" />
@@ -3195,7 +3198,21 @@
     <Parameter ID="ExtErrStatusInfo" Value="on" />
     <Parameter ID="TaskClass" Value="TC#1" />
   </Module>
-  <Module Name="X20CS1070_P20_03_NOX1" Type="X20CS1070" Version="1.8.0.0">
+  <Module Name="X20CS1070_P20_03_IGN2" Type="X20CS1070" Version="1.8.0.0">
+    <Connection Connector="SS1" TargetModule="X20TB12d" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM11d" TargetConnector="SL1" />
+    <Connector Name="IF1">
+      <Parameter ID="ActivateDevice" Value="1" />
+      <Parameter ID="Baudrate" Value="250000" />
+      <Parameter ID="IdentifierLength" Value="0" />
+      <Parameter ID="ActivateCANIO" Value="0" />
+    </Connector>
+    <Parameter ID="FunctionModel" Value="StreamCyc1xCan" />
+    <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="ExtErrStatusInfo" Value="on" />
+    <Parameter ID="TaskClass" Value="TC#1" />
+  </Module>
+  <Module Name="X20CS1070_P20_04_NOX1" Type="X20CS1070" Version="1.8.0.0">
     <Connection Connector="SS1" TargetModule="X20TB12_P20_03_NOX1" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM11_P20_03_NOX1" TargetConnector="SL1" />
     <Connector Name="IF1">
@@ -3209,7 +3226,7 @@
     <Parameter ID="ExtErrStatusInfo" Value="on" />
     <Parameter ID="TaskClass" Value="TC#1" />
   </Module>
-  <Module Name="X20CS1070_P20_04_OQS" Type="X20CS1070" Version="1.8.0.0">
+  <Module Name="X20CS1070_P20_05_OQS" Type="X20CS1070" Version="1.8.0.0">
     <Connection Connector="SS1" TargetModule="X20TB12_P20_04_OQS" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM11_P20_04_OQS" TargetConnector="SL1" />
     <Connector Name="IF1">
@@ -6116,19 +6133,19 @@
     <Connection Connector="PS" TargetModule="+A1_P68_PROFINET_RT_COUPLING2" TargetConnector="PS1" />
     <Parameter ID="Supervision" Value="off" />
   </Module>
-  <Module Name="X20SA4430_P20_10" Type="X20SA4430" Version="2.5.0.0">
+  <Module Name="X20SA4430_P20_11" Type="X20SA4430" Version="2.5.0.0">
     <Connection Connector="SS1" TargetModule="X20TB5F_P20_06" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM33_P20_06" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
     <Parameter ID="SafeModuleID" Value="202" />
   </Module>
-  <Module Name="X20SA4430_P20_11" Type="X20SA4430" Version="2.5.0.0">
+  <Module Name="X20SA4430_P20_12" Type="X20SA4430" Version="2.5.0.0">
     <Connection Connector="SS1" TargetModule="X20TB5F_P20_07" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM33_P20_07" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
     <Parameter ID="SafeModuleID" Value="203" />
   </Module>
-  <Module Name="X20SD1207_P20_09" Type="X20SD1207" Version="2.5.1.2">
+  <Module Name="X20SD1207_P20_10" Type="X20SD1207" Version="2.5.1.2">
     <Connection Connector="SS1" TargetModule="X20TB52_P20_05" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM33_P20_05" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
@@ -6158,13 +6175,13 @@
     <Parameter ID="Supervision" Value="off" />
     <Parameter ID="SafeModuleID" Value="105" />
   </Module>
-  <Module Name="X20SI8110_P20_12" Type="X20SI8110" Version="2.6.0.0">
+  <Module Name="X20SI8110_P20_13" Type="X20SI8110" Version="2.6.0.0">
     <Connection Connector="SS1" TargetModule="X20TB52_P20_08" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM13_P20_08" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
     <Parameter ID="SafeModuleID" Value="204" />
   </Module>
-  <Module Name="X20SI8110_P20_16" Type="X20SI8110" Version="2.6.0.0" Disabled="true">
+  <Module Name="X20SI8110_P20_17" Type="X20SI8110" Version="2.6.0.0" Disabled="true">
     <Connection Connector="SS1" TargetModule="X20TB52_P20_12" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM13_P20_12" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
@@ -6212,7 +6229,7 @@
     <Parameter ID="DigitalOutput03" Value="viaSafeLOGIC" />
     <Parameter ID="DigitalOutput04" Value="viaSafeLOGIC" />
   </Module>
-  <Module Name="X20SO4110_P20_13" Type="X20SO4110" Version="2.3.0.1">
+  <Module Name="X20SO4110_P20_14" Type="X20SO4110" Version="2.3.0.1">
     <Connection Connector="SS1" TargetModule="X20TB52_P20_09" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM33_P20_09" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
@@ -6220,7 +6237,7 @@
     <Parameter ID="DigitalOutput03" Value="viaSafeLOGIC" />
     <Parameter ID="DigitalOutput04" Value="viaSafeLOGIC" />
   </Module>
-  <Module Name="X20SO4110_P20_14" Type="X20SO4110" Version="2.3.0.1">
+  <Module Name="X20SO4110_P20_15" Type="X20SO4110" Version="2.3.0.1">
     <Connection Connector="SS1" TargetModule="X20TB52_P20_10" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM33_P20_10" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
@@ -6228,7 +6245,7 @@
     <Parameter ID="DigitalOutput03" Value="viaSafeLOGIC" />
     <Parameter ID="DigitalOutput04" Value="viaSafeLOGIC" />
   </Module>
-  <Module Name="X20SO4110_P20_15" Type="X20SO4110" Version="2.3.0.1">
+  <Module Name="X20SO4110_P20_16" Type="X20SO4110" Version="2.3.0.1">
     <Connection Connector="SS1" TargetModule="X20TB52_P20_14" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM33_P20_14" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
@@ -6236,7 +6253,7 @@
     <Parameter ID="DigitalOutput03" Value="viaSafeLOGIC" />
     <Parameter ID="DigitalOutput04" Value="viaSafeLOGIC" />
   </Module>
-  <Module Name="X20SO4110_P20_17" Type="X20SO4110" Version="2.3.0.1" Disabled="true">
+  <Module Name="X20SO4110_P20_18" Type="X20SO4110" Version="2.3.0.1" Disabled="true">
     <Connection Connector="SS1" TargetModule="X20TB52_P20_13" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM33_P20_13" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
@@ -6246,7 +6263,7 @@
     <Parameter ID="DigitalOutput03" Value="viaSafeLOGIC" />
     <Parameter ID="DigitalOutput04" Value="viaSafeLOGIC" />
   </Module>
-  <Module Name="X20SO4110_P20_18" Type="X20SO4110" Version="2.3.0.1" Disabled="true">
+  <Module Name="X20SO4110_P20_19" Type="X20SO4110" Version="2.3.0.1" Disabled="true">
     <Connection Connector="SS1" TargetModule="X20TB52_P20_11" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM33_P20_11" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
@@ -6338,6 +6355,7 @@
   <Module Name="X20TB12a" Type="X20TB12" Version="1.0.0.0" />
   <Module Name="X20TB12b" Type="X20TB12" Version="1.0.0.0" />
   <Module Name="X20TB12c" Type="X20TB12" Version="1.0.0.0" />
+  <Module Name="X20TB12d" Type="X20TB12" Version="1.0.0.0" />
   <Module Name="X20TB52_P10_17" Type="X20TB52" Version="1.0.0.2" />
   <Module Name="X20TB52_P10_18" Type="X20TB52" Version="1.0.0.2" />
   <Module Name="X20TB52_P10_19" Type="X20TB52" Version="1.0.0.2" />

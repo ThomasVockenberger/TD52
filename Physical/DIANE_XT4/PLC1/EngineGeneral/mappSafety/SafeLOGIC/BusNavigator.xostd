@@ -726,15 +726,15 @@
         <Classification Type="Input" />
         <Classification Type="VendorSpecific">Safe</Classification>
         <Classification Type="VendorSpecific">IO</Classification>
-        <Info Name="Interface" Value="IF3.ST32.IF1.ST9" />
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST10" />
         <Info Name="HWC_Revision" Value="2.5.1.2" />
         <Info Name="HWC_LastEdit" Value="20.03.2024 12:56:48" />
-        <Info Name="AS_Name" Value="X20SD1207_P20_09" />
+        <Info Name="AS_Name" Value="X20SD1207_P20_10" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Zähler, 4xE, 24V, 7kHz" />
         <Info Name="Description-en" Value="X20 Safe Counter, 4xI, 24V, 7kHz" />
         <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_201" />
-        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[9]" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[10]" />
       </NodeDescription>
       <ChannelConfiguration>
         <DataTransport>
@@ -750,15 +750,15 @@
         <Classification Type="Input" />
         <Classification Type="VendorSpecific">Safe</Classification>
         <Classification Type="VendorSpecific">IO</Classification>
-        <Info Name="Interface" Value="IF3.ST32.IF1.ST10" />
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST11" />
         <Info Name="HWC_Revision" Value="2.5.0.0" />
         <Info Name="HWC_LastEdit" Value="15.07.2021 16:38:02" />
-        <Info Name="AS_Name" Value="X20SA4430_P20_10" />
+        <Info Name="AS_Name" Value="X20SA4430_P20_11" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Analog In, 4 bis 20 mA" />
         <Info Name="Description-en" Value="X20 Safe Analog In, 4 to 20 mA" />
         <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_202" />
-        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[10]" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[11]" />
         <Info Name="AsVariable" Value="SafeCurrent0102,Cyclic#1.HalIO::Pr_EngLubOil" />
         <Info Name="AsVariable" Value="SafeCurrent0304,Cyclic#1.HalIO::Pr_EOaP" />
       </NodeDescription>
@@ -787,15 +787,15 @@
         <Classification Type="Input" />
         <Classification Type="VendorSpecific">Safe</Classification>
         <Classification Type="VendorSpecific">IO</Classification>
-        <Info Name="Interface" Value="IF3.ST32.IF1.ST11" />
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST12" />
         <Info Name="HWC_Revision" Value="2.5.0.0" />
         <Info Name="HWC_LastEdit" Value="15.07.2021 16:38:02" />
-        <Info Name="AS_Name" Value="X20SA4430_P20_11" />
+        <Info Name="AS_Name" Value="X20SA4430_P20_12" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Analog In, 4 bis 20 mA" />
         <Info Name="Description-en" Value="X20 Safe Analog In, 4 to 20 mA" />
         <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_203" />
-        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[11]" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[12]" />
         <Info Name="AsVariable" Value="SafeCurrent0102,Cyclic#1.HalIO::Pr_ECW" />
         <Info Name="AsVariable" Value="SafeCurrent0304,Cyclic#1.HalIO::Pr_ECWaP1" />
       </NodeDescription>
@@ -824,15 +824,15 @@
         <Classification Type="Input" />
         <Classification Type="VendorSpecific">Safe</Classification>
         <Classification Type="VendorSpecific">IO</Classification>
-        <Info Name="Interface" Value="IF3.ST32.IF1.ST12" />
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST13" />
         <Info Name="HWC_Revision" Value="2.6.0.0" />
         <Info Name="HWC_LastEdit" Value="10.01.2024 09:47:00" />
-        <Info Name="AS_Name" Value="X20SI8110_P20_12" />
+        <Info Name="AS_Name" Value="X20SI8110_P20_13" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Digital In, 8xE, 24V" />
         <Info Name="Description-en" Value="X20 Safe Digital In, 8xI, 24V" />
         <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_204" />
-        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[12]" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[13]" />
         <Info Name="AsVariable" Value="SafeDigitalInput02,Cyclic#1.HalIO::Ign_Run_Hal" />
         <Info Name="AsVariable" Value="SafeDigitalInput06,Cyclic#1.HalIO::Pr_EG_Hi" />
       </NodeDescription>
@@ -845,15 +845,15 @@
         <Classification Type="Output" />
         <Classification Type="VendorSpecific">Safe</Classification>
         <Classification Type="VendorSpecific">IO</Classification>
-        <Info Name="Interface" Value="IF3.ST32.IF1.ST13" />
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST14" />
         <Info Name="HWC_Revision" Value="2.3.0.1" />
         <Info Name="HWC_LastEdit" Value="08.03.2024 10:06:16" />
-        <Info Name="AS_Name" Value="X20SO4110_P20_13" />
+        <Info Name="AS_Name" Value="X20SO4110_P20_14" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Digital Out, 4xA, 24 V, 0.5 A" />
         <Info Name="Description-en" Value="X20 Safe Digital Out, 4xO, 24 V, 0.5 A" />
         <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_205" />
-        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[13]" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[14]" />
         <Info Name="AsVariable" Value="DigitalOutput01,Cyclic#1.HalIO::GT1_GV1_Open" />
         <Info Name="AsVariable" Value="DigitalOutput02,Cyclic#1.HalIO::GT1_GV2_Open" />
       </NodeDescription>
@@ -913,15 +913,15 @@
         <Classification Type="Output" />
         <Classification Type="VendorSpecific">Safe</Classification>
         <Classification Type="VendorSpecific">IO</Classification>
-        <Info Name="Interface" Value="IF3.ST32.IF1.ST14" />
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST15" />
         <Info Name="HWC_Revision" Value="2.3.0.1" />
         <Info Name="HWC_LastEdit" Value="08.03.2024 10:06:16" />
-        <Info Name="AS_Name" Value="X20SO4110_P20_14" />
+        <Info Name="AS_Name" Value="X20SO4110_P20_15" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Digital Out, 4xA, 24 V, 0.5 A" />
         <Info Name="Description-en" Value="X20 Safe Digital Out, 4xO, 24 V, 0.5 A" />
         <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_206" />
-        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[14]" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[15]" />
         <Info Name="AsVariable" Value="DigitalOutput01,Cyclic#1.HalIO::GT2_GV1_Open" />
         <Info Name="AsVariable" Value="DigitalOutput02,Cyclic#1.HalIO::GT2_GV2_Open" />
       </NodeDescription>
@@ -981,15 +981,15 @@
         <Classification Type="Output" />
         <Classification Type="VendorSpecific">Safe</Classification>
         <Classification Type="VendorSpecific">IO</Classification>
-        <Info Name="Interface" Value="IF3.ST32.IF1.ST18" />
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST19" />
         <Info Name="HWC_Revision" Value="2.3.0.1" />
         <Info Name="HWC_LastEdit" Value="08.03.2024 10:06:16" />
-        <Info Name="AS_Name" Value="X20SO4110_P20_18" />
+        <Info Name="AS_Name" Value="X20SO4110_P20_19" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Digital Out, 4xA, 24 V, 0.5 A" />
         <Info Name="Description-en" Value="X20 Safe Digital Out, 4xO, 24 V, 0.5 A" />
         <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_207" />
-        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[18]" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[19]" />
       </NodeDescription>
       <ChannelConfiguration>
         <DataTransport>
@@ -1047,15 +1047,15 @@
         <Classification Type="Input" />
         <Classification Type="VendorSpecific">Safe</Classification>
         <Classification Type="VendorSpecific">IO</Classification>
-        <Info Name="Interface" Value="IF3.ST32.IF1.ST16" />
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST17" />
         <Info Name="HWC_Revision" Value="2.6.0.0" />
         <Info Name="HWC_LastEdit" Value="10.01.2024 09:47:00" />
-        <Info Name="AS_Name" Value="X20SI8110_P20_16" />
+        <Info Name="AS_Name" Value="X20SI8110_P20_17" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Digital In, 8xE, 24V" />
         <Info Name="Description-en" Value="X20 Safe Digital In, 8xI, 24V" />
         <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_208" />
-        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[16]" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[17]" />
       </NodeDescription>
       <ChannelConfiguration />
     </SafetyNode>
@@ -1066,15 +1066,15 @@
         <Classification Type="Output" />
         <Classification Type="VendorSpecific">Safe</Classification>
         <Classification Type="VendorSpecific">IO</Classification>
-        <Info Name="Interface" Value="IF3.ST32.IF1.ST17" />
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST18" />
         <Info Name="HWC_Revision" Value="2.3.0.1" />
         <Info Name="HWC_LastEdit" Value="08.03.2024 10:06:16" />
-        <Info Name="AS_Name" Value="X20SO4110_P20_17" />
+        <Info Name="AS_Name" Value="X20SO4110_P20_18" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Digital Out, 4xA, 24 V, 0.5 A" />
         <Info Name="Description-en" Value="X20 Safe Digital Out, 4xO, 24 V, 0.5 A" />
         <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_209" />
-        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[17]" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[18]" />
       </NodeDescription>
       <ChannelConfiguration>
         <DataTransport>
@@ -1132,15 +1132,15 @@
         <Classification Type="Output" />
         <Classification Type="VendorSpecific">Safe</Classification>
         <Classification Type="VendorSpecific">IO</Classification>
-        <Info Name="Interface" Value="IF3.ST32.IF1.ST15" />
+        <Info Name="Interface" Value="IF3.ST32.IF1.ST16" />
         <Info Name="HWC_Revision" Value="2.3.0.1" />
         <Info Name="HWC_LastEdit" Value="08.03.2024 10:06:16" />
-        <Info Name="AS_Name" Value="X20SO4110_P20_15" />
+        <Info Name="AS_Name" Value="X20SO4110_P20_16" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Digital Out, 4xA, 24 V, 0.5 A" />
         <Info Name="Description-en" Value="X20 Safe Digital Out, 4xO, 24 V, 0.5 A" />
         <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_210" />
-        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[15]" />
+        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[20].ModuleOK[16]" />
         <Info Name="AsVariable" Value="DigitalOutput01,Cyclic#1.HalIO::DCGA_GV1_Open" />
         <Info Name="AsVariable" Value="DigitalOutput02,Cyclic#1.HalIO::DCGA_GV2_Open" />
       </NodeDescription>

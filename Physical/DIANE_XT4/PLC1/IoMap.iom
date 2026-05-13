@@ -230,26 +230,26 @@ VAR_CONFIG
 	Cyclic#1.HalIO::StationIO[20].ModuleOK[0] AT %IX."X20BC8083_P20_00".ModuleOk; (**)
 	Cyclic#1.HalIO::StationIO[20].ModuleOK[1] AT %IX."X20PS9400_P20_01".ModuleOk; (**)
 	Cyclic#1.HalIO::StationIO[20].ModuleOK[2] AT %IX."X20CS1070_P20_02_IGN1".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[3] AT %IX."X20CS1070_P20_03_NOX1".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[4] AT %IX."X20CS1070_P20_04_OQS".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[9] AT %IX."X20SD1207_P20_09".ModuleOk;
-	Cyclic#1.HalIO::Pr_EngLubOil AT %IW."X20SA4430_P20_10".SafeCurrent0102; (*Messung: Motoröldruck*)
-	Cyclic#1.HalIO::Pr_EOaP AT %IW."X20SA4430_P20_10".SafeCurrent0304; (*Messung: Öldruck nach Ölpumpe*)
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[10] AT %IX."X20SA4430_P20_10".ModuleOk;
-	Cyclic#1.HalIO::Pr_ECW AT %IW."X20SA4430_P20_11".SafeCurrent0102; (*Messung: Motorkühlwasserdruck*)
-	Cyclic#1.HalIO::Pr_ECWaP1 AT %IW."X20SA4430_P20_11".SafeCurrent0304; (*Messung: Kühlwasserdruck Austritt Motorkühlwasserpumpe 1*)
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[4] AT %IX."X20CS1070_P20_04_NOX1".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[5] AT %IX."X20CS1070_P20_05_OQS".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[10] AT %IX."X20SD1207_P20_10".ModuleOk;
+	Cyclic#1.HalIO::Pr_EngLubOil AT %IW."X20SA4430_P20_11".SafeCurrent0102; (*Messung: Motoröldruck*)
+	Cyclic#1.HalIO::Pr_EOaP AT %IW."X20SA4430_P20_11".SafeCurrent0304; (*Messung: Öldruck nach Ölpumpe*)
 	Cyclic#1.HalIO::StationIO[20].ModuleOK[11] AT %IX."X20SA4430_P20_11".ModuleOk;
-	Cyclic#1.HalIO::Ign_Run_Hal AT %IX."X20SI8110_P20_12".SafeDigitalInput02; (*Betrieb: Zündung*)
-	Cyclic#1.HalIO::Pr_EG_Hi AT %IX."X20SI8110_P20_12".SafeDigitalInput06; (*Status: Abgasgegendruck max*)
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[12] AT %IX."X20SI8110_P20_12".ModuleOk;
-	Cyclic#1.HalIO::GT1_GV1_Open AT %QX."X20SO4110_P20_13".DigitalOutput01; (*Anforderung: Gasventile - Gasstrecke 1 öffnen*)
-	Cyclic#1.HalIO::GT1_GV2_Open AT %QX."X20SO4110_P20_13".DigitalOutput02; (*Anforderung: Gasventile - Gasstrecke 1 öffnen*)
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[13] AT %IX."X20SO4110_P20_13".ModuleOk;
+	Cyclic#1.HalIO::Pr_ECW AT %IW."X20SA4430_P20_12".SafeCurrent0102; (*Messung: Motorkühlwasserdruck*)
+	Cyclic#1.HalIO::Pr_ECWaP1 AT %IW."X20SA4430_P20_12".SafeCurrent0304; (*Messung: Kühlwasserdruck Austritt Motorkühlwasserpumpe 1*)
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[12] AT %IX."X20SA4430_P20_12".ModuleOk;
+	Cyclic#1.HalIO::Ign_Run_Hal AT %IX."X20SI8110_P20_13".SafeDigitalInput02; (*Betrieb: Zündung*)
+	Cyclic#1.HalIO::Pr_EG_Hi AT %IX."X20SI8110_P20_13".SafeDigitalInput06; (*Status: Abgasgegendruck max*)
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[13] AT %IX."X20SI8110_P20_13".ModuleOk;
+	Cyclic#1.HalIO::GT1_GV1_Open AT %QX."X20SO4110_P20_14".DigitalOutput01; (*Anforderung: Gasventile - Gasstrecke 1 öffnen*)
+	Cyclic#1.HalIO::GT1_GV2_Open AT %QX."X20SO4110_P20_14".DigitalOutput02; (*Anforderung: Gasventile - Gasstrecke 1 öffnen*)
 	Cyclic#1.HalIO::StationIO[20].ModuleOK[14] AT %IX."X20SO4110_P20_14".ModuleOk;
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[18] AT %IX."X20SO4110_P20_18".ModuleOk;
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[16] AT %IX."X20SI8110_P20_16".ModuleOk;
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[17] AT %IX."X20SO4110_P20_17".ModuleOk;
 	Cyclic#1.HalIO::StationIO[20].ModuleOK[15] AT %IX."X20SO4110_P20_15".ModuleOk;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[19] AT %IX."X20SO4110_P20_19".ModuleOk;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[17] AT %IX."X20SI8110_P20_17".ModuleOk;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[18] AT %IX."X20SO4110_P20_18".ModuleOk;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[16] AT %IX."X20SO4110_P20_16".ModuleOk;
 	Cyclic#1.HalIO::StationIO[21].ModuleOK[0] AT %IX."X20BC8083_P21_00".ModuleOk; (**)
 	Cyclic#1.HalIO::StationIO[21].ModuleOK[1] AT %IX."X20PS9400_P21_01".ModuleOk; (**)
 	Cyclic#1.HalIO::StationIO[21].ModuleOK[2] AT %IX."X20CM4810_P21_02".ModuleOk; (**)
@@ -1818,22 +1818,22 @@ VAR_CONFIG
 	Cyclic#1.HalIO::Pr_EG_Hi AT %IX."SimDevice".P20_08_SI6; (* Status: Abgasgegendruck max *)
 	Cyclic#1.HalIO::GT1_GV1_Open AT %QX."SimDevice".P20_09_SO1; (* Anforderung: Gasventile - Gasstrecke 1 öffnen *)
 	Cyclic#1.HalIO::GT1_GV2_Open AT %QX."SimDevice".P20_09_SO2; (* Anforderung: Gasventile - Gasstrecke 1 öffnen *)
-	Cyclic#1.EngineGeneral::bSafeModuleOK_201 AT %IX."X20SD1207_P20_09".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_202 AT %IX."X20SA4430_P20_10".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_203 AT %IX."X20SA4430_P20_11".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_204 AT %IX."X20SI8110_P20_12".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_205 AT %IX."X20SO4110_P20_13".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_208 AT %IX."X20SI8110_P20_16".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_209 AT %IX."X20SO4110_P20_17".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_207 AT %IX."X20SO4110_P20_18".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_206 AT %IX."X20SO4110_P20_14".SafeModuleOK;
+	Cyclic#1.EngineGeneral::bSafeModuleOK_201 AT %IX."X20SD1207_P20_10".SafeModuleOK;
+	Cyclic#1.EngineGeneral::bSafeModuleOK_202 AT %IX."X20SA4430_P20_11".SafeModuleOK;
+	Cyclic#1.EngineGeneral::bSafeModuleOK_203 AT %IX."X20SA4430_P20_12".SafeModuleOK;
+	Cyclic#1.EngineGeneral::bSafeModuleOK_204 AT %IX."X20SI8110_P20_13".SafeModuleOK;
+	Cyclic#1.EngineGeneral::bSafeModuleOK_205 AT %IX."X20SO4110_P20_14".SafeModuleOK;
+	Cyclic#1.EngineGeneral::bSafeModuleOK_208 AT %IX."X20SI8110_P20_17".SafeModuleOK;
+	Cyclic#1.EngineGeneral::bSafeModuleOK_209 AT %IX."X20SO4110_P20_18".SafeModuleOK;
+	Cyclic#1.EngineGeneral::bSafeModuleOK_207 AT %IX."X20SO4110_P20_19".SafeModuleOK;
+	Cyclic#1.EngineGeneral::bSafeModuleOK_206 AT %IX."X20SO4110_P20_15".SafeModuleOK;
 	Cyclic#1.EngineGeneral::bSafeModuleOK_101 AT %IX."X20SI8110_P10_17".SafeModuleOK;
 	Cyclic#1.EngineGeneral::bSafeModuleOK_102 AT %IX."X20SO4110_P10_18".SafeModuleOK;
 	Cyclic#1.EngineGeneral::bSafeModuleOK_103 AT %IX."X20SI8110_P10_19".SafeModuleOK;
 	Cyclic#1.EngineGeneral::bSafeModuleOK_300 AT %IX."X20SI9100_P10_20".SafeModuleOK;
 	Cyclic#1.EngineGeneral::bSafeModuleOK_301 AT %IX."X20SI9100_P10_23".SafeModuleOK;
 	Cyclic#1.EngineGeneral::bSafeModuleOK_105 AT %IX."X20SI8110_P10_22".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_210 AT %IX."X20SO4110_P20_15".SafeModuleOK;
+	Cyclic#1.EngineGeneral::bSafeModuleOK_210 AT %IX."X20SO4110_P20_16".SafeModuleOK;
 	Cyclic#1.EngineGeneral::bSafeModuleOK_104 AT %IX."X20SI8110_P10_21".SafeModuleOK;
 	Cyclic#1.HalIO::T_EGaLPTC_A AT %IW."UR20-4AI-TC-DIAG_P90_02".InputImage_I4600_S00_UID_AnalogInput03; (*Messung - Abgastemperatur nach Turbo A*)
 	Cyclic#1.HalIO::T_EGaLPTC_B AT %IW."UR20-4AI-TC-DIAG_P90_02".InputImage_I4600_S00_UID_AnalogInput04; (*Messung - Abgastemperatur nach Turbo B*)
@@ -1880,16 +1880,16 @@ VAR_CONFIG
 	Cyclic#1.HalIO::Pos_CBV_B1 AT %QW."UR20-4AO-UI-16_P90_18".OutputImage_I4700_S00_UID_AnalogOutput04; (*Sollwert: Position Verdichterbypassventil B1*)
 	Cyclic#1.HalIO::Q_AVR_Set_U AT %QW."UR20-4AO-UI-16_P90_17".OutputImage_I4700_S00_UID_AnalogOutput03; (*Sollwert: Blindleistung*)
 	Cyclic#1.HalIO::T_AO_Gen_T_In AT %QW."UR20-4AO-UI-16_P90_17".OutputImage_I4700_S00_UID_AnalogOutput04; (*Messung: Motor Ansauglufttemperatur*)
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[5] AT %IX."X20AI4622_P20_05".ModuleOk;
 	Cyclic#1.HalIO::StationIO[20].ModuleOK[6] AT %IX."X20AI4622_P20_06".ModuleOk;
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[7] AT %IX."X20AT4222_P20_07".ModuleOk;
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[8] AT %IX."X20AO4622_P20_08".ModuleOk;
-	Cyclic#1.HalIO::N_TCLP_A AT %IW."X20AI4622_P20_05".AnalogInput01; (*Messung: Drehzahlsensor Abgasturbolader Niederdruck A*)
-	Cyclic#1.HalIO::N_TCLP_B AT %IW."X20AI4622_P20_05".AnalogInput02; (*Messung: Drehzahlsensor Abgasturbolader Niederdruck B*)
-	Cyclic#1.HalIO::DCGA_GV1_Open AT %QX."X20SO4110_P20_15".DigitalOutput01; (*Anforderung: Gasventil 1 Dezentrale Gasdosierung*)
-	Cyclic#1.HalIO::DCGA_GV2_Open AT %QX."X20SO4110_P20_15".DigitalOutput02; (*Anforderung: Gasventil 2 Dezentrale Gasdosierung*)
-	Cyclic#1.HalIO::GT2_GV1_Open AT %QX."X20SO4110_P20_14".DigitalOutput01; (*Anforderung: Gasventile - Gasstrecke 2 öffnen*)
-	Cyclic#1.HalIO::GT2_GV2_Open AT %QX."X20SO4110_P20_14".DigitalOutput02; (*Anforderung: Gasventile - Gasstrecke 2 öffnen*)
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[7] AT %IX."X20AI4622_P20_07".ModuleOk;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[8] AT %IX."X20AT4222_P20_08".ModuleOk;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[9] AT %IX."X20AO4622_P20_09".ModuleOk;
+	Cyclic#1.HalIO::N_TCLP_A AT %IW."X20AI4622_P20_06".AnalogInput01; (*Messung: Drehzahlsensor Abgasturbolader Niederdruck A*)
+	Cyclic#1.HalIO::N_TCLP_B AT %IW."X20AI4622_P20_06".AnalogInput02; (*Messung: Drehzahlsensor Abgasturbolader Niederdruck B*)
+	Cyclic#1.HalIO::DCGA_GV1_Open AT %QX."X20SO4110_P20_16".DigitalOutput01; (*Anforderung: Gasventil 1 Dezentrale Gasdosierung*)
+	Cyclic#1.HalIO::DCGA_GV2_Open AT %QX."X20SO4110_P20_16".DigitalOutput02; (*Anforderung: Gasventil 2 Dezentrale Gasdosierung*)
+	Cyclic#1.HalIO::GT2_GV1_Open AT %QX."X20SO4110_P20_15".DigitalOutput01; (*Anforderung: Gasventile - Gasstrecke 2 öffnen*)
+	Cyclic#1.HalIO::GT2_GV2_Open AT %QX."X20SO4110_P20_15".DigitalOutput02; (*Anforderung: Gasventile - Gasstrecke 2 öffnen*)
 	Cyclic#1.HalIO::Actuator_Ok_WG_A AT %IX."UR20-16DI-P_P90_23".InputImage_I4600_S00_UID_DigitalInput04; (*Störung: Wastegate A*)
 	Cyclic#1.HalIO::Actuator_Ok_WG_B AT %IX."UR20-16DI-P_P90_23".InputImage_I4600_S00_UID_DigitalInput05; (*Störung: Wastegate B*)
 	Cyclic#1.HalIO::Pr_GT2_Max AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput09; (*Status: Gasdruck max Gasstrecke 2*)
@@ -2044,4 +2044,5 @@ VAR_CONFIG
 	Cyclic#1.HalIO::CustAnaIn[109] AT %IW."UR20-4AI-RTD-DIAG_PA0_18".InputImage_I4600_S00_UID_AnalogInput02;
 	Cyclic#1.HalIO::CustAnaIn[110] AT %IW."UR20-4AI-RTD-DIAG_PA0_18".InputImage_I4600_S00_UID_AnalogInput03;
 	Cyclic#1.HalIO::CustAnaIn[111] AT %IW."UR20-4AI-RTD-DIAG_PA0_18".InputImage_I4600_S00_UID_AnalogInput04;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[3] AT %IX."X20CS1070_P20_03_IGN2".ModuleOk;
 END_VAR
