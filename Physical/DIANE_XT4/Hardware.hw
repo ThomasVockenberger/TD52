@@ -1592,7 +1592,7 @@
     <Parameter ID="UID_Par_6_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_7_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_8_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_9_Sel" Value="0...20 mA" />
+    <Parameter ID="UID_Par_9_Sel" Value="-10...10 V" />
   </Module>
   <Module Name="UR20-4AI-UI-12_P90_05" Type="FBE.00000230_UR20_4AI_UI_12" Version="1.0" OrderNumber="UR20-4AI-UI-12 / 1394390000">
     <Connection Connector="NET1" TargetModule="UR20-4AI-UI-12_P90_04" TargetConnector="NET2" />
@@ -1795,16 +1795,16 @@
     <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_6" Value="0" />
     <Parameter ID="UID_Par_7_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_8_Sel" Value="0...20 mA" />
+    <Parameter ID="UID_Par_8_Sel" Value="-10...10 V" />
     <Parameter ID="UID_Par_9" Value="0" />
     <Parameter ID="UID_Par_10_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_11_Sel" Value="0...20 mA" />
+    <Parameter ID="UID_Par_11_Sel" Value="-10...10 V" />
     <Parameter ID="UID_Par_12" Value="0" />
   </Module>
   <Module Name="UR20-4AO-UI-16_P90_18" Type="FBE.00000230_UR20_4AO_UI_16" Version="1.0" OrderNumber="UR20-4AO-UI-16 / 1315680000">
     <Connection Connector="NET1" TargetModule="UR20-4AO-UI-16_P90_17" TargetConnector="NET2" />
     <Parameter ID="UID_Par_1_Sel" Value="S7 Datenformat" />
-    <Parameter ID="UID_Par_2_Sel" Value="Deaktiviert" />
+    <Parameter ID="UID_Par_2_Sel" Value="0...20 mA" />
     <Parameter ID="UID_Par_3" Value="0" />
     <Parameter ID="UID_Par_4_Sel" Value="S7 Datenformat" />
     <Parameter ID="UID_Par_5_Sel" Value="0...20 mA" />
