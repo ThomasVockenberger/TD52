@@ -10,281 +10,211 @@
 VAR_CONFIG
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[0] AT %IX."X20BC8083_P10_00".ModuleOk; (**)
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[1] AT %IX."X20PS9400_P10_01".ModuleOk; (**)
-	Cyclic#1.HalIO::GCB_DVS AT %QX."X20CM0985-1_P10_02".DigitalOutput05; (*Synchronisieranwahl*)
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[2] AT %IX."X20CM0985-1_P10_02".ModuleOk; (**)
-	Cyclic#1.HalIO::U_Bus_L1N[1] AT %IW."X20CM0985-1_P10_02".AnalogInput16; (**)
-	Cyclic#1.HalIO::U_L3N[1] AT %IW."X20CM0985-1_P10_02".AnalogInput12; (**)
-	Cyclic#1.HalIO::U_L2N[1] AT %IW."X20CM0985-1_P10_02".AnalogInput11; (**)
-	Cyclic#1.HalIO::U_Bus_L2N[1] AT %IW."X20CM0985-1_P10_02".AnalogInput17; (**)
-	Cyclic#1.HalIO::S_Act[1] AT %IW."X20CM0985-1_P10_02".AnalogInput21; (**)
-	Cyclic#1.HalIO::U_MMD_Synch1[1] AT %IW."X20CM0985-1_P10_02".AnalogInput25; (**)
-	Cyclic#1.HalIO::U_Bus_L3N[1] AT %IW."X20CM0985-1_P10_02".AnalogInput18; (**)
-	Cyclic#1.HalIO::Q_Act[1] AT %IW."X20CM0985-1_P10_02".AnalogInput20; (**)
-	Cyclic#1.HalIO::P_Act[1] AT %IW."X20CM0985-1_P10_02".AnalogInput19; (**)
-	Cyclic#1.HalIO::U_Bus_L2_3[1] AT %IW."X20CM0985-1_P10_02".AnalogInput14; (**)
-	Cyclic#1.HalIO::U_Bus_L1_2[1] AT %IW."X20CM0985-1_P10_02".AnalogInput13; (**)
-	Cyclic#1.HalIO::BB_Dead_MMD[1] AT %IX."X20CM0985-1_P10_02".StatusDigitalOutput03; (**)
-	Cyclic#1.HalIO::U_Bus_L3_1[1] AT %IW."X20CM0985-1_P10_02".AnalogInput15; (**)
-	Cyclic#1.HalIO::ssIN[1] AT %IW."X20CM0985-1_P10_02".AnalogInput05; (**)
-	Cyclic#1.HalIO::F_MMD[1] AT %IW."X20CM0985-1_P10_02".AnalogInput24; (**)
-	Cyclic#1.HalIO::PF_Act[1] AT %IW."X20CM0985-1_P10_02".AnalogInput23; (**)
-	Cyclic#1.HalIO::U_Avg[1] AT %IW."X20CM0985-1_P10_02".AnalogInput22; (**)
-	Cyclic#1.HalIO::I_L3[1] AT %IW."X20CM0985-1_P10_02".AnalogInput03; (**)
-	Cyclic#1.HalIO::I_Avg[1] AT %IW."X20CM0985-1_P10_02".AnalogInput04; (**)
-	Cyclic#1.HalIO::U_L1N[1] AT %IW."X20CM0985-1_P10_02".AnalogInput10; (**)
-	Cyclic#1.HalIO::U_L1L2[1] AT %IW."X20CM0985-1_P10_02".AnalogInput07; (**)
-	Cyclic#1.HalIO::U_L3L1[1] AT %IW."X20CM0985-1_P10_02".AnalogInput09; (**)
-	Cyclic#1.HalIO::usIDyn[1] AT %IW."X20CM0985-1_P10_02".AnalogInput06; (**)
-	Cyclic#1.HalIO::U_Gen_LimLo2[1] AT %IX."X20CM0985-1_P10_02".StatusInput18 INVERSE; (**)
-	Cyclic#1.HalIO::U_Gen_LimHi[1] AT %IX."X20CM0985-1_P10_02".StatusInput01 INVERSE; (**)
-	Cyclic#1.HalIO::U_L2L3[1] AT %IW."X20CM0985-1_P10_02".AnalogInput08; (**)
-	Cyclic#1.HalIO::bSyncDeadBusMode[1] AT %QX."X20CM0985-1_P10_02".ConfigOutput19; (**)
-	Cyclic#1.HalIO::bMMD_SynchDO[1] AT %IX."X20CM0985-1_P10_02".StatusDigitalOutput04; (**)
-	Cyclic#1.HalIO::iTimeStamp_PosZeroCrossing_UGen1 AT %ID."X20CM0985-1_P10_02".AnalogInput38; (**)
 	Cyclic#1.HalIO::usMMDSynchHWVariant[1] AT %IW."X20CM0985-1_P10_02".HardwareVariant; (**)
-	Cyclic#1.HalIO::iTimeStamp_PosZeroCrossing_UGen3 AT %ID."X20CM0985-1_P10_02".AnalogInput40; (**)
-	Cyclic#1.HalIO::bSyncSlipMode[1] AT %QX."X20CM0985-1_P10_02".ConfigOutput17; (**)
-	Cyclic#1.HalIO::F_MMD_LimHi[1] AT %IX."X20CM0985-1_P10_02".StatusInput03 INVERSE; (**)
-	Cyclic#1.HalIO::ssSynchVoltDeviation[1] AT %IW."X20CM0985-1_P10_02".AnalogInput30; (**)
-	Cyclic#1.HalIO::ssSynchAngleDeviation[1] AT %IW."X20CM0985-1_P10_02".AnalogInput29; (**)
-	Cyclic#1.HalIO::F_MMD_Synch2[1] AT %IW."X20CM0985-1_P10_02".AnalogInput28; (**)
-	Cyclic#1.HalIO::F_MMD_Synch1[1] AT %IW."X20CM0985-1_P10_02".AnalogInput27; (**)
-	Cyclic#1.HalIO::U_MMD_Synch2[1] AT %IW."X20CM0985-1_P10_02".AnalogInput26; (**)
-	Cyclic#1.HalIO::I_MMD_Asy[1] AT %IX."X20CM0985-1_P10_02".StatusInput06 INVERSE; (**)
 	Cyclic#1.HalIO::usMMDModuleID[1] AT %IW."X20CM0985-1_P10_02".ModuleID; (**)
-	Cyclic#1.HalIO::F_MMD_BusBar[1] AT %IW."X20CM0985-1_P10_02".AnalogInput35; (**)
+	Cyclic#1.HalIO::MMD_FW_Version[1] AT %IW."X20CM0985-1_P10_02".FirmwareVersion; (**)
 	Cyclic#1.HalIO::ulMMDSerialNumber[1] AT %ID."X20CM0985-1_P10_02".SerialNumber; (**)
-	Cyclic#1.HalIO::bSyncCheckMode[1] AT %QX."X20CM0985-1_P10_02".ConfigOutput18; (**)
+	Cyclic#1.HalIO::U_Gen_LimHi[1] AT %IX."X20CM0985-1_P10_02".StatusInput01 INVERSE; (**)
+	Cyclic#1.HalIO::U_Gen_LimLo[1] AT %IX."X20CM0985-1_P10_02".StatusInput02 INVERSE; (**)
+	Cyclic#1.HalIO::F_MMD_LimHi[1] AT %IX."X20CM0985-1_P10_02".StatusInput03 INVERSE; (**)
+	Cyclic#1.HalIO::F_MMD_LimLo[1] AT %IX."X20CM0985-1_P10_02".StatusInput04 INVERSE; (**)
+	Cyclic#1.HalIO::U_MMD_Asy[1] AT %IX."X20CM0985-1_P10_02".StatusInput05 INVERSE; (**)
+	Cyclic#1.HalIO::I_MMD_Asy[1] AT %IX."X20CM0985-1_P10_02".StatusInput06 INVERSE; (**)
 	Cyclic#1.HalIO::I_MMD_Neutr_LimHi[1] AT %IX."X20CM0985-1_P10_02".StatusInput07 INVERSE; (**)
+	Cyclic#1.HalIO::U_Gen_LimLo2[1] AT %IX."X20CM0985-1_P10_02".StatusInput18 INVERSE; (**)
 	Cyclic#1.HalIO::I_L1[1] AT %IW."X20CM0985-1_P10_02".AnalogInput01; (**)
 	Cyclic#1.HalIO::I_L2[1] AT %IW."X20CM0985-1_P10_02".AnalogInput02; (**)
-	Cyclic#1.HalIO::U_MMD_Asy[1] AT %IX."X20CM0985-1_P10_02".StatusInput05 INVERSE; (**)
-	Cyclic#1.HalIO::F_MMD_LimLo[1] AT %IX."X20CM0985-1_P10_02".StatusInput04 INVERSE; (**)
-	Cyclic#1.HalIO::MMD_FW_Version[1] AT %IW."X20CM0985-1_P10_02".FirmwareVersion; (**)
-	Cyclic#1.HalIO::U_Gen_LimLo[1] AT %IX."X20CM0985-1_P10_02".StatusInput02 INVERSE; (**)
+	Cyclic#1.HalIO::I_L3[1] AT %IW."X20CM0985-1_P10_02".AnalogInput03; (**)
+	Cyclic#1.HalIO::I_Avg[1] AT %IW."X20CM0985-1_P10_02".AnalogInput04; (**)
+	Cyclic#1.HalIO::ssIN[1] AT %IW."X20CM0985-1_P10_02".AnalogInput05; (**)
+	Cyclic#1.HalIO::usIDyn[1] AT %IW."X20CM0985-1_P10_02".AnalogInput06; (**)
+	Cyclic#1.HalIO::U_L1L2[1] AT %IW."X20CM0985-1_P10_02".AnalogInput07; (**)
+	Cyclic#1.HalIO::U_L2L3[1] AT %IW."X20CM0985-1_P10_02".AnalogInput08; (**)
+	Cyclic#1.HalIO::U_L3L1[1] AT %IW."X20CM0985-1_P10_02".AnalogInput09; (**)
+	Cyclic#1.HalIO::U_L1N[1] AT %IW."X20CM0985-1_P10_02".AnalogInput10; (**)
+	Cyclic#1.HalIO::U_L2N[1] AT %IW."X20CM0985-1_P10_02".AnalogInput11; (**)
+	Cyclic#1.HalIO::U_L3N[1] AT %IW."X20CM0985-1_P10_02".AnalogInput12; (**)
+	Cyclic#1.HalIO::U_Bus_L1_2[1] AT %IW."X20CM0985-1_P10_02".AnalogInput13; (**)
+	Cyclic#1.HalIO::U_Bus_L2_3[1] AT %IW."X20CM0985-1_P10_02".AnalogInput14; (**)
+	Cyclic#1.HalIO::U_Bus_L3_1[1] AT %IW."X20CM0985-1_P10_02".AnalogInput15; (**)
+	Cyclic#1.HalIO::U_Bus_L1N[1] AT %IW."X20CM0985-1_P10_02".AnalogInput16; (**)
+	Cyclic#1.HalIO::U_Bus_L2N[1] AT %IW."X20CM0985-1_P10_02".AnalogInput17; (**)
+	Cyclic#1.HalIO::U_Bus_L3N[1] AT %IW."X20CM0985-1_P10_02".AnalogInput18; (**)
+	Cyclic#1.HalIO::P_Act[1] AT %IW."X20CM0985-1_P10_02".AnalogInput19; (**)
+	Cyclic#1.HalIO::Q_Act[1] AT %IW."X20CM0985-1_P10_02".AnalogInput20; (**)
+	Cyclic#1.HalIO::S_Act[1] AT %IW."X20CM0985-1_P10_02".AnalogInput21; (**)
+	Cyclic#1.HalIO::U_Avg[1] AT %IW."X20CM0985-1_P10_02".AnalogInput22; (**)
+	Cyclic#1.HalIO::PF_Act[1] AT %IW."X20CM0985-1_P10_02".AnalogInput23; (**)
+	Cyclic#1.HalIO::F_MMD[1] AT %IW."X20CM0985-1_P10_02".AnalogInput24; (**)
+	Cyclic#1.HalIO::U_MMD_Synch1[1] AT %IW."X20CM0985-1_P10_02".AnalogInput25; (**)
+	Cyclic#1.HalIO::U_MMD_Synch2[1] AT %IW."X20CM0985-1_P10_02".AnalogInput26; (**)
+	Cyclic#1.HalIO::F_MMD_Synch1[1] AT %IW."X20CM0985-1_P10_02".AnalogInput27; (**)
+	Cyclic#1.HalIO::F_MMD_Synch2[1] AT %IW."X20CM0985-1_P10_02".AnalogInput28; (**)
+	Cyclic#1.HalIO::ssSynchAngleDeviation[1] AT %IW."X20CM0985-1_P10_02".AnalogInput29; (**)
+	Cyclic#1.HalIO::ssSynchVoltDeviation[1] AT %IW."X20CM0985-1_P10_02".AnalogInput30; (**)
+	Cyclic#1.HalIO::F_MMD_BusBar[1] AT %IW."X20CM0985-1_P10_02".AnalogInput35; (**)
+	Cyclic#1.HalIO::iTimeStamp_PosZeroCrossing_UGen1 AT %ID."X20CM0985-1_P10_02".AnalogInput38; (**)
 	Cyclic#1.HalIO::iTimeStamp_PosZeroCrossing_UGen2 AT %ID."X20CM0985-1_P10_02".AnalogInput39; (**)
+	Cyclic#1.HalIO::iTimeStamp_PosZeroCrossing_UGen3 AT %ID."X20CM0985-1_P10_02".AnalogInput40; (**)
+	Cyclic#1.HalIO::GCB_DVS AT %QX."X20CM0985-1_P10_02".DigitalOutput05; (*Synchronisieranwahl*)
+	Cyclic#1.HalIO::BB_Dead_MMD[1] AT %IX."X20CM0985-1_P10_02".StatusDigitalOutput03; (**)
+	Cyclic#1.HalIO::bMMD_SynchDO[1] AT %IX."X20CM0985-1_P10_02".StatusDigitalOutput04; (**)
+	Cyclic#1.HalIO::bSyncSlipMode[1] AT %QX."X20CM0985-1_P10_02".ConfigOutput17; (**)
+	Cyclic#1.HalIO::bSyncCheckMode[1] AT %QX."X20CM0985-1_P10_02".ConfigOutput18; (**)
+	Cyclic#1.HalIO::bSyncDeadBusMode[1] AT %QX."X20CM0985-1_P10_02".ConfigOutput19; (**)
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[3] AT %IX."X20CS1070_P10_03".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[4] AT %IX."X20CS1070_P10_04".ModuleOk; (**)
-	Cyclic#1.HalIO::CV_A_Ok AT %IX."X20DI9371_P10_05".DigitalInput01; (**)
-	Cyclic#1.HalIO::Cnt_GasImp AT %IX."X20DI9371_P10_05".DigitalInput03; (*Messung - Impuls Gasmengenzähler*)
-	Cyclic#1.HalIO::CustDigIn[15] AT %IX."X20DI9371_P10_05".DigitalInput07; (*Ansteuerung: Altölpumpe*)
-	Cyclic#1.HalIO::GasSysErr AT %IX."X20DI9371_P10_05".DigitalInput12; (*Störung - Gaswarnanlage*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[5] AT %IX."X20DI9371_P10_05".ModuleOk; (**)
-	Cyclic#1.HalIO::GasPreAlarm AT %IX."X20DI9371_P10_06".DigitalInput01; (*Störung - Gasvoralarm*)
-	Cyclic#1.HalIO::GasAlarm AT %IX."X20DI9371_P10_06".DigitalInput02; (*Blockierung - Gasalarm*)
-	Cyclic#1.HalIO::FireSysErr AT %IX."X20DI9371_P10_06".DigitalInput03; (*Störung Brandmeldeanlage*)
-	Cyclic#1.HalIO::FireAlarm AT %IX."X20DI9371_P10_06".DigitalInput04; (*Brandalarm ausgelöst*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[6] AT %IX."X20DI9371_P10_06".ModuleOk; (**)
-	Cyclic#1.HalIO::DPr_InAirFiltERV_Hi AT %IX."X20DI9371_P10_07".DigitalInput01; (*Status - Differenzdruck Maximum Luftfilter*)
-	Cyclic#1.HalIO::CustDigIn[35] AT %IX."X20DI9371_P10_07".DigitalInput02; (*Status: Generator Schutz Relais 700G gestört*)
-	Cyclic#1.HalIO::CustDigIn[26] AT %IX."X20DI9371_P10_07".DigitalInput03; (*Synchronisiersperrrelais 700G Ausgangsüberwachung*)
-	Cyclic#1.HalIO::GndFailure AT %IX."X20DI9371_P10_07".DigitalInput05; (*Status: Erdschluss*)
-	Cyclic#1.HalIO::DiffPrct AT %IX."X20DI9371_P10_07".DigitalInput06; (*Status: Differentialschutz ausgelöst*)
-	Cyclic#1.HalIO::DemEngOpExt AT %IX."X20DI9371_P10_07".DigitalInput07; (**)
-	Cyclic#1.HalIO::GCB_OGP AT %IX."X20DI9371_P10_07".DigitalInput08; (**)
-	Cyclic#1.HalIO::CustDigIn[2] AT %IX."X20DI9371_P10_07".DigitalInput09; (**)
-	Cyclic#1.HalIO::CustDigIn[3] AT %IX."X20DI9371_P10_07".DigitalInput10; (**)
-	Cyclic#1.HalIO::GCB_MRC AT %IX."X20DI9371_P10_07".DigitalInput11; (**)
-	Cyclic#1.HalIO::CustDigIn[6] AT %IX."X20DI9371_P10_07".DigitalInput12; (*Schnelles Trennen GCB*)
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[4] AT %IX."X20DI9371_P10_04".ModuleOk;
+	Cyclic#1.HalIO::MCB_SM AT %IX."X20DI9371_P10_04".DigitalInput01; (*Mains circuit breaker: Monitoring*)
+	Cyclic#1.HalIO::AuxV_Supply_Ok AT %IX."X20DI9371_P10_04".DigitalInput02; (*Status: Hilfsbetriebespannung OK*)
+	Cyclic#1.HalIO::CV_A_Ok AT %IX."X20DI9371_P10_04".DigitalInput03; (*Circuit breaker tripped 24VDC Base (External)*)
+	Cyclic#1.HalIO::MCB_On AT %IX."X20DI9371_P10_04".DigitalInput04; (*Status - Mains circuit breaker closed*)
+	Cyclic#1.HalIO::MCB_Off AT %IX."X20DI9371_P10_04".DigitalInput05; (*Status - Mains circuit breaker open*)
+	Cyclic#1.HalIO::TBMode AT %IX."X20DI9371_P10_04".DigitalInput06;
+	Cyclic#1.HalIO::GasPreAlarm AT %IX."X20DI9371_P10_04".DigitalInput07; (*Gas pre-alarm*)
+	Cyclic#1.HalIO::GasAlarm AT %IX."X20DI9371_P10_04".DigitalInput08; (*Gas alarm*)
+	Cyclic#1.HalIO::FireAlarm AT %IX."X20DI9371_P10_04".DigitalInput09; (*Fire alarm*)
+	Cyclic#1.HalIO::FireSysErr AT %IX."X20DI9371_P10_04".DigitalInput10; (*Failure Fire alarm system*)
+	Cyclic#1.HalIO::EmStop_MC AT %IX."X20DI9371_P10_04".DigitalInput11; (*Emergency stop Module +A*)
+	Cyclic#1.HalIO::GasSysErr AT %IX."X20DI9371_P10_04".DigitalInput12; (*Failure - Gas alarm system*)
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[5] AT %IX."X20DI9371_P10_05".ModuleOk;
+	Cyclic#1.HalIO::RelAux AT %IX."X20DI9371_P10_05".DigitalInput01; (*Status - Auxiliaries operation*)
+	Cyclic#1.HalIO::DemEngOpExt AT %IX."X20DI9371_P10_05".DigitalInput02; (*Command - Module activation*)
+	Cyclic#1.HalIO::DI_TestBench_TripPrio2 AT %IX."X20DI9371_P10_05".DigitalInput03; (*Status: Alarm Prüfstand (Prio 2)*)
+	Cyclic#1.HalIO::DI_TestBench_TripPrio3 AT %IX."X20DI9371_P10_05".DigitalInput04; (*Status: Alarm Prüfstand (Prio 3)*)
+	Cyclic#1.HalIO::DI_TestBench_Warning AT %IX."X20DI9371_P10_05".DigitalInput05; (*Status: Warnung Prüfstand*)
+	Cyclic#1.HalIO::GCB_Rdy AT %IX."X20DI9371_P10_05".DigitalInput06; (*Status - Generator circuit breaker ready to close*)
+	Cyclic#1.HalIO::GCB_Rac AT %IX."X20DI9371_P10_05".DigitalInput07; (*Status - Generator circuit breaker is racked in*)
+	Cyclic#1.HalIO::I_MMD_LimHi AT %IX."X20DI9371_P10_05".DigitalInput08; (*Status: Overload / Short circuit*)
+	Cyclic#1.HalIO::GCB_SM1 AT %IX."X20DI9371_P10_05".DigitalInput09; (*Switch off Generator circuit breaker*)
+	Cyclic#1.HalIO::GCB_SM2 AT %IX."X20DI9371_P10_05".DigitalInput10; (*Relay: Monitoring Generator circuit breaker*)
+	Cyclic#1.HalIO::Mns_MDF AT %IX."X20DI9371_P10_05".DigitalInput11; (*Failure: Mains monitoring device*)
+	Cyclic#1.HalIO::MnsOk AT %IX."X20DI9371_P10_05".DigitalInput12; (*Status: Mains OK*)
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[6] AT %IX."X20DI9371_P10_06".ModuleOk;
+	Cyclic#1.HalIO::EarthCB_Off AT %IX."X20DI9371_P10_06".DigitalInput06; (*Failure - Generator earthing switch closed*)
+	Cyclic#1.HalIO::GndFailure AT %IX."X20DI9371_P10_06".DigitalInput07; (*Status: Earth fault*)
+	Cyclic#1.HalIO::I_Diff AT %IX."X20DI9371_P10_06".DigitalInput11; (*Failure: Differential protection relay*)
+	Cyclic#1.HalIO::DiffPrct AT %IX."X20DI9371_P10_06".DigitalInput12; (*Status: Differential protection tripped*)
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[7] AT %IX."X20DI9371_P10_07".ModuleOk; (**)
-	Cyclic#1.HalIO::CustDigIn[27] AT %IX."X20DI9371_P10_08".DigitalInput01; (*Status: Transformator Feeder Schutzgerät SEL 751 gestört*)
-	Cyclic#1.HalIO::CustDigIn[30] AT %IX."X20DI9371_P10_08".DigitalInput02; (*Transformator SEL 751 ausgelöst *)
-	Cyclic#1.HalIO::CustDigIn[31] AT %IX."X20DI9371_P10_08".DigitalInput04; (*Status: Transformator SEL 751 Überlast/Kurzschluss*)
-	Cyclic#1.HalIO::CustDigIn[36] AT %IX."X20DI9371_P10_08".DigitalInput05; (*Status: Transformator SEL 751 Kurzschluss*)
-	Cyclic#1.HalIO::CustDigIn[32] AT %IX."X20DI9371_P10_08".DigitalInput06; (*Status: Transformator SEL 751 Erdschluss*)
-	Cyclic#1.HalIO::MnsOk AT %IX."X20DI9371_P10_08".DigitalInput08; (*Status - Netz ok*)
-	Cyclic#1.HalIO::I_MMD_LimHi AT %IX."X20DI9371_P10_08".DigitalInput09; (*Status: Überlast / Kurzschluss*)
-	Cyclic#1.HalIO::TBMode AT %IX."X20DI9371_P10_08".DigitalInput10; (*CIRCUITUS*)
-	Cyclic#1.HalIO::GCB_SM1 AT %IX."X20DI9371_P10_08".DigitalInput11; (*Ausgangsüberwachung*)
-	Cyclic#1.HalIO::GCB_SM2 AT %IX."X20DI9371_P10_08".DigitalInput12; (*Relais: Überwachung Generatorschalter*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[8] AT %IX."X20DI9371_P10_08".ModuleOk; (**)
-	Cyclic#1.HalIO::GCB_Rdy AT %IX."X20DI9371_P10_09".DigitalInput01; (*Status - Generatorschalter einschaltbereit*)
-	Cyclic#1.HalIO::GCB_Rac AT %IX."X20DI9371_P10_09".DigitalInput02; (*Status - Generatorschalter Schalterwagen eingefahren*)
-	Cyclic#1.HalIO::RelAux AT %IX."X20DI9371_P10_09".DigitalInput09; (**)
-	Cyclic#1.HalIO::MCB_On AT %IX."X20DI9371_P10_09".DigitalInput10; (*Status - Netzschalter geschlossen*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[9] AT %IX."X20DI9371_P10_09".ModuleOk; (**)
-	Cyclic#1.HalIO::EarthCB_Off AT %IX."X20DI9371_P10_10".DigitalInput03; (*Störung - Erdungstrenner Generator geschlossen*)
-	Cyclic#1.HalIO::EmStop_MC AT %IX."X20DI9371_P10_10".DigitalInput05; (*Not-Halt Modul +A*)
-	Cyclic#1.HalIO::CustDigIn[28] AT %IX."X20DI9371_P10_10".DigitalInput07; (*Status - Trafoschalter geschlossen*)
-	Cyclic#1.HalIO::CustDigIn[29] AT %IX."X20DI9371_P10_10".DigitalInput08; (*Status - Trafoschalter offen*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[10] AT %IX."X20DI9371_P10_10".ModuleOk; (**)
-	Cyclic#1.HalIO::CustDigOut[6] AT %QX."X20DO9322_P10_11".DigitalOutput01; (*Anforderung - Harnstoff Tagestank Ventil auf/zu*)
-	Cyclic#1.HalIO::CustDigOut[16] AT %QX."X20DO9322_P10_11".DigitalOutput11; (*Anforderung - Zuluftjalousie 1 *)
-	Cyclic#1.HalIO::CustDigOut[17] AT %QX."X20DO9322_P10_11".DigitalOutput12; (*Anforderung - Zuluftjalousie 2 *)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[11] AT %IX."X20DO9322_P10_11".ModuleOk; (**)
-	Cyclic#1.HalIO::CustDigOut[18] AT %QX."X20DO9322_P10_12".DigitalOutput01; (*Anforderung - Zuluftjalousie 3 *)
-	Cyclic#1.HalIO::CustDigOut[19] AT %QX."X20DO9322_P10_12".DigitalOutput02; (*Anforderung - Zuluftjalousie 4 *)
-	Cyclic#1.HalIO::CustDigOut[20] AT %QX."X20DO9322_P10_12".DigitalOutput03; (*Anforderung - Abluftjalousie 1*)
-	Cyclic#1.HalIO::CustDigOut[21] AT %QX."X20DO9322_P10_12".DigitalOutput04; (*Anforderung - Abluftjalousie 2*)
-	Cyclic#1.HalIO::CustDigOut[22] AT %QX."X20DO9322_P10_12".DigitalOutput05; (*Anforderung - Abluftjalousie 3*)
-	Cyclic#1.HalIO::CustDigOut[23] AT %QX."X20DO9322_P10_12".DigitalOutput06; (*Anforderung - Abluftjalousie 4*)
-	Cyclic#1.HalIO::CustDigOut[26] AT %QX."X20DO9322_P10_12".DigitalOutput09; (*Aktivierung Drehleuchte grün*)
-	Cyclic#1.HalIO::CustDigOut[27] AT %QX."X20DO9322_P10_12".DigitalOutput10; (*Aktivierung Drehleuchte gelb*)
-	Cyclic#1.HalIO::CustDigOut[28] AT %QX."X20DO9322_P10_12".DigitalOutput11; (*Aktivierung Drehleuchte rot*)
-	Cyclic#1.HalIO::Horn AT %QX."X20DO9322_P10_12".DigitalOutput12; (*Aktivierung Hupe*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[12] AT %IX."X20DO9322_P10_12".ModuleOk; (**)
-	Cyclic#1.HalIO::Eng_Rdy_Rem AT %QX."X20DO9322_P10_13".DigitalOutput07; (*Status - Bereit für Automatikanforderung*)
-	Cyclic#1.HalIO::Eng_Dem AT %QX."X20DO9322_P10_13".DigitalOutput08; (*Status - Modul angefordert*)
-	Cyclic#1.HalIO::Eng_Run AT %QX."X20DO9322_P10_13".DigitalOutput09; (*Status - Motor Betrieb*)
-	Cyclic#1.HalIO::GCB_OpF AT %QX."X20DO9322_P10_13".DigitalOutput10; (*Status - Generatorschalter Ausschaltstörung*)
-	Cyclic#1.HalIO::GnlTrip AT %QX."X20DO9322_P10_13".DigitalOutput11; (*Status - Sammelstörung abstellend*)
-	Cyclic#1.HalIO::CustDigOut[50] AT %QX."X20DO9322_P10_13".DigitalOutput12; (*Status - Verzögerte Abstellung aktiv Status - Delayed Shutdown active*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[13] AT %IX."X20DO9322_P10_13".ModuleOk; (**)
-	Cyclic#1.HalIO::GCB_Rel AT %QX."X20DO9322_P10_14".DigitalOutput07; (*Freigabe Generatorschalter*)
-	Cyclic#1.HalIO::GCB_COf AT %QX."X20DO9322_P10_14".DigitalOutput09; (*Ausgangsüberwachung*)
-	Cyclic#1.HalIO::GCB_COn AT %QX."X20DO9322_P10_14".DigitalOutput10; (*Generatorschalter Automatik Ersteinschaltung*)
-	Cyclic#1.HalIO::GCB_RSP AT %QX."X20DO9322_P10_14".DigitalOutput11; (*Freigabe SY Generatorschalter*)
-	Cyclic#1.HalIO::GCB_RT AT %QX."X20DO9322_P10_14".DigitalOutput12; (*Generatorschalter: Überbrückung Netz OK*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[14] AT %IX."X20DO9322_P10_14".ModuleOk; (**)
-	Cyclic#1.HalIO::GrC_DCon AT %QX."X20DO9322_P10_15".DigitalOutput01; (*Netztrennung Gridcode*)
-	Cyclic#1.HalIO::CustDigOut[29] AT %QX."X20DO9322_P10_15".DigitalOutput02; (*Befehl - {{Circuit Breaker}} Hilfsbetriebe Transformator ein*)
-	Cyclic#1.HalIO::Eng_Aux_Dem_CDR AT %QX."X20DO9322_P10_15".DigitalOutput03; (*Anforderung - Hilfsbetriebe mit Nachkühllauf*)
-	Cyclic#1.HalIO::CustDigOut[30] AT %QX."X20DO9322_P10_15".DigitalOutput09; (*Befehl - {{Circuit Breaker}} Hilfsbetriebe Transformator aus*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[15] AT %IX."X20DO9322_P10_15".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[16] AT %IX."X20PS3300_P10_16".ModuleOk; (**)
-	Cyclic#1.HalIO::GenPrctTrip AT %IX."X20SI8110_P10_17".SafeDigitalInput03; (*Blockierung - Generatorschutz ausgelöst*)
-	Cyclic#1.HalIO::GCB_Off AT %IX."X20SI8110_P10_17".SafeDigitalInput07; (*Status - Generatorschalter offen*)
-	Cyclic#1.HalIO::OlShortCirc AT %IX."X20SI8110_P10_17".SafeDigitalInput02; (*Störung - Überlast / Kurzschluss Generator*)
-	Cyclic#1.HalIO::GCB_On AT %IX."X20SI8110_P10_17".SafeDigitalInput06; (*Status - Generatorschalter geschlossen*)
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[8] AT %IX."X20DO9322_P10_08".ModuleOk;
+	Cyclic#1.HalIO::GnlTrip AT %QX."X20DO9322_P10_08".DigitalOutput02; (*Status - Sammelstörung abstellend*)
+	Cyclic#1.HalIO::GnlWarning AT %QX."X20DO9322_P10_08".DigitalOutput03; (*Engine: Sammelstörung warnend*)
+	Cyclic#1.HalIO::Eng_Run AT %QX."X20DO9322_P10_08".DigitalOutput04; (*Status - Motor Betrieb*)
+	Cyclic#1.HalIO::Eng_Aux_Dem_CDR AT %QX."X20DO9322_P10_08".DigitalOutput05; (*Anforderung - Hilfsbetriebe mit Nachkühllauf*)
+	Cyclic#1.HalIO::ResetTrip AT %QX."X20DO9322_P10_08".DigitalOutput06; (*Reset Alarm*)
+	Cyclic#1.HalIO::ResetWarning AT %QX."X20DO9322_P10_08".DigitalOutput07; (*Reset Warnung*)
+	Cyclic#1.HalIO::Sys_Run AT %QX."X20DO9322_P10_08".DigitalOutput08; (*Engine: Software läuft*)
+	Cyclic#1.HalIO::OMSS_MAT AT %QX."X20DO9322_P10_08".DigitalOutput09; (*Betriebswahlschalter Hand/Automatik*)
+	Cyclic#1.HalIO::PulseMainsOk AT %QX."X20DO9322_P10_08".DigitalOutput12; (*Status: Netz OK Takt*)
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[9] AT %IX."X20DO9322_P10_09".ModuleOk;
+	Cyclic#1.HalIO::GrC_DCon AT %QX."X20DO9322_P10_09".DigitalOutput02; (*Netztrennung Gridcode*)
+	Cyclic#1.HalIO::GCB_Rel AT %QX."X20DO9322_P10_09".DigitalOutput03; (*Freigabe Generatorschalter*)
+	Cyclic#1.HalIO::GCB_RSP AT %QX."X20DO9322_P10_09".DigitalOutput04; (*Freigabe SY Generatorschalter*)
+	Cyclic#1.HalIO::GCB_OpF AT %QX."X20DO9322_P10_09".DigitalOutput05; (*Status - Generatorschalter Ausschaltstörung*)
+	Cyclic#1.HalIO::GCB_COn AT %QX."X20DO9322_P10_09".DigitalOutput06; (*Generatorschalter Automatik Ersteinschaltung*)
+	Cyclic#1.HalIO::GCB_RT AT %QX."X20DO9322_P10_09".DigitalOutput07; (*Generatorschalter: Überbrückung Netz OK*)
+	Cyclic#1.HalIO::GCB_COf AT %QX."X20DO9322_P10_09".DigitalOutput08; (*Abschaltung Generatorschalter*)
+	Cyclic#1.HalIO::MCB_DVS AT %QX."X20DO9322_P10_09".DigitalOutput09; (*Rücksynchronisieranwahl*)
+	Cyclic#1.HalIO::MCB_RSP AT %QX."X20DO9322_P10_09".DigitalOutput10; (*Freigabe SY Impuls*)
+	Cyclic#1.HalIO::MCB_COn AT %QX."X20DO9322_P10_09".DigitalOutput11; (*Freigabe SY Netzschalter Ersteinschaltung*)
+	Cyclic#1.HalIO::MCB_COf AT %QX."X20DO9322_P10_09".DigitalOutput12; (*Abschaltung Netzschalter*)
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[10] AT %IX."X20DO9322_P10_10".ModuleOk;
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[11] AT %IX."X20AT4222_P10_11".ModuleOk;
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[12] AT %IX."X20AI4622_P10_12".ModuleOk;
+	Cyclic#1.HalIO::P_Set_ExtAI_Norm AT %IW."X20AI4622_P10_12".AnalogInput01; (*Sollwert - Generatorwirkleistung*)
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[13] AT %IX."X20AI4622_P10_13".ModuleOk;
+	Cyclic#1.HalIO::T_SCR_CatIn AT %IW."X20AI4622_P10_13".AnalogInput01; (*Messung: Abgastemperatur vor SCR*)
+	Cyclic#1.HalIO::T_SCR_CatOut AT %IW."X20AI4622_P10_13".AnalogInput02; (*Messung: Abgastemperatur nach SCR*)
+	Cyclic#1.HalIO::Pr_SCR_CatIn AT %IW."X20AI4622_P10_13".AnalogInput03; (*Messung: Abgasdruck vor SCR*)
+	Cyclic#1.HalIO::Pr_SCR_CatOut AT %IW."X20AI4622_P10_13".AnalogInput04; (*Messung: Abgasdruck nach SCR*)
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[14] AT %IX."X20AI4622_P10_14".ModuleOk;
+	Cyclic#1.HalIO::Flow_SCR_UreaDosingOut AT %IW."X20AI4622_P10_14".AnalogInput01; (*Harnstoff Dosierpumpe*)
+	Cyclic#1.HalIO::Pr_SCR_UreaDosingOut AT %IW."X20AI4622_P10_14".AnalogInput02; (*Messung: Harnstoffdrucksensor nach Dosiersystem*)
+	Cyclic#1.HalIO::Pr_SCR_ComprAirSupply AT %IW."X20AI4622_P10_14".AnalogInput03; (*Messung: Luftdrucksensor Harnstoffzerstäubung*)
+	Cyclic#1.HalIO::Pr_EG_Deflag_Fast AT %IW."X20AI4622_P10_14".AnalogInput04; (*Messung: Verpuffungsdetektion*)
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[15] AT %IX."X20AI4622_P10_15".ModuleOk;
+	Cyclic#1.HalIO::Lev_SCR_UreaTank AT %IW."X20AI4622_P10_15".AnalogInput04; (*Status - Füllstand Harnstofftank*)
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[16] AT %IX."X20AT6402_P10_16".ModuleOk;
+	Cyclic#1.HalIO::T_EG_PrReliefVa1 AT %IW."X20AT6402_P10_16".Temperature01; (*Messung: Abgastemperatur Druckentlastung Ventil 1*)
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[17] AT %IX."X20SI8110_P10_17".ModuleOk; (**)
-	Cyclic#1.HalIO::Rel_Sync_Load AT %QX."X20SO4110_P10_18".DigitalOutput01; (*Freigabe: Synchronisierung / Last*)
-	Cyclic#1.HalIO::GCB_RUC AT %QX."X20SO4110_P10_18".DigitalOutput02; (*Status: Freigabe Unterspannungsauslöser*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[18] AT %IX."X20SO4110_P10_18".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[19] AT %IX."X20SI8110_P10_19".ModuleOk; (**)
-	Cyclic#1.HalIO::ERV_INL1_Fan_Run AT %IX."X20SI9100_P10_20".SafeDigitalInput01; (**)
-	Cyclic#1.HalIO::ERV_INL3_Lou_CL AT %IX."X20SI9100_P10_20".SafeDigitalInput13; (*Status: Zuluftjalousie 3 geschlossen*)
-	Cyclic#1.HalIO::ERV_OTL3_Lou_OP AT %IX."X20SI9100_P10_20".SafeDigitalInput14; (*Status - Abluftjalousie 3 offen*)
-	Cyclic#1.HalIO::ERV_INL1_Lou_OP AT %IX."X20SI9100_P10_20".SafeDigitalInput02; (*Status: Zuluftjalousie 1 offen*)
-	Cyclic#1.HalIO::ERV_OTL3_Lou_CL AT %IX."X20SI9100_P10_20".SafeDigitalInput15; (*Status - Abluftjalousie 3 geschlossen*)
-	Cyclic#1.HalIO::ERV_INL1_Lou_CL AT %IX."X20SI9100_P10_20".SafeDigitalInput03; (*Status: Zuluftjalousie 1 geschlossen*)
-	Cyclic#1.HalIO::ERV_OTL1_Lou_OP AT %IX."X20SI9100_P10_20".SafeDigitalInput04; (**)
-	Cyclic#1.HalIO::ERV_INL4_Fan_Run AT %IX."X20SI9100_P10_20".SafeDigitalInput16; (**)
-	Cyclic#1.HalIO::ERV_OTL1_Lou_CL AT %IX."X20SI9100_P10_20".SafeDigitalInput05; (*Status - Abluftjalousie 1 geschlossen*)
-	Cyclic#1.HalIO::ERV_INL4_Lou_OP AT %IX."X20SI9100_P10_20".SafeDigitalInput17; (*Status: Zuluftjalousie 4 offen*)
-	Cyclic#1.HalIO::ERV_INL2_Fan_Run AT %IX."X20SI9100_P10_20".SafeDigitalInput06; (**)
-	Cyclic#1.HalIO::ERV_INL4_Lou_CL AT %IX."X20SI9100_P10_20".SafeDigitalInput18; (*Status: Zuluftjalousie 4 geschlossen*)
-	Cyclic#1.HalIO::ERV_OTL4_Lou_OP AT %IX."X20SI9100_P10_20".SafeDigitalInput19; (*Status - Abluftjalousie 4 offen*)
-	Cyclic#1.HalIO::ERV_INL2_Lou_OP AT %IX."X20SI9100_P10_20".SafeDigitalInput07; (*Status: Zuluftjalousie 2 offen*)
-	Cyclic#1.HalIO::ERV_INL2_Lou_CL AT %IX."X20SI9100_P10_20".SafeDigitalInput08; (*Status: Zuluftjalousie 2 geschlossen*)
-	Cyclic#1.HalIO::ERV_OTL4_Lou_CL AT %IX."X20SI9100_P10_20".SafeDigitalInput20; (*Status - Abluftjalousie 4 geschlossen*)
-	Cyclic#1.HalIO::ERV_OTL2_Lou_OP AT %IX."X20SI9100_P10_20".SafeDigitalInput09; (*Status - Abluftjalousie 2 offen*)
-	Cyclic#1.HalIO::ERV_OTL2_Lou_CL AT %IX."X20SI9100_P10_20".SafeDigitalInput10; (*Status - Abluftjalousie 2 geschlossen*)
-	Cyclic#1.HalIO::ERV_INL3_Fan_Run AT %IX."X20SI9100_P10_20".SafeDigitalInput11; (**)
-	Cyclic#1.HalIO::ERV_INL3_Lou_OP AT %IX."X20SI9100_P10_20".SafeDigitalInput12; (*Status: Zuluftjalousie 3 offen*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[20] AT %IX."X20SI9100_P10_20".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[17] AT %IX."X20AO4622_P10_17".ModuleOk;
+	Cyclic#1.HalIO::OlShortCirc AT %IX."X20SI8110_P10_17".SafeDigitalInput02; (*Störung - Überlast / Kurzschluss Generator*)
+	Cyclic#1.HalIO::GenPrctTrip AT %IX."X20SI8110_P10_17".SafeDigitalInput03; (*Blockierung - Generatorschutz ausgelöst*)
+	Cyclic#1.HalIO::GCB_On AT %IX."X20SI8110_P10_17".SafeDigitalInput06; (*Status - Generatorschalter geschlossen*)
+	Cyclic#1.HalIO::GCB_Off AT %IX."X20SI8110_P10_17".SafeDigitalInput07; (*Status - Generatorschalter offen*)
+	Cyclic#1.HalIO::P_Act_AO AT %QW."X20AO4622_P10_17".AnalogOutput01; (*Messung - Generatorwirkleistung*)
+	Cyclic#1.HalIO::P_Avail_Norm AT %QW."X20AO4622_P10_17".AnalogOutput02; (*Messung - Verfügbare Leistung*)
+	Cyclic#1.HalIO::Q_GenC_Act AT %QW."X20AO4622_P10_17".AnalogOutput03; (*Messung - Generatorblindleistung*)
+	Cyclic#1.HalIO::PF_GenC_Act AT %QW."X20AO4622_P10_17".AnalogOutput04; (*Messung - Generator cos f*)
+	Cyclic#1.EngineGeneral::bSafeModuleOK_101 AT %IX."X20SI8110_P10_17".SafeModuleOK;
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[18] AT %IX."X20SI8110_P10_18".ModuleOk;
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[18] AT %IX."X20AO4622_P10_18".ModuleOk;
+	Cyclic#1.HalIO::Pc_SCR_UreaDosingPump_Set AT %QW."X20AO4622_P10_18".AnalogOutput01; (*Sollwert: Harnstoff Dosierpumpe*)
+	Cyclic#1.HalIO::Pr_MGT_sp AT %QW."X20AO4622_P10_18".AnalogOutput02; (*I/P Umformer Gasstrecke*)
+	Cyclic#1.EngineGeneral::bSafeModuleOK_105 AT %IX."X20SI8110_P10_18".SafeModuleOK;
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[19] AT %IX."X20SO4110_P10_19".ModuleOk;
+	Cyclic#1.HalIO::Rel_Sync_Load AT %QX."X20SO4110_P10_19".DigitalOutput01; (*Freigabe: Synchronisierung / Last*)
+	Cyclic#1.HalIO::GCB_RUC AT %QX."X20SO4110_P10_19".DigitalOutput02; (*Status: Freigabe Unterspannungsauslöser*)
+	Cyclic#1.EngineGeneral::bSafeModuleOK_102 AT %IX."X20SO4110_P10_19".SafeModuleOK;
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[19] AT %IX."X20SI8110_P10_19x".ModuleOk; (**)
+	Cyclic#1.EngineGeneral::bSafeModuleOK_103 AT %IX."X20SI8110_P10_19x".SafeModuleOK;
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[20] AT %IX."X20SI9100_P10_20x".ModuleOk; (**)
+	Cyclic#1.HalIO::ERV_INL1_Fan_Run AT %IX."X20SI9100_P10_20x".SafeDigitalInput01; (**)
+	Cyclic#1.HalIO::ERV_INL1_Lou_OP AT %IX."X20SI9100_P10_20x".SafeDigitalInput02; (*Status: Zuluftjalousie 1 offen*)
+	Cyclic#1.HalIO::ERV_INL1_Lou_CL AT %IX."X20SI9100_P10_20x".SafeDigitalInput03; (*Status: Zuluftjalousie 1 geschlossen*)
+	Cyclic#1.HalIO::ERV_OTL1_Lou_OP AT %IX."X20SI9100_P10_20x".SafeDigitalInput04; (**)
+	Cyclic#1.HalIO::ERV_OTL1_Lou_CL AT %IX."X20SI9100_P10_20x".SafeDigitalInput05; (*Status - Abluftjalousie 1 geschlossen*)
+	Cyclic#1.HalIO::ERV_INL2_Fan_Run AT %IX."X20SI9100_P10_20x".SafeDigitalInput06; (**)
+	Cyclic#1.HalIO::ERV_INL2_Lou_OP AT %IX."X20SI9100_P10_20x".SafeDigitalInput07; (*Status: Zuluftjalousie 2 offen*)
+	Cyclic#1.HalIO::ERV_INL2_Lou_CL AT %IX."X20SI9100_P10_20x".SafeDigitalInput08; (*Status: Zuluftjalousie 2 geschlossen*)
+	Cyclic#1.HalIO::ERV_OTL2_Lou_OP AT %IX."X20SI9100_P10_20x".SafeDigitalInput09; (*Status - Abluftjalousie 2 offen*)
+	Cyclic#1.HalIO::ERV_OTL2_Lou_CL AT %IX."X20SI9100_P10_20x".SafeDigitalInput10; (*Status - Abluftjalousie 2 geschlossen*)
+	Cyclic#1.HalIO::ERV_INL3_Fan_Run AT %IX."X20SI9100_P10_20x".SafeDigitalInput11; (**)
+	Cyclic#1.HalIO::ERV_INL3_Lou_OP AT %IX."X20SI9100_P10_20x".SafeDigitalInput12; (*Status: Zuluftjalousie 3 offen*)
+	Cyclic#1.HalIO::ERV_INL3_Lou_CL AT %IX."X20SI9100_P10_20x".SafeDigitalInput13; (*Status: Zuluftjalousie 3 geschlossen*)
+	Cyclic#1.HalIO::ERV_OTL3_Lou_OP AT %IX."X20SI9100_P10_20x".SafeDigitalInput14; (*Status - Abluftjalousie 3 offen*)
+	Cyclic#1.HalIO::ERV_OTL3_Lou_CL AT %IX."X20SI9100_P10_20x".SafeDigitalInput15; (*Status - Abluftjalousie 3 geschlossen*)
+	Cyclic#1.HalIO::ERV_INL4_Fan_Run AT %IX."X20SI9100_P10_20x".SafeDigitalInput16; (**)
+	Cyclic#1.HalIO::ERV_INL4_Lou_OP AT %IX."X20SI9100_P10_20x".SafeDigitalInput17; (*Status: Zuluftjalousie 4 offen*)
+	Cyclic#1.HalIO::ERV_INL4_Lou_CL AT %IX."X20SI9100_P10_20x".SafeDigitalInput18; (*Status: Zuluftjalousie 4 geschlossen*)
+	Cyclic#1.HalIO::ERV_OTL4_Lou_OP AT %IX."X20SI9100_P10_20x".SafeDigitalInput19; (*Status - Abluftjalousie 4 offen*)
+	Cyclic#1.HalIO::ERV_OTL4_Lou_CL AT %IX."X20SI9100_P10_20x".SafeDigitalInput20; (*Status - Abluftjalousie 4 geschlossen*)
+	Cyclic#1.EngineGeneral::bSafeModuleOK_300 AT %IX."X20SI9100_P10_20x".SafeModuleOK;
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[21] AT %IX."X20SI8110_P10_21".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[22] AT %IX."X20SI8110_P10_22".ModuleOk; (**)
+	Cyclic#1.EngineGeneral::bSafeModuleOK_104 AT %IX."X20SI8110_P10_21".SafeModuleOK;
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[23] AT %IX."X20SI9100_P10_23".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[31].ModuleOK[0] AT %IX."X20BC8083_P31_00".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[31].ModuleOK[1] AT %IX."X20PS9400_P31_01".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[31].ModuleOK[2] AT %IX."X20AI4622_P31_02".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[31].ModuleOK[3] AT %IX."X20AI4622_P31_03".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[31].ModuleOK[4] AT %IX."X20AI4622_P31_04".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[31].ModuleOK[5] AT %IX."X20AI4622_P31_05".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[31].ModuleOK[6] AT %IX."X20AI4622_P31_06".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[31].ModuleOK[7] AT %IX."X20AT4222_P31_07".ModuleOk; (**)
-	Cyclic#1.HalIO::T_AirER AT %IW."X20AT4222_P31_08".Temperature02; (*Messung - Raumtemperatur*)
-	Cyclic#1.HalIO::T_AirOutdoor AT %IW."X20AT4222_P31_08".Temperature03; (*Messung - Umgebungslufttemperatur*)
-	Cyclic#1.HalIO::StationIO[31].ModuleOK[8] AT %IX."X20AT4222_P31_08".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[31].ModuleOK[9] AT %IX."X20AT4222_P31_09".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[31].ModuleOK[10] AT %IX."X20AO4622_P31_10".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[31].ModuleOK[11] AT %IX."X20AO4622_P31_11".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[31].ModuleOK[12] AT %IX."X20AO4622_P31_12".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[31].ModuleOK[13] AT %IX."X20AO4622_P31_13".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[31].ModuleOK[14] AT %IX."X20AO4622_P31_14".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[31].ModuleOK[15] AT %IX."X20AO4622_P31_15".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[41].ModuleOK[0] AT %IX."X20BC8083_P41_00".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[41].ModuleOK[1] AT %IX."X20PS9400_P41_01".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[41].ModuleOK[2] AT %IX."X20CS1070_P41_02_NOX3".ModuleOk; (**)
-	Cyclic#1.HalIO::Pr_EG_Deflag_Fast AT %IW."X20AI4622_P41_03".AnalogInput01; (*Messung: Verpuffungsdetektion*)
-	Cyclic#1.HalIO::Pr_SCR_CatIn AT %IW."X20AI4622_P41_03".AnalogInput02; (*Messung: Abgasdruck vor SCR*)
-	Cyclic#1.HalIO::Pr_SCR_CatOut AT %IW."X20AI4622_P41_03".AnalogInput03; (*Messung: Abgasdruck nach SCR*)
-	Cyclic#1.HalIO::T_SCR_CatIn AT %IW."X20AI4622_P41_03".AnalogInput04; (*Messung: Abgastemperatur vor SCR*)
-	Cyclic#1.HalIO::StationIO[41].ModuleOK[3] AT %IX."X20AI4622_P41_03".ModuleOk; (**)
-	Cyclic#1.HalIO::T_SCR_CatOut AT %IW."X20AI4622_P41_04".AnalogInput01; (*Messung: Abgastemperatur nach SCR*)
-	Cyclic#1.HalIO::Pr_SCR_UreaDosingOut AT %IW."X20AI4622_P41_04".AnalogInput02; (*Messung: Harnstoffdrucksensor nach Dosiersystem*)
-	Cyclic#1.HalIO::Pr_SCR_ComprAirSupply AT %IW."X20AI4622_P41_04".AnalogInput03; (*Messung: Luftdrucksensor Harnstoffzerstäubung*)
-	Cyclic#1.HalIO::Lev_SCR_UreaTank AT %IW."X20AI4622_P41_04".AnalogInput04; (*Status - Füllstand Harnstofftank*)
-	Cyclic#1.HalIO::StationIO[41].ModuleOK[4] AT %IX."X20AI4622_P41_04".ModuleOk; (**)
-	Cyclic#1.HalIO::Flow_SCR_UreaDosingOut AT %IW."X20AI4622_P41_05".AnalogInput01; (**)
-	Cyclic#1.HalIO::CustAnaIn[30] AT %IW."X20AI4622_P41_05".AnalogInput02; (*Messung: Heizwasserdruck  Austritt Hochtemperaturkreis Pumpe*)
-	Cyclic#1.HalIO::StationIO[41].ModuleOK[5] AT %IX."X20AI4622_P41_05".ModuleOk; (**)
-	Cyclic#1.HalIO::Pc_SCR_UreaDosingPump_Set AT %QW."X20AO4622_P41_06".AnalogOutput01; (*Anforderung: Schrittmotor Harnstoff Dosierpumpe*)
-	Cyclic#1.HalIO::StationIO[41].ModuleOK[6] AT %IX."X20AO4622_P41_06".ModuleOk; (**)
-	Cyclic#1.HalIO::CustDigIn[33] AT %IX."X20DI9371_P41_07".DigitalInput01; (*Status - Harnstoff Tagestank Füllstand Maximum*)
-	Cyclic#1.HalIO::CustDigIn[34] AT %IX."X20DI9371_P41_07".DigitalInput02; (*Status - Leckage Harnstoff Tagestank*)
-	Cyclic#1.HalIO::SCR_UreaDosingPump_Rdy AT %IX."X20DI9371_P41_07".DigitalInput03; (**)
-	Cyclic#1.HalIO::SCR_InjectValve_Air AT %IX."X20DI9371_P41_07".DigitalInput04; (*Status:. Ventil Luft/Harnstoff - Luft offen*)
-	Cyclic#1.HalIO::StationIO[41].ModuleOK[7] AT %IX."X20DI9371_P41_07".ModuleOk; (**)
-	Cyclic#1.HalIO::SCR_UreaDosingPump_Dem AT %QX."X20DO9322_P41_08".DigitalOutput01; (*Anforderung: Harnstoff Dosierpumpe*)
-	Cyclic#1.HalIO::SCR_InjectValve_Urea_Dem AT %QX."X20DO9322_P41_08".DigitalOutput02; (*Umschaltung Ventil Luft/Harnstoff.*)
-	Cyclic#1.HalIO::StationIO[41].ModuleOK[8] AT %IX."X20DO9322_P41_08".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[42].ModuleOK[0] AT %IX."X20BC8083_P42_00".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[42].ModuleOK[1] AT %IX."X20PS9400_P42_01".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[42].ModuleOK[2] AT %IX."X20CS1030_P42_02".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[67].ModuleOK[0] AT %IX."X20BC1083_P67_00".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[67].ModuleOK[1] AT %IX."X20PS9400_P67_01".ModuleOk; (**)
-	Cyclic#1.HalIO::T_HW_Re_LT AT %IW."UR20-4AI-RTD-DIAG_P90_14".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Rücklauftemperatur [Niedertemperaturkreis]*)
-	Cyclic#1.HalIO::Pos_TV_A2 AT %QW."UR20-4AO-UI-16_P90_18".OutputImage_I4700_S00_UID_AnalogOutput03; (*Sollwert: Position Drosselklappe A2*)
-	Cyclic#1.HalIO::Cnt_OilPulse AT %IX."UR20-16DI-P_P90_22".InputImage_I4600_S00_UID_DigitalInput08; (*Messung: Zähler Ölverbrauch*)
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[0] AT %IX."X20BC8083_P20_00".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[1] AT %IX."X20PS9400_P20_01".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[2] AT %IX."X20CS1070_P20_02_IGN1".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[4] AT %IX."X20CS1070_P20_04_NOX1".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[5] AT %IX."X20CS1070_P20_05_OQS".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[10] AT %IX."X20SD1207_P20_10".ModuleOk;
-	Cyclic#1.HalIO::Pr_EngLubOil AT %IW."X20SA4430_P20_11".SafeCurrent0102; (*Messung: Motoröldruck*)
-	Cyclic#1.HalIO::Pr_EOaP AT %IW."X20SA4430_P20_11".SafeCurrent0304; (*Messung: Öldruck nach Ölpumpe*)
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[11] AT %IX."X20SA4430_P20_11".ModuleOk;
-	Cyclic#1.HalIO::Pr_ECW AT %IW."X20SA4430_P20_12".SafeCurrent0102; (*Messung: Motorkühlwasserdruck*)
-	Cyclic#1.HalIO::Pr_ECWaP1 AT %IW."X20SA4430_P20_12".SafeCurrent0304; (*Messung: Kühlwasserdruck Austritt Motorkühlwasserpumpe 1*)
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[12] AT %IX."X20SA4430_P20_12".ModuleOk;
-	Cyclic#1.HalIO::Ign_Run_Hal AT %IX."X20SI8110_P20_13".SafeDigitalInput02; (*Betrieb: Zündung*)
-	Cyclic#1.HalIO::Pr_EG_Hi AT %IX."X20SI8110_P20_13".SafeDigitalInput06; (*Status: Abgasgegendruck max*)
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[13] AT %IX."X20SI8110_P20_13".ModuleOk;
-	Cyclic#1.HalIO::GT1_GV1_Open AT %QX."X20SO4110_P20_14".DigitalOutput01; (*Anforderung: Gasventile - Gasstrecke 1 öffnen*)
-	Cyclic#1.HalIO::GT1_GV2_Open AT %QX."X20SO4110_P20_14".DigitalOutput02; (*Anforderung: Gasventile - Gasstrecke 1 öffnen*)
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[14] AT %IX."X20SO4110_P20_14".ModuleOk;
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[15] AT %IX."X20SO4110_P20_15".ModuleOk;
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[19] AT %IX."X20SO4110_P20_19".ModuleOk;
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[17] AT %IX."X20SI8110_P20_17".ModuleOk;
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[18] AT %IX."X20SO4110_P20_18".ModuleOk;
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[16] AT %IX."X20SO4110_P20_16".ModuleOk;
-	Cyclic#1.HalIO::StationIO[21].ModuleOK[0] AT %IX."X20BC8083_P21_00".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[21].ModuleOK[1] AT %IX."X20PS9400_P21_01".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[21].ModuleOK[2] AT %IX."X20CM4810_P21_02".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[21].ModuleOK[3] AT %IX."X20CM4810_P21_03".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[21].ModuleOK[4] AT %IX."X20CM4810_P21_04".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[30].ModuleOK[0] AT %IX."X20BC8083_P30_00".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[30].ModuleOK[1] AT %IX."X20PS9400_P30_01".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[30].ModuleOK[2] AT %IX."X20DI9371_P30_02".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[30].ModuleOK[3] AT %IX."X20DI9371_P30_03".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[30].ModuleOK[4] AT %IX."X20DI9371_P30_04".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[30].ModuleOK[5] AT %IX."X20DI9371_P30_05".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[30].ModuleOK[6] AT %IX."X20DO9322_P30_06".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[30].ModuleOK[7] AT %IX."X20DO9322_P30_07".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[30].ModuleOK[8] AT %IX."X20DO9322_P30_08".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[30].ModuleOK[9] AT %IX."X20AI4622_P30_09".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[30].ModuleOK[10] AT %IX."X20AO4622_P30_10".ModuleOk; (**)
-	Cyclic#5.HalIO::OUT_HA.iSerialNumber_CPU AT %ID."PLC1".SerialNumber; (* Seriennummer des CPU Boards                         *)
-	Cyclic#5.HalIO::OUT_HA.iModulID_CPU AT %IW."PLC1".ModuleID; (* Modulkennung des CPU Boards                         *)
-	Cyclic#5.HalIO::OUT_HA.iBatterieStatus AT %IB."PLC1".BatteryStatusCPU; (* Batterie Status CPU (0 = Batterie leer oder nicht vorhanden, 1 = Batterie OK)                         *)
-	Cyclic#5.HalIO::OUT_HA.iT_CPU_PLC AT %IW."PLC1".TemperatureCPU; (* Temperatur des Prozessors CPU in 1/10 Grad Celsius                         *)
+	Cyclic#1.EngineGeneral::bSafeModuleOK_301 AT %IX."X20SI9100_P10_23".SafeModuleOK;
+	Cyclic#5.Coupling::InData1[0] AT %IW."X20IF1063_1_P17_01b".inData000;
 	Cyclic#5.Coupling::OutData[0] AT %QW."X20IF1063_1_P17_01b".outData000;
+	Cyclic#5.Coupling::InData1[1] AT %IW."X20IF1063_1_P17_01b".inData001;
 	Cyclic#5.Coupling::OutData[1] AT %QW."X20IF1063_1_P17_01b".outData001;
+	Cyclic#5.Coupling::InData1[2] AT %IW."X20IF1063_1_P17_01b".inData002;
 	Cyclic#5.Coupling::OutData[2] AT %QW."X20IF1063_1_P17_01b".outData002;
+	Cyclic#5.Coupling::InData1[3] AT %IW."X20IF1063_1_P17_01b".inData003;
 	Cyclic#5.Coupling::OutData[3] AT %QW."X20IF1063_1_P17_01b".outData003;
+	Cyclic#5.Coupling::InData1[4] AT %IW."X20IF1063_1_P17_01b".inData004;
 	Cyclic#5.Coupling::OutData[4] AT %QW."X20IF1063_1_P17_01b".outData004;
+	Cyclic#5.Coupling::InData1[5] AT %IW."X20IF1063_1_P17_01b".inData005;
 	Cyclic#5.Coupling::OutData[5] AT %QW."X20IF1063_1_P17_01b".outData005;
+	Cyclic#5.Coupling::InData1[6] AT %IW."X20IF1063_1_P17_01b".inData006;
 	Cyclic#5.Coupling::OutData[6] AT %QW."X20IF1063_1_P17_01b".outData006;
+	Cyclic#5.Coupling::InData1[7] AT %IW."X20IF1063_1_P17_01b".inData007;
 	Cyclic#5.Coupling::OutData[7] AT %QW."X20IF1063_1_P17_01b".outData007;
+	Cyclic#5.Coupling::InData1[8] AT %IW."X20IF1063_1_P17_01b".inData008;
 	Cyclic#5.Coupling::OutData[8] AT %QW."X20IF1063_1_P17_01b".outData008;
+	Cyclic#5.Coupling::InData1[9] AT %IW."X20IF1063_1_P17_01b".inData009;
 	Cyclic#5.Coupling::OutData[9] AT %QW."X20IF1063_1_P17_01b".outData009;
+	Cyclic#5.Coupling::InData1[10] AT %IW."X20IF1063_1_P17_01b".inData010;
 	Cyclic#5.Coupling::OutData[10] AT %QW."X20IF1063_1_P17_01b".outData010;
+	Cyclic#5.Coupling::InData1[11] AT %IW."X20IF1063_1_P17_01b".inData011;
 	Cyclic#5.Coupling::OutData[11] AT %QW."X20IF1063_1_P17_01b".outData011;
+	Cyclic#5.Coupling::InData1[12] AT %IW."X20IF1063_1_P17_01b".inData012;
 	Cyclic#5.Coupling::OutData[12] AT %QW."X20IF1063_1_P17_01b".outData012;
+	Cyclic#5.Coupling::InData1[13] AT %IW."X20IF1063_1_P17_01b".inData013;
 	Cyclic#5.Coupling::OutData[13] AT %QW."X20IF1063_1_P17_01b".outData013;
+	Cyclic#5.Coupling::InData1[14] AT %IW."X20IF1063_1_P17_01b".inData014;
 	Cyclic#5.Coupling::OutData[14] AT %QW."X20IF1063_1_P17_01b".outData014;
+	Cyclic#5.Coupling::InData1[15] AT %IW."X20IF1063_1_P17_01b".inData015;
 	Cyclic#5.Coupling::OutData[15] AT %QW."X20IF1063_1_P17_01b".outData015;
 	Cyclic#5.Coupling::OutData[16] AT %QW."X20IF1063_1_P17_01b".outData016;
 	Cyclic#5.Coupling::OutData[17] AT %QW."X20IF1063_1_P17_01b".outData017;
@@ -366,6 +296,10 @@ VAR_CONFIG
 	Cyclic#5.Coupling::OutData[93] AT %QW."X20IF1063_1_P17_01b".outData093;
 	Cyclic#5.Coupling::OutData[94] AT %QW."X20IF1063_1_P17_01b".outData094;
 	Cyclic#5.Coupling::OutData[95] AT %QW."X20IF1063_1_P17_01b".outData095;
+	Cyclic#5.Coupling::MM2VIS.iBC_PB1_Comm_ChangeState AT %ID."X20IF1063_1_P17_01b".Communication_Change_of_State;
+	Cyclic#5.Coupling::MM2VIS.iBC_PB1_Comm_Error AT %ID."X20IF1063_1_P17_01b".Communication_Error;
+	Cyclic#5.Coupling::MM2VIS.iBC_PB1_Comm_State AT %ID."X20IF1063_1_P17_01b".Communication_State;
+	Cyclic#5.Coupling::MM2VIS.iCnt_BC_PB1_Comm_Error AT %ID."X20IF1063_1_P17_01b".Error_Count;
 	Cyclic#5.Coupling::OutData[96] AT %QW."X20IF1063_1_P17_01c".outData096;
 	Cyclic#5.Coupling::OutData[97] AT %QW."X20IF1063_1_P17_01c".outData097;
 	Cyclic#5.Coupling::OutData[98] AT %QW."X20IF1063_1_P17_01c".outData098;
@@ -462,21 +396,41 @@ VAR_CONFIG
 	Cyclic#5.Coupling::OutData[189] AT %QW."X20IF1063_1_P17_01c".outData189;
 	Cyclic#5.Coupling::OutData[190] AT %QW."X20IF1063_1_P17_01c".outData190;
 	Cyclic#5.Coupling::OutData[191] AT %QW."X20IF1063_1_P17_01c".outData191;
+	Cyclic#5.Coupling::MM2VIS.iBC_PB2_Comm_ChangeState AT %ID."X20IF1063_1_P17_01c".Communication_Change_of_State;
+	Cyclic#5.Coupling::MM2VIS.iBC_PB2_Comm_Error AT %ID."X20IF1063_1_P17_01c".Communication_Error;
+	Cyclic#5.Coupling::MM2VIS.iBC_PB2_Comm_State AT %ID."X20IF1063_1_P17_01c".Communication_State;
+	Cyclic#5.Coupling::MM2VIS.iCnt_BC_PB2_Comm_Error AT %ID."X20IF1063_1_P17_01c".Error_Count;
+	Cyclic#5.Coupling::InData1PN[0] AT %IW."X20IF10E3_1_P18_01b".inData000;
 	Cyclic#5.Coupling::OutData[0] AT %QW."X20IF10E3_1_P18_01b".outData000;
+	Cyclic#5.Coupling::InData1PN[1] AT %IW."X20IF10E3_1_P18_01b".inData001;
 	Cyclic#5.Coupling::OutData[1] AT %QW."X20IF10E3_1_P18_01b".outData001;
+	Cyclic#5.Coupling::InData1PN[2] AT %IW."X20IF10E3_1_P18_01b".inData002;
 	Cyclic#5.Coupling::OutData[2] AT %QW."X20IF10E3_1_P18_01b".outData002;
+	Cyclic#5.Coupling::InData1PN[3] AT %IW."X20IF10E3_1_P18_01b".inData003;
 	Cyclic#5.Coupling::OutData[3] AT %QW."X20IF10E3_1_P18_01b".outData003;
+	Cyclic#5.Coupling::InData1PN[4] AT %IW."X20IF10E3_1_P18_01b".inData004;
 	Cyclic#5.Coupling::OutData[4] AT %QW."X20IF10E3_1_P18_01b".outData004;
+	Cyclic#5.Coupling::InData1PN[5] AT %IW."X20IF10E3_1_P18_01b".inData005;
 	Cyclic#5.Coupling::OutData[5] AT %QW."X20IF10E3_1_P18_01b".outData005;
+	Cyclic#5.Coupling::InData1PN[6] AT %IW."X20IF10E3_1_P18_01b".inData006;
 	Cyclic#5.Coupling::OutData[6] AT %QW."X20IF10E3_1_P18_01b".outData006;
+	Cyclic#5.Coupling::InData1PN[7] AT %IW."X20IF10E3_1_P18_01b".inData007;
 	Cyclic#5.Coupling::OutData[7] AT %QW."X20IF10E3_1_P18_01b".outData007;
+	Cyclic#5.Coupling::InData1PN[8] AT %IW."X20IF10E3_1_P18_01b".inData008;
 	Cyclic#5.Coupling::OutData[8] AT %QW."X20IF10E3_1_P18_01b".outData008;
+	Cyclic#5.Coupling::InData1PN[9] AT %IW."X20IF10E3_1_P18_01b".inData009;
 	Cyclic#5.Coupling::OutData[9] AT %QW."X20IF10E3_1_P18_01b".outData009;
+	Cyclic#5.Coupling::InData1PN[10] AT %IW."X20IF10E3_1_P18_01b".inData010;
 	Cyclic#5.Coupling::OutData[10] AT %QW."X20IF10E3_1_P18_01b".outData010;
+	Cyclic#5.Coupling::InData1PN[11] AT %IW."X20IF10E3_1_P18_01b".inData011;
 	Cyclic#5.Coupling::OutData[11] AT %QW."X20IF10E3_1_P18_01b".outData011;
+	Cyclic#5.Coupling::InData1PN[12] AT %IW."X20IF10E3_1_P18_01b".inData012;
 	Cyclic#5.Coupling::OutData[12] AT %QW."X20IF10E3_1_P18_01b".outData012;
+	Cyclic#5.Coupling::InData1PN[13] AT %IW."X20IF10E3_1_P18_01b".inData013;
 	Cyclic#5.Coupling::OutData[13] AT %QW."X20IF10E3_1_P18_01b".outData013;
+	Cyclic#5.Coupling::InData1PN[14] AT %IW."X20IF10E3_1_P18_01b".inData014;
 	Cyclic#5.Coupling::OutData[14] AT %QW."X20IF10E3_1_P18_01b".outData014;
+	Cyclic#5.Coupling::InData1PN[15] AT %IW."X20IF10E3_1_P18_01b".inData015;
 	Cyclic#5.Coupling::OutData[15] AT %QW."X20IF10E3_1_P18_01b".outData015;
 	Cyclic#5.Coupling::OutData[16] AT %QW."X20IF10E3_1_P18_01b".outData016;
 	Cyclic#5.Coupling::OutData[17] AT %QW."X20IF10E3_1_P18_01b".outData017;
@@ -654,76 +608,92 @@ VAR_CONFIG
 	Cyclic#5.Coupling::OutData[189] AT %QW."X20IF10E3_1_P18_01b".outData189;
 	Cyclic#5.Coupling::OutData[190] AT %QW."X20IF10E3_1_P18_01b".outData190;
 	Cyclic#5.Coupling::OutData[191] AT %QW."X20IF10E3_1_P18_01b".outData191;
-	Cyclic#5.Coupling::InData1PN[0] AT %IW."X20IF10E3_1_P18_01b".inData000;
-	Cyclic#5.Coupling::InData1PN[1] AT %IW."X20IF10E3_1_P18_01b".inData001;
-	Cyclic#5.Coupling::InData1PN[2] AT %IW."X20IF10E3_1_P18_01b".inData002;
-	Cyclic#5.Coupling::InData1PN[3] AT %IW."X20IF10E3_1_P18_01b".inData003;
-	Cyclic#5.Coupling::InData1PN[4] AT %IW."X20IF10E3_1_P18_01b".inData004;
-	Cyclic#5.Coupling::InData1PN[5] AT %IW."X20IF10E3_1_P18_01b".inData005;
-	Cyclic#5.Coupling::InData1PN[6] AT %IW."X20IF10E3_1_P18_01b".inData006;
-	Cyclic#5.Coupling::InData1PN[7] AT %IW."X20IF10E3_1_P18_01b".inData007;
-	Cyclic#5.Coupling::InData1PN[8] AT %IW."X20IF10E3_1_P18_01b".inData008;
-	Cyclic#5.Coupling::InData1PN[9] AT %IW."X20IF10E3_1_P18_01b".inData009;
-	Cyclic#5.Coupling::InData1PN[10] AT %IW."X20IF10E3_1_P18_01b".inData010;
-	Cyclic#5.Coupling::InData1PN[11] AT %IW."X20IF10E3_1_P18_01b".inData011;
-	Cyclic#5.Coupling::InData1PN[12] AT %IW."X20IF10E3_1_P18_01b".inData012;
-	Cyclic#5.Coupling::InData1PN[13] AT %IW."X20IF10E3_1_P18_01b".inData013;
-	Cyclic#5.Coupling::InData1PN[14] AT %IW."X20IF10E3_1_P18_01b".inData014;
-	Cyclic#5.Coupling::InData1PN[15] AT %IW."X20IF10E3_1_P18_01b".inData015;
-	Cyclic#5.Coupling::InData1[0] AT %IW."X20IF1063_1_P17_01b".inData000;
-	Cyclic#5.Coupling::InData1[1] AT %IW."X20IF1063_1_P17_01b".inData001;
-	Cyclic#5.Coupling::InData1[2] AT %IW."X20IF1063_1_P17_01b".inData002;
-	Cyclic#5.Coupling::InData1[3] AT %IW."X20IF1063_1_P17_01b".inData003;
-	Cyclic#5.Coupling::InData1[4] AT %IW."X20IF1063_1_P17_01b".inData004;
-	Cyclic#5.Coupling::InData1[5] AT %IW."X20IF1063_1_P17_01b".inData005;
-	Cyclic#5.Coupling::InData1[6] AT %IW."X20IF1063_1_P17_01b".inData006;
-	Cyclic#5.Coupling::InData1[7] AT %IW."X20IF1063_1_P17_01b".inData007;
-	Cyclic#5.Coupling::InData1[8] AT %IW."X20IF1063_1_P17_01b".inData008;
-	Cyclic#5.Coupling::InData1[9] AT %IW."X20IF1063_1_P17_01b".inData009;
-	Cyclic#5.Coupling::InData1[10] AT %IW."X20IF1063_1_P17_01b".inData010;
-	Cyclic#5.Coupling::InData1[11] AT %IW."X20IF1063_1_P17_01b".inData011;
-	Cyclic#5.Coupling::InData1[12] AT %IW."X20IF1063_1_P17_01b".inData012;
-	Cyclic#5.Coupling::InData1[13] AT %IW."X20IF1063_1_P17_01b".inData013;
-	Cyclic#5.Coupling::InData1[14] AT %IW."X20IF1063_1_P17_01b".inData014;
-	Cyclic#5.Coupling::InData1[15] AT %IW."X20IF1063_1_P17_01b".inData015;
-	Cyclic#5.Coupling::MM2VIS.iBC_PB1_Comm_ChangeState AT %ID."X20IF1063_1_P17_01b".Communication_Change_of_State;
-	Cyclic#5.Coupling::MM2VIS.iBC_PB2_Comm_ChangeState AT %ID."X20IF1063_1_P17_01c".Communication_Change_of_State;
-	Cyclic#5.Coupling::MM2VIS.iBC_PB1_Comm_State AT %ID."X20IF1063_1_P17_01b".Communication_State;
-	Cyclic#5.Coupling::MM2VIS.iBC_PB1_Comm_Error AT %ID."X20IF1063_1_P17_01b".Communication_Error;
-	Cyclic#5.Coupling::MM2VIS.iCnt_BC_PB1_Comm_Error AT %ID."X20IF1063_1_P17_01b".Error_Count;
-	Cyclic#5.Coupling::MM2VIS.iCnt_BC_PB2_Comm_Error AT %ID."X20IF1063_1_P17_01c".Error_Count;
-	Cyclic#5.Coupling::MM2VIS.iBC_PB2_Comm_Error AT %ID."X20IF1063_1_P17_01c".Communication_Error;
-	Cyclic#5.Coupling::MM2VIS.iBC_PB2_Comm_State AT %ID."X20IF1063_1_P17_01c".Communication_State;
 	Cyclic#5.Coupling::MM2VIS.iBC_PN1_Comm_ChangeState AT %ID."X20IF10E3_1_P18_01b".Communication_Change_of_State;
-	Cyclic#5.Coupling::MM2VIS.iBC_PN1_Comm_State AT %ID."X20IF10E3_1_P18_01b".Communication_State;
 	Cyclic#5.Coupling::MM2VIS.iBC_PN1_Comm_Error AT %ID."X20IF10E3_1_P18_01b".Communication_Error;
+	Cyclic#5.Coupling::MM2VIS.iBC_PN1_Comm_State AT %ID."X20IF10E3_1_P18_01b".Communication_State;
 	Cyclic#5.Coupling::MM2VIS.iCnt_BC_PN1_Comm_Error AT %ID."X20IF10E3_1_P18_01b".Error_Count;
-	Cyclic#1.HalIO::OUT_HA.iSystemTime AT %ID."PLC1".SystemTime;
-	Cyclic#1.EngineGeneral::VibMonEG:rSensitivitySensor[1] AT %QD."X20CM4810_P21_02".SensitivitySensor01;
-	Cyclic#1.EngineGeneral::VibMonEG:rSensitivitySensor[2] AT %QD."X20CM4810_P21_02".SensitivitySensor02;
-	Cyclic#1.EngineGeneral::VibMonEG:rSensitivitySensor[3] AT %QD."X20CM4810_P21_02".SensitivitySensor03;
-	Cyclic#1.EngineGeneral::VibMonEG:rSensitivitySensor[4] AT %QD."X20CM4810_P21_02".SensitivitySensor04;
-	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.RequestBufferLock01 AT %QX."X20CM4810_P21_02".RequestBufferLock01;
-	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferLockValid01 AT %IX."X20CM4810_P21_02".BufferLockValid01;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[0] AT %IX."X20BC8083_P20_00".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[1] AT %IX."X20PS9400_P20_01".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[2] AT %IX."X20CS1070_P20_02_IGN1".ModuleOk; (**)
+	Cyclic#1.HalIO::bCANbusoff AT %IX."X20CS1070_P20_02_IGN1".CANbusoff;
+	Cyclic#1.HalIO::bQuitCANbusoff AT %QX."X20CS1070_P20_02_IGN1".QuitCANbussoff;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[3] AT %IX."X20CS1070_P20_03_IGN2".ModuleOk;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[4] AT %IX."X20CS1070_P20_04_NOX1".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[5] AT %IX."X20CS1070_P20_05_OQS".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[6] AT %IX."X20AI4622_P20_06".ModuleOk;
+	Cyclic#1.HalIO::N_TCLP_A AT %IW."X20AI4622_P20_06".AnalogInput01; (*Messung: Drehzahlsensor Abgasturbolader Niederdruck A*)
+	Cyclic#1.HalIO::N_TCLP_B AT %IW."X20AI4622_P20_06".AnalogInput02; (*Messung: Drehzahlsensor Abgasturbolader Niederdruck B*)
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[7] AT %IX."X20AI4622_P20_07".ModuleOk;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[8] AT %IX."X20AT4222_P20_08".ModuleOk;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[9] AT %IX."X20AO4622_P20_09".ModuleOk;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[10] AT %IX."X20SD1207_P20_10".ModuleOk;
+	Cyclic#1.EngineGeneral::bSafeModuleOK_201 AT %IX."X20SD1207_P20_10".SafeModuleOK;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[11] AT %IX."X20SA4430_P20_11".ModuleOk;
+	Cyclic#1.HalIO::Pr_EngLubOil AT %IW."X20SA4430_P20_11".SafeCurrent0102; (*Messung: Motoröldruck*)
+	Cyclic#1.HalIO::Pr_EOaP AT %IW."X20SA4430_P20_11".SafeCurrent0304; (*Messung: Öldruck nach Ölpumpe*)
+	Cyclic#1.EngineGeneral::bSafeModuleOK_202 AT %IX."X20SA4430_P20_11".SafeModuleOK;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[12] AT %IX."X20SA4430_P20_12".ModuleOk;
+	Cyclic#1.HalIO::Pr_ECW AT %IW."X20SA4430_P20_12".SafeCurrent0102; (*Messung: Motorkühlwasserdruck*)
+	Cyclic#1.HalIO::Pr_ECWaP1 AT %IW."X20SA4430_P20_12".SafeCurrent0304; (*Messung: Kühlwasserdruck Austritt Motorkühlwasserpumpe 1*)
+	Cyclic#1.EngineGeneral::bSafeModuleOK_203 AT %IX."X20SA4430_P20_12".SafeModuleOK;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[13] AT %IX."X20SI8110_P20_13".ModuleOk;
+	Cyclic#1.HalIO::Ign_Run_Hal AT %IX."X20SI8110_P20_13".SafeDigitalInput02; (*Betrieb: Zündung*)
+	Cyclic#1.HalIO::Pr_EG_Hi AT %IX."X20SI8110_P20_13".SafeDigitalInput06; (*Status: Abgasgegendruck max*)
+	Cyclic#1.EngineGeneral::bSafeModuleOK_204 AT %IX."X20SI8110_P20_13".SafeModuleOK;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[14] AT %IX."X20SO4110_P20_14".ModuleOk;
+	Cyclic#1.HalIO::GT1_GV1_Open AT %QX."X20SO4110_P20_14".DigitalOutput01; (*Anforderung: Gasventile - Gasstrecke 1 öffnen*)
+	Cyclic#1.HalIO::GT1_GV2_Open AT %QX."X20SO4110_P20_14".DigitalOutput02; (*Anforderung: Gasventile - Gasstrecke 1 öffnen*)
+	Cyclic#1.EngineGeneral::bSafeModuleOK_205 AT %IX."X20SO4110_P20_14".SafeModuleOK;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[15] AT %IX."X20SO4110_P20_15".ModuleOk;
+	Cyclic#1.HalIO::GT2_GV1_Open AT %QX."X20SO4110_P20_15".DigitalOutput01; (*Anforderung: Gasventile - Gasstrecke 2 öffnen*)
+	Cyclic#1.HalIO::GT2_GV2_Open AT %QX."X20SO4110_P20_15".DigitalOutput02; (*Anforderung: Gasventile - Gasstrecke 2 öffnen*)
+	Cyclic#1.EngineGeneral::bSafeModuleOK_206 AT %IX."X20SO4110_P20_15".SafeModuleOK;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[16] AT %IX."X20SO4110_P20_16".ModuleOk;
+	Cyclic#1.HalIO::DCGA_GV1_Open AT %QX."X20SO4110_P20_16".DigitalOutput01; (*Anforderung: Gasventil 1 Dezentrale Gasdosierung*)
+	Cyclic#1.HalIO::DCGA_GV2_Open AT %QX."X20SO4110_P20_16".DigitalOutput02; (*Anforderung: Gasventil 2 Dezentrale Gasdosierung*)
+	Cyclic#1.EngineGeneral::bSafeModuleOK_210 AT %IX."X20SO4110_P20_16".SafeModuleOK;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[17] AT %IX."X20SI8110_P20_17".ModuleOk;
+	Cyclic#1.EngineGeneral::bSafeModuleOK_208 AT %IX."X20SI8110_P20_17".SafeModuleOK;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[18] AT %IX."X20SO4110_P20_18".ModuleOk;
+	Cyclic#1.EngineGeneral::bSafeModuleOK_209 AT %IX."X20SO4110_P20_18".SafeModuleOK;
+	Cyclic#1.HalIO::StationIO[20].ModuleOK[19] AT %IX."X20SO4110_P20_19".ModuleOk;
+	Cyclic#1.EngineGeneral::bSafeModuleOK_207 AT %IX."X20SO4110_P20_19".SafeModuleOK;
+	Cyclic#1.HalIO::StationIO[21].ModuleOK[0] AT %IX."X20BC8083_P21_00".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[21].ModuleOK[1] AT %IX."X20PS9400_P21_01".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[21].ModuleOK[2] AT %IX."X20CM4810_P21_02".ModuleOk; (**)
+	Cyclic#1.EngineGeneral::VibMonEG:bVibSens_BrokenWire[1] AT %IX."X20CM4810_P21_02".BrokenWire01;
 	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferInputSequence01 AT %IB."X20CM4810_P21_02".BufferInputSequence01;
-	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferRxByte01 AT %IB."X20CM4810_P21_02".BufferRxByte01;
-	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferRxByte02 AT %IB."X20CM4810_P21_02".BufferRxByte02;
-	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferRxByte03 AT %IB."X20CM4810_P21_02".BufferRxByte03;
-	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferRxByte04 AT %IB."X20CM4810_P21_02".BufferRxByte04;
-	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferRxByte05 AT %IB."X20CM4810_P21_02".BufferRxByte05;
+	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferLockValid01 AT %IX."X20CM4810_P21_02".BufferLockValid01;
 	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferOutputSequence01 AT %QB."X20CM4810_P21_02".BufferOutputSequence01;
+	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferRxByte01 AT %IB."X20CM4810_P21_02".BufferRxByte01;
 	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferTxByte01 AT %QB."X20CM4810_P21_02".BufferTxByte01;
-	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferTxByte02 AT %QB."X20CM4810_P21_02".BufferTxByte02;
-	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferTxByte03 AT %QB."X20CM4810_P21_02".BufferTxByte03;
-	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferTxByte04 AT %QB."X20CM4810_P21_02".BufferTxByte04;
-	Cyclic#1.EngineGeneral::VibMonEG:rVel_VibSens[1] AT %ID."X20CM4810_P21_02".RmsVelRaw01;
-	Cyclic#1.EngineGeneral::VibMonEG:rVel_VibSens[2] AT %ID."X20CM4810_P21_02".RmsVelRaw02;
-	Cyclic#1.EngineGeneral::VibMonEG:rVel_VibSens[3] AT %ID."X20CM4810_P21_02".RmsVelRaw03;
-	Cyclic#1.EngineGeneral::VibMonEG:rVel_VibSens[4] AT %ID."X20CM4810_P21_02".RmsVelRaw04;
 	Cyclic#1.EngineGeneral::VibMonEG:rVel_VibSens_Band[1] AT %ID."X20CM4810_P21_02".FrequencyBand01;
+	Cyclic#1.EngineGeneral::VibMonEG:bVibSens_Overflow[1] AT %IX."X20CM4810_P21_02".Overflow01;
+	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.RequestBufferLock01 AT %QX."X20CM4810_P21_02".RequestBufferLock01;
+	Cyclic#1.EngineGeneral::VibMonEG:rVel_VibSens[1] AT %ID."X20CM4810_P21_02".RmsVelRaw01;
+	Cyclic#1.EngineGeneral::VibMonEG:rSensitivitySensor[1] AT %QD."X20CM4810_P21_02".SensitivitySensor01;
+	Cyclic#1.EngineGeneral::VibMonEG:bVibSens_BrokenWire[2] AT %IX."X20CM4810_P21_02".BrokenWire02;
+	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferRxByte02 AT %IB."X20CM4810_P21_02".BufferRxByte02;
+	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferTxByte02 AT %QB."X20CM4810_P21_02".BufferTxByte02;
 	Cyclic#1.EngineGeneral::VibMonEG:rVel_VibSens_Band[2] AT %ID."X20CM4810_P21_02".FrequencyBand02;
+	Cyclic#1.EngineGeneral::VibMonEG:bVibSens_Overflow[2] AT %IX."X20CM4810_P21_02".Overflow02;
+	Cyclic#1.EngineGeneral::VibMonEG:rVel_VibSens[2] AT %ID."X20CM4810_P21_02".RmsVelRaw02;
+	Cyclic#1.EngineGeneral::VibMonEG:rSensitivitySensor[2] AT %QD."X20CM4810_P21_02".SensitivitySensor02;
+	Cyclic#1.EngineGeneral::VibMonEG:bVibSens_BrokenWire[3] AT %IX."X20CM4810_P21_02".BrokenWire03;
+	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferRxByte03 AT %IB."X20CM4810_P21_02".BufferRxByte03;
+	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferTxByte03 AT %QB."X20CM4810_P21_02".BufferTxByte03;
 	Cyclic#1.EngineGeneral::VibMonEG:rVel_VibSens_Band[3] AT %ID."X20CM4810_P21_02".FrequencyBand03;
+	Cyclic#1.EngineGeneral::VibMonEG:bVibSens_Overflow[3] AT %IX."X20CM4810_P21_02".Overflow03;
+	Cyclic#1.EngineGeneral::VibMonEG:rVel_VibSens[3] AT %ID."X20CM4810_P21_02".RmsVelRaw03;
+	Cyclic#1.EngineGeneral::VibMonEG:rSensitivitySensor[3] AT %QD."X20CM4810_P21_02".SensitivitySensor03;
+	Cyclic#1.EngineGeneral::VibMonEG:bVibSens_BrokenWire[4] AT %IX."X20CM4810_P21_02".BrokenWire04;
+	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferRxByte04 AT %IB."X20CM4810_P21_02".BufferRxByte04;
+	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferTxByte04 AT %QB."X20CM4810_P21_02".BufferTxByte04;
 	Cyclic#1.EngineGeneral::VibMonEG:rVel_VibSens_Band[4] AT %ID."X20CM4810_P21_02".FrequencyBand04;
+	Cyclic#1.EngineGeneral::VibMonEG:bVibSens_Overflow[4] AT %IX."X20CM4810_P21_02".Overflow04;
+	Cyclic#1.EngineGeneral::VibMonEG:rVel_VibSens[4] AT %ID."X20CM4810_P21_02".RmsVelRaw04;
+	Cyclic#1.EngineGeneral::VibMonEG:rSensitivitySensor[4] AT %QD."X20CM4810_P21_02".SensitivitySensor04;
+	Cyclic#1.EngineGeneral::VibMonEG:xCM4810.ioMapping.BufferRxByte05 AT %IB."X20CM4810_P21_02".BufferRxByte05;
 	Cyclic#1.EngineGeneral::VibMonEG:rVel_VibSens_Band[5] AT %ID."X20CM4810_P21_02".FrequencyBand05;
 	Cyclic#1.EngineGeneral::VibMonEG:rVel_VibSens_Band[6] AT %ID."X20CM4810_P21_02".FrequencyBand06;
 	Cyclic#1.EngineGeneral::VibMonEG:rVel_VibSens_Band[7] AT %ID."X20CM4810_P21_02".FrequencyBand07;
@@ -752,29 +722,99 @@ VAR_CONFIG
 	Cyclic#1.EngineGeneral::VibMonEG:rVel_VibSens_Band[30] AT %ID."X20CM4810_P21_02".FrequencyBand30;
 	Cyclic#1.EngineGeneral::VibMonEG:rVel_VibSens_Band[31] AT %ID."X20CM4810_P21_02".FrequencyBand31;
 	Cyclic#1.EngineGeneral::VibMonEG:rVel_VibSens_Band[32] AT %ID."X20CM4810_P21_02".FrequencyBand32;
-	Cyclic#1.EngineGeneral::VibMonEG:bVibSens_Overflow[1] AT %IX."X20CM4810_P21_02".Overflow01;
-	Cyclic#1.EngineGeneral::VibMonEG:bVibSens_Overflow[2] AT %IX."X20CM4810_P21_02".Overflow02;
-	Cyclic#1.EngineGeneral::VibMonEG:bVibSens_Overflow[3] AT %IX."X20CM4810_P21_02".Overflow03;
-	Cyclic#1.EngineGeneral::VibMonEG:bVibSens_Overflow[4] AT %IX."X20CM4810_P21_02".Overflow04;
-	Cyclic#1.EngineGeneral::VibMonEG:bVibSens_BrokenWire[1] AT %IX."X20CM4810_P21_02".BrokenWire01;
-	Cyclic#1.EngineGeneral::VibMonEG:bVibSens_BrokenWire[2] AT %IX."X20CM4810_P21_02".BrokenWire02;
-	Cyclic#1.EngineGeneral::VibMonEG:bVibSens_BrokenWire[3] AT %IX."X20CM4810_P21_02".BrokenWire03;
-	Cyclic#1.EngineGeneral::VibMonEG:bVibSens_BrokenWire[4] AT %IX."X20CM4810_P21_02".BrokenWire04;
+	Cyclic#1.HalIO::StationIO[21].ModuleOK[3] AT %IX."X20CM4810_P21_03".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[21].ModuleOK[4] AT %IX."X20CM4810_P21_04".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[30].ModuleOK[0] AT %IX."X20BC8083_P30_00".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[30].ModuleOK[1] AT %IX."X20PS9400_P30_01".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[30].ModuleOK[2] AT %IX."X20DI9371_P30_02".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[30].ModuleOK[3] AT %IX."X20DI9371_P30_03".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[30].ModuleOK[4] AT %IX."X20DI9371_P30_04".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[30].ModuleOK[5] AT %IX."X20DI9371_P30_05".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[30].ModuleOK[6] AT %IX."X20DO9322_P30_06".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[30].ModuleOK[7] AT %IX."X20DO9322_P30_07".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[30].ModuleOK[8] AT %IX."X20DO9322_P30_08".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[30].ModuleOK[9] AT %IX."X20AI4622_P30_09".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[30].ModuleOK[10] AT %IX."X20AO4622_P30_10".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[31].ModuleOK[0] AT %IX."X20BC8083_P31_00".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[31].ModuleOK[1] AT %IX."X20PS9400_P31_01".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[31].ModuleOK[2] AT %IX."X20AI4622_P31_02".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[31].ModuleOK[3] AT %IX."X20AI4622_P31_03".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[31].ModuleOK[4] AT %IX."X20AI4622_P31_04".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[31].ModuleOK[5] AT %IX."X20AI4622_P31_05".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[31].ModuleOK[6] AT %IX."X20AI4622_P31_06".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[31].ModuleOK[7] AT %IX."X20AT4222_P31_07".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[31].ModuleOK[8] AT %IX."X20AT4222_P31_08".ModuleOk; (**)
+	Cyclic#1.HalIO::T_AirER AT %IW."X20AT4222_P31_08".Temperature02; (*Messung - Raumtemperatur*)
+	Cyclic#1.HalIO::T_AirOutdoor AT %IW."X20AT4222_P31_08".Temperature03; (*Messung - Umgebungslufttemperatur*)
+	Cyclic#1.HalIO::StationIO[31].ModuleOK[9] AT %IX."X20AT4222_P31_09".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[31].ModuleOK[10] AT %IX."X20AO4622_P31_10".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[31].ModuleOK[11] AT %IX."X20AO4622_P31_11".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[31].ModuleOK[12] AT %IX."X20AO4622_P31_12".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[31].ModuleOK[13] AT %IX."X20AO4622_P31_13".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[31].ModuleOK[14] AT %IX."X20AO4622_P31_14".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[31].ModuleOK[15] AT %IX."X20AO4622_P31_15".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[41].ModuleOK[0] AT %IX."X20BC8083_P41_00".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[41].ModuleOK[1] AT %IX."X20PS9400_P41_01".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[41].ModuleOK[2] AT %IX."X20CS1070_P41_02_NOX3".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[41].ModuleOK[3] AT %IX."X20AI4622_P41_03".ModuleOk; (**)
+	Cyclic#1.HalIO::Pr_EG_Deflag_Fast AT %IW."X20AI4622_P41_03".AnalogInput01; (*Messung: Verpuffungsdetektion*)
+	Cyclic#1.HalIO::Pr_SCR_CatIn AT %IW."X20AI4622_P41_03".AnalogInput02; (*Messung: Abgasdruck vor SCR*)
+	Cyclic#1.HalIO::Pr_SCR_CatOut AT %IW."X20AI4622_P41_03".AnalogInput03; (*Messung: Abgasdruck nach SCR*)
+	Cyclic#1.HalIO::T_SCR_CatIn AT %IW."X20AI4622_P41_03".AnalogInput04; (*Messung: Abgastemperatur vor SCR*)
+	Cyclic#1.HalIO::StationIO[41].ModuleOK[4] AT %IX."X20AI4622_P41_04".ModuleOk; (**)
+	Cyclic#1.HalIO::T_SCR_CatOut AT %IW."X20AI4622_P41_04".AnalogInput01; (*Messung: Abgastemperatur nach SCR*)
+	Cyclic#1.HalIO::Pr_SCR_UreaDosingOut AT %IW."X20AI4622_P41_04".AnalogInput02; (*Messung: Harnstoffdrucksensor nach Dosiersystem*)
+	Cyclic#1.HalIO::Pr_SCR_ComprAirSupply AT %IW."X20AI4622_P41_04".AnalogInput03; (*Messung: Luftdrucksensor Harnstoffzerstäubung*)
+	Cyclic#1.HalIO::Lev_SCR_UreaTank AT %IW."X20AI4622_P41_04".AnalogInput04; (*Status - Füllstand Harnstofftank*)
+	Cyclic#1.HalIO::StationIO[41].ModuleOK[5] AT %IX."X20AI4622_P41_05".ModuleOk; (**)
+	Cyclic#1.HalIO::Flow_SCR_UreaDosingOut AT %IW."X20AI4622_P41_05".AnalogInput01; (**)
+	Cyclic#1.HalIO::CustAnaIn[30] AT %IW."X20AI4622_P41_05".AnalogInput02; (*Messung: Heizwasserdruck  Austritt Hochtemperaturkreis Pumpe*)
+	Cyclic#1.HalIO::StationIO[41].ModuleOK[6] AT %IX."X20AO4622_P41_06".ModuleOk; (**)
+	Cyclic#1.HalIO::Pc_SCR_UreaDosingPump_Set AT %QW."X20AO4622_P41_06".AnalogOutput01; (*Anforderung: Schrittmotor Harnstoff Dosierpumpe*)
+	Cyclic#1.HalIO::StationIO[41].ModuleOK[7] AT %IX."X20DI9371_P41_07".ModuleOk; (**)
+	Cyclic#1.HalIO::CustDigIn[33] AT %IX."X20DI9371_P41_07".DigitalInput01; (*Status - Harnstoff Tagestank Füllstand Maximum*)
+	Cyclic#1.HalIO::CustDigIn[34] AT %IX."X20DI9371_P41_07".DigitalInput02; (*Status - Leckage Harnstoff Tagestank*)
+	Cyclic#1.HalIO::SCR_UreaDosingPump_Rdy AT %IX."X20DI9371_P41_07".DigitalInput03; (**)
+	Cyclic#1.HalIO::SCR_InjectValve_Air AT %IX."X20DI9371_P41_07".DigitalInput04; (*Status:. Ventil Luft/Harnstoff - Luft offen*)
+	Cyclic#1.HalIO::StationIO[41].ModuleOK[8] AT %IX."X20DO9322_P41_08".ModuleOk; (**)
+	Cyclic#1.HalIO::SCR_UreaDosingPump_Dem AT %QX."X20DO9322_P41_08".DigitalOutput01; (*Anforderung: Harnstoff Dosierpumpe*)
+	Cyclic#1.HalIO::SCR_InjectValve_Urea_Dem AT %QX."X20DO9322_P41_08".DigitalOutput02; (*Umschaltung Ventil Luft/Harnstoff.*)
+	Cyclic#1.HalIO::StationIO[42].ModuleOK[0] AT %IX."X20BC8083_P42_00".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[42].ModuleOK[1] AT %IX."X20PS9400_P42_01".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[42].ModuleOK[2] AT %IX."X20CS1030_P42_02".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[67].ModuleOK[0] AT %IX."X20BC1083_P67_00".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[67].ModuleOK[1] AT %IX."X20PS9400_P67_01".ModuleOk; (**)
+	Cyclic#5.Coupling::InData2[0] AT %IW."X20IF1063_1_P67_01b".inData000;
 	Cyclic#5.Coupling::OutData[0] AT %QW."X20IF1063_1_P67_01b".outData000;
+	Cyclic#5.Coupling::InData2[1] AT %IW."X20IF1063_1_P67_01b".inData001;
 	Cyclic#5.Coupling::OutData[1] AT %QW."X20IF1063_1_P67_01b".outData001;
+	Cyclic#5.Coupling::InData2[2] AT %IW."X20IF1063_1_P67_01b".inData002;
 	Cyclic#5.Coupling::OutData[2] AT %QW."X20IF1063_1_P67_01b".outData002;
+	Cyclic#5.Coupling::InData2[3] AT %IW."X20IF1063_1_P67_01b".inData003;
 	Cyclic#5.Coupling::OutData[3] AT %QW."X20IF1063_1_P67_01b".outData003;
+	Cyclic#5.Coupling::InData2[4] AT %IW."X20IF1063_1_P67_01b".inData004;
 	Cyclic#5.Coupling::OutData[4] AT %QW."X20IF1063_1_P67_01b".outData004;
+	Cyclic#5.Coupling::InData2[5] AT %IW."X20IF1063_1_P67_01b".inData005;
 	Cyclic#5.Coupling::OutData[5] AT %QW."X20IF1063_1_P67_01b".outData005;
+	Cyclic#5.Coupling::InData2[6] AT %IW."X20IF1063_1_P67_01b".inData006;
 	Cyclic#5.Coupling::OutData[6] AT %QW."X20IF1063_1_P67_01b".outData006;
+	Cyclic#5.Coupling::InData2[7] AT %IW."X20IF1063_1_P67_01b".inData007;
 	Cyclic#5.Coupling::OutData[7] AT %QW."X20IF1063_1_P67_01b".outData007;
+	Cyclic#5.Coupling::InData2[8] AT %IW."X20IF1063_1_P67_01b".inData008;
 	Cyclic#5.Coupling::OutData[8] AT %QW."X20IF1063_1_P67_01b".outData008;
+	Cyclic#5.Coupling::InData2[9] AT %IW."X20IF1063_1_P67_01b".inData009;
 	Cyclic#5.Coupling::OutData[9] AT %QW."X20IF1063_1_P67_01b".outData009;
+	Cyclic#5.Coupling::InData2[10] AT %IW."X20IF1063_1_P67_01b".inData010;
 	Cyclic#5.Coupling::OutData[10] AT %QW."X20IF1063_1_P67_01b".outData010;
+	Cyclic#5.Coupling::InData2[11] AT %IW."X20IF1063_1_P67_01b".inData011;
 	Cyclic#5.Coupling::OutData[11] AT %QW."X20IF1063_1_P67_01b".outData011;
+	Cyclic#5.Coupling::InData2[12] AT %IW."X20IF1063_1_P67_01b".inData012;
 	Cyclic#5.Coupling::OutData[12] AT %QW."X20IF1063_1_P67_01b".outData012;
+	Cyclic#5.Coupling::InData2[13] AT %IW."X20IF1063_1_P67_01b".inData013;
 	Cyclic#5.Coupling::OutData[13] AT %QW."X20IF1063_1_P67_01b".outData013;
+	Cyclic#5.Coupling::InData2[14] AT %IW."X20IF1063_1_P67_01b".inData014;
 	Cyclic#5.Coupling::OutData[14] AT %QW."X20IF1063_1_P67_01b".outData014;
+	Cyclic#5.Coupling::InData2[15] AT %IW."X20IF1063_1_P67_01b".inData015;
 	Cyclic#5.Coupling::OutData[15] AT %QW."X20IF1063_1_P67_01b".outData015;
 	Cyclic#5.Coupling::OutData[16] AT %QW."X20IF1063_1_P67_01b".outData016;
 	Cyclic#5.Coupling::OutData[17] AT %QW."X20IF1063_1_P67_01b".outData017;
@@ -952,21 +992,37 @@ VAR_CONFIG
 	Cyclic#5.Coupling::OutData[189] AT %QW."X20IF1063_1_P67_01c".outData189;
 	Cyclic#5.Coupling::OutData[190] AT %QW."X20IF1063_1_P67_01c".outData190;
 	Cyclic#5.Coupling::OutData[191] AT %QW."X20IF1063_1_P67_01c".outData191;
+	Cyclic#5.Coupling::InData2PN[0] AT %IW."X20IF10E3_1_P68_01b".inData000;
 	Cyclic#5.Coupling::OutData[0] AT %QW."X20IF10E3_1_P68_01b".outData000;
+	Cyclic#5.Coupling::InData2PN[1] AT %IW."X20IF10E3_1_P68_01b".inData001;
 	Cyclic#5.Coupling::OutData[1] AT %QW."X20IF10E3_1_P68_01b".outData001;
+	Cyclic#5.Coupling::InData2PN[2] AT %IW."X20IF10E3_1_P68_01b".inData002;
 	Cyclic#5.Coupling::OutData[2] AT %QW."X20IF10E3_1_P68_01b".outData002;
+	Cyclic#5.Coupling::InData2PN[3] AT %IW."X20IF10E3_1_P68_01b".inData003;
 	Cyclic#5.Coupling::OutData[3] AT %QW."X20IF10E3_1_P68_01b".outData003;
+	Cyclic#5.Coupling::InData2PN[4] AT %IW."X20IF10E3_1_P68_01b".inData004;
 	Cyclic#5.Coupling::OutData[4] AT %QW."X20IF10E3_1_P68_01b".outData004;
+	Cyclic#5.Coupling::InData2PN[5] AT %IW."X20IF10E3_1_P68_01b".inData005;
 	Cyclic#5.Coupling::OutData[5] AT %QW."X20IF10E3_1_P68_01b".outData005;
+	Cyclic#5.Coupling::InData2PN[6] AT %IW."X20IF10E3_1_P68_01b".inData006;
 	Cyclic#5.Coupling::OutData[6] AT %QW."X20IF10E3_1_P68_01b".outData006;
+	Cyclic#5.Coupling::InData2PN[7] AT %IW."X20IF10E3_1_P68_01b".inData007;
 	Cyclic#5.Coupling::OutData[7] AT %QW."X20IF10E3_1_P68_01b".outData007;
+	Cyclic#5.Coupling::InData2PN[8] AT %IW."X20IF10E3_1_P68_01b".inData008;
 	Cyclic#5.Coupling::OutData[8] AT %QW."X20IF10E3_1_P68_01b".outData008;
+	Cyclic#5.Coupling::InData2PN[9] AT %IW."X20IF10E3_1_P68_01b".inData009;
 	Cyclic#5.Coupling::OutData[9] AT %QW."X20IF10E3_1_P68_01b".outData009;
+	Cyclic#5.Coupling::InData2PN[10] AT %IW."X20IF10E3_1_P68_01b".inData010;
 	Cyclic#5.Coupling::OutData[10] AT %QW."X20IF10E3_1_P68_01b".outData010;
+	Cyclic#5.Coupling::InData2PN[11] AT %IW."X20IF10E3_1_P68_01b".inData011;
 	Cyclic#5.Coupling::OutData[11] AT %QW."X20IF10E3_1_P68_01b".outData011;
+	Cyclic#5.Coupling::InData2PN[12] AT %IW."X20IF10E3_1_P68_01b".inData012;
 	Cyclic#5.Coupling::OutData[12] AT %QW."X20IF10E3_1_P68_01b".outData012;
+	Cyclic#5.Coupling::InData2PN[13] AT %IW."X20IF10E3_1_P68_01b".inData013;
 	Cyclic#5.Coupling::OutData[13] AT %QW."X20IF10E3_1_P68_01b".outData013;
+	Cyclic#5.Coupling::InData2PN[14] AT %IW."X20IF10E3_1_P68_01b".inData014;
 	Cyclic#5.Coupling::OutData[14] AT %QW."X20IF10E3_1_P68_01b".outData014;
+	Cyclic#5.Coupling::InData2PN[15] AT %IW."X20IF10E3_1_P68_01b".inData015;
 	Cyclic#5.Coupling::OutData[15] AT %QW."X20IF10E3_1_P68_01b".outData015;
 	Cyclic#5.Coupling::OutData[16] AT %QW."X20IF10E3_1_P68_01b".outData016;
 	Cyclic#5.Coupling::OutData[17] AT %QW."X20IF10E3_1_P68_01b".outData017;
@@ -1144,98 +1200,313 @@ VAR_CONFIG
 	Cyclic#5.Coupling::OutData[189] AT %QW."X20IF10E3_1_P68_01b".outData189;
 	Cyclic#5.Coupling::OutData[190] AT %QW."X20IF10E3_1_P68_01b".outData190;
 	Cyclic#5.Coupling::OutData[191] AT %QW."X20IF10E3_1_P68_01b".outData191;
-	Cyclic#5.Coupling::InData2PN[0] AT %IW."X20IF10E3_1_P68_01b".inData000;
-	Cyclic#5.Coupling::InData2PN[1] AT %IW."X20IF10E3_1_P68_01b".inData001;
-	Cyclic#5.Coupling::InData2PN[2] AT %IW."X20IF10E3_1_P68_01b".inData002;
-	Cyclic#5.Coupling::InData2PN[3] AT %IW."X20IF10E3_1_P68_01b".inData003;
-	Cyclic#5.Coupling::InData2PN[4] AT %IW."X20IF10E3_1_P68_01b".inData004;
-	Cyclic#5.Coupling::InData2PN[5] AT %IW."X20IF10E3_1_P68_01b".inData005;
-	Cyclic#5.Coupling::InData2PN[6] AT %IW."X20IF10E3_1_P68_01b".inData006;
-	Cyclic#5.Coupling::InData2PN[7] AT %IW."X20IF10E3_1_P68_01b".inData007;
-	Cyclic#5.Coupling::InData2PN[8] AT %IW."X20IF10E3_1_P68_01b".inData008;
-	Cyclic#5.Coupling::InData2PN[9] AT %IW."X20IF10E3_1_P68_01b".inData009;
-	Cyclic#5.Coupling::InData2PN[10] AT %IW."X20IF10E3_1_P68_01b".inData010;
-	Cyclic#5.Coupling::InData2PN[11] AT %IW."X20IF10E3_1_P68_01b".inData011;
-	Cyclic#5.Coupling::InData2PN[12] AT %IW."X20IF10E3_1_P68_01b".inData012;
-	Cyclic#5.Coupling::InData2PN[13] AT %IW."X20IF10E3_1_P68_01b".inData013;
-	Cyclic#5.Coupling::InData2PN[14] AT %IW."X20IF10E3_1_P68_01b".inData014;
-	Cyclic#5.Coupling::InData2PN[15] AT %IW."X20IF10E3_1_P68_01b".inData015;
-	Cyclic#5.Coupling::InData2[0] AT %IW."X20IF1063_1_P67_01b".inData000;
-	Cyclic#5.Coupling::InData2[1] AT %IW."X20IF1063_1_P67_01b".inData001;
-	Cyclic#5.Coupling::InData2[2] AT %IW."X20IF1063_1_P67_01b".inData002;
-	Cyclic#5.Coupling::InData2[3] AT %IW."X20IF1063_1_P67_01b".inData003;
-	Cyclic#5.Coupling::InData2[4] AT %IW."X20IF1063_1_P67_01b".inData004;
-	Cyclic#5.Coupling::InData2[5] AT %IW."X20IF1063_1_P67_01b".inData005;
-	Cyclic#5.Coupling::InData2[6] AT %IW."X20IF1063_1_P67_01b".inData006;
-	Cyclic#5.Coupling::InData2[7] AT %IW."X20IF1063_1_P67_01b".inData007;
-	Cyclic#5.Coupling::InData2[8] AT %IW."X20IF1063_1_P67_01b".inData008;
-	Cyclic#5.Coupling::InData2[9] AT %IW."X20IF1063_1_P67_01b".inData009;
-	Cyclic#5.Coupling::InData2[10] AT %IW."X20IF1063_1_P67_01b".inData010;
-	Cyclic#5.Coupling::InData2[11] AT %IW."X20IF1063_1_P67_01b".inData011;
-	Cyclic#5.Coupling::InData2[12] AT %IW."X20IF1063_1_P67_01b".inData012;
-	Cyclic#5.Coupling::InData2[13] AT %IW."X20IF1063_1_P67_01b".inData013;
-	Cyclic#5.Coupling::InData2[14] AT %IW."X20IF1063_1_P67_01b".inData014;
-	Cyclic#5.Coupling::InData2[15] AT %IW."X20IF1063_1_P67_01b".inData015;
+	Cyclic#1.HalIO::T_EGaLPTC_A AT %IW."UR20-4AI-TC-DIAG_P90_02".InputImage_I4600_S00_UID_AnalogInput03; (*Messung - Abgastemperatur nach Turbo A*)
+	Cyclic#1.HalIO::T_EGaLPTC_B AT %IW."UR20-4AI-TC-DIAG_P90_02".InputImage_I4600_S00_UID_AnalogInput04; (*Messung - Abgastemperatur nach Turbo B*)
+	Cyclic#1.HalIO::T_EG_PrReliefVa1 AT %IW."UR20-4AI-TC-DIAG_P90_02".InputImage_I4600_S00_UID_AnalogInput01; (*Messung - Temperatur Austritt Sicherheitsventil*)
+	Cyclic#1.HalIO::U_Starter_engage1 AT %IW."UR20-4AI-UI-12_P90_03".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Starter 1 eingefahren*)
+	Cyclic#1.HalIO::U_Starter_engage2 AT %IW."UR20-4AI-UI-12_P90_03".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Starter 2 eingefahren*)
+	Cyclic#1.HalIO::U_Starter_engage3 AT %IW."UR20-4AI-UI-12_P90_03".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Starter 3 eingefahren*)
+	Cyclic#1.HalIO::CustAnaIn[2] AT %IW."UR20-4AI-UI-12_P90_03".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Druck nach Filter*)
+	Cyclic#1.HalIO::T_ECW AT %IW."UR20-4AI-UI-12_P90_04".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Motorkühlwassertemperatur*)
+	Cyclic#1.HalIO::Pr_Ch_P2s AT %IW."UR20-4AI-UI-12_P90_04".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Ladedruck Drosselklappe Austritt {{p2'}}*)
+	Cyclic#1.HalIO::U_Gen_Exc AT %IW."UR20-4AI-UI-12_P90_04".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Generator Erregerspannung*)
+	Cyclic#1.HalIO::T_HW_Su_Unit AT %IW."UR20-4AI-UI-12_P90_04".InputImage_I4600_S00_UID_AnalogInput02; (*Messung - Vorlauftemperatur Aggregat*)
+	Cyclic#1.HalIO::U_StarterBat AT %IW."UR20-4AI-UI-12_P90_05".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Spannung Starterbatterien*)
+	Cyclic#1.HalIO::Pr_EOF_DiffMon AT %IW."UR20-4AI-UI-12_P90_05".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Motoröldruck - vor Motorölfilter*)
+	Cyclic#1.HalIO::Pr_Ch_P2 AT %IW."UR20-4AI-UI-12_P90_05".InputImage_I4600_S00_UID_AnalogInput02; (*Messung. Ladedruck vor Drosselklappe [Gemischdruck p2]*)
+	Cyclic#1.HalIO::Pos_Act_TV_A1 AT %IW."UR20-4AI-UI-12_P90_05".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Position Drosselklappe {{A1}}*)
+	Cyclic#1.HalIO::Pr_CC AT %IW."UR20-4AI-UI-12_P90_06".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Kurbelgehäusedruck*)
+	Cyclic#1.HalIO::Pr_PC AT %IW."UR20-4AI-UI-12_P90_06".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Gasdruck Vorkammer*)
+	Cyclic#1.HalIO::Pr_PCGT AT %IW."UR20-4AI-UI-12_P90_06".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Gasdruck Vorkammer - Gasstrecke*)
+	Cyclic#1.HalIO::Pr_f_BbFilt AT %IW."UR20-4AI-UI-12_P90_07".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Druck vor Blow-by-Filter*)
+	Cyclic#1.HalIO::Pr_a_BbFilt AT %IW."UR20-4AI-UI-12_P90_07".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Druck nach Blow-by-Filter*)
+	Cyclic#1.HalIO::Pos_Act_CBV_A1 AT %IW."UR20-4AI-UI-12_P90_07".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Position Verdichterbypassventil {{A1}}*)
+	Cyclic#1.HalIO::Pos_Act_CBV_B1 AT %IW."UR20-4AI-UI-12_P90_07".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Position Verdichterbypassventil {{B1}}*)
+	Cyclic#1.HalIO::N_TCHP_A AT %IW."UR20-4AI-UI-12_P90_08".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Drehzahlsensor Abgasturbolader Niederdruck A*)
+	Cyclic#1.HalIO::N_TCHP_B AT %IW."UR20-4AI-UI-12_P90_08".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Drehzahlsensor Abgasturbolader Niederdruck B*)
+	Cyclic#1.HalIO::Pr_Ch_P2HP AT %IW."UR20-4AI-UI-12_P90_08".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Druck nach Abgasturbolader [vor Gemischkühler]*)
+	Cyclic#1.HalIO::Humidity_AirIn AT %IW."UR20-4AI-UI-12_P90_09".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Feuchtigkeit (Luftfeuchtigkeit)*)
+	Cyclic#1.HalIO::T_AirIn AT %IW."UR20-4AI-UI-12_P90_09".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Feuchtigkeit (Temperatur)*)
+	Cyclic#1.HalIO::Pr_DCGA_inlet AT %IW."UR20-4AI-UI-12_P90_09".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Druck Eintritt Dezentrale Gasdosierung*)
+	Cyclic#1.HalIO::Pr_DCGA_aGV AT %IW."UR20-4AI-UI-12_P90_09".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Druck nach Gasventilen Dezentrale Gasdosierung*)
+	Cyclic#1.HalIO::Pr_Ch_P1HP_A AT %IW."UR20-4AI-UI-12_P90_10".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Ladedruck Turbolader Eintritt - Hochdruck {{B}}*)
+	Cyclic#1.HalIO::U_BufferBat1 AT %IW."UR20-4AI-UI-12_P90_10".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Spannung Steuerbatterie 1*)
+	Cyclic#1.HalIO::Pr_DCGA_BankA AT %IW."UR20-4AI-UI-12_P90_10".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Druck Dezentrale Gasdosierung Bank A*)
+	Cyclic#1.HalIO::Pr_DCGA_BankB AT %IW."UR20-4AI-UI-12_P90_10".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Druck Dezentrale Gasdosierung Bank B*)
+	Cyclic#1.HalIO::Pr_Ch_P2LP AT %IW."UR20-4AI-UI-12_P90_11".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Ladedruck Turbolader Austritt, zentral*)
+	Cyclic#1.HalIO::Pr_Ch_P1HP_B AT %IW."UR20-4AI-UI-12_P90_11".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Ladedruck Turbolader Eintritt - Hochdruck {{B}}*)
+	Cyclic#1.HalIO::Pos_Act_TV_A2 AT %IW."UR20-4AI-UI-12_P90_11".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Position Drosselklappe {{A2}}*)
+	Cyclic#1.HalIO::Pr_TC_EOF_After AT %IW."UR20-4AI-UI-12_P90_11".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Öldruck Abgasturbolader [Eintritt]*)
+	Cyclic#1.HalIO::T_EO AT %IW."UR20-4AI-RTD-DIAG_P90_12".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Öltemperatur*)
+	Cyclic#1.HalIO::T_Ch_T1LP AT %IW."UR20-4AI-RTD-DIAG_P90_12".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Ladekühlkreis Temperatur Turbolader Niederdruck - Eintritt [Ansauglufttemperatur]*)
+	Cyclic#1.HalIO::CustAnaIn[1] AT %IW."UR20-4AI-RTD-DIAG_P90_12".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Rücklauftemperatur (Niedertemperaturkreis 2)*)
+	Cyclic#1.HalIO::T_Ch_T2s AT %IW."UR20-4AI-RTD-DIAG_P90_12".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Ladetemperatur*)
+	Cyclic#1.HalIO::T_HW_ReBeEng AT %IW."UR20-4AI-RTD-DIAG_P90_13".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Rücklauftemperatur [vor Motor]*)
+	Cyclic#1.HalIO::T_Ch_T1HP_B AT %IW."UR20-4AI-RTD-DIAG_P90_13".InputImage_I4600_S00_UID_AnalogInput04; (*Messung. Ladetemperatur Turbolader Eintritt - Hochdruck {{B}}*)
+	Cyclic#1.HalIO::T_HW_Re_LT AT %IW."UR20-4AI-RTD-DIAG_P90_14".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Rücklauftemperatur [Niedertemperaturkreis]*)
+	Cyclic#1.HalIO::T_Gen_Wind_Act_L1 AT %IW."UR20-4AI-RTD-DIAG_P90_14".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Wicklungstemperatur Phase U*)
+	Cyclic#1.HalIO::T_Gen_Wind_Act_L2 AT %IW."UR20-4AI-RTD-DIAG_P90_14".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Wicklungstemperatur Phase V*)
+	Cyclic#1.HalIO::T_Gen_Wind_Act_L3 AT %IW."UR20-4AI-RTD-DIAG_P90_14".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Wicklungstemperatur Phase W*)
+	Cyclic#1.HalIO::T_Gen_Bear_A_Act AT %IW."UR20-4AI-RTD-DIAG_P90_15".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Lagertemperatur DE*)
+	Cyclic#1.HalIO::T_Gen_Bear_B_Act AT %IW."UR20-4AI-RTD-DIAG_P90_15".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Lagertemperatur NDE*)
+	Cyclic#1.HalIO::T_DCGA AT %IW."UR20-4AI-RTD-DIAG_P90_16".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Temperatur Dezentrale Gasdosierung*)
+	Cyclic#1.HalIO::Q_AVR_Set_U AT %QW."UR20-4AO-UI-16_P90_17".OutputImage_I4700_S00_UID_AnalogOutput03; (*Sollwert: Blindleistung*)
+	Cyclic#1.HalIO::T_AO_Gen_T_In AT %QW."UR20-4AO-UI-16_P90_17".OutputImage_I4700_S00_UID_AnalogOutput04; (*Messung: Motor Ansauglufttemperatur*)
+	Cyclic#1.HalIO::Pr_MGT_sp AT %QW."UR20-4AO-UI-16_P90_17".OutputImage_I4700_S00_UID_AnalogOutput01; (*I/P Umformer Gasstrecke*)
+	Cyclic#1.HalIO::Pos_TV_A2 AT %QW."UR20-4AO-UI-16_P90_18".OutputImage_I4700_S00_UID_AnalogOutput03; (*Sollwert: Position Drosselklappe A2*)
+	Cyclic#1.HalIO::Pos_TV_A1 AT %QW."UR20-4AO-UI-16_P90_18".OutputImage_I4700_S00_UID_AnalogOutput01; (*Sollwert: Position Drosselklappe A1*)
+	Cyclic#1.HalIO::Pos_CBV_A1 AT %QW."UR20-4AO-UI-16_P90_18".OutputImage_I4700_S00_UID_AnalogOutput02; (*Sollwert: Position Verdichterbypassventil A1*)
+	Cyclic#1.HalIO::Pos_CBV_B1 AT %QW."UR20-4AO-UI-16_P90_18".OutputImage_I4700_S00_UID_AnalogOutput04; (*Sollwert: Position Verdichterbypassventil B1*)
+	Cyclic#1.HalIO::DCGA_set_Valve1_A AT %QW."UR20-4AO-UI-16_P90_19".OutputImage_I4700_S00_UID_AnalogOutput01; (*Sollwert DCGA Ventil 1*)
+	Cyclic#1.HalIO::DCGA_set_Valve2_A AT %QW."UR20-4AO-UI-16_P90_19".OutputImage_I4700_S00_UID_AnalogOutput02; (*Sollwert DCGA Ventil 2*)
+	Cyclic#1.HalIO::DCGA_set_Valve1_B AT %QW."UR20-4AO-UI-16_P90_19".OutputImage_I4700_S00_UID_AnalogOutput03; (*Sollwert DCGA Ventil 3*)
+	Cyclic#1.HalIO::DCGA_set_Valve2_B AT %QW."UR20-4AO-UI-16_P90_19".OutputImage_I4700_S00_UID_AnalogOutput04; (*Sollwert DCGA Ventil 3*)
+	Cyclic#1.HalIO::IFCP_CBTrip AT %IX."UR20-16DI-P_P90_20".InputImage_I4600_S00_UID_DigitalInput02; (*Status: Sicherungsfall*)
+	Cyclic#1.HalIO::BatChargeDev_Ok AT %IX."UR20-16DI-P_P90_20".InputImage_I4600_S00_UID_DigitalInput04; (*Status: Ladegeräte OK*)
+	Cyclic#1.HalIO::CV_M_Ok AT %IX."UR20-16DI-P_P90_20".InputImage_I4600_S00_UID_DigitalInput03; (*Sicherungsfall 24VDC Stützpunkt [Extern 1]*)
+	Cyclic#1.HalIO::U_Gen_Contr_Fail AT %IX."UR20-16DI-P_P90_20".InputImage_I4600_S00_UID_DigitalInput05; (*Generator Software Alarm*)
+	Cyclic#1.HalIO::U_GenDiode_Trip AT %IX."UR20-16DI-P_P90_20".InputImage_I4600_S00_UID_DigitalInput06; (*Generator Diode Alarm*)
+	Cyclic#1.HalIO::EO_Level_Hi AT %IX."UR20-16DI-P_P90_20".InputImage_I4600_S00_UID_DigitalInput08; (*Messung: Ölstand max Abstellung*)
+	Cyclic#1.HalIO::EO_Refill AT %IX."UR20-16DI-P_P90_20".InputImage_I4600_S00_UID_DigitalInput09; (*Status. Öl nachfüllen*)
+	Cyclic#1.HalIO::EO_Level_Lo AT %IX."UR20-16DI-P_P90_20".InputImage_I4600_S00_UID_DigitalInput10; (*Messung: Ölstand min Abstellung*)
+	Cyclic#1.HalIO::FS_ECW AT %IX."UR20-16DI-P_P90_21".InputImage_I4600_S00_UID_DigitalInput12; (*Durchfluss Vorwärmpumpe OK*)
+	Cyclic#1.HalIO::Pr_TCOF_EOF_DiffMax AT %IX."UR20-16DI-P_P90_21".InputImage_I4600_S00_UID_DigitalInput11; (*Messung: Öldifferenzdruck max. Turbolader*)
+	Cyclic#1.HalIO::Pr_DCGA_min AT %IX."UR20-16DI-P_P90_21".InputImage_I4600_S00_UID_DigitalInput07; (*Status: Gas pressure min DCGA gas train*)
+	Cyclic#1.HalIO::Pr_DCGA_max AT %IX."UR20-16DI-P_P90_21".InputImage_I4600_S00_UID_DigitalInput08; (*Status: Gasdruck max DCGA Gasstrecke*)
+	Cyclic#1.HalIO::Pr_GT1_Min AT %IX."UR20-16DI-P_P90_21".InputImage_I4600_S00_UID_DigitalInput02; (*Status: Gasdruck min Gasstrecke 1*)
+	Cyclic#1.HalIO::Ign_OverspeedRelay AT %IX."UR20-16DI-P_P90_21".InputImage_I4600_S00_UID_DigitalInput05; (*Status: Überdrehzahl*)
+	Cyclic#1.HalIO::Pr_GT1_Max AT %IX."UR20-16DI-P_P90_21".InputImage_I4600_S00_UID_DigitalInput13; (*Status: Gasdruck max Gasstrecke 1*)
+	Cyclic#1.HalIO::Pr_PCGT_Max AT %IX."UR20-16DI-P_P90_21".InputImage_I4600_S00_UID_DigitalInput03; (*Status: Gasdruck max Gasstrecke 1*)
+	Cyclic#1.HalIO::ECWP_FC_Rdy AT %IX."UR20-16DI-P_P90_21".InputImage_I4600_S00_UID_DigitalInput15; (*Störung: Frequenzumrichter Motorkühlwasserpumpe 1*)
+	Cyclic#1.HalIO::Cnt_OilPulse AT %IX."UR20-16DI-P_P90_22".InputImage_I4600_S00_UID_DigitalInput08; (*Messung: Zähler Ölverbrauch*)
+	Cyclic#1.HalIO::AuxV_Eng_ok AT %IX."UR20-16DI-P_P90_22".InputImage_I4600_S00_UID_DigitalInput05; (*Status: Hilfsbetriebe Spannung OK*)
+	Cyclic#1.HalIO::EOP1AC_CB_trip AT %IX."UR20-16DI-P_P90_22".InputImage_I4600_S00_UID_DigitalInput02; (*Status: Ölpumpe 2 AC Spannung OK*)
+	Cyclic#1.HalIO::Gen_LO_CoolingSys_Fail AT %IX."UR20-16DI-P_P90_22".InputImage_I4600_S00_UID_DigitalInput10; (*Störung: Generatorlager Kühlsystem*)
+	Cyclic#1.HalIO::Actuator_Ok_WG_A AT %IX."UR20-16DI-P_P90_23".InputImage_I4600_S00_UID_DigitalInput04; (*Störung: Wastegate A*)
+	Cyclic#1.HalIO::Actuator_Ok_WG_B AT %IX."UR20-16DI-P_P90_23".InputImage_I4600_S00_UID_DigitalInput05; (*Störung: Wastegate B*)
+	Cyclic#1.HalIO::Pr_GT2_Max AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput09; (*Status: Gasdruck max Gasstrecke 2*)
+	Cyclic#1.HalIO::Actuator_Ok_TV1A AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput03; (*Störung: Drosselklappe {{A1}}*)
+	Cyclic#1.HalIO::Actuator_Ok_TV2A AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput04; (*Störung: Drosselklappe {{A2}}*)
+	Cyclic#1.HalIO::Actuator_Ok_CBV_A AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput05; (*Störung: Verdichterbypassventil {{A1}}*)
+	Cyclic#1.HalIO::Actuator_Ok_CBV_B AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput06; (*Störung: Verdichterbypassventil B1*)
+	Cyclic#1.HalIO::Pr_GT2_Min AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput08; (*Status: Gasdruck min Gasstrecke 2*)
+	Cyclic#1.HalIO::L_OilSumpHi AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput12; (*Messung: Ölstand max - Ölauffangwanne Aggregat*)
+	Cyclic#1.HalIO::SL_TS_HW_Su_Unit AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput01; (*Status - Vorlauftemperatur Aggregat Maximum*)
+	Cyclic#1.HalIO::SL_TS_ECW AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput02; (*Status - Motorkühlwassertemperatur - nach Motor Maximum*)
+	Cyclic#1.HalIO::ChargeOff_Dem AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput09; (*Abschaltung: Ladung*)
+	Cyclic#1.HalIO::LeroySomer_AuxContactor AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput02; (*SY-Anwahl*)
+	Cyclic#1.HalIO::GCB_On_ReturnSign AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput03; (*Generatorschalter geschlossen*)
+	Cyclic#1.HalIO::PF_CosPCtr_Ena AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput04; (*Parallel mit Netzstatus*)
+	Cyclic#1.HalIO::GenDeexitDem AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput05; (*Anforderung: Entregung*)
+	Cyclic#1.HalIO::GenCtrResetSp AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput06; (*Befehl: Reset Sollwert Generatorregler*)
+	Cyclic#1.HalIO::EleStarter_Dem AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput07; (*Anforderung: Startrelais*)
+	Cyclic#1.HalIO::ECWP_PreH_Dem AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput11; (*Anforderung: Vorwärmpumpe*)
+	Cyclic#1.HalIO::ECW_PreH_Dem AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput10; (*Anforderung: Vorwärmung*)
+	Cyclic#1.HalIO::MonitoringOn AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput08; (*Reset Überwachung*)
+	Cyclic#1.HalIO::Gen_PreHDem AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput12; (*Anforderung: Stillstandsheizung*)
+	Cyclic#1.HalIO::EOVal_DemOpen AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput01; (*Anforderung: Ölventil auf*)
+	Cyclic#1.HalIO::EOP1DC_Dem AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput02; (*Anforderung: Ölpumpe 1 DC*)
+	Cyclic#1.HalIO::EOP1AC_Dem AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput03; (*Anforderung: Ölpumpe 1 AC*)
+	Cyclic#1.HalIO::Actuator_Rel AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput06; (*Befehl: Aktivierung Drosselklappe A1*)
+	Cyclic#1.HalIO::AuxPoSuMains AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput11; (*Status: Hilfsbetriebe Spannung OK*)
+	Cyclic#1.HalIO::AuxPoSuUPS AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput12; (*Störung: Hilfsbetriebe Spannung*)
+	Cyclic#1.HalIO::Ign_Dem AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput07; (*Anforderung Zündung*)
+	Cyclic#1.HalIO::ECWP1Dem AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput09; (*Anforderung: Motorkühlwasserpumpe 1*)
+	Cyclic#1.HalIO::DCGA_BlowOff AT %QX."UR20-16DO-P_P90_27".OutputImage_I4700_S00_UID_DigitalOutput04; (*Anforderung: Entlüftungsventil {{DCGA}} Gasstrecke*)
+	Cyclic#1.HalIO::PCG_VentValve_Open AT %QX."UR20-16DO-P_P90_27".OutputImage_I4700_S00_UID_DigitalOutput02; (*Anforderung: Entlüftungsventil Vorkammergasstrecke*)
+	Cyclic#1.HalIO::PCG_GV_Open AT %QX."UR20-16DO-P_P90_27".OutputImage_I4700_S00_UID_DigitalOutput05; (*Anforderung: Vorkammergasventile öffnen*)
+	Cyclic#1.HalIO::LOS_Dem AT %QX."UR20-16DO-P_P90_27".OutputImage_I4700_S00_UID_DigitalOutput11; (*Anforderung: Generatorlager Kühlsystem*)
+	Cyclic#1.HalIO::Actuator2_Rel AT %QX."UR20-16DO-P_P90_27".OutputImage_I4700_S00_UID_DigitalOutput08; (*Befehl: Aktivierung Drosselklappe A2*)
+	Cyclic#1.HalIO::BufferBat1_Disconnect AT %QX."UR20-16DO-P_P90_28".OutputImage_I4700_S00_UID_DigitalOutput02; (*Status: Steuerbatterie 1 Abschaltung*)
+	Cyclic#1.HalIO::BufferBat1_ConnectLoad AT %QX."UR20-16DO-P_P90_28".OutputImage_I4700_S00_UID_DigitalOutput03; (*Status: Zuschaltung Lastwiderstand Steuerbatterie 1*)
+	Cyclic#1.HalIO::WG_A_Dem AT %QX."UR20-16DO-P_P90_28".OutputImage_I4700_S00_UID_DigitalOutput04; (*Anforderung Wastegate A*)
+	Cyclic#1.HalIO::WG_B_Dem AT %QX."UR20-16DO-P_P90_28".OutputImage_I4700_S00_UID_DigitalOutput01; (*Anforderung Wastegate B*)
 	Cyclic#1.HalIO::StationIO[1].ModuleOK[0] AT %IX."X20SL8100_S01_00".ModuleOk;
+	Cyclic#1.HalIO::StationIO[90].ModuleOK[0] AT %IX."+M1_P90_ENGINE_INTERFACE_UR20".ModuleOk;
+	Cyclic#1.HalIO::StationIO[160].ModuleOK[0] AT %IX."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleOk;
+	Cyclic#5.HalIO::OUT_HA.iModulID_CPU AT %IW."PLC1".ModuleID; (* Modulkennung des CPU Boards                         *)
 	Cyclic#6.EngineGeneral::iSafeOUT_FwVers_sPLC AT %ID."X20SL8100_S01_00".FirmwareVersion;
+	Cyclic#5.HalIO::OUT_HA.iSerialNumber_CPU AT %ID."PLC1".SerialNumber; (* Seriennummer des CPU Boards                         *)
 	Cyclic#6.EngineGeneral::bSafeOUT_F99_SafetyLoop_Eng AT %IX."X20SL8100_S01_00".BOOL00001;
+	Cyclic#6.EngineGeneral::iSafeOUT_F01_N_EngAct AT %ID."X20SL8100_S01_00".DINT0001;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_Nr_PC_NotDone AT %IW."X20SL8100_S01_00".INT0001;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_CRC AT %ID."X20SL8100_S01_00".UDINT0001;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[0] AT %IW."X20SL8100_S01_00".UINT0001;
 	Cyclic#6.EngineGeneral::bSafeOUT_F01_OK AT %IX."X20SL8100_S01_00".BOOL00002;
+	Cyclic#6.EngineGeneral::iSafeOUT_F01_N_EngAct_Diff AT %ID."X20SL8100_S01_00".DINT0002;
+	Cyclic#6.EngineGeneral::iSafeOUT_F20_CRC AT %ID."X20SL8100_S01_00".UDINT0002;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[1] AT %IW."X20SL8100_S01_00".UINT0002;
 	Cyclic#6.EngineGeneral::bSafeOUT_F01_N_DiffOK AT %IX."X20SL8100_S01_00".BOOL00003;
+	Cyclic#6.EngineGeneral::iSafeOUT_F01_SDC_30s_ET AT %ID."X20SL8100_S01_00".DINT0003;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[2] AT %IW."X20SL8100_S01_00".UINT0003;
 	Cyclic#6.EngineGeneral::bSafeOUT_F01_N_Nom90 AT %IX."X20SL8100_S01_00".BOOL00004;
+	Cyclic#6.EngineGeneral::iSafeOUT_F01_Standstill_1m_ET AT %ID."X20SL8100_S01_00".DINT0004;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[3] AT %IW."X20SL8100_S01_00".UINT0004;
 	Cyclic#6.EngineGeneral::bSafeOUT_F02_OK AT %IX."X20SL8100_S01_00".BOOL00005;
+	Cyclic#6.EngineGeneral::iSafeOUT_F01_N_Nom90_10s_ET AT %ID."X20SL8100_S01_00".DINT0005;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[4] AT %IW."X20SL8100_S01_00".UINT0005;
 	Cyclic#6.EngineGeneral::bSafeOUT_F02_OK_PC AT %IX."X20SL8100_S01_00".BOOL00006;
+	Cyclic#6.EngineGeneral::iSafeOUT_F03_Pr_EO AT %ID."X20SL8100_S01_00".DINT0006;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[5] AT %IW."X20SL8100_S01_00".UINT0006;
 	Cyclic#6.EngineGeneral::bSafeOUT_F03_OK AT %IX."X20SL8100_S01_00".BOOL00007;
+	Cyclic#6.EngineGeneral::iSafeOUT_F03_Pr_EO_Standstill AT %ID."X20SL8100_S01_00".DINT0007;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[6] AT %IW."X20SL8100_S01_00".UINT0007;
 	Cyclic#6.EngineGeneral::bSafeOUT_F03_Pr_EO_DiffOK AT %IX."X20SL8100_S01_00".BOOL00008;
+	Cyclic#6.EngineGeneral::iSafeOUT_F03_Pr_EO_Diff AT %ID."X20SL8100_S01_00".DINT0008;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[7] AT %IW."X20SL8100_S01_00".UINT0008;
 	Cyclic#6.EngineGeneral::bSafeOUT_F04_OK AT %IX."X20SL8100_S01_00".BOOL00009;
+	Cyclic#6.EngineGeneral::iSafeOUT_F03_Pr_EO_Fr_1m_ET AT %ID."X20SL8100_S01_00".DINT0009;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[8] AT %IW."X20SL8100_S01_00".UINT0009;
 	Cyclic#6.EngineGeneral::bSafeOUT_F05_OK AT %IX."X20SL8100_S01_00".BOOL00010;
+	Cyclic#6.EngineGeneral::iSafeOUT_F04_Pr_EOaP AT %ID."X20SL8100_S01_00".DINT0010;
+	Cyclic#1.HalIO::GenPrctTrip AT %IX."SimDevice".P10_17_SI3; (* Blockierung - Generatorschutz ausgelöst *)
+	Cyclic#1.HalIO::GCB_Off AT %IX."SimDevice".P10_17_SI7; (* Status - Generatorschalter offen *)
+	Cyclic#1.HalIO::OlShortCirc AT %IX."SimDevice".P10_17_SI2; (* Störung - Überlast / Kurzschluss Generator *)
+	Cyclic#1.HalIO::GCB_On AT %IX."SimDevice".P10_17_SI6; (* Status - Generatorschalter geschlossen *)
+	Cyclic#1.HalIO::Rel_Sync_Load AT %QX."SimDevice".P10_18_SO1; (* Freigabe: Synchronisierung / Last *)
+	Cyclic#1.HalIO::GCB_RUC AT %QX."SimDevice".P10_18_SO2; (* Status: Freigabe Unterspannungsauslöser *)
+	Cyclic#1.HalIO::ERV_INL1_Fan_Run AT %IX."SimDevice".P10_20_SI1;
+	Cyclic#1.HalIO::ERV_INL3_Lou_CL AT %IX."SimDevice".P10_20_SI13; (* Status: Zuluftjalousie 3 geschlossen *)
+	Cyclic#1.HalIO::ERV_OTL3_Lou_OP AT %IX."SimDevice".P10_20_SI14; (* Status - Abluftjalousie 3 offen *)
+	Cyclic#1.HalIO::ERV_INL1_Lou_OP AT %IX."SimDevice".P10_20_SI2; (* Status: Zuluftjalousie 1 offen *)
+	Cyclic#1.HalIO::ERV_OTL3_Lou_CL AT %IX."SimDevice".P10_20_SI15; (* Status - Abluftjalousie 3 geschlossen *)
+	Cyclic#1.HalIO::ERV_INL1_Lou_CL AT %IX."SimDevice".P10_20_SI3; (* Status: Zuluftjalousie 1 geschlossen *)
+	Cyclic#1.HalIO::ERV_OTL1_Lou_OP AT %IX."SimDevice".P10_20_SI4;
+	Cyclic#1.HalIO::ERV_INL4_Fan_Run AT %IX."SimDevice".P10_20_SI16;
+	Cyclic#1.HalIO::ERV_OTL1_Lou_CL AT %IX."SimDevice".P10_20_SI5; (* Status - Abluftjalousie 1 geschlossen *)
+	Cyclic#1.HalIO::ERV_INL4_Lou_OP AT %IX."SimDevice".P10_20_SI17; (* Status: Zuluftjalousie 4 offen *)
+	Cyclic#1.HalIO::ERV_INL2_Fan_Run AT %IX."SimDevice".P10_20_SI6;
+	Cyclic#1.HalIO::ERV_INL4_Lou_CL AT %IX."SimDevice".P10_20_SI18; (* Status: Zuluftjalousie 4 geschlossen *)
+	Cyclic#1.HalIO::ERV_OTL4_Lou_OP AT %IX."SimDevice".P10_20_SI19; (* Status - Abluftjalousie 4 offen *)
+	Cyclic#1.HalIO::ERV_INL2_Lou_OP AT %IX."SimDevice".P10_20_SI7; (* Status: Zuluftjalousie 2 offen *)
+	Cyclic#1.HalIO::ERV_INL2_Lou_CL AT %IX."SimDevice".P10_20_SI8; (* Status: Zuluftjalousie 2 geschlossen *)
+	Cyclic#1.HalIO::ERV_OTL4_Lou_CL AT %IX."SimDevice".P10_20_SI20; (* Status - Abluftjalousie 4 geschlossen *)
+	Cyclic#1.HalIO::ERV_OTL2_Lou_OP AT %IX."SimDevice".P10_20_SI9; (* Status - Abluftjalousie 2 offen *)
+	Cyclic#1.HalIO::ERV_OTL2_Lou_CL AT %IX."SimDevice".P10_20_SI10; (* Status - Abluftjalousie 2 geschlossen *)
+	Cyclic#1.HalIO::ERV_INL3_Fan_Run AT %IX."SimDevice".P10_20_SI11;
+	Cyclic#1.HalIO::ERV_INL3_Lou_OP AT %IX."SimDevice".P10_20_SI12; (* Status: Zuluftjalousie 3 offen *)
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[9] AT %IW."X20SL8100_S01_00".UINT0010;
 	Cyclic#6.EngineGeneral::bSafeOUT_F05_Pr_ECW_DiffOK AT %IX."X20SL8100_S01_00".BOOL00011;
+	Cyclic#6.EngineGeneral::iSafeOUT_F04_Pr_EOaP_Standstill AT %ID."X20SL8100_S01_00".DINT0011;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[10] AT %IW."X20SL8100_S01_00".UINT0011;
 	Cyclic#6.EngineGeneral::bSafeOUT_F06_OK AT %IX."X20SL8100_S01_00".BOOL00012;
+	Cyclic#6.EngineGeneral::iSafeOUT_F04_Pr_EOaP_Fr_1m_ET AT %ID."X20SL8100_S01_00".DINT0012;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[11] AT %IW."X20SL8100_S01_00".UINT0012;
 	Cyclic#6.EngineGeneral::bSafeOUT_F07_OK AT %IX."X20SL8100_S01_00".BOOL00013;
+	Cyclic#6.EngineGeneral::iSafeOUT_F04_EO_PumpsOff_2m_ET AT %ID."X20SL8100_S01_00".DINT0013;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[12] AT %IW."X20SL8100_S01_00".UINT0013;
 	Cyclic#6.EngineGeneral::bSafeOUT_F07_Rel_Sync_Load AT %IX."X20SL8100_S01_00".BOOL00014;
+	Cyclic#6.EngineGeneral::iSafeOUT_F05_Pr_ECW AT %ID."X20SL8100_S01_00".DINT0014;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[13] AT %IW."X20SL8100_S01_00".UINT0014;
 	Cyclic#6.EngineGeneral::bSafeOUT_F07_Rel_Sync_Load_PS AT %IX."X20SL8100_S01_00".BOOL00015;
+	Cyclic#6.EngineGeneral::iSafeOUT_F05_Pr_ECW_Diff AT %ID."X20SL8100_S01_00".DINT0015;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[14] AT %IW."X20SL8100_S01_00".UINT0015;
 	Cyclic#6.EngineGeneral::bSafeOUT_F07_GCB_RUC AT %IX."X20SL8100_S01_00".BOOL00016;
+	Cyclic#6.EngineGeneral::iSafeOUT_F05_Pr_ECW_Fr_1m_ET AT %ID."X20SL8100_S01_00".DINT0016;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[15] AT %IW."X20SL8100_S01_00".UINT0016;
 	Cyclic#6.EngineGeneral::bSafeOUT_F07_GCB_RUC_PS AT %IX."X20SL8100_S01_00".BOOL00017;
+	Cyclic#6.EngineGeneral::iSafeOUT_F06_Pr_ECWaP AT %ID."X20SL8100_S01_00".DINT0017;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[16] AT %IW."X20SL8100_S01_00".UINT0017;
 	Cyclic#6.EngineGeneral::bSafeOUT_F08_OlShortCirc_OK AT %IX."X20SL8100_S01_00".BOOL00018;
+	Cyclic#6.EngineGeneral::iSafeOUT_F06_Pr_ECWaP_Fr_1m_ET AT %ID."X20SL8100_S01_00".DINT0018;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[17] AT %IW."X20SL8100_S01_00".UINT0018;
 	Cyclic#6.EngineGeneral::bSafeOUT_F08_GenPrctTrip_OK AT %IX."X20SL8100_S01_00".BOOL00019;
+	Cyclic#6.EngineGeneral::iSafeOUT_F06_ECW_PumpsOff_2m_ET AT %ID."X20SL8100_S01_00".DINT0019;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[18] AT %IW."X20SL8100_S01_00".UINT0019;
 	Cyclic#6.EngineGeneral::bSafeOUT_F09_Cust_OK AT %IX."X20SL8100_S01_00".BOOL00020;
+	Cyclic#6.EngineGeneral::iSafeOUT_F07_GCB_On_10s_ET AT %ID."X20SL8100_S01_00".DINT0020;
+	Cyclic#1.HalIO::Pr_EngLubOil AT %IW."SimDevice".P20_06_SAI1; (* Messung: Motoröldruck *)
+	Cyclic#1.HalIO::Pr_EOaP AT %IW."SimDevice".P20_06_SAI3; (* Messung: Öldruck nach Ölpumpe *)
+	Cyclic#1.HalIO::Pr_ECW AT %IW."SimDevice".P20_07_SAI1; (* Messung: Motorkühlwasserdruck *)
+	Cyclic#1.HalIO::Pr_ECWaP1 AT %IW."SimDevice".P20_07_SAI3; (* Messung: Kühlwasserdruck Austritt Motorkühlwasserpumpe 1 *)
+	Cyclic#1.HalIO::Ign_Run_Hal AT %IX."SimDevice".P20_08_SI2; (* Betrieb: Zündung *)
+	Cyclic#1.HalIO::Pr_EG_Hi AT %IX."SimDevice".P20_08_SI6; (* Status: Abgasgegendruck max *)
+	Cyclic#1.HalIO::GT1_GV1_Open AT %QX."SimDevice".P20_09_SO1; (* Anforderung: Gasventile - Gasstrecke 1 öffnen *)
+	Cyclic#1.HalIO::GT1_GV2_Open AT %QX."SimDevice".P20_09_SO2; (* Anforderung: Gasventile - Gasstrecke 1 öffnen *)
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[19] AT %IW."X20SL8100_S01_00".UINT0020;
 	Cyclic#6.EngineGeneral::bSafeOUT_F09_Cust_OK_PC AT %IX."X20SL8100_S01_00".BOOL00021;
+	Cyclic#6.EngineGeneral::iSafeOUT_F07_GCB_On_60s_ET AT %ID."X20SL8100_S01_00".DINT0021;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[20] AT %IW."X20SL8100_S01_00".UINT0021;
 	Cyclic#6.EngineGeneral::bSafeOUT_F10_EmStop_M_OK AT %IX."X20SL8100_S01_00".BOOL00022;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_Cust_OK_15s_ET AT %ID."X20SL8100_S01_00".DINT0022;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[21] AT %IW."X20SL8100_S01_00".UINT0022;
 	Cyclic#6.EngineGeneral::bSafeOUT_F10_EmStop_OK AT %IX."X20SL8100_S01_00".BOOL00023;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_Cust_PC_ET AT %ID."X20SL8100_S01_00".DINT0023;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[22] AT %IW."X20SL8100_S01_00".UINT0023;
 	Cyclic#6.EngineGeneral::bSafeOUT_F10_SafetyLoop_EmStop AT %IX."X20SL8100_S01_00".BOOL00024;
+	Cyclic#6.EngineGeneral::iSafeOUT_F12_GV_Open_60s_ET AT %ID."X20SL8100_S01_00".DINT0024;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[23] AT %IW."X20SL8100_S01_00".UINT0024;
 	Cyclic#6.EngineGeneral::bSafeOUT_F10_DO_EmStop AT %IX."X20SL8100_S01_00".BOOL00025;
+	Cyclic#6.EngineGeneral::iSafeOUT_F12_GT1_LC_130s_ET AT %ID."X20SL8100_S01_00".DINT0025;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[24] AT %IW."X20SL8100_S01_00".UINT0025;
 	Cyclic#6.EngineGeneral::bSafeOUT_F10_DO_EmStop_PS AT %IX."X20SL8100_S01_00".BOOL00026;
+	Cyclic#6.EngineGeneral::iSafeOUT_F12_GT2_LC_130s_ET AT %ID."X20SL8100_S01_00".DINT0026;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[25] AT %IW."X20SL8100_S01_00".UINT0026;
 	Cyclic#6.EngineGeneral::bSafeOUT_F11_SafetyLoop_A1_OK AT %IX."X20SL8100_S01_00".BOOL00027;
+	Cyclic#6.EngineGeneral::iSafeOUT_F12_GT3_LC_130s_ET AT %ID."X20SL8100_S01_00".DINT0027;
+	Cyclic#6.EngineGeneral::iParaRead_sPLC[26] AT %IW."X20SL8100_S01_00".UINT0027;
 	Cyclic#6.EngineGeneral::bSafeOUT_F11_SafetyLoop_A2_OK AT %IX."X20SL8100_S01_00".BOOL00028;
+	Cyclic#6.EngineGeneral::iSafeOUT_F12_GT4_LC_130s_ET AT %ID."X20SL8100_S01_00".DINT0028;
 	Cyclic#6.EngineGeneral::bSafeOUT_F11_SafetyLoop_M_OK AT %IX."X20SL8100_S01_00".BOOL00029;
+	Cyclic#6.EngineGeneral::iSafeOUT_F16_ScavFlapPos_PC_ET AT %ID."X20SL8100_S01_00".DINT0029;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_GT1_OK AT %IX."X20SL8100_S01_00".BOOL00030;
+	Cyclic#6.EngineGeneral::iSafeOUT_F17_Vol_PurgeAir AT %ID."X20SL8100_S01_00".DINT0030;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_GT2_OK AT %IX."X20SL8100_S01_00".BOOL00031;
+	Cyclic#6.EngineGeneral::iSafeOUT_F20_PS1_HWHT_Lo_OK_ET AT %ID."X20SL8100_S01_00".DINT0031;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_GT3_OK AT %IX."X20SL8100_S01_00".BOOL00032;
+	Cyclic#6.EngineGeneral::iSafeOUT_F20_PS2_HWHT_Lo_OK_ET AT %ID."X20SL8100_S01_00".DINT0032;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_GT4_OK AT %IX."X20SL8100_S01_00".BOOL00033;
+	Cyclic#6.EngineGeneral::iSafeOUT_F20_FS_HWHT_Lo_OK_ET AT %ID."X20SL8100_S01_00".DINT0033;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV1 AT %IX."X20SL8100_S01_00".BOOL00034;
+	Cyclic#6.EngineGeneral::iSafeOUT_F20_FS_HWHT_Lo_PC_ET AT %ID."X20SL8100_S01_00".DINT0034;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV1a_PS AT %IX."X20SL8100_S01_00".BOOL00035;
+	Cyclic#6.EngineGeneral::iSafeOUT_F20_PS1_HWLT_Lo_OK_ET AT %ID."X20SL8100_S01_00".DINT0035;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV1b_PS AT %IX."X20SL8100_S01_00".BOOL00036;
+	Cyclic#6.EngineGeneral::iSafeOUT_F20_PS2_HWLT_Lo_OK_ET AT %ID."X20SL8100_S01_00".DINT0036;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_GT1_SD_Dem AT %IX."X20SL8100_S01_00".BOOL00037;
+	Cyclic#6.EngineGeneral::iSafeOUT_F20_FS_HWLT_Lo_OK_ET AT %ID."X20SL8100_S01_00".DINT0037;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_GT1_SD_Dem_PS AT %IX."X20SL8100_S01_00".BOOL00038;
+	Cyclic#6.EngineGeneral::iSafeOUT_F20_FS_HWLT_Lo_PC_ET AT %ID."X20SL8100_S01_00".DINT0038;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV2 AT %IX."X20SL8100_S01_00".BOOL00039;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_Door_OK_15s_ET AT %ID."X20SL8100_S01_00".DINT0039;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV2a_PS AT %IX."X20SL8100_S01_00".BOOL00040;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL1_Fan_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0040;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV2b_PS AT %IX."X20SL8100_S01_00".BOOL00041;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL2_Fan_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0041;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_GT2_SD_Dem AT %IX."X20SL8100_S01_00".BOOL00042;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL3_Fan_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0042;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_GT2_SD_Dem_PS AT %IX."X20SL8100_S01_00".BOOL00043;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL4_Fan_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0043;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV3 AT %IX."X20SL8100_S01_00".BOOL00044;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL5_Fan_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0044;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV3a_PS AT %IX."X20SL8100_S01_00".BOOL00045;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL6_Fan_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0045;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV3b_PS AT %IX."X20SL8100_S01_00".BOOL00046;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL1_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0046;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_GT3_SD_Dem AT %IX."X20SL8100_S01_00".BOOL00047;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL2_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0047;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_GT3_SD_Dem_PS AT %IX."X20SL8100_S01_00".BOOL00048;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL3_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0048;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV4 AT %IX."X20SL8100_S01_00".BOOL00049;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL4_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0049;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV4a_PS AT %IX."X20SL8100_S01_00".BOOL00050;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL5_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0050;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_Rel_GV4b_PS AT %IX."X20SL8100_S01_00".BOOL00051;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL6_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0051;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_GT4_SD_Dem AT %IX."X20SL8100_S01_00".BOOL00052;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL1_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0052;
 	Cyclic#6.EngineGeneral::bSafeOUT_F12_GT4_SD_Dem_PS AT %IX."X20SL8100_S01_00".BOOL00053;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL2_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0053;
 	Cyclic#6.EngineGeneral::bSafeOUT_F99_Rel_SF_OK AT %IX."X20SL8100_S01_00".BOOL00054;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL3_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0054;
 	Cyclic#6.EngineGeneral::bSafeOUT_F99_Rel_SF_OK_A_PS AT %IX."X20SL8100_S01_00".BOOL00055;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL4_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0055;
 	Cyclic#6.EngineGeneral::bSafeOUT_F99_Rel_SF_OK_M_PS AT %IX."X20SL8100_S01_00".BOOL00056;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL5_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0056;
 	Cyclic#6.EngineGeneral::bSafeOUT_F09_DI_ERV_Cust AT %IX."X20SL8100_S01_00".BOOL00057;
+	Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL6_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0057;
 	Cyclic#6.EngineGeneral::bSafeOUT_F09_ERV_PC_Forced AT %IX."X20SL8100_S01_00".BOOL00058;
+	Cyclic#6.EngineGeneral::iSafeOUT_F12_DCGA_LC_130s_ET AT %ID."X20SL8100_S01_00".DINT0058;
 	Cyclic#6.EngineGeneral::bAMM_2383 AT %IX."X20SL8100_S01_00".BOOL00060;
 	Cyclic#6.EngineGeneral::bAMM_2384 AT %IX."X20SL8100_S01_00".BOOL00061;
 	Cyclic#6.EngineGeneral::bAMM_2385 AT %IX."X20SL8100_S01_00".BOOL00062;
@@ -1267,6 +1538,128 @@ VAR_CONFIG
 	Cyclic#6.EngineGeneral::bAMM_9420 AT %IX."X20SL8100_S01_00".BOOL00088;
 	Cyclic#6.EngineGeneral::bAMM_9421 AT %IX."X20SL8100_S01_00".BOOL00089;
 	Cyclic#6.EngineGeneral::bAMM_9422 AT %IX."X20SL8100_S01_00".BOOL00090;
+	Cyclic#1.HalIO::T_EGaLPTC_A AT %IW."SimDevice".P90_01_TC0; (* Messung - Abgastemperatur nach Turbo A *)
+	Cyclic#1.HalIO::T_EGaLPTC_B AT %IW."SimDevice".P90_01_TC1; (* Messung - Abgastemperatur nach Turbo B *)
+	Cyclic#1.HalIO::T_EG_PrReliefVa1 AT %IW."SimDevice".P90_01_TC2; (* Messung: Abgastemperatur Druckentlastung Ventil 1 *)
+	Cyclic#1.HalIO::U_StarterBat AT %IW."SimDevice".P90_02_AI0; (* Messung: Spannung Starterbatterien *)
+	Cyclic#1.HalIO::U_BufferBat1 AT %IW."SimDevice".P90_02_AI1; (* Messung: Spannung Steuerbatterie 1 *)
+	Cyclic#1.HalIO::Pr_DCGA_inlet AT %IW."SimDevice".P90_02_AI2; (* Messung: Gasdruck vor DCGA Ventil *)
+	Cyclic#1.HalIO::Pr_DCGA_aGV AT %IW."SimDevice".P90_02_AI3; (* Messung: Gasdruck nach DCGA Ventil *)
+	Cyclic#1.HalIO::Pr_DCGA_BankA AT %IW."SimDevice".P90_03_AI1; (* Messung: Gasdruck nach HP Ventil Bank A *)
+	Cyclic#1.HalIO::Pr_DCGA_BankB AT %IW."SimDevice".P90_03_AI3; (* Messung: Gasdruck nach HP Ventil Bank B *)
+	Cyclic#1.HalIO::Pr_PC AT %IW."SimDevice".P90_04_AI0; (* Messung: Gasdruck Vorkammer *)
+	Cyclic#1.HalIO::Pr_PCGT AT %IW."SimDevice".P90_04_AI1; (* Messung: Gasdruck Vorkammer - Gasstrecke *)
+	Cyclic#1.HalIO::N_TCLP_A AT %IW."SimDevice".P90_04_AI2; (* Messung: Drehzahlsensor Abgasturbolader Niederdruck A *)
+	Cyclic#1.HalIO::N_TCLP_B AT %IW."SimDevice".P90_04_AI3; (* Messung: Drehzahlsensor Abgasturbolader Niederdruck B *)
+	Cyclic#1.HalIO::N_TCHP_A AT %IW."SimDevice".P90_05_AI0; (* Messung: Drehzahlsensor Abgasturbolader Hochdruck A *)
+	Cyclic#1.HalIO::N_TCHP_B AT %IW."SimDevice".P90_05_AI1; (* Messung: Drehzahlsensor Abgasturbolader Hochdruck B *)
+	Cyclic#1.HalIO::Pr_EOF_DiffMon AT %IW."SimDevice".P90_06_AI1; (* Messung: Motoröldruck - vor Motorölfilter *)
+	Cyclic#1.HalIO::Pr_TC_EOF_After AT %IW."SimDevice".P90_06_AI2; (* Messung: Öldruck Abgasturbolader [Eintritt] *)
+	Cyclic#1.HalIO::Pr_ECWaP2 AT %IW."SimDevice".P90_06_AI3; (* Messung: Kühlwasserdruck Austritt Motorkühlwasserpumpe 2 *)
+	Cyclic#1.HalIO::T_ECW AT %IW."SimDevice".P90_07_AI0; (* Messung: Motorkühlwassertemperatur *)
+	Cyclic#1.HalIO::T_HW_Su_Unit AT %IW."SimDevice".P90_07_AI1; (* Messung - Vorlauftemperatur Motor *)
+	Cyclic#1.HalIO::DPr_AirFilt AT %IW."SimDevice".P90_07_AI2; (* Messung: Druckgeber nach Luftfilter *)
+	Cyclic#1.HalIO::Pr_Baro AT %IW."SimDevice".P90_07_AI3; (* Messung: Druckgeber für Umgebungsdruck *)
+	Cyclic#1.HalIO::Pos_Act_TV_A1 AT %IW."SimDevice".P90_08_AI0; (* Messung: Position Drosselklappe {{A1}} *)
+	Cyclic#1.HalIO::Pos_Act_TV_A2 AT %IW."SimDevice".P90_08_AI1; (* Messung: Position Drosselklappe {{A2}} *)
+	Cyclic#1.HalIO::Pos_Act_CBV_A1 AT %IW."SimDevice".P90_08_AI2; (* Messung: Position Verdichterbypassventil {{A1}} *)
+	Cyclic#1.HalIO::Pos_Act_CBV_B1 AT %IW."SimDevice".P90_08_AI3; (* Messung: Position Verdichterbypassventil {{B1}} *)
+	Cyclic#1.HalIO::Pr_Ch_P2s AT %IW."SimDevice".P90_09_AI0; (* Messung: Ladedruck Drosselklappe Austritt {{p2'}} *)
+	Cyclic#1.HalIO::Pr_Ch_P2 AT %IW."SimDevice".P90_09_AI1; (* Messung. Ladedruck vor Drosselklappe [Gemischdruck p2] *)
+	Cyclic#1.HalIO::Pr_Ch_P1HP_B AT %IW."SimDevice".P90_09_AI2; (* Messung: Ladedruck Turbolader Eintritt - Hochdruck {{B}} *)
+	Cyclic#1.HalIO::Pr_Ch_P2LP AT %IW."SimDevice".P90_09_AI3; (* Messung: Ladedruck Turbolader Austritt, zentral *)
+	Cyclic#1.HalIO::Pr_Ch_P2bFA AT %IW."SimDevice".P90_10_AI0; (* Messung: Druck zwischen Ladeluftkühler und Flammensperre *)
+	Cyclic#1.HalIO::Pr_Ch_P2HP AT %IW."SimDevice".P90_10_AI1; (* Messung: Druck nach Abgasturbolader [vor Gemischkühler] *)
+	Cyclic#1.HalIO::Pr_f_BbFilt AT %IW."SimDevice".P90_10_AI2; (* Messung: Druck vor Blow-by-Filter *)
+	Cyclic#1.HalIO::Pr_a_BbFilt AT %IW."SimDevice".P90_10_AI3; (* Messung: Druck nach Blow-by-Filter *)
+	Cyclic#1.HalIO::Pr_CC AT %IW."SimDevice".P90_11_AI1; (* Messung: Kurbelgehäusedruck *)
+	Cyclic#1.HalIO::U_Gen_Exc AT %IW."SimDevice".P90_11_AI2; (* Messung: Generator Erregerspannung *)
+	Cyclic#1.HalIO::T_DCGA AT %IW."SimDevice".P90_12_RTD0; (* Messung - Gastemperatur {{DCGA}} *)
+	Cyclic#1.HalIO::T_EO AT %IW."SimDevice".P90_12_RTD2; (* Messung: Öltemperatur *)
+	Cyclic#1.HalIO::T_ECWbEng AT %IW."SimDevice".P90_12_RTD3; (* Messung: Temperatur Motorkühlwasser Eintritt *)
+	Cyclic#1.HalIO::T_Ch_T1LP AT %IW."SimDevice".P90_13_RTD0; (* Messung: Ladekühlkreis Temperatur Turbolader Niederdruck - Eintritt [Ansauglufttemperatur] *)
+	Cyclic#1.HalIO::T_HW_ReBeEng AT %IW."SimDevice".P90_13_RTD1; (* Messung: Rücklauftemperatur [vor Motor] *)
+	Cyclic#1.HalIO::T_HW_Re_LT AT %IW."SimDevice".P90_14_RTD3; (* Messung: Rücklauftemperatur [Niedertemperaturkreis] *)
+	Cyclic#1.HalIO::T_Ch_T2s AT %IW."SimDevice".P90_15_RTD2; (* Messung: Ladetemperatur *)
+	Cyclic#1.HalIO::T_Ch_T1HP_B AT %IW."SimDevice".P90_16_RTD0; (* Messung. Ladetemperatur Turbolader Eintritt - Hochdruck {{B}} *)
+	Cyclic#1.HalIO::T_Gen_Wind_Act_L1 AT %IW."SimDevice".P90_16_RTD2; (* Messung: Wicklungstemperatur Phase U *)
+	Cyclic#1.HalIO::T_Gen_Wind_Act_L2 AT %IW."SimDevice".P90_16_RTD3; (* Messung: Wicklungstemperatur Phase V *)
+	Cyclic#1.HalIO::T_Gen_Wind_Act_L3 AT %IW."SimDevice".P90_17_RTD0; (* Messung: Wicklungstemperatur Phase W *)
+	Cyclic#1.HalIO::T_Gen_Bear_A_Act AT %IW."SimDevice".P90_17_RTD1; (* Messung: Lagertemperatur DE *)
+	Cyclic#1.HalIO::T_Gen_Bear_B_Act AT %IW."SimDevice".P90_17_RTD2; (* Messung: Lagertemperatur NDE *)
+	Cyclic#1.HalIO::DCGA_set_Valve1_A AT %QW."SimDevice".P90_18_AO0; (* Sollwert DCGA Ventil 1 *)
+	Cyclic#1.HalIO::DCGA_set_Valve2_A AT %QW."SimDevice".P90_18_AO1; (* Sollwert DCGA Ventil 2 *)
+	Cyclic#1.HalIO::DCGA_set_Valve1_B AT %QW."SimDevice".P90_18_AO2; (* Sollwert DCGA Ventil 3 *)
+	Cyclic#1.HalIO::DCGA_set_Valve2_B AT %QW."SimDevice".P90_18_AO3; (* Sollwert DCGA Ventil 3 *)
+	Cyclic#1.HalIO::Pos_TV_A1 AT %QW."SimDevice".P90_19_AO1; (* Sollwert: Position Drosselklappe A1 *)
+	Cyclic#1.HalIO::Pos_TV_A2 AT %QW."SimDevice".P90_19_AO2; (* Sollwert: Position Drosselklappe A2 *)
+	Cyclic#1.HalIO::Pos_CBV_A1 AT %QW."SimDevice".P90_19_AO3; (* Sollwert: Position Verdichterbypassventil A1 *)
+	Cyclic#1.HalIO::Pos_CBV_B1 AT %QW."SimDevice".P90_20_AO0; (* Sollwert: Position Verdichterbypassventil B1 *)
+	Cyclic#1.HalIO::Q_AVR_Set_U AT %QW."SimDevice".P90_20_AO1; (* Sollwert: Blindleistung *)
+	Cyclic#1.HalIO::T_AO_Gen_T_In AT %QW."SimDevice".P90_20_AO2; (* Messung: Motor Ansauglufttemperatur *)
+	Cyclic#1.HalIO::U_Set_Norm AT %QW."SimDevice".P90_20_AO3; (* Sollwert: Spannung [Inselbetrieb] *)
+	Cyclic#1.HalIO::CV_M_Ok AT %IX."SimDevice".P90_21_DI0; (* Sicherungsfall 24VDC Stützpunkt [Extern 1] *)
+	Cyclic#1.HalIO::BatChargeDev_Ok AT %IX."SimDevice".P90_21_DI1; (* Status: Ladegeräte OK *)
+	Cyclic#1.HalIO::IFCP_CBTrip AT %IX."SimDevice".P90_21_DI2; (* Status: Sicherungsfall *)
+	Cyclic#1.HalIO::T_AirIFCP_Hi AT %IX."SimDevice".P90_21_DI3; (* Störung Klimagerät *)
+	Cyclic#1.HalIO::Pr_GT1_Min AT %IX."SimDevice".P90_21_DI4; (* Status: Gasdruck min Gasstrecke 1 *)
+	Cyclic#1.HalIO::Pr_GT1_Max AT %IX."SimDevice".P90_21_DI5; (* Status: Gasdruck max Gasstrecke 1 *)
+	Cyclic#1.HalIO::Pr_PCG_Min AT %IX."SimDevice".P90_21_DI6; (* Status: Gasdruck max Gasstrecke 1 *)
+	Cyclic#1.HalIO::CustDigIn[1] AT %IX."SimDevice".P90_21_DI7; (* Status: Vorkammer Gasstrecke Gasdruck max *)
+	Cyclic#1.HalIO::Pr_DCGA_min AT %IX."SimDevice".P90_21_DI8; (* Status: Gas pressure min DCGA gas train *)
+	Cyclic#1.HalIO::Pr_DCGA_max AT %IX."SimDevice".P90_21_DI9; (* Status: Gasdruck max DCGA Gasstrecke *)
+	Cyclic#1.HalIO::Actuator_Ok_WG_A AT %IX."SimDevice".P90_21_DI10; (* Störung: Wastegate A *)
+	Cyclic#1.HalIO::Actuator_Ok_WG_B AT %IX."SimDevice".P90_21_DI11; (* Störung: Wastegate B *)
+	Cyclic#1.HalIO::Pr_TCOF_EOF_DiffMax AT %IX."SimDevice".P90_22_DI1; (* Messung: Öldifferenzdruck max. Turbolader *)
+	Cyclic#1.HalIO::EO_Level_Lo AT %IX."SimDevice".P90_22_DI2; (* Messung: Ölstand min Abstellung *)
+	Cyclic#1.HalIO::EO_Refill AT %IX."SimDevice".P90_22_DI3; (* Status. Öl nachfüllen *)
+	Cyclic#1.HalIO::EO_Level_Hi AT %IX."SimDevice".P90_22_DI4; (* Messung: Ölstand max Abstellung *)
+	Cyclic#1.HalIO::L_OilSumpHi AT %IX."SimDevice".P90_22_DI5; (* Messung: Ölstand max - Ölauffangwanne Aggregat *)
+	Cyclic#1.HalIO::AuxV_Eng_ok AT %IX."SimDevice".P90_22_DI6; (* Status: Hilfsbetriebe Spannung OK *)
+	Cyclic#1.HalIO::SL_TS_ECW AT %IX."SimDevice".P90_22_DI7; (* Motorkühlwassertemperatur Begrenzer - Motoraustritt *)
+	Cyclic#1.HalIO::SL_TS_HW_Su_Unit AT %IX."SimDevice".P90_22_DI8; (* Status - Vorlauftemperatur Motor Maximum *)
+	Cyclic#1.HalIO::FS_ECW AT %IX."SimDevice".P90_22_DI9; (* Durchfluss Vorwärmpumpe OK *)
+	Cyclic#1.HalIO::Actuator_Ok_TV1A AT %IX."SimDevice".P90_22_DI10; (* Störung: Drosselklappe {{A1}} *)
+	Cyclic#1.HalIO::Actuator_Ok_TV2A AT %IX."SimDevice".P90_22_DI11; (* Störung: Drosselklappe {{A2}} *)
+	Cyclic#1.HalIO::Actuator_Ok_CBV_A AT %IX."SimDevice".P90_22_DI12; (* Störung: Verdichterbypassventil {{A1}} *)
+	Cyclic#1.HalIO::Actuator_Ok_CBV_B AT %IX."SimDevice".P90_22_DI13; (* Störung: Verdichterbypassventil B1 *)
+	Cyclic#1.HalIO::SPAx_CamDev AT %IX."SimDevice".P90_22_DI14; (* {{SPAx}}: Überwachung {{CAM}}-Abweichung  *)
+	Cyclic#1.HalIO::Ign_OverspeedRelay AT %IX."SimDevice".P90_22_DI15; (* Status: Überdrehzahl *)
+	Cyclic#1.HalIO::MO_PwrReply AT %IX."SimDevice".P90_23_DI0; (* Status: MPM 1 OK *)
+	Cyclic#1.HalIO::MO_PowerOverload AT %IX."SimDevice".P90_23_DI1; (* Status: MPM 1 Überlast *)
+	Cyclic#1.HalIO::MO_PwrReply2 AT %IX."SimDevice".P90_23_DI2; (* MPM 2 OK *)
+	Cyclic#1.HalIO::MO_PowerOverload2 AT %IX."SimDevice".P90_23_DI3; (* MPM 2: Überlast *)
+	Cyclic#1.HalIO::MO_SaftyLoop AT %IX."SimDevice".P90_23_DI4; (* MORIS Sicherheitsschleife: OK *)
+	Cyclic#1.HalIO::U_Gen_Contr_Fail AT %IX."SimDevice".P90_23_DI5; (* Generator Software Alarm *)
+	Cyclic#1.HalIO::U_GenDiode_Trip AT %IX."SimDevice".P90_23_DI6; (* Generator Diode Alarm *)
+	Cyclic#1.HalIO::Cnt_OilPulse AT %IX."SimDevice".P90_23_DI7; (* Messung: Zähler Ölverbrauch *)
+	Cyclic#1.HalIO::ChargeOff_Dem AT %QX."SimDevice".P90_24_DO0; (* Abschaltung: Ladung *)
+	Cyclic#1.HalIO::BufferBat1_Disconnect AT %QX."SimDevice".P90_24_DO1; (* Status: Steuerbatterie 1 Abschaltung *)
+	Cyclic#1.HalIO::BufferBat1_ConnectLoad AT %QX."SimDevice".P90_24_DO2; (* Status: Zuschaltung Lastwiderstand Steuerbatterie 1 *)
+	Cyclic#1.HalIO::PCG_GV_Open AT %QX."SimDevice".P90_24_DO3; (* Anforderung: Vorkammergasventile öffnen *)
+	Cyclic#1.HalIO::PCG_DemReliefValve AT %QX."SimDevice".P90_24_DO4; (* Anforderung: Entlüftungsventil Vorkammergasstrecke *)
+	Cyclic#1.HalIO::DCGA_BlowOff AT %QX."SimDevice".P90_24_DO5; (* Anforderung: Entlüftungsventil {{DCGA}} Gasstrecke *)
+	Cyclic#1.HalIO::WG_A_Dem AT %QX."SimDevice".P90_24_DO6; (* Anforderung Wastegate A *)
+	Cyclic#1.HalIO::WG_B_Dem AT %QX."SimDevice".P90_24_DO7; (* Anforderung Wastegate B *)
+	Cyclic#1.HalIO::EOP1DC_Dem AT %QX."SimDevice".P90_24_DO10; (* Anforderung: Ölpumpe 1 DC *)
+	Cyclic#1.HalIO::EOVal_DemOpen AT %QX."SimDevice".P90_24_DO11; (* Anforderung: Ölventil auf *)
+	Cyclic#1.HalIO::ECWP_PreH_Dem AT %QX."SimDevice".P90_24_DO12; (* Anforderung: Vorwärmpumpe *)
+	Cyclic#1.HalIO::AuxPoSuMains AT %QX."SimDevice".P90_24_DO13; (* Status: Hilfsbetriebe Spannung OK *)
+	Cyclic#1.HalIO::AuxPoSuUPS AT %QX."SimDevice".P90_24_DO14; (* Störung: Hilfsbetriebe Spannung *)
+	Cyclic#1.HalIO::Actuator_Rel AT %QX."SimDevice".P90_24_DO15; (* Befehl: Aktivierung Drosselklappe A1 *)
+	Cyclic#1.HalIO::Actuator2_Rel AT %QX."SimDevice".P90_25_DO0; (* Befehl: Aktivierung Drosselklappe A2 *)
+	Cyclic#1.HalIO::EleStarter_Dem AT %QX."SimDevice".P90_25_DO1; (* Anforderung: Startrelais *)
+	Cyclic#1.HalIO::MO_PwrRequest AT %QX."SimDevice".P90_25_DO2; (* Anforderung: MPM 1 Zündung *)
+	Cyclic#1.HalIO::MO_PwrRequest2 AT %QX."SimDevice".P90_25_DO3; (* Anforderung: MPM 2 Zündung *)
+	Cyclic#1.HalIO::GenDeexitDem AT %QX."SimDevice".P90_25_DO4; (* Anforderung: Entregung *)
+	Cyclic#1.HalIO::LeroySomer_AuxContactor AT %QX."SimDevice".P90_25_DO5; (* SY-Anwahl *)
+	Cyclic#1.HalIO::GCB_On_ReturnSign AT %QX."SimDevice".P90_25_DO6; (* Generatorschalter geschlossen *)
+	Cyclic#1.HalIO::PF_CosPCtr_Ena AT %QX."SimDevice".P90_25_DO7; (* Parallel mit Netzstatus *)
+	Cyclic#1.HalIO::GenCtrResetSp AT %QX."SimDevice".P90_25_DO8; (* Befehl: Reset Sollwert Generatorregler *)
+	Cyclic#1.HalIO::U_Plus AT %QX."SimDevice".P90_25_DO9; (* Takt: Spannung + *)
+	Cyclic#1.HalIO::U_Minus AT %QX."SimDevice".P90_25_DO10; (* Takt: Spannung - *)
+	Cyclic#1.HalIO::PCG_BPV_open AT %QX."SimDevice".P90_25_DO11; (* Befehl: Vorkammergas Bypass Ventil öffnen *)
+	Cyclic#1.HalIO::DCGA_GV_Open AT %QX."SimDevice".P90_25_DO12; (* Anforderung: DCGA Ventile *)
 	Cyclic#6.EngineGeneral::bAMM_9423 AT %IX."X20SL8100_S01_00".BOOL00091;
 	Cyclic#6.EngineGeneral::bAMM_9424 AT %IX."X20SL8100_S01_00".BOOL00092;
 	Cyclic#6.EngineGeneral::bAMM_9425 AT %IX."X20SL8100_S01_00".BOOL00093;
@@ -1544,108 +1937,9 @@ VAR_CONFIG
 	Cyclic#6.EngineGeneral::bAMM_9702 AT %IX."X20SL8100_S01_00".BOOL00369;
 	Cyclic#6.EngineGeneral::bAMM_9703 AT %IX."X20SL8100_S01_00".BOOL00370;
 	Cyclic#6.EngineGeneral::bAMM_9704 AT %IX."X20SL8100_S01_00".BOOL00371;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_Nr_PC_NotDone AT %IW."X20SL8100_S01_00".INT0001;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[0] AT %IW."X20SL8100_S01_00".UINT0001;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[1] AT %IW."X20SL8100_S01_00".UINT0002;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[2] AT %IW."X20SL8100_S01_00".UINT0003;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[3] AT %IW."X20SL8100_S01_00".UINT0004;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[4] AT %IW."X20SL8100_S01_00".UINT0005;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[5] AT %IW."X20SL8100_S01_00".UINT0006;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[6] AT %IW."X20SL8100_S01_00".UINT0007;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[7] AT %IW."X20SL8100_S01_00".UINT0008;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[8] AT %IW."X20SL8100_S01_00".UINT0009;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[9] AT %IW."X20SL8100_S01_00".UINT0010;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[10] AT %IW."X20SL8100_S01_00".UINT0011;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[11] AT %IW."X20SL8100_S01_00".UINT0012;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[12] AT %IW."X20SL8100_S01_00".UINT0013;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[13] AT %IW."X20SL8100_S01_00".UINT0014;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[14] AT %IW."X20SL8100_S01_00".UINT0015;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[15] AT %IW."X20SL8100_S01_00".UINT0016;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[16] AT %IW."X20SL8100_S01_00".UINT0017;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[17] AT %IW."X20SL8100_S01_00".UINT0018;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[18] AT %IW."X20SL8100_S01_00".UINT0019;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[19] AT %IW."X20SL8100_S01_00".UINT0020;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[20] AT %IW."X20SL8100_S01_00".UINT0021;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[21] AT %IW."X20SL8100_S01_00".UINT0022;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[22] AT %IW."X20SL8100_S01_00".UINT0023;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[23] AT %IW."X20SL8100_S01_00".UINT0024;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[24] AT %IW."X20SL8100_S01_00".UINT0025;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[25] AT %IW."X20SL8100_S01_00".UINT0026;
-	Cyclic#6.EngineGeneral::iParaRead_sPLC[26] AT %IW."X20SL8100_S01_00".UINT0027;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_CRC AT %ID."X20SL8100_S01_00".UDINT0001;
-	Cyclic#6.EngineGeneral::iSafeOUT_F20_CRC AT %ID."X20SL8100_S01_00".UDINT0002;
-	Cyclic#6.EngineGeneral::iSafeOUT_F01_N_EngAct AT %ID."X20SL8100_S01_00".DINT0001;
-	Cyclic#6.EngineGeneral::iSafeOUT_F01_N_EngAct_Diff AT %ID."X20SL8100_S01_00".DINT0002;
-	Cyclic#6.EngineGeneral::iSafeOUT_F01_SDC_30s_ET AT %ID."X20SL8100_S01_00".DINT0003;
-	Cyclic#6.EngineGeneral::iSafeOUT_F01_Standstill_1m_ET AT %ID."X20SL8100_S01_00".DINT0004;
-	Cyclic#6.EngineGeneral::iSafeOUT_F01_N_Nom90_10s_ET AT %ID."X20SL8100_S01_00".DINT0005;
-	Cyclic#6.EngineGeneral::iSafeOUT_F03_Pr_EO AT %ID."X20SL8100_S01_00".DINT0006;
-	Cyclic#6.EngineGeneral::iSafeOUT_F03_Pr_EO_Standstill AT %ID."X20SL8100_S01_00".DINT0007;
-	Cyclic#6.EngineGeneral::iSafeOUT_F03_Pr_EO_Diff AT %ID."X20SL8100_S01_00".DINT0008;
-	Cyclic#6.EngineGeneral::iSafeOUT_F03_Pr_EO_Fr_1m_ET AT %ID."X20SL8100_S01_00".DINT0009;
-	Cyclic#6.EngineGeneral::iSafeOUT_F04_Pr_EOaP AT %ID."X20SL8100_S01_00".DINT0010;
-	Cyclic#6.EngineGeneral::iSafeOUT_F04_Pr_EOaP_Standstill AT %ID."X20SL8100_S01_00".DINT0011;
-	Cyclic#6.EngineGeneral::iSafeOUT_F04_Pr_EOaP_Fr_1m_ET AT %ID."X20SL8100_S01_00".DINT0012;
-	Cyclic#6.EngineGeneral::iSafeOUT_F04_EO_PumpsOff_2m_ET AT %ID."X20SL8100_S01_00".DINT0013;
-	Cyclic#6.EngineGeneral::iSafeOUT_F05_Pr_ECW AT %ID."X20SL8100_S01_00".DINT0014;
-	Cyclic#6.EngineGeneral::iSafeOUT_F05_Pr_ECW_Diff AT %ID."X20SL8100_S01_00".DINT0015;
-	Cyclic#6.EngineGeneral::iSafeOUT_F05_Pr_ECW_Fr_1m_ET AT %ID."X20SL8100_S01_00".DINT0016;
-	Cyclic#6.EngineGeneral::iSafeOUT_F06_Pr_ECWaP AT %ID."X20SL8100_S01_00".DINT0017;
-	Cyclic#6.EngineGeneral::iSafeOUT_F06_Pr_ECWaP_Fr_1m_ET AT %ID."X20SL8100_S01_00".DINT0018;
-	Cyclic#6.EngineGeneral::iSafeOUT_F06_ECW_PumpsOff_2m_ET AT %ID."X20SL8100_S01_00".DINT0019;
-	Cyclic#6.EngineGeneral::iSafeOUT_F07_GCB_On_10s_ET AT %ID."X20SL8100_S01_00".DINT0020;
-	Cyclic#6.EngineGeneral::iSafeOUT_F07_GCB_On_60s_ET AT %ID."X20SL8100_S01_00".DINT0021;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_Cust_OK_15s_ET AT %ID."X20SL8100_S01_00".DINT0022;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_Cust_PC_ET AT %ID."X20SL8100_S01_00".DINT0023;
-	Cyclic#6.EngineGeneral::iSafeOUT_F12_GV_Open_60s_ET AT %ID."X20SL8100_S01_00".DINT0024;
-	Cyclic#6.EngineGeneral::iSafeOUT_F12_GT1_LC_130s_ET AT %ID."X20SL8100_S01_00".DINT0025;
-	Cyclic#6.EngineGeneral::iSafeOUT_F12_GT2_LC_130s_ET AT %ID."X20SL8100_S01_00".DINT0026;
-	Cyclic#6.EngineGeneral::iSafeOUT_F12_GT3_LC_130s_ET AT %ID."X20SL8100_S01_00".DINT0027;
-	Cyclic#6.EngineGeneral::iSafeOUT_F12_GT4_LC_130s_ET AT %ID."X20SL8100_S01_00".DINT0028;
-	Cyclic#6.EngineGeneral::iSafeOUT_F16_ScavFlapPos_PC_ET AT %ID."X20SL8100_S01_00".DINT0029;
-	Cyclic#6.EngineGeneral::iSafeOUT_F17_Vol_PurgeAir AT %ID."X20SL8100_S01_00".DINT0030;
-	Cyclic#6.EngineGeneral::iSafeOUT_F20_PS1_HWHT_Lo_OK_ET AT %ID."X20SL8100_S01_00".DINT0031;
-	Cyclic#6.EngineGeneral::iSafeOUT_F20_PS2_HWHT_Lo_OK_ET AT %ID."X20SL8100_S01_00".DINT0032;
-	Cyclic#6.EngineGeneral::iSafeOUT_F20_FS_HWHT_Lo_OK_ET AT %ID."X20SL8100_S01_00".DINT0033;
-	Cyclic#6.EngineGeneral::iSafeOUT_F20_FS_HWHT_Lo_PC_ET AT %ID."X20SL8100_S01_00".DINT0034;
-	Cyclic#6.EngineGeneral::iSafeOUT_F20_PS1_HWLT_Lo_OK_ET AT %ID."X20SL8100_S01_00".DINT0035;
-	Cyclic#6.EngineGeneral::iSafeOUT_F20_PS2_HWLT_Lo_OK_ET AT %ID."X20SL8100_S01_00".DINT0036;
-	Cyclic#6.EngineGeneral::iSafeOUT_F20_FS_HWLT_Lo_OK_ET AT %ID."X20SL8100_S01_00".DINT0037;
-	Cyclic#6.EngineGeneral::iSafeOUT_F20_FS_HWLT_Lo_PC_ET AT %ID."X20SL8100_S01_00".DINT0038;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_Door_OK_15s_ET AT %ID."X20SL8100_S01_00".DINT0039;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL1_Fan_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0040;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL2_Fan_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0041;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL3_Fan_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0042;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL4_Fan_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0043;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL5_Fan_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0044;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL6_Fan_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0045;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL1_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0046;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL2_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0047;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL3_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0048;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL4_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0049;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL5_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0050;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_INL6_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0051;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL1_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0052;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL2_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0053;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL3_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0054;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL4_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0055;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL5_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0056;
-	Cyclic#6.EngineGeneral::iSafeOUT_F09_OTL6_Lou_OK_1m_ET AT %ID."X20SL8100_S01_00".DINT0057;
-	Cyclic#6.EngineGeneral::iSafeOUT_F12_DCGA_LC_130s_ET AT %ID."X20SL8100_S01_00".DINT0058;
-	Cyclic#6.EngineGeneral::bSafeIN_Reset_sPLC AT %QX."X20SL8100_S01_00".BOOL10001;
-	Cyclic#5.AuxiliariesGeneral::OUT_AG.bEng_Start AT %QX."X20SL8100_S01_00".BOOL10002;
-	Cyclic#6.EngineGeneral::bSafeIN_EO_PumpsOFF AT %QX."X20SL8100_S01_00".BOOL10003;
-	Cyclic#6.EngineGeneral::bSafeIN_ECW_PumpsOFF AT %QX."X20SL8100_S01_00".BOOL10004;
-	Cyclic#5.Opstate::OUT_OP.bEng_Aux_Dem_CDR AT %QX."X20SL8100_S01_00".BOOL10005;
-	Cyclic#6.EngineGeneral::bSafeIN_ERV_Lou_PC_OP AT %QX."X20SL8100_S01_00".BOOL10006;
-	Cyclic#6.EngineGeneral::bSafeIN_ERV_Lou_PC_CL AT %QX."X20SL8100_S01_00".BOOL10007;
-	Cyclic#6.EngineGeneral::bSafeIN_ERV_ColdCountry AT %QX."X20SL8100_S01_00".BOOL10008;
 	Cyclic#6.EngineGeneral::iSafeIN_N_EngAct AT %QW."X20SL8100_S01_00".INT1001;
 	Cyclic#6.EngineGeneral::iSafeIN_N_EngNom AT %QW."X20SL8100_S01_00".INT1002;
 	Cyclic#6.EngineGeneral::iSafeIN_Eng_Motortype AT %QW."X20SL8100_S01_00".INT1003;
-	Cyclic#1.HalIO::bCANbusoff AT %IX."X20CS1070_P20_02_IGN1".CANbusoff;
-	Cyclic#1.HalIO::bQuitCANbusoff AT %QX."X20CS1070_P20_02_IGN1".QuitCANbussoff;
-	Cyclic#1.HalIO::StationIO[90].ModuleOK[0] AT %IX."+M1_P90_ENGINE_INTERFACE_UR20".ModuleOk;
 	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S01[90] AT %IB."+M1_P90_ENGINE_INTERFACE_UR20".ModuleStatus_I2009_S01;
 	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S02[90] AT %IB."+M1_P90_ENGINE_INTERFACE_UR20".ModuleStatus_I2009_S02;
 	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S03[90] AT %IB."+M1_P90_ENGINE_INTERFACE_UR20".ModuleStatus_I2009_S03;
@@ -1662,308 +1956,6 @@ VAR_CONFIG
 	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S0E[90] AT %IB."+M1_P90_ENGINE_INTERFACE_UR20".ModuleStatus_I2009_S0E;
 	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S0F[90] AT %IB."+M1_P90_ENGINE_INTERFACE_UR20".ModuleStatus_I2009_S0F;
 	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S10[90] AT %IB."+M1_P90_ENGINE_INTERFACE_UR20".ModuleStatus_I2009_S10;
-	Cyclic#1.HalIO::T_EGaLPTC_A AT %IW."SimDevice".P90_01_TC0; (* Messung - Abgastemperatur nach Turbo A *)
-	Cyclic#1.HalIO::T_EGaLPTC_B AT %IW."SimDevice".P90_01_TC1; (* Messung - Abgastemperatur nach Turbo B *)
-	Cyclic#1.HalIO::T_EG_PrReliefVa1 AT %IW."SimDevice".P90_01_TC2; (* Messung: Abgastemperatur Druckentlastung Ventil 1 *)
-	Cyclic#1.HalIO::U_StarterBat AT %IW."SimDevice".P90_02_AI0; (* Messung: Spannung Starterbatterien *)
-	Cyclic#1.HalIO::U_BufferBat1 AT %IW."SimDevice".P90_02_AI1; (* Messung: Spannung Steuerbatterie 1 *)
-	Cyclic#1.HalIO::Pr_DCGA_inlet AT %IW."SimDevice".P90_02_AI2; (* Messung: Gasdruck vor DCGA Ventil *)
-	Cyclic#1.HalIO::Pr_DCGA_aGV AT %IW."SimDevice".P90_02_AI3; (* Messung: Gasdruck nach DCGA Ventil *)
-	Cyclic#1.HalIO::Pr_DCGA_BankA AT %IW."SimDevice".P90_03_AI1; (* Messung: Gasdruck nach HP Ventil Bank A *)
-	Cyclic#1.HalIO::Pr_DCGA_BankB AT %IW."SimDevice".P90_03_AI3; (* Messung: Gasdruck nach HP Ventil Bank B *)
-	Cyclic#1.HalIO::Pr_PC AT %IW."SimDevice".P90_04_AI0; (* Messung: Gasdruck Vorkammer *)
-	Cyclic#1.HalIO::Pr_PCGT AT %IW."SimDevice".P90_04_AI1; (* Messung: Gasdruck Vorkammer - Gasstrecke *)
-	Cyclic#1.HalIO::N_TCLP_A AT %IW."SimDevice".P90_04_AI2; (* Messung: Drehzahlsensor Abgasturbolader Niederdruck A *)
-	Cyclic#1.HalIO::N_TCLP_B AT %IW."SimDevice".P90_04_AI3; (* Messung: Drehzahlsensor Abgasturbolader Niederdruck B *)
-	Cyclic#1.HalIO::N_TCHP_A AT %IW."SimDevice".P90_05_AI0; (* Messung: Drehzahlsensor Abgasturbolader Hochdruck A *)
-	Cyclic#1.HalIO::N_TCHP_B AT %IW."SimDevice".P90_05_AI1; (* Messung: Drehzahlsensor Abgasturbolader Hochdruck B *)
-	Cyclic#1.HalIO::Pr_EOF_DiffMon AT %IW."SimDevice".P90_06_AI1; (* Messung: Motoröldruck - vor Motorölfilter *)
-	Cyclic#1.HalIO::Pr_TC_EOF_After AT %IW."SimDevice".P90_06_AI2; (* Messung: Öldruck Abgasturbolader [Eintritt] *)
-	Cyclic#1.HalIO::Pr_ECWaP2 AT %IW."SimDevice".P90_06_AI3; (* Messung: Kühlwasserdruck Austritt Motorkühlwasserpumpe 2 *)
-	Cyclic#1.HalIO::T_ECW AT %IW."SimDevice".P90_07_AI0; (* Messung: Motorkühlwassertemperatur *)
-	Cyclic#1.HalIO::T_HW_Su_Unit AT %IW."SimDevice".P90_07_AI1; (* Messung - Vorlauftemperatur Motor *)
-	Cyclic#1.HalIO::DPr_AirFilt AT %IW."SimDevice".P90_07_AI2; (* Messung: Druckgeber nach Luftfilter *)
-	Cyclic#1.HalIO::Pr_Baro AT %IW."SimDevice".P90_07_AI3; (* Messung: Druckgeber für Umgebungsdruck *)
-	Cyclic#1.HalIO::Pos_Act_TV_A1 AT %IW."SimDevice".P90_08_AI0; (* Messung: Position Drosselklappe {{A1}} *)
-	Cyclic#1.HalIO::Pos_Act_TV_A2 AT %IW."SimDevice".P90_08_AI1; (* Messung: Position Drosselklappe {{A2}} *)
-	Cyclic#1.HalIO::Pos_Act_CBV_A1 AT %IW."SimDevice".P90_08_AI2; (* Messung: Position Verdichterbypassventil {{A1}} *)
-	Cyclic#1.HalIO::Pos_Act_CBV_B1 AT %IW."SimDevice".P90_08_AI3; (* Messung: Position Verdichterbypassventil {{B1}} *)
-	Cyclic#1.HalIO::Pr_Ch_P2s AT %IW."SimDevice".P90_09_AI0; (* Messung: Ladedruck Drosselklappe Austritt {{p2'}} *)
-	Cyclic#1.HalIO::Pr_Ch_P2 AT %IW."SimDevice".P90_09_AI1; (* Messung. Ladedruck vor Drosselklappe [Gemischdruck p2] *)
-	Cyclic#1.HalIO::Pr_Ch_P1HP_B AT %IW."SimDevice".P90_09_AI2; (* Messung: Ladedruck Turbolader Eintritt - Hochdruck {{B}} *)
-	Cyclic#1.HalIO::Pr_Ch_P2LP AT %IW."SimDevice".P90_09_AI3; (* Messung: Ladedruck Turbolader Austritt, zentral *)
-	Cyclic#1.HalIO::Pr_Ch_P2bFA AT %IW."SimDevice".P90_10_AI0; (* Messung: Druck zwischen Ladeluftkühler und Flammensperre *)
-	Cyclic#1.HalIO::Pr_Ch_P2HP AT %IW."SimDevice".P90_10_AI1; (* Messung: Druck nach Abgasturbolader [vor Gemischkühler] *)
-	Cyclic#1.HalIO::Pr_f_BbFilt AT %IW."SimDevice".P90_10_AI2; (* Messung: Druck vor Blow-by-Filter *)
-	Cyclic#1.HalIO::Pr_a_BbFilt AT %IW."SimDevice".P90_10_AI3; (* Messung: Druck nach Blow-by-Filter *)
-	Cyclic#1.HalIO::Pr_CC AT %IW."SimDevice".P90_11_AI1; (* Messung: Kurbelgehäusedruck *)
-	Cyclic#1.HalIO::U_Gen_Exc AT %IW."SimDevice".P90_11_AI2; (* Messung: Generator Erregerspannung *)
-	Cyclic#1.HalIO::T_DCGA AT %IW."SimDevice".P90_12_RTD0; (* Messung - Gastemperatur {{DCGA}} *)
-	Cyclic#1.HalIO::T_EO AT %IW."SimDevice".P90_12_RTD2; (* Messung: Öltemperatur *)
-	Cyclic#1.HalIO::T_ECWbEng AT %IW."SimDevice".P90_12_RTD3; (* Messung: Temperatur Motorkühlwasser Eintritt *)
-	Cyclic#1.HalIO::T_Ch_T1LP AT %IW."SimDevice".P90_13_RTD0; (* Messung: Ladekühlkreis Temperatur Turbolader Niederdruck - Eintritt [Ansauglufttemperatur] *)
-	Cyclic#1.HalIO::T_HW_ReBeEng AT %IW."SimDevice".P90_13_RTD1; (* Messung: Rücklauftemperatur [vor Motor] *)
-	Cyclic#1.HalIO::T_HW_Re_LT AT %IW."SimDevice".P90_14_RTD3; (* Messung: Rücklauftemperatur [Niedertemperaturkreis] *)
-	Cyclic#1.HalIO::T_Ch_T2s AT %IW."SimDevice".P90_15_RTD2; (* Messung: Ladetemperatur *)
-	Cyclic#1.HalIO::T_Ch_T1HP_B AT %IW."SimDevice".P90_16_RTD0; (* Messung. Ladetemperatur Turbolader Eintritt - Hochdruck {{B}} *)
-	Cyclic#1.HalIO::T_Gen_Wind_Act_L1 AT %IW."SimDevice".P90_16_RTD2; (* Messung: Wicklungstemperatur Phase U *)
-	Cyclic#1.HalIO::T_Gen_Wind_Act_L2 AT %IW."SimDevice".P90_16_RTD3; (* Messung: Wicklungstemperatur Phase V *)
-	Cyclic#1.HalIO::T_Gen_Wind_Act_L3 AT %IW."SimDevice".P90_17_RTD0; (* Messung: Wicklungstemperatur Phase W *)
-	Cyclic#1.HalIO::T_Gen_Bear_A_Act AT %IW."SimDevice".P90_17_RTD1; (* Messung: Lagertemperatur DE *)
-	Cyclic#1.HalIO::T_Gen_Bear_B_Act AT %IW."SimDevice".P90_17_RTD2; (* Messung: Lagertemperatur NDE *)
-	Cyclic#1.HalIO::DCGA_set_Valve1_A AT %QW."SimDevice".P90_18_AO0; (* Sollwert DCGA Ventil 1 *)
-	Cyclic#1.HalIO::DCGA_set_Valve2_A AT %QW."SimDevice".P90_18_AO1; (* Sollwert DCGA Ventil 2 *)
-	Cyclic#1.HalIO::DCGA_set_Valve1_B AT %QW."SimDevice".P90_18_AO2; (* Sollwert DCGA Ventil 3 *)
-	Cyclic#1.HalIO::DCGA_set_Valve2_B AT %QW."SimDevice".P90_18_AO3; (* Sollwert DCGA Ventil 3 *)
-	Cyclic#1.HalIO::Pos_TV_A1 AT %QW."SimDevice".P90_19_AO1; (* Sollwert: Position Drosselklappe A1 *)
-	Cyclic#1.HalIO::Pos_TV_A2 AT %QW."SimDevice".P90_19_AO2; (* Sollwert: Position Drosselklappe A2 *)
-	Cyclic#1.HalIO::Pos_CBV_A1 AT %QW."SimDevice".P90_19_AO3; (* Sollwert: Position Verdichterbypassventil A1 *)
-	Cyclic#1.HalIO::Pos_CBV_B1 AT %QW."SimDevice".P90_20_AO0; (* Sollwert: Position Verdichterbypassventil B1 *)
-	Cyclic#1.HalIO::Q_AVR_Set_U AT %QW."SimDevice".P90_20_AO1; (* Sollwert: Blindleistung *)
-	Cyclic#1.HalIO::T_AO_Gen_T_In AT %QW."SimDevice".P90_20_AO2; (* Messung: Motor Ansauglufttemperatur *)
-	Cyclic#1.HalIO::U_Set_Norm AT %QW."SimDevice".P90_20_AO3; (* Sollwert: Spannung [Inselbetrieb] *)
-	Cyclic#1.HalIO::CV_M_Ok AT %IX."SimDevice".P90_21_DI0; (* Sicherungsfall 24VDC Stützpunkt [Extern 1] *)
-	Cyclic#1.HalIO::BatChargeDev_Ok AT %IX."SimDevice".P90_21_DI1; (* Status: Ladegeräte OK *)
-	Cyclic#1.HalIO::IFCP_CBTrip AT %IX."SimDevice".P90_21_DI2; (* Status: Sicherungsfall *)
-	Cyclic#1.HalIO::T_AirIFCP_Hi AT %IX."SimDevice".P90_21_DI3; (* Störung Klimagerät *)
-	Cyclic#1.HalIO::Pr_GT1_Min AT %IX."SimDevice".P90_21_DI4; (* Status: Gasdruck min Gasstrecke 1 *)
-	Cyclic#1.HalIO::Pr_GT1_Max AT %IX."SimDevice".P90_21_DI5; (* Status: Gasdruck max Gasstrecke 1 *)
-	Cyclic#1.HalIO::Pr_PCG_Min AT %IX."SimDevice".P90_21_DI6; (* Status: Gasdruck max Gasstrecke 1 *)
-	Cyclic#1.HalIO::CustDigIn[1] AT %IX."SimDevice".P90_21_DI7; (* Status: Vorkammer Gasstrecke Gasdruck max *)
-	Cyclic#1.HalIO::Pr_DCGA_min AT %IX."SimDevice".P90_21_DI8; (* Status: Gas pressure min DCGA gas train *)
-	Cyclic#1.HalIO::Pr_DCGA_max AT %IX."SimDevice".P90_21_DI9; (* Status: Gasdruck max DCGA Gasstrecke *)
-	Cyclic#1.HalIO::Actuator_Ok_WG_A AT %IX."SimDevice".P90_21_DI10; (* Störung: Wastegate A *)
-	Cyclic#1.HalIO::Actuator_Ok_WG_B AT %IX."SimDevice".P90_21_DI11; (* Störung: Wastegate B *)
-	Cyclic#1.HalIO::Pr_TCOF_EOF_DiffMax AT %IX."SimDevice".P90_22_DI1; (* Messung: Öldifferenzdruck max. Turbolader *)
-	Cyclic#1.HalIO::EO_Level_Lo AT %IX."SimDevice".P90_22_DI2; (* Messung: Ölstand min Abstellung *)
-	Cyclic#1.HalIO::EO_Refill AT %IX."SimDevice".P90_22_DI3; (* Status. Öl nachfüllen *)
-	Cyclic#1.HalIO::EO_Level_Hi AT %IX."SimDevice".P90_22_DI4; (* Messung: Ölstand max Abstellung *)
-	Cyclic#1.HalIO::L_OilSumpHi AT %IX."SimDevice".P90_22_DI5; (* Messung: Ölstand max - Ölauffangwanne Aggregat *)
-	Cyclic#1.HalIO::AuxV_Eng_ok AT %IX."SimDevice".P90_22_DI6; (* Status: Hilfsbetriebe Spannung OK *)
-	Cyclic#1.HalIO::SL_TS_ECW AT %IX."SimDevice".P90_22_DI7; (* Motorkühlwassertemperatur Begrenzer - Motoraustritt *)
-	Cyclic#1.HalIO::SL_TS_HW_Su_Unit AT %IX."SimDevice".P90_22_DI8; (* Status - Vorlauftemperatur Motor Maximum *)
-	Cyclic#1.HalIO::FS_ECW AT %IX."SimDevice".P90_22_DI9; (* Durchfluss Vorwärmpumpe OK *)
-	Cyclic#1.HalIO::Actuator_Ok_TV1A AT %IX."SimDevice".P90_22_DI10; (* Störung: Drosselklappe {{A1}} *)
-	Cyclic#1.HalIO::Actuator_Ok_TV2A AT %IX."SimDevice".P90_22_DI11; (* Störung: Drosselklappe {{A2}} *)
-	Cyclic#1.HalIO::Actuator_Ok_CBV_A AT %IX."SimDevice".P90_22_DI12; (* Störung: Verdichterbypassventil {{A1}} *)
-	Cyclic#1.HalIO::Actuator_Ok_CBV_B AT %IX."SimDevice".P90_22_DI13; (* Störung: Verdichterbypassventil B1 *)
-	Cyclic#1.HalIO::SPAx_CamDev AT %IX."SimDevice".P90_22_DI14; (* {{SPAx}}: Überwachung {{CAM}}-Abweichung  *)
-	Cyclic#1.HalIO::Ign_OverspeedRelay AT %IX."SimDevice".P90_22_DI15; (* Status: Überdrehzahl *)
-	Cyclic#1.HalIO::MO_PwrReply AT %IX."SimDevice".P90_23_DI0; (* Status: MPM 1 OK *)
-	Cyclic#1.HalIO::MO_PowerOverload AT %IX."SimDevice".P90_23_DI1; (* Status: MPM 1 Überlast *)
-	Cyclic#1.HalIO::MO_PwrReply2 AT %IX."SimDevice".P90_23_DI2; (* MPM 2 OK *)
-	Cyclic#1.HalIO::MO_PowerOverload2 AT %IX."SimDevice".P90_23_DI3; (* MPM 2: Überlast *)
-	Cyclic#1.HalIO::MO_SaftyLoop AT %IX."SimDevice".P90_23_DI4; (* MORIS Sicherheitsschleife: OK *)
-	Cyclic#1.HalIO::U_Gen_Contr_Fail AT %IX."SimDevice".P90_23_DI5; (* Generator Software Alarm *)
-	Cyclic#1.HalIO::U_GenDiode_Trip AT %IX."SimDevice".P90_23_DI6; (* Generator Diode Alarm *)
-	Cyclic#1.HalIO::Cnt_OilPulse AT %IX."SimDevice".P90_23_DI7; (* Messung: Zähler Ölverbrauch *)
-	Cyclic#1.HalIO::ChargeOff_Dem AT %QX."SimDevice".P90_24_DO0; (* Abschaltung: Ladung *)
-	Cyclic#1.HalIO::BufferBat1_Disconnect AT %QX."SimDevice".P90_24_DO1; (* Status: Steuerbatterie 1 Abschaltung *)
-	Cyclic#1.HalIO::BufferBat1_ConnectLoad AT %QX."SimDevice".P90_24_DO2; (* Status: Zuschaltung Lastwiderstand Steuerbatterie 1 *)
-	Cyclic#1.HalIO::PCG_GV_Open AT %QX."SimDevice".P90_24_DO3; (* Anforderung: Vorkammergasventile öffnen *)
-	Cyclic#1.HalIO::PCG_DemReliefValve AT %QX."SimDevice".P90_24_DO4; (* Anforderung: Entlüftungsventil Vorkammergasstrecke *)
-	Cyclic#1.HalIO::DCGA_BlowOff AT %QX."SimDevice".P90_24_DO5; (* Anforderung: Entlüftungsventil {{DCGA}} Gasstrecke *)
-	Cyclic#1.HalIO::WG_A_Dem AT %QX."SimDevice".P90_24_DO6; (* Anforderung Wastegate A *)
-	Cyclic#1.HalIO::WG_B_Dem AT %QX."SimDevice".P90_24_DO7; (* Anforderung Wastegate B *)
-	Cyclic#1.HalIO::EOP1DC_Dem AT %QX."SimDevice".P90_24_DO10; (* Anforderung: Ölpumpe 1 DC *)
-	Cyclic#1.HalIO::EOVal_DemOpen AT %QX."SimDevice".P90_24_DO11; (* Anforderung: Ölventil auf *)
-	Cyclic#1.HalIO::ECWP_PreH_Dem AT %QX."SimDevice".P90_24_DO12; (* Anforderung: Vorwärmpumpe *)
-	Cyclic#1.HalIO::AuxPoSuMains AT %QX."SimDevice".P90_24_DO13; (* Status: Hilfsbetriebe Spannung OK *)
-	Cyclic#1.HalIO::AuxPoSuUPS AT %QX."SimDevice".P90_24_DO14; (* Störung: Hilfsbetriebe Spannung *)
-	Cyclic#1.HalIO::Actuator_Rel AT %QX."SimDevice".P90_24_DO15; (* Befehl: Aktivierung Drosselklappe A1 *)
-	Cyclic#1.HalIO::Actuator2_Rel AT %QX."SimDevice".P90_25_DO0; (* Befehl: Aktivierung Drosselklappe A2 *)
-	Cyclic#1.HalIO::EleStarter_Dem AT %QX."SimDevice".P90_25_DO1; (* Anforderung: Startrelais *)
-	Cyclic#1.HalIO::MO_PwrRequest AT %QX."SimDevice".P90_25_DO2; (* Anforderung: MPM 1 Zündung *)
-	Cyclic#1.HalIO::MO_PwrRequest2 AT %QX."SimDevice".P90_25_DO3; (* Anforderung: MPM 2 Zündung *)
-	Cyclic#1.HalIO::GenDeexitDem AT %QX."SimDevice".P90_25_DO4; (* Anforderung: Entregung *)
-	Cyclic#1.HalIO::LeroySomer_AuxContactor AT %QX."SimDevice".P90_25_DO5; (* SY-Anwahl *)
-	Cyclic#1.HalIO::GCB_On_ReturnSign AT %QX."SimDevice".P90_25_DO6; (* Generatorschalter geschlossen *)
-	Cyclic#1.HalIO::PF_CosPCtr_Ena AT %QX."SimDevice".P90_25_DO7; (* Parallel mit Netzstatus *)
-	Cyclic#1.HalIO::GenCtrResetSp AT %QX."SimDevice".P90_25_DO8; (* Befehl: Reset Sollwert Generatorregler *)
-	Cyclic#1.HalIO::U_Plus AT %QX."SimDevice".P90_25_DO9; (* Takt: Spannung + *)
-	Cyclic#1.HalIO::U_Minus AT %QX."SimDevice".P90_25_DO10; (* Takt: Spannung - *)
-	Cyclic#1.HalIO::PCG_BPV_open AT %QX."SimDevice".P90_25_DO11; (* Befehl: Vorkammergas Bypass Ventil öffnen *)
-	Cyclic#1.HalIO::DCGA_GV_Open AT %QX."SimDevice".P90_25_DO12; (* Anforderung: DCGA Ventile *)
-	Cyclic#1.HalIO::GenPrctTrip AT %IX."SimDevice".P10_17_SI3; (* Blockierung - Generatorschutz ausgelöst *)
-	Cyclic#1.HalIO::GCB_Off AT %IX."SimDevice".P10_17_SI7; (* Status - Generatorschalter offen *)
-	Cyclic#1.HalIO::OlShortCirc AT %IX."SimDevice".P10_17_SI2; (* Störung - Überlast / Kurzschluss Generator *)
-	Cyclic#1.HalIO::GCB_On AT %IX."SimDevice".P10_17_SI6; (* Status - Generatorschalter geschlossen *)
-	Cyclic#1.HalIO::Rel_Sync_Load AT %QX."SimDevice".P10_18_SO1; (* Freigabe: Synchronisierung / Last *)
-	Cyclic#1.HalIO::GCB_RUC AT %QX."SimDevice".P10_18_SO2; (* Status: Freigabe Unterspannungsauslöser *)
-	Cyclic#1.HalIO::ERV_INL1_Fan_Run AT %IX."SimDevice".P10_20_SI1;
-	Cyclic#1.HalIO::ERV_INL3_Lou_CL AT %IX."SimDevice".P10_20_SI13; (* Status: Zuluftjalousie 3 geschlossen *)
-	Cyclic#1.HalIO::ERV_OTL3_Lou_OP AT %IX."SimDevice".P10_20_SI14; (* Status - Abluftjalousie 3 offen *)
-	Cyclic#1.HalIO::ERV_INL1_Lou_OP AT %IX."SimDevice".P10_20_SI2; (* Status: Zuluftjalousie 1 offen *)
-	Cyclic#1.HalIO::ERV_OTL3_Lou_CL AT %IX."SimDevice".P10_20_SI15; (* Status - Abluftjalousie 3 geschlossen *)
-	Cyclic#1.HalIO::ERV_INL1_Lou_CL AT %IX."SimDevice".P10_20_SI3; (* Status: Zuluftjalousie 1 geschlossen *)
-	Cyclic#1.HalIO::ERV_OTL1_Lou_OP AT %IX."SimDevice".P10_20_SI4;
-	Cyclic#1.HalIO::ERV_INL4_Fan_Run AT %IX."SimDevice".P10_20_SI16;
-	Cyclic#1.HalIO::ERV_OTL1_Lou_CL AT %IX."SimDevice".P10_20_SI5; (* Status - Abluftjalousie 1 geschlossen *)
-	Cyclic#1.HalIO::ERV_INL4_Lou_OP AT %IX."SimDevice".P10_20_SI17; (* Status: Zuluftjalousie 4 offen *)
-	Cyclic#1.HalIO::ERV_INL2_Fan_Run AT %IX."SimDevice".P10_20_SI6;
-	Cyclic#1.HalIO::ERV_INL4_Lou_CL AT %IX."SimDevice".P10_20_SI18; (* Status: Zuluftjalousie 4 geschlossen *)
-	Cyclic#1.HalIO::ERV_OTL4_Lou_OP AT %IX."SimDevice".P10_20_SI19; (* Status - Abluftjalousie 4 offen *)
-	Cyclic#1.HalIO::ERV_INL2_Lou_OP AT %IX."SimDevice".P10_20_SI7; (* Status: Zuluftjalousie 2 offen *)
-	Cyclic#1.HalIO::ERV_INL2_Lou_CL AT %IX."SimDevice".P10_20_SI8; (* Status: Zuluftjalousie 2 geschlossen *)
-	Cyclic#1.HalIO::ERV_OTL4_Lou_CL AT %IX."SimDevice".P10_20_SI20; (* Status - Abluftjalousie 4 geschlossen *)
-	Cyclic#1.HalIO::ERV_OTL2_Lou_OP AT %IX."SimDevice".P10_20_SI9; (* Status - Abluftjalousie 2 offen *)
-	Cyclic#1.HalIO::ERV_OTL2_Lou_CL AT %IX."SimDevice".P10_20_SI10; (* Status - Abluftjalousie 2 geschlossen *)
-	Cyclic#1.HalIO::ERV_INL3_Fan_Run AT %IX."SimDevice".P10_20_SI11;
-	Cyclic#1.HalIO::ERV_INL3_Lou_OP AT %IX."SimDevice".P10_20_SI12; (* Status: Zuluftjalousie 3 offen *)
-	Cyclic#1.HalIO::Pr_EngLubOil AT %IW."SimDevice".P20_06_SAI1; (* Messung: Motoröldruck *)
-	Cyclic#1.HalIO::Pr_EOaP AT %IW."SimDevice".P20_06_SAI3; (* Messung: Öldruck nach Ölpumpe *)
-	Cyclic#1.HalIO::Pr_ECW AT %IW."SimDevice".P20_07_SAI1; (* Messung: Motorkühlwasserdruck *)
-	Cyclic#1.HalIO::Pr_ECWaP1 AT %IW."SimDevice".P20_07_SAI3; (* Messung: Kühlwasserdruck Austritt Motorkühlwasserpumpe 1 *)
-	Cyclic#1.HalIO::Ign_Run_Hal AT %IX."SimDevice".P20_08_SI2; (* Betrieb: Zündung *)
-	Cyclic#1.HalIO::Pr_EG_Hi AT %IX."SimDevice".P20_08_SI6; (* Status: Abgasgegendruck max *)
-	Cyclic#1.HalIO::GT1_GV1_Open AT %QX."SimDevice".P20_09_SO1; (* Anforderung: Gasventile - Gasstrecke 1 öffnen *)
-	Cyclic#1.HalIO::GT1_GV2_Open AT %QX."SimDevice".P20_09_SO2; (* Anforderung: Gasventile - Gasstrecke 1 öffnen *)
-	Cyclic#1.EngineGeneral::bSafeModuleOK_201 AT %IX."X20SD1207_P20_10".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_202 AT %IX."X20SA4430_P20_11".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_203 AT %IX."X20SA4430_P20_12".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_204 AT %IX."X20SI8110_P20_13".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_205 AT %IX."X20SO4110_P20_14".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_208 AT %IX."X20SI8110_P20_17".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_209 AT %IX."X20SO4110_P20_18".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_207 AT %IX."X20SO4110_P20_19".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_206 AT %IX."X20SO4110_P20_15".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_101 AT %IX."X20SI8110_P10_17".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_102 AT %IX."X20SO4110_P10_18".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_103 AT %IX."X20SI8110_P10_19".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_300 AT %IX."X20SI9100_P10_20".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_301 AT %IX."X20SI9100_P10_23".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_105 AT %IX."X20SI8110_P10_22".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_210 AT %IX."X20SO4110_P20_16".SafeModuleOK;
-	Cyclic#1.EngineGeneral::bSafeModuleOK_104 AT %IX."X20SI8110_P10_21".SafeModuleOK;
-	Cyclic#1.HalIO::T_EGaLPTC_A AT %IW."UR20-4AI-TC-DIAG_P90_02".InputImage_I4600_S00_UID_AnalogInput03; (*Messung - Abgastemperatur nach Turbo A*)
-	Cyclic#1.HalIO::T_EGaLPTC_B AT %IW."UR20-4AI-TC-DIAG_P90_02".InputImage_I4600_S00_UID_AnalogInput04; (*Messung - Abgastemperatur nach Turbo B*)
-	Cyclic#1.HalIO::U_StarterBat AT %IW."UR20-4AI-UI-12_P90_05".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Spannung Starterbatterien*)
-	Cyclic#1.HalIO::Pr_Ch_P2LP AT %IW."UR20-4AI-UI-12_P90_11".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Ladedruck Turbolader Austritt, zentral*)
-	Cyclic#1.HalIO::Pr_Ch_P1HP_B AT %IW."UR20-4AI-UI-12_P90_11".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Ladedruck Turbolader Eintritt - Hochdruck {{B}}*)
-	Cyclic#1.HalIO::Pos_Act_TV_A2 AT %IW."UR20-4AI-UI-12_P90_11".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Position Drosselklappe {{A2}}*)
-	Cyclic#1.HalIO::Pr_TC_EOF_After AT %IW."UR20-4AI-UI-12_P90_11".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Öldruck Abgasturbolader [Eintritt]*)
-	Cyclic#1.HalIO::Pr_Ch_P1HP_A AT %IW."UR20-4AI-UI-12_P90_10".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Ladedruck Turbolader Eintritt - Hochdruck {{B}}*)
-	Cyclic#1.HalIO::U_BufferBat1 AT %IW."UR20-4AI-UI-12_P90_10".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Spannung Steuerbatterie 1*)
-	Cyclic#1.HalIO::Humidity_AirIn AT %IW."UR20-4AI-UI-12_P90_09".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Feuchtigkeit (Luftfeuchtigkeit)*)
-	Cyclic#1.HalIO::T_AirIn AT %IW."UR20-4AI-UI-12_P90_09".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Feuchtigkeit (Temperatur)*)
-	Cyclic#1.HalIO::N_TCHP_A AT %IW."UR20-4AI-UI-12_P90_08".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Drehzahlsensor Abgasturbolader Niederdruck A*)
-	Cyclic#1.HalIO::N_TCHP_B AT %IW."UR20-4AI-UI-12_P90_08".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Drehzahlsensor Abgasturbolader Niederdruck B*)
-	Cyclic#1.HalIO::Pr_Ch_P2HP AT %IW."UR20-4AI-UI-12_P90_08".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Druck nach Abgasturbolader [vor Gemischkühler]*)
-	Cyclic#1.HalIO::Pr_f_BbFilt AT %IW."UR20-4AI-UI-12_P90_07".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Druck vor Blow-by-Filter*)
-	Cyclic#1.HalIO::Pr_a_BbFilt AT %IW."UR20-4AI-UI-12_P90_07".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Druck nach Blow-by-Filter*)
-	Cyclic#1.HalIO::Pos_Act_CBV_A1 AT %IW."UR20-4AI-UI-12_P90_07".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Position Verdichterbypassventil {{A1}}*)
-	Cyclic#1.HalIO::Pos_Act_CBV_B1 AT %IW."UR20-4AI-UI-12_P90_07".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Position Verdichterbypassventil {{B1}}*)
-	Cyclic#1.HalIO::Pr_CC AT %IW."UR20-4AI-UI-12_P90_06".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Kurbelgehäusedruck*)
-	Cyclic#1.HalIO::Pr_PC AT %IW."UR20-4AI-UI-12_P90_06".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Gasdruck Vorkammer*)
-	Cyclic#1.HalIO::Pr_PCGT AT %IW."UR20-4AI-UI-12_P90_06".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Gasdruck Vorkammer - Gasstrecke*)
-	Cyclic#1.HalIO::Pr_EOF_DiffMon AT %IW."UR20-4AI-UI-12_P90_05".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Motoröldruck - vor Motorölfilter*)
-	Cyclic#1.HalIO::Pr_Ch_P2 AT %IW."UR20-4AI-UI-12_P90_05".InputImage_I4600_S00_UID_AnalogInput02; (*Messung. Ladedruck vor Drosselklappe [Gemischdruck p2]*)
-	Cyclic#1.HalIO::Pos_Act_TV_A1 AT %IW."UR20-4AI-UI-12_P90_05".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Position Drosselklappe {{A1}}*)
-	Cyclic#1.HalIO::T_ECW AT %IW."UR20-4AI-UI-12_P90_04".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Motorkühlwassertemperatur*)
-	Cyclic#1.HalIO::Pr_Ch_P2s AT %IW."UR20-4AI-UI-12_P90_04".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Ladedruck Drosselklappe Austritt {{p2'}}*)
-	Cyclic#1.HalIO::U_Gen_Exc AT %IW."UR20-4AI-UI-12_P90_04".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Generator Erregerspannung*)
-	Cyclic#1.HalIO::U_Starter_engage1 AT %IW."UR20-4AI-UI-12_P90_03".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Starter 1 eingefahren*)
-	Cyclic#1.HalIO::U_Starter_engage2 AT %IW."UR20-4AI-UI-12_P90_03".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Starter 2 eingefahren*)
-	Cyclic#1.HalIO::U_Starter_engage3 AT %IW."UR20-4AI-UI-12_P90_03".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Starter 3 eingefahren*)
-	Cyclic#1.HalIO::T_Gen_Bear_A_Act AT %IW."UR20-4AI-RTD-DIAG_P90_15".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Lagertemperatur DE*)
-	Cyclic#1.HalIO::T_Gen_Bear_B_Act AT %IW."UR20-4AI-RTD-DIAG_P90_15".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Lagertemperatur NDE*)
-	Cyclic#1.HalIO::T_Gen_Wind_Act_L1 AT %IW."UR20-4AI-RTD-DIAG_P90_14".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Wicklungstemperatur Phase U*)
-	Cyclic#1.HalIO::T_Gen_Wind_Act_L2 AT %IW."UR20-4AI-RTD-DIAG_P90_14".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Wicklungstemperatur Phase V*)
-	Cyclic#1.HalIO::T_Gen_Wind_Act_L3 AT %IW."UR20-4AI-RTD-DIAG_P90_14".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Wicklungstemperatur Phase W*)
-	Cyclic#1.HalIO::T_HW_ReBeEng AT %IW."UR20-4AI-RTD-DIAG_P90_13".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Rücklauftemperatur [vor Motor]*)
-	Cyclic#1.HalIO::T_Ch_T1HP_B AT %IW."UR20-4AI-RTD-DIAG_P90_13".InputImage_I4600_S00_UID_AnalogInput04; (*Messung. Ladetemperatur Turbolader Eintritt - Hochdruck {{B}}*)
-	Cyclic#1.HalIO::T_EO AT %IW."UR20-4AI-RTD-DIAG_P90_12".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Öltemperatur*)
-	Cyclic#1.HalIO::T_Ch_T1LP AT %IW."UR20-4AI-RTD-DIAG_P90_12".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Ladekühlkreis Temperatur Turbolader Niederdruck - Eintritt [Ansauglufttemperatur]*)
-	Cyclic#1.HalIO::CustAnaIn[1] AT %IW."UR20-4AI-RTD-DIAG_P90_12".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Rücklauftemperatur (Niedertemperaturkreis 2)*)
-	Cyclic#1.HalIO::Pos_TV_A1 AT %QW."UR20-4AO-UI-16_P90_18".OutputImage_I4700_S00_UID_AnalogOutput01; (*Sollwert: Position Drosselklappe A1*)
-	Cyclic#1.HalIO::Pos_CBV_A1 AT %QW."UR20-4AO-UI-16_P90_18".OutputImage_I4700_S00_UID_AnalogOutput02; (*Sollwert: Position Verdichterbypassventil A1*)
-	Cyclic#1.HalIO::Pos_CBV_B1 AT %QW."UR20-4AO-UI-16_P90_18".OutputImage_I4700_S00_UID_AnalogOutput04; (*Sollwert: Position Verdichterbypassventil B1*)
-	Cyclic#1.HalIO::Q_AVR_Set_U AT %QW."UR20-4AO-UI-16_P90_17".OutputImage_I4700_S00_UID_AnalogOutput03; (*Sollwert: Blindleistung*)
-	Cyclic#1.HalIO::T_AO_Gen_T_In AT %QW."UR20-4AO-UI-16_P90_17".OutputImage_I4700_S00_UID_AnalogOutput04; (*Messung: Motor Ansauglufttemperatur*)
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[6] AT %IX."X20AI4622_P20_06".ModuleOk;
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[7] AT %IX."X20AI4622_P20_07".ModuleOk;
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[8] AT %IX."X20AT4222_P20_08".ModuleOk;
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[9] AT %IX."X20AO4622_P20_09".ModuleOk;
-	Cyclic#1.HalIO::N_TCLP_A AT %IW."X20AI4622_P20_06".AnalogInput01; (*Messung: Drehzahlsensor Abgasturbolader Niederdruck A*)
-	Cyclic#1.HalIO::N_TCLP_B AT %IW."X20AI4622_P20_06".AnalogInput02; (*Messung: Drehzahlsensor Abgasturbolader Niederdruck B*)
-	Cyclic#1.HalIO::DCGA_GV1_Open AT %QX."X20SO4110_P20_16".DigitalOutput01; (*Anforderung: Gasventil 1 Dezentrale Gasdosierung*)
-	Cyclic#1.HalIO::DCGA_GV2_Open AT %QX."X20SO4110_P20_16".DigitalOutput02; (*Anforderung: Gasventil 2 Dezentrale Gasdosierung*)
-	Cyclic#1.HalIO::GT2_GV1_Open AT %QX."X20SO4110_P20_15".DigitalOutput01; (*Anforderung: Gasventile - Gasstrecke 2 öffnen*)
-	Cyclic#1.HalIO::GT2_GV2_Open AT %QX."X20SO4110_P20_15".DigitalOutput02; (*Anforderung: Gasventile - Gasstrecke 2 öffnen*)
-	Cyclic#1.HalIO::Actuator_Ok_WG_A AT %IX."UR20-16DI-P_P90_23".InputImage_I4600_S00_UID_DigitalInput04; (*Störung: Wastegate A*)
-	Cyclic#1.HalIO::Actuator_Ok_WG_B AT %IX."UR20-16DI-P_P90_23".InputImage_I4600_S00_UID_DigitalInput05; (*Störung: Wastegate B*)
-	Cyclic#1.HalIO::Pr_GT2_Max AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput09; (*Status: Gasdruck max Gasstrecke 2*)
-	Cyclic#1.HalIO::Actuator_Ok_TV1A AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput03; (*Störung: Drosselklappe {{A1}}*)
-	Cyclic#1.HalIO::Actuator_Ok_TV2A AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput04; (*Störung: Drosselklappe {{A2}}*)
-	Cyclic#1.HalIO::Actuator_Ok_CBV_A AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput05; (*Störung: Verdichterbypassventil {{A1}}*)
-	Cyclic#1.HalIO::Actuator_Ok_CBV_B AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput06; (*Störung: Verdichterbypassventil B1*)
-	Cyclic#1.HalIO::Pr_GT2_Min AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput08; (*Status: Gasdruck min Gasstrecke 2*)
-	Cyclic#1.HalIO::L_OilSumpHi AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput12; (*Messung: Ölstand max - Ölauffangwanne Aggregat*)
-	Cyclic#1.HalIO::IFCP_CBTrip AT %IX."UR20-16DI-P_P90_20".InputImage_I4600_S00_UID_DigitalInput02; (*Status: Sicherungsfall*)
-	Cyclic#1.HalIO::BatChargeDev_Ok AT %IX."UR20-16DI-P_P90_20".InputImage_I4600_S00_UID_DigitalInput04; (*Status: Ladegeräte OK*)
-	Cyclic#1.HalIO::CV_M_Ok AT %IX."UR20-16DI-P_P90_20".InputImage_I4600_S00_UID_DigitalInput03; (*Sicherungsfall 24VDC Stützpunkt [Extern 1]*)
-	Cyclic#1.HalIO::U_Gen_Contr_Fail AT %IX."UR20-16DI-P_P90_20".InputImage_I4600_S00_UID_DigitalInput05; (*Generator Software Alarm*)
-	Cyclic#1.HalIO::U_GenDiode_Trip AT %IX."UR20-16DI-P_P90_20".InputImage_I4600_S00_UID_DigitalInput06; (*Generator Diode Alarm*)
-	Cyclic#1.HalIO::EO_Level_Hi AT %IX."UR20-16DI-P_P90_20".InputImage_I4600_S00_UID_DigitalInput08; (*Messung: Ölstand max Abstellung*)
-	Cyclic#1.HalIO::FS_ECW AT %IX."UR20-16DI-P_P90_21".InputImage_I4600_S00_UID_DigitalInput12; (*Durchfluss Vorwärmpumpe OK*)
-	Cyclic#1.HalIO::Pr_TCOF_EOF_DiffMax AT %IX."UR20-16DI-P_P90_21".InputImage_I4600_S00_UID_DigitalInput11; (*Messung: Öldifferenzdruck max. Turbolader*)
-	Cyclic#1.HalIO::Pr_DCGA_min AT %IX."UR20-16DI-P_P90_21".InputImage_I4600_S00_UID_DigitalInput07; (*Status: Gas pressure min DCGA gas train*)
-	Cyclic#1.HalIO::Pr_DCGA_max AT %IX."UR20-16DI-P_P90_21".InputImage_I4600_S00_UID_DigitalInput08; (*Status: Gasdruck max DCGA Gasstrecke*)
-	Cyclic#1.HalIO::EO_Refill AT %IX."UR20-16DI-P_P90_20".InputImage_I4600_S00_UID_DigitalInput09; (*Status. Öl nachfüllen*)
-	Cyclic#1.HalIO::EO_Level_Lo AT %IX."UR20-16DI-P_P90_20".InputImage_I4600_S00_UID_DigitalInput10; (*Messung: Ölstand min Abstellung*)
-	Cyclic#1.HalIO::AuxV_Eng_ok AT %IX."UR20-16DI-P_P90_22".InputImage_I4600_S00_UID_DigitalInput05; (*Status: Hilfsbetriebe Spannung OK*)
-	Cyclic#1.HalIO::Pr_GT1_Min AT %IX."UR20-16DI-P_P90_21".InputImage_I4600_S00_UID_DigitalInput02; (*Status: Gasdruck min Gasstrecke 1*)
-	Cyclic#1.HalIO::Ign_OverspeedRelay AT %IX."UR20-16DI-P_P90_21".InputImage_I4600_S00_UID_DigitalInput05; (*Status: Überdrehzahl*)
-	Cyclic#1.HalIO::Pr_GT1_Max AT %IX."UR20-16DI-P_P90_21".InputImage_I4600_S00_UID_DigitalInput13; (*Status: Gasdruck max Gasstrecke 1*)
-	Cyclic#1.HalIO::Pr_PCGT_Max AT %IX."UR20-16DI-P_P90_21".InputImage_I4600_S00_UID_DigitalInput03; (*Status: Gasdruck max Gasstrecke 1*)
-	Cyclic#1.HalIO::T_EG_PrReliefVa1 AT %IW."UR20-4AI-TC-DIAG_P90_02".InputImage_I4600_S00_UID_AnalogInput01; (*Messung - Temperatur Austritt Sicherheitsventil*)
-	Cyclic#1.HalIO::T_HW_Su_Unit AT %IW."UR20-4AI-UI-12_P90_04".InputImage_I4600_S00_UID_AnalogInput02; (*Messung - Vorlauftemperatur Aggregat*)
-	Cyclic#1.HalIO::Pr_DCGA_inlet AT %IW."UR20-4AI-UI-12_P90_09".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Druck Eintritt Dezentrale Gasdosierung*)
-	Cyclic#1.HalIO::Pr_DCGA_aGV AT %IW."UR20-4AI-UI-12_P90_09".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Druck nach Gasventilen Dezentrale Gasdosierung*)
-	Cyclic#1.HalIO::Pr_DCGA_BankA AT %IW."UR20-4AI-UI-12_P90_10".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Druck Dezentrale Gasdosierung Bank A*)
-	Cyclic#1.HalIO::Pr_DCGA_BankB AT %IW."UR20-4AI-UI-12_P90_10".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Druck Dezentrale Gasdosierung Bank B*)
-	Cyclic#1.HalIO::T_Ch_T2s AT %IW."UR20-4AI-RTD-DIAG_P90_12".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Ladetemperatur*)
-	Cyclic#1.HalIO::T_DCGA AT %IW."UR20-4AI-RTD-DIAG_P90_16".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Temperatur Dezentrale Gasdosierung*)
-	Cyclic#1.HalIO::Pr_MGT_sp AT %QW."UR20-4AO-UI-16_P90_17".OutputImage_I4700_S00_UID_AnalogOutput01; (*I/P Umformer Gasstrecke*)
-	Cyclic#1.HalIO::DCGA_set_Valve1_A AT %QW."UR20-4AO-UI-16_P90_19".OutputImage_I4700_S00_UID_AnalogOutput01; (*Sollwert DCGA Ventil 1*)
-	Cyclic#1.HalIO::DCGA_set_Valve2_A AT %QW."UR20-4AO-UI-16_P90_19".OutputImage_I4700_S00_UID_AnalogOutput02; (*Sollwert DCGA Ventil 2*)
-	Cyclic#1.HalIO::DCGA_set_Valve1_B AT %QW."UR20-4AO-UI-16_P90_19".OutputImage_I4700_S00_UID_AnalogOutput03; (*Sollwert DCGA Ventil 3*)
-	Cyclic#1.HalIO::DCGA_set_Valve2_B AT %QW."UR20-4AO-UI-16_P90_19".OutputImage_I4700_S00_UID_AnalogOutput04; (*Sollwert DCGA Ventil 3*)
-	Cyclic#1.HalIO::ECWP_FC_Rdy AT %IX."UR20-16DI-P_P90_21".InputImage_I4600_S00_UID_DigitalInput15; (*Störung: Frequenzumrichter Motorkühlwasserpumpe 1*)
-	Cyclic#1.HalIO::EOP1AC_CB_trip AT %IX."UR20-16DI-P_P90_22".InputImage_I4600_S00_UID_DigitalInput02; (*Status: Ölpumpe 2 AC Spannung OK*)
-	Cyclic#1.HalIO::Gen_LO_CoolingSys_Fail AT %IX."UR20-16DI-P_P90_22".InputImage_I4600_S00_UID_DigitalInput10; (*Störung: Generatorlager Kühlsystem*)
-	Cyclic#1.HalIO::SL_TS_HW_Su_Unit AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput01; (*Status - Vorlauftemperatur Aggregat Maximum*)
-	Cyclic#1.HalIO::SL_TS_ECW AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput02; (*Status - Motorkühlwassertemperatur - nach Motor Maximum*)
-	Cyclic#1.HalIO::BufferBat1_Disconnect AT %QX."UR20-16DO-P_P90_28".OutputImage_I4700_S00_UID_DigitalOutput02; (*Status: Steuerbatterie 1 Abschaltung*)
-	Cyclic#1.HalIO::BufferBat1_ConnectLoad AT %QX."UR20-16DO-P_P90_28".OutputImage_I4700_S00_UID_DigitalOutput03; (*Status: Zuschaltung Lastwiderstand Steuerbatterie 1*)
-	Cyclic#1.HalIO::ChargeOff_Dem AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput09; (*Abschaltung: Ladung*)
-	Cyclic#1.HalIO::LeroySomer_AuxContactor AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput02; (*SY-Anwahl*)
-	Cyclic#1.HalIO::GCB_On_ReturnSign AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput03; (*Generatorschalter geschlossen*)
-	Cyclic#1.HalIO::PF_CosPCtr_Ena AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput04; (*Parallel mit Netzstatus*)
-	Cyclic#1.HalIO::DCGA_BlowOff AT %QX."UR20-16DO-P_P90_27".OutputImage_I4700_S00_UID_DigitalOutput04; (*Anforderung: Entlüftungsventil {{DCGA}} Gasstrecke*)
-	Cyclic#1.HalIO::WG_A_Dem AT %QX."UR20-16DO-P_P90_28".OutputImage_I4700_S00_UID_DigitalOutput04; (*Anforderung Wastegate A*)
-	Cyclic#1.HalIO::WG_B_Dem AT %QX."UR20-16DO-P_P90_28".OutputImage_I4700_S00_UID_DigitalOutput01; (*Anforderung Wastegate B*)
-	Cyclic#1.HalIO::GenDeexitDem AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput05; (*Anforderung: Entregung*)
-	Cyclic#1.HalIO::GenCtrResetSp AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput06; (*Befehl: Reset Sollwert Generatorregler*)
-	Cyclic#1.HalIO::EleStarter_Dem AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput07; (*Anforderung: Startrelais*)
-	Cyclic#1.HalIO::EOVal_DemOpen AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput01; (*Anforderung: Ölventil auf*)
-	Cyclic#1.HalIO::PCG_VentValve_Open AT %QX."UR20-16DO-P_P90_27".OutputImage_I4700_S00_UID_DigitalOutput02; (*Anforderung: Entlüftungsventil Vorkammergasstrecke*)
-	Cyclic#1.HalIO::EOP1DC_Dem AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput02; (*Anforderung: Ölpumpe 1 DC*)
-	Cyclic#1.HalIO::EOP1AC_Dem AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput03; (*Anforderung: Ölpumpe 1 AC*)
-	Cyclic#1.HalIO::Actuator_Rel AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput06; (*Befehl: Aktivierung Drosselklappe A1*)
-	Cyclic#1.HalIO::AuxPoSuMains AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput11; (*Status: Hilfsbetriebe Spannung OK*)
-	Cyclic#1.HalIO::AuxPoSuUPS AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput12; (*Störung: Hilfsbetriebe Spannung*)
-	Cyclic#1.HalIO::PCG_GV_Open AT %QX."UR20-16DO-P_P90_27".OutputImage_I4700_S00_UID_DigitalOutput05; (*Anforderung: Vorkammergasventile öffnen*)
-	Cyclic#1.HalIO::ECWP_PreH_Dem AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput11; (*Anforderung: Vorwärmpumpe*)
-	Cyclic#1.HalIO::LOS_Dem AT %QX."UR20-16DO-P_P90_27".OutputImage_I4700_S00_UID_DigitalOutput11; (*Anforderung: Generatorlager Kühlsystem*)
-	Cyclic#1.HalIO::Actuator2_Rel AT %QX."UR20-16DO-P_P90_27".OutputImage_I4700_S00_UID_DigitalOutput08; (*Befehl: Aktivierung Drosselklappe A2*)
-	Cyclic#1.HalIO::ECW_PreH_Dem AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput10; (*Anforderung: Vorwärmung*)
-	Cyclic#1.HalIO::MonitoringOn AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput08; (*Reset Überwachung*)
-	Cyclic#1.HalIO::Gen_PreHDem AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput12; (*Anforderung: Stillstandsheizung*)
-	Cyclic#1.HalIO::Ign_Dem AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput07; (*Anforderung Zündung*)
-	Cyclic#1.HalIO::ECWP1Dem AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput09; (*Anforderung: Motorkühlwasserpumpe 1*)
-	Cyclic#1.HalIO::CustAnaIn[2] AT %IW."UR20-4AI-UI-12_P90_03".InputImage_I4600_S00_UID_AnalogInput04; (*Messung: Druck nach Filter*)
-	Cyclic#1.HalIO::StationIO[160].ModuleOK[0] AT %IX."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleOk;
 	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S01[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S01;
 	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S02[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S02;
 	Cyclic#1.HalIO::iUR20_ModuleStatus_I2009_S03[160] AT %IB."+AUX1_PA0_AUXILIARIES_CONTROL_1_UR20".ModuleStatus_I2009_S03;
@@ -2044,5 +2036,15 @@ VAR_CONFIG
 	Cyclic#1.HalIO::CustAnaIn[109] AT %IW."UR20-4AI-RTD-DIAG_PA0_18".InputImage_I4600_S00_UID_AnalogInput02;
 	Cyclic#1.HalIO::CustAnaIn[110] AT %IW."UR20-4AI-RTD-DIAG_PA0_18".InputImage_I4600_S00_UID_AnalogInput03;
 	Cyclic#1.HalIO::CustAnaIn[111] AT %IW."UR20-4AI-RTD-DIAG_PA0_18".InputImage_I4600_S00_UID_AnalogInput04;
-	Cyclic#1.HalIO::StationIO[20].ModuleOK[3] AT %IX."X20CS1070_P20_03_IGN2".ModuleOk;
+	Cyclic#5.HalIO::OUT_HA.iBatterieStatus AT %IB."PLC1".BatteryStatusCPU; (* Batterie Status CPU (0 = Batterie leer oder nicht vorhanden, 1 = Batterie OK)                         *)
+	Cyclic#1.HalIO::OUT_HA.iSystemTime AT %ID."PLC1".SystemTime;
+	Cyclic#5.HalIO::OUT_HA.iT_CPU_PLC AT %IW."PLC1".TemperatureCPU; (* Temperatur des Prozessors CPU in 1/10 Grad Celsius                         *)
+	Cyclic#6.EngineGeneral::bSafeIN_Reset_sPLC AT %QX."X20SL8100_S01_00".BOOL10001;
+	Cyclic#5.AuxiliariesGeneral::OUT_AG.bEng_Start AT %QX."X20SL8100_S01_00".BOOL10002;
+	Cyclic#6.EngineGeneral::bSafeIN_EO_PumpsOFF AT %QX."X20SL8100_S01_00".BOOL10003;
+	Cyclic#6.EngineGeneral::bSafeIN_ECW_PumpsOFF AT %QX."X20SL8100_S01_00".BOOL10004;
+	Cyclic#5.Opstate::OUT_OP.bEng_Aux_Dem_CDR AT %QX."X20SL8100_S01_00".BOOL10005;
+	Cyclic#6.EngineGeneral::bSafeIN_ERV_Lou_PC_OP AT %QX."X20SL8100_S01_00".BOOL10006;
+	Cyclic#6.EngineGeneral::bSafeIN_ERV_Lou_PC_CL AT %QX."X20SL8100_S01_00".BOOL10007;
+	Cyclic#6.EngineGeneral::bSafeIN_ERV_ColdCountry AT %QX."X20SL8100_S01_00".BOOL10008;
 END_VAR
