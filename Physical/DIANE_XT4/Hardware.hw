@@ -6196,23 +6196,23 @@
     <Parameter ID="Supervision" Value="off" />
     <Parameter ID="SafeModuleID" Value="201" />
   </Module>
-  <Module Name="X20SI8110_P10_17" Type="X20SI8110" Version="2.6.0.0">
+  <Module Name="X20SI8110_P10_19" Type="X20SI8110" Version="2.6.0.0">
     <Connection Connector="SS1" TargetModule="X20TB52_P10_17" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM13_P10_17" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
     <Parameter ID="SafeModuleID" Value="101" />
-  </Module>
-  <Module Name="X20SI8110_P10_18" Type="X20SI8110" Version="2.6.0.0">
-    <Connection Connector="SS1" TargetModule="X20TB52_P10_22" TargetConnector="SS" />
-    <Connection Connector="SL" TargetModule="X20BM13_P10_22" TargetConnector="SL1" />
-    <Parameter ID="Supervision" Value="off" />
-    <Parameter ID="SafeModuleID" Value="105" />
   </Module>
   <Module Name="X20SI8110_P10_19x" Type="X20SI8110" Version="2.6.0.0" Disabled="true">
     <Connection Connector="SS1" TargetModule="X20TB52_P10_19" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM13_P10_19" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />
     <Parameter ID="SafeModuleID" Value="103" />
+  </Module>
+  <Module Name="X20SI8110_P10_20" Type="X20SI8110" Version="2.6.0.0">
+    <Connection Connector="SS1" TargetModule="X20TB52_P10_22" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM13_P10_22" TargetConnector="SL1" />
+    <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="SafeModuleID" Value="105" />
   </Module>
   <Module Name="X20SI8110_P10_21" Type="X20SI8110" Version="2.6.0.0" Disabled="true">
     <Connection Connector="SS1" TargetModule="X20TB52_P10_21" TargetConnector="SS" />
@@ -6263,7 +6263,7 @@
     <Parameter ID="UnsafeInputDINTs" Value="64" />
     <Parameter ID="UnsafeInputUDINTs" Value="2" />
   </Module>
-  <Module Name="X20SO4110_P10_19" Type="X20SO4110" Version="2.3.0.1">
+  <Module Name="X20SO4110_P10_21" Type="X20SO4110" Version="2.3.0.1">
     <Connection Connector="SS1" TargetModule="X20TB52_P10_18" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM33_P10_18" TargetConnector="SL1" />
     <Parameter ID="Supervision" Value="off" />

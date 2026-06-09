@@ -136,26 +136,26 @@ VAR_CONFIG
 	Cyclic#1.HalIO::Lev_SCR_UreaTank AT %IW."X20AI4622_P10_15".AnalogInput04; (*Status - Füllstand Harnstofftank*)
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[16] AT %IX."X20AT6402_P10_16".ModuleOk;
 	Cyclic#1.HalIO::T_EG_PrReliefVa1 AT %IW."X20AT6402_P10_16".Temperature01; (*Messung: Abgastemperatur Druckentlastung Ventil 1*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[17] AT %IX."X20SI8110_P10_17".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[19] AT %IX."X20SI8110_P10_19".ModuleOk;
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[17] AT %IX."X20AO4622_P10_17".ModuleOk;
-	Cyclic#1.HalIO::OlShortCirc AT %IX."X20SI8110_P10_17".SafeDigitalInput02; (*Störung - Überlast / Kurzschluss Generator*)
-	Cyclic#1.HalIO::GenPrctTrip AT %IX."X20SI8110_P10_17".SafeDigitalInput03; (*Blockierung - Generatorschutz ausgelöst*)
-	Cyclic#1.HalIO::GCB_On AT %IX."X20SI8110_P10_17".SafeDigitalInput06; (*Status - Generatorschalter geschlossen*)
-	Cyclic#1.HalIO::GCB_Off AT %IX."X20SI8110_P10_17".SafeDigitalInput07; (*Status - Generatorschalter offen*)
+	Cyclic#1.HalIO::OlShortCirc AT %IX."X20SI8110_P10_19".SafeDigitalInput02; (*Störung - Überlast / Kurzschluss Generator*)
+	Cyclic#1.HalIO::GenPrctTrip AT %IX."X20SI8110_P10_19".SafeDigitalInput03; (*Blockierung - Generatorschutz ausgelöst*)
+	Cyclic#1.HalIO::GCB_On AT %IX."X20SI8110_P10_19".SafeDigitalInput06; (*Status - Generatorschalter geschlossen*)
+	Cyclic#1.HalIO::GCB_Off AT %IX."X20SI8110_P10_19".SafeDigitalInput07; (*Status - Generatorschalter offen*)
 	Cyclic#1.HalIO::P_Act_AO AT %QW."X20AO4622_P10_17".AnalogOutput01; (*Messung - Generatorwirkleistung*)
 	Cyclic#1.HalIO::P_Avail_Norm AT %QW."X20AO4622_P10_17".AnalogOutput02; (*Messung - Verfügbare Leistung*)
 	Cyclic#1.HalIO::Q_GenC_Act AT %QW."X20AO4622_P10_17".AnalogOutput03; (*Messung - Generatorblindleistung*)
 	Cyclic#1.HalIO::PF_GenC_Act AT %QW."X20AO4622_P10_17".AnalogOutput04; (*Messung - Generator cos f*)
-	Cyclic#1.EngineGeneral::bSafeModuleOK_101 AT %IX."X20SI8110_P10_17".SafeModuleOK;
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[18] AT %IX."X20SI8110_P10_18".ModuleOk;
+	Cyclic#1.EngineGeneral::bSafeModuleOK_101 AT %IX."X20SI8110_P10_19".SafeModuleOK;
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[20] AT %IX."X20SI8110_P10_20".ModuleOk;
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[18] AT %IX."X20AO4622_P10_18".ModuleOk;
 	Cyclic#1.HalIO::Pc_SCR_UreaDosingPump_Set AT %QW."X20AO4622_P10_18".AnalogOutput01; (*Sollwert: Harnstoff Dosierpumpe*)
 	Cyclic#1.HalIO::Pr_MGT_sp AT %QW."X20AO4622_P10_18".AnalogOutput02; (*I/P Umformer Gasstrecke*)
-	Cyclic#1.EngineGeneral::bSafeModuleOK_105 AT %IX."X20SI8110_P10_18".SafeModuleOK;
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[19] AT %IX."X20SO4110_P10_19".ModuleOk;
-	Cyclic#1.HalIO::Rel_Sync_Load AT %QX."X20SO4110_P10_19".DigitalOutput01; (*Freigabe: Synchronisierung / Last*)
-	Cyclic#1.HalIO::GCB_RUC AT %QX."X20SO4110_P10_19".DigitalOutput02; (*Status: Freigabe Unterspannungsauslöser*)
-	Cyclic#1.EngineGeneral::bSafeModuleOK_102 AT %IX."X20SO4110_P10_19".SafeModuleOK;
+	Cyclic#1.EngineGeneral::bSafeModuleOK_105 AT %IX."X20SI8110_P10_20".SafeModuleOK;
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[21] AT %IX."X20SO4110_P10_21".ModuleOk;
+	Cyclic#1.HalIO::Rel_Sync_Load AT %QX."X20SO4110_P10_21".DigitalOutput01; (*Freigabe: Synchronisierung / Last*)
+	Cyclic#1.HalIO::GCB_RUC AT %QX."X20SO4110_P10_21".DigitalOutput02; (*Status: Freigabe Unterspannungsauslöser*)
+	Cyclic#1.EngineGeneral::bSafeModuleOK_102 AT %IX."X20SO4110_P10_21".SafeModuleOK;
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[19] AT %IX."X20SI8110_P10_19x".ModuleOk; (**)
 	Cyclic#1.EngineGeneral::bSafeModuleOK_103 AT %IX."X20SI8110_P10_19x".SafeModuleOK;
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[20] AT %IX."X20SI9100_P10_20x".ModuleOk; (**)
@@ -1202,7 +1202,6 @@ VAR_CONFIG
 	Cyclic#5.Coupling::OutData[191] AT %QW."X20IF10E3_1_P68_01b".outData191;
 	Cyclic#1.HalIO::T_EGaLPTC_A AT %IW."UR20-4AI-TC-DIAG_P90_02".InputImage_I4600_S00_UID_AnalogInput03; (*Messung - Abgastemperatur nach Turbo A*)
 	Cyclic#1.HalIO::T_EGaLPTC_B AT %IW."UR20-4AI-TC-DIAG_P90_02".InputImage_I4600_S00_UID_AnalogInput04; (*Messung - Abgastemperatur nach Turbo B*)
-	Cyclic#1.HalIO::T_EG_PrReliefVa1 AT %IW."UR20-4AI-TC-DIAG_P90_02".InputImage_I4600_S00_UID_AnalogInput01; (*Messung - Temperatur Austritt Sicherheitsventil*)
 	Cyclic#1.HalIO::U_Starter_engage1 AT %IW."UR20-4AI-UI-12_P90_03".InputImage_I4600_S00_UID_AnalogInput01; (*Messung: Starter 1 eingefahren*)
 	Cyclic#1.HalIO::U_Starter_engage2 AT %IW."UR20-4AI-UI-12_P90_03".InputImage_I4600_S00_UID_AnalogInput02; (*Messung: Starter 2 eingefahren*)
 	Cyclic#1.HalIO::U_Starter_engage3 AT %IW."UR20-4AI-UI-12_P90_03".InputImage_I4600_S00_UID_AnalogInput03; (*Messung: Starter 3 eingefahren*)
