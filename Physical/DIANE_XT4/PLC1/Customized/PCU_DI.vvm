@@ -1,0 +1,15 @@
+VAR_CONFIG
+	Cyclic#5.DataInterface::OUT_DI.bECW_PreH_Dem_Customized AT %Q.Cyclic#5.Customized::OUT_CU.bECW_PreH_Dem_Customized;
+	Cyclic#5.DataInterface::OUT_DI.bCV_Bus_Active AT %Q.Cyclic#5.Customized::OUT_CU.bCV_Bus_Active;
+	Cyclic#5.DataInterface::OUT_DI.rCV_Bus AT %Q.Cyclic#5.Customized::OUT_CU.rCV_Bus;
+	Cyclic#5.DataInterface::OUT_DI.bOptGT_RatioMix_Set AT %Q.Cyclic#5.Customized::OUT_CU.bOptGT_RatioMix_Set;
+	Cyclic#5.DataInterface::OUT_DI.rGT_RatioMix_Set AT %Q.Cyclic#5.Customized::OUT_CU.rGT_RatioMix_Set;
+	Cyclic#5.DataInterface::OUT_DI.rCA_IgnP_CylOffset AT %Q.Cyclic#5.Customized::IN_CU_ThisPlant.rCA_IgnP_CylOffset_MDE;
+	Cyclic#5.DataInterface::OUT_DI.bLeanox_Man_Cust AT %Q.Cyclic#5.Customized::OUT_CU.bLeanox_Man_Cust;
+	Cyclic#5.DataInterface::OUT_DI.rLam_Eng_LL_ManSet_Cust AT %Q.Cyclic#5.Customized::OUT_CU.rLam_Eng_LL_ManSet_Cust;
+	Cyclic#5.DataInterface::OUT_DI.rPr_Leanox_ManSet_Cust AT %Q.Cyclic#5.Customized::OUT_CU.rPr_Leanox_ManSet_Cust;
+	Cyclic#5.DataInterface::VIS2MM.bCA_IgnP_ActiveMDE AT %Q.Cyclic#5.Customized::IN_CU_ThisPlant.bCA_IgnP_ActiveMDE;
+	Cyclic#5.DataInterface::OUT_DI.bCA_IgnP_CylOffset_Active AT %Q.Cyclic#5.Customized::IN_CU_ThisPlant.bCA_IgnP_CylOffset_Active_MDE;
+	Cyclic#5.DataInterface::MM2VIS.bMsg7000 AT %Q.Cyclic#5.Customized::IN_CU_ThisPlant.bMsg7000;
+	Cyclic#5.DataInterface::OUT_DI.rCust_From_PUMA AT %Q.Cyclic#5.Customized::IN_CU_ThisPlant.rCust_From_PUMA; (*Customized variables from PUMA*)
+END_VAR

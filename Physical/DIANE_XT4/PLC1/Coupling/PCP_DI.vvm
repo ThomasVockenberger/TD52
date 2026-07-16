@@ -1,0 +1,5 @@
+VAR_CONFIG
+	Cyclic#5.DataInterface::OUT_DI.rP_OPC_Set AT %Q.Cyclic#5.Coupling::VIS2MM.rP_OPC_Set;
+	Cyclic#5.DataInterface::OUT_DI.bOPC_Dem AT %Q.Cyclic#5.Coupling::VIS2MM.bOPC_Dem;
+	Cyclic#5.DataInterface::OUT_DI.bBusAlive AT %Q.Cyclic#5.Coupling::VIS2MM.bOPC_SetClock;
+END_VAR

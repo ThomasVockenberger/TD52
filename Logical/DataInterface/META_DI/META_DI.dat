@@ -1,0 +1,45 @@
+; *******************************************************************************
+; AGGR: Module Meta Data (data module)
+;
+; This code is confidential and proprietary to the INNIO Company.
+; It may not be used in any form, or reproduced in any manner, without the express
+; written permission of the INNIO Company.
+; Copyright, INNIO Company, 2022
+;
+; Customized modifications: -
+; ------------------------
+;
+; History:
+; -------
+; V1.00.0	14.11.2022	Vockenberger	Neu erstellt	
+;
+; Instructions for use:
+; --------------------
+; make only changes at the version numbers
+;
+; Outstandings:
+; ------------
+;
+; *******************************************************************************
+;
+"<META>"
+;
+; Module ID
+"<MODUL>DI</MODUL>"
+;
+; Module Version (xx.yy.zz.cc) 
+"<VERSION>01.01.00.00</VERSION>"
+;
+; Module Basisupdate Version BU (00-99)
+"<BASISUPDATE_VERSION>00</BASISUPDATE_VERSION>"
+;
+; Optional: specify order number for limitated module usage
+"<ORDER></ORDER>" ;<!--(optional for restricted customizations; missing statement makes module valid for all orders)-->
+;
+; Permanent Datamodule Filenames<!-- NAME ist ohne Dateiendung einzutragen; Nur für Counter und interne Parameter verwenden-->
+"<DATAMODULES>" ;<!-- optional; mehrere DATAMODULES erlaubt-->
+"	<DATAMODULE>perm_DI</DATAMODULE>"
+"	<DATAMODULE>VISpm_DI</DATAMODULE>"
+"</DATAMODULES>"
+;
+"</META>"

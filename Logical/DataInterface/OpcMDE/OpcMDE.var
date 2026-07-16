@@ -1,0 +1,3 @@
+VAR
+	rKnck_Sign : ARRAY[0..24]OF REAL; (* Cylinder Knocking Value/Pressure *)
+END_VAR

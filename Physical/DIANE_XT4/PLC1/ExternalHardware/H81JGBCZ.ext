@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ISO15745ProfileContainer xmlns="http://www.ethernet-powerlink.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ethernet-powerlink.org ../Powerlink_Main.xsd">
 	<ISO15745Profile>
 		<ProfileHeader>
@@ -13,7 +13,7 @@
 				<ProfileTechnology>Powerlink</ProfileTechnology>
 			</ISO15745Reference>
 		</ProfileHeader>
-		<ProfileBody xsi:type="ProfileBody_Device_Powerlink_Modular_Head" fileName="00000230_UR20_FBC_PL.XDD" fileCreator="Weidmüller" fileCreationDate="2016-08-01" fileCreationTime="15:00:00+01:00" fileModificationDate="2025-06-11" fileModificationTime="09:32:00+01:00" fileModifiedBy="Weidmüller" fileVersion="V01.12" supportedLanguages="en de" specificationVersion="1.2.0">
+		<ProfileBody xsi:type="ProfileBody_Device_Powerlink_Modular_Head" fileName="00000230_UR20_FBC_PL.XDD" fileCreator="Weidmüller" fileCreationDate="2016-08-01" fileCreationTime="15:00:00+01:00" fileModificationDate="2020-01-14" fileModificationTime="10:00:00+01:00" fileModifiedBy="Weidmüller" fileVersion="V01.02" supportedLanguages="en de" specificationVersion="1.2.0">
 			<DeviceIdentity>
 				<vendorName>Weidmüller</vendorName>
 				<vendorID>0x00000230</vendorID>
@@ -28,13 +28,13 @@
 				<productName>UR20-FBC-PL</productName>
 				<productID>1334940000</productID>
 				<productText>
-					<label lang="en">UR20 Ethernet POWERLINK bus coupler</label>
-					<label lang="de">UR20 Ethernet POWERLINK Bus Koppler</label>
+					<label lang="en">UR20 Ethernet POWERLINK bus controller</label>
+					<label lang="de">UR20 Ethernet POWERLINK Bus Controller</label>
 				</productText>
 				<orderNumber>1334940000</orderNumber>
 				<version versionType="HW">01.00.00</version>
-				<version versionType="SW">01.16.00</version>
-				<buildDate>2022-09-20</buildDate>
+				<version versionType="SW">01.08.00</version>
+				<buildDate>2016-08-01</buildDate>
 			</DeviceIdentity>
 			<DeviceManager>
 				<moduleManagement>
@@ -124,7 +124,7 @@
 				<ProfileTechnology>Powerlink</ProfileTechnology>
 			</ISO15745Reference>
 		</ProfileHeader>
-		<ProfileBody xsi:type="ProfileBody_CommunicationNetwork_Powerlink_Modular_Head" fileName="00000230_UR20_FBC_PL.XDD" fileCreator="Weidmüller" fileCreationDate="2016-08-01" fileCreationTime="15:00:00+01:00" fileModificationDate="2025-06-11" fileModificationTime="09:32:00+01:00" fileModifiedBy="Weidmüller" fileVersion="V01.12" supportedLanguages="en de" specificationVersion="1.2.0">
+		<ProfileBody xsi:type="ProfileBody_CommunicationNetwork_Powerlink_Modular_Head" fileName="00000230_UR20_FBC_PL.XDD" fileCreator="Weidmüller" fileCreationDate="2016-08-01" fileCreationTime="15:00:00+01:00" fileModificationDate="2020-01-14" fileModificationTime="10:00:00+01:00" fileModifiedBy="Weidmüller" fileVersion="01.02" supportedLanguages="en de" specificationVersion="1.2.0">
 			<ApplicationLayers>
 				<identity>
 					<vendorID>0x00000230</vendorID>
@@ -134,7 +134,7 @@
 					</deviceFamily>
 					<productID>1334940000</productID>
 					<version versionType="HW">01.00.00</version>
-					<version versionType="SW">01.16.00</version>
+					<version versionType="SW">01.08.00</version>
 				</identity>
 				<DataTypeList>
 					<defType dataType="0001">
@@ -2397,7 +2397,7 @@
           </Object>
           <Object index="1F82" name="NMT_FeatureFlags_U32" objectType="7" dataType="0007" accessType="const" PDOmapping="no" defaultValue="0x00050267"/>
           <Object index="1F83" name="NMT_EPLVersion_U8" objectType="7" dataType="0005" accessType="const" PDOmapping="no" defaultValue="0x20"/>
-          <Object index="1F8C" name="NMT_CurrNMTState_U8" objectType="7" dataType="0005" PDOmapping="no" accessType="ro"/>
+          <Object index="1F8C" name="NMT_CurrNMTState_U8" objectType="7" dataType="0005" PDOmapping="optional" accessType="ro"/>
           <Object index="1F8D" name="NMT_PResPayloadLimitList_AU16" objectType="8" dataType="0006">
             <SubObject subIndex="00" name="NumberOfEntries" objectType="7" dataType="0005" accessType="rw" PDOmapping="no" defaultValue="254"/>
             <SubObject subIndex="01" name="PResPayloadLimit" objectType="7" dataType="0006" accessType="rw" PDOmapping="no" defaultValue="36"/>
@@ -2946,12 +2946,11 @@
             <SubObject subIndex="03" name="SerialNumber" 		objectType="7" dataType="0009" accessType="ro" PDOmapping="no"/>
           </Object>
 		  <Object index="2001" name="CouplerParameter" objectType="8" dataType="0005">
-            <SubObject subIndex="00" name="NumberOfEntries" 				objectType="7" dataType="0005" accessType="const" defaultValue="5" PDOmapping="no"/>
+            <SubObject subIndex="00" name="NumberOfEntries" 				objectType="7" dataType="0005" accessType="const" defaultValue="4" PDOmapping="no"/>
             <SubObject subIndex="01" name="OutputBehaviourFieldBusError" 	objectType="7" dataType="0005" accessType="rw" PDOmapping="no"/>
             <SubObject subIndex="02" name="ModuleBehaviourOnHotSwap" 		objectType="7" dataType="0005" accessType="rw" PDOmapping="no"/>
             <SubObject subIndex="03" name="DataFormat" 						objectType="7" dataType="0005" accessType="rw" PDOmapping="no"/>
 			<SubObject subIndex="04" name="ForceLock" 						objectType="7" dataType="0005" accessType="rw" PDOmapping="no"/>
-			<SubObject subIndex="05" name="OptionHandlingEnable"			objectType="7" dataType="0005" accessType="rw" PDOmapping="no"/>
           </Object>
 		  <Object index="2002" name="CouplerErrorCounter" objectType="8" dataType="0005">
             <SubObject subIndex="00" name="NumberOfEntries" 			objectType="7" dataType="0005" accessType="const" defaultValue="14" PDOmapping="no"/>
@@ -5408,8 +5407,6 @@
 							
 								<range name="ModuleReferenceList" baseIndex="2005" maxIndex="2005" maxSubIndex="40" sortMode="subindex" sortNumber="continuous" PDOmapping="no"/>
 								<range name="ModuleList" baseIndex="2006" maxIndex="2006" maxSubIndex="40" sortMode="subindex" sortNumber="continuous" PDOmapping="no"/>
-								<range name="ModuleListLive" baseIndex="2008" maxIndex="2008" maxSubIndex="40" sortMode="subindex" sortNumber="continuous" PDOmapping="TPDO"/>
-								<range name="ModuleStatus" baseIndex="2020" maxIndex="2020" maxSubIndex="40" sortMode="subindex" sortNumber="continuous" PDOmapping="TPDO"/>
 							
      							<range name="ModuleInfoType" baseIndex="3000" maxIndex="3000" maxSubIndex="40" sortMode="subindex" sortNumber="continuous" PDOmapping="no"/>
 								<range name="ModuleInfoName" baseIndex="3001" maxIndex="3000" maxSubIndex="40" sortMode="subindex" sortNumber="continuous" PDOmapping="no"/>

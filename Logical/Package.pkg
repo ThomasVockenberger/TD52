@@ -32,5 +32,6 @@
     <Object Type="Package" Description="VE: Ventilation">Ventilation</Object>
     <Object Type="Package" Description="VI: Visualization">Visu</Object>
     <Object Type="Package" Description="CB: CBM">CBM</Object>
+    <Object Type="Package" Description="DI: DataInterface for Testbench">DataInterface</Object>
   </Objects>
 </Package>

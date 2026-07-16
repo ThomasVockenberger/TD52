@@ -163,7 +163,11 @@ PROGRAM _CYCLIC
 	(******************************************************)
 	(* forwarding the parameter for different ignition timing on individual cylinders at testbench or for customized applications *)
 	FOR ucCylinderCount := 1 TO 24 DO    (* bSetIndivTim can be used for tests                      *)
-	       OUT_CU.rCA_IgnP_CylOffset[ucCylinderCount] := Para.rCA_IgnP_CylOffset[ucCylinderCount] * BOOL_TO_REAL(Para.bCA_IgnP_CylOffset_Active);     
+		IF IN_CU_ThisPlant.bCA_IgnP_ActiveMDE AND NOT IN_CU_ThisPlant.bMsg7000 THEN
+			OUT_CU.rCA_IgnP_CylOffset[ucCylinderCount] := IN_CU_ThisPlant.rCA_IgnP_CylOffset_MDE[ucCylinderCount] * BOOL_TO_REAL(IN_CU_ThisPlant.bCA_IgnP_CylOffset_Active_MDE);
+		ELSE	
+			OUT_CU.rCA_IgnP_CylOffset[ucCylinderCount] := Para.rCA_IgnP_CylOffset[ucCylinderCount] * BOOL_TO_REAL(Para.bCA_IgnP_CylOffset_Active); 
+		END_IF
 	END_FOR
 
 

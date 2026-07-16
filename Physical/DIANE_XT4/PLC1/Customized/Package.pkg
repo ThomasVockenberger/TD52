@@ -7,5 +7,6 @@
     <Object Type="File" Description="Variable mapping">PCU_ORDER.vvm</Object>
     <Object Type="File" Description="Variable mapping for HAL Datapoints">PCU_HAL.vvm</Object>
     <Object Type="Package">Connectivity</Object>
+    <Object Type="File" Description="Variable mapping">PCU_DI.vvm</Object>
   </Objects>
 </Package>

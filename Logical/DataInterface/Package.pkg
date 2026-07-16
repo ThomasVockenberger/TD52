@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Private="true">Global_DI.typ</Object>
+    <Object Type="File" Private="true">Global_DI.var</Object>
+    <Object Type="DataObject" Language="Simple" Description="Simple data object.">META_DI</Object>
+    <Object Type="Program" Language="IEC" Description="General Var edit">Gnl_AG</Object>
+    <Object Type="Program" Language="IEC" Description="General Var edit">Gnl_GT</Object>
+    <Object Type="Program" Language="IEC" Description="General Var edit">Gnl_HC</Object>
+    <Object Type="Program" Language="IEC" Description="General Var edit">Gnl_ME</Object>
+    <Object Type="Program" Language="IEC" Description="OPC Var for Testbench">OpcAG</Object>
+    <Object Type="Program" Language="IEC" Description="OPC Var for Testbench">OpcCU</Object>
+    <Object Type="Program" Language="IEC" Description="OPC Var for Testbench">OpcEX</Object>
+    <Object Type="Program" Language="IEC" Description="OPC Var for Testbench">OpcGT</Object>
+    <Object Type="Program" Language="IEC" Description="OPC Var for Testbench">OpcHC</Object>
+    <Object Type="Program" Language="IEC" Description="OPC Var for Testbench">OpcME</Object>
+    <Object Type="Program" Language="IEC" Description="OPC Var for Testbench">OpcMsg</Object>
+    <Object Type="Program" Language="IEC" Description="OPC Var for Testbench">OpcVE</Object>
+    <Object Type="Program" Language="IEC" Description="OPC Var for MDE">OpcMDE</Object>
+    <Object Type="Program" Language="IEC" Description="Var from Customiezd Modul">IN_DI</Object>
+    <Object Type="Program" Language="IEC" Description="Var to Customiezd Modul">OUT_DI</Object>
+    <Object Type="Program" Language="IEC" Description="+ PermanentMemory">PermDI</Object>
+    <Object Type="Program" Language="IEC" Description="+ PermanentMemory">VIS2PermDI</Object>
+    <Object Type="File">VarDI_instruction.jpg</Object>
+  </Objects>
+</Package>

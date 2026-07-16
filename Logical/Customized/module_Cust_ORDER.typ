@@ -13,6 +13,11 @@
 TYPE
 	IN_Cust_Plant_Struct : 	STRUCT 
 		ReplaceMeWithYourVariableName : BOOL;
+		rCA_IgnP_CylOffset_MDE : ARRAY[0..24]OF REAL; (*Zylinder Z�ndzeitpunktverstellung �ber PUMA*)
+		bCA_IgnP_CylOffset_Active_MDE : BOOL; (*Zylinder Z�ndzeitpunktverstellung �ber PUMA aktiv*)
+		bCA_IgnP_ActiveMDE : BOOL; (*Aktivierung externe ZZP Regelung �ber PUMA, kommt �ber Visu-Button*)
+		bMsg7000 : BOOL; (*OPC-Verbindung zum Pr�fstand ist unterbrochen*)
+		rCust_From_PUMA : ARRAY[0..12]OF REAL;  (*Customized variables from PUMA*)
 	END_STRUCT;
 	OUT_Cust_Plant_Struct : 	STRUCT 
 		ReplaceMeWithYourVariableName : BOOL;

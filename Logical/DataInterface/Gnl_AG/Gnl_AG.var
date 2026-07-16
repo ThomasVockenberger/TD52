@@ -1,0 +1,13 @@
+VAR
+	i : INT;
+	DT_EndurTest : DTStructure; (*Date and Time Struktur zu weiter Verarbeitung*)
+	stFind : STRING[10]; (*Das was im String gesucht wird*)
+	stEndurTestAll : STRING[25]; (*Dauerlauftest Datum ganzer String*)
+	iPosition : INT; (*Position von : im String*)
+	szResultString : STRING[25]; (*Bearbeiteter String*)
+	szDateString : STRING[11]; (*Bearbeiteter String, der auf die Visu geschrieben werden kann*)
+	szTimeString : STRING[6]; (*Bearbeiteter String, der auf die Visu geschrieben werden kann*)
+	stTB_Version : STRING[10]; (*Versionsanzeige TB_Control von REAL auf STRING umgewandelt*)
+	stTB_VersionConfig1 : STRING[10]; (*Für TB_Control Versionsanzeige wird der reste Punkt eingefügt*)
+	stTB_VersionConfig2 : STRING[6]; (*Für TB_Control Versionsanzeige wird der zweite Punkt eingefügt*)
+END_VAR

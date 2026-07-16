@@ -1,0 +1,6 @@
+VAR_CONFIG
+	Cyclic#8.HalIO::tPos_Act_CBV_1 AT %Q.Cyclic#8.DataInterface::IN_DI.tPos_Act_CBV_1;
+	Cyclic#8.HalIO::tPos_Act_CBV_2 AT %Q.Cyclic#8.DataInterface::IN_DI.tPos_Act_CBV_2;
+	Cyclic#8.HalIO::tPos_Act_CBV_3 AT %Q.Cyclic#8.DataInterface::IN_DI.tPos_Act_CBV_3;
+	Cyclic#5.Gastrain::OUT_GT_ThisPlant.tGV3_Open.Do AT %Q.Cyclic#5.DataInterface::IN_DI.bGV3_Open;
+END_VAR

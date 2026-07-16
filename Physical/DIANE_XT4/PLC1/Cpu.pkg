@@ -40,6 +40,7 @@
     <Object Type="Package">ExternalHardware</Object>
     <Object Type="Package">Connectivity</Object>
     <Object Type="Package">mappServices</Object>
+    <Object Type="Package" Description="DI: DataInterface for Testbench">DataInterface</Object>
   </Objects>
   <Configuration LocalVariablesMemory="MemoryPool" ModuleId="X20CP3687X">
     <AutomationRuntime Version="H4.90" />
@@ -51,6 +52,6 @@
     <TaskClasses DefaultIoTaskClass="Cyclic1" DefaultTaskClass="Cyclic4" />
     <Transfer AddToUserPart="False" AdditionalUserDir="" AllowDowngrade="True" AllowInitialTransfer="True" AllowPartitioning="True" DownloadMode="Overload" ExecuteInitExitProgram="True" ForceInitialTransfer="False" IdentificationTypeValue="" IgnoreBrDependencies="false" IgnoreTargetOnlyObjects="true" IgnoreVersion="False" KeepNonVolatileMemory="False" ModuleSystemForPip="" PreserveVariableValues="False" ProjectConsistent="True" PromptBeforeProject="false" PromptBeforeTask="false" RebootDuringTransfer="False" SavedOfflineInstallationFolder="" SavedPipDestinationFolder="" SavedRuntimeUtilityCenterPackagePath="" TargetIdentificationType="Always" TransferInServiceMode="false" TransferOnlyRelevantChanges="false" TryToBootInRunMode="False" UserFilesIgnoreDifference="False" />
     <Vc FirmwareVersion="V4.14.1" />
-    <OnlineConfiguration Name="Engine_10" DeviceType="TCPIP" DeviceParameters="/IF=tcpip /LOPO=11159 /SA=2" ConnectionParameters="/COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=192.168.122.11 /REPO=11159 /ANSL=1 /PT=11169" Description="" />
+    <OnlineConfiguration Name="NewTCPIPConnection_3" DeviceType="TCPIP" DeviceParameters="/IF=tcpip /LOPO=11159 /SA=20" ConnectionParameters="/COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=192.168.122.25 /REPO=11159 /ANSL=1 /PT=11169" Description="" />
   </Configuration>
 </Cpu>
