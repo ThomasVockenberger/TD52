@@ -1280,7 +1280,6 @@ VAR_CONFIG
 	Cyclic#1.HalIO::Cnt_OilPulse AT %IX."UR20-16DI-P_P90_22".InputImage_I4600_S00_UID_DigitalInput08; (*Messung: Zähler Ölverbrauch*)
 	Cyclic#1.HalIO::AuxV_Eng_ok AT %IX."UR20-16DI-P_P90_22".InputImage_I4600_S00_UID_DigitalInput05; (*Status: Hilfsbetriebe Spannung OK*)
 	Cyclic#1.HalIO::EOP1AC_CB_trip AT %IX."UR20-16DI-P_P90_22".InputImage_I4600_S00_UID_DigitalInput02; (*Status: Ölpumpe 2 AC Spannung OK*)
-	Cyclic#1.HalIO::Gen_LO_CoolingSys_Fail AT %IX."UR20-16DI-P_P90_22".InputImage_I4600_S00_UID_DigitalInput10; (*Störung: Generatorlager Kühlsystem*)
 	Cyclic#1.HalIO::Actuator_Ok_WG_A AT %IX."UR20-16DI-P_P90_23".InputImage_I4600_S00_UID_DigitalInput04; (*Störung: Wastegate A*)
 	Cyclic#1.HalIO::Actuator_Ok_WG_B AT %IX."UR20-16DI-P_P90_23".InputImage_I4600_S00_UID_DigitalInput05; (*Störung: Wastegate B*)
 	Cyclic#1.HalIO::Pr_GT2_Max AT %IX."UR20-16DI-P_P90_24".InputImage_I4600_S00_UID_DigitalInput09; (*Status: Gasdruck max Gasstrecke 2*)
@@ -1302,7 +1301,6 @@ VAR_CONFIG
 	Cyclic#1.HalIO::ECWP_PreH_Dem AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput11; (*Anforderung: Vorwärmpumpe*)
 	Cyclic#1.HalIO::ECW_PreH_Dem AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput10; (*Anforderung: Vorwärmung*)
 	Cyclic#1.HalIO::MonitoringOn AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput08; (*Reset Überwachung*)
-	Cyclic#1.HalIO::Gen_PreHDem AT %QX."UR20-16DO-P_P90_25".OutputImage_I4700_S00_UID_DigitalOutput12; (*Anforderung: Stillstandsheizung*)
 	Cyclic#1.HalIO::EOVal_DemOpen AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput01; (*Anforderung: Ölventil auf*)
 	Cyclic#1.HalIO::EOP1DC_Dem AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput02; (*Anforderung: Ölpumpe 1 DC*)
 	Cyclic#1.HalIO::EOP1AC_Dem AT %QX."UR20-16DO-P_P90_26".OutputImage_I4700_S00_UID_DigitalOutput03; (*Anforderung: Ölpumpe 1 AC*)
@@ -2046,4 +2044,7 @@ VAR_CONFIG
 	Cyclic#6.EngineGeneral::bSafeIN_ERV_Lou_PC_OP AT %QX."X20SL8100_S01_00".BOOL10006;
 	Cyclic#6.EngineGeneral::bSafeIN_ERV_Lou_PC_CL AT %QX."X20SL8100_S01_00".BOOL10007;
 	Cyclic#6.EngineGeneral::bSafeIN_ERV_ColdCountry AT %QX."X20SL8100_S01_00".BOOL10008;
+	Cyclic#1.HalIO::Gen_LO_CoolingSys_Fail AT %IX."X20DI9371_P10_07".DigitalInput01; (*Störung: Generatorlager Kühlsystem*)
+	Cyclic#1.HalIO::Gen_PreHDem AT %QX."X20DO9322_P10_10".DigitalOutput02; (*Anforderung: Stillstandsheizung*)
+	Cyclic#1.HalIO::LOS_Dem AT %QX."X20DO9322_P10_10".DigitalOutput01; (*Anforderung: Generatorlager Kühlsystem*)
 END_VAR
