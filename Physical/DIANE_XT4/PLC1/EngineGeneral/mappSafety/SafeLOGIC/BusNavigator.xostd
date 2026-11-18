@@ -5,14 +5,14 @@
       <Info Name="ARVersion" Value="49008" />
       <Info Name="SafetyRelease" Value="5.24.1" />
       <Info Name="Communication" Value="/IF=tcpip /LOPO=11159 /SA=20 /COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=192.168.122.25 /REPO=11159 /ANSL=1 /PT=11169 /PORT=50000" />
-      <Info Name="mappSafetyPath" Value="C:\Program Files\BrAutomation\AS410\AS\TechnologyPackages\mappSafety\5.24.1" />
+      <Info Name="mappSafetyPath" Value="C:\BrAutomation\AS410\AS\TechnologyPackages\mappSafety\5.24.1" />
     </GeneratorDescription>
     <SafetyConfigurationManager TransportSAddr="1">
-      <DeviceDescription Module="X20SL81XX_110.SCM" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SL8100\2.6.0.0\OSDD\X20SL81XX_SCM_2_6_0_0.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SL81XX_110.SCM" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS410\AS\Hardware\Modules\X20SL8100\2.6.0.0\OSDD\X20SL81XX_SCM_2_6_0_0.xosdd]]></DeviceDescription>
       <NodeDescription />
     </SafetyConfigurationManager>
     <SafetyNode SAddr="1">
-      <DeviceDescription Module="X20SL8100_110.MainSN" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SL8100\2.6.0.0\OSDD\\X20SL8100_2_6_0_0.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SL8100_110.MainSN" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS410\AS\Hardware\Modules\X20SL8100\2.6.0.0\OSDD\\X20SL8100_2_6_0_0.xosdd]]></DeviceDescription>
       <DesignConfiguration>
         <ModuleSettings>
           <SettingsGroup id="DataFromAs">
@@ -571,20 +571,21 @@
       </ChannelConfiguration>
     </SafetyNode>
     <SafetyNode SAddr="101">
-      <DeviceDescription Module="X20SI8110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SI8110\2.6.0.0\OSDD\\X20SI8110_2_6_0_0.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SI8110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS410\AS\Hardware\Modules\X20SI8110\2.6.0.0\OSDD\\X20SI8110_2_6_0_0.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Digital" />
         <Classification Type="Input" />
         <Classification Type="VendorSpecific">Safe</Classification>
         <Classification Type="VendorSpecific">IO</Classification>
-        <Info Name="Interface" Value="IF3.ST16.IF1.ST19" />
+        <Info Name="Interface" Value="IF3.ST16.IF1.ST14" />
         <Info Name="HWC_Revision" Value="2.6.0.0" />
         <Info Name="HWC_LastEdit" Value="10.01.2024 09:47:00" />
-        <Info Name="AS_Name" Value="X20SI8110_P10_19" />
+        <Info Name="AS_Name" Value="X20SI8110_P10_14" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Digital In, 8xE, 24V" />
         <Info Name="Description-en" Value="X20 Safe Digital In, 8xI, 24V" />
         <Info Name="AsVariable" Value="SafeDigitalInput03,Cyclic#1.HalIO::GenPrctTrip" />
+        <Info Name="AsVariable" Value="SafeDigitalInput08,Cyclic#1.HalIO::ER_DoorClosed" />
         <Info Name="AsVariable" Value="SafeDigitalInput06,Cyclic#1.HalIO::GCB_On" />
         <Info Name="AsVariable" Value="SafeDigitalInput07,Cyclic#1.HalIO::GCB_Off" />
         <Info Name="AsVariable" Value="SafeDigitalInput02,Cyclic#1.HalIO::OlShortCirc" />
@@ -594,16 +595,16 @@
       <ChannelConfiguration />
     </SafetyNode>
     <SafetyNode SAddr="102">
-      <DeviceDescription Module="X20SO4110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SO4110\2.3.0.1\OSDD\\X20SO4110_2_3_0_1.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SO4110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS410\AS\Hardware\Modules\X20SO4110\2.3.0.1\OSDD\\X20SO4110_2_3_0_1.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Digital" />
         <Classification Type="Output" />
         <Classification Type="VendorSpecific">Safe</Classification>
         <Classification Type="VendorSpecific">IO</Classification>
-        <Info Name="Interface" Value="IF3.ST16.IF1.ST21" />
+        <Info Name="Interface" Value="IF3.ST16.IF1.ST15" />
         <Info Name="HWC_Revision" Value="2.3.0.1" />
         <Info Name="HWC_LastEdit" Value="08.03.2024 10:06:16" />
-        <Info Name="AS_Name" Value="X20SO4110_P10_21" />
+        <Info Name="AS_Name" Value="X20SO4110_P10_15" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Digital Out, 4xA, 24 V, 0.5 A" />
         <Info Name="Description-en" Value="X20 Safe Digital Out, 4xO, 24 V, 0.5 A" />
@@ -662,13 +663,13 @@
       </ChannelConfiguration>
     </SafetyNode>
     <SafetyNode SAddr="103" Disabled="true">
-      <DeviceDescription Module="X20SI8110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SI8110\2.6.0.0\OSDD\\X20SI8110_2_6_0_0.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SI8110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS410\AS\Hardware\Modules\X20SI8110\2.6.0.0\OSDD\\X20SI8110_2_6_0_0.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Digital" />
         <Classification Type="Input" />
         <Classification Type="VendorSpecific">Safe</Classification>
         <Classification Type="VendorSpecific">IO</Classification>
-        <Info Name="Interface" Value="IF3.ST16.IF1.ST22" />
+        <Info Name="Interface" Value="IF3.ST16.IF1.ST16" />
         <Info Name="HWC_Revision" Value="2.6.0.0" />
         <Info Name="HWC_LastEdit" Value="10.01.2024 09:47:00" />
         <Info Name="AS_Name" Value="X20SI8110_P10_19x" />
@@ -681,13 +682,13 @@
       <ChannelConfiguration />
     </SafetyNode>
     <SafetyNode SAddr="104" Disabled="true">
-      <DeviceDescription Module="X20SI8110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SI8110\2.6.0.0\OSDD\\X20SI8110_2_6_0_0.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SI8110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS410\AS\Hardware\Modules\X20SI8110\2.6.0.0\OSDD\\X20SI8110_2_6_0_0.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Digital" />
         <Classification Type="Input" />
         <Classification Type="VendorSpecific">Safe</Classification>
         <Classification Type="VendorSpecific">IO</Classification>
-        <Info Name="Interface" Value="IF3.ST16.IF1.ST24" />
+        <Info Name="Interface" Value="IF3.ST16.IF1.ST18" />
         <Info Name="HWC_Revision" Value="2.6.0.0" />
         <Info Name="HWC_LastEdit" Value="10.01.2024 09:47:00" />
         <Info Name="AS_Name" Value="X20SI8110_P10_21" />
@@ -699,27 +700,8 @@
       </NodeDescription>
       <ChannelConfiguration />
     </SafetyNode>
-    <SafetyNode SAddr="105">
-      <DeviceDescription Module="X20SI8110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SI8110\2.6.0.0\OSDD\\X20SI8110_2_6_0_0.xosdd]]></DeviceDescription>
-      <NodeDescription>
-        <Classification Type="Digital" />
-        <Classification Type="Input" />
-        <Classification Type="VendorSpecific">Safe</Classification>
-        <Classification Type="VendorSpecific">IO</Classification>
-        <Info Name="Interface" Value="IF3.ST16.IF1.ST20" />
-        <Info Name="HWC_Revision" Value="2.6.0.0" />
-        <Info Name="HWC_LastEdit" Value="10.01.2024 09:47:00" />
-        <Info Name="AS_Name" Value="X20SI8110_P10_20" />
-        <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
-        <Info Name="Description-de" Value="X20 Safe Digital In, 8xE, 24V" />
-        <Info Name="Description-en" Value="X20 Safe Digital In, 8xI, 24V" />
-        <Info Name="AsVariable" Value="SafeModuleOK,Cyclic#1.EngineGeneral::bSafeModuleOK_105" />
-        <Info Name="AsVariable" Value="ModuleOk,Cyclic#1.HalIO::StationIO[10].ModuleOK[20]" />
-      </NodeDescription>
-      <ChannelConfiguration />
-    </SafetyNode>
     <SafetyNode SAddr="201">
-      <DeviceDescription Module="X20SD1207_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SD1207\2.5.1.2\OSDD\\X20SD1207_2_5_1_2.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SD1207_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS410\AS\Hardware\Modules\X20SD1207\2.5.1.2\OSDD\\X20SD1207_2_5_1_2.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Counter" />
         <Classification Type="Digital" />
@@ -744,7 +726,7 @@
       </ChannelConfiguration>
     </SafetyNode>
     <SafetyNode SAddr="202">
-      <DeviceDescription Module="X20SA4430_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SA4430\2.5.0.0\OSDD\\X20SA4430_2_5_0_0.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SA4430_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS410\AS\Hardware\Modules\X20SA4430\2.5.0.0\OSDD\\X20SA4430_2_5_0_0.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Analog" />
         <Classification Type="Input" />
@@ -781,7 +763,7 @@
       </ChannelConfiguration>
     </SafetyNode>
     <SafetyNode SAddr="203">
-      <DeviceDescription Module="X20SA4430_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SA4430\2.5.0.0\OSDD\\X20SA4430_2_5_0_0.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SA4430_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS410\AS\Hardware\Modules\X20SA4430\2.5.0.0\OSDD\\X20SA4430_2_5_0_0.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Analog" />
         <Classification Type="Input" />
@@ -818,7 +800,7 @@
       </ChannelConfiguration>
     </SafetyNode>
     <SafetyNode SAddr="204">
-      <DeviceDescription Module="X20SI8110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SI8110\2.6.0.0\OSDD\\X20SI8110_2_6_0_0.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SI8110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS410\AS\Hardware\Modules\X20SI8110\2.6.0.0\OSDD\\X20SI8110_2_6_0_0.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Digital" />
         <Classification Type="Input" />
@@ -839,7 +821,7 @@
       <ChannelConfiguration />
     </SafetyNode>
     <SafetyNode SAddr="205">
-      <DeviceDescription Module="X20SO4110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SO4110\2.3.0.1\OSDD\\X20SO4110_2_3_0_1.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SO4110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS410\AS\Hardware\Modules\X20SO4110\2.3.0.1\OSDD\\X20SO4110_2_3_0_1.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Digital" />
         <Classification Type="Output" />
@@ -907,7 +889,7 @@
       </ChannelConfiguration>
     </SafetyNode>
     <SafetyNode SAddr="206">
-      <DeviceDescription Module="X20SO4110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SO4110\2.3.0.1\OSDD\\X20SO4110_2_3_0_1.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SO4110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS410\AS\Hardware\Modules\X20SO4110\2.3.0.1\OSDD\\X20SO4110_2_3_0_1.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Digital" />
         <Classification Type="Output" />
@@ -975,7 +957,7 @@
       </ChannelConfiguration>
     </SafetyNode>
     <SafetyNode SAddr="207" Disabled="true">
-      <DeviceDescription Module="X20SO4110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SO4110\2.3.0.1\OSDD\\X20SO4110_2_3_0_1.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SO4110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS410\AS\Hardware\Modules\X20SO4110\2.3.0.1\OSDD\\X20SO4110_2_3_0_1.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Digital" />
         <Classification Type="Output" />
@@ -1041,7 +1023,7 @@
       </ChannelConfiguration>
     </SafetyNode>
     <SafetyNode SAddr="208" Disabled="true">
-      <DeviceDescription Module="X20SI8110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SI8110\2.6.0.0\OSDD\\X20SI8110_2_6_0_0.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SI8110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS410\AS\Hardware\Modules\X20SI8110\2.6.0.0\OSDD\\X20SI8110_2_6_0_0.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Digital" />
         <Classification Type="Input" />
@@ -1060,7 +1042,7 @@
       <ChannelConfiguration />
     </SafetyNode>
     <SafetyNode SAddr="209" Disabled="true">
-      <DeviceDescription Module="X20SO4110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SO4110\2.3.0.1\OSDD\\X20SO4110_2_3_0_1.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SO4110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS410\AS\Hardware\Modules\X20SO4110\2.3.0.1\OSDD\\X20SO4110_2_3_0_1.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Digital" />
         <Classification Type="Output" />
@@ -1126,7 +1108,7 @@
       </ChannelConfiguration>
     </SafetyNode>
     <SafetyNode SAddr="210">
-      <DeviceDescription Module="X20SO4110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SO4110\2.3.0.1\OSDD\\X20SO4110_2_3_0_1.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SO4110_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS410\AS\Hardware\Modules\X20SO4110\2.3.0.1\OSDD\\X20SO4110_2_3_0_1.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Digital" />
         <Classification Type="Output" />
@@ -1194,13 +1176,13 @@
       </ChannelConfiguration>
     </SafetyNode>
     <SafetyNode SAddr="300" Disabled="true">
-      <DeviceDescription Module="X20SI9100_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SI9100\2.3.1.0\OSDD\\X20SI9100_2_3_1_0.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SI9100_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS410\AS\Hardware\Modules\X20SI9100\2.3.1.0\OSDD\\X20SI9100_2_3_1_0.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Digital" />
         <Classification Type="Input" />
         <Classification Type="VendorSpecific">Safe</Classification>
         <Classification Type="VendorSpecific">IO</Classification>
-        <Info Name="Interface" Value="IF3.ST16.IF1.ST23" />
+        <Info Name="Interface" Value="IF3.ST16.IF1.ST17" />
         <Info Name="HWC_Revision" Value="2.3.1.0" />
         <Info Name="HWC_LastEdit" Value="11.03.2021 13:18:48" />
         <Info Name="AS_Name" Value="X20SI9100_P10_20x" />
@@ -1233,13 +1215,13 @@
       <ChannelConfiguration />
     </SafetyNode>
     <SafetyNode SAddr="301" Disabled="true">
-      <DeviceDescription Module="X20SI9100_110" minOpenSafetyRelease="1.5"><![CDATA[C:\Program Files\BrAutomation\AS410\AS\Hardware\Modules\X20SI9100\2.3.1.0\OSDD\\X20SI9100_2_3_1_0.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SI9100_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS410\AS\Hardware\Modules\X20SI9100\2.3.1.0\OSDD\\X20SI9100_2_3_1_0.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Digital" />
         <Classification Type="Input" />
         <Classification Type="VendorSpecific">Safe</Classification>
         <Classification Type="VendorSpecific">IO</Classification>
-        <Info Name="Interface" Value="IF3.ST16.IF1.ST25" />
+        <Info Name="Interface" Value="IF3.ST16.IF1.ST19" />
         <Info Name="HWC_Revision" Value="2.3.1.0" />
         <Info Name="HWC_LastEdit" Value="11.03.2021 13:18:48" />
         <Info Name="AS_Name" Value="X20SI9100_P10_23" />

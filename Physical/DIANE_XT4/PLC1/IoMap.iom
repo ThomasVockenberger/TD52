@@ -64,98 +64,28 @@ VAR_CONFIG
 	Cyclic#1.HalIO::bSyncCheckMode[1] AT %QX."X20CM0985-1_P10_02".ConfigOutput18; (**)
 	Cyclic#1.HalIO::bSyncDeadBusMode[1] AT %QX."X20CM0985-1_P10_02".ConfigOutput19; (**)
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[3] AT %IX."X20CS1070_P10_03".ModuleOk; (**)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[4] AT %IX."X20DI9371_P10_04".ModuleOk;
-	Cyclic#1.HalIO::MCB_SM AT %IX."X20DI9371_P10_04".DigitalInput01; (*Mains circuit breaker: Monitoring*)
-	Cyclic#1.HalIO::AuxV_Supply_Ok AT %IX."X20DI9371_P10_04".DigitalInput02; (*Status: Hilfsbetriebespannung OK*)
-	Cyclic#1.HalIO::CV_A_Ok AT %IX."X20DI9371_P10_04".DigitalInput03; (*Circuit breaker tripped 24VDC Base (External)*)
-	Cyclic#1.HalIO::MCB_On AT %IX."X20DI9371_P10_04".DigitalInput04; (*Status - Mains circuit breaker closed*)
-	Cyclic#1.HalIO::MCB_Off AT %IX."X20DI9371_P10_04".DigitalInput05; (*Status - Mains circuit breaker open*)
-	Cyclic#1.HalIO::TBMode AT %IX."X20DI9371_P10_04".DigitalInput06;
-	Cyclic#1.HalIO::GasPreAlarm AT %IX."X20DI9371_P10_04".DigitalInput07; (*Gas pre-alarm*)
-	Cyclic#1.HalIO::GasAlarm AT %IX."X20DI9371_P10_04".DigitalInput08; (*Gas alarm*)
-	Cyclic#1.HalIO::FireAlarm AT %IX."X20DI9371_P10_04".DigitalInput09; (*Fire alarm*)
-	Cyclic#1.HalIO::FireSysErr AT %IX."X20DI9371_P10_04".DigitalInput10; (*Failure Fire alarm system*)
-	Cyclic#1.HalIO::EmStop_MC AT %IX."X20DI9371_P10_04".DigitalInput11; (*Emergency stop Module +A*)
-	Cyclic#1.HalIO::GasSysErr AT %IX."X20DI9371_P10_04".DigitalInput12; (*Failure - Gas alarm system*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[5] AT %IX."X20DI9371_P10_05".ModuleOk;
-	Cyclic#1.HalIO::RelAux AT %IX."X20DI9371_P10_05".DigitalInput01; (*Status - Auxiliaries operation*)
-	Cyclic#1.HalIO::DemEngOpExt AT %IX."X20DI9371_P10_05".DigitalInput02; (*Command - Module activation*)
-	Cyclic#1.HalIO::DI_TestBench_TripPrio2 AT %IX."X20DI9371_P10_05".DigitalInput03; (*Status: Alarm Prüfstand (Prio 2)*)
-	Cyclic#1.HalIO::DI_TestBench_TripPrio3 AT %IX."X20DI9371_P10_05".DigitalInput04; (*Status: Alarm Prüfstand (Prio 3)*)
-	Cyclic#1.HalIO::DI_TestBench_Warning AT %IX."X20DI9371_P10_05".DigitalInput05; (*Status: Warnung Prüfstand*)
-	Cyclic#1.HalIO::GCB_Rdy AT %IX."X20DI9371_P10_05".DigitalInput06; (*Status - Generator circuit breaker ready to close*)
-	Cyclic#1.HalIO::GCB_Rac AT %IX."X20DI9371_P10_05".DigitalInput07; (*Status - Generator circuit breaker is racked in*)
-	Cyclic#1.HalIO::I_MMD_LimHi AT %IX."X20DI9371_P10_05".DigitalInput08; (*Status: Overload / Short circuit*)
-	Cyclic#1.HalIO::GCB_SM1 AT %IX."X20DI9371_P10_05".DigitalInput09; (*Switch off Generator circuit breaker*)
-	Cyclic#1.HalIO::GCB_SM2 AT %IX."X20DI9371_P10_05".DigitalInput10; (*Relay: Monitoring Generator circuit breaker*)
-	Cyclic#1.HalIO::Mns_MDF AT %IX."X20DI9371_P10_05".DigitalInput11; (*Failure: Mains monitoring device*)
-	Cyclic#1.HalIO::MnsOk AT %IX."X20DI9371_P10_05".DigitalInput12; (*Status: Mains OK*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[6] AT %IX."X20DI9371_P10_06".ModuleOk;
-	Cyclic#1.HalIO::EarthCB_Off AT %IX."X20DI9371_P10_06".DigitalInput06; (*Failure - Generator earthing switch closed*)
-	Cyclic#1.HalIO::GndFailure AT %IX."X20DI9371_P10_06".DigitalInput07; (*Status: Earth fault*)
-	Cyclic#1.HalIO::I_Diff AT %IX."X20DI9371_P10_06".DigitalInput11; (*Failure: Differential protection relay*)
-	Cyclic#1.HalIO::DiffPrct AT %IX."X20DI9371_P10_06".DigitalInput12; (*Status: Differential protection tripped*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[7] AT %IX."X20DI9371_P10_07".ModuleOk; (**)
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[4] AT %IX."X20DI9371_P10_03".ModuleOk;
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[5] AT %IX."X20DI9371_P10_04".ModuleOk;
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[6] AT %IX."X20DI9371_P10_05".ModuleOk;
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[7] AT %IX."X20DI9371_P10_06".ModuleOk; (**)
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[8] AT %IX."X20DO9322_P10_08".ModuleOk;
-	Cyclic#1.HalIO::GnlTrip AT %QX."X20DO9322_P10_08".DigitalOutput02; (*Status - Sammelstörung abstellend*)
-	Cyclic#1.HalIO::GnlWarning AT %QX."X20DO9322_P10_08".DigitalOutput03; (*Engine: Sammelstörung warnend*)
-	Cyclic#1.HalIO::Eng_Run AT %QX."X20DO9322_P10_08".DigitalOutput04; (*Status - Motor Betrieb*)
-	Cyclic#1.HalIO::Eng_Aux_Dem_CDR AT %QX."X20DO9322_P10_08".DigitalOutput05; (*Anforderung - Hilfsbetriebe mit Nachkühllauf*)
-	Cyclic#1.HalIO::ResetTrip AT %QX."X20DO9322_P10_08".DigitalOutput06; (*Reset Alarm*)
-	Cyclic#1.HalIO::ResetWarning AT %QX."X20DO9322_P10_08".DigitalOutput07; (*Reset Warnung*)
-	Cyclic#1.HalIO::Sys_Run AT %QX."X20DO9322_P10_08".DigitalOutput08; (*Engine: Software läuft*)
-	Cyclic#1.HalIO::OMSS_MAT AT %QX."X20DO9322_P10_08".DigitalOutput09; (*Betriebswahlschalter Hand/Automatik*)
-	Cyclic#1.HalIO::PulseMainsOk AT %QX."X20DO9322_P10_08".DigitalOutput12; (*Status: Netz OK Takt*)
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[9] AT %IX."X20DO9322_P10_09".ModuleOk;
-	Cyclic#1.HalIO::GrC_DCon AT %QX."X20DO9322_P10_09".DigitalOutput02; (*Netztrennung Gridcode*)
-	Cyclic#1.HalIO::GCB_Rel AT %QX."X20DO9322_P10_09".DigitalOutput03; (*Freigabe Generatorschalter*)
-	Cyclic#1.HalIO::GCB_RSP AT %QX."X20DO9322_P10_09".DigitalOutput04; (*Freigabe SY Generatorschalter*)
-	Cyclic#1.HalIO::GCB_OpF AT %QX."X20DO9322_P10_09".DigitalOutput05; (*Status - Generatorschalter Ausschaltstörung*)
-	Cyclic#1.HalIO::GCB_COn AT %QX."X20DO9322_P10_09".DigitalOutput06; (*Generatorschalter Automatik Ersteinschaltung*)
 	Cyclic#1.HalIO::GCB_RT AT %QX."X20DO9322_P10_09".DigitalOutput07; (*Generatorschalter: Überbrückung Netz OK*)
 	Cyclic#1.HalIO::GCB_COf AT %QX."X20DO9322_P10_09".DigitalOutput08; (*Abschaltung Generatorschalter*)
-	Cyclic#1.HalIO::MCB_DVS AT %QX."X20DO9322_P10_09".DigitalOutput09; (*Rücksynchronisieranwahl*)
-	Cyclic#1.HalIO::MCB_RSP AT %QX."X20DO9322_P10_09".DigitalOutput10; (*Freigabe SY Impuls*)
-	Cyclic#1.HalIO::MCB_COn AT %QX."X20DO9322_P10_09".DigitalOutput11; (*Freigabe SY Netzschalter Ersteinschaltung*)
-	Cyclic#1.HalIO::MCB_COf AT %QX."X20DO9322_P10_09".DigitalOutput12; (*Abschaltung Netzschalter*)
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[10] AT %IX."X20DO9322_P10_10".ModuleOk;
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[11] AT %IX."X20AT4222_P10_11".ModuleOk;
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[12] AT %IX."X20AI4622_P10_12".ModuleOk;
-	Cyclic#1.HalIO::P_Set_ExtAI_Norm AT %IW."X20AI4622_P10_12".AnalogInput01; (*Sollwert - Generatorwirkleistung*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[13] AT %IX."X20AI4622_P10_13".ModuleOk;
-	Cyclic#1.HalIO::T_SCR_CatIn AT %IW."X20AI4622_P10_13".AnalogInput01; (*Messung: Abgastemperatur vor SCR*)
-	Cyclic#1.HalIO::T_SCR_CatOut AT %IW."X20AI4622_P10_13".AnalogInput02; (*Messung: Abgastemperatur nach SCR*)
-	Cyclic#1.HalIO::Pr_SCR_CatIn AT %IW."X20AI4622_P10_13".AnalogInput03; (*Messung: Abgasdruck vor SCR*)
-	Cyclic#1.HalIO::Pr_SCR_CatOut AT %IW."X20AI4622_P10_13".AnalogInput04; (*Messung: Abgasdruck nach SCR*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[14] AT %IX."X20AI4622_P10_14".ModuleOk;
-	Cyclic#1.HalIO::Flow_SCR_UreaDosingOut AT %IW."X20AI4622_P10_14".AnalogInput01; (*Harnstoff Dosierpumpe*)
-	Cyclic#1.HalIO::Pr_SCR_UreaDosingOut AT %IW."X20AI4622_P10_14".AnalogInput02; (*Messung: Harnstoffdrucksensor nach Dosiersystem*)
-	Cyclic#1.HalIO::Pr_SCR_ComprAirSupply AT %IW."X20AI4622_P10_14".AnalogInput03; (*Messung: Luftdrucksensor Harnstoffzerstäubung*)
-	Cyclic#1.HalIO::Pr_EG_Deflag_Fast AT %IW."X20AI4622_P10_14".AnalogInput04; (*Messung: Verpuffungsdetektion*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[15] AT %IX."X20AI4622_P10_15".ModuleOk;
-	Cyclic#1.HalIO::Lev_SCR_UreaTank AT %IW."X20AI4622_P10_15".AnalogInput04; (*Status - Füllstand Harnstofftank*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[16] AT %IX."X20AT6402_P10_16".ModuleOk;
-	Cyclic#1.HalIO::T_EG_PrReliefVa1 AT %IW."X20AT6402_P10_16".Temperature01; (*Messung: Abgastemperatur Druckentlastung Ventil 1*)
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[19] AT %IX."X20SI8110_P10_19".ModuleOk;
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[17] AT %IX."X20AO4622_P10_17".ModuleOk;
-	Cyclic#1.HalIO::OlShortCirc AT %IX."X20SI8110_P10_19".SafeDigitalInput02; (*Störung - Überlast / Kurzschluss Generator*)
-	Cyclic#1.HalIO::GenPrctTrip AT %IX."X20SI8110_P10_19".SafeDigitalInput03; (*Blockierung - Generatorschutz ausgelöst*)
-	Cyclic#1.HalIO::GCB_On AT %IX."X20SI8110_P10_19".SafeDigitalInput06; (*Status - Generatorschalter geschlossen*)
-	Cyclic#1.HalIO::GCB_Off AT %IX."X20SI8110_P10_19".SafeDigitalInput07; (*Status - Generatorschalter offen*)
-	Cyclic#1.HalIO::P_Act_AO AT %QW."X20AO4622_P10_17".AnalogOutput01; (*Messung - Generatorwirkleistung*)
-	Cyclic#1.HalIO::P_Avail_Norm AT %QW."X20AO4622_P10_17".AnalogOutput02; (*Messung - Verfügbare Leistung*)
-	Cyclic#1.HalIO::Q_GenC_Act AT %QW."X20AO4622_P10_17".AnalogOutput03; (*Messung - Generatorblindleistung*)
-	Cyclic#1.HalIO::PF_GenC_Act AT %QW."X20AO4622_P10_17".AnalogOutput04; (*Messung - Generator cos f*)
-	Cyclic#1.EngineGeneral::bSafeModuleOK_101 AT %IX."X20SI8110_P10_19".SafeModuleOK;
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[20] AT %IX."X20SI8110_P10_20".ModuleOk;
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[18] AT %IX."X20AO4622_P10_18".ModuleOk;
-	Cyclic#1.HalIO::Pc_SCR_UreaDosingPump_Set AT %QW."X20AO4622_P10_18".AnalogOutput01; (*Sollwert: Harnstoff Dosierpumpe*)
-	Cyclic#1.HalIO::Pr_MGT_sp AT %QW."X20AO4622_P10_18".AnalogOutput02; (*I/P Umformer Gasstrecke*)
-	Cyclic#1.EngineGeneral::bSafeModuleOK_105 AT %IX."X20SI8110_P10_20".SafeModuleOK;
-	Cyclic#1.HalIO::StationIO[10].ModuleOK[21] AT %IX."X20SO4110_P10_21".ModuleOk;
-	Cyclic#1.HalIO::Rel_Sync_Load AT %QX."X20SO4110_P10_21".DigitalOutput01; (*Freigabe: Synchronisierung / Last*)
-	Cyclic#1.HalIO::GCB_RUC AT %QX."X20SO4110_P10_21".DigitalOutput02; (*Status: Freigabe Unterspannungsauslöser*)
-	Cyclic#1.EngineGeneral::bSafeModuleOK_102 AT %IX."X20SO4110_P10_21".SafeModuleOK;
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[12] AT %IX."X20AI4622_P10_11".ModuleOk;
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[13] AT %IX."X20AI4622_P10_12".ModuleOk;
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[19] AT %IX."X20SI8110_P10_14".ModuleOk;
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[17] AT %IX."X20AO4622_P10_13".ModuleOk;
+	Cyclic#1.HalIO::OlShortCirc AT %IX."X20SI8110_P10_14".SafeDigitalInput02; (*Störung - Überlast / Kurzschluss Generator*)
+	Cyclic#1.HalIO::GenPrctTrip AT %IX."X20SI8110_P10_14".SafeDigitalInput03; (*Blockierung - Generatorschutz ausgelöst*)
+	Cyclic#1.HalIO::GCB_On AT %IX."X20SI8110_P10_14".SafeDigitalInput06; (*Status - Generatorschalter geschlossen*)
+	Cyclic#1.HalIO::GCB_Off AT %IX."X20SI8110_P10_14".SafeDigitalInput07; (*Status - Generatorschalter offen*)
+	Cyclic#1.EngineGeneral::bSafeModuleOK_101 AT %IX."X20SI8110_P10_14".SafeModuleOK;
+	Cyclic#1.HalIO::StationIO[10].ModuleOK[21] AT %IX."X20SO4110_P10_15".ModuleOk;
+	Cyclic#1.HalIO::Rel_Sync_Load AT %QX."X20SO4110_P10_15".DigitalOutput01; (*Freigabe: Synchronisierung / Last*)
+	Cyclic#1.HalIO::GCB_RUC AT %QX."X20SO4110_P10_15".DigitalOutput02; (*Status: Freigabe Unterspannungsauslöser*)
+	Cyclic#1.EngineGeneral::bSafeModuleOK_102 AT %IX."X20SO4110_P10_15".SafeModuleOK;
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[19] AT %IX."X20SI8110_P10_19x".ModuleOk; (**)
 	Cyclic#1.EngineGeneral::bSafeModuleOK_103 AT %IX."X20SI8110_P10_19x".SafeModuleOK;
 	Cyclic#1.HalIO::StationIO[10].ModuleOK[20] AT %IX."X20SI9100_P10_20x".ModuleOk; (**)
@@ -2044,7 +1974,28 @@ VAR_CONFIG
 	Cyclic#6.EngineGeneral::bSafeIN_ERV_Lou_PC_OP AT %QX."X20SL8100_S01_00".BOOL10006;
 	Cyclic#6.EngineGeneral::bSafeIN_ERV_Lou_PC_CL AT %QX."X20SL8100_S01_00".BOOL10007;
 	Cyclic#6.EngineGeneral::bSafeIN_ERV_ColdCountry AT %QX."X20SL8100_S01_00".BOOL10008;
-	Cyclic#1.HalIO::Gen_LO_CoolingSys_Fail AT %IX."X20DI9371_P10_07".DigitalInput01; (*Störung: Generatorlager Kühlsystem*)
-	Cyclic#1.HalIO::Gen_PreHDem AT %QX."X20DO9322_P10_10".DigitalOutput02; (*Anforderung: Stillstandsheizung*)
-	Cyclic#1.HalIO::LOS_Dem AT %QX."X20DO9322_P10_10".DigitalOutput01; (*Anforderung: Generatorlager Kühlsystem*)
+	Cyclic#1.HalIO::CV_A_Ok AT %IX."X20DI9371_P10_03".DigitalInput01;
+	Cyclic#1.HalIO::RelAux AT %IX."X20DI9371_P10_03".DigitalInput02;
+	Cyclic#1.HalIO::MCB_On AT %IX."X20DI9371_P10_03".DigitalInput03;
+	Cyclic#1.HalIO::TBMode AT %IX."X20DI9371_P10_03".DigitalInput06;
+	Cyclic#1.HalIO::AuxV_Supply_Ok AT %IX."X20DI9371_P10_03".DigitalInput07;
+	Cyclic#1.HalIO::EmStop_MC AT %IX."X20DI9371_P10_03".DigitalInput11;
+	Cyclic#1.HalIO::SafetyLoop_EmStop AT %IX."X20DI9371_P10_03".DigitalInput12;
+	Cyclic#1.HalIO::I_MMD_LimHi AT %IX."X20DI9371_P10_04".DigitalInput07; (*Status: Overload / Short circuit*)
+	Cyclic#1.HalIO::GCB_SM1 AT %IX."X20DI9371_P10_04".DigitalInput08; (*Switch off Generator circuit breaker*)
+	Cyclic#1.HalIO::GCB_SM2 AT %IX."X20DI9371_P10_04".DigitalInput09; (*Relay: Monitoring Generator circuit breaker*)
+	Cyclic#1.HalIO::Mns_MDF AT %IX."X20DI9371_P10_04".DigitalInput10; (*Failure: Mains monitoring device*)
+	Cyclic#1.HalIO::MnsOk AT %IX."X20DI9371_P10_04".DigitalInput11; (*Status: Mains OK*)
+	Cyclic#1.HalIO::FireSysErr AT %IX."X20DI9371_P10_05".DigitalInput01;
+	Cyclic#1.HalIO::GasSysErr AT %IX."X20DI9371_P10_05".DigitalInput02;
+	Cyclic#1.HalIO::Eng_Aux_Dem_CDR AT %QX."X20DO9322_P10_08".DigitalOutput07; (*Anforderung - Hilfsbetriebe mit Nachkühllauf*)
+	Cyclic#1.HalIO::PulseMainsOk AT %QX."X20DO9322_P10_08".DigitalOutput08; (*Status: Netz OK Takt*)
+	Cyclic#1.HalIO::GCB_RUC AT %QX."X20DO9322_P10_08".DigitalOutput03;
+	Cyclic#1.HalIO::GrC_DCon AT %QX."X20DO9322_P10_09".DigitalOutput01; (*Netztrennung Gridcode*)
+	Cyclic#1.HalIO::GCB_Rel AT %QX."X20DO9322_P10_09".DigitalOutput02; (*Freigabe Generatorschalter*)
+	Cyclic#1.HalIO::GCB_RSP AT %QX."X20DO9322_P10_09".DigitalOutput03; (*Freigabe SY Generatorschalter*)
+	Cyclic#1.HalIO::GCB_COn AT %QX."X20DO9322_P10_09".DigitalOutput05; (*Generatorschalter Automatik Ersteinschaltung*)
+	Cyclic#1.HalIO::Sys_Run AT %QX."X20DO9322_P10_09".DigitalOutput06;
+	Cyclic#1.HalIO::IN_HA.bSafetyPLC_Active AT %QX."X20DO9322_P10_10".DigitalOutput01;
+	Cyclic#1.HalIO::ER_DoorClosed AT %IX."X20SI8110_P10_14".SafeDigitalInput08;
 END_VAR
